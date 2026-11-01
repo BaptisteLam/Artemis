@@ -292,3 +292,17 @@ Livrables de déploiement : `docs/deploiement.md` (pas à pas : comptes, variabl
 - Conditions exactes des programmes partenaires Qonto / Revolut pour un éditeur tiers.
 - Faut-il proposer la révélation via composants PCI bancaires (V2) pour sortir Artemis du périmètre PCI ?
 - Ajout d'émetteurs supplémentaires (Swan, Wise) selon la demande des clients.
+
+
+---
+
+## V2 (2 novembre 2026) — après benchmark
+
+Décisions validées par Baptiste, détaillées dans `docs/superpowers/plans/2026-11-02-artemis-v2.md` et `docs/benchmark-2026-11.md`. Elles remplacent les sections correspondantes ci-dessus.
+
+1. **Positionnement** : « le pare-feu financier et la preuve AI Act de vos agents, sur la banque de votre choix ». On vend la gouvernance, pas la carte. Segment prioritaire : agences d'automatisation, puis startups IA.
+2. **Rails** : Sandbox → Stripe Issuing → Revolut (sous accord écrit) → Qonto en lecture, gel et rapprochement uniquement (Qonto ne transmet pas le PAN par API et interdit de prêter la carte).
+3. **Carte et PCI** : par défaut, le PAN ne transite plus par Artemis. L'agent reçoit un lien éphémère (10 min, usage unique) qui affiche la carte depuis l'émetteur (Stripe Issuing Elements). La remise directe devient une option par organisation, désactivée par défaut (§5.4 et §6.4 étape 7 remplacés).
+4. **Tarifs** (§4 remplacé) : Sandbox 0 € (1 agent, 20 mandats) · Builder 29 € (3 agents, 50 mandats, 1 banque) · Team 99 € (10 agents, 300 mandats, 2 banques, Slack, quorum, FEC, abonnements) · Agences 249 € + 15 €/client actif (clients illimités, 25 agents, 1 000 mandats) · Business dès 690 € (illimité, dossier AI Act). Dépassement 0,25 € par mandat sur les plans payants (Stripe meter).
+5. **Nouvelles fonctions** : mode agence (clients, budgets, marge, rapports), garde-fous (vitesse, anomalie de montant, liste noire MCC, gel si justificatif manquant), CLI `npx artemis init`, skill Claude, nœud n8n, approbation Slack et quorum, abonnements récurrents gérés par agent, dossier et rapport AI Act.
+6. **Juridique** : micro-entreprise pour démarrer ; SASU au premier contrat bancaire ou à 1 500 € de MRR.

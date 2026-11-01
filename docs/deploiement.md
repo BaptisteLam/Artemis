@@ -89,10 +89,16 @@ Rien à payer pour vous : chaque client connecte **sa** banque dans l'app (page 
 | Banque | Ce que le client fournit | Remarque |
 | --- | --- | --- |
 | Stripe Issuing | Clé restreinte Issuing + titulaire ou adresse + secret de webhook | Webhook : `https://<worker>/webhooks/stripe-issuing/<id-connexion>` (affiché dans l'app) |
-| Revolut Business | Jeton Business API (plan payant, accès « Cards API » demandé au support) | Remise automatique de la carte à l'agent |
-| Qonto | Jeton OAuth (programme partenaires), ID membre et ID compte | Qonto ne transmet pas la carte par API : l'approbateur l'affiche et finalise le paiement |
+| Revolut Business | Jeton Business API (plan Grow+, accès « Cards API » demandé au support) | **Accord écrit de Revolut obligatoire** (« Valid Permission », api-requests@revolut.com) avant tout usage en production |
+| Qonto | Jeton OAuth (programme partenaires), ID membre et ID compte | Lecture, gel et rapprochement uniquement : Qonto ne transmet pas la carte et interdit de la prêter |
 
 À faire de votre côté : candidater aux programmes partenaires **Qonto** et **Revolut Business API**, et relire leurs conditions d'utilisation pour une application tierce. Les connecteurs Qonto et Revolut ont été écrits sans accès direct à leur documentation (domaines bloqués dans l'environnement de build) : testez-les en sandbox avant d'ouvrir.
+
+## 6 bis. Société et dépassements
+
+- **Micro-entreprise** au démarrage (plafond services 83 600 € en 2026-2028, franchise de TVA 37 500 €). Passez en **SASU** dès le premier contrat bancaire (Stripe Issuing, Revolut, Qonto) ou à 1 500 € de MRR : les partenaires bancaires exigent une société.
+- **Dépassements et clients d'agence** : créez dans Stripe deux compteurs (Billing → Meters) `artemis_mandate_overage` (0,25 €) et `artemis_active_client` (15 €), ajoutez-les aux prix concernés, puis `wrangler secret put STRIPE_METER_OVERAGE` et `STRIPE_METER_ACTIVE_CLIENT` (nom des événements).
+- **Lien éphémère de carte (Stripe)** : chaque client Stripe renseigne aussi sa clé publiable (`pk_live_…`) dans la connexion ; la page `/c/<jeton>` de l'app affiche la carte via Stripe Issuing Elements, sans que le numéro passe par Artemis.
 
 ## 7. Vérifications avant d'ouvrir
 
