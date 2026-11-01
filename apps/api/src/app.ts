@@ -8,6 +8,7 @@ import { noopNotifier, type Ctx, type Notifier } from './services/context';
 import { MemoryStore } from './store/memory';
 import { SupabaseStore } from './store/supabase';
 import type { Store } from './store/types';
+import { passkeyRoutes } from './routes/passkeys';
 
 export interface AppDeps {
   store?: Store;
@@ -88,6 +89,8 @@ export function createApp(deps: AppDeps = {}) {
     );
     return c.json({ user, organizations: organizations.filter((o) => o.organization) });
   });
+
+  app.route('/app', passkeyRoutes);
 
   return app;
 }
