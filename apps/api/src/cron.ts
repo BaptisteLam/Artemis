@@ -46,8 +46,9 @@ export async function syncAll(ctx: Ctx) {
 /** Tâche planifiée (toutes les 5 minutes). Elle maintient aussi la base Supabase active. */
 export async function runScheduled(ctx: Ctx) {
   await step('expire-requests', () => expireRequests(ctx));
-  await step('expire-cards', () => expireCards(ctx));
+  // Synchroniser AVANT d'expirer : une carte payée juste avant son expiration doit être rapprochée, pas annulée.
   await step('sync', () => syncAll(ctx));
+  await step('expire-cards', () => expireCards(ctx));
 }
 
 export async function runScheduledFromEnv(env: Env): Promise<void> {

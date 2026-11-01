@@ -66,4 +66,14 @@ describe('scheduled job', () => {
     await runScheduled(w.ctx);
     expect((await w.store.listTransactions(w.org.id))).toHaveLength(1);
   });
+
+  it('a card paid just before expiry is completed, not canceled', async () => {
+    const w = await setupWorld();
+    const id = await issued(w);
+    await pay(w, id, 4900, 'Notion');
+    w.advance(31 * 60_000);
+    await runScheduled(w.ctx);
+    expect((await w.store.getCardRequest(id))?.status).toBe('completed');
+    expect((await w.store.getCardByRequest(id))?.status).toBe('used');
+  });
 });

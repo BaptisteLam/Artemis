@@ -135,4 +135,20 @@ describe('card request flow', () => {
     const r = await createCardRequest(other.ctx, other.agent, notion);
     await expect(revealCardForCheckout(w.ctx, w.agent, r.requestId)).rejects.toBeInstanceOf(ArtemisError);
   });
+
+  it('a bank failure during reveal does not consume the single reveal', async () => {
+    const w = await setupWorld();
+    const r = await createCardRequest(w.ctx, w.agent, notion);
+    await approveRequest(w.ctx, w.owner, w.org.id, r.requestId, fakeVerifier);
+    const { decryptCredentials, encryptCredentials } = await import('@artemis/connectors');
+    const key = w.ctx.env.CONNECTIONS_KEY;
+    const good = (await w.store.getBankConnection(w.conn.id))!.credentials_ciphertext;
+    const state = await decryptCredentials<{ cards: Record<string, unknown> }>(good, key);
+    state.cards = {};
+    await w.store.updateBankConnection(w.conn.id, { credentials_ciphertext: await encryptCredentials(state, key) });
+    await expect(revealCardForCheckout(w.ctx, w.agent, r.requestId)).rejects.toBeTruthy();
+    expect((await w.store.getCardByRequest(r.requestId))?.revealed_at).toBeNull();
+    await w.store.updateBankConnection(w.conn.id, { credentials_ciphertext: good });
+    expect((await revealCardForCheckout(w.ctx, w.agent, r.requestId)).number).toMatch(/^\d{16}$/);
+  });
 });

@@ -286,7 +286,15 @@ export async function revealCardForCheckout(ctx: Ctx, agent: AgentRow, requestId
   }
   const marked = await ctx.store.markCardRevealed(card.id);
   if (!marked) throw new ArtemisError('already_revealed', 'Les identifiants de cette carte ont déjà été remis.');
-  const d = await connector.revealCard(card.provider_card_id);
+  let d;
+  try {
+    d = await connector.revealCard(card.provider_card_id);
+  } catch (e) {
+    // La remise unique n'est consommée que si la banque a bien renvoyé la carte.
+    await ctx.store.updateCard(card.id, { revealed_at: null });
+    if (e instanceof ArtemisError) throw e;
+    throw new ArtemisError('bank_error', 'La banque n’a pas renvoyé la carte. Réessayez dans un instant.');
+  }
   await audit(ctx, request.org_id, { type: 'agent', id: agent.id }, 'card.revealed', request.id, { card_id: card.id, last4: card.last4 });
   return {
     number: d.number,
