@@ -11,6 +11,8 @@ import type { Store } from './store/types';
 import { passkeyRoutes } from './routes/passkeys';
 import { v1 } from './routes/v1';
 import { mcp } from './mcp/server';
+import { pushRoutes } from './routes/push';
+import { createNotifier } from './services/notify';
 
 export interface AppDeps {
   store?: Store;
@@ -40,7 +42,7 @@ export function buildCtx(env: Env, deps: AppDeps, defer: (p: Promise<unknown>) =
     notify: noopNotifier,
     defer,
   };
-  ctx.notify = deps.notifier ? deps.notifier(ctx) : noopNotifier;
+  ctx.notify = deps.notifier ? deps.notifier(ctx) : deps.store ? noopNotifier : createNotifier(ctx);
   return ctx;
 }
 
@@ -91,6 +93,7 @@ export function createApp(deps: AppDeps = {}) {
 
   app.route('/v1', v1);
   app.route('/mcp', mcp);
+  app.route('/app/push', pushRoutes);
   app.route('/app', passkeyRoutes);
 
   return app;
