@@ -1,0 +1,19 @@
+{
+  "name": "artemis",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "e2e": "playwright test -c e2e/playwright.config.ts",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.4",
+    "prettier": "^3.3.3"
+  }
+}
