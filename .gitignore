@@ -5,9 +5,11 @@ dist
 .astro
 .env
 .env.*
+!.env.production
 !.env.example
 .dev.vars
 coverage
 test-results
 playwright-report
 .superpowers
+dist-e2e

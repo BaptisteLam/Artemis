@@ -87,4 +87,25 @@ describe('schema', () => {
     const n = await one<{ n: number }>(`select increment_usage($1,'2026-11') as n`, [org1]);
     expect(n.n).toBe(2);
   });
+
+  it('RPC functions are not executable by anon or authenticated', async () => {
+    const fns = [
+      'append_audit(uuid,text,text,text,text,jsonb)',
+      'create_card_request(jsonb,bigint,timestamptz)',
+      'mark_card_revealed(uuid)',
+      'increment_usage(uuid,text)',
+      'hit_rate_limit(text,integer,integer)',
+      'purge_kv()',
+    ];
+    for (const role of ['anon', 'authenticated']) {
+      for (const fn of fns) {
+        const r = await db.query<{ ok: boolean }>(`select has_function_privilege($1, $2, 'execute') as ok`, [role, fn]);
+        expect(`${role} ${fn} ${r.rows[0]!.ok}`).toBe(`${role} ${fn} false`);
+      }
+    }
+    const svc = await db.query<{ ok: boolean }>(`select has_function_privilege('service_role', 'append_audit(uuid,text,text,text,text,jsonb)', 'execute') as ok`);
+    expect(svc.rows[0]!.ok).toBe(true);
+    const anonMember = await db.query<{ ok: boolean }>(`select has_function_privilege('anon', 'is_member(uuid,member_role[])', 'execute') as ok`);
+    expect(anonMember.rows[0]!.ok).toBe(false);
+  });
 });
