@@ -9,6 +9,10 @@ import { AgentsList } from './pages/agents/AgentsList';
 import { AgentNew } from './pages/agents/AgentNew';
 import { AgentDetail } from './pages/agents/AgentDetail';
 import { Banks } from './pages/banks/Banks';
+import { RequestsList } from './pages/requests/RequestsList';
+import { RequestDetail } from './pages/requests/RequestDetail';
+import { Cards } from './pages/cards/Cards';
+import { Transactions } from './pages/transactions/Transactions';
 import { Loading } from './components';
 
 function RequireAuth() {
@@ -35,6 +39,10 @@ export const router = createBrowserRouter([
           { path: '/agents/nouveau', element: <AgentNew /> },
           { path: '/agents/:id', element: <AgentDetail /> },
           { path: '/banques', element: <Banks /> },
+          { path: '/demandes', element: <RequestsList /> },
+          { path: '/demandes/:id', element: <RequestDetail /> },
+          { path: '/cartes', element: <Cards /> },
+          { path: '/transactions', element: <Transactions /> },
           { path: '*', element: <Placeholder title="Page" /> },
         ],
       },
