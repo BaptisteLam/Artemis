@@ -13,6 +13,11 @@ import { RequestsList } from './pages/requests/RequestsList';
 import { RequestDetail } from './pages/requests/RequestDetail';
 import { Cards } from './pages/cards/Cards';
 import { Transactions } from './pages/transactions/Transactions';
+import { Team } from './pages/team/Team';
+import { Audit } from './pages/audit/Audit';
+import { Exports } from './pages/exports/Exports';
+import { Settings } from './pages/settings/Settings';
+import { Invitation } from './pages/Invitation';
 import { Loading } from './components';
 
 function RequireAuth() {
@@ -31,6 +36,7 @@ export const router = createBrowserRouter([
     element: <RequireAuth />,
     children: [
       { path: '/bienvenue', element: <Onboarding /> },
+      { path: '/invitation', element: <Invitation /> },
       {
         element: <AppShell />,
         children: [
@@ -43,6 +49,10 @@ export const router = createBrowserRouter([
           { path: '/demandes/:id', element: <RequestDetail /> },
           { path: '/cartes', element: <Cards /> },
           { path: '/transactions', element: <Transactions /> },
+          { path: '/equipe', element: <Team /> },
+          { path: '/audit', element: <Audit /> },
+          { path: '/exports', element: <Exports /> },
+          { path: '/reglages', element: <Settings /> },
           { path: '*', element: <Placeholder title="Page" /> },
         ],
       },
