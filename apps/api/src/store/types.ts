@@ -137,6 +137,8 @@ export interface Store {
   // Usage, liste d'attente, technique
   incrementUsage(orgId: string, period: string): Promise<number>;
   getUsage(orgId: string, period: string): Promise<number>;
+  incrementOverage(orgId: string, period: string): Promise<number>;
+  getOverage(orgId: string, period: string): Promise<number>;
   waitlistAdd(row: { email: string; company?: string | null; use_case?: string | null }): Promise<void>;
   listWaitlist(limit: number): Promise<WaitlistRow[]>;
   countWaitlist(): Promise<number>;

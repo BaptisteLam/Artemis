@@ -26,9 +26,9 @@ describe('site build', () => {
   it('home carries the signature', () => {
     expect(readFileSync(resolve(dist, 'index.html'), 'utf8')).toContain('Vous gardez le dernier mot');
   });
-  it('pricing lists the four plans in euros', () => {
+  it('pricing lists the five plans in euros', () => {
     const html = readFileSync(resolve(dist, 'tarifs/index.html'), 'utf8');
-    for (const p of ['Sandbox', 'Builder', 'Team', 'Business', '19', '49', '149']) expect(html).toContain(p);
+    for (const p of ['Sandbox', 'Builder', 'Team', 'Agences', 'Business', '29', '99', '249', '690', '0,25']) expect(html).toContain(p);
   });
   it('legal pages mention the VAT exemption', () => {
     expect(readFileSync(resolve(dist, 'cgv/index.html'), 'utf8')).toContain('293 B du CGI');

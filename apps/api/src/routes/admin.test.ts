@@ -22,7 +22,7 @@ describe('admin', () => {
     await store.updateOrganization(c.id, { plan: 'business', subscription_status: 'past_due' });
     await store.waitlistAdd({ email: 'x@y.fr' });
     const s = (await (await get(store, '/admin/stats', 'admin@exemple.fr')).json()) as any;
-    expect(s.mrrEur).toBe(68);
+    expect(s.mrrEur).toBe(128);
     expect(s.orgs.total).toBe(3);
     expect(s.orgs.byPlan).toMatchObject({ team: 1, builder: 1, business: 1 });
     expect(s.waitlist.total).toBe(1);

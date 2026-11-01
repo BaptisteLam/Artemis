@@ -1,5 +1,5 @@
 /** Types des lignes de la base Artemis (écrits à la main, alignés sur migrations/*.sql). */
-export type Plan = 'sandbox' | 'builder' | 'team' | 'business';
+export type Plan = 'sandbox' | 'builder' | 'team' | 'agency' | 'business';
 export type MemberRole = 'owner' | 'admin' | 'approver' | 'viewer';
 export type RequestStatus = 'pending' | 'approved' | 'rejected' | 'expired' | 'issued' | 'failed' | 'canceled' | 'completed';
 export type CardStatus = 'active' | 'pending_bank_sca' | 'used' | 'canceled' | 'expired';

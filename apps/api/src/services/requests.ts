@@ -6,6 +6,7 @@ import { audit, type Actor } from './audit';
 import { policyFromRow } from './policies';
 import { connectorForAgentConnection } from './banks';
 import { effectivePlan, limitsFor } from './plan';
+import { reportMeterEvent } from './billing';
 
 export type RequestOutcome = {
   requestId: string;
@@ -63,7 +64,8 @@ export async function createCardRequest(ctx: Ctx, agent: AgentRow, raw: unknown)
 
   const now = ctx.now();
   const period = currentBudgetMonth(now);
-  if ((await store.getUsage(org.id, period)) >= limits.requestsPerMonth) {
+  const overQuota = (await store.getUsage(org.id, period)) >= limits.requestsPerMonth;
+  if (overQuota && !limits.overage) {
     throw new ArtemisError('quota_exceeded', `Quota mensuel atteint (${limits.requestsPerMonth} demandes). Passez à un plan supérieur.`);
   }
 
@@ -108,6 +110,10 @@ export async function createCardRequest(ctx: Ctx, agent: AgentRow, raw: unknown)
     throw e;
   }
   await store.incrementUsage(org.id, period);
+  if (overQuota) {
+    await store.incrementOverage(org.id, period);
+    ctx.defer(reportMeterEvent(ctx, ctx.env.STRIPE_METER_OVERAGE, org.stripe_customer_id, 1, `overage-${row.id}`));
+  }
   await audit(ctx, org.id, actor, 'request.created', row.id, {
     amount_cents: input.amount,
     currency: input.currency,

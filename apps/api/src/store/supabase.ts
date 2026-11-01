@@ -376,6 +376,13 @@ export class SupabaseStore implements Store {
     const r = await this.first<{ requests: number }>('usage_counters', { org_id: `eq.${orgId}`, period: `eq.${period}` });
     return r?.requests ?? 0;
   }
+  incrementOverage(orgId: string, period: string) {
+    return this.rpc<number>('increment_overage', { p_org: orgId, p_period: period });
+  }
+  async getOverage(orgId: string, period: string) {
+    const r = await this.first<{ overage: number }>('usage_counters', { org_id: `eq.${orgId}`, period: `eq.${period}` });
+    return r?.overage ?? 0;
+  }
   async waitlistAdd(row: { email: string; company?: string | null; use_case?: string | null }) {
     await this.req('POST', 'waitlist', {
       query: { on_conflict: 'email' },

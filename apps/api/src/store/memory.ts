@@ -49,6 +49,7 @@ export class MemoryStore implements Store {
   passkeys = new Map<string, PasskeyRow>();
   push = new Map<string, PushSubscriptionRow>();
   usage = new Map<string, number>();
+  overage = new Map<string, number>();
   waitlist = new Map<string, WaitlistRow>();
   kv = new Map<string, { value: unknown; expiresAt: number }>();
   private auditSeq = 0;
@@ -431,6 +432,15 @@ export class MemoryStore implements Store {
   }
   async getUsage(orgId: string, period: string) {
     return this.usage.get(`${orgId}:${period}`) ?? 0;
+  }
+  async incrementOverage(orgId: string, period: string) {
+    const k = `${orgId}:${period}`;
+    const n = (this.overage.get(k) ?? 0) + 1;
+    this.overage.set(k, n);
+    return n;
+  }
+  async getOverage(orgId: string, period: string) {
+    return this.overage.get(`${orgId}:${period}`) ?? 0;
   }
   async waitlistAdd(row: { email: string; company?: string | null; use_case?: string | null }) {
     const email = row.email.toLowerCase();

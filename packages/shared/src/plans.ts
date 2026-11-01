@@ -1,23 +1,36 @@
-export type Plan = 'sandbox' | 'builder' | 'team' | 'business';
+export type Plan = 'sandbox' | 'builder' | 'team' | 'agency' | 'business';
 
 export interface PlanLimits {
   agents: number;
   bankConnections: number;
   requestsPerMonth: number;
+  /** Au-delà du quota : facturer le dépassement (true) ou refuser (false). */
+  overage: boolean;
+  clients: number;
+  perClientEur: number;
   fec: boolean;
   auditExport: boolean;
+  slack: boolean;
+  quorum: boolean;
+  subscriptions: boolean;
   restApi: boolean;
   priceEur: number;
 }
 
+/** Prix d'un mandat au-delà du quota mensuel (plans payants). */
+export const OVERAGE_CENTS = 25;
+
+const BASE = { restApi: true, perClientEur: 0 };
+
 export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
-  sandbox: { agents: 1, bankConnections: 0, requestsPerMonth: 50, fec: false, auditExport: false, restApi: true, priceEur: 0 },
-  builder: { agents: 3, bankConnections: 1, requestsPerMonth: 100, fec: false, auditExport: false, restApi: true, priceEur: 19 },
-  team: { agents: 15, bankConnections: 2, requestsPerMonth: 1000, fec: true, auditExport: false, restApi: true, priceEur: 49 },
-  business: { agents: Infinity, bankConnections: Infinity, requestsPerMonth: Infinity, fec: true, auditExport: true, restApi: true, priceEur: 149 },
+  sandbox: { ...BASE, agents: 1, bankConnections: 0, requestsPerMonth: 20, overage: false, clients: 0, fec: false, auditExport: false, slack: false, quorum: false, subscriptions: false, priceEur: 0 },
+  builder: { ...BASE, agents: 3, bankConnections: 1, requestsPerMonth: 50, overage: true, clients: 0, fec: false, auditExport: false, slack: false, quorum: false, subscriptions: false, priceEur: 29 },
+  team: { ...BASE, agents: 10, bankConnections: 2, requestsPerMonth: 300, overage: true, clients: 0, fec: true, auditExport: false, slack: true, quorum: true, subscriptions: true, priceEur: 99 },
+  agency: { ...BASE, agents: 25, bankConnections: 3, requestsPerMonth: 1000, overage: true, clients: Infinity, perClientEur: 15, fec: true, auditExport: false, slack: true, quorum: true, subscriptions: true, priceEur: 249 },
+  business: { ...BASE, agents: Infinity, bankConnections: Infinity, requestsPerMonth: Infinity, overage: true, clients: Infinity, fec: true, auditExport: true, slack: true, quorum: true, subscriptions: true, priceEur: 690 },
 };
 
-export const PLANS: Plan[] = ['sandbox', 'builder', 'team', 'business'];
+export const PLANS: Plan[] = ['sandbox', 'builder', 'team', 'agency', 'business'];
 
 const TZ = 'Europe/Paris';
 

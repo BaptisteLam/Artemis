@@ -17,7 +17,11 @@ export interface Env {
   STRIPE_WEBHOOK_SECRET?: string;
   STRIPE_PRICE_BUILDER?: string;
   STRIPE_PRICE_TEAM?: string;
+  STRIPE_PRICE_AGENCY?: string;
   STRIPE_PRICE_BUSINESS?: string;
+  /** Noms d'événements des compteurs Stripe (Billing → Meters). */
+  STRIPE_METER_OVERAGE?: string;
+  STRIPE_METER_ACTIVE_CLIENT?: string;
   WEBAUTHN_RP_ID: string;
   WEBAUTHN_ORIGIN: string;
   API_ORIGIN?: string;

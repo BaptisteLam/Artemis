@@ -4,10 +4,10 @@ import type { OrganizationRow } from '@artemis/db';
 import type { Ctx } from './context';
 import { audit } from './audit';
 
-const PAID: Exclude<Plan, 'sandbox'>[] = ['builder', 'team', 'business'];
+const PAID: Exclude<Plan, 'sandbox'>[] = ['builder', 'team', 'agency', 'business'];
 
 function priceFor(ctx: Ctx, plan: Exclude<Plan, 'sandbox'>): string {
-  const price = { builder: ctx.env.STRIPE_PRICE_BUILDER, team: ctx.env.STRIPE_PRICE_TEAM, business: ctx.env.STRIPE_PRICE_BUSINESS }[plan];
+  const price = { builder: ctx.env.STRIPE_PRICE_BUILDER, team: ctx.env.STRIPE_PRICE_TEAM, agency: ctx.env.STRIPE_PRICE_AGENCY, business: ctx.env.STRIPE_PRICE_BUSINESS }[plan];
   if (!price || !ctx.env.STRIPE_SECRET_KEY) throw new ArtemisError('invalid_input', 'La facturation n’est pas encore configurée (Stripe).');
   return price;
 }
@@ -16,6 +16,7 @@ function planForPrice(ctx: Ctx, priceId: string | undefined): Plan | null {
   if (!priceId) return null;
   if (priceId === ctx.env.STRIPE_PRICE_BUILDER) return 'builder';
   if (priceId === ctx.env.STRIPE_PRICE_TEAM) return 'team';
+  if (priceId === ctx.env.STRIPE_PRICE_AGENCY) return 'agency';
   if (priceId === ctx.env.STRIPE_PRICE_BUSINESS) return 'business';
   return null;
 }
@@ -93,4 +94,14 @@ export async function handleBillingEvent(ctx: Ctx, event: { type: string; data: 
     });
     await audit(ctx, org.id, sys, 'billing.updated', org.id, { plan, status: deleted ? 'canceled' : sub.status });
   }
+}
+
+/** Envoie un événement de compteur Stripe (facturation à l'usage). Silencieux si non configuré. */
+export async function reportMeterEvent(ctx: Ctx, eventName: string | undefined, customerId: string | null, value = 1, identifier?: string) {
+  if (!eventName || !customerId || !ctx.env.STRIPE_SECRET_KEY) return;
+  await stripe(ctx, '/billing/meter_events', {
+    event_name: eventName,
+    payload: { stripe_customer_id: customerId, value: String(value) },
+    identifier,
+  });
 }

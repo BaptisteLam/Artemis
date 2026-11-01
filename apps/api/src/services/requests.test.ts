@@ -77,10 +77,29 @@ describe('card request flow', () => {
     expect((await w.store.getCardRequest(r.requestId))?.status).toBe('rejected');
   });
 
-  it('enforces the monthly quota', async () => {
+  it('enforces the monthly quota on Sandbox', async () => {
     const w = await setupWorld({ plan: 'sandbox' });
-    for (let i = 0; i < 50; i++) await w.store.incrementUsage(w.org.id, '2026-11');
+    for (let i = 0; i < 20; i++) await w.store.incrementUsage(w.org.id, '2026-11');
     await expect(createCardRequest(w.ctx, w.agent, notion)).rejects.toMatchObject({ code: 'quota_exceeded' });
+  });
+
+  it('bills overage on paid plans instead of refusing', async () => {
+    const w = await setupWorld({ plan: 'builder' });
+    await w.store.updateOrganization(w.org.id, { stripe_customer_id: 'cus_1' });
+    const meter: string[] = [];
+    w.ctx.env = { ...w.ctx.env, STRIPE_SECRET_KEY: 'sk', STRIPE_METER_OVERAGE: 'artemis_mandate_overage' };
+    w.ctx.fetch = (async (url: string, init: RequestInit) => {
+      meter.push(`${url} ${String(init.body)}`);
+      return new Response('{}');
+    }) as unknown as typeof fetch;
+    for (let i = 0; i < 50; i++) await w.store.incrementUsage(w.org.id, '2026-11');
+    const r = await createCardRequest(w.ctx, w.agent, notion);
+    expect(r.status).toBe('pending_approval');
+    await w.flush();
+    expect(await w.store.getOverage(w.org.id, '2026-11')).toBe(1);
+    expect(meter[0]).toContain('https://api.stripe.com/v1/billing/meter_events');
+    expect(meter[0]).toContain('event_name=artemis_mandate_overage');
+    expect(meter[0]).toContain('cus_1');
   });
 
   it('marks the request failed when the bank errors', async () => {

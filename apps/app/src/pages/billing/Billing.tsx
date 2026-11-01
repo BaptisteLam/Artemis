@@ -5,12 +5,13 @@ import { useOrg } from '../../lib/OrgProvider';
 import { ErrorAlert, PageStage, useAction } from '../../components';
 
 const PITCH: Record<Plan, string[]> = {
-  sandbox: ['1 agent', 'Banque simulée', '50 demandes / mois'],
-  builder: ['3 agents', '1 banque réelle', '100 demandes / mois', 'Export CSV'],
-  team: ['15 agents', '2 banques réelles', '1 000 demandes / mois', 'Export FEC, multi-approbateurs'],
-  business: ['Agents et banques illimités', 'Demandes illimitées', 'Export du journal AI Act'],
+  sandbox: ['1 agent', 'Banque simulée', '20 mandats simulés / mois'],
+  builder: ['3 agents', '1 banque réelle', '50 mandats / mois', 'Validation par passkey et notifications'],
+  team: ['10 agents', '2 banques réelles', '300 mandats / mois', 'Slack, quorum d’approbateurs, export FEC', 'Abonnements gérés par agent'],
+  agency: ['25 agents, clients illimités', '1 000 mandats / mois', 'Budgets, marge et refacturation par client', '+ 15 € par client actif'],
+  business: ['Illimité', 'Dossier et rapport AI Act', 'Export signé du journal', 'Accompagnement prioritaire'],
 };
-const NAME: Record<Plan, string> = { sandbox: 'Sandbox', builder: 'Builder', team: 'Team', business: 'Business' };
+const NAME: Record<Plan, string> = { sandbox: 'Sandbox', builder: 'Builder', team: 'Team', agency: 'Agences', business: 'Business' };
 
 export function Billing() {
   const { api, org, can } = useOrg();
@@ -39,15 +40,16 @@ export function Billing() {
           <div className="alert alert-error">Votre abonnement n'est plus actif ({org.organization.subscription_status ?? 'inconnu'}). Les fonctions payantes sont suspendues : mettez à jour votre moyen de paiement.</div>
         ) : null}
         <ErrorAlert error={checkout.error ?? portal.error} />
+        <p className="ar-small ar-muted" style={{ margin: 0 }}>Au-delà du quota d'un plan payant, chaque mandat supplémentaire est facturé 0,25 €. Ce mois-ci : {org?.usage.requests ?? 0} mandat(s).</p>
         {!owner ? <p className="ar-muted">Seul un propriétaire peut modifier l'abonnement.</p> : null}
         <div className="stat-grid" style={{ marginTop: 0 }}>
           {PLANS.map((p) => (
             <div key={p} className="ar-solid ar-stack" style={p === current ? { borderColor: 'var(--ar-cobalt)', boxShadow: 'var(--ar-shadow-offset)' } : undefined}>
               <div className="ar-spread"><h2 className="ar-h3">{NAME[p]}</h2>{p === current ? <span className="ar-badge ar-badge-info"><span className="ar-badge-dot" />Actuel</span> : null}</div>
-              <div><span className="ar-amount ar-amount-md">{PLAN_LIMITS[p].priceEur} €</span> <span className="ar-small ar-muted">/ mois</span></div>
+              <div><span className="ar-amount ar-amount-md">{p === 'business' ? 'dès ' : ''}{PLAN_LIMITS[p].priceEur} €</span> <span className="ar-small ar-muted">/ mois</span></div>
               <ul style={{ margin: 0, paddingLeft: 18, fontSize: 14 }}>{PITCH[p].map((x) => <li key={x}>{x}</li>)}</ul>
               {owner && p !== 'sandbox' && p !== current ? (
-                <Button variant={p === 'team' ? 'primary' : 'ghost'} onClick={() => (org?.organization.stripe_customer_id ? void portal.run() : void checkout.run(p))} disabled={checkout.busy || portal.busy}>
+                <Button variant={p === 'agency' ? 'primary' : 'ghost'} onClick={() => (org?.organization.stripe_customer_id ? void portal.run() : void checkout.run(p))} disabled={checkout.busy || portal.busy}>
                   Choisir {NAME[p]}
                 </Button>
               ) : null}
