@@ -18,6 +18,7 @@ import { Audit } from './pages/audit/Audit';
 import { Exports } from './pages/exports/Exports';
 import { Settings } from './pages/settings/Settings';
 import { Invitation } from './pages/Invitation';
+import { Billing } from './pages/billing/Billing';
 import { Loading } from './components';
 
 function RequireAuth() {
@@ -53,6 +54,7 @@ export const router = createBrowserRouter([
           { path: '/audit', element: <Audit /> },
           { path: '/exports', element: <Exports /> },
           { path: '/reglages', element: <Settings /> },
+          { path: '/facturation', element: <Billing /> },
           { path: '*', element: <Placeholder title="Page" /> },
         ],
       },
