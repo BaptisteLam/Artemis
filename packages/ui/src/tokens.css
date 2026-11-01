@@ -1,0 +1,136 @@
+/* Artemis design system — tokens (repris du système « Lucent »). */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap');
+
+:root {
+  color-scheme: light;
+  --ar-canvas: #0000ff;
+  --ar-paper: #f2f1ec;
+  --ar-surface: #ffffff;
+  --ar-ink: #171818;
+  --ar-ink-muted: #45474d;
+  --ar-on-canvas: #ffffff;
+  --ar-on-canvas-muted: #ccdbff;
+  --ar-cobalt: #0000ff;
+  --ar-on-cobalt: #ffffff;
+  --ar-cobalt-ink: #0000ff;
+  --ar-sky: #ccdbff;
+  --ar-blue-deep: #183d9e;
+  --ar-blue-mid: #4369c2;
+  --ar-neon: #4db8ff;
+  --ar-gain: #0a5540;
+  --ar-sage: #cfe3c9;
+  --ar-loss: #8a2a08;
+  --ar-peach: #f1d8c6;
+  --ar-pending: #6b4f00;
+  --ar-butter: #ece3c0;
+  --ar-line: rgba(23, 24, 24, 0.12);
+  --ar-line-strong: rgba(23, 24, 24, 0.48);
+  --ar-glass-fill: rgba(255, 255, 255, 0.18);
+  --ar-glass-frost: rgba(255, 255, 255, 0.78);
+  --ar-glass-border: rgba(255, 255, 255, 0.45);
+  --ar-glass-highlight: rgba(255, 255, 255, 0.6);
+  --ar-scanline: rgba(255, 255, 255, 0.07);
+  --ar-focus: #171818;
+
+  --ar-shadow-glass: inset 0 1px 0 0 rgba(255, 255, 255, 0.6), 0 18px 40px -16px rgba(23, 24, 24, 0.45);
+  --ar-shadow-raised: 0 1px 2px 0 rgba(23, 24, 24, 0.08), 0 6px 16px 0 rgba(23, 24, 24, 0.06);
+  --ar-shadow-button: inset 0 1px 0 0 rgba(255, 255, 255, 0.34), inset 0 -2px 0 0 rgba(23, 24, 24, 0.16), 0 1px 2px 0 rgba(23, 24, 24, 0.24), 0 3px 8px 0 rgba(0, 0, 255, 0.18);
+  --ar-shadow-window: 0 9px 0 0 #0000ff, 0 18px 0 0 #183d9e, 0 24px 40px -12px rgba(23, 24, 24, 0.35);
+  --ar-shadow-offset: inset 0 1px 0 0 #ffffff, inset 0 -2px 0 0 rgba(23, 24, 24, 0.06), 7px 7px 0 0 rgba(23, 24, 24, 0.1);
+
+  --ar-space-1: 4px;
+  --ar-space-2: 8px;
+  --ar-space-3: 12px;
+  --ar-space-4: 16px;
+  --ar-space-6: 24px;
+  --ar-space-8: 32px;
+  --ar-space-12: 48px;
+  --ar-space-16: 64px;
+
+  --ar-radius-xs: 2px;
+  --ar-radius-sm: 4px;
+  --ar-radius-md: 8px;
+  --ar-radius-lg: 16px;
+  --ar-radius-pill: 999px;
+
+  --ar-blur-sm: 12px;
+  --ar-blur-md: 24px;
+  --ar-blur-lg: 40px;
+
+  --ar-font-display: Geist, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ar-font-sans: Geist, ui-sans-serif, system-ui, sans-serif;
+  --ar-font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ar-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --ar-canvas: #070b33;
+    --ar-paper: #0b0c10;
+    --ar-surface: #15171f;
+    --ar-ink: #f2f1ec;
+    --ar-ink-muted: #b3b6c2;
+    --ar-on-canvas: #f2f1ec;
+    --ar-on-canvas-muted: #b8c4ee;
+    --ar-cobalt: #3d5cff;
+    --ar-cobalt-ink: #8fa8ff;
+    --ar-sky: #14215e;
+    --ar-blue-deep: #0d1a52;
+    --ar-blue-mid: #1f3384;
+    --ar-gain: #5ee0b0;
+    --ar-sage: #123326;
+    --ar-loss: #ff9466;
+    --ar-peach: #3a1d12;
+    --ar-pending: #f0cf6a;
+    --ar-butter: #352d10;
+    --ar-line: rgba(255, 255, 255, 0.14);
+    --ar-line-strong: rgba(255, 255, 255, 0.42);
+    --ar-glass-fill: rgba(255, 255, 255, 0.08);
+    --ar-glass-frost: rgba(16, 20, 48, 0.74);
+    --ar-glass-border: rgba(255, 255, 255, 0.16);
+    --ar-glass-highlight: rgba(255, 255, 255, 0.14);
+    --ar-scanline: rgba(255, 255, 255, 0.04);
+    --ar-focus: #ffd84d;
+    --ar-shadow-glass: inset 0 1px 0 0 rgba(255, 255, 255, 0.14), 0 18px 40px -16px rgba(0, 0, 0, 0.7);
+    --ar-shadow-raised: 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 6px 16px 0 rgba(0, 0, 0, 0.3);
+    --ar-shadow-button: inset 0 1px 0 0 rgba(255, 255, 255, 0.3), inset 0 -2px 0 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.5), 0 3px 8px 0 rgba(61, 92, 255, 0.3);
+    --ar-shadow-window: 0 9px 0 0 #3d5cff, 0 18px 0 0 #0d1a52, 0 24px 40px -12px rgba(0, 0, 0, 0.7);
+    --ar-shadow-offset: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 7px 7px 0 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --ar-canvas: #070b33;
+  --ar-paper: #0b0c10;
+  --ar-surface: #15171f;
+  --ar-ink: #f2f1ec;
+  --ar-ink-muted: #b3b6c2;
+  --ar-on-canvas: #f2f1ec;
+  --ar-on-canvas-muted: #b8c4ee;
+  --ar-cobalt: #3d5cff;
+  --ar-cobalt-ink: #8fa8ff;
+  --ar-sky: #14215e;
+  --ar-blue-deep: #0d1a52;
+  --ar-blue-mid: #1f3384;
+  --ar-gain: #5ee0b0;
+  --ar-sage: #123326;
+  --ar-loss: #ff9466;
+  --ar-peach: #3a1d12;
+  --ar-pending: #f0cf6a;
+  --ar-butter: #352d10;
+  --ar-line: rgba(255, 255, 255, 0.14);
+  --ar-line-strong: rgba(255, 255, 255, 0.42);
+  --ar-glass-fill: rgba(255, 255, 255, 0.08);
+  --ar-glass-frost: rgba(16, 20, 48, 0.74);
+  --ar-glass-border: rgba(255, 255, 255, 0.16);
+  --ar-glass-highlight: rgba(255, 255, 255, 0.14);
+  --ar-scanline: rgba(255, 255, 255, 0.04);
+  --ar-focus: #ffd84d;
+  --ar-shadow-glass: inset 0 1px 0 0 rgba(255, 255, 255, 0.14), 0 18px 40px -16px rgba(0, 0, 0, 0.7);
+  --ar-shadow-raised: 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 6px 16px 0 rgba(0, 0, 0, 0.3);
+  --ar-shadow-button: inset 0 1px 0 0 rgba(255, 255, 255, 0.3), inset 0 -2px 0 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.5), 0 3px 8px 0 rgba(61, 92, 255, 0.3);
+  --ar-shadow-window: 0 9px 0 0 #3d5cff, 0 18px 0 0 #0d1a52, 0 24px 40px -12px rgba(0, 0, 0, 0.7);
+  --ar-shadow-offset: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 7px 7px 0 0 rgba(0, 0, 0, 0.5);
+}
