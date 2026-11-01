@@ -6,14 +6,25 @@ import { useData } from '../../lib/useData';
 import type { PublicConnection } from '../../lib/types';
 import { ErrorAlert, Loading, PageStage, StatusBadge, useAction } from '../../components';
 import { formatDateTime } from '../../lib/format';
+import { API_URL } from '../../lib/config';
+import { CopyButton } from '../../components';
 
 type Provider = 'stripe' | 'qonto' | 'revolut';
 
 const PROVIDERS: Record<Provider, { name: string; fields: { key: string; label: string; hint: string; secret?: boolean; options?: string[] }[]; help: string }> = {
   stripe: {
     name: 'Stripe Issuing',
-    help: 'Compte Stripe avec Issuing activé (UE). Créez une clé restreinte avec les droits Issuing en écriture.',
-    fields: [{ key: 'secretKey', label: 'Clé secrète restreinte', hint: 'rk_live_… ou sk_test_…', secret: true }],
+    help: "Compte Stripe avec Issuing activé (UE). Créez une clé restreinte avec les droits Issuing en écriture. Indiquez un titulaire existant (ich_…) ou l'adresse de l'entreprise pour qu'Artemis le crée.",
+    fields: [
+      { key: 'secretKey', label: 'Clé secrète restreinte', hint: 'rk_live_… ou sk_test_…', secret: true },
+      { key: 'cardholderId', label: 'Titulaire Stripe', hint: 'ich_… (optionnel)' },
+      { key: 'companyName', label: "Nom de l'entreprise", hint: 'Si pas de titulaire' },
+      { key: 'billing.line1', label: 'Adresse', hint: 'Si pas de titulaire' },
+      { key: 'billing.postal_code', label: 'Code postal', hint: '' },
+      { key: 'billing.city', label: 'Ville', hint: '' },
+      { key: 'billing.country', label: 'Pays', hint: 'Code ISO, ex. FR' },
+      { key: 'webhookSecret', label: 'Secret du webhook', hint: 'whsec_… (après création du webhook, voir ci-dessous)', secret: true },
+    ],
   },
   qonto: {
     name: 'Qonto',
@@ -21,6 +32,10 @@ const PROVIDERS: Record<Provider, { name: string; fields: { key: string; label: 
     fields: [
       { key: 'accessToken', label: "Jeton d'accès", hint: 'Bearer OAuth', secret: true },
       { key: 'refreshToken', label: 'Jeton de rafraîchissement', hint: 'Optionnel', secret: true },
+      { key: 'clientId', label: 'Client ID OAuth', hint: 'Pour rafraîchir le jeton' },
+      { key: 'clientSecret', label: 'Client secret OAuth', hint: '', secret: true },
+      { key: 'holderId', label: 'ID du membre titulaire', hint: 'membership id Qonto' },
+      { key: 'bankAccountId', label: 'ID du compte bancaire', hint: 'bank_account id Qonto' },
       { key: 'environment', label: 'Environnement', hint: '', options: ['production', 'sandbox'] },
       { key: 'stagingToken', label: 'Staging token', hint: 'Sandbox uniquement', secret: true },
     ],
@@ -30,6 +45,9 @@ const PROVIDERS: Record<Provider, { name: string; fields: { key: string; label: 
     help: "Plan payant Revolut Business et accès « Cards API » activé par le support Revolut. Jeton d'accès de l'API Business.",
     fields: [
       { key: 'accessToken', label: "Jeton d'accès", hint: 'Business API', secret: true },
+      { key: 'refreshToken', label: 'Jeton de rafraîchissement', hint: 'Optionnel', secret: true },
+      { key: 'clientAssertion', label: 'Client assertion (JWT)', hint: 'Optionnel, pour le rafraîchissement', secret: true },
+      { key: 'holderId', label: 'ID du titulaire', hint: 'Membre de l’équipe (optionnel)' },
       { key: 'environment', label: 'Environnement', hint: '', options: ['production', 'sandbox'] },
     ],
   },
@@ -41,7 +59,13 @@ function ConnectForm({ onDone }: { onDone: () => void }) {
   const [values, setValues] = useState<Record<string, string>>({ environment: 'production' });
   const submit = useAction(async (e: FormEvent) => {
     e.preventDefault();
-    const credentials = Object.fromEntries(Object.entries(values).filter(([, v]) => v));
+    const credentials: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(values)) {
+      if (!v || (provider !== 'qonto' && provider !== 'revolut' && k === 'environment')) continue;
+      const [head, sub] = k.split('.');
+      if (sub) credentials[head!] = { ...((credentials[head!] as Record<string, string>) ?? {}), [sub]: v.trim() };
+      else credentials[k] = v.trim();
+    }
     await api('/app/connections', { method: 'POST', body: { provider, credentials } });
     setValues({ environment: 'production' });
     onDone();
@@ -102,6 +126,11 @@ export function Banks() {
                 <div className="grow">
                   <div>{c.label} <span className="ar-muted ar-small">· {c.provider}</span></div>
                   <div className="sub">Dernière synchro : {formatDateTime(c.last_sync_at)}{tested[c.id] ? ` · ${tested[c.id]}` : ''}</div>
+                  {c.provider === 'stripe' ? (
+                    <div className="sub" style={{ whiteSpace: 'normal' }}>
+                      Webhook Stripe (événements issuing_transaction.*) : {`${API_URL}/webhooks/stripe-issuing/${c.id}`} <CopyButton text={`${API_URL}/webhooks/stripe-issuing/${c.id}`} />
+                    </div>
+                  ) : null}
                 </div>
                 <StatusBadge status={c.status === 'active' ? 'active' : 'failed'} />
                 {can('owner', 'admin') ? (

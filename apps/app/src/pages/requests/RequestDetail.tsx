@@ -31,6 +31,10 @@ export function RequestDetail() {
     await api(`/app/requests/${id}/receipts`, { method: 'POST', form });
     await reload();
   });
+  const secureView = useAction(async (cardId: string) => {
+    const { url } = await api<{ url: string }>(`/app/cards/${cardId}/secure-view`);
+    window.open(url, '_blank', 'noopener');
+  });
   const openReceipt = useAction(async (receiptId: string) => {
     const res = await fetch(`${API_URL}/app/receipts/${receiptId}`, { headers: { Authorization: (await getAuthHeader()) ?? '', 'X-Org-Id': orgId ?? '' } });
     if (!res.ok) throw new Error('Justificatif indisponible.');
@@ -39,7 +43,7 @@ export function RequestDetail() {
 
   if (loading && !data) return <div className="ar-container page-body"><Loading /></div>;
   if (!data) return <div className="ar-container page-body"><ErrorAlert error={error} /></div>;
-  const { request: r, agent, mandate, card, receipts, transactions, policy } = data;
+  const { request: r, agent, mandate, card, receipts, transactions, policy, bank_provider } = data;
   const decider = can('owner', 'admin', 'approver');
   const isSandboxCard = card && card.provider_card_id.startsWith('sbx_');
 
@@ -52,7 +56,7 @@ export function RequestDetail() {
         </div>
       </PageStage>
       <div className="ar-container page-body ar-stack" style={{ gap: 24 }}>
-        <ErrorAlert error={simulate.error ?? cancel.error ?? upload.error ?? openReceipt.error} />
+        <ErrorAlert error={simulate.error ?? cancel.error ?? upload.error ?? openReceipt.error ?? secureView.error} />
         <div className="two-col">
           <Window title={`mandat · ${r.id.slice(0, 8)}`}>
             <div className="mandate">
@@ -91,7 +95,11 @@ export function RequestDetail() {
                   <p className="ar-small ar-muted" style={{ margin: 0 }}>
                     Expire {formatDateTime(card.expires_at)} · {card.revealed_at ? `remise à l'agent ${relativeTime(card.revealed_at)}` : "pas encore remise à l'agent"}
                   </p>
+                  {bank_provider === 'qonto' ? (
+                    <div className="alert alert-info ar-small">Qonto ne transmet pas la carte aux agents : affichez-la ici et finalisez le paiement vous-même.</div>
+                  ) : null}
                   <div className="ar-row">
+                    {bank_provider === 'qonto' && card.status === 'active' && decider ? <Button size="sm" onClick={() => void secureView.run(card.id)}>Afficher la carte (Qonto)</Button> : null}
                     {isSandboxCard && card.status === 'active' && decider ? <Button variant="ghost" size="sm" onClick={() => void simulate.run()}>Simuler un paiement</Button> : null}
                     {['pending', 'approved', 'issued'].includes(r.status) && decider ? <Button variant="ghost" size="sm" onClick={() => void cancel.run()}>Annuler la carte</Button> : null}
                   </div>

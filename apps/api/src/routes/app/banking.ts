@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
 import { z } from 'zod';
 import { ArtemisError, parseWith } from '@artemis/shared';
-import { createConnector, encryptCredentials, newSandboxState, SandboxConnector } from '@artemis/connectors';
+import { createConnector, encryptCredentials, newSandboxState, QontoConnector, SandboxConnector } from '@artemis/connectors';
 import type { AppEnv } from '../../http/types';
 import { ANY_ROLE, APPROVERS, MANAGERS, requireRole } from '../../http/auth';
 import { audit } from '../../services/audit';
@@ -101,4 +101,16 @@ bankingRoutes.post('/sandbox/simulate-payment', requireRole(...APPROVERS), async
   });
   const row = await applyBankTransaction(c.var.ctx, conn, tx);
   return c.json({ transaction: row });
+});
+
+/** Qonto : URL de l'affichage sécurisé de la carte, pour l'approbateur uniquement. */
+bankingRoutes.get('/cards/:id/secure-view', requireRole(...APPROVERS), async (c) => {
+  const card = await c.var.ctx.store.getCard(c.req.param('id'));
+  if (!card || card.org_id !== c.var.org.id || !card.bank_connection_id) throw new ArtemisError('not_found', 'Carte introuvable.');
+  const conn = await c.var.ctx.store.getBankConnection(card.bank_connection_id);
+  if (!conn) throw new ArtemisError('not_found', 'Banque introuvable.');
+  const connector = await connectorFor(c.var.ctx, conn);
+  if (!(connector instanceof QontoConnector)) throw new ArtemisError('invalid_input', "L'affichage sécurisé n'existe que pour Qonto.");
+  await audit(c.var.ctx, c.var.org.id, { type: 'user', id: c.var.user.id }, 'card.viewed', card.request_id, { card_id: card.id });
+  return c.json({ url: await connector.secureViewUrl(card.provider_card_id) });
 });

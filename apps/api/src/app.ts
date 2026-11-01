@@ -14,6 +14,7 @@ import { mcp } from './mcp/server';
 import { pushRoutes } from './routes/push';
 import { createNotifier } from './services/notify';
 import { appRoutes } from './routes/app';
+import { webhooks } from './routes/webhooks';
 
 export interface AppDeps {
   store?: Store;
@@ -94,6 +95,7 @@ export function createApp(deps: AppDeps = {}) {
 
   app.route('/v1', v1);
   app.route('/mcp', mcp);
+  app.route('/webhooks', webhooks);
   app.route('/app/push', pushRoutes);
   app.route('/app', passkeyRoutes);
   app.route('/app', appRoutes);

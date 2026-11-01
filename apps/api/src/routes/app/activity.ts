@@ -34,6 +34,7 @@ activityRoutes.get('/requests/:id', requireRole(...ANY_ROLE), async (c) => {
     store.listReceipts(c.var.org.id, request.id),
     store.getPolicy(request.agent_id),
   ]);
+  const bankConn = card?.bank_connection_id ? await store.getBankConnection(card.bank_connection_id) : null;
   const transactions = card ? (await store.listTransactions(c.var.org.id, { limit: 2000 })).filter((t) => t.card_id === card.id) : [];
   return c.json({
     request,
@@ -41,6 +42,7 @@ activityRoutes.get('/requests/:id', requireRole(...ANY_ROLE), async (c) => {
     policy,
     mandate,
     card,
+    bank_provider: bankConn?.provider ?? null,
     receipts,
     transactions,
   });

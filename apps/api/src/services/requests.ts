@@ -280,9 +280,12 @@ export async function revealCardForCheckout(ctx: Ctx, agent: AgentRow, requestId
   if (card.status === 'pending_bank_sca') throw new ArtemisError('card_not_ready', 'La banque attend encore la validation de l’approbateur.');
   if (card.status !== 'active') throw new ArtemisError('request_not_pending', `Carte au statut ${card.status}.`);
   if (new Date(card.expires_at) <= ctx.now()) throw new ArtemisError('request_expired', 'La carte a expiré.');
+  const { conn, connector } = await connectorForAgentConnection(ctx, card.bank_connection_id);
+  if (conn.provider === 'qonto') {
+    throw new ArtemisError('card_not_ready', "Qonto ne transmet pas la carte aux agents : l'approbateur l'affiche dans Artemis (affichage sécurisé Qonto) et finalise le paiement.");
+  }
   const marked = await ctx.store.markCardRevealed(card.id);
   if (!marked) throw new ArtemisError('already_revealed', 'Les identifiants de cette carte ont déjà été remis.');
-  const { connector } = await connectorForAgentConnection(ctx, card.bank_connection_id);
   const d = await connector.revealCard(card.provider_card_id);
   await audit(ctx, request.org_id, { type: 'agent', id: agent.id }, 'card.revealed', request.id, { card_id: card.id, last4: card.last4 });
   return {

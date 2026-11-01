@@ -49,6 +49,7 @@ export interface RequestDetail {
   policy: PolicyRow | null;
   mandate: MandateRow | null;
   card: CardRow | null;
+  bank_provider: 'sandbox' | 'stripe' | 'qonto' | 'revolut' | null;
   receipts: ReceiptRow[];
   transactions: TransactionRow[];
 }
