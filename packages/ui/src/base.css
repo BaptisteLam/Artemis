@@ -233,3 +233,10 @@ img, svg { max-width: 100%; }
 .ar-row { display: flex; align-items: center; gap: var(--ar-space-3); flex-wrap: wrap; }
 .ar-spread { display: flex; align-items: center; justify-content: space-between; gap: var(--ar-space-3); flex-wrap: wrap; }
 .ar-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Contrôles sur verre givré ou surface opaque posés sur un stage : retour aux couleurs « papier ». */
+.ar-stage .ar-glass-frost .ar-btn-primary, .ar-stage .ar-solid .ar-btn-primary { background: var(--ar-cobalt); color: var(--ar-on-cobalt); }
+.ar-stage .ar-glass-frost .ar-btn-ghost, .ar-stage .ar-solid .ar-btn-ghost { color: var(--ar-ink); border-color: var(--ar-line-strong); }
+.ar-stage .ar-glass-frost, .ar-stage .ar-solid { color: var(--ar-ink); }
+.ar-stage .ar-glass-frost .ar-muted, .ar-stage .ar-solid .ar-muted { color: var(--ar-ink-muted); }
+.ar-stage .ar-glass-frost :focus-visible, .ar-stage .ar-solid :focus-visible { outline-color: var(--ar-focus); }

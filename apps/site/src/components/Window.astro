@@ -1,0 +1,8 @@
+---
+interface Props { title: string; tilt?: 'l' | 'r' }
+const { title, tilt } = Astro.props;
+---
+<div class:list={['ar-window', tilt && `ar-window-tilt-${tilt}`]}>
+  <div class="ar-window-title"><span class="ar-window-dots" aria-hidden="true"><i></i><i></i><i></i></span>{title}</div>
+  <div class="ar-window-pane"><slot /></div>
+</div>

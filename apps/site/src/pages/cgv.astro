@@ -1,0 +1,24 @@
+---
+import LegalLayout from '../components/LegalLayout.astro';
+import { LEGAL } from '../legal';
+---
+<LegalLayout title="Conditions générales de vente et d'utilisation">
+  <h2>1. Objet</h2>
+  <p>Les présentes conditions régissent l'accès au logiciel Artemis, édité par {LEGAL.editor} ({LEGAL.status}, SIRET {LEGAL.siret}), et sa souscription par des clients professionnels. Le service est réservé aux professionnels.</p>
+  <h2>2. Description du service</h2>
+  <p>Artemis permet à un client de définir des règles de dépense pour ses agents logiciels, de valider leurs demandes de paiement et de piloter, via les interfaces de programmation de sa propre banque, la création de cartes virtuelles à usage unique. Artemis ne fournit aucun service de paiement, ne détient aucun fonds et n'émet aucune carte. La relation bancaire, les frais bancaires et l'authentification forte relèvent exclusivement du contrat entre le client et sa banque.</p>
+  <h2>3. Compte et sécurité</h2>
+  <p>Le client est responsable de la confidentialité des jetons d'agent, des accès à son compte et des passkeys de ses utilisateurs, ainsi que des règles qu'il configure. Toute dépense validée par un utilisateur habilité ou conforme à une règle de validation automatique est réputée autorisée par le client.</p>
+  <h2>4. Offres et prix</h2>
+  <p>Offres : Sandbox (gratuite), Builder (19 € / mois), Team (49 € / mois), Business (149 € / mois). Prix nets. {LEGAL.vat}. Paiement mensuel d'avance par carte via Stripe. Le renouvellement est automatique ; la résiliation prend effet à la fin de la période en cours, sans remboursement prorata.</p>
+  <h2>5. Quotas</h2>
+  <p>Chaque offre comprend des quotas (agents, banques connectées, demandes mensuelles). Au-delà, les nouvelles demandes sont refusées jusqu'à la période suivante ou un changement d'offre.</p>
+  <h2>6. Disponibilité</h2>
+  <p>L'éditeur met en œuvre des moyens raisonnables pour assurer la disponibilité du service, sans garantie de résultat. Des interruptions peuvent survenir pour maintenance ou du fait des prestataires techniques et bancaires.</p>
+  <h2>7. Responsabilité</h2>
+  <p>L'éditeur ne saurait être tenu responsable des achats effectués par les agents du client dans le cadre des autorisations données, du choix des marchands, de la qualité des biens ou services achetés, ni des décisions de la banque du client. La responsabilité de l'éditeur, toutes causes confondues, est limitée aux sommes payées par le client au cours des douze derniers mois.</p>
+  <h2>8. Données</h2>
+  <p>Le traitement des données personnelles est décrit dans la <a href="/confidentialite">politique de confidentialité</a>. Le client peut exporter ses données à tout moment.</p>
+  <h2>9. Droit applicable</h2>
+  <p>Droit français. À défaut d'accord amiable, compétence des tribunaux du ressort du domicile de l'éditeur.</p>
+</LegalLayout>

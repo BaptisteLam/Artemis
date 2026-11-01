@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import { API_URL } from '../config';
+---
+<Base title="Liste d'attente" description="Soyez prévenu de l'ouverture des connecteurs bancaires réels.">
+  <PageHead eyebrow="Liste d'attente" title="Soyez parmi les premiers." lead="Les connecteurs Qonto et Revolut ouvrent progressivement. Laissez-nous votre email : nous vous prévenons dès que votre banque est disponible." />
+  <div class="ar-container section">
+    <form class="form-grid ar-solid" id="waitlist" data-api={API_URL}>
+      <div class="ar-field"><label class="ar-field-label" for="email">Email professionnel</label><input class="ar-input" id="email" name="email" type="email" required autocomplete="email" /></div>
+      <div class="ar-field"><label class="ar-field-label" for="company">Entreprise</label><input class="ar-input" id="company" name="company" autocomplete="organization" /></div>
+      <div class="ar-field"><label class="ar-field-label" for="use_case">Que doivent payer vos agents ?</label><textarea class="ar-textarea" id="use_case" name="use_case" placeholder="API, SaaS, cloud, données…"></textarea></div>
+      <button class="ar-btn ar-btn-primary" type="submit">Rejoindre la liste</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+  <script>
+    const form = document.getElementById('waitlist') as HTMLFormElement;
+    const msg = form.querySelector('.form-msg') as HTMLElement;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form));
+      msg.textContent = 'Envoi…';
+      try {
+        const res = await fetch(`${form.dataset.api}/v1/waitlist`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        form.reset();
+        msg.textContent = 'Merci, vous êtes inscrit. Nous vous écrivons dès l’ouverture.';
+      } catch {
+        msg.textContent = 'L’inscription a échoué. Réessayez dans un instant.';
+      }
+    });
+  </script>
+</Base>

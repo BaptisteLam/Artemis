@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+import Window from '../components/Window.astro';
+import Amount from '../components/Amount.astro';
+import { APP_URL } from '../config';
+---
+<Base title="Artemis" stage>
+  <section class="ar-stage">
+    <div class="ar-container hero hero-grid">
+      <div>
+        <span class="ar-micro eyebrow">Cartes pour agents IA · Europe</span>
+        <h1 class="ar-display">Vos agents paient. Vous gardez le dernier mot.</h1>
+        <p class="ar-lead">Donnez à Claude, ChatGPT ou n8n une carte virtuelle à usage unique, créée dans votre propre banque, que vous validez d'un geste sur votre téléphone.</p>
+        <div class="ar-row">
+          <a class="ar-btn ar-btn-primary" href={`${APP_URL}/inscription`}>Essayer gratuitement →</a>
+          <a class="ar-btn ar-btn-ghost" href="/docs">Lire la doc</a>
+        </div>
+      </div>
+      <div class="hero-cards">
+        <div class="ar-glass-frost ar-rise">
+          <div class="ar-spread" style="margin-bottom:16px">
+            <span class="ar-micro">Demande en attente</span>
+            <span class="ar-badge ar-badge-pending ar-badge-live"><span class="ar-badge-dot"></span>À valider</span>
+          </div>
+          <div class="req-row">
+            <span class="ar-merchant">N</span>
+            <div class="grow">
+              <div><strong>Notion</strong> · abonnement équipe</div>
+              <div class="ar-mono">notion.agent ↳ studio-lumen</div>
+            </div>
+            <Amount cents={4900} />
+          </div>
+          <div class="ar-row" style="margin-top:20px">
+            <span class="ar-btn ar-btn-primary ar-btn-sm">Approuver avec ma passkey</span>
+            <span class="ar-btn ar-btn-ghost ar-btn-sm">Refuser</span>
+          </div>
+        </div>
+        <div class="ar-glass vcard">
+          <div class="ar-spread"><span class="ar-micro">Usage unique · 30 min</span><svg viewBox="0 0 714 496" height="16" width="23" fill="currentColor" aria-hidden="true"><path d="M0 496 L510 0 L510 280 L292 496 Z"/><path d="M510 280 H714 V496 H510 Z"/></svg></div>
+          <div class="num">•••• •••• •••• 4832</div>
+          <div class="ar-spread ar-small"><span>Limite 49,00 €</span><span>Verrouillée sur Notion</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="ar-container ar-stack" style="gap:48px">
+      <h2 class="ar-h1 ar-headline">Une carte par achat. <span class="ar-headline-explain">Jamais la carte de l'entreprise dans un prompt.</span></h2>
+      <div class="ar-bento">
+        <div class="ar-solid">
+          <span class="ar-micro eyebrow">Vos fonds restent chez vous</span>
+          <h3 class="ar-h3">Votre banque émet, Artemis gouverne.</h3>
+          <p class="ar-muted">Connectez Qonto, Revolut Business ou Stripe Issuing. Les cartes sont créées dans votre compte. Artemis ne détient jamais votre argent.</p>
+        </div>
+        <div class="ar-solid">
+          <span class="ar-micro eyebrow">Validation humaine</span>
+          <h3 class="ar-h3">Chaque dépense est un mandat signé.</h3>
+          <p class="ar-muted">Montant, marchand, intention : vous validez avec votre passkey (Face ID, empreinte). La signature est horodatée et conservée.</p>
+        </div>
+        <div class="ar-solid">
+          <span class="ar-micro eyebrow">Règles par agent</span>
+          <h3 class="ar-h3">Budget, plafond, marchands.</h3>
+          <p class="ar-muted">Budget mensuel, plafond par achat, listes de marchands, catégories, seuil d'auto-validation. L'agent ne peut que demander.</p>
+        </div>
+        <div class="ar-solid">
+          <span class="ar-micro eyebrow">Compta et conformité</span>
+          <h3 class="ar-h3">Exports Pennylane, journal AI Act.</h3>
+          <p class="ar-muted">Rapprochement automatique, justificatifs, exports CSV et FEC, journal d'audit chaîné : la preuve de supervision humaine pour votre DAF.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ar-stage ar-stage-quiet">
+    <div class="ar-container section">
+      <span class="ar-micro eyebrow">Comment ça marche</span>
+      <h2 class="ar-h1" style="margin-bottom:40px">Quatre étapes, aucune carte partagée.</h2>
+      <ol class="steps">
+        <li class="ar-glass"><h3 class="ar-h3">L'agent demande</h3><p class="ar-muted">Via MCP ou l'API : « 49,00 € chez Notion, abonnement équipe ».</p></li>
+        <li class="ar-glass"><h3 class="ar-h3">Les règles filtrent</h3><p class="ar-muted">Budget, plafond, marchand : hors règles, la demande est refusée sur-le-champ.</p></li>
+        <li class="ar-glass"><h3 class="ar-h3">Vous validez</h3><p class="ar-muted">Notification sur votre téléphone, signature par passkey.</p></li>
+        <li class="ar-glass"><h3 class="ar-h3">L'agent paie</h3><p class="ar-muted">Carte à usage unique, montant exact, expiration courte, puis rapprochement automatique.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="ar-container hero-grid" style="align-items:center">
+      <div>
+        <span class="ar-micro eyebrow">Pour les builders</span>
+        <h2 class="ar-h1 ar-headline">Branché en une ligne. <span class="ar-headline-explain">Claude, ChatGPT, n8n, Make ou votre code.</span></h2>
+        <p class="ar-lead ar-muted" style="margin-top:16px">Un serveur MCP distant et une API REST. Sandbox gratuite avec cartes simulées pour tester sans banque.</p>
+        <a class="ar-btn ar-btn-primary" href="/docs/mcp-claude">Connecter Claude →</a>
+      </div>
+      <Window title="terminal" tilt="r">
+        <pre class="ar-mono" style="margin:0;font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere">claude mcp add --transport http artemis \
+  https://api.artemis.dev/mcp \
+  --header "Authorization: Bearer art_test_…"
+
+› request_card(4900, "EUR", "Notion", "abonnement équipe")
+↳ pending_approval · req_8f2c</pre>
+      </Window>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="ar-container">
+      <div class="ar-solid ar-spread" style="padding:32px">
+        <div>
+          <h2 class="ar-h2">Commencez en Sandbox, gratuitement.</h2>
+          <p class="ar-muted" style="margin:8px 0 0">Sans carte bancaire. Passez à un plan payant quand vous branchez votre banque.</p>
+        </div>
+        <div class="ar-row">
+          <a class="ar-btn ar-btn-primary" href={`${APP_URL}/inscription`}>Créer un compte</a>
+          <a class="ar-btn ar-btn-ghost" href="/tarifs">Voir les tarifs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,36 @@
+---
+import '@artemis/ui/tokens.css';
+import '@artemis/ui/base.css';
+import '../styles/site.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  stage?: boolean;
+}
+const { title, description = 'Cartes virtuelles à usage unique pour vos agents IA, validées par vous. Vos fonds restent dans votre banque.', stage = false } = Astro.props;
+const fullTitle = title === 'Artemis' ? 'Artemis — Vos agents paient. Vous gardez le dernier mot.' : `${title} · Artemis`;
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta name="theme-color" content="#0000ff" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body class={stage ? 'has-stage' : ''}>
+    <a class="ar-sr skip" href="#contenu">Aller au contenu</a>
+    <Nav />
+    <main id="contenu">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from './PageHead.astro';
+interface Props { title: string }
+const { title } = Astro.props;
+---
+<Base title={title}>
+  <PageHead eyebrow="Légal" title={title} lead="Dernière mise à jour : 1er novembre 2026." />
+  <div class="ar-container section"><article class="prose"><slot /></article></div>
+</Base>

@@ -1,0 +1,25 @@
+{
+  "name": "site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "astro build && vitest run",
+    "typecheck": "astro check",
+    "lint": "echo ok"
+  },
+  "dependencies": {
+    "@artemis/shared": "workspace:*",
+    "@artemis/ui": "workspace:*",
+    "astro": "^5.14.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.4"
+  }
+}

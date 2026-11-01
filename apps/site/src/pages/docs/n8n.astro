@@ -1,0 +1,15 @@
+---
+import DocsLayout from '../../components/DocsLayout.astro';
+import { API_URL, MCP_URL } from '../../config';
+---
+<DocsLayout title="Connecter n8n" lead="Deux options : le nœud MCP Client pour un agent IA n8n, ou des requêtes HTTP pour un workflow classique.">
+  <h2>Agent IA n8n (MCP Client)</h2>
+  <p>Dans un nœud <em>AI Agent</em>, ajoutez l'outil <em>MCP Client</em> : transport <em>HTTP Streamable</em>, URL <code>{MCP_URL}</code>, authentification <em>Header Auth</em> avec <code>Authorization: Bearer art_…</code>.</p>
+  <h2>Workflow HTTP</h2>
+  <p>Importez le workflow d'exemple <code>examples/n8n/artemis-request-card.json</code> du dépôt. Il enchaîne :</p>
+  <ol>
+    <li><code>POST {API_URL}/v1/card-requests</code> avec <code>{`{ "amount": 4900, "merchant": "Notion", "purpose": "abonnement équipe" }`}</code></li>
+    <li>une boucle d'attente sur <code>GET /v1/card-requests/:id</code> jusqu'au statut <code>issued</code> ;</li>
+    <li><code>POST /v1/card-requests/:id/reveal</code> pour obtenir la carte, une seule fois.</li>
+  </ol>
+</DocsLayout>

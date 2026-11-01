@@ -1,0 +1,27 @@
+---
+import { LEGAL } from '../legal';
+---
+<footer class="site-footer">
+  <div class="ar-container cols">
+    <div>
+      <p style="display:flex;align-items:center;gap:10px;color:var(--ar-ink);font:600 18px/1 var(--ar-font-display);letter-spacing:-0.05em;margin:0 0 12px">
+        <svg viewBox="0 0 714 496" height="16" width="23" fill="var(--ar-cobalt)" aria-hidden="true"><path d="M0 496 L510 0 L510 280 L292 496 Z"/><path d="M510 280 H714 V496 H510 Z"/></svg>
+        Artemis
+      </p>
+      <p>Vos agents paient. Vous gardez le dernier mot.</p>
+      <p>{LEGAL.vat}</p>
+    </div>
+    <div>
+      <p class="ar-micro">Produit</p>
+      <ul><li><a href="/fonctionnement">Fonctionnement</a></li><li><a href="/tarifs">Tarifs</a></li><li><a href="/securite">Sécurité</a></li><li><a href="/liste-attente">Liste d'attente</a></li></ul>
+    </div>
+    <div>
+      <p class="ar-micro">Docs</p>
+      <ul><li><a href="/docs/mcp-claude">Claude</a></li><li><a href="/docs/mcp-chatgpt">ChatGPT</a></li><li><a href="/docs/n8n">n8n</a></li><li><a href="/docs/api">API REST</a></li></ul>
+    </div>
+    <div>
+      <p class="ar-micro">Légal</p>
+      <ul><li><a href="/mentions-legales">Mentions légales</a></li><li><a href="/cgv">CGV</a></li><li><a href="/confidentialite">Confidentialité</a></li></ul>
+    </div>
+  </div>
+</footer>

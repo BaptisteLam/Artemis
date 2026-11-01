@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from './PageHead.astro';
+interface Props { title: string; lead?: string }
+const { title, lead } = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, '');
+const links = [
+  ['/docs', 'Démarrer'],
+  ['/docs/mcp-claude', 'Claude (MCP)'],
+  ['/docs/mcp-chatgpt', 'ChatGPT (MCP)'],
+  ['/docs/n8n', 'n8n'],
+  ['/docs/api', 'API REST'],
+  ['/docs/regles', 'Règles et validation'],
+];
+---
+<Base title={title} description={lead}>
+  <PageHead eyebrow="Documentation" title={title} lead={lead} />
+  <div class="ar-container section docs-layout">
+    <nav class="docs-nav" aria-label="Documentation">
+      {links.map(([href, label]) => <a href={href} aria-current={path === href ? 'page' : undefined}>{label}</a>)}
+    </nav>
+    <article class="prose"><slot /></article>
+  </div>
+</Base>

@@ -1,0 +1,15 @@
+---
+import DocsLayout from '../../components/DocsLayout.astro';
+import { MCP_URL } from '../../config';
+---
+<DocsLayout title="Connecter ChatGPT" lead="ChatGPT accepte les serveurs MCP distants comme connecteurs personnalisés.">
+  <h2>Ajouter le connecteur</h2>
+  <ol>
+    <li>Ouvrez <em>Paramètres → Connecteurs → Avancé</em> et activez le mode développeur si votre offre le demande.</li>
+    <li>Créez un connecteur, URL : <code>{MCP_URL}</code>.</li>
+    <li>Authentification : en-tête <code>Authorization</code> avec la valeur <code>Bearer art_…</code> (selon les options proposées par votre espace ChatGPT).</li>
+  </ol>
+  <p>Les intitulés exacts varient selon les offres ChatGPT ; l'adresse et l'en-tête restent les mêmes.</p>
+  <h2>Agents OpenAI (API)</h2>
+  <p>Avec l'API Responses ou l'Agents SDK, déclarez un outil MCP distant pointant vers <code>{MCP_URL}</code> avec le même en-tête.</p>
+</DocsLayout>
