@@ -1,0 +1,20 @@
+{
+  "name": "@artemis/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/types.ts",
+  "types": "./src/types.ts",
+  "exports": { ".": "./src/types.ts" },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.3.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.4"
+  }
+}
