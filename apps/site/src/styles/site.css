@@ -55,3 +55,20 @@
 .form-msg { min-height: 24px; font-size: 14px; }
 .check { display: grid; gap: 8px; padding: 0; list-style: none; }
 .check li::before { content: '→ '; color: var(--ar-cobalt-ink); }
+
+/* Logos des plateformes compatibles, en blanc sur le stage */
+.works-with { margin-top: 40px; display: grid; gap: 12px; }
+.works-with .ar-micro { color: var(--ar-on-canvas-muted); }
+.works-with ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+.works-item { display: inline-flex; align-items: center; gap: 10px; color: var(--ar-on-canvas); opacity: 0.86; font: 500 16px/1 var(--ar-font-display); letter-spacing: -0.02em; transition: opacity 200ms var(--ar-ease); }
+.works-item:hover { opacity: 1; }
+.works-item svg { flex: none; }
+.works-more { font: 500 11px/1 var(--ar-font-mono); letter-spacing: 0.08em; color: var(--ar-on-canvas-muted); opacity: 1; }
+
+/* Filigrane du logo dans un module bleu */
+.has-mark { position: relative; }
+.has-mark > .ar-container { position: relative; z-index: 2; }
+.stage-mark { position: absolute; z-index: 1; right: -6%; bottom: -14%; width: min(860px, 90vw); height: auto; pointer-events: none; opacity: 0.9; animation: ar-mark-float 18s var(--ar-ease) infinite alternate; }
+@keyframes ar-mark-float { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-18px, -12px, 0); } }
+@media (max-width: 720px) { .stage-mark { right: -30%; bottom: -6%; width: 140vw; } }
+@media (prefers-reduced-motion: reduce) { .stage-mark { animation: none !important; } }

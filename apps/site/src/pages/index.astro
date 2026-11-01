@@ -1,5 +1,7 @@
 ---
 import StageFx from '../components/StageFx.astro';
+import WorksWith from '../components/WorksWith.astro';
+import StageMark from '../components/StageMark.astro';
 import Base from '../layouts/Base.astro';
 import Window from '../components/Window.astro';
 import Amount from '../components/Amount.astro';
@@ -17,6 +19,7 @@ import { APP_URL } from '../config';
           <a class="ar-btn ar-btn-primary" href={`${APP_URL}/inscription`}>Essayer gratuitement →</a>
           <a class="ar-btn ar-btn-ghost" href="/docs">Lire la doc</a>
         </div>
+        <WorksWith />
       </div>
       <div class="hero-cards">
         <div class="ar-glass-frost ar-rise">
@@ -74,8 +77,9 @@ import { APP_URL } from '../config';
     </div>
   </section>
 
-  <section class="ar-stage ar-stage-quiet">
+  <section class="ar-stage ar-stage-quiet has-mark">
     <StageFx />
+    <StageMark />
     <div class="ar-container section">
       <span class="ar-micro eyebrow">Comment ça marche</span>
       <h2 class="ar-h1" style="margin-bottom:40px">Quatre étapes, aucune carte partagée.</h2>
