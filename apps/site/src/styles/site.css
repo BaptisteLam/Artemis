@@ -19,7 +19,8 @@
 .ar-stage .eyebrow { color: var(--ar-on-canvas-muted); }
 .steps { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); counter-reset: step; padding: 0; list-style: none; }
 .steps li { counter-increment: step; }
-.steps li::before { content: counter(step, decimal-leading-zero); font: 500 11px/1 var(--ar-font-mono); letter-spacing: 0.3em; color: var(--ar-on-canvas-muted); display: block; margin-bottom: 12px; }
+/* Le compteur passe sur le titre : ::before du panneau sert aux repères d'angle du verre. */
+.steps li > :first-child::before { content: counter(step, decimal-leading-zero); font: 500 11px/1 var(--ar-font-mono); letter-spacing: 0.3em; color: var(--ar-on-canvas-muted); display: block; margin-bottom: 12px; }
 .price-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
 .price { display: flex; flex-direction: column; gap: 12px; }
 .price ul { margin: 0; padding-left: 18px; font-size: 14px; }

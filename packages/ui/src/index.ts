@@ -4,7 +4,7 @@ export { Badge, type BadgeTone } from './components/Badge';
 export { Button, type ButtonVariant } from './components/Button';
 export { Glass } from './components/Glass';
 export { Window } from './components/Window';
-export { Stage } from './components/Stage';
+export { Stage, StageFx } from './components/Stage';
 export { Field } from './components/Field';
 export { Headline } from './components/Headline';
 export { EmptyState } from './components/EmptyState';

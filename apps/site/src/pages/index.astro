@@ -1,4 +1,5 @@
 ---
+import StageFx from '../components/StageFx.astro';
 import Base from '../layouts/Base.astro';
 import Window from '../components/Window.astro';
 import Amount from '../components/Amount.astro';
@@ -6,6 +7,7 @@ import { APP_URL } from '../config';
 ---
 <Base title="Artemis" stage>
   <section class="ar-stage">
+    <StageFx />
     <div class="ar-container hero hero-grid">
       <div>
         <span class="ar-micro eyebrow">Cartes pour agents IA · Europe</span>
@@ -73,6 +75,7 @@ import { APP_URL } from '../config';
   </section>
 
   <section class="ar-stage ar-stage-quiet">
+    <StageFx />
     <div class="ar-container section">
       <span class="ar-micro eyebrow">Comment ça marche</span>
       <h2 class="ar-h1" style="margin-bottom:40px">Quatre étapes, aucune carte partagée.</h2>

@@ -1,8 +1,10 @@
 ---
+import StageFx from './StageFx.astro';
 interface Props { eyebrow: string; title: string; lead?: string }
 const { eyebrow, title, lead } = Astro.props;
 ---
 <section class="ar-stage ar-stage-quiet">
+    <StageFx />
   <div class="ar-container page-head">
     <span class="ar-micro eyebrow">{eyebrow}</span>
     <h1 class="ar-h1">{title}</h1>

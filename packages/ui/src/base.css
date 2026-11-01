@@ -39,13 +39,14 @@ img, svg { max-width: 100%; }
 .ar-amount-loss { color: var(--ar-loss); }
 .ar-stage .ar-amount-gain, .ar-stage .ar-amount-loss { color: inherit; }
 
-/* Stage : canvas texturé, halo, marches */
+/* Stage : canvas texturé (trame pixel dot-matrix), halo qui respire, marches */
 .ar-stage {
   position: relative;
   isolation: isolate;
   overflow: hidden;
   background-color: var(--ar-canvas);
-  background-image: repeating-linear-gradient(to bottom, var(--ar-scanline) 0 1px, transparent 1px 3px);
+  background-image: var(--ar-pixel-grid), repeating-linear-gradient(to bottom, var(--ar-scanline) 0 1px, transparent 1px 3px);
+  background-size: var(--ar-pixel-size) var(--ar-pixel-size), auto;
   color: var(--ar-on-canvas);
   border-bottom: 9px solid var(--ar-blue-mid);
   box-shadow: 0 9px 0 0 var(--ar-blue-deep);
@@ -61,25 +62,164 @@ img, svg { max-width: 100%; }
   height: 520px;
   border-radius: 50%;
   background: var(--ar-neon);
-  opacity: 0.55;
+  opacity: 0.5;
   filter: blur(var(--ar-blur-lg)) blur(60px);
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: ar-breathe 9s ease-in-out infinite;
+}
+/* Liseré lumineux en bas du stage, au-dessus des marches. */
+.ar-stage::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ar-glass-highlight) 30%, var(--ar-glass-highlight) 70%, transparent);
+  opacity: 0.6;
   pointer-events: none;
 }
 .ar-stage-quiet::before { display: none; }
 .ar-stage .ar-muted { color: var(--ar-on-canvas-muted); }
+@keyframes ar-breathe {
+  0%, 100% { opacity: 0.42; transform: translate3d(0, 0, 0) scale(1); }
+  50% { opacity: 0.62; transform: translate3d(-24px, 18px, 0) scale(1.1); }
+}
 
-/* Glass */
+/* Effets du stage : un calque masqué par la trame pixel, où des lueurs se déplacent.
+   Le masque est fixe, donc seuls les pixels de la grille s'allument : scintillement,
+   dérive et balayage restent alignés sur la trame. Tout passe par transform/opacity. */
+.ar-stage-fx {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: var(--ar-fx-strength);
+  -webkit-mask-image: var(--ar-pixel-mask);
+  mask-image: var(--ar-pixel-mask);
+  -webkit-mask-size: var(--ar-pixel-size) var(--ar-pixel-size);
+  mask-size: var(--ar-pixel-size) var(--ar-pixel-size);
+}
+.ar-stage-fx > i { position: absolute; display: block; will-change: transform, opacity; }
+/* Nappes lumineuses qui dérivent lentement. */
+.ar-fx-drift {
+  inset: -25%;
+  background:
+    radial-gradient(closest-side, var(--ar-pixel-tint), transparent) 62% 8% / 46% 52% no-repeat,
+    radial-gradient(closest-side, var(--ar-pixel-glow), transparent) 14% 70% / 34% 40% no-repeat,
+    radial-gradient(closest-side, var(--ar-pixel-tint), transparent) 88% 86% / 30% 36% no-repeat;
+  opacity: 0.32;
+  animation: ar-drift 28s ease-in-out infinite alternate;
+}
+/* Pixels épars qui s'allument puis s'éteignent en passant sous de petites lueurs. */
+.ar-fx-twinkle {
+  inset: -96px;
+  background:
+    radial-gradient(circle 7px at 18px 14px, var(--ar-pixel-glow), transparent),
+    radial-gradient(circle 5px at 61px 47px, var(--ar-pixel-glow), transparent),
+    radial-gradient(circle 6px at 40px 80px, var(--ar-pixel-tint), transparent);
+  background-size: 84px 96px;
+  opacity: 0.55;
+  animation: ar-twinkle-a 14s linear infinite, ar-glint 4.8s ease-in-out infinite alternate;
+}
+.ar-fx-twinkle + .ar-fx-twinkle {
+  background:
+    radial-gradient(circle 6px at 30px 20px, var(--ar-pixel-glow), transparent),
+    radial-gradient(circle 8px at 92px 70px, var(--ar-pixel-tint), transparent);
+  background-size: 126px 90px;
+  opacity: 0.45;
+  animation: ar-twinkle-b 19s linear infinite, ar-glint 6.2s ease-in-out -2s infinite alternate;
+}
+/* Balayage lumineux vertical, puis une pause. */
+.ar-fx-scan {
+  left: 0;
+  right: 0;
+  top: -30%;
+  height: 30%;
+  background: linear-gradient(to bottom, transparent, var(--ar-pixel-glow) 70%, transparent);
+  opacity: 0.3;
+  transform: translate3d(0, 0, 0);
+  animation: ar-scan 9s cubic-bezier(0.45, 0, 0.55, 1) 1.2s infinite;
+}
+.ar-stage-quiet .ar-fx-scan { animation-duration: 14s; opacity: 0.2; }
+.ar-stage-quiet .ar-fx-drift { opacity: 0.22; }
+@keyframes ar-drift {
+  from { transform: translate3d(-6%, -4%, 0); }
+  to { transform: translate3d(6%, 5%, 0); }
+}
+@keyframes ar-twinkle-a { to { transform: translate3d(84px, -96px, 0); } }
+@keyframes ar-twinkle-b { to { transform: translate3d(-126px, 90px, 0); } }
+@keyframes ar-glint { from { opacity: 0.25; } to { opacity: 0.7; } }
+@keyframes ar-scan {
+  0% { transform: translate3d(0, 0, 0); }
+  55%, 100% { transform: translate3d(0, 434%, 0); }
+}
+
+/* Glass tech : verre très translucide, liseré lumineux en haut, reflet diagonal,
+   repères d'angle façon viseur. Le givré (frost) reste réservé aux contenus denses. */
 .ar-glass, .ar-glass-frost {
+  position: relative;
+  isolation: isolate;
   border: 1px solid var(--ar-glass-border);
-  border-radius: var(--ar-radius-md);
+  border-top-color: var(--ar-glass-highlight);
+  border-radius: var(--ar-radius-glass);
   box-shadow: var(--ar-shadow-glass);
-  -webkit-backdrop-filter: blur(var(--ar-blur-md)) saturate(1.5);
-  backdrop-filter: blur(var(--ar-blur-md)) saturate(1.5);
+  -webkit-backdrop-filter: blur(var(--ar-blur-md)) saturate(1.6);
+  backdrop-filter: blur(var(--ar-blur-md)) saturate(1.6);
   padding: var(--ar-space-6);
 }
-.ar-glass { background: var(--ar-glass-fill); color: var(--ar-on-canvas); }
+.ar-glass::before, .ar-glass-frost::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  --t: var(--ar-glass-edge);
+  background:
+    linear-gradient(var(--t), var(--t)) left top / 10px 1px no-repeat,
+    linear-gradient(var(--t), var(--t)) left top / 1px 10px no-repeat,
+    linear-gradient(var(--t), var(--t)) right top / 10px 1px no-repeat,
+    linear-gradient(var(--t), var(--t)) right top / 1px 10px no-repeat,
+    linear-gradient(var(--t), var(--t)) left bottom / 10px 1px no-repeat,
+    linear-gradient(var(--t), var(--t)) left bottom / 1px 10px no-repeat,
+    linear-gradient(var(--t), var(--t)) right bottom / 10px 1px no-repeat,
+    linear-gradient(var(--t), var(--t)) right bottom / 1px 10px no-repeat,
+    linear-gradient(160deg, var(--ar-glass-sheen) 0%, transparent 42%);
+}
+.ar-glass {
+  overflow: hidden;
+  background: var(--ar-glass-fill);
+  color: var(--ar-on-canvas);
+}
+/* Reflet qui traverse le verre de temps en temps. */
+.ar-glass::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  background: linear-gradient(105deg, transparent 25%, var(--ar-glass-glint) 50%, transparent 75%);
+  pointer-events: none;
+  transform: translate3d(-110%, 0, 0);
+  will-change: transform;
+  animation: ar-sheen 11s var(--ar-ease) 1.5s infinite;
+}
+.ar-glass:nth-child(2)::after { animation-delay: 2.3s; }
+.ar-glass:nth-child(3)::after { animation-delay: 3.1s; }
+.ar-glass:nth-child(4)::after { animation-delay: 3.9s; }
+@keyframes ar-sheen {
+  0% { transform: translate3d(-110%, 0, 0); }
+  18%, 100% { transform: translate3d(280%, 0, 0); }
+}
 .ar-glass .ar-muted { color: var(--ar-on-canvas-muted); }
 .ar-glass-frost { background: var(--ar-glass-frost); color: var(--ar-ink); }
+.ar-glass-frost::before { --t: var(--ar-cobalt); opacity: 0.55; }
 .ar-glass-frost .ar-muted { color: var(--ar-ink-muted); }
 .ar-solid {
   background: var(--ar-surface);
@@ -89,9 +229,18 @@ img, svg { max-width: 100%; }
   box-shadow: var(--ar-shadow-raised);
   padding: var(--ar-space-6);
 }
-.ar-rise { animation: ar-rise 240ms var(--ar-ease) both; }
-@keyframes ar-rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) { .ar-rise { animation: none; } }
+/* Apparition des panneaux : montée courte + fondu, en cascade sur un stage. */
+.ar-rise { animation: ar-rise 420ms var(--ar-ease) both; }
+.ar-stage .ar-glass, .ar-stage .ar-glass-frost { animation: ar-rise 560ms var(--ar-ease) both; }
+.ar-stage .ar-glass:nth-child(2), .ar-stage .ar-glass-frost:nth-child(2) { animation-delay: 70ms; }
+.ar-stage .ar-glass:nth-child(3), .ar-stage .ar-glass-frost:nth-child(3) { animation-delay: 140ms; }
+.ar-stage .ar-glass:nth-child(4), .ar-stage .ar-glass-frost:nth-child(4) { animation-delay: 210ms; }
+@keyframes ar-rise { from { opacity: 0; transform: translate3d(0, 10px, 0) scale(0.985); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .ar-rise, .ar-stage .ar-glass, .ar-stage .ar-glass-frost,
+  .ar-stage::before, .ar-stage-fx > i, .ar-badge-live .ar-badge-dot { animation: none !important; }
+  .ar-glass::after, .ar-fx-scan { display: none !important; }
+}
 
 /* Window */
 .ar-window {
@@ -148,6 +297,8 @@ img, svg { max-width: 100%; }
   background: var(--ar-glass-fill);
   color: var(--ar-on-canvas);
   border-color: var(--ar-glass-border);
+  border-top-color: var(--ar-glass-highlight);
+  box-shadow: inset 0 1px 0 0 var(--ar-glass-sheen);
   -webkit-backdrop-filter: blur(var(--ar-blur-sm));
   backdrop-filter: blur(var(--ar-blur-sm));
 }
@@ -207,9 +358,10 @@ img, svg { max-width: 100%; }
   align-items: center;
   gap: var(--ar-space-1);
   padding: var(--ar-space-1);
-  border-radius: var(--ar-radius-md);
+  border-radius: var(--ar-radius-glass);
   background: var(--ar-glass-frost);
   border: 1px solid var(--ar-glass-border);
+  border-top-color: var(--ar-glass-highlight);
   box-shadow: var(--ar-shadow-glass);
   -webkit-backdrop-filter: blur(var(--ar-blur-sm)) saturate(1.5);
   backdrop-filter: blur(var(--ar-blur-sm)) saturate(1.5);
