@@ -1,0 +1,37 @@
+name = "artemis-api"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[vars]
+ENVIRONMENT = "production"
+STORE = "supabase"
+APP_ORIGIN = "https://app.artemis.pages.dev"
+SITE_ORIGIN = "https://artemis.pages.dev"
+EMAIL_FROM = "Artemis <notifications@artemis.example>"
+VAPID_SUBJECT = "mailto:contact@artemis.example"
+WEBAUTHN_RP_ID = "artemis.pages.dev"
+WEBAUTHN_ORIGIN = "https://app.artemis.pages.dev"
+ADMIN_EMAILS = ""
+
+# Secrets (wrangler secret put …) : SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, CONNECTIONS_KEY,
+# RESEND_API_KEY, VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET,
+# STRIPE_PRICE_BUILDER, STRIPE_PRICE_TEAM, STRIPE_PRICE_BUSINESS
+
+[env.dev.vars]
+ENVIRONMENT = "development"
+STORE = "memory"
+AUTH_MODE = "dev"
+APP_ORIGIN = "http://localhost:5173"
+SITE_ORIGIN = "http://localhost:4321"
+EMAIL_FROM = "Artemis <dev@localhost>"
+VAPID_SUBJECT = "mailto:dev@localhost"
+WEBAUTHN_RP_ID = "localhost"
+WEBAUTHN_ORIGIN = "http://localhost:5173"
+ADMIN_EMAILS = "admin@exemple.fr"
+CONNECTIONS_KEY = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+SUPABASE_URL = ""
+SUPABASE_SERVICE_ROLE_KEY = ""
