@@ -1,0 +1,54 @@
+openapi: 3.1.0
+info:
+  title: Artemis API
+  version: 0.1.0
+  description: |
+    API des agents Artemis. Authentification : `Authorization: Bearer art_live_…` (ou `art_test_…` en Sandbox).
+    Les montants sont des entiers en centimes. Limite : 60 requêtes par minute et par agent.
+servers:
+  - url: https://api.artemis.workers.dev
+security:
+  - agentToken: []
+components:
+  securitySchemes:
+    agentToken: { type: http, scheme: bearer }
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties: { code: { type: string }, message: { type: string } }
+    CardRequestInput:
+      type: object
+      required: [amount, merchant, purpose]
+      properties:
+        amount: { type: integer, minimum: 1, description: Montant en centimes }
+        currency: { type: string, default: EUR }
+        merchant: { type: string }
+        purpose: { type: string }
+        mcc: { type: string, pattern: '^\d{4}$' }
+        expires_in: { type: integer, minimum: 5, maximum: 10080 }
+paths:
+  /v1/card-requests:
+    post:
+      summary: Créer une demande de carte
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/CardRequestInput' } } } }
+      responses:
+        '201': { description: 'request_id, status (approved | pending_approval | rejected | failed), reason' }
+        '400': { description: Entrée invalide, content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+        '429': { description: Limite ou quota atteint }
+  /v1/card-requests/{id}:
+    get: { summary: Statut d'une demande, parameters: [{ name: id, in: path, required: true, schema: { type: string } }], responses: { '200': { description: Statut } } }
+  /v1/card-requests/{id}/reveal:
+    post: { summary: Identifiants de la carte (une seule fois), parameters: [{ name: id, in: path, required: true, schema: { type: string } }], responses: { '200': { description: 'number, exp_month, exp_year, cvc' }, '409': { description: 'card_not_ready ou already_revealed' } } }
+  /v1/card-requests/{id}/cancel:
+    post: { summary: Annuler, parameters: [{ name: id, in: path, required: true, schema: { type: string } }], responses: { '200': { description: OK } } }
+  /v1/card-requests/{id}/receipts:
+    post: { summary: Joindre un justificatif (url ou content_base64 + filename), parameters: [{ name: id, in: path, required: true, schema: { type: string } }], responses: { '201': { description: receipt_id } } }
+  /v1/budgets:
+    get: { summary: Budget de l'agent, responses: { '200': { description: Budget } } }
+  /v1/spend-summary:
+    get: { summary: Dépenses par marchand, parameters: [{ name: period, in: query, schema: { type: string, enum: [day, week, month] } }], responses: { '200': { description: Résumé } } }
+  /mcp:
+    post: { summary: Serveur MCP (JSON-RPC, transport HTTP streamable), responses: { '200': { description: Réponse JSON-RPC } } }

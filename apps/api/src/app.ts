@@ -3,12 +3,14 @@ import { cors } from 'hono/cors';
 import type { Env } from './env';
 import type { AppEnv } from './http/types';
 import { errorResponse } from './http/errors';
-import { agentAuth, userAuth } from './http/auth';
+import { userAuth } from './http/auth';
 import { noopNotifier, type Ctx, type Notifier } from './services/context';
 import { MemoryStore } from './store/memory';
 import { SupabaseStore } from './store/supabase';
 import type { Store } from './store/types';
 import { passkeyRoutes } from './routes/passkeys';
+import { v1 } from './routes/v1';
+import { mcp } from './mcp/server';
 
 export interface AppDeps {
   store?: Store;
@@ -77,9 +79,6 @@ export function createApp(deps: AppDeps = {}) {
 
   app.get('/health', (c) => c.json({ ok: true }));
 
-  app.get('/v1/me', agentAuth, (c) =>
-    c.json({ agent: { id: c.var.agent.id, name: c.var.agent.name }, organization: { id: c.var.org.id, name: c.var.org.name } }),
-  );
 
   app.get('/app/me', userAuth, async (c) => {
     const user = c.var.user;
@@ -90,6 +89,8 @@ export function createApp(deps: AppDeps = {}) {
     return c.json({ user, organizations: organizations.filter((o) => o.organization) });
   });
 
+  app.route('/v1', v1);
+  app.route('/mcp', mcp);
   app.route('/app', passkeyRoutes);
 
   return app;
