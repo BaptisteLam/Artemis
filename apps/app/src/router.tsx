@@ -2,7 +2,6 @@ import { Navigate, Outlet, createBrowserRouter, useLocation } from 'react-router
 import { useAuth } from './auth/AuthProvider';
 import { AuthCallback, Login } from './auth/Login';
 import { AppShell } from './layout/AppShell';
-import { Placeholder } from './pages/Placeholder';
 import { Onboarding } from './pages/Onboarding';
 import { Dashboard } from './pages/Dashboard';
 import { AgentsList } from './pages/agents/AgentsList';
@@ -19,6 +18,7 @@ import { Exports } from './pages/exports/Exports';
 import { Settings } from './pages/settings/Settings';
 import { Invitation } from './pages/Invitation';
 import { Billing } from './pages/billing/Billing';
+import { Admin } from './pages/admin/Admin';
 import { Loading } from './components';
 
 function RequireAuth() {
@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
           { path: '/exports', element: <Exports /> },
           { path: '/reglages', element: <Settings /> },
           { path: '/facturation', element: <Billing /> },
-          { path: '*', element: <Placeholder title="Page" /> },
+          { path: '/admin', element: <Admin /> },
         ],
       },
     ],

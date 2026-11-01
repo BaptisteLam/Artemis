@@ -16,6 +16,7 @@ import { createNotifier } from './services/notify';
 import { appRoutes } from './routes/app';
 import { webhooks } from './routes/webhooks';
 import { billingRoutes, billingWebhook } from './routes/billing';
+import { adminRoutes } from './routes/admin';
 
 export interface AppDeps {
   store?: Store;
@@ -99,6 +100,7 @@ export function createApp(deps: AppDeps = {}) {
   app.route('/webhooks/stripe-billing', billingWebhook);
   app.route('/webhooks', webhooks);
   app.route('/app/billing', billingRoutes);
+  app.route('/admin', adminRoutes);
   app.route('/app/push', pushRoutes);
   app.route('/app', passkeyRoutes);
   app.route('/app', appRoutes);
