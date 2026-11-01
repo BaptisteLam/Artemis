@@ -66,3 +66,8 @@ a.list-item:hover { background: color-mix(in srgb, var(--ar-sky) 40%, transparen
 .solid-meter > i { background: var(--ar-cobalt); }
 .danger-zone { border: 1px solid var(--ar-loss); }
 .muted-link { color: var(--ar-ink-muted); font-size: 13px; }
+
+/* Cartes bancaires réalistes */
+.paycard-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); margin-bottom: 24px; }
+.paycard-link { display: block; text-decoration: none; border-radius: 14px; }
+.paycard-link .ar-paycard { max-width: none; }

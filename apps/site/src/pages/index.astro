@@ -2,28 +2,58 @@
 import StageFx from '../components/StageFx.astro';
 import WorksWith from '../components/WorksWith.astro';
 import StageMark from '../components/StageMark.astro';
+import PayCard from '../components/PayCard.astro';
+import Faq from '../components/Faq.astro';
 import Base from '../layouts/Base.astro';
 import Window from '../components/Window.astro';
 import Amount from '../components/Amount.astro';
 import { APP_URL } from '../config';
+
+const trust = [
+  ['Vos fonds restent chez vous', 'Cartes émises par votre banque, jamais par Artemis.'],
+  ['Hébergé en Europe', 'Données dans l’UE, identifiants chiffrés AES-256.'],
+  ['Numéro jamais stocké', 'Remis une seule fois à l’agent, puis verrouillé.'],
+  ['Prêt pour l’AI Act', 'Journal d’audit chaîné, preuve de supervision.'],
+];
+
+const useCases = [
+  { title: 'API et tokens', text: 'Recharger des crédits quand le quota tombe, sans laisser la carte de l’entreprise dans un fichier .env.', merchants: ['OpenAI API', 'Anthropic API', 'Mistral'] },
+  { title: 'Abonnements SaaS', text: 'Souscrire ou étendre un abonnement pour l’équipe, au montant exact validé.', merchants: ['Notion', 'Figma', 'Linear'] },
+  { title: 'Cloud et domaines', text: 'Acheter un nom de domaine ou payer un dépassement d’hébergement pendant un déploiement.', merchants: ['Vercel', 'Scaleway', 'OVHcloud'] },
+  { title: 'Données et achats B2B', text: 'Payer un jeu de données, un scraping ou une fourniture, avec justificatif joint automatiquement.', merchants: ['Apify', 'Pappers', 'Bureau Vallée'] },
+];
+
+const compare = [
+  ['Plafond et marchand fixés par achat', 'Non', 'Oui', 'Oui'],
+  ['Validation humaine signée (passkey)', 'Non', 'Selon l’offre', 'Oui'],
+  ['Fonds laissés dans votre banque', 'Oui', 'Souvent prépayé', 'Oui'],
+  ['Euros et banques européennes', 'Oui', 'Dollars, banque US', 'Oui'],
+  ['Carte jetable, hors du prompt', 'Non', 'Oui', 'Oui'],
+  ['Journal AI Act et export FEC', 'Non', 'Non', 'Oui'],
+];
+const tone = (v: string) => (v === 'Oui' ? 'gain' : v === 'Non' ? 'loss' : 'pending');
 ---
 <Base title="Artemis" stage>
-  <section class="ar-stage">
+  <section class="ar-stage home-hero">
     <StageFx />
     <div class="ar-container hero hero-grid">
-      <div>
+      <div class="hero-copy">
         <span class="ar-micro eyebrow">Cartes pour agents IA · Europe</span>
         <h1 class="ar-display">Vos agents paient. Vous gardez le dernier mot.</h1>
         <p class="ar-lead">Donnez à Claude, ChatGPT ou n8n une carte virtuelle à usage unique, créée dans votre propre banque, que vous validez d'un geste sur votre téléphone.</p>
         <div class="ar-row">
           <a class="ar-btn ar-btn-primary" href={`${APP_URL}/inscription`}>Essayer gratuitement →</a>
-          <a class="ar-btn ar-btn-ghost" href="/docs">Lire la doc</a>
+          <a class="ar-btn ar-btn-ghost" href="#demo">Voir la démo</a>
         </div>
         <WorksWith />
       </div>
-      <div class="hero-cards">
-        <div class="ar-glass-frost ar-rise">
-          <div class="ar-spread" style="margin-bottom:16px">
+      <div class="hero-visual" aria-label="Exemple : une demande de l'agent et sa carte à usage unique">
+        <div class="card-stack">
+          <PayCard class="card-back" variant="glass" last4="0517" holder="cloud.agent" exp="11/29" tag="Expirée" />
+          <PayCard class="card-front" variant="cobalt" last4="4832" holder="notion.agent" exp="12/29" tag="49,00 € · Notion" />
+        </div>
+        <div class="ar-glass-frost hero-approval ar-rise">
+          <div class="ar-spread">
             <span class="ar-micro">Demande en attente</span>
             <span class="ar-badge ar-badge-pending ar-badge-live"><span class="ar-badge-dot"></span>À valider</span>
           </div>
@@ -35,21 +65,74 @@ import { APP_URL } from '../config';
             </div>
             <Amount cents={4900} />
           </div>
-          <div class="ar-row" style="margin-top:20px">
+          <div class="ar-row">
             <span class="ar-btn ar-btn-primary ar-btn-sm">Approuver avec ma passkey</span>
             <span class="ar-btn ar-btn-ghost ar-btn-sm">Refuser</span>
           </div>
-        </div>
-        <div class="ar-glass vcard">
-          <div class="ar-spread"><span class="ar-micro">Usage unique · 30 min</span><svg viewBox="0 0 714 496" height="16" width="23" fill="currentColor" aria-hidden="true"><path d="M0 496 L510 0 L510 280 L292 496 Z"/><path d="M510 280 H714 V496 H510 Z"/></svg></div>
-          <div class="num">•••• •••• •••• 4832</div>
-          <div class="ar-spread ar-small"><span>Limite 49,00 €</span><span>Verrouillée sur Notion</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="trust" aria-label="Garanties">
+    <ul class="ar-container trust-list">
+      {trust.map(([t, d]) => <li><strong>{t}</strong><span>{d}</span></li>)}
+    </ul>
+  </section>
+
+  <section class="section" id="demo">
+    <div class="ar-container ar-stack" style="gap:40px">
+      <div class="section-head">
+        <span class="ar-micro eyebrow">Démo</span>
+        <h2 class="ar-h1 ar-headline">De la demande au paiement en 20 secondes. <span class="ar-headline-explain">Sans jamais partager la carte de l'entreprise.</span></h2>
+      </div>
+      <ol class="flow">
+        <li class="flow-step">
+          <span class="flow-num">01 · L'agent demande</span>
+          <Window title="claude · conversation">
+            <div class="chat">
+              <p class="chat-user">Abonne l'équipe à Notion Plus, 5 sièges.</p>
+              <div class="chat-tool">
+                <span class="ar-mono">artemis.request_card</span>
+                <code>{'{ amount: 4900, merchant: "Notion",\n  purpose: "abonnement équipe" }'}</code>
+              </div>
+              <p class="chat-agent">J'ai demandé une carte de 49,00 €. J'attends votre validation.</p>
+            </div>
+          </Window>
+        </li>
+        <li class="flow-step">
+          <span class="flow-num">02 · Vous validez</span>
+          <div class="phone" aria-hidden="true">
+            <div class="phone-screen">
+              <div class="phone-notif">
+                <span class="phone-app"><svg viewBox="0 0 714 496" width="14" height="10" fill="#fff"><path d="M0 496 L510 0 L510 280 L292 496 Z"/><path d="M510 280 H714 V496 H510 Z"/></svg></span>
+                <div><strong>notion.agent veut dépenser 49,00 €</strong><span>Notion · abonnement équipe</span></div>
+              </div>
+              <div class="phone-sheet">
+                <span class="phone-face" aria-hidden="true"></span>
+                <strong>Approuver le mandat</strong>
+                <span class="ar-mono">49,00 € · Notion · 30 min</span>
+                <span class="ar-btn ar-btn-primary ar-btn-sm">Signer avec Face ID</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="flow-step">
+          <span class="flow-num">03 · L'agent paie</span>
+          <div class="flow-card">
+            <PayCard variant="cobalt" last4="4832" holder="notion.agent" exp="12/29" tag="49,00 € · Notion" state="used" />
+            <div class="flow-receipt ar-solid">
+              <span class="ar-badge ar-badge-gain"><span class="ar-badge-dot"></span>Rapprochée</span>
+              <span>Notion</span>
+              <Amount cents={-4900} size="sm" />
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-flush-top">
     <div class="ar-container ar-stack" style="gap:48px">
       <h2 class="ar-h1 ar-headline">Une carte par achat. <span class="ar-headline-explain">Jamais la carte de l'entreprise dans un prompt.</span></h2>
       <div class="ar-bento">
@@ -93,15 +176,64 @@ import { APP_URL } from '../config';
   </section>
 
   <section class="section">
-    <div class="ar-container hero-grid" style="align-items:center">
+    <div class="ar-container ar-stack" style="gap:40px">
+      <div class="section-head">
+        <span class="ar-micro eyebrow">Cas d'usage</span>
+        <h2 class="ar-h1 ar-headline">Ce que vos agents achètent déjà. <span class="ar-headline-explain">Désormais avec une carte à eux.</span></h2>
+      </div>
+      <div class="usecases">
+        {useCases.map((u) => (
+          <article class="ar-solid usecase">
+            <h3 class="ar-h3">{u.title}</h3>
+            <p class="ar-muted">{u.text}</p>
+            <ul class="usecase-merchants">
+              {u.merchants.map((m) => <li><span class="ar-merchant">{m.split(/\s+/).slice(0, 2).map((w) => w[0]).join('')}</span>{m}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-flush-top">
+    <div class="ar-container ar-stack" style="gap:32px">
+      <div class="section-head">
+        <span class="ar-micro eyebrow">Pourquoi Artemis</span>
+        <h2 class="ar-h1 ar-headline">Conçu pour l'Europe. <span class="ar-headline-explain">Pas adapté après coup.</span></h2>
+      </div>
+      <div class="ar-solid compare-wrap">
+        <table class="ar-table compare">
+          <thead>
+            <tr><th scope="col"><span class="ar-sr">Critère</span></th><th scope="col">Carte de l'entreprise confiée à l'agent</th><th scope="col">Cartes d'agents américaines</th><th scope="col" class="compare-us">Artemis</th></tr>
+          </thead>
+          <tbody>
+            {compare.map(([label, a, b, c]) => (
+              <tr>
+                <th scope="row">{label}</th>
+                <td data-label="Carte de l'entreprise"><span class={`ar-badge ar-badge-${tone(a!)}`}><span class="ar-badge-dot"></span>{a}</span></td>
+                <td data-label="Cartes d'agents US"><span class={`ar-badge ar-badge-${tone(b!)}`}><span class="ar-badge-dot"></span>{b}</span></td>
+                <td data-label="Artemis" class="compare-us"><span class={`ar-badge ar-badge-${tone(c!)}`}><span class="ar-badge-dot"></span>{c}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-flush-top">
+    <div class="ar-container hero-grid builders">
       <div>
         <span class="ar-micro eyebrow">Pour les builders</span>
         <h2 class="ar-h1 ar-headline">Branché en une ligne. <span class="ar-headline-explain">Claude, ChatGPT, n8n, Make ou votre code.</span></h2>
         <p class="ar-lead ar-muted" style="margin-top:16px">Un serveur MCP distant et une API REST. Sandbox gratuite avec cartes simulées pour tester sans banque.</p>
-        <a class="ar-btn ar-btn-primary" href="/docs/mcp-claude">Connecter Claude →</a>
+        <div class="ar-row">
+          <a class="ar-btn ar-btn-primary" href="/docs/mcp-claude">Connecter Claude →</a>
+          <a class="ar-btn ar-btn-ghost" href="/docs/api">API REST</a>
+        </div>
       </div>
       <Window title="terminal" tilt="r">
-        <pre class="ar-mono" style="margin:0;font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere">claude mcp add --transport http artemis \
+        <pre class="ar-mono term">claude mcp add --transport http artemis \
   https://api.artemis.dev/mcp \
   --header "Authorization: Bearer art_test_…"
 
@@ -111,18 +243,29 @@ import { APP_URL } from '../config';
     </div>
   </section>
 
-  <section class="section-tight">
-    <div class="ar-container">
-      <div class="ar-solid ar-spread" style="padding:32px">
-        <div>
-          <h2 class="ar-h2">Commencez en Sandbox, gratuitement.</h2>
-          <p class="ar-muted" style="margin:8px 0 0">Sans carte bancaire. Passez à un plan payant quand vous branchez votre banque.</p>
-        </div>
+  <section class="section section-flush-top">
+    <div class="ar-container faq-grid">
+      <div>
+        <span class="ar-micro eyebrow">Questions fréquentes</span>
+        <h2 class="ar-h1">Ce qu'on nous demande.</h2>
+        <p class="ar-muted" style="margin-top:12px">Une autre question ? Lisez la page <a href="/securite">Sécurité</a> ou la <a href="/docs">documentation</a>.</p>
+      </div>
+      <Faq />
+    </div>
+  </section>
+
+  <section class="ar-stage final-cta">
+    <StageFx />
+    <div class="ar-container final-cta-inner">
+      <div>
+        <h2 class="ar-hero">Donnez une carte à votre agent.</h2>
+        <p class="ar-lead">Gratuit en Sandbox, sans carte bancaire. Vous gardez le dernier mot.</p>
         <div class="ar-row">
-          <a class="ar-btn ar-btn-primary" href={`${APP_URL}/inscription`}>Créer un compte</a>
+          <a class="ar-btn ar-btn-primary" href={`${APP_URL}/inscription`}>Créer un compte →</a>
           <a class="ar-btn ar-btn-ghost" href="/tarifs">Voir les tarifs</a>
         </div>
       </div>
+      <PayCard class="final-card" variant="glass" last4="2026" holder="votre.agent" exp="12/29" tag="Sandbox" />
     </div>
   </section>
 </Base>

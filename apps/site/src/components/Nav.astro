@@ -2,7 +2,7 @@
 import { APP_URL } from '../config';
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const links = [
-  { href: '/fonctionnement', label: 'Fonctionnement' },
+  { href: '/fonctionnement', label: 'Fonctionnement', xs: true },
   { href: '/tarifs', label: 'Tarifs' },
   { href: '/docs', label: 'Docs' },
   { href: '/securite', label: 'Sécurité', hide: true },
@@ -14,7 +14,7 @@ const links = [
       <svg viewBox="0 0 714 496" height="18" width="26" fill="var(--ar-cobalt)" aria-hidden="true"><path d="M0 496 L510 0 L510 280 L292 496 Z"/><path d="M510 280 H714 V496 H510 Z"/></svg>
     </a>
     {links.map((l) => (
-      <a href={l.href} class={l.hide ? 'hide-sm' : ''} aria-current={path.startsWith(l.href) ? 'page' : undefined}>{l.label}</a>
+      <a href={l.href} class={l.hide ? 'hide-sm' : l.xs ? 'hide-xs' : ''} aria-current={path.startsWith(l.href) ? 'page' : undefined}>{l.label}</a>
     ))}
     <a href={`${APP_URL}/connexion`} class="hide-sm">Connexion</a>
     <a href={`${APP_URL}/inscription`} class="nav-cta">Essayer</a>

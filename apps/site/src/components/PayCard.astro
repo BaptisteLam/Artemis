@@ -1,0 +1,33 @@
+---
+/* Carte bancaire virtuelle réaliste (même rendu que le composant React PayCard de @artemis/ui). */
+interface Props {
+  last4: string;
+  holder: string;
+  exp: string;
+  tag?: string;
+  variant?: 'cobalt' | 'glass' | 'ink';
+  state?: 'active' | 'used';
+  class?: string;
+  style?: string;
+}
+const { last4, holder, exp, tag = 'Usage unique', variant = 'cobalt', state = 'active', class: cls = '', style } = Astro.props;
+---
+<div class:list={['ar-paycard', `ar-paycard--${variant}`, cls]} data-state={state} role="img" aria-label={`Carte virtuelle se terminant par ${last4}, titulaire ${holder}, expire ${exp}`} style={style}>
+  <div class="ar-paycard-inner" aria-hidden="true">
+    <div class="ar-paycard-top">
+      <span class="ar-paycard-brand"><svg viewBox="0 0 714 496"><path d="M0 496 L510 0 L510 280 L292 496 Z" /><path d="M510 280 H714 V496 H510 Z" /></svg>Artemis</span>
+      <span class="ar-paycard-tag">{tag}</span>
+    </div>
+    <div class="ar-paycard-mid">
+      <span class="ar-paycard-chip"></span>
+      <svg class="ar-paycard-nfc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8.5 8.5a5 5 0 0 1 0 7M12 6a8.5 8.5 0 0 1 0 12M15.5 3.5a12 12 0 0 1 0 17" /></svg>
+    </div>
+    <div class="ar-paycard-num">{`•••• •••• •••• ${last4}`}</div>
+    <div class="ar-paycard-bottom">
+      <div class="ar-paycard-field ar-paycard-field--grow"><small>Titulaire</small><span>{holder}</span></div>
+      <div class="ar-paycard-field"><small>Expire</small><span>{exp}</span></div>
+      <div class="ar-paycard-net">Debit<em>virtual</em></div>
+    </div>
+  </div>
+  {state === 'used' && <span class="ar-paycard-stamp">Utilisée</span>}
+</div>

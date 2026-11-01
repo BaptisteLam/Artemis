@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Amount, Button, Glass, MerchantTile, Window } from '@artemis/ui';
+import { Amount, Button, Glass, MerchantTile, PayCard, Window } from '@artemis/ui';
 import { useOrg } from '../../lib/OrgProvider';
 import { useData } from '../../lib/useData';
 import type { RequestDetail as Detail } from '../../lib/types';
@@ -87,6 +87,7 @@ export function RequestDetail() {
               <h2 className="ar-h3">Carte</h2>
               {card ? (
                 <>
+                  <PayCard last4={card.last4} holder={agent?.name ?? 'agent'} expMonth={card.exp_month || 12} expYear={card.exp_year || 2030} state={card.status} variant={card.status === 'active' ? 'cobalt' : 'ink'} tag={`${(Number(r.amount_cents) / 100).toFixed(2).replace('.', ',')} € · ${r.merchant}`} />
                   <div className="ar-spread">
                     <span className="ar-mono">•••• {card.last4}</span>
                     <StatusBadge status={card.status} />

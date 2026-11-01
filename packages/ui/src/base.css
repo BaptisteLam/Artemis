@@ -392,3 +392,94 @@ img, svg { max-width: 100%; }
 .ar-stage .ar-glass-frost, .ar-stage .ar-solid { color: var(--ar-ink); }
 .ar-stage .ar-glass-frost .ar-muted, .ar-stage .ar-solid .ar-muted { color: var(--ar-ink-muted); }
 .ar-stage .ar-glass-frost :focus-visible, .ar-stage .ar-solid :focus-visible { outline-color: var(--ar-focus); }
+
+/* ───────────────────────── Carte bancaire virtuelle (PayCard) ─────────────────────────
+   Format ISO ID-1 (85,6 × 54 mm, ratio 1,586), coins 3,2 mm, puce, sans contact, numéro en relief.
+   Tailles en unités de conteneur : la carte reste proportionnée de 220 px à 460 px de large. */
+.ar-paycard {
+  --pc-radius: 3.8cqw;
+  container-type: inline-size;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 85.6 / 54;
+  border-radius: 14px;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: var(--ar-font-sans);
+  user-select: none;
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.25),
+    0 1px 2px rgba(7, 11, 51, 0.35),
+    0 22px 48px -18px rgba(7, 11, 51, 0.75);
+  transform: perspective(900px) rotateX(var(--pc-rx, 0deg)) rotateY(var(--pc-ry, 0deg)) rotate(var(--pc-rot, 0deg));
+  transition: transform 400ms var(--ar-ease);
+}
+.ar-paycard-inner { position: absolute; inset: 0; display: grid; grid-template-rows: auto 1fr auto auto; padding: 6.2cqw 7cqw 5.6cqw; gap: 0; z-index: 2; }
+/* Fonds */
+.ar-paycard--cobalt { background: radial-gradient(120% 140% at 0% 0%, #3d5cff 0%, #0000ff 45%, #0a1a9e 100%); }
+.ar-paycard--cobalt::before { content: ''; position: absolute; inset: 0; z-index: 0; background-image: var(--ar-pixel-grid); background-size: var(--ar-pixel-size, 6px) var(--ar-pixel-size, 6px); opacity: 0.55; mix-blend-mode: screen; }
+.ar-paycard--glass {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.06) 55%, rgba(255, 255, 255, 0.14));
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(var(--ar-blur-md)) saturate(1.6);
+  backdrop-filter: blur(var(--ar-blur-md)) saturate(1.6);
+}
+.ar-paycard--ink { background: radial-gradient(120% 140% at 100% 0%, #26293a 0%, #111219 60%, #07080d 100%); }
+.ar-paycard--ink::before { content: ''; position: absolute; inset: 0; z-index: 0; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 7px); }
+/* Reflet holographique */
+.ar-paycard::after {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  z-index: 1;
+  background: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, 0.18) 46%, rgba(160, 220, 255, 0.16) 50%, rgba(255, 255, 255, 0) 58%);
+  transform: translate3d(-30%, 0, 0);
+  animation: ar-paycard-sheen 7s var(--ar-ease) infinite;
+  pointer-events: none;
+}
+@keyframes ar-paycard-sheen { 0%, 55% { transform: translate3d(-30%, 0, 0); } 100% { transform: translate3d(30%, 0, 0); } }
+.ar-paycard-top { display: flex; align-items: center; justify-content: space-between; gap: 3cqw; }
+.ar-paycard-brand { display: inline-flex; align-items: center; gap: 2cqw; font: 600 5cqw/1 var(--ar-font-display); letter-spacing: -0.05em; }
+.ar-paycard-brand svg { width: 7.4cqw; height: auto; fill: currentColor; }
+.ar-paycard-tag { font: 500 2.5cqw/1 var(--ar-font-mono); letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.85; text-align: right; }
+.ar-paycard-mid { display: flex; align-items: center; gap: 4cqw; padding-top: 6cqw; }
+/* Puce EMV */
+.ar-paycard-chip {
+  width: 13.5cqw;
+  aspect-ratio: 1.3;
+  border-radius: 1.8cqw;
+  background:
+    linear-gradient(90deg, transparent 32%, rgba(60, 50, 20, 0.35) 32% 34%, transparent 34% 66%, rgba(60, 50, 20, 0.35) 66% 68%, transparent 68%),
+    linear-gradient(0deg, transparent 30%, rgba(60, 50, 20, 0.35) 30% 33%, transparent 33% 67%, rgba(60, 50, 20, 0.35) 67% 70%, transparent 70%),
+    linear-gradient(135deg, #f6e7b4 0%, #d4b26a 38%, #f3dc98 60%, #b8913f 100%);
+  box-shadow: inset 0 0 0 1px rgba(80, 60, 20, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.ar-paycard--ink .ar-paycard-chip, .ar-paycard--glass .ar-paycard-chip { filter: saturate(0.2) brightness(1.05); }
+.ar-paycard-nfc { width: 6.5cqw; height: auto; opacity: 0.9; }
+.ar-paycard-num {
+  font: 500 5.9cqw/1 var(--ar-font-mono);
+  letter-spacing: 0.02em;
+  word-spacing: 0.15em;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35), 0 -1px 0 rgba(255, 255, 255, 0.25);
+  padding-bottom: 4.5cqw;
+}
+.ar-paycard-bottom { display: flex; align-items: flex-end; gap: 5cqw; }
+.ar-paycard-field { display: grid; gap: 1cqw; min-width: 0; }
+.ar-paycard-field small { font: 500 2.1cqw/1 var(--ar-font-mono); letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.7; }
+.ar-paycard-field span { font: 500 3.6cqw/1 var(--ar-font-mono); letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ar-paycard-field--grow { flex: 1; }
+.ar-paycard-net { flex: none; font: 700 italic 5.2cqw/0.9 var(--ar-font-display); letter-spacing: -0.03em; text-align: right; }
+.ar-paycard-net em { display: block; font: 500 normal 2.1cqw/1.2 var(--ar-font-mono); letter-spacing: 0.18em; opacity: 0.75; }
+.ar-paycard-amount { position: absolute; z-index: 3; top: 6.2cqw; right: 7cqw; }
+.ar-paycard[data-state='used'] .ar-paycard-inner, .ar-paycard[data-state='canceled'] .ar-paycard-inner, .ar-paycard[data-state='expired'] .ar-paycard-inner { opacity: 0.55; }
+.ar-paycard-stamp { position: absolute; z-index: 4; right: 7cqw; top: 15cqw; transform: rotate(-8deg); border: 2px solid currentColor; border-radius: 4px; padding: 1cqw 2.4cqw; font: 600 3.4cqw/1 var(--ar-font-mono); letter-spacing: 0.16em; text-transform: uppercase; color: #ffffff; background: rgba(0, 0, 0, 0.25); }
+.ar-paycard:hover { --pc-rx: 4deg; --pc-ry: -6deg; }
+@media (prefers-reduced-motion: reduce) {
+  .ar-paycard::after { animation: none !important; opacity: 0; }
+  .ar-paycard { transition: none; }
+  .ar-paycard:hover { --pc-rx: 0deg; --pc-ry: 0deg; }
+}
