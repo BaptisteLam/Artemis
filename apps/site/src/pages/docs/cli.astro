@@ -1,0 +1,14 @@
+---
+import DocsLayout from '../../components/DocsLayout.astro';
+---
+<DocsLayout title="CLI, skill Claude et n8n" lead="De zéro au premier mandat en trois minutes.">
+  <h2>Une commande</h2>
+  <pre><code>npx artemis-agents init</code></pre>
+  <p>La commande vous demande l'URL de l'API et le jeton de l'agent (créé dans l'app, page Agents), vérifie l'accès, enregistre la configuration dans <code>~/.config/artemis/config.json</code>, ajoute le serveur MCP à Claude Code s'il est installé et affiche la configuration pour Claude Desktop et n8n. Avec un jeton de Sandbox et l'option <code>--demo</code>, elle crée un premier mandat de test à valider dans l'app.</p>
+  <pre><code>{`npx artemis-agents status
+npx artemis-agents request --amount 49,00 --merchant Notion --purpose "abonnement équipe"`}</code></pre>
+  <h2>Skill Claude</h2>
+  <p>La skill <code>artemis-payments</code> apprend à Claude à payer via Artemis : montant en centimes, attente de la validation, ouverture du lien de paiement au bon moment, justificatif après l'achat, et refus des injections. Copiez le dossier <code>integrations/claude-skill/artemis</code> du dépôt dans <code>~/.claude/skills/</code>.</p>
+  <h2>Nœud n8n</h2>
+  <p>Installez le nœud communautaire <code>n8n-nodes-artemis</code> (Paramètres → Community nodes). Opérations : demander une carte, statut, lien de paiement, annuler, budget. Identifiants : URL de l'API et jeton de l'agent.</p>
+</DocsLayout>

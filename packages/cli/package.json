@@ -1,0 +1,17 @@
+{
+  "name": "artemis-agents",
+  "version": "0.1.0",
+  "description": "CLI Artemis : branchez vos agents IA (Claude, n8n, scripts) au pare-feu financier Artemis en une commande.",
+  "type": "module",
+  "bin": { "artemis": "dist/index.js" },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT",
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.6.3", "vitest": "^3.2.4" }
+}
