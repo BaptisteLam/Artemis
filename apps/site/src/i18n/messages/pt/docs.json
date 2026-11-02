@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Primeiros passos com o Artemis",
+      "lead": "Do registo ao primeiro pagamento do seu agente, em Sandbox, em cinco minutos.",
+      "step1": {
+        "title": "1. Crie uma conta",
+        "body": "Registe-se na <a href=\"{href}\">aplicação</a> com o seu e-mail (ligação mágica), crie a sua organização e registe uma chave de acesso: vai utilizá-la para aprovar as despesas."
+      },
+      "step2": {
+        "title": "2. Crie um agente",
+        "body": "Em <strong>Agentes</strong>, crie por exemplo <code>notion.agent</code>. O Artemis mostra o respetivo token (<code>art_test_…</code> em Sandbox, <code>art_live_…</code> com um banco real) <strong>uma única vez</strong>: copie-o."
+      },
+      "step3": {
+        "title": "3. Ligue o agente",
+        "fastest": "A forma mais rápida: <code>npx artemis-agents init</code> (consulte <a href=\"{cli}\">CLI</a>).",
+        "server": "O servidor MCP está em <code>{url}</code>, com o cabeçalho <code>Authorization: Bearer &lt;token&gt;</code>. Siga o guia da sua ferramenta: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> ou <a href=\"{api}\">API REST</a>."
+      },
+      "step4": {
+        "title": "4. O ciclo de compra",
+        "tool": "Ferramenta",
+        "role": "Função",
+        "requestCard": "Pede um cartão: montante <strong>em cêntimos</strong>, moeda, comerciante, finalidade.",
+        "getRequestStatus": "Acompanha a aprovação humana.",
+        "getCardForCheckout": "Devolve uma <strong>ligação efémera</strong> (10 min, utilização única): o cartão é apresentado pelo banco, sem passar pelo Artemis.",
+        "listBudgets": "Orçamento mensal, gasto, restante, limite.",
+        "getSpendSummary": "Despesas por comerciante (dia, semana, mês).",
+        "attachReceipt": "Anexa um comprovativo à compra.",
+        "cancelCard": "Cancela o cartão se a compra já não se realizar."
+      },
+      "step5": {
+        "title": "5. Passe para produção",
+        "body": "Escolha um plano em <strong>Faturação</strong> e, em seguida, ligue o seu banco em <strong>Bancos</strong>. Os agentes associados a esse banco recebem cartões reais de utilização única."
+      }
+    },
+    "mcpClaude": {
+      "title": "Ligar o Claude",
+      "lead": "O Claude Code, o Claude Desktop e os conectores do Claude falam MCP sobre HTTP.",
+      "verify": "Verifique com <code>claude mcp list</code> e peça, por exemplo: «Subscreve o Notion por {price} com o Artemis».",
+      "desktopBody": "Abra <em>Settings → Developer → Edit Config</em> e adicione:",
+      "instructionsTitle": "Instruções úteis para o agente",
+      "instructionsBody": "Adicione às suas instruções de sistema:"
+    },
+    "mcpChatgpt": {
+      "title": "Ligar o ChatGPT",
+      "lead": "O ChatGPT aceita servidores MCP remotos como conectores personalizados.",
+      "addTitle": "Adicionar o conector",
+      "step1": "Abra <em>Settings → Connectors → Advanced</em> e ative o modo de programador, se o seu plano o exigir.",
+      "step2": "Crie um conector com o URL: <code>{url}</code>.",
+      "step3": "Autenticação: cabeçalho <code>Authorization</code> com o valor <code>Bearer art_…</code> (consoante as opções disponíveis no seu espaço de trabalho ChatGPT).",
+      "note": "As designações exatas variam consoante o plano ChatGPT; o endereço e o cabeçalho mantêm-se.",
+      "openaiTitle": "Agentes OpenAI (API)",
+      "openaiBody": "Com a Responses API ou o Agents SDK, declare uma ferramenta MCP remota que aponte para <code>{url}</code> com o mesmo cabeçalho."
+    },
+    "cli": {
+      "title": "CLI, skill do Claude e n8n",
+      "lead": "Do zero ao seu primeiro mandato em três minutos.",
+      "commandTitle": "Um único comando",
+      "commandBody": "O comando pede o URL da API e o token do agente (criado na aplicação, página Agentes), verifica o acesso, guarda a configuração em <code>~/.config/artemis/config.json</code>, adiciona o servidor MCP ao Claude Code, se estiver instalado, e apresenta a configuração para o Claude Desktop e o n8n. Com um token de Sandbox e a opção <code>--demo</code>, cria um primeiro mandato de teste para aprovar na aplicação.",
+      "skillTitle": "Skill do Claude",
+      "skillBody": "A skill <code>artemis-payments</code> ensina o Claude a pagar através do Artemis: montante em cêntimos, espera pela aprovação, abertura da ligação de pagamento no momento certo, comprovativo após a compra e rejeição de injeções. Copie a pasta <code>integrations/claude-skill/artemis</code> do repositório para <code>~/.claude/skills/</code>.",
+      "n8nTitle": "Nó n8n",
+      "n8nBody": "Instale o nó da comunidade <code>n8n-nodes-artemis</code> (Settings → Community nodes). Operações: pedir um cartão, estado, ligação de pagamento, cancelar, orçamento. Credenciais: URL da API e token do agente."
+    },
+    "n8n": {
+      "title": "Ligar o n8n",
+      "lead": "Duas opções: o nó MCP Client para um agente de IA n8n, ou pedidos HTTP para um fluxo de trabalho clássico.",
+      "agentTitle": "Agente de IA n8n (MCP Client)",
+      "agentBody": "Num nó <em>AI Agent</em>, adicione a ferramenta <em>MCP Client</em>: transporte <em>HTTP Streamable</em>, URL <code>{url}</code>, autenticação <em>Header Auth</em> com <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "Fluxo de trabalho HTTP",
+      "workflowBody": "Importe o fluxo de exemplo <code>examples/n8n/artemis-request-card.json</code> do repositório. Encadeia:",
+      "step1With": "com",
+      "step2": "um ciclo de consulta em <code>GET /v1/card-requests/:id</code> até o estado ser <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> para obter a ligação efémera do cartão (10 minutos, utilização única)."
+    },
+    "api": {
+      "title": "API REST",
+      "lead": "Para o Make, os seus scripts e os seus próprios agentes. O mesmo token que o servidor MCP.",
+      "authTitle": "Autenticação",
+      "base": "URL base: <code>{url}</code>. Limite: 60 pedidos por minuto por agente.",
+      "endpointsTitle": "Endpoints",
+      "method": "Método",
+      "path": "Caminho",
+      "role": "Função",
+      "create": "Criar um pedido",
+      "status": "Estado de um pedido",
+      "reveal": "Ligação efémera para o cartão (10 min, utilização única)",
+      "cancel": "Cancelar",
+      "receipts": "Anexar um comprovativo",
+      "budgets": "Orçamento restante",
+      "spendSummary": "Despesas por comerciante",
+      "exampleTitle": "Exemplo",
+      "errorsTitle": "Erros",
+      "errorsBody": "Códigos frequentes: <code>invalid_amount</code> (o montante deve ser um número inteiro em cêntimos), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Regras e aprovação",
+      "lead": "Como o Artemis decide se um pedido é recusado, aprovado automaticamente ou submetido à sua assinatura.",
+      "orderTitle": "Ordem de avaliação",
+      "orderBody": "A primeira regra não cumprida recusa o pedido:",
+      "o1": "Moeda autorizada (<code>currency_not_allowed</code>).",
+      "o2": "Montante positivo e inferior ao limite por compra (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Orçamento mensal: pedidos pendentes, aprovados e pagos do mês + o montante (<code>over_monthly_budget</code>). O mês segue a hora de Paris.",
+      "o4": "Comerciante bloqueado, ou ausente da lista de autorizados, se existir (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Categoria de comerciante (MCC) bloqueada ou não autorizada (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Aprovação automática",
+      "autoBody": "Um pedido é aprovado sem a sua intervenção se o montante for <strong>inferior</strong> ao limiar de aprovação automática <strong>e</strong> o comerciante constar da lista de autorizados do agente. Sem lista de autorizados, todos os pedidos lhe são submetidos.",
+      "matchTitle": "Correspondência de comerciantes",
+      "matchBody": "Os nomes são comparados ignorando maiúsculas, acentos, forma jurídica e extensão de domínio: «Notion» abrange «Notion Labs, Inc.» e «notion.so».",
+      "humanTitle": "Aprovação humana",
+      "humanBody": "Os proprietários, administradores e aprovadores recebem uma notificação. A aprovação exige uma chave de acesso. Se o seu banco impuser a sua própria autenticação forte do cliente (o Qonto, por exemplo), aprove também na aplicação do banco.",
+      "expiryTitle": "Expiração",
+      "expiryBody": "Um pedido não tratado expira ao fim de 30 minutos (configurável). Um cartão não utilizado é cancelado quando expira."
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Prijzen",
+    "description": "Gratis Sandbox, daarna {a}, {b}, {c} of {d} per maand. Geen commissie op uw uitgaven.",
+    "headline": "Eén eenvoudig abonnement. Geen commissie.",
+    "lead": "U betaalt alleen voor de software. De kaarten worden uitgegeven door uw bank, binnen uw gebruikelijke bankpakket.",
+    "popular": "Populairst",
+    "from": "vanaf {price}",
+    "perMonth": "/ maand",
+    "start": "Aan de slag",
+    "choose": "Kies {plan}",
+    "mandates": "{count} mandaten / maand",
+    "sandbox": {
+      "pitch": "Probeer het met een gesimuleerde bank.",
+      "i1": "1 agent",
+      "i2": "Gesimuleerde bank",
+      "i3": "{count} gesimuleerde mandaten / maand",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Voor een freelancer of ontwikkelaar en zijn agents.",
+      "i1": "3 agents",
+      "i2": "1 gekoppelde bank",
+      "i4": "Goedkeuring met toegangssleutel",
+      "i5": "Vangrails tegen injectie"
+    },
+    "team": {
+      "pitch": "Voor een startup van 5 tot 50 personen.",
+      "i1": "10 agents",
+      "i2": "2 banken",
+      "i4": "Slack en quorum van goedkeurders",
+      "i5": "Abonnementen, FEC-export"
+    },
+    "agency": {
+      "pitch": "Voor automatiseringsbureaus.",
+      "i1": "Onbeperkt aantal klanten, 25 agents",
+      "i3": "Budget en marge per klant",
+      "i4": "Maandrapport om door te factureren",
+      "i5": "+ {price} per actieve klant"
+    },
+    "business": {
+      "pitch": "Voor gereguleerde scale-ups.",
+      "i1": "Onbeperkt",
+      "i2": "AI Act-dossier en -rapport",
+      "i3": "Ondertekende export van het auditlogboek",
+      "i4": "Prioritaire support"
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "q1": "Zijn er kosten per kaart?",
+      "a1": "Niet van Artemis. Uw bank hanteert haar eigen tarief (virtuele kaarten zijn inbegrepen in de meeste pakketten van Qonto en Revolut Business; Stripe Issuing rekent volgens zijn eigen prijzen).",
+      "q2": "Wat gebeurt er als ik mijn quotum overschrijd?",
+      "a2": "Met een betaald abonnement gaan uw agents gewoon door: elk mandaat boven het quotum wordt aan het einde van de maand gefactureerd tegen {price}. In de Sandbox worden aanvragen geweigerd met de code <code>quota_exceeded</code>.",
+      "q3": "Hoe wordt het abonnement {plan} gefactureerd?",
+      "a3": "{base} per maand, plus {client} per actieve klant, dat wil zeggen elke klant voor wie in de loop van de maand minstens één mandaat is aangemaakt.",
+      "q4": "Kan ik op elk moment opzeggen?",
+      "a4": "Ja, vanuit het onderdeel Facturatie. Het abonnement loopt door tot het einde van de betaalde periode; uw gegevens blijven exporteerbaar.",
+      "q5": "Btw",
+      "a5": "De getoonde prijzen zijn nettoprijzen."
+    }
+  }
+}

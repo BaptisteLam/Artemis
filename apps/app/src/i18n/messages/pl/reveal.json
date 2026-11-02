@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Karta jednorazowa · symulowany bank",
+    "eyebrowBank": "Karta jednorazowa · wydana przez Twój bank",
+    "lead": "Ten link otwiera się tylko raz. Karta jest ograniczona do powyższej kwoty i przypisana do tego sprzedawcy.",
+    "fields": {
+      "number": "Numer",
+      "expiry": "Data ważności",
+      "cvc": "Kod zabezpieczający",
+      "holder": "Posiadacz karty"
+    },
+    "opening": "Otwieranie…",
+    "show": "Pokaż kartę •••• {last4}",
+    "footer": "Numer wyświetla bezpośrednio bank wydający: nigdy nie przechodzi przez Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js jest niedostępny.",
+      "invalidLink": "Link jest nieprawidłowy, został już użyty lub wygasł.",
+      "stripeRefused": "Stripe odrzucił żądanie."
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "common": {
+    "loading": "Ładowanie…",
+    "copy": "Kopiuj",
+    "copied": "Skopiowano"
+  },
+  "lang": {
+    "choose": "Język"
+  },
+  "nav": {
+    "dashboard": "Pulpit",
+    "requests": "Wnioski",
+    "agents": "Agenci",
+    "clients": "Klienci",
+    "cards": "Karty",
+    "subscriptions": "Subskrypcje",
+    "transactions": "Transakcje",
+    "exports": "Eksporty",
+    "banks": "Banki",
+    "team": "Zespół",
+    "audit": "Audyt",
+    "billing": "Rozliczenia",
+    "settings": "Ustawienia"
+  },
+  "shell": {
+    "home": "Artemis, pulpit",
+    "organization": "Organizacja",
+    "admin": "Administracja",
+    "freezeAllHint": "Zamroź wszystkich agentów i anuluj aktywne karty",
+    "frozen": "Zamrożona",
+    "freezeAll": "Zamroź wszystko",
+    "signOut": "Wyloguj się",
+    "navAria": "Nawigacja aplikacji",
+    "pendingCount_one": "{count} oczekujący",
+    "pendingCount_few": "{count} oczekujące",
+    "pendingCount_many": "{count} oczekujących",
+    "pendingCount_other": "{count} oczekującego",
+    "frozenBanner": "Organizacja zamrożona: nie można wydać żadnej nowej karty. Odmroź ją w Ustawieniach."
+  },
+  "status": {
+    "pending": "Do zatwierdzenia",
+    "approved": "Zatwierdzony",
+    "issued": "Karta wydana",
+    "completed": "Opłacony",
+    "rejected": "Odrzucony",
+    "expired": "Wygasły",
+    "failed": "Błąd banku",
+    "canceled": "Anulowany",
+    "active": "Aktywny",
+    "pending_bank_sca": "Zatwierdzenie w banku",
+    "used": "Użyta",
+    "frozen": "Zamrożony",
+    "matched": "Uzgodniona",
+    "mismatch": "Rozbieżność",
+    "unmatched": "Nieuzgodniona"
+  },
+  "roles": {
+    "owner": "Właściciel",
+    "admin": "Administrator",
+    "approver": "Zatwierdzający",
+    "viewer": "Obserwator"
+  },
+  "errors": {
+    "network": "Sieć niedostępna. Sprawdź połączenie.",
+    "unauthorized": "Twoja sesja wygasła. Zaloguj się ponownie.",
+    "forbidden": "Nie masz uprawnień do wykonania tej czynności.",
+    "not_found": "Nie znaleziono lub element nie jest już dostępny.",
+    "invalid_input": "Niektóre dane są nieprawidłowe. Sprawdź formularz.",
+    "rate_limited": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
+    "quota_exceeded": "Osiągnięto miesięczny limit upoważnień.",
+    "subscription_inactive": "Twoja subskrypcja jest nieaktywna. Zaktualizuj ją w sekcji Rozliczenia.",
+    "org_frozen": "Organizacja jest zamrożona.",
+    "agent_frozen": "Ten agent jest zamrożony.",
+    "request_not_pending": "Ten wniosek nie oczekuje już na decyzję.",
+    "request_expired": "Ten wniosek wygasł.",
+    "already_revealed": "Ta karta została już przekazana.",
+    "card_not_ready": "Karta nie jest jeszcze dostępna.",
+    "bank_error": "Bank odrzucił operację.",
+    "plan_limit": "Osiągnięto limit Twojego planu. Zmień plan, aby kontynuować.",
+    "over_client_budget": "Przekroczono budżet miesięczny tego klienta.",
+    "internal": "Coś poszło nie tak. Spróbuj ponownie.",
+    "currency_not_allowed": "Ta waluta nie jest dozwolona przez politykę.",
+    "invalid_amount": "Nieprawidłowa kwota.",
+    "over_transaction_limit": "Kwota przekracza limit na transakcję.",
+    "over_monthly_budget": "Przekroczono budżet miesięczny agenta.",
+    "merchant_blocked": "Ten sprzedawca jest zablokowany przez politykę.",
+    "merchant_not_allowed": "Tego sprzedawcy nie ma na liście dozwolonych.",
+    "mcc_blocked": "Ta kategoria sprzedawcy jest zablokowana.",
+    "mcc_not_allowed": "Ta kategoria sprzedawcy nie jest dozwolona.",
+    "too_many_requests": "Zbyt wiele wniosków tego agenta w ciągu ostatniej godziny."
+  }
+}

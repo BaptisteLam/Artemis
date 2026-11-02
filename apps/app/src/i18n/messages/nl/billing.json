@@ -1,0 +1,59 @@
+{
+  "billing": {
+    "title": "Facturatie",
+    "lead": "Huidig abonnement: {plan}. Aanvragen deze maand: {usage}. Btw niet van toepassing, art. 293 B van het Franse belastingwetboek (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Abonnement en facturen beheren",
+    "returnOk": "Bedankt! Uw abonnement wordt geactiveerd (enkele seconden).",
+    "returnCanceled": "Betaling geannuleerd, er is niets gewijzigd.",
+    "inactive": "Uw abonnement is niet meer actief ({status}). Betaalde functies zijn opgeschort: werk uw betaalmethode bij.",
+    "unknown": "onbekend",
+    "overage": "Boven het quotum van een betaald abonnement wordt elk extra mandaat gefactureerd tegen {price}.",
+    "overageCount_one": "Deze maand: {count} mandaat.",
+    "overageCount_other": "Deze maand: {count} mandaten.",
+    "ownerOnly": "Alleen een eigenaar kan het abonnement wijzigen.",
+    "current": "Huidig",
+    "from": "vanaf {price}",
+    "perMonth": "/ maand",
+    "choose": "Kies {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Bureaus",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agent",
+        "i2": "Gesimuleerde bank",
+        "i3": "20 gesimuleerde mandaten / maand"
+      },
+      "builder": {
+        "i1": "3 agents",
+        "i2": "1 echte bank",
+        "i3": "50 mandaten / maand",
+        "i4": "Goedkeuring met toegangssleutel en meldingen"
+      },
+      "team": {
+        "i1": "10 agents",
+        "i2": "2 echte banken",
+        "i3": "300 mandaten / maand",
+        "i4": "Slack, quorum van goedkeurders, FEC-export",
+        "i5": "Abonnementen beheerd per agent"
+      },
+      "agency": {
+        "i1": "25 agents, onbeperkt aantal klanten",
+        "i2": "1.000 mandaten / maand",
+        "i3": "Budgetten, opslag en doorfacturatie per klant",
+        "i4": "+ {price} per actieve klant"
+      },
+      "business": {
+        "i1": "Onbeperkt",
+        "i2": "AI Act-dossier en -rapport",
+        "i3": "Ondertekende export van het auditlogboek",
+        "i4": "Prioritaire support"
+      }
+    }
+  }
+}

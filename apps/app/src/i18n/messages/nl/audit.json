@@ -1,0 +1,94 @@
+{
+  "audit": {
+    "title": "Auditlogboek",
+    "lead": "Elke gebeurtenis is geketend met een SHA-256-hash en kan niet worden gewijzigd of verwijderd: dit is uw bewijs van menselijk toezicht (AI Act).",
+    "verify": "Integriteit controleren",
+    "export": "Exporteren",
+    "report": "AI Act-rapport {quarter}",
+    "exportFailed": "Export mislukt.",
+    "reportUnavailable": "Rapport niet beschikbaar.",
+    "chainOk_one": "Keten intact: {count} item gecontroleerd.",
+    "chainOk_other": "Keten intact: {count} items gecontroleerd.",
+    "chainBroken": "Keten verbroken bij item nr. {id}.",
+    "exportUpsell": "De ondertekende export van het auditlogboek is inbegrepen in het abonnement Business.",
+    "seePlans": "Abonnementen bekijken",
+    "cols": {
+      "date": "Datum",
+      "event": "Gebeurtenis",
+      "actor": "Actor",
+      "hash": "Vingerafdruk"
+    },
+    "view": "bekijken",
+    "older": "Ouder →",
+    "actors": {
+      "user": "Gebruiker",
+      "agent": "Agent",
+      "system": "Systeem"
+    },
+    "actions": {
+      "org": {
+        "created": "Organisatie aangemaakt",
+        "frozen": "Organisatie geblokkeerd",
+        "unfrozen": "Organisatie gedeblokkeerd",
+        "card_delivery_changed": "Overhandigingsmodus van kaarten gewijzigd",
+        "slack_connected": "Slack gekoppeld",
+        "slack_disconnected": "Slack ontkoppeld"
+      },
+      "agent": {
+        "created": "Agent aangemaakt",
+        "updated": "Agent bijgewerkt",
+        "deleted": "Agent verwijderd",
+        "token_rotated": "Token opnieuw gegenereerd",
+        "frozen": "Agent geblokkeerd"
+      },
+      "policy": {
+        "updated": "Regels bijgewerkt"
+      },
+      "request": {
+        "created": "Aanvraag aangemaakt",
+        "rejected": "Aanvraag afgewezen",
+        "approved": "Mandaat ondertekend",
+        "auto_approved": "Automatische goedkeuring",
+        "approval_recorded": "Goedkeuring geregistreerd",
+        "expired": "Aanvraag verlopen"
+      },
+      "card": {
+        "issued": "Kaart uitgegeven",
+        "issue_failed": "Uitgifte van kaart mislukt",
+        "revealed": "Kaart overhandigd aan de agent",
+        "link_created": "Kaartlink aangemaakt",
+        "viewed": "Kaart bekeken",
+        "canceled": "Kaart geannuleerd",
+        "expired": "Kaart verlopen"
+      },
+      "transaction": {
+        "matched": "Transactie afgestemd",
+        "mismatch": "Afwijking gedetecteerd"
+      },
+      "receipt": {
+        "attached": "Bon toegevoegd"
+      },
+      "bank": {
+        "connected": "Bank gekoppeld",
+        "disconnected": "Bank ontkoppeld"
+      },
+      "member": {
+        "invited": "Lid uitgenodigd",
+        "joined": "Lid toegetreden",
+        "removed": "Lid verwijderd",
+        "role_changed": "Rol gewijzigd"
+      },
+      "client": {
+        "created": "Klant aangemaakt",
+        "updated": "Klant bijgewerkt"
+      },
+      "billing": {
+        "subscribed": "Abonnement afgesloten",
+        "updated": "Abonnement gewijzigd"
+      },
+      "subscription": {
+        "charged": "Abonnement afgeschreven"
+      }
+    }
+  }
+}

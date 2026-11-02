@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Töötab koos",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Ühekordne",
+      "aria": "Virtuaalkaart, mille number lõpeb {last4}, kaardiomanik {holder}, kehtib kuni {exp}",
+      "holder": "Kaardiomanik",
+      "expires": "Kehtib kuni",
+      "debit": "Deebet",
+      "virtual": "virtuaalne",
+      "used": "Kasutatud"
+    },
+    "faq": {
+      "q1": "Kas Artemis hoiab minu raha?",
+      "a1": "Ei. Kaardid luuakse teie enda pangas (Qonto, Revolut Business või Stripe Issuing) ja nende kulud võetakse teie kontolt. Artemis on tarkvara: see rakendab teie reegleid, kogub teie kinnituse ja juhib panka selle API kaudu. Artemis ei võta kunagi raha vastu, ei hoia ega kanna seda üle.",
+      "q2": "Mis siis, kui minu agenti manipuleeritakse viipesüstega?",
+      "a2": "Agent saab ainult taotleda. Iga kaart on ühekordne, piiratud täpse summaga, lukustatud ettenähtud kaupmehele ja aegub 30 minutiga. Teie reeglitele mittevastav taotlus lükatakse tagasi; teie piirmäärast suurema summa puhul ei lähe ilma teie pääsuvõtmeta midagi välja. Iga lahknevus summas või kaupmehes käivitab hoiatuse ja nupp „Külmuta kõik“ peatab kõik ühe klõpsuga.",
+      "q3": "Kas kaardinumber liigub läbi Artemise?",
+      "a3": "Vaikimisi mitte. Maksmisel saab agent ühekordse lingi, mis kehtib 10 minutit: kaarti kuvab otse väljastav pank. Artemis ei näe, ei salvesta ega edasta numbrit kunagi. Pärast avamist lakkab link töötamast.",
+      "q4": "Miks mitte kasutada lihtsalt oma panka?",
+      "a4": "Kui kasutate ainult Stripe'i, Rampi või Mercuryt, teevad need juba osa tööst ära. Artemis pakub seda, mida pank oma konkurentide heaks ei tee: mitu panka ühe poliitika all, Prantsuse raamatupidamine (FEC, Pennylane), üleandmiseks valmis AI Acti tõendid ja agentuurirežiim.",
+      "q5": "Milliseid panku toetatakse?",
+      "a5": "Stripe Issuing (soovitatav) loob kaardid ja kuvab need agendile, ilma et number kunagi Artemist läbiks. Revolut Business töötab Revolutiga sõlmitud kirjaliku kokkuleppe alusel ja kaart antakse üle otse. Qonto ühendatakse lugemiseks, külmutamiseks ja sobitamiseks. Sandbox simuleerib panka, nii et saate testida midagi ühendamata.",
+      "q6": "Kui palju see maksab?",
+      "a6": "Sandbox on tasuta. Seejärel {builder} (Builder), {team} (Team), {agency} + {client} iga aktiivse kliendi kohta ({agencyPlan}) või alates {business} (Business) kuus. Kvooti ületava iga volituse eest {overage}. Teie kuludelt vahendustasu ei võeta: teie pank rakendab oma tavapärast hinnakirja. {vat}.",
+      "q7": "Kas minu andmeid hoitakse Euroopas?",
+      "a7": "Jah. Andmebaasi hoitakse Euroopa Liidus (Frankfurt), pangaandmed on krüpteeritud AES-256-GCM-iga ja aheldatud auditilogi dokumenteerib AI Actis nõutud inimjärelevalvet."
+    }
+  }
+}

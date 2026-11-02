@@ -1,7 +1,7 @@
 {
   "clients": {
     "title": "Klienti",
-    "lead": "Katram klientam sava darbvieta: viņa aģenti, viņa mēneša budžets, jūsu uzcenojums un pārrēķināšanas pārskats, gatavs nosūtīšanai.",
+    "lead": "Katram klientam sava darbvieta: viņa aģenti, viņa mēneša budžets, jūsu uzcenojums un pārfakturēšanas pārskats, gatavs nosūtīšanai.",
     "invalidBudget": "Nederīgs budžets (piem., 500 vai 49.90).",
     "upsell": "Klientu darbvietas ir iekļautas plānā Aģentūrām ({price} + {perClient} par katru aktīvo klientu).",
     "seePlans": "Skatīt plānus →",
@@ -21,7 +21,7 @@
     "fields": {
       "name": "Nosaukums",
       "billingEmail": "E-pasts rēķiniem",
-      "markup": "Pārrēķināšanas uzcenojums (%)",
+      "markup": "Pārfakturēšanas uzcenojums (%)",
       "budget": "Mēneša budžets (€)",
       "budgetHint": "Tukšs = bez klienta limita"
     },
@@ -32,7 +32,7 @@
     "exportCsv": "Eksportēt CSV",
     "monthPurchases": "Pirkumi šomēnes",
     "markupPct": "Uzcenojums {value}",
-    "toRebill": "Jāpārrēķina",
+    "toRebill": "Jāpārfakturē",
     "noPurchases": "Šomēnes pirkumu nav",
     "lines": {
       "date": "Datums",

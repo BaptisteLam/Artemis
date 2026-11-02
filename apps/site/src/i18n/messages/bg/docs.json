@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Първи стъпки с Artemis",
+      "lead": "От регистрацията до първото плащане на вашия агент, в Sandbox, за пет минути.",
+      "step1": {
+        "title": "1. Създайте акаунт",
+        "body": "Регистрирайте се в <a href=\"{href}\">приложението</a> с имейла си (магическа връзка), създайте организацията си и регистрирайте ключ за достъп: с него ще одобрявате разходите."
+      },
+      "step2": {
+        "title": "2. Създайте агент",
+        "body": "В <strong>Агенти</strong> създайте например <code>notion.agent</code>. Artemis показва неговия токен (<code>art_test_…</code> в Sandbox, <code>art_live_…</code> с реална банка) <strong>само веднъж</strong>: копирайте го."
+      },
+      "step3": {
+        "title": "3. Свържете агента",
+        "fastest": "Най-бързият начин: <code>npx artemis-agents init</code> (вижте <a href=\"{cli}\">CLI</a>).",
+        "server": "MCP сървърът се намира на <code>{url}</code>, със заглавката <code>Authorization: Bearer &lt;token&gt;</code>. Следвайте ръководството за вашия инструмент: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> или <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. Цикълът на покупката",
+        "tool": "Инструмент",
+        "role": "Предназначение",
+        "requestCard": "Заявява карта: сума <strong>в центове</strong>, валута, търговец, предназначение.",
+        "getRequestStatus": "Проследява одобрението от човек.",
+        "getCardForCheckout": "Връща <strong>временна връзка</strong> (10 мин, еднократна): картата се показва от банката, без да минава през Artemis.",
+        "listBudgets": "Месечен бюджет, изразходвано, остатък, лимит.",
+        "getSpendSummary": "Разходи по търговци (ден, седмица, месец).",
+        "attachReceipt": "Прикачва разписка към покупката.",
+        "cancelCard": "Анулира картата, ако покупката вече няма да се състои."
+      },
+      "step5": {
+        "title": "5. Преминете към реална работа",
+        "body": "Изберете план в <strong>Фактуриране</strong>, след това свържете банката си в <strong>Банки</strong>. Агентите, свързани с тази банка, получават реални карти за еднократна употреба."
+      }
+    },
+    "mcpClaude": {
+      "title": "Свържете Claude",
+      "lead": "Claude Code, Claude Desktop и конекторите на Claude комуникират чрез MCP по HTTP.",
+      "verify": "Проверете с <code>claude mcp list</code>, след това поискайте например: „Абонирай ни за Notion за {price} чрез Artemis“.",
+      "desktopBody": "Отворете <em>Settings → Developer → Edit Config</em> и добавете:",
+      "instructionsTitle": "Полезни инструкции за агента",
+      "instructionsBody": "Добавете към системните си инструкции:"
+    },
+    "mcpChatgpt": {
+      "title": "Свържете ChatGPT",
+      "lead": "ChatGPT приема отдалечени MCP сървъри като персонализирани конектори.",
+      "addTitle": "Добавете конектора",
+      "step1": "Отворете <em>Settings → Connectors → Advanced</em> и включете режима за разработчици, ако планът ви го изисква.",
+      "step2": "Създайте конектор, URL: <code>{url}</code>.",
+      "step3": "Удостоверяване: заглавка <code>Authorization</code> със стойност <code>Bearer art_…</code> (според опциите, предлагани от вашето работно пространство в ChatGPT).",
+      "note": "Точните наименования се различават според плана на ChatGPT; адресът и заглавката остават същите.",
+      "openaiTitle": "Агенти на OpenAI (API)",
+      "openaiBody": "С Responses API или Agents SDK декларирайте отдалечен MCP инструмент, насочен към <code>{url}</code>, със същата заглавка."
+    },
+    "cli": {
+      "title": "CLI, Claude skill и n8n",
+      "lead": "От нула до първото ви нареждане за три минути.",
+      "commandTitle": "Една команда",
+      "commandBody": "Командата пита за URL адреса на API и токена на агента (създаден в приложението, страница „Агенти“), проверява достъпа, записва конфигурацията в <code>~/.config/artemis/config.json</code>, добавя MCP сървъра в Claude Code, ако е инсталиран, и извежда конфигурацията за Claude Desktop и n8n. Със Sandbox токен и опцията <code>--demo</code> създава първо тестово нареждане, което да одобрите в приложението.",
+      "skillTitle": "Claude skill",
+      "skillBody": "Skill-ът <code>artemis-payments</code> учи Claude да плаща чрез Artemis: сума в центове, изчакване на одобрението, отваряне на връзката за плащане в точния момент, разписка след покупката и отхвърляне на инжекции. Копирайте папката <code>integrations/claude-skill/artemis</code> от хранилището в <code>~/.claude/skills/</code>.",
+      "n8nTitle": "n8n възел",
+      "n8nBody": "Инсталирайте community възела <code>n8n-nodes-artemis</code> (Settings → Community nodes). Операции: заявка за карта, статус, връзка за плащане, анулиране, бюджет. Идентификационни данни: URL адрес на API и токен на агента."
+    },
+    "n8n": {
+      "title": "Свържете n8n",
+      "lead": "Две възможности: възелът MCP Client за n8n AI агент или HTTP заявки за класически работен процес.",
+      "agentTitle": "n8n AI агент (MCP Client)",
+      "agentBody": "Във възел <em>AI Agent</em> добавете инструмента <em>MCP Client</em>: транспорт <em>HTTP Streamable</em>, URL <code>{url}</code>, удостоверяване <em>Header Auth</em> с <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "HTTP работен процес",
+      "workflowBody": "Импортирайте примерния работен процес <code>examples/n8n/artemis-request-card.json</code> от хранилището. Той свързва последователно:",
+      "step1With": "с",
+      "step2": "цикъл на проверка на <code>GET /v1/card-requests/:id</code>, докато статусът стане <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> за получаване на временната връзка към картата (10 минути, еднократна)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "За Make, вашите скриптове и собствените ви агенти. Същият токен като за MCP сървъра.",
+      "authTitle": "Удостоверяване",
+      "base": "Базов URL: <code>{url}</code>. Ограничение: 60 заявки в минута на агент.",
+      "endpointsTitle": "Крайни точки",
+      "method": "Метод",
+      "path": "Път",
+      "role": "Предназначение",
+      "create": "Създаване на заявка",
+      "status": "Статус на заявка",
+      "reveal": "Временна връзка към картата (10 мин, еднократна)",
+      "cancel": "Анулиране",
+      "receipts": "Прикачване на разписка",
+      "budgets": "Оставащ бюджет",
+      "spendSummary": "Разходи по търговци",
+      "exampleTitle": "Пример",
+      "errorsTitle": "Грешки",
+      "errorsBody": "Чести кодове: <code>invalid_amount</code> (сумата трябва да е цяло число в центове), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Правила и одобрение",
+      "lead": "Как Artemis решава дали заявката да бъде отхвърлена, одобрена автоматично или изпратена за ваш подпис.",
+      "orderTitle": "Ред на проверка",
+      "orderBody": "Първото неизпълнено правило отхвърля заявката:",
+      "o1": "Разрешена валута (<code>currency_not_allowed</code>).",
+      "o2": "Положителна сума под лимита за покупка (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Месечен бюджет: чакащите, одобрените и платените заявки за месеца + сумата (<code>over_monthly_budget</code>). Месецът се отчита по парижко време.",
+      "o4": "Блокиран търговец или търговец, който липсва в списъка с разрешени, ако има такъв (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Категория на търговеца (MCC), която е блокирана или не е разрешена (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Автоматично одобрение",
+      "autoBody": "Заявката се одобрява без вас, ако сумата ѝ е <strong>под</strong> прага за автоматично одобрение <strong>и</strong> търговецът е в списъка с разрешени търговци на агента. Без такъв списък всяка заявка се изпраща на вас.",
+      "matchTitle": "Разпознаване на търговци",
+      "matchBody": "Имената се сравняват без оглед на главни и малки букви, диакритични знаци, правна форма и домейн разширение: „Notion“ обхваща „Notion Labs, Inc.“ и „notion.so“.",
+      "humanTitle": "Одобрение от човек",
+      "humanBody": "Собствениците, администраторите и одобряващите получават известие. Одобрението изисква ключ за достъп. Ако банката ви прилага собствено задълбочено установяване на идентичността на клиента (например Qonto), одобрете и в нейното приложение.",
+      "expiryTitle": "Изтичане",
+      "expiryBody": "Необработена заявка изтича след 30 минути (може да се настрои). Неизползвана карта се анулира при изтичането ѝ."
+    }
+  }
+}

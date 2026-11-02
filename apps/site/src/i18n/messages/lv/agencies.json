@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Aģentūrām",
+    "description": "Automatizācijas aģentūras: jūsu klientu aģenti tērē kontrolēti, ar budžetu un rēķinu katram klientam.",
+    "eyebrow": "Automatizācijas aģentūras",
+    "headline": "Jūsu klientu aģenti tērē. Jūs pārfakturējat bez liekām pūlēm.",
+    "lead": "Vai veidojat n8n, Make vai Claude aģentus saviem klientiem? Artemis nodala izdevumus pa klientiem, katram piemēro budžetu un sagatavo pārfakturēšanu ar jūsu uzcenojumu.",
+    "try": "Izmēģināt bez maksas →",
+    "plan": "Plāns {plan}: {base} + {client} par katru aktīvo klientu",
+    "spaces": {
+      "title": "Katram klientam sava darbvieta",
+      "body": "Piešķiriet katru aģentu klientam. Tā pieprasījumi, kartes, darījumi un čeki tiek glabāti atsevišķi. Aģents nekad nevar iztērēt cita klienta budžetu."
+    },
+    "budget": {
+      "title": "Mēneša budžets katram klientam",
+      "body": "Iestatiet mēneša limitu katram klientam papildus katra aģenta noteikumiem. To pārsniedzot, pieprasījums tiek noraidīts, pirms tas vispār nonāk pie cilvēka."
+    },
+    "rebilling": {
+      "title": "Pārfakturēšana ar vienu klikšķi",
+      "body": "Katru mēnesi Artemis sagatavo pārskatu katram klientam: norakstītie pirkumi, aģents, tirgotājs, čeks, pārvaldības maksa atbilstoši jūsu uzcenojumam, pārfakturējamā kopsumma. CSV eksports, gatavs nosūtīšanai vai importēšanai jūsu rēķinu rīkā."
+    },
+    "proof": {
+      "title": "Pierādījumi jūsu klientiem",
+      "body": "Katru maksājumu paraksta pilnvarota persona, un žurnālu nevar mainīt. Parādiet saviem klientiem, ka viņu aģenti ir cilvēka uzraudzībā, kā to prasa AI Act."
+    },
+    "european": {
+      "title": "Eiropas risinājums no sākuma līdz beigām",
+      "body": "Eiro, Eiropas bankas, dati Frankfurtē, FEC un Pennylane eksports Francijas grāmatvedībai."
+    },
+    "demo": {
+      "window": "pārfakturēšana · martin-bakery · novembris",
+      "subtotal": "Starpsumma",
+      "fee": "Pārvaldības maksa 15%",
+      "total": "Kopā pārfakturēt"
+    }
+  }
+}

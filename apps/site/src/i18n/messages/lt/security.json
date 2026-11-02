@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Saugumas ir atitiktis",
+    "description": "Kaip Artemis apsaugo jūsų lėšas, korteles ir duomenis.",
+    "eyebrow": "Saugumas",
+    "headline": "Sukurta taip, kad joks agentas negalėtų veikti savavališkai.",
+    "lead": "Blogiausią scenarijų – agentą, kuriuo manipuliuojama raginimo injekcija, – suvaldo pati kortelė.",
+    "funds": {
+      "title": "Jūsų lėšos niekada nepalieka jūsų banko",
+      "body": "Artemis yra programinė įranga. Korteles jūsų sąskaitoje išduoda jūsų pačių paslaugų teikėjas (Qonto, Revolut Business, Stripe). Mes nelaikome, negauname ir nepervedame jokių lėšų."
+    },
+    "defense": {
+      "title": "Daugiasluoksnė apsauga",
+      "i1": "Vienkartinė kortelė, ribojama tikslia patvirtinta suma.",
+      "i2": "Trumpas galiojimas (pagal numatytuosius nustatymus 30 minučių).",
+      "i3": "Taisyklės kiekvienam agentui: biudžetas, limitas, prekybininkai, kategorijos.",
+      "i4": "Automatinis suderinimas su įspėjimu apie bet kokį sumos ar prekybininko neatitikimą.",
+      "i5": "Mygtukas „Įšaldyti viską“: agentai sustabdomi ir aktyvios kortelės atšaukiamos vienu spustelėjimu.",
+      "i6": "Agentai gali tik prašyti: joks MCP įrankis negali pakeisti taisyklės ar patvirtinti mokėjimo."
+    },
+    "cardNumbers": {
+      "title": "Kortelių numeriai",
+      "body": "Pagal numatytuosius nustatymus visas kortelės numeris ir saugos kodas niekada nepereina per Artemis: agentas gauna trumpalaikę vienkartinę nuorodą (10 minučių), o kortelę rodo ją išdavęs bankas (Stripe Issuing Elements). Tiesioginis perdavimas yra išplėstinė parinktis, pagal numatytuosius nustatymus išjungta; net ir tada niekas nesaugoma."
+    },
+    "mandates": {
+      "title": "Pasirašyti įgaliojimai",
+      "body": "Kiekvienas patvirtinimas yra WebAuthn (prieigos rakto) parašas, apimantis įgaliojimo SHA-256 maišą: agentą, sumą, valiutą, prekybininką, tikslą, galiojimo pabaigą. Audito žurnalas sujungtas maišų grandine ir tik papildomas: bet koks klastojimas gali būti aptiktas."
+    },
+    "aiAct": {
+      "title": "AI Act ir žmogaus priežiūra",
+      "body": "ES dirbtinio intelekto aktas (AI Act) įpareigoja diegėjus registruoti ir prižiūrėti savo sistemas. Artemis žurnalas, kurį galite eksportuoti, fiksuoja, kas, kada ir pagal kokias taisykles leido kiekvieną agento mokėjimą."
+    },
+    "data": {
+      "title": "Asmens duomenys",
+      "body": "Duomenų bazė talpinama Europos Sąjungoje (Supabase, Frankfurtas). Banko prisijungimo duomenys užšifruoti (AES-256-GCM). Žr. <a href=\"{href}\">privatumo politiką</a>."
+    },
+    "report": {
+      "title": "Pranešti apie pažeidžiamumą",
+      "body": "Rašykite adresu, nurodytu <a href=\"{href}\">teisiniame pranešime</a>. Atsakome per 72 valandas."
+    }
+  }
+}

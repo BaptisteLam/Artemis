@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Zespół",
+    "lead": "Osoby zatwierdzające otrzymują wnioski i podpisują je swoim kluczem dostępu.",
+    "confirmRemove": "Usunąć tego członka?",
+    "cols": {
+      "member": "Członek",
+      "role": "Rola",
+      "since": "Od"
+    },
+    "you": "Ty",
+    "remove": "Usuń",
+    "invite": "Zaproś",
+    "email": "E-mail",
+    "role": "Rola",
+    "send": "Wyślij zaproszenie",
+    "inviteLink": "Link z zaproszeniem (ważny 7 dni):",
+    "expiresOn": "wygasa {date}",
+    "revoke": "Unieważnij"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Jūsu aģenti maksā. Pēdējais vārds paliek jums.",
+    "description": "Eiropas finanšu ugunsmūris jūsu MI aģentiem: kontrole, ietaupīts laiks un AI Act pierādījumi par katru pirkumu jūsu izvēlētajā bankā."
+  },
+  "layout": {
+    "skip": "Pāriet uz saturu"
+  },
+  "nav": {
+    "aria": "Galvenā navigācija",
+    "home": "Artemis, sākumlapa",
+    "howItWorks": "Kā tas darbojas",
+    "agencies": "Aģentūrām",
+    "pricing": "Cenas",
+    "docs": "Dokumentācija",
+    "security": "Drošība",
+    "login": "Pieteikties",
+    "cta": "Izmēģināt"
+  },
+  "lang": {
+    "choose": "Izvēlieties valodu"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Aģentūrām",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT un n8n ir to attiecīgo īpašnieku preču zīmes. Artemis nav saistīts ne ar vienu no tiem.",
+    "product": "Produkts",
+    "policyTemplate": "Politikas veidne",
+    "waitlist": "Gaidīšanas saraksts",
+    "restApi": "REST API",
+    "legal": "Juridiskā informācija",
+    "legalNotice": "Juridiskais paziņojums",
+    "terms": "Pārdošanas noteikumi",
+    "privacy": "Privātums"
+  },
+  "legal": {
+    "eyebrow": "Juridiskā informācija",
+    "updated": "Pēdējo reizi atjaunināts: 2026. gada 1. novembrī.",
+    "frenchPrevails": "Šī lapa ir tulkojums, kas sniegts informatīviem nolūkiem. Juridisks spēks ir tikai <a href=\"{href}\">versijai franču valodā</a>.",
+    "vat": "PVN netiek piemērots saskaņā ar Francijas Vispārējā nodokļu kodeksa (CGI) 293 B pantu",
+    "status": "Individuālais komersants (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, ASV (lapas un API); Supabase, Inc. — dati tiek mitināti Eiropas Savienībā (Frankfurtē)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentācija",
+    "start": "Darba sākšana",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI un Claude prasme",
+    "api": "REST API",
+    "rules": "Noteikumi un apstiprināšana"
+  },
+  "notFound": {
+    "title": "Lapa nav atrasta",
+    "eyebrow": "Kļūda 404",
+    "headline": "Šī lapa neeksistē.",
+    "lead": "Iespējams, saite ir novecojusi. Atgriezieties sākumlapā vai pārlūkojiet dokumentāciju.",
+    "home": "Sākumlapa"
+  }
+}

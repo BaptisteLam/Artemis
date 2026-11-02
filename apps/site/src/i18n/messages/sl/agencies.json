@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Za agencije",
+    "description": "Agencije za avtomatizacijo: porabo agentov vaših strank imate pod nadzorom, s proračunom in računom za vsako stranko.",
+    "eyebrow": "Agencije za avtomatizacijo",
+    "headline": "Agenti vaših strank porabljajo. Vi brez težav prefakturirate.",
+    "lead": "Za svoje stranke gradite agente v n8n, Make ali Claude? Artemis loči porabo po strankah, vsaki določi proračun in pripravi prefakturiranje skupaj z vašo maržo.",
+    "try": "Preizkusite brezplačno →",
+    "plan": "Paket {plan}: {base} + {client} na aktivno stranko",
+    "spaces": {
+      "title": "Svoj prostor za vsako stranko",
+      "body": "Vsakega agenta dodelite stranki. Njegove zahteve, kartice, transakcije in računi se vodijo ločeno. Agent nikoli ne more porabiti proračuna druge stranke."
+    },
+    "budget": {
+      "title": "Mesečni proračun za vsako stranko",
+      "body": "Za vsako stranko določite mesečno zgornjo mejo, ki velja poleg pravil posameznih agentov. Nad njo je zahteva zavrnjena, še preden pride do človeka."
+    },
+    "rebilling": {
+      "title": "Prefakturiranje z enim klikom",
+      "body": "Artemis vsak mesec za vsako stranko pripravi poročilo: obračunani nakupi, agent, trgovec, račun, provizija za upravljanje glede na vašo maržo in znesek za prefakturiranje. Izvoz CSV je pripravljen za pošiljanje ali uvoz v vaše orodje za izdajanje računov."
+    },
+    "proof": {
+      "title": "Dokaz za vaše stranke",
+      "body": "Vsako plačilo podpiše pooblaščena oseba, dnevnika pa ni mogoče spremeniti. Pokažite strankam, da so njihovi agenti pod človeškim nadzorom, kot to zahteva AI Act."
+    },
+    "european": {
+      "title": "Evropsko od začetka do konca",
+      "body": "Evri, evropske banke, podatki v Frankfurtu, izvozi FEC in Pennylane za francosko računovodstvo."
+    },
+    "demo": {
+      "window": "prefakturiranje · martin-bakery · november",
+      "subtotal": "Vmesni seštevek",
+      "fee": "Provizija za upravljanje 15 %",
+      "total": "Skupaj za prefakturiranje"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Condiții generale de vânzare și de utilizare",
+      "purposeTitle": "1. Obiect",
+      "purpose": "Prezentele condiții reglementează accesul la software-ul Artemis, editat de {editor} ({status}, SIRET {siret}), și contractarea acestuia de către clienți profesioniști. Serviciul este rezervat profesioniștilor.",
+      "serviceTitle": "2. Descrierea serviciului",
+      "service": "Artemis permite unui client să definească reguli de cheltuieli pentru agenții săi software, să aprobe solicitările de plată ale acestora și să comande, prin interfețele de programare ale propriei bănci, crearea de carduri virtuale de unică folosință. Artemis nu furnizează niciun serviciu de plată, nu deține niciun fond și nu emite niciun card. Relația bancară, comisioanele bancare și autentificarea strictă sunt reglementate exclusiv de contractul dintre client și banca sa.",
+      "accountTitle": "3. Cont și securitate",
+      "account": "Clientul răspunde de confidențialitatea tokenurilor agenților, a accesului la contul său și a passkey-urilor utilizatorilor săi, precum și de regulile pe care le configurează. Orice cheltuială aprobată de un utilizator autorizat sau conformă cu o regulă de aprobare automată se consideră autorizată de client.",
+      "pricesTitle": "4. Planuri și prețuri",
+      "prices": "Planuri: Sandbox (gratuit), Builder ({builder} / lună), Team ({team} / lună), Agenții ({agency} / lună + {perClient} per client activ), Business (de la {business} / lună). Peste cota lunară a unui plan cu plată, fiecare mandat suplimentar se facturează cu {overage}. Prețuri nete. {vat}. Plată lunară în avans cu cardul, prin Stripe. Reînnoirea este automată; rezilierea produce efecte la sfârșitul perioadei în curs, fără rambursare proporțională.",
+      "quotasTitle": "5. Cote",
+      "quotas": "Fiecare plan include cote (agenți, bănci conectate, solicitări lunare). Peste aceste cote, noile solicitări sunt refuzate până la perioada următoare sau până la schimbarea planului.",
+      "availabilityTitle": "6. Disponibilitate",
+      "availability": "Editorul depune eforturi rezonabile pentru a asigura disponibilitatea serviciului, fără nicio obligație de rezultat. Pot apărea întreruperi pentru mentenanță sau din cauza furnizorilor de servicii tehnice și bancare.",
+      "liabilityTitle": "7. Răspundere",
+      "liability": "Editorul nu poate fi tras la răspundere pentru achizițiile efectuate de agenții clientului în limita autorizațiilor acordate, pentru alegerea comercianților, pentru calitatea bunurilor sau serviciilor achiziționate și nici pentru deciziile băncii clientului. Răspunderea editorului, indiferent de cauză, este limitată la sumele plătite de client în ultimele douăsprezece luni.",
+      "dataTitle": "8. Date",
+      "data": "Prelucrarea datelor cu caracter personal este descrisă în <a href=\"{href}\">politica de confidențialitate</a>. Clientul își poate exporta datele în orice moment.",
+      "lawTitle": "9. Legea aplicabilă",
+      "law": "Legea franceză. În lipsa unei soluționări amiabile, competența revine instanțelor de la domiciliul editorului."
+    },
+    "privacy": {
+      "title": "Politica de confidențialitate",
+      "controllerTitle": "Operator de date",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Date prelucrate",
+      "dataAccount": "Cont: email, organizație, rol, passkey-uri (doar chei publice).",
+      "dataActivity": "Activitate: solicitări de card, mandate semnate, tranzacții raportate de bancă, documente justificative, jurnal de audit.",
+      "dataBanks": "Conexiuni bancare: tokenuri de acces criptate (AES-256-GCM).",
+      "dataBilling": "Facturare: gestionată de Stripe; Artemis nu vede numerele cardurilor cu care vă plătiți abonamentul.",
+      "dataWaitlist": "Listă de așteptare: email, companie, caz de utilizare.",
+      "cardNumbers": "Artemis nu stochează niciodată numărul complet și nici codul de securitate al cardurilor emise pentru agenții dumneavoastră.",
+      "purposesTitle": "Scopuri și temeiuri juridice",
+      "purposes": "Executarea contractului (furnizarea serviciului), obligații legale (contabilitate), interes legitim (securitate, prevenirea fraudei), consimțământ (listă de așteptare).",
+      "processorsTitle": "Persoane împuternicite",
+      "processors": "Supabase (bază de date, Uniunea Europeană), Cloudflare (găzduire și rețea), Stripe (facturare), Resend (emailuri tranzacționale). Eventualele transferuri în afara UE sunt reglementate prin clauze contractuale standard.",
+      "retentionTitle": "Perioade de păstrare",
+      "retention": "Datele contului: durata contractului, apoi 3 ani. Jurnalul de audit și datele contabile: 10 ani. Lista de așteptare: 3 ani fără interacțiune.",
+      "rightsTitle": "Drepturile dumneavoastră",
+      "rights": "Acces, rectificare, ștergere, portabilitate, opoziție și restricționare: scrieți la {email}. Puteți depune o plângere la CNIL (cnil.fr).",
+      "cookiesTitle": "Cookie-uri",
+      "cookies": "Site-ul nu folosește cookie-uri publicitare și nici instrumente de analiză terțe. Aplicația folosește doar stocarea necesară sesiunii dumneavoastră."
+    },
+    "notice": {
+      "title": "Mențiuni legale",
+      "editorTitle": "Editor",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Adresă: {address}",
+      "contact": "Contact: {email}",
+      "directorTitle": "Director de publicație",
+      "hostingTitle": "Găzduire",
+      "natureTitle": "Natura serviciului",
+      "nature": "Artemis este un software de guvernanță a cheltuielilor agenților de inteligență artificială. Artemis nu este nici instituție de plată, nici instituție emitentă de monedă electronică: nu primește, nu deține și nu transferă niciun fond. Cardurile de plată sunt emise de instituția bancară a clientului, pe răspunderea acesteia.",
+      "ipTitle": "Proprietate intelectuală",
+      "ip": "Conținutul, mărcile și siglele acestui site sunt proprietatea editorului. Orice reproducere fără autorizare este interzisă."
+    }
+  }
+}

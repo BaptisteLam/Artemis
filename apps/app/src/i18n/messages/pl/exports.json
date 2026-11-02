@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Eksporty księgowe",
+    "lead": "Wydatki obciążone przez Twoje banki, gotowe dla Pennylane, Twojego księgowego lub arkusza kalkulacyjnego.",
+    "failed": "Eksport nie powiódł się.",
+    "from": "Od",
+    "to": "Do (wyłącznie)",
+    "downloadCsv": "Pobierz CSV",
+    "downloadFec": "Pobierz FEC",
+    "formats": "CSV: wartości rozdzielone średnikami, zgodny z Excelem. FEC: 18 kolumn wymaganych przepisami, Wn 604000 / Ma 512000, do zaimportowania w Pennylane.",
+    "fecUpsell": "FEC jest dostępny od planu Team.",
+    "seePlans": "Zobacz plany"
+  }
+}

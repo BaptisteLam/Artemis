@@ -1,0 +1,22 @@
+{
+  "admin": {
+    "eyebrow": "Panel administracyjny",
+    "title": "Artemis w liczbach",
+    "mrr": "MRR",
+    "paying": "Płacący klienci",
+    "ofOrgs_one": "z {count} organizacji",
+    "ofOrgs_few": "z {count} organizacji",
+    "ofOrgs_many": "z {count} organizacji",
+    "ofOrgs_other": "z {count} organizacji",
+    "signups7d": "Rejestracje (7 dni)",
+    "requests30d": "Wnioski (30 dni)",
+    "orgs": "Organizacje",
+    "cols": {
+      "name": "Nazwa",
+      "plan": "Plan",
+      "subscription": "Subskrypcja",
+      "created": "Utworzono"
+    },
+    "waitlist": "Lista oczekujących ({total})"
+  }
+}

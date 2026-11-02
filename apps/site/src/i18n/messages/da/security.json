@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Sikkerhed og compliance",
+    "description": "Sådan beskytter Artemis dine midler, dine kort og dine data.",
+    "eyebrow": "Sikkerhed",
+    "headline": "Bygget, så ingen agent kan handle på egen hånd.",
+    "lead": "Det værste scenarie, en agent der manipuleres via en promptinjektion, begrænses af selve kortet.",
+    "funds": {
+      "title": "Dine midler forlader aldrig din bank",
+      "body": "Artemis er software. Kortene udstedes af din egen udbyder (Qonto, Revolut Business, Stripe) på din konto. Vi opbevarer, modtager eller overfører ingen midler."
+    },
+    "defense": {
+      "title": "Forsvar i flere lag",
+      "i1": "Engangskort, begrænset til præcis det godkendte beløb.",
+      "i2": "Kort gyldighed (30 minutter som standard).",
+      "i3": "Regler pr. agent: budget, grænse, forretninger, kategorier.",
+      "i4": "Automatisk afstemning med advarsel ved enhver afvigelse i beløb eller forretning.",
+      "i5": "Knappen »Frys alt«: agenterne suspenderes, og aktive kort annulleres med ét klik.",
+      "i6": "Agenterne kan kun anmode: intet MCP-værktøj kan ændre en regel eller godkende en betaling."
+    },
+    "cardNumbers": {
+      "title": "Kortnumre",
+      "body": "Som standard går det fulde kortnummer og sikkerhedskoden aldrig gennem Artemis: agenten modtager et kortlivet engangslink (10 minutter), og kortet vises af den udstedende bank (Stripe Issuing Elements). Direkte overdragelse findes som en avanceret mulighed, der er slået fra som standard; selv da gemmes intet."
+    },
+    "mandates": {
+      "title": "Signerede mandater",
+      "body": "Hver godkendelse er en WebAuthn-signatur (adgangsnøgle) over SHA-256-hashen af mandatet: agent, beløb, valuta, forretning, formål, udløb. Revisionsloggen er hashkædet og kan kun udvides: enhver manipulation kan opdages."
+    },
+    "aiAct": {
+      "title": "AI Act og menneskeligt tilsyn",
+      "body": "EU's AI Act kræver, at idriftsættere logger og fører tilsyn med deres systemer. Artemis' log, som du kan eksportere, registrerer, hvem der godkendte hver agentbetaling, hvornår og efter hvilke regler."
+    },
+    "data": {
+      "title": "Personoplysninger",
+      "body": "Databasen er hostet i Den Europæiske Union (Supabase, Frankfurt). Bankoplysningerne er krypteret (AES-256-GCM). Se <a href=\"{href}\">privatlivspolitikken</a>."
+    },
+    "report": {
+      "title": "Rapportér en sårbarhed",
+      "body": "Skriv til den adresse, der er angivet i de <a href=\"{href}\">juridiske oplysninger</a>. Vi svarer inden for 72 timer."
+    }
+  }
+}

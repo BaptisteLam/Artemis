@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Sådan virker det",
+    "description": "Sådan lader Artemis dine AI-agenter betale, mens du bevarer kontrollen.",
+    "headline": "Agenten anmoder, du beslutter, banken betaler.",
+    "lead": "Artemis står mellem dine agenter og din bank. Det anvender dine regler, indhenter din godkendelse og opretter et engangskort til det nøjagtige beløb.",
+    "step1": {
+      "title": "1. Du tilslutter din bank",
+      "body": "Stripe Issuing (anbefales) eller Revolut Business: virtuelle kort oprettes på <strong>din</strong> konto og debiteres <strong>dine</strong> midler. Qonto tilsluttes til læseadgang, frysning og afstemning. Artemis modtager, opbevarer eller overfører aldrig penge. For at prøve det af simulerer Sandbox en bank."
+    },
+    "step2": {
+      "title": "2. Du opretter en agent og dens regler",
+      "body": "Hver agent får en hemmelig token og en politik: månedsbudget, grænse pr. køb, valutaer, tilladte eller spærrede forretninger, forretningskategorier, tærskel for automatisk godkendelse og kortets levetid."
+    },
+    "step3": {
+      "title": "3. Agenten anmoder om et kort",
+      "body": "Via MCP-værktøjet <code>request_card</code> eller REST API'et. En anmodning, der bryder reglerne, afvises med det samme med en klar begrundelse. Alle andre afventer din godkendelse, undtagen små beløb hos en betroet forretning, hvis du har tilladt det."
+    },
+    "step4": {
+      "title": "4. Du godkender med en adgangsnøgle",
+      "body": "Du får en notifikation. Mandatskærmen viser agenten, beløbet, forretningen og formålet. Du signerer med din adgangsnøgle (Face ID, fingeraftryk, sikkerhedsnøgle). Signaturen dækker mandatets nøjagtige indhold."
+    },
+    "step5": {
+      "title": "5. Agenten betaler, Artemis afstemmer",
+      "body": "Kortet er et engangskort, begrænset til beløbet, og udløber hurtigt. Agenten modtager et kortlivet link: kortet vises af din bank, og nummeret går aldrig gennem Artemis. Så snart banken indberetter transaktionen, afstemmer Artemis den, markerer eventuelle afvigelser og arkiverer kvitteringen."
+    },
+    "demo": {
+      "mandate": "mandat · {id}",
+      "intent": "Formål: teamabonnement, 5 pladser.",
+      "rules": "Regler: grænse {cap} · resterende budget {remaining}",
+      "signed": "Signeret med adgangsnøgle · for {minutes} min siden",
+      "transactions": "transaktioner",
+      "matched": "Afstemt",
+      "mismatch": "Afvigelse"
+    }
+  }
+}

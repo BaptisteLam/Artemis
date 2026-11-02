@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Listă de așteptare",
+    "description": "Fiți anunțat când se deschid conectorii bancari reali.",
+    "headline": "Fiți printre primii.",
+    "lead": "Conectorii Qonto și Revolut se deschid treptat. Lăsați-ne adresa de email și vă anunțăm imediat ce banca dumneavoastră devine disponibilă.",
+    "email": "Email de serviciu",
+    "company": "Companie",
+    "useCase": "Ce trebuie să plătească agenții dumneavoastră?",
+    "useCasePlaceholder": "API-uri, SaaS, cloud, date…",
+    "submit": "Înscrieți-vă pe lista de așteptare",
+    "sending": "Se trimite…",
+    "ok": "Vă mulțumim, sunteți pe listă. Vă trimitem un email imediat ce se deschide.",
+    "error": "Înscrierea a eșuat. Vă rugăm să încercați din nou peste câteva momente."
+  }
+}

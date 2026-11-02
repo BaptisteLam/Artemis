@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Dine agenter betaler. Du har det sidste ord.",
+    "description": "Den europæiske finansielle firewall til dine AI-agenter: kontrol, sparet tid og dokumentation efter AI Act for hvert køb, i den bank du vælger."
+  },
+  "layout": {
+    "skip": "Spring til indhold"
+  },
+  "nav": {
+    "aria": "Hovednavigation",
+    "home": "Artemis, forside",
+    "howItWorks": "Sådan virker det",
+    "agencies": "Bureauer",
+    "pricing": "Priser",
+    "docs": "Dokumentation",
+    "security": "Sikkerhed",
+    "login": "Log ind",
+    "cta": "Prøv det"
+  },
+  "lang": {
+    "choose": "Vælg sprog"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Bureauer",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT og n8n er varemærker tilhørende deres respektive ejere. Artemis er ikke tilknyttet nogen af dem.",
+    "product": "Produkt",
+    "policyTemplate": "Skabelon til politik",
+    "waitlist": "Venteliste",
+    "restApi": "REST API",
+    "legal": "Juridisk",
+    "legalNotice": "Juridiske oplysninger",
+    "terms": "Salgsbetingelser",
+    "privacy": "Privatliv"
+  },
+  "legal": {
+    "eyebrow": "Juridisk",
+    "updated": "Senest opdateret: 1. november 2026.",
+    "frenchPrevails": "Denne side er en oversættelse, der stilles til rådighed af praktiske hensyn. Kun den <a href=\"{href}\">franske version</a> er juridisk bindende.",
+    "vat": "Moms finder ikke anvendelse, art. 293 B i den franske skattelov (CGI)",
+    "status": "Enkeltmandsvirksomhed (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (sider og API); Supabase, Inc. — data hostet i Den Europæiske Union (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentation",
+    "start": "Kom i gang",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI og Claude-skill",
+    "api": "REST API",
+    "rules": "Regler og godkendelse"
+  },
+  "notFound": {
+    "title": "Siden blev ikke fundet",
+    "eyebrow": "Fejl 404",
+    "headline": "Denne side findes ikke.",
+    "lead": "Linket kan være forældet. Gå tilbage til forsiden, eller se dokumentationen.",
+    "home": "Forside"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "subscriptions": {
+    "title": "Subskrypcje",
+    "lead": "Subskrypcje wykupione przez Twoich agentów: karta przypisana do sprzedawcy, limit miesięczny, wykrywanie nieaktywnych subskrypcji.",
+    "confirmCancel": "Anulować tę subskrypcję? Karta zostanie anulowana w banku.",
+    "planRequired": "Subskrypcje zarządzane przez agentów są dostępne od planu Team.",
+    "seePlans": "Zobacz plany →",
+    "dormantAlert_one": "{count} subskrypcja bez płatności od ponad {days} dni: rozważ jej anulowanie.",
+    "dormantAlert_few": "{count} subskrypcje bez płatności od ponad {days} dni: rozważ ich anulowanie.",
+    "dormantAlert_many": "{count} subskrypcji bez płatności od ponad {days} dni: rozważ ich anulowanie.",
+    "dormantAlert_other": "{count} subskrypcji bez płatności od ponad {days} dni: rozważ ich anulowanie.",
+    "emptyTitle": "Brak subskrypcji",
+    "emptyText": "Agent tworzy subskrypcję za pomocą request_card z opcją cykliczności.",
+    "colMerchant": "Sprzedawca",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Limit miesięczny",
+    "colPaid": "Zapłacono",
+    "colLastPayment": "Ostatnia płatność",
+    "colStatus": "Status",
+    "dormant": "Nieaktywna",
+    "cancel": "Anuluj"
+  }
+}

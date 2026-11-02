@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Lista de espera",
+    "description": "Seja avisado quando os conectores bancários reais abrirem.",
+    "headline": "Esteja entre os primeiros.",
+    "lead": "Os conectores Qonto e Revolut estão a abrir progressivamente. Deixe-nos o seu e-mail e avisamos assim que o seu banco estiver disponível.",
+    "email": "E-mail profissional",
+    "company": "Empresa",
+    "useCase": "O que precisam os seus agentes de pagar?",
+    "useCasePlaceholder": "API, SaaS, cloud, dados…",
+    "submit": "Entrar na lista de espera",
+    "sending": "A enviar…",
+    "ok": "Obrigado, já está na lista. Enviaremos um e-mail assim que abrir.",
+    "error": "Não foi possível concluir a inscrição. Tente novamente dentro de momentos."
+  }
+}

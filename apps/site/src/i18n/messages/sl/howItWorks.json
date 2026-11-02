@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Kako deluje",
+    "description": "Kako Artemis omogoča vašim agentom UI, da plačujejo, medtem ko vi ohranite nadzor.",
+    "headline": "Agent zahteva, vi odločite, banka plača.",
+    "lead": "Artemis stoji med vašimi agenti in vašo banko. Uporablja vaša pravila, zbira vašo odobritev in ustvari kartico za enkratno uporabo za točen znesek.",
+    "step1": {
+      "title": "1. Povežete svojo banko",
+      "body": "Stripe Issuing (priporočeno) ali Revolut Business: virtualne kartice se ustvarijo na <strong>vašem</strong> računu in bremenijo <strong>vaša</strong> sredstva. Qonto se poveže za branje, zamrznitev in usklajevanje. Artemis nikoli ne prejema, hrani ali prenaša denarja. Za preizkus Sandbox simulira banko."
+    },
+    "step2": {
+      "title": "2. Ustvarite agenta in njegova pravila",
+      "body": "Vsak agent dobi skrivni žeton in pravilnik: mesečni proračun, omejitev na nakup, valute, dovoljene ali blokirane trgovce, kategorije trgovcev, prag samodejne odobritve in veljavnost kartice."
+    },
+    "step3": {
+      "title": "3. Agent zahteva kartico",
+      "body": "Prek orodja MCP <code>request_card</code> ali REST API-ja. Zahteva, ki krši pravila, je takoj zavrnjena z jasnim razlogom. Vse druge čakajo na vašo odobritev, razen manjših zneskov pri zaupanja vrednem trgovcu, če ste to dovolili."
+    },
+    "step4": {
+      "title": "4. Odobrite s ključem za dostop",
+      "body": "Prejmete obvestilo. Zaslon pooblastila prikaže agenta, znesek, trgovca in namen. Podpišete s svojim ključem za dostop (Face ID, prstni odtis, varnostni ključ). Podpis zajema točno vsebino pooblastila."
+    },
+    "step5": {
+      "title": "5. Agent plača, Artemis uskladi",
+      "body": "Kartica je za enkratno uporabo, omejena na znesek in hitro poteče. Agent prejme kratkotrajno povezavo: kartico prikaže vaša banka, številka pa nikoli ne gre prek Artemis. Takoj ko banka sporoči transakcijo, jo Artemis uskladi, označi morebitno neskladje in vloži račun."
+    },
+    "demo": {
+      "mandate": "pooblastilo · {id}",
+      "intent": "Namen: naročnina za ekipo, 5 sedežev.",
+      "rules": "Pravila: omejitev {cap} · preostali proračun {remaining}",
+      "signed": "Podpisano s ključem za dostop · pred {minutes} min",
+      "transactions": "transakcije",
+      "matched": "Usklajeno",
+      "mismatch": "Neskladje"
+    }
+  }
+}

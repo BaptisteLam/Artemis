@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Šablonas: DI agentų išlaidų politika",
+    "intro": "Nemokamas šablonas, kurį galite pritaikyti dirbtinio intelekto agentų išlaidoms valdyti ir žmogaus priežiūrai, kurios reikalauja ES dirbtinio intelekto akto (AI Act) 14 straipsnis, dokumentuoti. Atsispausdinkite šį puslapį arba nukopijuokite jį į savo wiki.",
+    "scope": {
+      "title": "1. Tikslas ir taikymo sritis",
+      "body": "Ši politika taikoma bet kuriam programiniam agentui (pokalbių asistentui, automatizavimui, scenarijui), įgaliotam pirkti [ĮMONĖ] vardu. Joks agentas nenaudoja įmonės ar darbuotojo mokėjimo kortelės: kiekvienas pirkimas atliekamas vienkartine virtualia kortele, užklausta per Artemis."
+    },
+    "register": {
+      "title": "2. Agentų registras",
+      "body": "Kiekvienas agentas įrašomas į registrą nurodant: jo pavadinimą, platformą, už jį atsakingą asmenį, paskirtį, mėnesio biudžetą, vieno pirkimo limitą, leidžiamus prekybininkus ir, jei taikoma, klientą, kuriam jis dirba."
+    },
+    "rules": {
+      "title": "3. Išlaidų taisyklės",
+      "i1": "Vieno agento mėnesio biudžetas: [SUMA] €; vieno pirkimo limitas: [SUMA] €.",
+      "i2": "Leidžiami prekybininkai: [SĄRAŠAS]; draudžiamos kategorijos: azartiniai lošimai, pinigų pervedimai, kvazigrynieji pinigai, vertybiniai popieriai.",
+      "i3": "Automatinis patvirtinimas tik iki [SUMA] € ir tik pas leidžiamą prekybininką; viršijus šią sumą, žmogaus parašas privalomas.",
+      "i4": "Viršijus [SUMA] €, reikalingi du skirtingi pasirašantieji asmenys."
+    },
+    "oversight": {
+      "title": "4. Žmogaus priežiūra",
+      "body": "Asmenys, įgalioti tvirtinti: [VARDAI / VAIDMENYS]. Patvirtinimas suteikiamas prieigos raktu dėl tikslaus įgaliojimo turinio (agentas, suma, prekybininkas, tikslas). Bet kurios nepatvirtintos užklausos galiojimas baigiasi automatiškai."
+    },
+    "records": {
+      "title": "5. Kvitai ir apskaita",
+      "body": "Kiekvienas pirkimas suderinamas su jo sąskaita faktūra per [N] valandų; priešingu atveju agento veikla sustabdoma. Išlaidos kas mėnesį eksportuojamos (FEC arba Pennylane) ir suderinamos su banko išrašais."
+    },
+    "incidents": {
+      "title": "6. Incidentai",
+      "body": "Pastebėjęs neįprastą elgesį, sumos ar prekybininko neatitikimą arba įtaręs raginimo injekciją, atsakingas asmuo nedelsdamas įšaldo agentą (arba visą organizaciją) ir užregistruoja incidentą."
+    },
+    "retention": {
+      "title": "7. Saugojimas ir peržiūra",
+      "body": "Į grandinę sujungtas audito žurnalas saugomas [10] metų. Kas ketvirtį parengiama priežiūros ataskaita, kurią peržiūri [VAIDMUO]. Ši politika peržiūrima kasmet."
+    },
+    "note": "Su planu {plan} Artemis sugeneruoja agentų registrą ir ketvirtinę priežiūros ataskaitą."
+  }
+}

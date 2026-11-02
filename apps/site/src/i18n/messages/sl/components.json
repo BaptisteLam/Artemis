@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Deluje z",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Za enkratno uporabo",
+      "aria": "Virtualna kartica s končnico {last4}, imetnik {holder}, velja do {exp}",
+      "holder": "Imetnik",
+      "expires": "Velja do",
+      "debit": "Debetna",
+      "virtual": "virtualna",
+      "used": "Uporabljena"
+    },
+    "faq": {
+      "q1": "Ali Artemis hrani moj denar?",
+      "a1": "Ne. Kartice se ustvarijo pri vaši banki (Qonto, Revolut Business ali Stripe Issuing) in bremenijo vaš račun. Artemis je programska oprema: uporablja vaša pravila, zbira vašo odobritev in upravlja banko prek njenega API-ja. Nikoli ne prejema, hrani ali prenaša sredstev.",
+      "q2": "Kaj če mojega agenta zmanipulira prompt injection?",
+      "a2": "Agent lahko samo zahteva. Vsaka kartica je za enkratno uporabo, omejena na točen znesek, vezana na predvidenega trgovca in poteče v 30 minutah. Zunaj vaših pravil je zahteva zavrnjena; nad vašim pragom brez vašega ključa za dostop ne gre nič ven. Vsako neskladje v znesku ali trgovcu sproži opozorilo, gumb »Zamrzni vse« pa z enim klikom vse ustavi.",
+      "q3": "Ali gre številka kartice prek Artemis?",
+      "a3": "Ne, privzeto ne. Ob plačilu agent prejme povezavo za enkratno uporabo, ki velja 10 minut: kartico v njej neposredno prikaže banka izdajateljica. Artemis številke nikoli ne vidi, ne shranjuje in ne posreduje. Ko je povezava odprta, preneha delovati.",
+      "q4": "Zakaj ne bi preprosto uporabil svoje banke?",
+      "a4": "Če uporabljate samo Stripe, Ramp ali Mercury, ti že opravijo del dela. Artemis prinaša tisto, česar banka za svoje konkurente ne bo naredila: več bank pod enim pravilnikom, francosko računovodstvo (FEC, Pennylane), dokaz za AI Act, pripravljen za predajo, in način za agencije.",
+      "q5": "Katere banke so podprte?",
+      "a5": "Stripe Issuing (priporočeno) ustvari kartice in jih prikaže agentu, ne da bi številka kdaj šla prek Artemis. Revolut Business deluje na podlagi pisnega dogovora z Revolutom, kartica pa se preda neposredno. Qonto se poveže za branje, zamrznitev in usklajevanje. Sandbox simulira banko, da lahko preizkušate, ne da bi karkoli povezali.",
+      "q6": "Koliko stane?",
+      "a6": "Sandbox je brezplačen. Nato {builder} (Builder), {team} (Team), {agency} + {client} na aktivno stranko ({agencyPlan}) ali od {business} (Business) na mesec. Nad kvoto {overage} na pooblastilo. Brez provizije od vaše porabe: vaša banka uporablja svoj običajni cenik. {vat}.",
+      "q7": "Ali moji podatki ostanejo v Evropi?",
+      "a7": "Da. Podatkovna zbirka gostuje v Evropski uniji (Frankfurt), bančni dostopni podatki so šifrirani z AES-256-GCM, verižni revizijski dnevnik pa dokumentira človeški nadzor, ki ga zahteva AI Act."
+    }
+  }
+}

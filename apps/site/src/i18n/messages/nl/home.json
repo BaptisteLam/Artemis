@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "De Europese oplossing · AI-agents",
+      "lead": "De Europese financiële firewall voor uw AI-agents. Claude, ChatGPT of n8n vragen aan, u ondertekent met één tik, en elke uitgave wordt gecontroleerd, afgestemd en aangetoond, bij de bank van uw keuze.",
+      "tryFree": "Gratis proberen →",
+      "seeDemo": "Bekijk de demo",
+      "visualAria": "Voorbeeld: de aanvraag van een agent en zijn eenmalige kaart",
+      "expired": "Verlopen",
+      "pending": "Openstaande aanvraag",
+      "toApprove": "Wacht op goedkeuring",
+      "purpose": "teamabonnement",
+      "approve": "Goedkeuren met mijn toegangssleutel",
+      "decline": "Weigeren"
+    },
+    "trust": {
+      "aria": "Garanties",
+      "europe": "Europees",
+      "europeText": "Euro’s, Europese banken, data in Frankfurt, AVG.",
+      "funds": "Uw geld blijft bij u",
+      "fundsText": "Artemis beheert nooit geld.",
+      "number": "Kaartnummer blijft buiten Artemis",
+      "numberText": "De kaart wordt door uw bank getoond, niet door ons.",
+      "aiAct": "Klaar voor de AI Act",
+      "aiActText": "Elke uitgave ondertekend, een geketend logboek, een kwartaalrapport."
+    },
+    "demo": {
+      "eyebrow": "Demo",
+      "title": "Van aanvraag tot betaling in 20 seconden.",
+      "explain": "Zonder ooit de bedrijfskaart te delen.",
+      "step1": "De agent vraagt",
+      "window": "claude · gesprek",
+      "userMessage": "Neem Notion Plus voor het team, 5 licenties.",
+      "agentMessage": "Ik heb een kaart van {amount} aangevraagd. Ik wacht op uw goedkeuring.",
+      "step2": "U keurt goed",
+      "notification": "{agent} wil {amount} uitgeven",
+      "sheetTitle": "Mandaat goedkeuren",
+      "validity": "{minutes} min",
+      "faceId": "Ondertekenen met Face ID",
+      "step3": "De agent betaalt",
+      "reconciled": "Afgestemd"
+    },
+    "benefits": {
+      "eyebrow": "Wat u koopt",
+      "title": "Geen kaart.",
+      "explain": "Die geven banken tegenwoordig weg. U koopt controle, tijd en bewijs.",
+      "control": {
+        "eyebrow": "Controle",
+        "title": "Niets gaat de deur uit zonder uw goedkeuring.",
+        "text": "Budgetten, limieten, toegestane verkopers, vangrails tegen prompt injection. Boven uw drempels wacht elke uitgave op uw handtekening met toegangssleutel, van een of meer goedkeurders."
+      },
+      "time": {
+        "eyebrow": "Tijdwinst",
+        "title": "Geen handmatig aangemaakte kaarten meer.",
+        "text": "De agent vraagt, u ondertekent met één tik, de kaart wordt bij uw bank aangemaakt, de transactie afgestemd en de factuur gearchiveerd. Geen afschriften meer afvinken, geen bonnetjes meer najagen."
+      },
+      "proof": {
+        "eyebrow": "Bewijs",
+        "title": "Een mens heeft elke uitgave goedgekeurd.",
+        "text": "Ondertekende mandaten, een geketend, fraudebestendig auditlogboek en een driemaandelijks toezichtsrapport: wat de AI Act, uw CFO en uw accountant vragen, direct klaar om te overleggen."
+      },
+      "agencies": {
+        "eyebrow": "Voor bureaus",
+        "title": "Eén budget en één factuur per klant.",
+        "text": "Klantomgevingen, een maandbudget per klant, een doorfacturatiemarge en een maandrapport dat klaar is om te versturen. Uw klanten zien eindelijk wat hun agents uitgeven."
+      }
+    },
+    "how": {
+      "eyebrow": "Hoe het werkt",
+      "title": "Vier stappen, geen gedeelde kaart.",
+      "s1": "De agent vraagt",
+      "s1Text": "Via MCP of de API: “{amount} bij Notion, teamabonnement”.",
+      "s2": "De regels filteren",
+      "s2Text": "Budget, limiet, verkoper: buiten de regels wordt de aanvraag direct geweigerd.",
+      "s3": "U keurt goed",
+      "s3Text": "Een melding op uw telefoon, een handtekening met toegangssleutel.",
+      "s4": "De agent betaalt",
+      "s4Text": "Een eenmalige kaart, het exacte bedrag, een korte geldigheid, daarna automatische afstemming."
+    },
+    "useCases": {
+      "eyebrow": "Toepassingen",
+      "title": "Wat uw agents nu al kopen.",
+      "explain": "Voortaan met een eigen kaart.",
+      "api": {
+        "title": "API’s en tokens",
+        "text": "Tegoed opwaarderen wanneer het quotum op is, zonder de bedrijfskaart in een .env-bestand te laten staan."
+      },
+      "saas": {
+        "title": "SaaS-abonnementen",
+        "text": "Een abonnement voor het team afsluiten of verlengen, voor precies het goedgekeurde bedrag."
+      },
+      "cloud": {
+        "title": "Cloud en domeinen",
+        "text": "Midden in een deployment een domeinnaam kopen of een overschrijding van de hosting betalen."
+      },
+      "data": {
+        "title": "Data en B2B-aankopen",
+        "text": "Een dataset, een scrapingopdracht of kantoorbenodigdheden betalen, met de bon automatisch toegevoegd.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Eerlijk is eerlijk",
+      "title": "Gebruikt u alleen Stripe, Ramp of Mercury?",
+      "explain": "Die doen al een deel van het werk.",
+      "lead": "Artemis biedt wat een bank niet voor haar concurrenten doet.",
+      "banks": "Meerdere banken tegelijk",
+      "banksText": "Stripe Issuing, Revolut, Qonto en de Sandbox, centraal aangestuurd onder één beleid.",
+      "accounting": "Franse boekhouding",
+      "accountingText": "FEC- en Pennylane-exports, een bon bij elk mandaat, automatische afstemming.",
+      "proof": "AI Act-bewijs, direct klaar om te overleggen",
+      "proofText": "Een menselijke handtekening voor elke uitgave, een geketend logboek, een register van agents, een kwartaalrapport.",
+      "agency": "Een bureaumodus",
+      "agencyText": "Agents voor meerdere klanten, elk met een eigen budget, marge en rapport."
+    },
+    "europe": {
+      "eyebrow": "De Europese oplossing",
+      "title": "Gebouwd in Europa, voor Europa.",
+      "lead": "Amerikaanse agentkaarten spreken dollars, Amerikaanse banken en Amerikaans recht. Artemis spreekt euro’s, Europese banken, AVG, de AI Act en Franse boekhouding.",
+      "banks": "Euro’s en Europese banken: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "EU",
+      "data": "Data gehost in Frankfurt, AVG, versleutelde inloggegevens",
+      "article": "Art. 14",
+      "oversight": "Menselijk toezicht volgens de AI Act, uitgave per uitgave aangetoond",
+      "accounting": "Franse boekhouding: FEC, Pennylane, bijgevoegde bonnen"
+    },
+    "compare": {
+      "eyebrow": "Vergelijking",
+      "title": "Uw bank geeft de kaart uit.",
+      "explain": "Artemis stuurt ze allemaal aan.",
+      "criterion": "Criterium",
+      "bankOnly": "Alleen uw bank (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Alleen uw bank",
+      "usCards": "Amerikaanse agentkaarten",
+      "usCardsShort": "Amerikaanse agentkaarten",
+      "rows": {
+        "card": "Virtuele kaart voor de agent",
+        "banks": "Meerdere banken, één beleid",
+        "signature": "Menselijke handtekening voor elke uitgave (toegangssleutel)",
+        "aiAct": "Exporteerbaar AI Act-bewijs",
+        "accounting": "Franse boekhouding (FEC, Pennylane)",
+        "agency": "Bureaumodus (budgetten en doorfacturatie per klant)",
+        "europe": "Euro’s, hosting en data in Europa"
+      },
+      "values": {
+        "yes": "Ja",
+        "no": "Nee",
+        "yesBank": "Ja, uitgegeven door uw bank",
+        "yesQuorum": "Ja, met quorum",
+        "dependsPlan": "Afhankelijk van het abonnement",
+        "dependsBank": "Afhankelijk van de bank",
+        "partial": "Gedeeltelijk"
+      }
+    },
+    "builders": {
+      "eyebrow": "Voor ontwikkelaars",
+      "title": "Gekoppeld met één regel.",
+      "explain": "Claude, ChatGPT, n8n, Make of uw eigen code.",
+      "lead": "Een externe MCP-server en een REST API. Een gratis Sandbox met gesimuleerde kaarten om zonder bank te testen.",
+      "connect": "Claude koppelen →",
+      "window": "terminal"
+    },
+    "faq": {
+      "eyebrow": "Veelgestelde vragen",
+      "title": "Wat men ons vraagt.",
+      "more": "Nog een vraag? Lees de pagina <a href=\"{security}\">Beveiliging</a> of de <a href=\"{docs}\">documentatie</a>."
+    },
+    "final": {
+      "title": "Houd de controle over uw agents.",
+      "lead": "De Europese financiële firewall, gratis in de Sandbox, geen creditcard nodig. U hebt het laatste woord.",
+      "signup": "Account aanmaken →",
+      "pricing": "Prijzen bekijken",
+      "holder": "uw.agent"
+    }
+  }
+}

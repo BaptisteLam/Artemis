@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Klienci",
+    "lead": "Osobna przestrzeń dla każdego klienta: jego agenci, budżet miesięczny, Twoja marża i raport do refakturowania gotowy do wysłania.",
+    "invalidBudget": "Nieprawidłowy budżet (np. 500 lub 49,90).",
+    "upsell": "Przestrzenie klientów są dostępne w planie Agencje ({price} + {perClient} za aktywnego klienta).",
+    "seePlans": "Zobacz plany →",
+    "empty": "Brak klientów",
+    "emptyHint": "Utwórz klienta, a następnie przypisz do niego agentów.",
+    "cols": {
+      "client": "Klient",
+      "agents": "Agenci",
+      "spent": "Zaangażowano w tym miesiącu",
+      "budget": "Budżet",
+      "markup": "Marża"
+    },
+    "archived": "zarchiwizowany",
+    "percent": "{value}%",
+    "report": "Raport →",
+    "new": "Nowy klient",
+    "fields": {
+      "name": "Nazwa",
+      "billingEmail": "E-mail do faktur",
+      "markup": "Marża przy refakturowaniu (%)",
+      "budget": "Budżet miesięczny (€)",
+      "budgetHint": "Puste = bez limitu dla klienta"
+    },
+    "create": "Utwórz klienta",
+    "exportFailed": "Eksport nie powiódł się.",
+    "eyebrow": "Klient",
+    "month": "Miesiąc",
+    "exportCsv": "Eksportuj CSV",
+    "monthPurchases": "Zakupy w tym miesiącu",
+    "markupPct": "Marża {value}",
+    "toRebill": "Do refakturowania",
+    "noPurchases": "Brak zakupów w tym miesiącu",
+    "lines": {
+      "date": "Data",
+      "agent": "Agent",
+      "merchant": "Sprzedawca",
+      "purpose": "Cel",
+      "amount": "Kwota",
+      "receipt": "Dowód zakupu"
+    },
+    "yes": "Tak",
+    "missing": "Brak",
+    "archive": "Zarchiwizuj klienta",
+    "reactivate": "Aktywuj ponownie",
+    "all": "← Wszyscy klienci"
+  }
+}

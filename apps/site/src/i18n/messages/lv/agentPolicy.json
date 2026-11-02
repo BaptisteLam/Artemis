@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Veidne: MI aģentu izdevumu politika",
+    "intro": "Bezmaksas veidne pielāgošanai, lai pārvaldītu mākslīgā intelekta aģentu veiktos izdevumus un dokumentētu cilvēka uzraudzību, ko prasa ES Mākslīgā intelekta akta (AI Act) 14. pants. Izdrukājiet šo lapu vai iekopējiet to savā wiki.",
+    "scope": {
+      "title": "1. Mērķis un darbības joma",
+      "body": "Šī politika attiecas uz jebkuru programmatūras aģentu (sarunu asistentu, automatizāciju, skriptu), kas ir pilnvarots veikt pirkumu [UZŅĒMUMS] vārdā. Neviens aģents neizmanto uzņēmuma vai darbinieka maksājumu karti: katrs pirkums tiek veikts ar vienreizējas lietošanas virtuālo karti, kas pieprasīta ar Artemis starpniecību."
+    },
+    "register": {
+      "title": "2. Aģentu reģistrs",
+      "body": "Katrs aģents tiek ierakstīts reģistrā, norādot: tā nosaukumu, platformu, par to atbildīgo personu, mērķi, mēneša budžetu, viena pirkuma limitu, atļautos tirgotājus un, ja attiecināms, klientu, kura labā tas strādā."
+    },
+    "rules": {
+      "title": "3. Izdevumu noteikumi",
+      "i1": "Mēneša budžets vienam aģentam: [SUMMA] €; viena pirkuma limits: [SUMMA] €.",
+      "i2": "Atļautie tirgotāji: [SARAKSTS]; aizliegtās kategorijas: azartspēles, naudas pārvedumi, kvazinauda, vērtspapīri.",
+      "i3": "Automātisks apstiprinājums tikai zem [SUMMA] € un pie atļauta tirgotāja; virs šīs summas cilvēka paraksts ir obligāts.",
+      "i4": "Virs [SUMMA] € nepieciešami divi atsevišķi parakstītāji."
+    },
+    "oversight": {
+      "title": "4. Cilvēka uzraudzība",
+      "body": "Personas, kas pilnvarotas apstiprināt: [VĀRDI / LOMAS]. Apstiprinājums tiek sniegts ar piekļuves atslēgu par precīzu pilnvaras saturu (aģents, summa, tirgotājs, mērķis). Jebkura neapstiprināta pieprasījuma derīgums beidzas automātiski."
+    },
+    "records": {
+      "title": "5. Čeki un grāmatvedība",
+      "body": "Katrs pirkums tiek saskaņots ar tā rēķinu [N] stundu laikā; pretējā gadījumā aģenta darbība tiek apturēta. Izdevumi katru mēnesi tiek eksportēti (FEC vai Pennylane) un saskaņoti ar bankas izrakstiem."
+    },
+    "incidents": {
+      "title": "6. Incidenti",
+      "body": "Neparastas uzvedības, summas vai tirgotāja neatbilstības vai aizdomu par uzvednes injekciju gadījumā atbildīgā persona nekavējoties iesaldē aģentu (vai visu organizāciju) un reģistrē incidentu."
+    },
+    "retention": {
+      "title": "7. Glabāšana un pārskatīšana",
+      "body": "Ķēdē saistītais audita žurnāls tiek glabāts [10] gadus. Katru ceturksni tiek sagatavots uzraudzības pārskats, ko izskata [LOMA]. Šī politika tiek pārskatīta katru gadu."
+    },
+    "note": "Plānā {plan} Artemis ģenerē aģentu reģistru un ceturkšņa uzraudzības pārskatu."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Gaidīšanas saraksts",
+    "description": "Saņemiet paziņojumu, kad tiks atvērti īsto banku savienotāji.",
+    "headline": "Esiet starp pirmajiem.",
+    "lead": "Qonto un Revolut savienotāji tiek atvērti pakāpeniski. Atstājiet savu e-pastu, un mēs jums paziņosim, tiklīdz jūsu banka būs pieejama.",
+    "email": "Darba e-pasts",
+    "company": "Uzņēmums",
+    "useCase": "Par ko jūsu aģentiem jāmaksā?",
+    "useCasePlaceholder": "API, SaaS, mākonis, dati…",
+    "submit": "Pievienoties gaidīšanas sarakstam",
+    "sending": "Sūta…",
+    "ok": "Paldies, jūs esat sarakstā. Mēs jums nosūtīsim e-pastu, tiklīdz tas tiks atvērts.",
+    "error": "Reģistrācija neizdevās. Lūdzu, pēc brīža mēģiniet vēlreiz."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Preços",
+    "description": "Sandbox gratuito e, depois, {a}, {b}, {c} ou {d} por mês. Sem comissão sobre as suas despesas.",
+    "headline": "Uma subscrição simples. Sem comissões.",
+    "lead": "Paga apenas o software. Os cartões são emitidos pelo seu banco, segundo o seu tarifário bancário habitual.",
+    "popular": "O mais escolhido",
+    "from": "a partir de {price}",
+    "perMonth": "/ mês",
+    "start": "Começar",
+    "choose": "Escolher {plan}",
+    "mandates": "{count} mandatos / mês",
+    "sandbox": {
+      "pitch": "Experimente com um banco simulado.",
+      "i1": "1 agente",
+      "i2": "Banco simulado",
+      "i3": "{count} mandatos simulados / mês",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Para um freelancer ou programador e os seus agentes.",
+      "i1": "3 agentes",
+      "i2": "1 banco ligado",
+      "i4": "Aprovação com chave de acesso",
+      "i5": "Barreiras de proteção contra injeções"
+    },
+    "team": {
+      "pitch": "Para uma startup de 5 a 50 pessoas.",
+      "i1": "10 agentes",
+      "i2": "2 bancos",
+      "i4": "Slack e quórum de aprovadores",
+      "i5": "Subscrições, exportação FEC"
+    },
+    "agency": {
+      "pitch": "Para agências de automação.",
+      "i1": "Clientes ilimitados, 25 agentes",
+      "i3": "Orçamento e margem por cliente",
+      "i4": "Relatório mensal para refaturar",
+      "i5": "+ {price} por cliente ativo"
+    },
+    "business": {
+      "pitch": "Para scale-ups reguladas.",
+      "i1": "Ilimitado",
+      "i2": "Dossiê e relatório AI Act",
+      "i3": "Exportação assinada do registo de auditoria",
+      "i4": "Suporte prioritário"
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "q1": "Há custos por cartão?",
+      "a1": "Não por parte do Artemis. O seu banco aplica o seu próprio tarifário (os cartões virtuais estão incluídos na maioria dos planos Qonto e Revolut Business; o Stripe Issuing cobra segundo o seu próprio preçário).",
+      "q2": "O que acontece se ultrapassar a minha quota?",
+      "a2": "Num plano pago, os seus agentes continuam a funcionar: cada mandato acima da quota é faturado a {price} no final do mês. No Sandbox, os pedidos são recusados com o código <code>quota_exceeded</code>.",
+      "q3": "Como é faturado o plano {plan}?",
+      "a3": "{base} por mês, mais {client} por cliente ativo, ou seja, cada cliente para o qual tenha sido criado pelo menos um mandato durante o mês.",
+      "q4": "Posso cancelar a qualquer momento?",
+      "a4": "Sim, a partir da área Faturação. A subscrição mantém-se até ao final do período pago; os seus dados continuam exportáveis.",
+      "q5": "IVA",
+      "a5": "Os preços indicados são líquidos."
+    }
+  }
+}

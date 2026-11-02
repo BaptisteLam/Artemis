@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Laukiančiųjų sąrašas",
+    "description": "Gaukite pranešimą, kai bus atidarytos tikrų bankų jungtys.",
+    "headline": "Būkite tarp pirmųjų.",
+    "lead": "Qonto ir Revolut jungtys atidaromos palaipsniui. Palikite savo el. pašto adresą ir pranešime, kai tik jūsų bankas taps pasiekiamas.",
+    "email": "Darbo el. paštas",
+    "company": "Įmonė",
+    "useCase": "Už ką jūsų agentams reikia mokėti?",
+    "useCasePlaceholder": "API, SaaS, debesija, duomenys…",
+    "submit": "Prisijungti prie laukiančiųjų sąrašo",
+    "sending": "Siunčiama…",
+    "ok": "Ačiū, esate sąraše. Kai tik atidarysime, parašysime jums el. laišką.",
+    "error": "Užsiregistruoti nepavyko. Pabandykite dar kartą po akimirkos."
+  }
+}

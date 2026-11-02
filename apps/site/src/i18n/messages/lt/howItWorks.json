@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "description": "Kaip Artemis leidžia jūsų DI agentams mokėti, o kontrolė lieka jūsų rankose.",
+    "headline": "Agentas prašo, jūs sprendžiate, bankas moka.",
+    "lead": "Artemis veikia tarp jūsų agentų ir jūsų banko. Ji taiko jūsų taisykles, gauna jūsų patvirtinimą ir sukuria vienkartinę kortelę tiksliai sumai.",
+    "step1": {
+      "title": "1. Prijungiate savo banką",
+      "body": "Stripe Issuing (rekomenduojama) arba Revolut Business: virtualios kortelės kuriamos <strong>jūsų</strong> paskyroje, o mokėjimai nurašomi iš <strong>jūsų</strong> lėšų. Qonto prijungiamas skaitymo prieigai, įšaldymui ir suderinimui. Artemis niekada negauna, nelaiko ir neperveda pinigų. Išbandymui Sandbox imituoja banką."
+    },
+    "step2": {
+      "title": "2. Sukuriate agentą ir jo taisykles",
+      "body": "Kiekvienas agentas gauna slaptą žetoną ir politiką: mėnesio biudžetą, vieno pirkimo limitą, valiutas, leidžiamus ar užblokuotus prekybininkus, prekybininkų kategorijas, automatinio patvirtinimo ribą ir kortelės galiojimo laiką."
+    },
+    "step3": {
+      "title": "3. Agentas užklausia kortelės",
+      "body": "Per MCP įrankį <code>request_card</code> arba REST API. Taisykles pažeidžianti užklausa iškart atmetama, nurodant aiškią priežastį. Visos kitos laukia jūsų patvirtinimo, išskyrus nedideles sumas pas patikimą prekybininką, jei tai leidote."
+    },
+    "step4": {
+      "title": "4. Patvirtinate prieigos raktu",
+      "body": "Gaunate pranešimą. Įgaliojimo ekrane matyti agentas, suma, prekybininkas ir tikslas. Pasirašote savo prieigos raktu (Face ID, piršto atspaudas, saugos raktas). Parašas apima tikslų įgaliojimo turinį."
+    },
+    "step5": {
+      "title": "5. Agentas moka, Artemis suderina",
+      "body": "Kortelė yra vienkartinė, ribojama suma ir greitai nustoja galioti. Agentas gauna trumpalaikę nuorodą: kortelę rodo jūsų bankas, o numeris niekada nepereina per Artemis. Kai tik bankas praneša apie operaciją, Artemis ją suderina, pažymi bet kokį neatitikimą ir išsaugo kvitą."
+    },
+    "demo": {
+      "mandate": "įgaliojimas · {id}",
+      "intent": "Tikslas: komandos prenumerata, 5 vietos.",
+      "rules": "Taisyklės: limitas {cap} · likęs biudžetas {remaining}",
+      "signed": "Pasirašyta prieigos raktu · prieš {minutes} min.",
+      "transactions": "operacijos",
+      "matched": "Suderinta",
+      "mismatch": "Neatitikimas"
+    }
+  }
+}

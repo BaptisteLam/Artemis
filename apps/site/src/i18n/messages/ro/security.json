@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Securitate și conformitate",
+    "description": "Cum vă protejează Artemis fondurile, cardurile și datele.",
+    "eyebrow": "Securitate",
+    "headline": "Conceput astfel încât niciun agent să nu poată acționa singur.",
+    "lead": "Cel mai rău scenariu, un agent manipulat printr-un prompt injection, este limitat chiar de card.",
+    "funds": {
+      "title": "Fondurile dumneavoastră nu părăsesc niciodată banca",
+      "body": "Artemis este un software. Cardurile sunt emise de propriul dumneavoastră furnizor (Qonto, Revolut Business, Stripe), în contul dumneavoastră. Nu deținem, nu primim și nu transferăm niciun fond."
+    },
+    "defense": {
+      "title": "Apărare în profunzime",
+      "i1": "Card de unică folosință, plafonat la suma exactă aprobată.",
+      "i2": "Expirare scurtă (30 de minute în mod implicit).",
+      "i3": "Reguli per agent: buget, limită, comercianți, categorii.",
+      "i4": "Reconciliere automată, cu alertă la orice neconcordanță de sumă sau de comerciant.",
+      "i5": "Butonul „Înghețați tot”: agenți suspendați și carduri active anulate dintr-un clic.",
+      "i6": "Agenții pot doar să solicite: niciun instrument MCP nu poate modifica o regulă sau aproba o plată."
+    },
+    "cardNumbers": {
+      "title": "Numerele cardurilor",
+      "body": "În mod implicit, numărul complet al cardului și codul de securitate nu trec niciodată prin Artemis: agentul primește un link de unică folosință, cu durată scurtă de viață (10 minute), iar cardul este afișat de banca emitentă (Stripe Issuing Elements). Predarea directă este disponibilă ca opțiune avansată, dezactivată în mod implicit; chiar și atunci, nu se stochează nimic."
+    },
+    "mandates": {
+      "title": "Mandate semnate",
+      "body": "Fiecare aprobare este o semnătură WebAuthn (passkey) asupra hashului SHA-256 al mandatului: agent, sumă, monedă, comerciant, scop, expirare. Jurnalul de audit este înlănțuit prin hash și permite doar adăugări: orice modificare poate fi detectată."
+    },
+    "aiAct": {
+      "title": "AI Act și supravegherea umană",
+      "body": "AI Act al UE le impune implementatorilor să își înregistreze și să își supravegheze sistemele. Jurnalul Artemis, pe care îl puteți exporta, consemnează cine a autorizat fiecare plată a unui agent, când și pe baza căror reguli."
+    },
+    "data": {
+      "title": "Date cu caracter personal",
+      "body": "Bază de date găzduită în Uniunea Europeană (Supabase, Frankfurt). Date de acces bancare criptate (AES-256-GCM). Consultați <a href=\"{href}\">politica de confidențialitate</a>."
+    },
+    "report": {
+      "title": "Raportați o vulnerabilitate",
+      "body": "Scrieți la adresa indicată în <a href=\"{href}\">mențiunile legale</a>. Răspundem în 72 de ore."
+    }
+  }
+}

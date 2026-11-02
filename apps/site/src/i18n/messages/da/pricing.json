@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Priser",
+    "description": "Gratis Sandbox, derefter {a}, {b}, {c} eller {d} pr. måned. Ingen provision på dine udgifter.",
+    "headline": "Ét enkelt abonnement. Ingen provision.",
+    "lead": "Du betaler kun for softwaren. Kortene udstedes af din bank under din sædvanlige bankaftale.",
+    "popular": "Mest populær",
+    "from": "fra {price}",
+    "perMonth": "/måned",
+    "start": "Kom i gang",
+    "choose": "Vælg {plan}",
+    "mandates": "{count} mandater/måned",
+    "sandbox": {
+      "pitch": "Prøv det med en simuleret bank.",
+      "i1": "1 agent",
+      "i2": "Simuleret bank",
+      "i3": "{count} simulerede mandater/måned",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Til en freelancer eller udvikler og deres agenter.",
+      "i1": "3 agenter",
+      "i2": "1 tilsluttet bank",
+      "i4": "Godkendelse med adgangsnøgle",
+      "i5": "Sikkerhedsværn mod injektion"
+    },
+    "team": {
+      "pitch": "Til en startup med 5 til 50 personer.",
+      "i1": "10 agenter",
+      "i2": "2 banker",
+      "i4": "Slack og kvorum af godkendere",
+      "i5": "Abonnementer, FEC-eksport"
+    },
+    "agency": {
+      "pitch": "Til automationsbureauer.",
+      "i1": "Ubegrænset antal kunder, 25 agenter",
+      "i3": "Budget og avance pr. kunde",
+      "i4": "Månedsrapport til viderefakturering",
+      "i5": "+ {price} pr. aktiv kunde"
+    },
+    "business": {
+      "pitch": "Til regulerede scale-ups.",
+      "i1": "Ubegrænset",
+      "i2": "AI Act-dossier og rapport",
+      "i3": "Signeret eksport af revisionsloggen",
+      "i4": "Prioriteret support"
+    },
+    "faq": {
+      "title": "Ofte stillede spørgsmål",
+      "q1": "Er der gebyrer pr. kort?",
+      "a1": "Ikke fra Artemis. Din bank anvender sin egen prisaftale (virtuelle kort er inkluderet i de fleste planer hos Qonto og Revolut Business; Stripe Issuing opkræver efter sin egen prisliste).",
+      "q2": "Hvad sker der, hvis jeg overskrider min kvote?",
+      "a2": "Med en betalt plan fortsætter dine agenter: hvert mandat ud over kvoten faktureres med {price} ved månedens udgang. I Sandbox afvises anmodninger med koden <code>quota_exceeded</code>.",
+      "q3": "Hvordan faktureres planen {plan}?",
+      "a3": "{base} pr. måned plus {client} pr. aktiv kunde, dvs. hver kunde, for hvem der er oprettet mindst ét mandat i løbet af måneden.",
+      "q4": "Kan jeg opsige når som helst?",
+      "a4": "Ja, under Fakturering. Abonnementet løber til udgangen af den betalte periode; dine data kan fortsat eksporteres.",
+      "q5": "Moms",
+      "a5": "De viste priser er ekskl. moms."
+    }
+  }
+}

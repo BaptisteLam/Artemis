@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Veikia su",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Vienkartinė",
+      "aria": "Virtuali kortelė, kurios numeris baigiasi {last4}, kortelės turėtojas {holder}, galioja iki {exp}",
+      "holder": "Kortelės turėtojas",
+      "expires": "Galioja iki",
+      "debit": "Debetas",
+      "virtual": "virtuali",
+      "used": "Panaudota"
+    },
+    "faq": {
+      "q1": "Ar Artemis laiko mano pinigus?",
+      "a1": "Ne. Kortelės kuriamos jūsų pačių banke (Qonto, Revolut Business arba Stripe Issuing), o mokėjimai nurašomi iš jūsų sąskaitos. Artemis yra programinė įranga: ji taiko jūsų taisykles, gauna jūsų patvirtinimą ir valdo banką per jo API. Ji niekada negauna, nelaiko ir neperveda lėšų.",
+      "q2": "O jei mano agentu manipuliuojama raginimo injekcija?",
+      "a2": "Agentas gali tik prašyti. Kiekviena kortelė yra vienkartinė, ribojama tikslia suma, susieta su numatytu prekybininku ir nustoja galioti po 30 minučių. Už jūsų taisyklių ribų užklausa atmetama; viršijus jūsų ribą, niekas neišmokama be jūsų prieigos rakto. Bet koks sumos ar prekybininko neatitikimas sukelia įspėjimą, o mygtukas „Įšaldyti viską“ vienu spustelėjimu viską sustabdo.",
+      "q3": "Ar kortelės numeris pereina per Artemis?",
+      "a3": "Ne, pagal numatytuosius nustatymus – ne. Atsiskaitydamas agentas gauna vienkartinę nuorodą, galiojančią 10 minučių: joje kortelę tiesiogiai rodo ją išdavęs bankas. Artemis niekada nemato, nesaugo ir neperduoda numerio. Atidarius nuorodą, ji nustoja veikti.",
+      "q4": "Kodėl tiesiog nenaudoti savo banko?",
+      "a4": "Jei naudojate tik Stripe, Ramp ar Mercury, jie jau atlieka dalį darbo. Artemis suteikia tai, ko bankas nedarys savo konkurentams: kelis bankus pagal vieną politiką, Prancūzijos apskaitą (FEC, Pennylane), perduoti paruoštus AI Act įrodymus ir agentūros režimą.",
+      "q5": "Kurie bankai palaikomi?",
+      "a5": "Stripe Issuing (rekomenduojama) sukuria korteles ir parodo jas agentui, numeriui niekada nepereinant per Artemis. Revolut Business veikia pagal rašytinį susitarimą su Revolut, kortelę perduodant tiesiogiai. Qonto prijungiamas skaitymui, įšaldymui ir suderinimui. Sandbox imituoja banką, kad galėtumėte išbandyti nieko neprijungę.",
+      "q6": "Kiek tai kainuoja?",
+      "a6": "Sandbox yra nemokamas. Toliau – {builder} (Builder), {team} (Team), {agency} + {client} už kiekvieną aktyvų klientą ({agencyPlan}) arba nuo {business} (Business) per mėnesį. Viršijus kvotą – {overage} už įgaliojimą. Jokių komisinių nuo jūsų išlaidų: jūsų bankas taiko įprastą įkainį. {vat}.",
+      "q7": "Ar mano duomenys saugomi Europoje?",
+      "a7": "Taip. Duomenų bazė talpinama Europos Sąjungoje (Frankfurte), banko prisijungimo duomenys užšifruoti AES-256-GCM, o į grandinę sujungtas audito žurnalas dokumentuoja AI Act reikalaujamą žmogaus priežiūrą."
+    }
+  }
+}

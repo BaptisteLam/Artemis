@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Mall: tehisintellekti agentide kulupoliitika",
+    "intro": "Tasuta kohandatav mall tehisintellekti agentide tehtavate kulude juhtimiseks ning ELi tehisintellekti määruse (AI Act) artiklis 14 nõutud inimjärelevalve dokumenteerimiseks. Printige see leht välja või kopeerige see oma wikisse.",
+    "scope": {
+      "title": "1. Eesmärk ja kohaldamisala",
+      "body": "Seda poliitikat kohaldatakse igale tarkvaraagendile (vestlusassistent, automatiseering, skript), kellel on õigus teha oste ettevõtte [ETTEVÕTE] nimel. Ükski agent ei kasuta ettevõtte ega töötaja maksekaarti: iga ost tehakse ühekordse virtuaalkaardiga, mida taotletakse Artemise kaudu."
+    },
+    "register": {
+      "title": "2. Agentide register",
+      "body": "Iga agent kantakse registrisse järgmiste andmetega: nimi, platvorm, vastutav isik, eesmärk, kuueelarve, ostupõhine limiit, lubatud kaupmehed ja vajaduse korral klient, kelle heaks agent töötab."
+    },
+    "rules": {
+      "title": "3. Kulureeglid",
+      "i1": "Agendi kuueelarve: [SUMMA] €; ostupõhine limiit: [SUMMA] €.",
+      "i2": "Lubatud kaupmehed: [LOETELU]; keelatud kategooriad: hasartmängud, rahaülekanded, sularahaga võrdsustatud tehingud, väärtpaberid.",
+      "i3": "Automaatne kinnitamine ainult alla [SUMMA] € ja lubatud kaupmehe puhul; muul juhul on inimese allkiri kohustuslik.",
+      "i4": "Üle [SUMMA] € on nõutav kahe erineva allkirjastaja allkiri."
+    },
+    "oversight": {
+      "title": "4. Inimjärelevalve",
+      "body": "Kinnitamiseks volitatud isikud on: [NIMED / ROLLID]. Kinnitus antakse pääsuvõtmega volituse täpsele sisule (agent, summa, kaupmees, eesmärk). Kinnitamata taotlus aegub automaatselt."
+    },
+    "records": {
+      "title": "5. Kviitungid ja raamatupidamine",
+      "body": "Iga ostuga seotakse arve [N] tunni jooksul; vastasel juhul agent külmutatakse. Kulud eksporditakse igakuiselt (FEC või Pennylane) ja võrreldakse pangaväljavõtetega."
+    },
+    "incidents": {
+      "title": "6. Intsidendid",
+      "body": "Kui agent käitub ebatavaliselt, summas või kaupmehes ilmneb lahknevus või kahtlustatakse viipesüstet, külmutab vastutav isik viivitamata agendi (või kogu organisatsiooni) ja registreerib intsidendi."
+    },
+    "retention": {
+      "title": "7. Säilitamine ja läbivaatamine",
+      "body": "Aheldatud auditilogi säilitatakse [10] aastat. Iga kvartali kohta koostatakse järelevalvearuanne, mille vaatab läbi [ROLL]. Seda poliitikat vaadatakse läbi igal aastal."
+    },
+    "note": "Paketiga {plan} loob Artemis agentide registri ja kvartaalse järelevalvearuande."
+  }
+}

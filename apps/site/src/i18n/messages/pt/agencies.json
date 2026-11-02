@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Para agências",
+    "description": "Agências de automação: os agentes dos seus clientes gastam sob controlo, com um orçamento e uma fatura por cliente.",
+    "eyebrow": "Agências de automação",
+    "headline": "Os agentes dos seus clientes gastam. Refatura sem complicações.",
+    "lead": "Cria agentes n8n, Make ou Claude para os seus clientes? O Artemis separa as despesas por cliente, aplica um orçamento a cada um e prepara a refaturação com a sua margem.",
+    "try": "Experimente gratuitamente →",
+    "plan": "Plano {plan}: {base} + {client} por cliente ativo",
+    "spaces": {
+      "title": "Um espaço por cliente",
+      "body": "Associe cada agente a um cliente. Os respetivos pedidos, cartões, transações e comprovativos ficam separados. Um agente nunca pode gastar o orçamento de outro cliente."
+    },
+    "budget": {
+      "title": "Um orçamento mensal por cliente",
+      "body": "Defina um teto mensal para cada cliente, além das regras de cada agente. Acima dele, o pedido é recusado antes mesmo de chegar a uma pessoa."
+    },
+    "rebilling": {
+      "title": "Refaturação num clique",
+      "body": "Todos os meses, o Artemis prepara um relatório por cliente: compras debitadas, agente, comerciante, comprovativo, taxa de gestão segundo a sua margem e total a refaturar. Exportação CSV pronta a enviar ou a importar para a sua ferramenta de faturação."
+    },
+    "proof": {
+      "title": "Provas para os seus clientes",
+      "body": "Cada pagamento é assinado por uma pessoa autorizada e o registo não pode ser alterado. Mostre aos seus clientes que os agentes deles estão sob supervisão humana, como exige o AI Act."
+    },
+    "european": {
+      "title": "Europeu de ponta a ponta",
+      "body": "Euros, bancos europeus, dados em Frankfurt, exportações FEC e Pennylane para a contabilidade francesa."
+    },
+    "demo": {
+      "window": "refaturação · martin-bakery · novembro",
+      "subtotal": "Subtotal",
+      "fee": "Taxa de gestão 15 %",
+      "total": "Total a refaturar"
+    }
+  }
+}

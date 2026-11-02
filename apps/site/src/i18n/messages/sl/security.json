@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Varnost in skladnost",
+    "description": "Kako Artemis varuje vaša sredstva, kartice in podatke.",
+    "eyebrow": "Varnost",
+    "headline": "Zasnovano tako, da noben agent ne more ukrepati sam.",
+    "lead": "Najslabši primer, agenta, ki ga zmanipulira prompt injection, zajezi že sama kartica.",
+    "funds": {
+      "title": "Vaša sredstva nikoli ne zapustijo vaše banke",
+      "body": "Artemis je programska oprema. Kartice izda vaš ponudnik (Qonto, Revolut Business, Stripe) na vašem računu. Ne hranimo, ne prejemamo in ne prenašamo nobenih sredstev."
+    },
+    "defense": {
+      "title": "Večplastna zaščita",
+      "i1": "Kartica za enkratno uporabo, omejena na točen odobreni znesek.",
+      "i2": "Kratka veljavnost (privzeto 30 minut).",
+      "i3": "Pravila za vsakega agenta: proračun, omejitev, trgovci, kategorije.",
+      "i4": "Samodejno usklajevanje z opozorilom ob vsakem neskladju v znesku ali trgovcu.",
+      "i5": "Gumb »Zamrzni vse«: agenti ustavljeni in aktivne kartice preklicane z enim klikom.",
+      "i6": "Agenti lahko samo zahtevajo: nobeno orodje MCP ne more spremeniti pravila ali odobriti plačila."
+    },
+    "cardNumbers": {
+      "title": "Številke kartic",
+      "body": "Privzeto celotna številka kartice in varnostna koda nikoli ne gresta prek Artemis: agent prejme kratkotrajno povezavo za enkratno uporabo (10 minut), kartico pa prikaže banka izdajateljica (Stripe Issuing Elements). Neposredna predaja je na voljo kot napredna možnost, privzeto izklopljena; tudi takrat se nič ne shrani."
+    },
+    "mandates": {
+      "title": "Podpisana pooblastila",
+      "body": "Vsaka odobritev je podpis WebAuthn (ključ za dostop) nad zgoščeno vrednostjo SHA-256 pooblastila: agent, znesek, valuta, trgovec, namen, potek veljavnosti. Revizijski dnevnik je veriženo zgoščen in omogoča samo dodajanje: vsak poseg je mogoče zaznati."
+    },
+    "aiAct": {
+      "title": "AI Act in človeški nadzor",
+      "body": "Evropski akt o umetni inteligenci (AI Act) od uvajalcev zahteva, da beležijo in nadzorujejo svoje sisteme. Dnevnik Artemis, ki ga lahko izvozite, beleži, kdo je odobril vsako plačilo agenta, kdaj in po katerih pravilih."
+    },
+    "data": {
+      "title": "Osebni podatki",
+      "body": "Podatkovna zbirka gostuje v Evropski uniji (Supabase, Frankfurt). Bančni dostopni podatki so šifrirani (AES-256-GCM). Glejte <a href=\"{href}\">politiko zasebnosti</a>."
+    },
+    "report": {
+      "title": "Prijava ranljivosti",
+      "body": "Pišite na naslov, naveden v <a href=\"{href}\">pravnem obvestilu</a>. Odgovorimo v 72 urah."
+    }
+  }
+}

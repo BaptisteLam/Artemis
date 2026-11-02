@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Agentuuridele",
+    "description": "Automatiseerimisagentuurid: teie klientide agendid kulutavad kontrolli all, igal kliendil on oma eelarve ja oma arve.",
+    "eyebrow": "Automatiseerimisagentuurid",
+    "headline": "Teie klientide agendid kulutavad. Teie esitate edasiarved vaevata.",
+    "lead": "Kas ehitate oma klientidele n8n-, Make- või Claude'i agente? Artemis eraldab kulud kliendi kaupa, seab igale kliendile eelarve ja valmistab ette edasiarveldamise koos teie juurdehindlusega.",
+    "try": "Proovige tasuta →",
+    "plan": "Pakett {plan}: {base} + {client} iga aktiivse kliendi kohta",
+    "spaces": {
+      "title": "Iga kliendi jaoks oma tööruum",
+      "body": "Määrake iga agent kliendile. Tema taotlused, kaardid, tehingud ja kviitungid hoitakse eraldi. Agent ei saa kunagi kasutada teise kliendi eelarvet."
+    },
+    "budget": {
+      "title": "Kliendipõhine kuueelarve",
+      "body": "Seadke igale kliendile kuu ülemmäär lisaks iga agendi reeglitele. Selle ületamisel lükatakse taotlus tagasi juba enne, kui see inimeseni jõuab."
+    },
+    "rebilling": {
+      "title": "Edasiarveldamine ühe klõpsuga",
+      "body": "Artemis koostab igal kuul iga kliendi kohta aruande: tasutud ostud, agent, kaupmees, kviitung, teie juurdehindlusel põhinev haldustasu ja edasiarveldatav kogusumma. CSV-eksport on valmis saatmiseks või arveldustarkvarasse importimiseks."
+    },
+    "proof": {
+      "title": "Tõendid teie klientidele",
+      "body": "Iga makse allkirjastab volitatud isik ja logi ei saa muuta. Näidake oma klientidele, et nende agendid on inimese järelevalve all, nagu AI Act nõuab."
+    },
+    "european": {
+      "title": "Euroopalik algusest lõpuni",
+      "body": "Eurod, Euroopa pangad, andmed Frankfurdis ning FEC- ja Pennylane'i eksport Prantsuse raamatupidamise jaoks."
+    },
+    "demo": {
+      "window": "edasiarveldamine · martin-bakery · november",
+      "subtotal": "Vahesumma",
+      "fee": "Haldustasu 15%",
+      "total": "Edasiarveldatav kokku"
+    }
+  }
+}

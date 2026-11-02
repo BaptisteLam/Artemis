@@ -1,0 +1,96 @@
+{
+  "audit": {
+    "title": "Dziennik audytu",
+    "lead": "Każde zdarzenie jest powiązane łańcuchem skrótów SHA-256 i nie można go zmienić ani usunąć: to Twój dowód nadzoru człowieka (AI Act).",
+    "verify": "Sprawdź integralność",
+    "export": "Eksportuj",
+    "report": "Raport AI Act {quarter}",
+    "exportFailed": "Eksport nie powiódł się.",
+    "reportUnavailable": "Raport niedostępny.",
+    "chainOk_one": "Łańcuch nienaruszony: zweryfikowano {count} wpis.",
+    "chainOk_few": "Łańcuch nienaruszony: zweryfikowano {count} wpisy.",
+    "chainOk_many": "Łańcuch nienaruszony: zweryfikowano {count} wpisów.",
+    "chainOk_other": "Łańcuch nienaruszony: zweryfikowano {count} wpisu.",
+    "chainBroken": "Łańcuch przerwany przy wpisie nr {id}.",
+    "exportUpsell": "Podpisany eksport dziennika audytu jest dostępny w planie Business.",
+    "seePlans": "Zobacz plany",
+    "cols": {
+      "date": "Data",
+      "event": "Zdarzenie",
+      "actor": "Wykonawca",
+      "hash": "Skrót"
+    },
+    "view": "zobacz",
+    "older": "Starsze →",
+    "actors": {
+      "user": "Użytkownik",
+      "agent": "Agent",
+      "system": "System"
+    },
+    "actions": {
+      "org": {
+        "created": "Utworzono organizację",
+        "frozen": "Zamrożono organizację",
+        "unfrozen": "Odmrożono organizację",
+        "card_delivery_changed": "Zmieniono sposób przekazywania kart",
+        "slack_connected": "Podłączono Slack",
+        "slack_disconnected": "Odłączono Slack"
+      },
+      "agent": {
+        "created": "Utworzono agenta",
+        "updated": "Zaktualizowano agenta",
+        "deleted": "Usunięto agenta",
+        "token_rotated": "Wygenerowano nowy token",
+        "frozen": "Zamrożono agenta"
+      },
+      "policy": {
+        "updated": "Zaktualizowano reguły"
+      },
+      "request": {
+        "created": "Utworzono wniosek",
+        "rejected": "Odrzucono wniosek",
+        "approved": "Podpisano upoważnienie",
+        "auto_approved": "Automatyczne zatwierdzenie",
+        "approval_recorded": "Zarejestrowano zatwierdzenie",
+        "expired": "Wniosek wygasł"
+      },
+      "card": {
+        "issued": "Wydano kartę",
+        "issue_failed": "Wydanie karty nie powiodło się",
+        "revealed": "Karta przekazana agentowi",
+        "link_created": "Utworzono link do karty",
+        "viewed": "Wyświetlono kartę",
+        "canceled": "Anulowano kartę",
+        "expired": "Karta wygasła"
+      },
+      "transaction": {
+        "matched": "Transakcja uzgodniona",
+        "mismatch": "Wykryto rozbieżność"
+      },
+      "receipt": {
+        "attached": "Dołączono dowód zakupu"
+      },
+      "bank": {
+        "connected": "Podłączono bank",
+        "disconnected": "Odłączono bank"
+      },
+      "member": {
+        "invited": "Zaproszono członka",
+        "joined": "Członek dołączył",
+        "removed": "Usunięto członka",
+        "role_changed": "Zmieniono rolę"
+      },
+      "client": {
+        "created": "Utworzono klienta",
+        "updated": "Zaktualizowano klienta"
+      },
+      "billing": {
+        "subscribed": "Rozpoczęto subskrypcję",
+        "updated": "Zaktualizowano subskrypcję"
+      },
+      "subscription": {
+        "charged": "Obciążono subskrypcję"
+      }
+    }
+  }
+}

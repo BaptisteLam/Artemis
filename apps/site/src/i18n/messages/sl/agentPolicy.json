@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Predloga: pravilnik o porabi agentov UI",
+    "intro": "Brezplačna predloga za prilagoditev, ki ureja porabo agentov umetne inteligence in dokumentira človeški nadzor, ki ga zahteva 14. člen evropskega akta o umetni inteligenci (AI Act). Natisnite to stran ali jo kopirajte v svoj wiki.",
+    "scope": {
+      "title": "1. Namen in področje uporabe",
+      "body": "Ta pravilnik velja za vsakega programskega agenta (pogovorni pomočnik, avtomatizacija, skripta), ki je pooblaščen za nakup v imenu družbe [DRUŽBA]. Noben agent ne uporablja plačilne kartice družbe ali zaposlenega: vsak nakup poteka prek virtualne kartice za enkratno uporabo, zahtevane prek Artemis."
+    },
+    "register": {
+      "title": "2. Register agentov",
+      "body": "Vsak agent je vpisan v register z naslednjimi podatki: ime, platforma, odgovorna oseba, namen, mesečni proračun, omejitev na nakup, dovoljeni trgovci in po potrebi stranka, za katero dela."
+    },
+    "rules": {
+      "title": "3. Pravila porabe",
+      "i1": "Mesečni proračun na agenta: [ZNESEK] €; omejitev na nakup: [ZNESEK] €.",
+      "i2": "Dovoljeni trgovci: [SEZNAM]; prepovedane kategorije: igre na srečo, nakazila denarja, kvazi gotovina, vrednostni papirji.",
+      "i3": "Samodejna odobritev samo pod [ZNESEK] € in pri dovoljenem trgovcu; nad tem zneskom je obvezen podpis človeka.",
+      "i4": "Nad [ZNESEK] € sta potrebna dva različna podpisnika."
+    },
+    "oversight": {
+      "title": "4. Človeški nadzor",
+      "body": "Osebe, pooblaščene za odobritev: [IMENA / FUNKCIJE]. Odobritev se izda s ključem za dostop (passkey) za točno vsebino pooblastila (agent, znesek, trgovec, namen). Vsaka neodobrena zahteva samodejno poteče."
+    },
+    "records": {
+      "title": "5. Računi in računovodstvo",
+      "body": "Vsakemu nakupu se v [N] urah pripiše račun; sicer se agent začasno ustavi. Poraba se mesečno izvozi (FEC ali Pennylane) in uskladi z bančnimi izpiski."
+    },
+    "incidents": {
+      "title": "6. Incidenti",
+      "body": "V primeru nenavadnega vedenja, neskladja v znesku ali trgovcu ali suma prompt injection odgovorna oseba takoj zamrzne agenta (ali celotno organizacijo) in incident zabeleži."
+    },
+    "retention": {
+      "title": "7. Hramba in pregled",
+      "body": "Verižni revizijski dnevnik se hrani [10] let. Vsako četrtletje se pripravi poročilo o nadzoru, ki ga pregleda [FUNKCIJA]. Ta pravilnik se pregleda vsako leto."
+    },
+    "note": "V paketu {plan} Artemis ustvari register agentov in četrtletno poročilo o nadzoru."
+  }
+}

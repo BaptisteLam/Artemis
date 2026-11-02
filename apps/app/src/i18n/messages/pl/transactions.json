@@ -1,0 +1,17 @@
+{
+  "transactions": {
+    "title": "Transakcje",
+    "lead": "Operacje zgłoszone przez Twoje banki i uzgodnione z upoważnieniami (ostatnie 90 dni).",
+    "mismatches_one": "{count} transakcja nie zgadza się ze swoim upoważnieniem. Sprawdź ją i w razie potrzeby zamroź agenta.",
+    "mismatches_few": "{count} transakcje nie zgadzają się ze swoimi upoważnieniami. Sprawdź je i w razie potrzeby zamroź agenta.",
+    "mismatches_many": "{count} transakcji nie zgadza się ze swoimi upoważnieniami. Sprawdź je i w razie potrzeby zamroź agenta.",
+    "mismatches_other": "{count} transakcji nie zgadza się ze swoimi upoważnieniami. Sprawdź je i w razie potrzeby zamroź agenta.",
+    "emptyTitle": "Brak transakcji",
+    "emptyText": "Pojawiają się kilka minut po każdej płatności.",
+    "colDate": "Data",
+    "colMerchant": "Sprzedawca",
+    "colAmount": "Kwota",
+    "colBankStatus": "Status w banku",
+    "colMatch": "Uzgodnienie"
+  }
+}

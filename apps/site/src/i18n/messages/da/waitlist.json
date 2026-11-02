@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Venteliste",
+    "description": "Få besked, når forbindelserne til rigtige banker åbner.",
+    "headline": "Vær blandt de første.",
+    "lead": "Forbindelserne til Qonto og Revolut åbner gradvist. Giv os din e-mail, så giver vi dig besked, så snart din bank er tilgængelig.",
+    "email": "Arbejdsmail",
+    "company": "Virksomhed",
+    "useCase": "Hvad skal dine agenter betale for?",
+    "useCasePlaceholder": "API'er, SaaS, cloud, data …",
+    "submit": "Skriv dig på ventelisten",
+    "sending": "Sender …",
+    "ok": "Tak, du står på listen. Vi sender dig en e-mail, så snart det åbner.",
+    "error": "Tilmeldingen mislykkedes. Prøv igen om lidt."
+  }
+}

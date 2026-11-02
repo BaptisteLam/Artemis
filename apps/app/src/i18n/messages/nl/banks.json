@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Banken",
+    "lead": "De kaarten worden aangemaakt bij uw eigen bank. Artemis beheert nooit uw geld.",
+    "bankAria": "Bank",
+    "help": {
+      "stripe": "Stripe-account met Issuing geactiveerd (EU). Maak een beperkte sleutel aan met schrijfrechten voor Issuing. Vul een bestaande kaarthouder (ich_…) of uw bedrijfsadres in, zodat Artemis er een kan aanmaken.",
+      "qonto": "Inzage, blokkeren en afstemming: Qonto geeft de kaart niet door aan derden en verbiedt het uitlenen ervan. OAuth-token uit het partnerprogramma van Qonto; de goedkeurder kan een Qonto-kaart veilig bekijken en de betaling zelf afronden.",
+      "revolut": "Abonnement Grow of hoger, toegang tot de “Cards API” geactiveerd door support, en schriftelijke toestemming van Revolut (Valid Permission) vóór elk gebruik in productie. Vereist rechtstreekse overhandiging (Instellingen)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Beperkte geheime sleutel",
+      "publishableKey": "Publiceerbare sleutel",
+      "stripeCardholder": "Stripe-kaarthouder",
+      "companyName": "Bedrijfsnaam",
+      "address": "Adres",
+      "postalCode": "Postcode",
+      "city": "Plaats",
+      "country": "Land",
+      "webhookSecret": "Webhook-secret",
+      "accessToken": "Toegangstoken",
+      "refreshToken": "Vernieuwingstoken",
+      "oauthClientId": "OAuth-client-ID",
+      "oauthClientSecret": "OAuth-clientsecret",
+      "holderMemberId": "Leden-ID van de kaarthouder",
+      "bankAccountId": "Bankrekening-ID",
+      "environment": "Omgeving",
+      "stagingToken": "Stagingtoken",
+      "clientAssertion": "Client assertion (JWT)",
+      "holderId": "Kaarthouder-ID"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… of sk_test_…",
+      "stripePublishableKey": "pk_live_… (tijdelijke kaartlink)",
+      "stripeCardholder": "ich_… (optioneel)",
+      "ifNoCardholder": "Als er geen kaarthouder is",
+      "country": "ISO-code, bijv. NL",
+      "webhookSecret": "whsec_… (zodra de webhook is aangemaakt, zie hieronder)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Optioneel",
+      "toRefreshToken": "Om het token te vernieuwen",
+      "qontoMembershipId": "Qonto-membership-ID",
+      "qontoBankAccountId": "Qonto-bank_account-ID",
+      "sandboxOnly": "Alleen Sandbox",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Optioneel, voor vernieuwing",
+      "teamMemberOptional": "Teamlid (optioneel)"
+    },
+    "encrypted": "De inloggegevens worden getest en daarna versleuteld (AES-256-GCM). Ze worden nooit meer getoond.",
+    "testing": "Verbinding wordt getest…",
+    "connectProvider": "{name} koppelen",
+    "testOk": "Verbinding OK",
+    "testFailed": "Mislukt: {detail}",
+    "confirmDisconnect": "Deze bank ontkoppelen? Agents die haar gebruiken, kunnen dan geen kaart meer krijgen.",
+    "lastSync": "Laatste synchronisatie: {date}",
+    "stripeWebhook": "Stripe-webhook (gebeurtenissen issuing_transaction.*):",
+    "test": "Testen",
+    "disconnect": "Ontkoppelen",
+    "connectRealBank": "Een echte bank koppelen",
+    "upgrade": "Het koppelen van een echte bank is inbegrepen vanaf het abonnement Builder ({price}/maand).",
+    "choosePlan": "Kies een abonnement →"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtruj według statusu",
+      "all": "Wszystkie",
+      "pending": "Do zatwierdzenia",
+      "issued": "Karta wydana",
+      "completed": "Opłacone",
+      "rejected": "Odrzucone",
+      "failed": "Nieudane"
+    },
+    "list": {
+      "title": "Wnioski",
+      "lead": "Każdy wniosek agenta wraz z decyzją i kartą.",
+      "emptyTitle": "Brak wniosków",
+      "emptyBody": "Tutaj pojawią się wnioski Twoich agentów."
+    },
+    "decision": {
+      "notAllowed": "Decyzję mogą podjąć wyłącznie właściciele, administratorzy i osoby zatwierdzające.",
+      "cancelledOnDevice": "Zatwierdzenie anulowane na urządzeniu.",
+      "reasonLabel": "Powód odrzucenia",
+      "reasonHint": "Widoczny dla agenta.",
+      "confirmReject": "Potwierdź odrzucenie",
+      "cancel": "Anuluj",
+      "signing": "Podpisywanie…",
+      "approve": "Zatwierdź moim kluczem dostępu",
+      "reject": "Odrzuć"
+    },
+    "detail": {
+      "confirmCancel": "Anulować ten wniosek i jego kartę?",
+      "receiptUnavailable": "Dowód zakupu niedostępny.",
+      "eyebrow": "Wniosek · {id}",
+      "amount": "Wnioskowana kwota",
+      "agent": "Agent",
+      "mandateWindow": "upoważnienie · {id}",
+      "purpose": "Cel",
+      "category": "Kategoria",
+      "expires": "Wygasa",
+      "rules": "Reguły",
+      "perTxLimit": "Limit",
+      "budget": "budżet",
+      "decision": "Decyzja",
+      "hash": "sha256 {hash}",
+      "quorum": "Kworum: {signed} z {required} wymaganych podpisów powyżej progu.",
+      "unusualAmount": "Zabezpieczenie: nietypowa kwota dla tego agenta, wymagane zatwierdzenie przez człowieka.",
+      "autoApproved": "Zatwierdzony automatycznie przez reguły",
+      "signedByPasskey": "Upoważnienie podpisane kluczem dostępu",
+      "card": "Karta",
+      "cardHolderFallback": "agent",
+      "cardAria": "Karta wirtualna o numerze kończącym się na {last4}, posiadacz {holder}, ważna do {exp}",
+      "bankSca": "Zatwierdź również utworzenie karty w aplikacji swojego banku.",
+      "cardExpires": "Ważna do {date}",
+      "handedOver": "przekazana agentowi {time}",
+      "notHandedOver": "jeszcze nie przekazana agentowi",
+      "qontoNotice": "Qonto nie przekazuje kart agentom: wyświetl kartę tutaj i samodzielnie dokończ płatność.",
+      "showQontoCard": "Pokaż kartę (Qonto)",
+      "simulatePayment": "Symuluj płatność",
+      "cancelCard": "Anuluj kartę",
+      "noCard": "Nie wydano karty.",
+      "transactions": "Transakcje",
+      "noTransactions": "Bank nie zgłosił żadnych transakcji.",
+      "receipts": "Dowody zakupu",
+      "addReceipt": "Dodaj",
+      "noReceipts": "Brak dowodów zakupu.",
+      "back": "← Wszystkie wnioski"
+    }
+  }
+}

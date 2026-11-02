@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Jūsų agentai moka. Paskutinis žodis lieka jums.",
+    "description": "Europinė finansinė užkarda jūsų DI agentams: kontrolė, sutaupytas laikas ir AI Act įrodymai už kiekvieną pirkimą jūsų pasirinktame banke."
+  },
+  "layout": {
+    "skip": "Pereiti prie turinio"
+  },
+  "nav": {
+    "aria": "Pagrindinė navigacija",
+    "home": "Artemis, pradžia",
+    "howItWorks": "Kaip tai veikia",
+    "agencies": "Agentūroms",
+    "pricing": "Kainos",
+    "docs": "Dokumentacija",
+    "security": "Saugumas",
+    "login": "Prisijungti",
+    "cta": "Išbandyti"
+  },
+  "lang": {
+    "choose": "Pasirinkite kalbą"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agentūroms",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT ir n8n yra atitinkamų savininkų prekių ženklai. Artemis nėra susijusi su nė vienu iš jų.",
+    "product": "Produktas",
+    "policyTemplate": "Politikos šablonas",
+    "waitlist": "Laukiančiųjų sąrašas",
+    "restApi": "REST API",
+    "legal": "Teisinė informacija",
+    "legalNotice": "Teisinis pranešimas",
+    "terms": "Pardavimo sąlygos",
+    "privacy": "Privatumas"
+  },
+  "legal": {
+    "eyebrow": "Teisinė informacija",
+    "updated": "Paskutinį kartą atnaujinta: 2026 m. lapkričio 1 d.",
+    "frenchPrevails": "Šis puslapis yra informacinis vertimas. Teisinę galią turi tik <a href=\"{href}\">versija prancūzų kalba</a>.",
+    "vat": "PVM netaikomas pagal Prancūzijos bendrojo mokesčių kodekso (CGI) 293 B straipsnį",
+    "status": "Individualus verslininkas (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, JAV (puslapiai ir API); Supabase, Inc. — duomenys saugomi Europos Sąjungoje (Frankfurte)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentacija",
+    "start": "Pradžia",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI ir Claude įgūdis",
+    "api": "REST API",
+    "rules": "Taisyklės ir tvirtinimas"
+  },
+  "notFound": {
+    "title": "Puslapis nerastas",
+    "eyebrow": "Klaida 404",
+    "headline": "Tokio puslapio nėra.",
+    "lead": "Nuoroda gali būti pasenusi. Grįžkite į pradžios puslapį arba peržiūrėkite dokumentaciją.",
+    "home": "Pradžia"
+  }
+}

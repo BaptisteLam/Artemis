@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Soluția europeană · Agenți IA",
+      "lead": "Firewallul financiar european pentru agenții dumneavoastră IA. Claude, ChatGPT sau n8n solicită, dumneavoastră semnați cu o singură atingere, iar fiecare cheltuială este controlată, reconciliată și dovedită, la banca aleasă de dumneavoastră.",
+      "tryFree": "Încercați gratuit →",
+      "seeDemo": "Vedeți demonstrația",
+      "visualAria": "Exemplu: solicitarea unui agent și cardul său de unică folosință",
+      "expired": "Expirat",
+      "pending": "Solicitare în așteptare",
+      "toApprove": "În așteptarea aprobării",
+      "purpose": "abonament pentru echipă",
+      "approve": "Aprobă cu passkey-ul meu",
+      "decline": "Refuză"
+    },
+    "trust": {
+      "aria": "Garanții",
+      "europe": "European",
+      "europeText": "Euro, bănci europene, date la Frankfurt, GDPR.",
+      "funds": "Fondurile rămân la dumneavoastră",
+      "fundsText": "Artemis nu deține niciodată bani.",
+      "number": "Numărul cardului nu trece prin Artemis",
+      "numberText": "Cardul este afișat de banca dumneavoastră, nu de noi.",
+      "aiAct": "Pregătit pentru AI Act",
+      "aiActText": "Fiecare cheltuială semnată, un jurnal înlănțuit, un raport trimestrial."
+    },
+    "demo": {
+      "eyebrow": "Demonstrație",
+      "title": "De la solicitare la plată în 20 de secunde.",
+      "explain": "Fără a partaja vreodată cardul companiei.",
+      "step1": "Agentul solicită",
+      "window": "claude · conversație",
+      "userMessage": "Abonează echipa la Notion Plus, 5 utilizatori.",
+      "agentMessage": "Am solicitat un card de {amount}. Aștept aprobarea ta.",
+      "step2": "Dumneavoastră aprobați",
+      "notification": "{agent} vrea să cheltuiască {amount}",
+      "sheetTitle": "Aprobarea mandatului",
+      "validity": "{minutes} min",
+      "faceId": "Semnați cu Face ID",
+      "step3": "Agentul plătește",
+      "reconciled": "Reconciliat"
+    },
+    "benefits": {
+      "eyebrow": "Ce cumpărați",
+      "title": "Nu un card.",
+      "explain": "Băncile încep să le ofere gratuit. Dumneavoastră cumpărați control, timp și dovezi.",
+      "control": {
+        "eyebrow": "Control",
+        "title": "Nimic nu se cheltuiește fără aprobarea dumneavoastră.",
+        "text": "Bugete, limite, comercianți permiși, bariere de protecție împotriva prompt injection. Peste pragurile dumneavoastră, fiecare cheltuială așteaptă semnătura prin passkey a unuia sau mai multor aprobatori."
+      },
+      "time": {
+        "eyebrow": "Timp economisit",
+        "title": "Gata cu cardurile create manual.",
+        "text": "Agentul solicită, dumneavoastră semnați cu o singură atingere, cardul este creat în banca dumneavoastră, tranzacția este reconciliată, iar factura arhivată. Fără extrase de bifat și fără documente justificative de căutat."
+      },
+      "proof": {
+        "eyebrow": "Dovezi",
+        "title": "O persoană a aprobat fiecare cheltuială.",
+        "text": "Mandate semnate, un jurnal de audit înlănțuit și inalterabil și un raport trimestrial de supraveghere: ceea ce cer AI Act, directorul financiar și auditorul dumneavoastră, gata de predat."
+      },
+      "agencies": {
+        "eyebrow": "Pentru agenții",
+        "title": "Un buget și o factură per client.",
+        "text": "Spații de lucru pentru clienți, un buget lunar per client, un adaos de refacturare și un raport lunar gata de trimis. Clienții dumneavoastră văd în sfârșit cât cheltuiesc agenții lor."
+      }
+    },
+    "how": {
+      "eyebrow": "Cum funcționează",
+      "title": "Patru pași, niciun card partajat.",
+      "s1": "Agentul solicită",
+      "s1Text": "Prin MCP sau API: „{amount} la Notion, abonament pentru echipă”.",
+      "s2": "Regulile filtrează",
+      "s2Text": "Buget, limită, comerciant: în afara regulilor, solicitarea este refuzată pe loc.",
+      "s3": "Dumneavoastră aprobați",
+      "s3Text": "O notificare pe telefon, o semnătură prin passkey.",
+      "s4": "Agentul plătește",
+      "s4Text": "Un card de unică folosință, suma exactă, o expirare scurtă, apoi reconcilierea automată."
+    },
+    "useCases": {
+      "eyebrow": "Cazuri de utilizare",
+      "title": "Ce cumpără deja agenții dumneavoastră.",
+      "explain": "Acum, cu un card propriu.",
+      "api": {
+        "title": "API-uri și tokenuri",
+        "text": "Reîncărcarea creditelor când se epuizează cota, fără a lăsa cardul companiei într-un fișier .env."
+      },
+      "saas": {
+        "title": "Abonamente SaaS",
+        "text": "Abonarea sau extinderea unui plan pentru echipă, pentru suma exactă aprobată."
+      },
+      "cloud": {
+        "title": "Cloud și domenii",
+        "text": "Cumpărarea unui nume de domeniu sau plata unei depășiri de găzduire în mijlocul unei implementări."
+      },
+      "data": {
+        "title": "Date și achiziții B2B",
+        "text": "Plata unui set de date, a unui job de scraping sau a unor consumabile, cu documentul justificativ atașat automat.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Să fim sinceri",
+      "title": "Folosiți doar Stripe, Ramp sau Mercury?",
+      "explain": "Acestea fac deja o parte din treabă.",
+      "lead": "Artemis aduce ceea ce o bancă nu va face pentru concurenții săi.",
+      "banks": "Mai multe bănci deodată",
+      "banksText": "Stripe Issuing, Revolut, Qonto și Sandbox, gestionate dintr-un singur loc, sub o singură politică.",
+      "accounting": "Contabilitate franceză",
+      "accountingText": "Exporturi FEC și Pennylane, un document justificativ atașat fiecărui mandat, reconciliere automată.",
+      "proof": "Dovezi pentru AI Act, gata de predat",
+      "proofText": "Semnătura unei persoane pentru fiecare cheltuială, un jurnal înlănțuit, un registru al agenților, un raport trimestrial.",
+      "agency": "Un mod agenție",
+      "agencyText": "Agenți pentru mai mulți clienți, fiecare cu propriul buget, propria marjă și propriul raport."
+    },
+    "europe": {
+      "eyebrow": "Soluția europeană",
+      "title": "Construit în Europa, pentru Europa.",
+      "lead": "Cardurile americane pentru agenți vorbesc limba dolarilor, a băncilor americane și a dreptului american. Artemis vorbește limba euro, a băncilor europene, a GDPR, a AI Act și a contabilității franceze.",
+      "banks": "Euro și bănci europene: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "UE",
+      "data": "Date găzduite la Frankfurt, GDPR, date de acces criptate",
+      "article": "Art. 14",
+      "oversight": "Supravegherea umană din AI Act, dovedită cheltuială cu cheltuială",
+      "accounting": "Contabilitate franceză: FEC, Pennylane, documente justificative atașate"
+    },
+    "compare": {
+      "eyebrow": "Comparație",
+      "title": "Banca dumneavoastră emite cardul.",
+      "explain": "Artemis le guvernează pe toate, de deasupra.",
+      "criterion": "Criteriu",
+      "bankOnly": "Doar banca dumneavoastră (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Doar banca dumneavoastră",
+      "usCards": "Carduri americane pentru agenți",
+      "usCardsShort": "Carduri SUA pentru agenți",
+      "rows": {
+        "card": "Card virtual pentru agent",
+        "banks": "Mai multe bănci, o singură politică",
+        "signature": "Semnătura unei persoane pentru fiecare cheltuială (passkey)",
+        "aiAct": "Dovezi AI Act exportabile",
+        "accounting": "Contabilitate franceză (FEC, Pennylane)",
+        "agency": "Mod agenție (bugete și refacturare per client)",
+        "europe": "Euro, găzduire și date în Europa"
+      },
+      "values": {
+        "yes": "Da",
+        "no": "Nu",
+        "yesBank": "Da, emis de banca dumneavoastră",
+        "yesQuorum": "Da, cu cvorum",
+        "dependsPlan": "Depinde de plan",
+        "dependsBank": "Depinde de bancă",
+        "partial": "Parțial"
+      }
+    },
+    "builders": {
+      "eyebrow": "Pentru dezvoltatori",
+      "title": "Conectat cu o singură linie.",
+      "explain": "Claude, ChatGPT, n8n, Make sau propriul cod.",
+      "lead": "Un server MCP la distanță și un API REST. Un Sandbox gratuit, cu carduri simulate, pentru teste fără bancă.",
+      "connect": "Conectați Claude →",
+      "window": "terminal"
+    },
+    "faq": {
+      "eyebrow": "Întrebări frecvente",
+      "title": "Ce ni se întreabă.",
+      "more": "Aveți o altă întrebare? Citiți pagina <a href=\"{security}\">Securitate</a> sau <a href=\"{docs}\">documentația</a>."
+    },
+    "final": {
+      "title": "Păstrați controlul asupra agenților dumneavoastră.",
+      "lead": "Firewallul financiar european, gratuit în Sandbox, fără card de credit. Ultimul cuvânt vă aparține.",
+      "signup": "Creați un cont →",
+      "pricing": "Vedeți prețurile",
+      "holder": "agentul.dvs"
+    }
+  }
+}

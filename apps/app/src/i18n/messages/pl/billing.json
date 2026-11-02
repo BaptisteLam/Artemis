@@ -1,0 +1,61 @@
+{
+  "billing": {
+    "title": "Rozliczenia",
+    "lead": "Bieżący plan: {plan}. Wnioski w tym miesiącu: {usage}. VAT nie ma zastosowania, art. 293 B francuskiego kodeksu podatkowego (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Zarządzaj subskrypcją i fakturami",
+    "returnOk": "Dziękujemy! Twoja subskrypcja jest aktywowana (to potrwa kilka sekund).",
+    "returnCanceled": "Płatność anulowana, nic nie zostało zmienione.",
+    "inactive": "Twoja subskrypcja nie jest już aktywna ({status}). Płatne funkcje są zawieszone: zaktualizuj metodę płatności.",
+    "unknown": "nieznany",
+    "overage": "Po przekroczeniu limitu planu płatnego każde dodatkowe upoważnienie jest rozliczane w wysokości {price}.",
+    "overageCount_one": "W tym miesiącu: {count} upoważnienie.",
+    "overageCount_few": "W tym miesiącu: {count} upoważnienia.",
+    "overageCount_many": "W tym miesiącu: {count} upoważnień.",
+    "overageCount_other": "W tym miesiącu: {count} upoważnienia.",
+    "ownerOnly": "Tylko właściciel może zmienić subskrypcję.",
+    "current": "Bieżący",
+    "from": "od {price}",
+    "perMonth": "/ miesiąc",
+    "choose": "Wybierz {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agencje",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agent",
+        "i2": "Symulowany bank",
+        "i3": "20 symulowanych upoważnień / miesiąc"
+      },
+      "builder": {
+        "i1": "3 agentów",
+        "i2": "1 prawdziwy bank",
+        "i3": "50 upoważnień / miesiąc",
+        "i4": "Zatwierdzanie kluczem dostępu i powiadomienia"
+      },
+      "team": {
+        "i1": "10 agentów",
+        "i2": "2 prawdziwe banki",
+        "i3": "300 upoważnień / miesiąc",
+        "i4": "Slack, kworum osób zatwierdzających, eksport FEC",
+        "i5": "Subskrypcje zarządzane dla każdego agenta"
+      },
+      "agency": {
+        "i1": "25 agentów, nieograniczona liczba klientów",
+        "i2": "1000 upoważnień / miesiąc",
+        "i3": "Budżety, marża i refakturowanie dla każdego klienta",
+        "i4": "+ {price} za aktywnego klienta"
+      },
+      "business": {
+        "i1": "Bez limitów",
+        "i2": "Dokumentacja i raport AI Act",
+        "i3": "Eksport podpisanego dziennika audytu",
+        "i4": "Priorytetowe wsparcie"
+      }
+    }
+  }
+}

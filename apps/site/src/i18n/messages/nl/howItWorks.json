@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Hoe het werkt",
+    "description": "Hoe Artemis uw AI-agents laat betalen terwijl u de controle houdt.",
+    "headline": "De agent vraagt, u beslist, de bank betaalt.",
+    "lead": "Artemis zit tussen uw agents en uw bank. Het past uw regels toe, verzamelt uw goedkeuring en maakt een eenmalige kaart aan voor het exacte bedrag.",
+    "step1": {
+      "title": "1. U koppelt uw bank",
+      "body": "Stripe Issuing (aanbevolen) of Revolut Business: de virtuele kaarten worden aangemaakt op <strong>uw</strong> rekening en ten laste van <strong>uw</strong> tegoed. Qonto wordt gekoppeld voor inzage, blokkeren en afstemming. Artemis ontvangt, bewaart of verplaatst nooit geld. Om het uit te proberen, simuleert de Sandbox een bank."
+    },
+    "step2": {
+      "title": "2. U maakt een agent en zijn regels aan",
+      "body": "Elke agent krijgt een geheim token en een beleid: maandbudget, limiet per aankoop, valuta, toegestane of geblokkeerde verkopers, verkopercategorieën, drempel voor automatische goedkeuring en geldigheidsduur van de kaart."
+    },
+    "step3": {
+      "title": "3. De agent vraagt een kaart aan",
+      "body": "Via de MCP-tool <code>request_card</code> of de REST API. Een aanvraag die de regels overtreedt, wordt direct afgewezen, met een duidelijke reden. Alle andere wachten op uw goedkeuring, behalve kleine bedragen bij een vertrouwde verkoper als u dat hebt toegestaan."
+    },
+    "step4": {
+      "title": "4. U keurt goed met een toegangssleutel",
+      "body": "U krijgt een melding. Het mandaatscherm toont de agent, het bedrag, de verkoper en het doel. U ondertekent met uw toegangssleutel (Face ID, vingerafdruk, beveiligingssleutel). De handtekening dekt de exacte inhoud van het mandaat."
+    },
+    "step5": {
+      "title": "5. De agent betaalt, Artemis stemt af",
+      "body": "De kaart is eenmalig, begrensd op het bedrag en verloopt snel. De agent krijgt een tijdelijke link: de kaart wordt door uw bank getoond en het nummer gaat nooit via Artemis. Zodra de bank de transactie meldt, stemt Artemis die af, signaleert elke afwijking en archiveert de bon."
+    },
+    "demo": {
+      "mandate": "mandaat · {id}",
+      "intent": "Doel: teamabonnement, 5 licenties.",
+      "rules": "Regels: limiet {cap} · resterend budget {remaining}",
+      "signed": "Ondertekend met toegangssleutel · {minutes} min geleden",
+      "transactions": "transacties",
+      "matched": "Afgestemd",
+      "mismatch": "Afwijking"
+    }
+  }
+}

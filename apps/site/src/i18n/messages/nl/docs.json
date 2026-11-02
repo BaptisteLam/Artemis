@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Aan de slag met Artemis",
+      "lead": "Van registratie tot de eerste betaling van uw agent, in de Sandbox, in vijf minuten.",
+      "step1": {
+        "title": "1. Maak een account aan",
+        "body": "Registreer u in <a href=\"{href}\">de app</a> met uw e-mailadres (magic link), maak uw organisatie aan en registreer een toegangssleutel (passkey): daarmee keurt u uitgaven goed."
+      },
+      "step2": {
+        "title": "2. Maak een agent aan",
+        "body": "Maak in <strong>Agents</strong> bijvoorbeeld <code>notion.agent</code> aan. Artemis toont het token (<code>art_test_…</code> in de Sandbox, <code>art_live_…</code> met een echte bank) <strong>slechts één keer</strong>: kopieer het."
+      },
+      "step3": {
+        "title": "3. Koppel de agent",
+        "fastest": "De snelste manier: <code>npx artemis-agents init</code> (zie <a href=\"{cli}\">CLI</a>).",
+        "server": "De MCP-server staat op <code>{url}</code>, met de header <code>Authorization: Bearer &lt;token&gt;</code>. Volg de handleiding voor uw tool: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> of <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. De aankoopcyclus",
+        "tool": "Tool",
+        "role": "Doel",
+        "requestCard": "Vraagt een kaart aan: bedrag <strong>in centen</strong>, valuta, verkoper, doel.",
+        "getRequestStatus": "Volgt de menselijke goedkeuring.",
+        "getCardForCheckout": "Geeft een <strong>tijdelijke link</strong> terug (10 min, eenmalig): de kaart wordt door de bank getoond, zonder via Artemis te gaan.",
+        "listBudgets": "Maandbudget, uitgegeven, resterend, limiet.",
+        "getSpendSummary": "Uitgaven per verkoper (dag, week, maand).",
+        "attachReceipt": "Voegt een bon toe aan de aankoop.",
+        "cancelCard": "Annuleert de kaart als de aankoop niet meer doorgaat."
+      },
+      "step5": {
+        "title": "5. Live gaan",
+        "body": "Kies een abonnement in <strong>Facturatie</strong> en koppel daarna uw bank in <strong>Banken</strong>. Agents die aan die bank zijn gekoppeld, krijgen echte eenmalige kaarten."
+      }
+    },
+    "mcpClaude": {
+      "title": "Claude koppelen",
+      "lead": "Claude Code, Claude Desktop en de Claude-connectors spreken MCP via HTTP.",
+      "verify": "Controleer met <code>claude mcp list</code> en vraag dan bijvoorbeeld: “Neem met Artemis een Notion-abonnement voor {price}”.",
+      "desktopBody": "Open <em>Settings → Developer → Edit Config</em> en voeg toe:",
+      "instructionsTitle": "Nuttige instructies voor de agent",
+      "instructionsBody": "Voeg toe aan uw systeeminstructies:"
+    },
+    "mcpChatgpt": {
+      "title": "ChatGPT koppelen",
+      "lead": "ChatGPT accepteert externe MCP-servers als aangepaste connectors.",
+      "addTitle": "De connector toevoegen",
+      "step1": "Open <em>Instellingen → Connectors → Geavanceerd</em> en schakel de ontwikkelaarsmodus in als uw abonnement dat vereist.",
+      "step2": "Maak een connector aan, URL: <code>{url}</code>.",
+      "step3": "Authenticatie: header <code>Authorization</code> met de waarde <code>Bearer art_…</code> (afhankelijk van de opties van uw ChatGPT-werkruimte).",
+      "note": "De exacte labels verschillen per ChatGPT-abonnement; het adres en de header blijven hetzelfde.",
+      "openaiTitle": "OpenAI-agents (API)",
+      "openaiBody": "Declareer met de Responses API of de Agents SDK een externe MCP-tool die naar <code>{url}</code> verwijst, met dezelfde header."
+    },
+    "cli": {
+      "title": "CLI, Claude-skill en n8n",
+      "lead": "Van nul tot uw eerste mandaat in drie minuten.",
+      "commandTitle": "Eén opdracht",
+      "commandBody": "De opdracht vraagt om de API-URL en het agenttoken (aangemaakt in de app, pagina Agents), controleert de toegang, slaat de configuratie op in <code>~/.config/artemis/config.json</code>, voegt de MCP-server toe aan Claude Code als dat geïnstalleerd is en toont de configuratie voor Claude Desktop en n8n. Met een Sandbox-token en de optie <code>--demo</code> maakt de opdracht een eerste testmandaat aan dat u in de app goedkeurt.",
+      "skillTitle": "Claude-skill",
+      "skillBody": "De skill <code>artemis-payments</code> leert Claude betalen via Artemis: bedrag in centen, wachten op goedkeuring, de betaallink op het juiste moment openen, bon na de aankoop en het weigeren van injecties. Kopieer de map <code>integrations/claude-skill/artemis</code> uit de repository naar <code>~/.claude/skills/</code>.",
+      "n8nTitle": "n8n-node",
+      "n8nBody": "Installeer de community-node <code>n8n-nodes-artemis</code> (Settings → Community nodes). Bewerkingen: kaart aanvragen, status, betaallink, annuleren, budget. Inloggegevens: API-URL en agenttoken."
+    },
+    "n8n": {
+      "title": "n8n koppelen",
+      "lead": "Twee opties: de node MCP Client voor een n8n-AI-agent, of HTTP-verzoeken voor een klassieke workflow.",
+      "agentTitle": "n8n-AI-agent (MCP Client)",
+      "agentBody": "Voeg in een <em>AI Agent</em>-node de tool <em>MCP Client</em> toe: transport <em>HTTP Streamable</em>, URL <code>{url}</code>, authenticatie <em>Header Auth</em> met <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "HTTP-workflow",
+      "workflowBody": "Importeer de voorbeeldworkflow <code>examples/n8n/artemis-request-card.json</code> uit de repository. Die voert achtereenvolgens uit:",
+      "step1With": "met",
+      "step2": "een pollinglus op <code>GET /v1/card-requests/:id</code> tot de status <code>issued</code> is;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> om de tijdelijke link naar de kaart te krijgen (10 minuten, eenmalig)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Voor Make, uw scripts en uw eigen agents. Hetzelfde token als voor de MCP-server.",
+      "authTitle": "Authenticatie",
+      "base": "Basis-URL: <code>{url}</code>. Limiet: 60 verzoeken per minuut per agent.",
+      "endpointsTitle": "Endpoints",
+      "method": "Methode",
+      "path": "Pad",
+      "role": "Doel",
+      "create": "Een aanvraag aanmaken",
+      "status": "Status van een aanvraag",
+      "reveal": "Tijdelijke link naar de kaart (10 min, eenmalig)",
+      "cancel": "Annuleren",
+      "receipts": "Een bon toevoegen",
+      "budgets": "Resterend budget",
+      "spendSummary": "Uitgaven per verkoper",
+      "exampleTitle": "Voorbeeld",
+      "errorsTitle": "Fouten",
+      "errorsBody": "Veelvoorkomende codes: <code>invalid_amount</code> (het bedrag moet een geheel getal in centen zijn), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Regels en goedkeuring",
+      "lead": "Hoe Artemis bepaalt of een aanvraag wordt afgewezen, automatisch goedgekeurd of aan u ter ondertekening wordt voorgelegd.",
+      "orderTitle": "Volgorde van controle",
+      "orderBody": "De eerste regel waaraan niet wordt voldaan, wijst de aanvraag af:",
+      "o1": "Toegestane valuta (<code>currency_not_allowed</code>).",
+      "o2": "Positief bedrag onder de limiet per aankoop (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Maandbudget: openstaande, goedgekeurde en betaalde aanvragen van de maand + het bedrag (<code>over_monthly_budget</code>). De maand volgt de tijd in Parijs.",
+      "o4": "Geblokkeerde verkoper, of ontbrekend op de lijst van toegestane verkopers als die er is (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Verkopercategorie (MCC) geblokkeerd of niet toegestaan (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Automatische goedkeuring",
+      "autoBody": "Een aanvraag wordt zonder u goedgekeurd als het bedrag <strong>onder</strong> de drempel voor automatische goedkeuring ligt <strong>en</strong> de verkoper op de lijst van toegestane verkopers van de agent staat. Zonder zo’n lijst wordt elke aanvraag aan u voorgelegd.",
+      "matchTitle": "Verkopers herkennen",
+      "matchBody": "Namen worden vergeleken zonder rekening te houden met hoofdletters, accenten, rechtsvorm en domeinextensie: “Notion” dekt “Notion Labs, Inc.” en “notion.so”.",
+      "humanTitle": "Menselijke goedkeuring",
+      "humanBody": "Eigenaren, beheerders en goedkeurders krijgen een melding. Goedkeuring vereist een toegangssleutel. Als uw bank haar eigen sterke klantauthenticatie oplegt (bijvoorbeeld Qonto), keurt u ook in haar app goed.",
+      "expiryTitle": "Verloop",
+      "expiryBody": "Een onbehandelde aanvraag verloopt na 30 minuten (instelbaar). Een ongebruikte kaart wordt bij het verlopen geannuleerd."
+    }
+  }
+}

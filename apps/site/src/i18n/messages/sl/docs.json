@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Začnite z Artemis",
+      "lead": "Od registracije do prvega plačila vašega agenta, v načinu Sandbox, v petih minutah.",
+      "step1": {
+        "title": "1. Ustvarite račun",
+        "body": "Registrirajte se v <a href=\"{href}\">aplikaciji</a> z e-poštnim naslovom (čarobna povezava), ustvarite organizacijo in registrirajte ključ za dostop (passkey): z njim boste odobravali porabo."
+      },
+      "step2": {
+        "title": "2. Ustvarite agenta",
+        "body": "V razdelku <strong>Agenti</strong> ustvarite na primer <code>notion.agent</code>. Artemis prikaže njegov žeton (<code>art_test_…</code> v načinu Sandbox, <code>art_live_…</code> s pravo banko) <strong>samo enkrat</strong>: kopirajte ga."
+      },
+      "step3": {
+        "title": "3. Povežite agenta",
+        "fastest": "Najhitrejši način: <code>npx artemis-agents init</code> (glejte <a href=\"{cli}\">CLI</a>).",
+        "server": "Strežnik MCP je na naslovu <code>{url}</code> z glavo <code>Authorization: Bearer &lt;token&gt;</code>. Sledite navodilom za svoje orodje: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> ali <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. Potek nakupa",
+        "tool": "Orodje",
+        "role": "Namen",
+        "requestCard": "Zahteva kartico: znesek <strong>v centih</strong>, valuta, trgovec, namen.",
+        "getRequestStatus": "Spremlja odobritev s strani človeka.",
+        "getCardForCheckout": "Vrne <strong>začasno povezavo</strong> (10 min, za enkratno uporabo): kartico prikaže banka, ne da bi šla prek Artemis.",
+        "listBudgets": "Mesečni proračun, porabljeno, preostanek, omejitev.",
+        "getSpendSummary": "Poraba po trgovcih (dan, teden, mesec).",
+        "attachReceipt": "Nakupu priloži račun.",
+        "cancelCard": "Prekliče kartico, če nakupa ne bo."
+      },
+      "step5": {
+        "title": "5. Prehod v produkcijo",
+        "body": "V razdelku <strong>Obračun</strong> izberite paket, nato v razdelku <strong>Banke</strong> povežite svojo banko. Agenti, povezani s to banko, prejemajo prave kartice za enkratno uporabo."
+      }
+    },
+    "mcpClaude": {
+      "title": "Povezava s Claude",
+      "lead": "Claude Code, Claude Desktop in konektorji Claude komunicirajo prek MCP po HTTP.",
+      "verify": "Preverite z ukazom <code>claude mcp list</code>, nato na primer prosite: »Naroči nas na Notion za {price} prek Artemis«.",
+      "desktopBody": "Odprite <em>Settings → Developer → Edit Config</em> in dodajte:",
+      "instructionsTitle": "Uporabna navodila za agenta",
+      "instructionsBody": "Dodajte v sistemska navodila:"
+    },
+    "mcpChatgpt": {
+      "title": "Povezava s ChatGPT",
+      "lead": "ChatGPT sprejema oddaljene strežnike MCP kot konektorje po meri.",
+      "addTitle": "Dodajanje konektorja",
+      "step1": "Odprite <em>Settings → Connectors → Advanced</em> in vklopite način za razvijalce, če to zahteva vaš paket.",
+      "step2": "Ustvarite konektor, URL: <code>{url}</code>.",
+      "step3": "Preverjanje pristnosti: glava <code>Authorization</code> z vrednostjo <code>Bearer art_…</code> (odvisno od možnosti, ki jih ponuja vaš delovni prostor ChatGPT).",
+      "note": "Točne oznake se med paketi ChatGPT razlikujejo; naslov in glava ostaneta enaka.",
+      "openaiTitle": "Agenti OpenAI (API)",
+      "openaiBody": "Z Responses API ali Agents SDK deklarirajte oddaljeno orodje MCP, ki kaže na <code>{url}</code>, z isto glavo."
+    },
+    "cli": {
+      "title": "CLI, skill za Claude in n8n",
+      "lead": "Od nič do prvega pooblastila v treh minutah.",
+      "commandTitle": "En ukaz",
+      "commandBody": "Ukaz vpraša za URL API-ja in žeton agenta (ustvarjen v aplikaciji, stran Agenti), preveri dostop, shrani konfiguracijo v <code>~/.config/artemis/config.json</code>, doda strežnik MCP v Claude Code, če je nameščen, in izpiše konfiguracijo za Claude Desktop in n8n. Z žetonom Sandbox in možnostjo <code>--demo</code> ustvari prvo testno pooblastilo, ki ga odobrite v aplikaciji.",
+      "skillTitle": "Skill za Claude",
+      "skillBody": "Skill <code>artemis-payments</code> nauči Claude plačevati prek Artemis: znesek v centih, čakanje na odobritev, odpiranje plačilne povezave ob pravem trenutku, račun po nakupu in zavračanje injekcij. Mapo <code>integrations/claude-skill/artemis</code> iz repozitorija kopirajte v <code>~/.claude/skills/</code>.",
+      "n8nTitle": "Vozlišče n8n",
+      "n8nBody": "Namestite skupnostno vozlišče <code>n8n-nodes-artemis</code> (Settings → Community nodes). Operacije: zahteva za kartico, stanje, plačilna povezava, preklic, proračun. Poverilnice: URL API-ja in žeton agenta."
+    },
+    "n8n": {
+      "title": "Povezava z n8n",
+      "lead": "Dve možnosti: vozlišče MCP Client za agenta UI v n8n ali zahteve HTTP za klasičen potek dela.",
+      "agentTitle": "Agent UI v n8n (MCP Client)",
+      "agentBody": "V vozlišču <em>AI Agent</em> dodajte orodje <em>MCP Client</em>: transport <em>HTTP Streamable</em>, URL <code>{url}</code>, preverjanje pristnosti <em>Header Auth</em> z <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "Potek dela HTTP",
+      "workflowBody": "Iz repozitorija uvozite vzorčni potek dela <code>examples/n8n/artemis-request-card.json</code>. Zaporedoma izvede:",
+      "step1With": "z",
+      "step2": "zanko poizvedovanja na <code>GET /v1/card-requests/:id</code>, dokler stanje ni <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> za pridobitev začasne povezave do kartice (10 minut, za enkratno uporabo)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Za Make, vaše skripte in lastne agente. Isti žeton kot za strežnik MCP.",
+      "authTitle": "Preverjanje pristnosti",
+      "base": "Osnovni URL: <code>{url}</code>. Omejitev: 60 zahtev na minuto na agenta.",
+      "endpointsTitle": "Končne točke",
+      "method": "Metoda",
+      "path": "Pot",
+      "role": "Namen",
+      "create": "Ustvarjanje zahteve",
+      "status": "Stanje zahteve",
+      "reveal": "Začasna povezava do kartice (10 min, za enkratno uporabo)",
+      "cancel": "Preklic",
+      "receipts": "Prilaganje računa",
+      "budgets": "Preostali proračun",
+      "spendSummary": "Poraba po trgovcih",
+      "exampleTitle": "Primer",
+      "errorsTitle": "Napake",
+      "errorsBody": "Pogoste kode: <code>invalid_amount</code> (znesek mora biti celo število v centih), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Pravila in odobritev",
+      "lead": "Kako Artemis odloči, ali bo zahteva zavrnjena, samodejno odobrena ali predložena v vaš podpis.",
+      "orderTitle": "Vrstni red preverjanja",
+      "orderBody": "Prvo neizpolnjeno pravilo zavrne zahtevo:",
+      "o1": "Dovoljena valuta (<code>currency_not_allowed</code>).",
+      "o2": "Pozitiven znesek pod omejitvijo na nakup (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Mesečni proračun: čakajoče, odobrene in plačane zahteve v mesecu + znesek (<code>over_monthly_budget</code>). Mesec se ravna po pariškem času.",
+      "o4": "Blokiran trgovec ali trgovec, ki ga ni na seznamu dovoljenih, če ta obstaja (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Kategorija trgovca (MCC) blokirana ali ni dovoljena (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Samodejna odobritev",
+      "autoBody": "Zahteva je odobrena brez vas, če je njen znesek <strong>pod</strong> pragom samodejne odobritve <strong>in</strong> je trgovec na agentovem seznamu dovoljenih. Brez seznama dovoljenih vam je predložena vsaka zahteva.",
+      "matchTitle": "Ujemanje trgovcev",
+      "matchBody": "Imena se primerjajo ne glede na velike in male črke, naglasna znamenja, pravno obliko in domensko končnico: »Notion« zajema »Notion Labs, Inc.« in »notion.so«.",
+      "humanTitle": "Odobritev s strani človeka",
+      "humanBody": "Lastniki, skrbniki in odobritelji prejmejo obvestilo. Za odobritev je potreben ključ za dostop. Če vaša banka zahteva lastno močno avtentikacijo stranke (na primer Qonto), odobrite tudi v njeni aplikaciji.",
+      "expiryTitle": "Potek veljavnosti",
+      "expiryBody": "Neobdelana zahteva poteče po 30 minutah (nastavljivo). Neuporabljena kartica se ob poteku veljavnosti prekliče."
+    }
+  }
+}

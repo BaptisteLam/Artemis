@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Twoi agenci płacą. Ostatnie słowo należy do Ciebie.",
+    "unknownAgent": "Agent",
+    "unknownMerchant": "sprzedawca",
+    "requestPending": {
+      "title": "{agent} chce wydać {amount}",
+      "subject": "Do zatwierdzenia: {amount} u sprzedawcy {merchant}",
+      "merchant": "Sprzedawca: {merchant}",
+      "purpose": "Cel: {purpose}",
+      "expires": "Bez odpowiedzi wniosek wygaśnie automatycznie.",
+      "cta": "Sprawdź i zatwierdź →",
+      "slack": "*{title}* u sprzedawcy *{merchant}*",
+      "slackCta": "Sprawdź i podpisz moim kluczem dostępu"
+    },
+    "cardIssueFailed": {
+      "subject": "Nie udało się utworzyć karty dla sprzedawcy {merchant}",
+      "title": "Bank nie utworzył karty",
+      "fallback": "Błąd banku.",
+      "cta": "Zobacz wniosek →"
+    },
+    "mismatch": {
+      "subject": "Wykryto rozbieżność: {amount} u sprzedawcy {merchant}",
+      "title": "Transakcja nie zgadza się z upoważnieniem",
+      "check": "Sprawdź transakcję i w razie potrzeby zamroź agenta.",
+      "cta": "Zobacz transakcje →",
+      "pushTitle": "Rozbieżność transakcji"
+    },
+    "invitation": {
+      "subject": "Zaproszenie do organizacji {org} w Artemis",
+      "title": "Dołącz do {org}",
+      "body": "Zapraszamy Cię do zatwierdzania i śledzenia wydatków agentów AI Twojego zespołu.",
+      "cta": "Przyjmij zaproszenie →"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "admin": {
+    "eyebrow": "Backoffice",
+    "title": "Artemis in cijfers",
+    "mrr": "MRR",
+    "paying": "Betalende klanten",
+    "ofOrgs_one": "van {count} organisatie",
+    "ofOrgs_other": "van {count} organisaties",
+    "signups7d": "Registraties (7 dagen)",
+    "requests30d": "Aanvragen (30 dagen)",
+    "orgs": "Organisaties",
+    "cols": {
+      "name": "Naam",
+      "plan": "Abonnement",
+      "subscription": "Abonnementsstatus",
+      "created": "Aangemaakt"
+    },
+    "waitlist": "Wachtlijst ({total})"
+  }
+}

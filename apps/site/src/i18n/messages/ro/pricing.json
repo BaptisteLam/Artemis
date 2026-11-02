@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Prețuri",
+    "description": "Sandbox gratuit, apoi {a}, {b}, {c} sau {d} pe lună. Niciun comision la cheltuielile dumneavoastră.",
+    "headline": "Un abonament simplu. Niciun comision.",
+    "lead": "Plătiți doar software-ul. Cardurile sunt emise de banca dumneavoastră, conform tarifului bancar obișnuit.",
+    "popular": "Cel mai ales",
+    "from": "de la {price}",
+    "perMonth": "/ lună",
+    "start": "Începeți",
+    "choose": "Alegeți {plan}",
+    "mandates": "{count} mandate / lună",
+    "sandbox": {
+      "pitch": "Încercați cu o bancă simulată.",
+      "i1": "1 agent",
+      "i2": "Bancă simulată",
+      "i3": "{count} mandate simulate / lună",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Pentru un freelancer sau un dezvoltator și agenții săi.",
+      "i1": "3 agenți",
+      "i2": "1 bancă conectată",
+      "i4": "Aprobare prin passkey",
+      "i5": "Bariere de protecție anti-injection"
+    },
+    "team": {
+      "pitch": "Pentru un startup de 5–50 de persoane.",
+      "i1": "10 agenți",
+      "i2": "2 bănci",
+      "i4": "Slack și cvorum de aprobatori",
+      "i5": "Abonamente, export FEC"
+    },
+    "agency": {
+      "pitch": "Pentru agențiile de automatizare.",
+      "i1": "Clienți nelimitați, 25 de agenți",
+      "i3": "Buget și marjă per client",
+      "i4": "Raport lunar de refacturat",
+      "i5": "+ {price} per client activ"
+    },
+    "business": {
+      "pitch": "Pentru scale-up-urile reglementate.",
+      "i1": "Nelimitat",
+      "i2": "Dosar și raport AI Act",
+      "i3": "Export semnat al jurnalului de audit",
+      "i4": "Asistență prioritară"
+    },
+    "faq": {
+      "title": "Întrebări frecvente",
+      "q1": "Există costuri per card?",
+      "a1": "Nu din partea Artemis. Banca dumneavoastră aplică propriul tarif (cardurile virtuale sunt incluse în majoritatea planurilor Qonto și Revolut Business; Stripe Issuing percepe taxe conform propriei grile tarifare).",
+      "q2": "Ce se întâmplă dacă îmi depășesc cota?",
+      "a2": "Pe un plan cu plată, agenții dumneavoastră continuă să funcționeze: fiecare mandat peste cotă este facturat cu {price} la sfârșitul lunii. În Sandbox, solicitările sunt refuzate cu codul <code>quota_exceeded</code>.",
+      "q3": "Cum se facturează planul {plan}?",
+      "a3": "{base} pe lună, plus {client} per client activ, adică fiecare client pentru care s-a creat cel puțin un mandat în cursul lunii.",
+      "q4": "Pot renunța oricând?",
+      "a4": "Da, din secțiunea Facturare. Abonamentul rămâne activ până la sfârșitul perioadei plătite; datele dumneavoastră rămân exportabile.",
+      "q5": "TVA",
+      "a5": "Prețurile afișate sunt nete."
+    }
+  }
+}

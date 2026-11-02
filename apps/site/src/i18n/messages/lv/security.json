@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Drošība un atbilstība",
+    "description": "Kā Artemis aizsargā jūsu līdzekļus, kartes un datus.",
+    "eyebrow": "Drošība",
+    "headline": "Izveidots tā, lai neviens aģents nevarētu rīkoties patvaļīgi.",
+    "lead": "Sliktāko scenāriju — aģentu, kuru manipulē ar uzvednes injekciju — ierobežo pati karte.",
+    "funds": {
+      "title": "Jūsu līdzekļi nekad neatstāj jūsu banku",
+      "body": "Artemis ir programmatūra. Kartes izsniedz jūsu pašu pakalpojumu sniedzējs (Qonto, Revolut Business, Stripe) jūsu kontā. Mēs neglabājam, nesaņemam un nepārskaitām nekādus līdzekļus."
+    },
+    "defense": {
+      "title": "Daudzslāņu aizsardzība",
+      "i1": "Vienreizējas lietošanas karte, ierobežota līdz precīzai apstiprinātajai summai.",
+      "i2": "Īss derīguma termiņš (pēc noklusējuma 30 minūtes).",
+      "i3": "Noteikumi katram aģentam: budžets, limits, tirgotāji, kategorijas.",
+      "i4": "Automātiska saskaņošana ar brīdinājumu par jebkuru summas vai tirgotāja neatbilstību.",
+      "i5": "Poga “Iesaldēt visu”: aģenti apturēti un aktīvās kartes anulētas ar vienu klikšķi.",
+      "i6": "Aģenti var tikai lūgt: neviens MCP rīks nevar mainīt noteikumu vai apstiprināt maksājumu."
+    },
+    "cardNumbers": {
+      "title": "Karšu numuri",
+      "body": "Pēc noklusējuma pilns kartes numurs un drošības kods nekad nešķērso Artemis: aģents saņem īslaicīgu vienreizējas lietošanas saiti (10 minūtes), un karti parāda izdevējbanka (Stripe Issuing Elements). Tiešā nodošana ir pieejama kā papildu iespēja, pēc noklusējuma izslēgta; arī tad nekas netiek glabāts."
+    },
+    "mandates": {
+      "title": "Parakstītas pilnvaras",
+      "body": "Katrs apstiprinājums ir WebAuthn (piekļuves atslēgas) paraksts pilnvaras SHA-256 jaucējvērtībai: aģents, summa, valūta, tirgotājs, mērķis, derīguma termiņš. Audita žurnāls ir saistīts ķēdē ar jaucējvērtībām un paredzēts tikai papildināšanai: jebkuru viltojumu var atklāt."
+    },
+    "aiAct": {
+      "title": "AI Act un cilvēka uzraudzība",
+      "body": "ES Mākslīgā intelekta akts (AI Act) prasa, lai uzturētāji reģistrētu un uzraudzītu savas sistēmas. Artemis žurnāls, ko varat eksportēt, fiksē, kas, kad un saskaņā ar kādiem noteikumiem atļāva katru aģenta maksājumu."
+    },
+    "data": {
+      "title": "Personas dati",
+      "body": "Datubāze tiek mitināta Eiropas Savienībā (Supabase, Frankfurte). Bankas piekļuves dati ir šifrēti (AES-256-GCM). Skatiet <a href=\"{href}\">privātuma politiku</a>."
+    },
+    "report": {
+      "title": "Ziņot par ievainojamību",
+      "body": "Rakstiet uz adresi, kas norādīta <a href=\"{href}\">juridiskajā paziņojumā</a>. Mēs atbildam 72 stundu laikā."
+    }
+  }
+}

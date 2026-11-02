@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Kom i gang med Artemis",
+      "lead": "Fra oprettelse af konto til din agents første betaling, i Sandbox, på fem minutter.",
+      "step1": {
+        "title": "1. Opret en konto",
+        "body": "Opret en konto i <a href=\"{href}\">appen</a> med din e-mail (magisk link), opret din organisation, og registrér en adgangsnøgle: du bruger den til at godkende udgifter."
+      },
+      "step2": {
+        "title": "2. Opret en agent",
+        "body": "Under <strong>Agenter</strong> opretter du for eksempel <code>notion.agent</code>. Artemis viser dens token (<code>art_test_…</code> i Sandbox, <code>art_live_…</code> med en rigtig bank) <strong>kun én gang</strong>: kopiér den."
+      },
+      "step3": {
+        "title": "3. Tilslut agenten",
+        "fastest": "Hurtigst: <code>npx artemis-agents init</code> (se <a href=\"{cli}\">CLI</a>).",
+        "server": "MCP-serveren findes på <code>{url}</code>, med headeren <code>Authorization: Bearer &lt;token&gt;</code>. Følg vejledningen til dit værktøj: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> eller <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. Købsforløbet",
+        "tool": "Værktøj",
+        "role": "Funktion",
+        "requestCard": "Anmoder om et kort: beløb <strong>i cent</strong>, valuta, forretning, formål.",
+        "getRequestStatus": "Følger den menneskelige godkendelse.",
+        "getCardForCheckout": "Returnerer et <strong>midlertidigt link</strong> (10 min, engangsbrug): kortet vises af banken uden at gå gennem Artemis.",
+        "listBudgets": "Månedsbudget, forbrugt, resterende, grænse.",
+        "getSpendSummary": "Udgifter pr. forretning (dag, uge, måned).",
+        "attachReceipt": "Vedhæfter en kvittering til købet.",
+        "cancelCard": "Annullerer kortet, hvis købet ikke længere finder sted."
+      },
+      "step5": {
+        "title": "5. Gå live",
+        "body": "Vælg en plan under <strong>Fakturering</strong>, og tilslut derefter din bank under <strong>Banker</strong>. Agenter, der er knyttet til den bank, får rigtige engangskort."
+      }
+    },
+    "mcpClaude": {
+      "title": "Tilslut Claude",
+      "lead": "Claude Code, Claude Desktop og Claude-connectors taler MCP over HTTP.",
+      "verify": "Tjek med <code>claude mcp list</code>, og bed derefter for eksempel: »Tegn et Notion-abonnement til os for {price} med Artemis«.",
+      "desktopBody": "Åbn <em>Settings → Developer → Edit Config</em>, og tilføj:",
+      "instructionsTitle": "Nyttige instruktioner til agenten",
+      "instructionsBody": "Tilføj til dine systeminstruktioner:"
+    },
+    "mcpChatgpt": {
+      "title": "Tilslut ChatGPT",
+      "lead": "ChatGPT accepterer eksterne MCP-servere som brugerdefinerede connectors.",
+      "addTitle": "Tilføj connectoren",
+      "step1": "Åbn <em>Settings → Connectors → Advanced</em>, og aktivér udviklertilstand, hvis din plan kræver det.",
+      "step2": "Opret en connector, URL: <code>{url}</code>.",
+      "step3": "Godkendelse: headeren <code>Authorization</code> med værdien <code>Bearer art_…</code> (afhængigt af de muligheder, dit ChatGPT-arbejdsområde tilbyder).",
+      "note": "De nøjagtige betegnelser varierer mellem ChatGPT-planerne; adressen og headeren er de samme.",
+      "openaiTitle": "OpenAI-agenter (API)",
+      "openaiBody": "Med Responses API eller Agents SDK erklærer du et eksternt MCP-værktøj, der peger på <code>{url}</code>, med samme header."
+    },
+    "cli": {
+      "title": "CLI, Claude-skill og n8n",
+      "lead": "Fra nul til dit første mandat på tre minutter.",
+      "commandTitle": "Én kommando",
+      "commandBody": "Kommandoen spørger efter API-URL'en og agentens token (oprettet i appen, siden Agenter), kontrollerer adgangen, gemmer konfigurationen i <code>~/.config/artemis/config.json</code>, tilføjer MCP-serveren til Claude Code, hvis det er installeret, og udskriver konfigurationen til Claude Desktop og n8n. Med en Sandbox-token og indstillingen <code>--demo</code> opretter den et første testmandat, som du godkender i appen.",
+      "skillTitle": "Claude-skill",
+      "skillBody": "Skillen <code>artemis-payments</code> lærer Claude at betale via Artemis: beløb i cent, vente på godkendelse, åbne betalingslinket på det rette tidspunkt, kvittering efter købet og afvise injektioner. Kopiér mappen <code>integrations/claude-skill/artemis</code> fra repositoriet til <code>~/.claude/skills/</code>.",
+      "n8nTitle": "n8n-node",
+      "n8nBody": "Installér community-noden <code>n8n-nodes-artemis</code> (Settings → Community nodes). Handlinger: anmod om et kort, status, betalingslink, annullér, budget. Loginoplysninger: API-URL og agentens token."
+    },
+    "n8n": {
+      "title": "Tilslut n8n",
+      "lead": "To muligheder: noden MCP Client til en AI-agent i n8n eller HTTP-kald til et klassisk workflow.",
+      "agentTitle": "AI-agent i n8n (MCP Client)",
+      "agentBody": "I en <em>AI Agent</em>-node tilføjer du værktøjet <em>MCP Client</em>: transport <em>HTTP Streamable</em>, URL <code>{url}</code>, godkendelse <em>Header Auth</em> med <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "HTTP-workflow",
+      "workflowBody": "Importér eksempel-workflowet <code>examples/n8n/artemis-request-card.json</code> fra repositoriet. Det kæder:",
+      "step1With": "med",
+      "step2": "en polling-løkke på <code>GET /v1/card-requests/:id</code>, indtil status er <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> for at hente kortets midlertidige link (10 minutter, engangsbrug)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Til Make, dine scripts og dine egne agenter. Samme token som til MCP-serveren.",
+      "authTitle": "Godkendelse",
+      "base": "Basis-URL: <code>{url}</code>. Grænse: 60 kald pr. minut pr. agent.",
+      "endpointsTitle": "Endpoints",
+      "method": "Metode",
+      "path": "Sti",
+      "role": "Funktion",
+      "create": "Opret en anmodning",
+      "status": "Status for en anmodning",
+      "reveal": "Midlertidigt link til kortet (10 min, engangsbrug)",
+      "cancel": "Annullér",
+      "receipts": "Vedhæft en kvittering",
+      "budgets": "Resterende budget",
+      "spendSummary": "Udgifter pr. forretning",
+      "exampleTitle": "Eksempel",
+      "errorsTitle": "Fejl",
+      "errorsBody": "Almindelige koder: <code>invalid_amount</code> (beløbet skal være et heltal i cent), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Regler og godkendelse",
+      "lead": "Sådan afgør Artemis, om en anmodning afvises, godkendes automatisk eller sendes til din signatur.",
+      "orderTitle": "Evalueringsrækkefølge",
+      "orderBody": "Den første regel, der ikke er opfyldt, afviser anmodningen:",
+      "o1": "Tilladt valuta (<code>currency_not_allowed</code>).",
+      "o2": "Positivt beløb under grænsen pr. køb (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Månedsbudget: månedens ventende, godkendte og betalte anmodninger + beløbet (<code>over_monthly_budget</code>). Måneden følger Paris-tid.",
+      "o4": "Spærret forretning eller fraværende på listen over tilladte, hvis der er en (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Forretningskategori (MCC) spærret eller ikke tilladt (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Automatisk godkendelse",
+      "autoBody": "En anmodning godkendes uden dig, hvis beløbet er <strong>under</strong> tærsklen for automatisk godkendelse, <strong>og</strong> forretningen står på agentens liste over tilladte forretninger. Uden en sådan liste sendes hver anmodning til dig.",
+      "matchTitle": "Matchning af forretninger",
+      "matchBody": "Navnene sammenlignes uden hensyn til store og små bogstaver, accenter, selskabsform og domæneendelse: »Notion« dækker »Notion Labs, Inc.« og »notion.so«.",
+      "humanTitle": "Menneskelig godkendelse",
+      "humanBody": "Ejere, administratorer og godkendere modtager en notifikation. Godkendelsen kræver en adgangsnøgle. Hvis din bank anvender sin egen stærke kundegodkendelse (for eksempel Qonto), skal du også godkende i bankens app.",
+      "expiryTitle": "Udløb",
+      "expiryBody": "En ubehandlet anmodning udløber efter 30 minutter (kan konfigureres). Et ubrugt kort annulleres, når det udløber."
+    }
+  }
+}

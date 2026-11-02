@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Primii pași cu Artemis",
+      "lead": "De la înregistrare la prima plată a agentului dumneavoastră, în Sandbox, în cinci minute.",
+      "step1": {
+        "title": "1. Creați un cont",
+        "body": "Înregistrați-vă în <a href=\"{href}\">aplicație</a> cu adresa de email (magic link), creați-vă organizația și înregistrați un passkey: îl veți folosi pentru a aproba cheltuielile."
+      },
+      "step2": {
+        "title": "2. Creați un agent",
+        "body": "În <strong>Agenți</strong>, creați de exemplu <code>notion.agent</code>. Artemis afișează tokenul acestuia (<code>art_test_…</code> în Sandbox, <code>art_live_…</code> cu o bancă reală) <strong>o singură dată</strong>: copiați-l."
+      },
+      "step3": {
+        "title": "3. Conectați agentul",
+        "fastest": "Cea mai rapidă metodă: <code>npx artemis-agents init</code> (consultați <a href=\"{cli}\">CLI</a>).",
+        "server": "Serverul MCP se află la <code>{url}</code>, cu antetul <code>Authorization: Bearer &lt;token&gt;</code>. Urmați ghidul instrumentului dumneavoastră: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> sau <a href=\"{api}\">API REST</a>."
+      },
+      "step4": {
+        "title": "4. Ciclul de achiziție",
+        "tool": "Instrument",
+        "role": "Rol",
+        "requestCard": "Solicită un card: sumă <strong>în cenți</strong>, monedă, comerciant, scop.",
+        "getRequestStatus": "Urmărește aprobarea umană.",
+        "getCardForCheckout": "Returnează un <strong>link efemer</strong> (10 min, unică folosință): cardul este afișat de bancă, fără a trece prin Artemis.",
+        "listBudgets": "Buget lunar, cheltuit, rămas, limită.",
+        "getSpendSummary": "Cheltuieli pe comerciant (zi, săptămână, lună).",
+        "attachReceipt": "Atașează un document justificativ la achiziție.",
+        "cancelCard": "Anulează cardul dacă achiziția nu mai are loc."
+      },
+      "step5": {
+        "title": "5. Treceți în producție",
+        "body": "Alegeți un plan în <strong>Facturare</strong>, apoi conectați-vă banca în <strong>Bănci</strong>. Agenții asociați acelei bănci primesc carduri reale de unică folosință."
+      }
+    },
+    "mcpClaude": {
+      "title": "Conectarea Claude",
+      "lead": "Claude Code, Claude Desktop și conectorii Claude comunică prin MCP peste HTTP.",
+      "verify": "Verificați cu <code>claude mcp list</code>, apoi cereți, de exemplu: „Abonează-ne la Notion pentru {price} cu Artemis”.",
+      "desktopBody": "Deschideți <em>Settings → Developer → Edit Config</em> și adăugați:",
+      "instructionsTitle": "Instrucțiuni utile pentru agent",
+      "instructionsBody": "Adăugați în instrucțiunile de sistem:"
+    },
+    "mcpChatgpt": {
+      "title": "Conectarea ChatGPT",
+      "lead": "ChatGPT acceptă servere MCP la distanță drept conectori personalizați.",
+      "addTitle": "Adăugarea conectorului",
+      "step1": "Deschideți <em>Setări → Conectori → Avansat</em> și activați modul dezvoltator dacă planul dumneavoastră o cere.",
+      "step2": "Creați un conector, URL: <code>{url}</code>.",
+      "step3": "Autentificare: antetul <code>Authorization</code> cu valoarea <code>Bearer art_…</code> (în funcție de opțiunile oferite de spațiul de lucru ChatGPT).",
+      "note": "Denumirile exacte variază în funcție de planurile ChatGPT; adresa și antetul rămân aceleași.",
+      "openaiTitle": "Agenți OpenAI (API)",
+      "openaiBody": "Cu Responses API sau Agents SDK, declarați un instrument MCP la distanță care indică spre <code>{url}</code>, cu același antet."
+    },
+    "cli": {
+      "title": "CLI, skill Claude și n8n",
+      "lead": "De la zero la primul mandat în trei minute.",
+      "commandTitle": "O singură comandă",
+      "commandBody": "Comanda cere URL-ul API-ului și tokenul agentului (creat în aplicație, pagina Agenți), verifică accesul, salvează configurația în <code>~/.config/artemis/config.json</code>, adaugă serverul MCP în Claude Code dacă este instalat și afișează configurația pentru Claude Desktop și n8n. Cu un token Sandbox și opțiunea <code>--demo</code>, creează un prim mandat de test pe care îl aprobați în aplicație.",
+      "skillTitle": "Skill Claude",
+      "skillBody": "Skillul <code>artemis-payments</code> îl învață pe Claude să plătească prin Artemis: suma în cenți, așteptarea aprobării, deschiderea linkului de plată la momentul potrivit, documentul justificativ după achiziție și respingerea injecțiilor. Copiați folderul <code>integrations/claude-skill/artemis</code> din depozit în <code>~/.claude/skills/</code>.",
+      "n8nTitle": "Nod n8n",
+      "n8nBody": "Instalați nodul comunitar <code>n8n-nodes-artemis</code> (Settings → Community nodes). Operațiuni: solicitare card, stare, link de plată, anulare, buget. Date de autentificare: URL-ul API-ului și tokenul agentului."
+    },
+    "n8n": {
+      "title": "Conectarea n8n",
+      "lead": "Două opțiuni: nodul MCP Client pentru un agent IA n8n sau cereri HTTP pentru un workflow clasic.",
+      "agentTitle": "Agent IA n8n (MCP Client)",
+      "agentBody": "Într-un nod <em>AI Agent</em>, adăugați instrumentul <em>MCP Client</em>: transport <em>HTTP Streamable</em>, URL <code>{url}</code>, autentificare <em>Header Auth</em> cu <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "Workflow HTTP",
+      "workflowBody": "Importați workflow-ul de exemplu <code>examples/n8n/artemis-request-card.json</code> din depozit. Acesta înlănțuie:",
+      "step1With": "cu",
+      "step2": "o buclă de interogare pe <code>GET /v1/card-requests/:id</code> până când starea este <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> pentru a obține linkul efemer al cardului (10 minute, unică folosință)."
+    },
+    "api": {
+      "title": "API REST",
+      "lead": "Pentru Make, scripturile și agenții dumneavoastră. Același token ca pentru serverul MCP.",
+      "authTitle": "Autentificare",
+      "base": "URL de bază: <code>{url}</code>. Limită: 60 de cereri pe minut per agent.",
+      "endpointsTitle": "Endpointuri",
+      "method": "Metodă",
+      "path": "Cale",
+      "role": "Rol",
+      "create": "Crearea unei solicitări",
+      "status": "Starea unei solicitări",
+      "reveal": "Link efemer către card (10 min, unică folosință)",
+      "cancel": "Anulare",
+      "receipts": "Atașarea unui document justificativ",
+      "budgets": "Buget rămas",
+      "spendSummary": "Cheltuieli pe comerciant",
+      "exampleTitle": "Exemplu",
+      "errorsTitle": "Erori",
+      "errorsBody": "Coduri frecvente: <code>invalid_amount</code> (suma trebuie să fie un număr întreg în cenți), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Reguli și aprobare",
+      "lead": "Cum decide Artemis dacă o solicitare este respinsă, aprobată automat sau supusă semnăturii dumneavoastră.",
+      "orderTitle": "Ordinea de evaluare",
+      "orderBody": "Prima regulă nerespectată duce la respingerea solicitării:",
+      "o1": "Monedă permisă (<code>currency_not_allowed</code>).",
+      "o2": "Sumă pozitivă și sub limita per achiziție (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Buget lunar: solicitările lunii în așteptare, aprobate și plătite + suma (<code>over_monthly_budget</code>). Luna se calculează după ora Parisului.",
+      "o4": "Comerciant blocat sau absent din lista de comercianți permiși, dacă există una (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Categorie de comerciant (MCC) blocată sau nepermisă (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Aprobare automată",
+      "autoBody": "O solicitare este aprobată fără intervenția dumneavoastră dacă suma este <strong>sub</strong> pragul de aprobare automată <strong>și</strong> comerciantul figurează în lista de comercianți permiși a agentului. Fără o astfel de listă, fiecare solicitare vă este supusă.",
+      "matchTitle": "Potrivirea comercianților",
+      "matchBody": "Numele sunt comparate ignorând majusculele, diacriticele, forma juridică și extensia de domeniu: „Notion” acoperă „Notion Labs, Inc.” și „notion.so”.",
+      "humanTitle": "Aprobare umană",
+      "humanBody": "Proprietarii, administratorii și aprobatorii primesc o notificare. Aprobarea necesită un passkey. Dacă banca dumneavoastră impune propria autentificare strictă a clienților (Qonto, de exemplu), aprobați și în aplicația acesteia.",
+      "expiryTitle": "Expirare",
+      "expiryBody": "O solicitare neprocesată expiră după 30 de minute (configurabil). Un card neutilizat este anulat la expirare."
+    }
+  }
+}

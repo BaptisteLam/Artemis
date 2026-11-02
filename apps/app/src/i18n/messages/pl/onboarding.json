@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Krok {step} z {total}",
+    "continue": "Dalej →",
+    "org": {
+      "title": "Twoja organizacja",
+      "lead": "Zaczynasz w Sandbox: symulowany bank, bez opłat.",
+      "nameLabel": "Nazwa firmy lub studia"
+    },
+    "agent": {
+      "title": "Twój pierwszy agent",
+      "lead": "Krótka nazwa, która mówi, co agent kupuje. Reguły domyślne: {monthly} miesięcznie, {perPurchase} na zakup.",
+      "nameLabel": "Nazwa agenta",
+      "platformLabel": "Platforma",
+      "platformOther": "Inna",
+      "submit": "Utwórz agenta →"
+    },
+    "connect": {
+      "title": "Podłącz swojego agenta",
+      "done": "Token skopiowany →"
+    },
+    "passkey": {
+      "title": "Twój klucz dostępu do zatwierdzania",
+      "lead": "Każdy wydatek będzie podpisywany za pomocą Face ID, Touch ID, Windows Hello lub klucza bezpieczeństwa. Jeśli to możliwe, zarejestruj go na telefonie, który będzie otrzymywał powiadomienia.",
+      "deviceName": "Pierwsze urządzenie",
+      "saved": "Klucz dostępu zarejestrowany.",
+      "unsupported": "Ta przeglądarka nie obsługuje kluczy dostępu.",
+      "register": "Zarejestruj klucz dostępu",
+      "openDashboard": "Otwórz pulpit →",
+      "later": "Później"
+    }
+  }
+}

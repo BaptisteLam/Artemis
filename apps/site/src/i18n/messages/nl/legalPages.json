@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Algemene verkoop- en gebruiksvoorwaarden",
+      "purposeTitle": "1. Voorwerp",
+      "purpose": "Deze voorwaarden regelen de toegang tot de software Artemis, uitgegeven door {editor} ({status}, SIRET {siret}), en het abonnement daarop door zakelijke klanten. De dienst is uitsluitend voorbehouden aan professionals.",
+      "serviceTitle": "2. Beschrijving van de dienst",
+      "service": "Met Artemis kan een klant uitgavenregels vaststellen voor zijn software-agents, hun betalingsaanvragen goedkeuren en, via de programmeerinterfaces van zijn eigen bank, het aanmaken van virtuele eenmalige kaarten aansturen. Artemis verleent geen betaaldiensten, houdt geen gelden aan en geeft geen kaarten uit. De bankrelatie, de bankkosten en de sterke authenticatie vallen uitsluitend onder de overeenkomst tussen de klant en zijn bank.",
+      "accountTitle": "3. Account en beveiliging",
+      "account": "De klant is verantwoordelijk voor de vertrouwelijkheid van de agenttokens, van de toegang tot zijn account en van de toegangssleutels (passkeys) van zijn gebruikers, alsook voor de regels die hij instelt. Elke uitgave die door een bevoegde gebruiker is goedgekeurd of die voldoet aan een regel voor automatische goedkeuring, wordt geacht door de klant te zijn toegestaan.",
+      "pricesTitle": "4. Abonnementen en prijzen",
+      "prices": "Abonnementen: Sandbox (gratis), Builder ({builder} / maand), Team ({team} / maand), Bureaus ({agency} / maand + {perClient} per actieve klant), Business (vanaf {business} / maand). Boven het maandelijkse quotum van een betaald abonnement wordt elk extra mandaat gefactureerd tegen {overage}. Nettoprijzen. {vat}. Maandelijkse vooruitbetaling per kaart via Stripe. De verlenging is automatisch; opzegging gaat in aan het einde van de lopende periode, zonder terugbetaling naar rato.",
+      "quotasTitle": "5. Quota",
+      "quotas": "Elk abonnement omvat quota (agents, gekoppelde banken, maandelijkse aanvragen). Daarboven worden nieuwe aanvragen geweigerd tot de volgende periode of een wijziging van abonnement.",
+      "availabilityTitle": "6. Beschikbaarheid",
+      "availability": "De uitgever zet redelijke middelen in om de beschikbaarheid van de dienst te verzekeren, zonder resultaatsverbintenis. Onderbrekingen kunnen optreden wegens onderhoud of door toedoen van technische en bancaire dienstverleners.",
+      "liabilityTitle": "7. Aansprakelijkheid",
+      "liability": "De uitgever kan niet aansprakelijk worden gesteld voor aankopen die de agents van de klant doen binnen het kader van de verleende machtigingen, voor de keuze van de verkopers, voor de kwaliteit van de gekochte goederen of diensten, noch voor de beslissingen van de bank van de klant. De aansprakelijkheid van de uitgever is, ongeacht de oorzaak, beperkt tot de bedragen die de klant in de afgelopen twaalf maanden heeft betaald.",
+      "dataTitle": "8. Gegevens",
+      "data": "De verwerking van persoonsgegevens wordt beschreven in het <a href=\"{href}\">privacybeleid</a>. De klant kan zijn gegevens op elk moment exporteren.",
+      "lawTitle": "9. Toepasselijk recht",
+      "law": "Frans recht. Bij gebreke van een minnelijke schikking zijn de rechtbanken van het rechtsgebied van de woonplaats van de uitgever bevoegd."
+    },
+    "privacy": {
+      "title": "Privacybeleid",
+      "controllerTitle": "Verwerkingsverantwoordelijke",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Verwerkte gegevens",
+      "dataAccount": "Account: e-mailadres, organisatie, rol, toegangssleutels (alleen openbare sleutels).",
+      "dataActivity": "Activiteit: kaartaanvragen, ondertekende mandaten, door de bank gemelde transacties, bonnen, auditlogboek.",
+      "dataBanks": "Bankkoppelingen: versleutelde toegangstokens (AES-256-GCM).",
+      "dataBilling": "Facturatie: verzorgd door Stripe; Artemis ziet de kaartnummers niet waarmee u uw abonnement betaalt.",
+      "dataWaitlist": "Wachtlijst: e-mailadres, bedrijf, toepassing.",
+      "cardNumbers": "Artemis bewaart nooit het volledige nummer of de beveiligingscode van de kaarten die voor uw agents worden uitgegeven.",
+      "purposesTitle": "Doeleinden en rechtsgronden",
+      "purposes": "Uitvoering van de overeenkomst (levering van de dienst), wettelijke verplichtingen (boekhouding), gerechtvaardigd belang (beveiliging, fraudepreventie), toestemming (wachtlijst).",
+      "processorsTitle": "Verwerkers",
+      "processors": "Supabase (database, Europese Unie), Cloudflare (hosting en netwerk), Stripe (facturatie), Resend (transactionele e-mails). Eventuele doorgiften buiten de EU vallen onder standaardcontractbepalingen.",
+      "retentionTitle": "Bewaartermijnen",
+      "retention": "Accountgegevens: looptijd van de overeenkomst, daarna 3 jaar. Auditlogboek en boekhoudgegevens: 10 jaar. Wachtlijst: 3 jaar zonder interactie.",
+      "rightsTitle": "Uw rechten",
+      "rights": "Inzage, rectificatie, wissing, overdraagbaarheid, bezwaar en beperking: schrijf naar {email}. U kunt een klacht indienen bij de CNIL (cnil.fr).",
+      "cookiesTitle": "Cookies",
+      "cookies": "De site gebruikt geen advertentiecookies en geen analysetools van derden. De applicatie gebruikt uitsluitend de opslag die nodig is voor uw sessie."
+    },
+    "notice": {
+      "title": "Wettelijke vermeldingen",
+      "editorTitle": "Uitgever",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Adres: {address}",
+      "contact": "Contact: {email}",
+      "directorTitle": "Verantwoordelijke uitgever",
+      "hostingTitle": "Hosting",
+      "natureTitle": "Aard van de dienst",
+      "nature": "Artemis is software voor het beheersen van de uitgaven van agents met artificiële intelligentie. Artemis is noch een betalingsinstelling noch een instelling voor elektronisch geld: het ontvangt, houdt en verplaatst geen enkele geldsom. De betaalkaarten worden uitgegeven door de bankinstelling van de klant, onder haar verantwoordelijkheid.",
+      "ipTitle": "Intellectuele eigendom",
+      "ip": "De inhoud, merken en logo’s van deze site zijn eigendom van de uitgever. Elke reproductie zonder toestemming is verboden."
+    }
+  }
+}

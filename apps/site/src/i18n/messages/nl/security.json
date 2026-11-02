@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Beveiliging en compliance",
+    "description": "Hoe Artemis uw geld, uw kaarten en uw gegevens beschermt.",
+    "eyebrow": "Beveiliging",
+    "headline": "Zo gebouwd dat geen enkele agent op eigen houtje kan handelen.",
+    "lead": "Het ergste scenario, een agent die door een prompt injection is gemanipuleerd, wordt door de kaart zelf ingedamd.",
+    "funds": {
+      "title": "Uw geld verlaat nooit uw bank",
+      "body": "Artemis is software. De kaarten worden uitgegeven door uw eigen aanbieder (Qonto, Revolut Business, Stripe) op uw rekening. Wij beheren, ontvangen of verplaatsen geen enkele geldsom."
+    },
+    "defense": {
+      "title": "Gelaagde beveiliging",
+      "i1": "Eenmalige kaart, begrensd op het exact goedgekeurde bedrag.",
+      "i2": "Korte geldigheid (standaard 30 minuten).",
+      "i3": "Regels per agent: budget, limiet, verkopers, categorieën.",
+      "i4": "Automatische afstemming, met een waarschuwing bij elke afwijking in bedrag of verkoper.",
+      "i5": "Knop “Alles blokkeren”: agents geblokkeerd en actieve kaarten geannuleerd in één klik.",
+      "i6": "Agents kunnen alleen aanvragen: geen enkele MCP-tool kan een regel wijzigen of een betaling goedkeuren."
+    },
+    "cardNumbers": {
+      "title": "Kaartnummers",
+      "body": "Standaard gaan het volledige kaartnummer en de beveiligingscode nooit via Artemis: de agent krijgt een tijdelijke, eenmalige link (10 minuten) en de kaart wordt getoond door de uitgevende bank (Stripe Issuing Elements). Rechtstreekse overhandiging is beschikbaar als geavanceerde optie, standaard uitgeschakeld; ook dan wordt niets opgeslagen."
+    },
+    "mandates": {
+      "title": "Ondertekende mandaten",
+      "body": "Elke goedkeuring is een WebAuthn-handtekening (toegangssleutel) over de SHA-256-hash van het mandaat: agent, bedrag, valuta, verkoper, doel, verloop. Het auditlogboek is met hashes geketend en kan alleen worden aangevuld: elke manipulatie is detecteerbaar."
+    },
+    "aiAct": {
+      "title": "AI Act en menselijk toezicht",
+      "body": "De Europese AI Act verplicht gebruiksverantwoordelijken hun systemen te loggen en er toezicht op te houden. Het exporteerbare logboek van Artemis legt vast wie elke betaling van een agent heeft toegestaan, wanneer en volgens welke regels."
+    },
+    "data": {
+      "title": "Persoonsgegevens",
+      "body": "Database gehost in de Europese Unie (Supabase, Frankfurt). Bankgegevens versleuteld (AES-256-GCM). Zie het <a href=\"{href}\">privacybeleid</a>."
+    },
+    "report": {
+      "title": "Een kwetsbaarheid melden",
+      "body": "Schrijf naar het adres dat in de <a href=\"{href}\">wettelijke vermeldingen</a> staat. Wij antwoorden binnen 72 uur."
+    }
+  }
+}

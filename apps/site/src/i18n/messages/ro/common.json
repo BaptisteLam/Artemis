@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Agenții dumneavoastră plătesc. Ultimul cuvânt vă aparține.",
+    "description": "Firewallul financiar european pentru agenții dumneavoastră IA: control, timp economisit și dovezi pentru AI Act la fiecare achiziție, la banca aleasă de dumneavoastră."
+  },
+  "layout": {
+    "skip": "Salt la conținut"
+  },
+  "nav": {
+    "aria": "Navigare principală",
+    "home": "Artemis, pagina principală",
+    "howItWorks": "Cum funcționează",
+    "agencies": "Agenții",
+    "pricing": "Prețuri",
+    "docs": "Documentație",
+    "security": "Securitate",
+    "login": "Autentificare",
+    "cta": "Încercați"
+  },
+  "lang": {
+    "choose": "Alegeți o limbă"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agenții",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT și n8n sunt mărci ale proprietarilor lor respectivi. Artemis nu este afiliat niciunuia dintre aceștia.",
+    "product": "Produs",
+    "policyTemplate": "Model de politică",
+    "waitlist": "Listă de așteptare",
+    "restApi": "API REST",
+    "legal": "Informații juridice",
+    "legalNotice": "Mențiuni legale",
+    "terms": "Condiții de vânzare",
+    "privacy": "Confidențialitate"
+  },
+  "legal": {
+    "eyebrow": "Informații juridice",
+    "updated": "Ultima actualizare: 1 noiembrie 2026.",
+    "frenchPrevails": "Această pagină este o traducere furnizată cu titlu informativ. Numai <a href=\"{href}\">versiunea în limba franceză</a> are valoare juridică.",
+    "vat": "TVA neaplicabilă, art. 293 B din Codul general al impozitelor francez (CGI)",
+    "status": "Întreprinzător individual (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, SUA (pagini și API); Supabase, Inc. — date găzduite în Uniunea Europeană (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Documentație",
+    "start": "Primii pași",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI și skill Claude",
+    "api": "API REST",
+    "rules": "Reguli și aprobare"
+  },
+  "notFound": {
+    "title": "Pagină negăsită",
+    "eyebrow": "Eroare 404",
+    "headline": "Această pagină nu există.",
+    "lead": "Este posibil ca linkul să fie depășit. Reveniți la pagina principală sau consultați documentația.",
+    "home": "Pagina principală"
+  }
+}

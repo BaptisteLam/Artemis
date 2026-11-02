@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Segurança e conformidade",
+    "description": "Como o Artemis protege os seus fundos, os seus cartões e os seus dados.",
+    "eyebrow": "Segurança",
+    "headline": "Concebido para que nenhum agente possa agir sozinho.",
+    "lead": "O pior cenário, um agente manipulado por uma injeção de prompt, é contido pelo próprio cartão.",
+    "funds": {
+      "title": "Os seus fundos nunca saem do seu banco",
+      "body": "O Artemis é um software. Os cartões são emitidos pelo seu próprio fornecedor (Qonto, Revolut Business, Stripe) na sua conta. Não detemos, recebemos nem transferimos quaisquer fundos."
+    },
+    "defense": {
+      "title": "Defesa em profundidade",
+      "i1": "Cartão de utilização única, limitado ao montante exato aprovado.",
+      "i2": "Validade curta (30 minutos por predefinição).",
+      "i3": "Regras por agente: orçamento, limite, comerciantes, categorias.",
+      "i4": "Reconciliação automática, com alerta perante qualquer discrepância de montante ou de comerciante.",
+      "i5": "Botão «Congelar tudo»: agentes suspensos e cartões ativos cancelados num clique.",
+      "i6": "Os agentes só podem pedir: nenhuma ferramenta MCP pode alterar uma regra ou aprovar um pagamento."
+    },
+    "cardNumbers": {
+      "title": "Números de cartão",
+      "body": "Por predefinição, o número completo do cartão e o código de segurança nunca passam pelo Artemis: o agente recebe uma ligação de curta duração e de utilização única (10 minutos) e o cartão é apresentado pelo banco emissor (Stripe Issuing Elements). A entrega direta está disponível como opção avançada, desativada por predefinição; mesmo nesse caso, nada é armazenado."
+    },
+    "mandates": {
+      "title": "Mandatos assinados",
+      "body": "Cada aprovação é uma assinatura WebAuthn (chave de acesso) sobre o hash SHA-256 do mandato: agente, montante, moeda, comerciante, finalidade, validade. O registo de auditoria é encadeado por hash e só permite acrescentar entradas: qualquer adulteração é detetável."
+    },
+    "aiAct": {
+      "title": "AI Act e supervisão humana",
+      "body": "O AI Act da UE exige que os responsáveis pela implantação registem e supervisionem os seus sistemas. O registo do Artemis, que pode exportar, indica quem autorizou cada pagamento de um agente, quando e segundo que regras."
+    },
+    "data": {
+      "title": "Dados pessoais",
+      "body": "Base de dados alojada na União Europeia (Supabase, Frankfurt). Credenciais bancárias cifradas (AES-256-GCM). Consulte a <a href=\"{href}\">política de privacidade</a>."
+    },
+    "report": {
+      "title": "Comunicar uma vulnerabilidade",
+      "body": "Escreva para o endereço indicado no <a href=\"{href}\">aviso legal</a>. Respondemos no prazo de 72 horas."
+    }
+  }
+}

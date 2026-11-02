@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Cenik",
+    "description": "Brezplačen Sandbox, nato {a}, {b}, {c} ali {d} na mesec. Brez provizije od vaše porabe.",
+    "headline": "Ena preprosta naročnina. Brez provizije.",
+    "lead": "Plačate samo programsko opremo. Kartice izda vaša banka po vašem običajnem bančnem ceniku.",
+    "popular": "Najbolj priljubljen",
+    "from": "od {price}",
+    "perMonth": "/ mesec",
+    "start": "Začnite",
+    "choose": "Izberite {plan}",
+    "mandates": "Pooblastila na mesec: {count}",
+    "sandbox": {
+      "pitch": "Preizkusite s simulirano banko.",
+      "i1": "1 agent",
+      "i2": "Simulirana banka",
+      "i3": "Simulirana pooblastila na mesec: {count}",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Za samostojnega strokovnjaka ali razvijalca in njegove agente.",
+      "i1": "3 agenti",
+      "i2": "1 povezana banka",
+      "i4": "Odobritev s ključem za dostop",
+      "i5": "Zaščitni mehanizmi proti injekcijam"
+    },
+    "team": {
+      "pitch": "Za zagonsko podjetje s 5 do 50 ljudmi.",
+      "i1": "10 agentov",
+      "i2": "2 banki",
+      "i4": "Slack in sklepčnost odobriteljev",
+      "i5": "Naročnine, izvoz FEC"
+    },
+    "agency": {
+      "pitch": "Za agencije za avtomatizacijo.",
+      "i1": "Neomejeno število strank, 25 agentov",
+      "i3": "Proračun in marža za vsako stranko",
+      "i4": "Mesečno poročilo za prefakturiranje",
+      "i5": "+ {price} na aktivno stranko"
+    },
+    "business": {
+      "pitch": "Za regulirana hitro rastoča podjetja.",
+      "i1": "Neomejeno",
+      "i2": "Dokumentacija in poročilo za AI Act",
+      "i3": "Izvoz podpisanega revizijskega dnevnika",
+      "i4": "Prednostna podpora"
+    },
+    "faq": {
+      "title": "Pogosta vprašanja",
+      "q1": "Ali so provizije za posamezno kartico?",
+      "a1": "Ne s strani Artemis. Vaša banka uporablja svoj cenik (virtualne kartice so vključene v večino paketov Qonto in Revolut Business; Stripe Issuing zaračunava po svojem ceniku).",
+      "q2": "Kaj se zgodi, če presežem kvoto?",
+      "a2": "V plačljivem paketu vaši agenti delajo naprej: vsako pooblastilo nad kvoto se ob koncu meseca zaračuna {price}. V načinu Sandbox so zahteve zavrnjene s kodo <code>quota_exceeded</code>.",
+      "q3": "Kako se obračunava paket {plan}?",
+      "a3": "{base} na mesec in še {client} na aktivno stranko, torej za vsako stranko, za katero je bilo v mesecu ustvarjeno vsaj eno pooblastilo.",
+      "q4": "Ali lahko naročnino kadar koli odpovem?",
+      "a4": "Da, v razdelku Obračun. Naročnina traja do konca plačanega obdobja; vaše podatke je še vedno mogoče izvoziti.",
+      "q5": "DDV",
+      "a5": "Prikazane cene so neto."
+    }
+  }
+}

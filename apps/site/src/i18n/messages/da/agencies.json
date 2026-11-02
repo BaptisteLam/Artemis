@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Til bureauer",
+    "description": "Automationsbureauer: jeres kunders agenter bruger penge under kontrol, med et budget og en faktura pr. kunde.",
+    "eyebrow": "Automationsbureauer",
+    "headline": "Dine kunders agenter bruger penge. Du viderefakturerer uden besvær.",
+    "lead": "Bygger du agenter i n8n, Make eller Claude til dine kunder? Artemis holder udgifterne adskilt pr. kunde, anvender et budget for hver enkelt og forbereder viderefaktureringen med din avance.",
+    "try": "Prøv gratis →",
+    "plan": "Planen {plan}: {base} + {client} pr. aktiv kunde",
+    "spaces": {
+      "title": "Ét arbejdsområde pr. kunde",
+      "body": "Tilknyt hver agent til en kunde. Dens anmodninger, kort, transaktioner og kvitteringer holdes adskilt. En agent kan aldrig bruge en anden kundes budget."
+    },
+    "budget": {
+      "title": "Et månedsbudget pr. kunde",
+      "body": "Fastsæt et månedligt loft for hver kunde, ud over hver agents regler. Over loftet afvises anmodningen, før den overhovedet når et menneske."
+    },
+    "rebilling": {
+      "title": "Viderefakturering med ét klik",
+      "body": "Hver måned udarbejder Artemis en rapport pr. kunde: debiterede køb, agent, forretning, kvittering, administrationsgebyr baseret på din avance og total til viderefakturering. CSV-eksport, klar til at sende eller importere i dit faktureringsværktøj."
+    },
+    "proof": {
+      "title": "Dokumentation til dine kunder",
+      "body": "Hver betaling signeres af en autoriseret person, og loggen kan ikke ændres. Vis dine kunder, at deres agenter er under menneskeligt tilsyn, sådan som AI Act kræver."
+    },
+    "european": {
+      "title": "Europæisk hele vejen",
+      "body": "Euro, europæiske banker, data i Frankfurt, FEC- og Pennylane-eksport til fransk bogføring."
+    },
+    "demo": {
+      "window": "viderefakturering · martin-bakery · november",
+      "subtotal": "Subtotal",
+      "fee": "Administrationsgebyr 15 %",
+      "total": "Total til viderefakturering"
+    }
+  }
+}

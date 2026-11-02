@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Vaši agenti plačujejo. Zadnjo besedo imate vi.",
+    "description": "Evropski finančni požarni zid za vaše agente UI: nadzor, prihranjen čas in dokaz za AI Act pri vsakem nakupu, pri banki po vaši izbiri."
+  },
+  "layout": {
+    "skip": "Preskoči na vsebino"
+  },
+  "nav": {
+    "aria": "Glavna navigacija",
+    "home": "Artemis, domov",
+    "howItWorks": "Kako deluje",
+    "agencies": "Agencije",
+    "pricing": "Cenik",
+    "docs": "Dokumentacija",
+    "security": "Varnost",
+    "login": "Prijava",
+    "cta": "Preizkusite"
+  },
+  "lang": {
+    "choose": "Izberite jezik"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agencije",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT in n8n so blagovne znamke njihovih lastnikov. Artemis ni povezan z nobenim od njih.",
+    "product": "Izdelek",
+    "policyTemplate": "Predloga pravilnika",
+    "waitlist": "Čakalni seznam",
+    "restApi": "REST API",
+    "legal": "Pravno",
+    "legalNotice": "Pravno obvestilo",
+    "terms": "Prodajni pogoji",
+    "privacy": "Zasebnost"
+  },
+  "legal": {
+    "eyebrow": "Pravno",
+    "updated": "Zadnja posodobitev: 1. novembra 2026.",
+    "frenchPrevails": "Ta stran je prevod, ki je na voljo informativno. Pravno zavezujoča je samo <a href=\"{href}\">francoska različica</a>.",
+    "vat": "DDV se ne obračuna, člen 293 B francoskega splošnega davčnega zakonika (CGI)",
+    "status": "Samostojni podjetnik (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, ZDA (strani in API); Supabase, Inc. — podatki gostujejo v Evropski uniji (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentacija",
+    "start": "Začetek",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI in skill za Claude",
+    "api": "REST API",
+    "rules": "Pravila in odobritev"
+  },
+  "notFound": {
+    "title": "Strani ni mogoče najti",
+    "eyebrow": "Napaka 404",
+    "headline": "Ta stran ne obstaja.",
+    "lead": "Povezava je morda zastarela. Vrnite se na domačo stran ali prebrskajte dokumentacijo.",
+    "home": "Domov"
+  }
+}

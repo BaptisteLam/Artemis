@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Funcționează cu",
+      "more": "MCP · API REST · Make"
+    },
+    "payCard": {
+      "singleUse": "Unică folosință",
+      "aria": "Card virtual care se termină în {last4}, titular {holder}, expiră la {exp}",
+      "holder": "Titular",
+      "expires": "Expiră",
+      "debit": "Debit",
+      "virtual": "virtual",
+      "used": "Utilizat"
+    },
+    "faq": {
+      "q1": "Artemis îmi deține banii?",
+      "a1": "Nu. Cardurile sunt create în propria dumneavoastră bancă (Qonto, Revolut Business sau Stripe Issuing) și debitate din contul dumneavoastră. Artemis este un software: aplică regulile dumneavoastră, colectează aprobarea dumneavoastră și comandă banca prin API-ul acesteia. Nu primește, nu deține și nu transferă niciodată fonduri.",
+      "q2": "Ce se întâmplă dacă agentul meu este manipulat printr-un prompt injection?",
+      "a2": "Agentul poate doar să solicite. Fiecare card este de unică folosință, plafonat la suma exactă, blocat pe comerciantul prevăzut și expiră în 30 de minute. În afara regulilor dumneavoastră, solicitarea este refuzată; peste pragul dumneavoastră, nu se cheltuiește nimic fără passkey-ul dumneavoastră. Orice neconcordanță de sumă sau de comerciant declanșează o alertă, iar butonul „Înghețați tot” oprește totul dintr-un clic.",
+      "q3": "Numărul cardului trece prin Artemis?",
+      "a3": "Nu, nu în mod implicit. La plată, agentul primește un link de unică folosință valabil 10 minute: cardul este afișat direct de banca emitentă. Artemis nu vede, nu stochează și nu transmite niciodată numărul. Odată deschis, linkul nu mai funcționează.",
+      "q4": "De ce să nu folosesc pur și simplu banca mea?",
+      "a4": "Dacă folosiți doar Stripe, Ramp sau Mercury, acestea fac deja o parte din treabă. Artemis aduce ceea ce o bancă nu va face pentru concurenții săi: mai multe bănci sub o singură politică, contabilitate franceză (FEC, Pennylane), dovezi pentru AI Act gata de predat și un mod agenție.",
+      "q5": "Ce bănci sunt acceptate?",
+      "a5": "Stripe Issuing (recomandat) creează cardurile și le afișează agentului fără ca numărul să treacă vreodată prin Artemis. Revolut Business funcționează pe baza unui acord scris cu Revolut, cu predarea directă a cardului. Qonto se conectează pentru citire, înghețare și reconciliere. Sandbox simulează o bancă pentru a testa fără a conecta nimic.",
+      "q6": "Cât costă?",
+      "a6": "Sandbox este gratuit. Apoi {builder} (Builder), {team} (Team), {agency} + {client} per client activ ({agencyPlan}) sau de la {business} (Business) pe lună. Peste cota dumneavoastră, {overage} per mandat. Niciun comision la cheltuielile dumneavoastră: banca aplică tariful său obișnuit. {vat}.",
+      "q7": "Datele mele rămân în Europa?",
+      "a7": "Da. Baza de date este găzduită în Uniunea Europeană (Frankfurt), datele de acces bancare sunt criptate cu AES-256-GCM, iar jurnalul de audit înlănțuit documentează supravegherea umană cerută de AI Act."
+    }
+  }
+}

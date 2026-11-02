@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Kā tas darbojas",
+    "description": "Kā Artemis ļauj jūsu MI aģentiem maksāt, kamēr kontrole paliek jūsu rokās.",
+    "headline": "Aģents lūdz, jūs lemjat, banka maksā.",
+    "lead": "Artemis atrodas starp jūsu aģentiem un jūsu banku. Tā piemēro jūsu noteikumus, saņem jūsu apstiprinājumu un izveido vienreizējas lietošanas karti precīzai summai.",
+    "step1": {
+      "title": "1. Jūs pievienojat savu banku",
+      "body": "Stripe Issuing (ieteicams) vai Revolut Business: virtuālās kartes tiek veidotas <strong>jūsu</strong> kontā, un maksājumi tiek segti no <strong>jūsu</strong> līdzekļiem. Qonto tiek pievienots lasīšanas piekļuvei, iesaldēšanai un saskaņošanai. Artemis nekad nesaņem, neglabā un nepārskaita naudu. Izmēģināšanai Sandbox simulē banku."
+    },
+    "step2": {
+      "title": "2. Jūs izveidojat aģentu un tā noteikumus",
+      "body": "Katrs aģents saņem slepenu marķieri un politiku: mēneša budžetu, viena pirkuma limitu, valūtas, atļautos vai bloķētos tirgotājus, tirgotāju kategorijas, automātiskās apstiprināšanas slieksni un kartes derīguma laiku."
+    },
+    "step3": {
+      "title": "3. Aģents pieprasa karti",
+      "body": "Ar MCP rīku <code>request_card</code> vai REST API. Pieprasījums, kas pārkāpj noteikumus, tiek nekavējoties noraidīts ar skaidru iemeslu. Visi pārējie gaida jūsu apstiprinājumu, izņemot nelielas summas pie uzticama tirgotāja, ja esat to atļāvis."
+    },
+    "step4": {
+      "title": "4. Jūs apstiprināt ar piekļuves atslēgu",
+      "body": "Jūs saņemat paziņojumu. Pilnvaras ekrānā redzams aģents, summa, tirgotājs un mērķis. Jūs parakstāt ar savu piekļuves atslēgu (Face ID, pirksta nospiedums, drošības atslēga). Paraksts attiecas uz precīzu pilnvaras saturu."
+    },
+    "step5": {
+      "title": "5. Aģents maksā, Artemis saskaņo",
+      "body": "Karte ir vienreizējas lietošanas, ierobežota līdz summai, un tās derīgums ātri beidzas. Aģents saņem īslaicīgu saiti: karti parāda jūsu banka, un numurs nekad nešķērso Artemis. Tiklīdz banka paziņo par darījumu, Artemis to saskaņo, atzīmē jebkuru neatbilstību un saglabā čeku."
+    },
+    "demo": {
+      "mandate": "pilnvara · {id}",
+      "intent": "Mērķis: komandas abonements, 5 vietas.",
+      "rules": "Noteikumi: limits {cap} · atlikušais budžets {remaining}",
+      "signed": "Parakstīts ar piekļuves atslēgu · pirms {minutes} min",
+      "transactions": "darījumi",
+      "matched": "Saskaņots",
+      "mismatch": "Neatbilstība"
+    }
+  }
+}

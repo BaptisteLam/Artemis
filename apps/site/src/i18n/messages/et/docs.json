@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Artemisega alustamine",
+      "lead": "Registreerumisest teie agendi esimese makseni Sandboxis viie minutiga.",
+      "step1": {
+        "title": "1. Looge konto",
+        "body": "Registreeruge <a href=\"{href}\">rakenduses</a> oma e-posti aadressiga (võlulink), looge oma organisatsioon ja registreerige pääsuvõti: sellega kinnitate kulusid."
+      },
+      "step2": {
+        "title": "2. Looge agent",
+        "body": "Looge jaotises <strong>Agendid</strong> näiteks <code>notion.agent</code>. Artemis kuvab selle tokeni (<code>art_test_…</code> Sandboxis, <code>art_live_…</code> päris pangaga) <strong>ainult üks kord</strong>: kopeerige see."
+      },
+      "step3": {
+        "title": "3. Ühendage agent",
+        "fastest": "Kiireim viis: <code>npx artemis-agents init</code> (vt <a href=\"{cli}\">CLI</a>).",
+        "server": "MCP-server asub aadressil <code>{url}</code>, päisega <code>Authorization: Bearer &lt;token&gt;</code>. Järgige oma tööriista juhendit: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> või <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. Ostutsükkel",
+        "tool": "Tööriist",
+        "role": "Eesmärk",
+        "requestCard": "Taotleb kaarti: summa <strong>sentides</strong>, valuuta, kaupmees, eesmärk.",
+        "getRequestStatus": "Jälgib inimese kinnitust.",
+        "getCardForCheckout": "Tagastab <strong>lühiajalise lingi</strong> (10 min, ühekordne): kaarti kuvab pank, ilma et see Artemist läbiks.",
+        "listBudgets": "Kuueelarve, kulutatud, alles, limiit.",
+        "getSpendSummary": "Kulud kaupmeeste kaupa (päev, nädal, kuu).",
+        "attachReceipt": "Lisab ostule kviitungi.",
+        "cancelCard": "Tühistab kaardi, kui ostu ei toimu."
+      },
+      "step5": {
+        "title": "5. Minge reaalkeskkonda",
+        "body": "Valige pakett jaotises <strong>Arveldus</strong> ja ühendage seejärel oma pank jaotises <strong>Pangad</strong>. Selle pangaga seotud agendid saavad päris ühekordseid kaarte."
+      }
+    },
+    "mcpClaude": {
+      "title": "Ühendage Claude",
+      "lead": "Claude Code, Claude Desktop ja Claude'i konnektorid kasutavad MCP-d üle HTTP.",
+      "verify": "Kontrollige käsuga <code>claude mcp list</code> ja paluge seejärel näiteks: „Telli meile Artemise abil Notion hinnaga {price}“.",
+      "desktopBody": "Avage <em>Settings → Developer → Edit Config</em> ja lisage:",
+      "instructionsTitle": "Kasulikud juhised agendile",
+      "instructionsBody": "Lisage oma süsteemijuhistesse:"
+    },
+    "mcpChatgpt": {
+      "title": "Ühendage ChatGPT",
+      "lead": "ChatGPT aktsepteerib kaug-MCP-servereid kohandatud konnektoritena.",
+      "addTitle": "Lisage konnektor",
+      "step1": "Avage <em>Settings → Connectors → Advanced</em> ja lülitage sisse arendajarežiim, kui teie pakett seda nõuab.",
+      "step2": "Looge konnektor, URL: <code>{url}</code>.",
+      "step3": "Autentimine: päis <code>Authorization</code> väärtusega <code>Bearer art_…</code> (olenevalt teie ChatGPT tööruumi pakutavatest valikutest).",
+      "note": "Täpsed nimetused erinevad ChatGPT pakettide lõikes; aadress ja päis jäävad samaks.",
+      "openaiTitle": "OpenAI agendid (API)",
+      "openaiBody": "Responses API või Agents SDK puhul deklareerige kaug-MCP-tööriist, mis osutab aadressile <code>{url}</code>, sama päisega."
+    },
+    "cli": {
+      "title": "CLI, Claude'i oskus ja n8n",
+      "lead": "Nullist esimese volituseni kolme minutiga.",
+      "commandTitle": "Üks käsk",
+      "commandBody": "Käsk küsib API URL-i ja agendi tokenit (luuakse rakenduse lehel Agendid), kontrollib ligipääsu, salvestab seadistuse faili <code>~/.config/artemis/config.json</code>, lisab MCP-serveri Claude Code'i, kui see on paigaldatud, ning kuvab seadistuse Claude Desktopi ja n8n jaoks. Sandboxi tokeni ja valikuga <code>--demo</code> loob see esimese testvolituse, mille saate rakenduses kinnitada.",
+      "skillTitle": "Claude'i oskus",
+      "skillBody": "Oskus <code>artemis-payments</code> õpetab Claude'i maksma Artemise kaudu: summa sentides, kinnituse ootamine, maksulingi avamine õigel hetkel, kviitung pärast ostu ja süstete tõrjumine. Kopeerige repositooriumist kaust <code>integrations/claude-skill/artemis</code> kausta <code>~/.claude/skills/</code>.",
+      "n8nTitle": "n8n sõlm",
+      "n8nBody": "Paigaldage kogukonna sõlm <code>n8n-nodes-artemis</code> (Settings → Community nodes). Toimingud: kaardi taotlemine, olek, maksulink, tühistamine, eelarve. Mandaadid: API URL ja agendi token."
+    },
+    "n8n": {
+      "title": "Ühendage n8n",
+      "lead": "Kaks võimalust: MCP Client sõlm n8n tehisintellekti agendi jaoks või HTTP-päringud klassikalise töövoo jaoks.",
+      "agentTitle": "n8n tehisintellekti agent (MCP Client)",
+      "agentBody": "Lisage sõlmes <em>AI Agent</em> tööriist <em>MCP Client</em>: transport <em>HTTP Streamable</em>, URL <code>{url}</code>, autentimine <em>Header Auth</em> päisega <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "HTTP-töövoog",
+      "workflowBody": "Importige repositooriumist näidistöövoog <code>examples/n8n/artemis-request-card.json</code>. See aheldab:",
+      "step1With": "koos",
+      "step2": "pärimistsükli aadressile <code>GET /v1/card-requests/:id</code>, kuni olek on <code>issued</code>;",
+      "step3": "päringu <code>POST /v1/card-requests/:id/reveal</code>, et saada kaardi lühiajaline link (10 minutit, ühekordne)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Make'i, teie skriptide ja teie enda agentide jaoks. Sama token mis MCP-serveril.",
+      "authTitle": "Autentimine",
+      "base": "Baas-URL: <code>{url}</code>. Limiit: 60 päringut minutis agendi kohta.",
+      "endpointsTitle": "Lõpp-punktid",
+      "method": "Meetod",
+      "path": "Tee",
+      "role": "Eesmärk",
+      "create": "Taotluse loomine",
+      "status": "Taotluse olek",
+      "reveal": "Lühiajaline link kaardile (10 min, ühekordne)",
+      "cancel": "Tühistamine",
+      "receipts": "Kviitungi lisamine",
+      "budgets": "Järelejäänud eelarve",
+      "spendSummary": "Kulud kaupmeeste kaupa",
+      "exampleTitle": "Näide",
+      "errorsTitle": "Vead",
+      "errorsBody": "Levinud koodid: <code>invalid_amount</code> (summa peab olema täisarv sentides), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Reeglid ja kinnitamine",
+      "lead": "Kuidas Artemis otsustab, kas taotlus lükatakse tagasi, kinnitatakse automaatselt või esitatakse teile allkirjastamiseks.",
+      "orderTitle": "Hindamise järjekord",
+      "orderBody": "Esimene täitmata reegel lükkab taotluse tagasi:",
+      "o1": "Lubatud valuuta (<code>currency_not_allowed</code>).",
+      "o2": "Positiivne summa, mis jääb alla ostupõhise limiidi (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Kuueelarve: kuu ootel, kinnitatud ja makstud taotlused + summa (<code>over_monthly_budget</code>). Kuu arvestatakse Pariisi aja järgi.",
+      "o4": "Blokeeritud kaupmees või kaupmees, kes puudub lubatute loendist, kui see on olemas (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Kaupmehe kategooria (MCC) on blokeeritud või pole lubatud (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Automaatne kinnitamine",
+      "autoBody": "Taotlus kinnitatakse ilma teieta, kui selle summa on automaatse kinnitamise piirmäärast <strong>väiksem</strong> <strong>ja</strong> kaupmees on agendi lubatute loendis. Lubatute loendi puudumisel esitatakse teile iga taotlus.",
+      "matchTitle": "Kaupmeeste vastavus",
+      "matchBody": "Nimesid võrreldakse, arvestamata suur- ja väiketähti, diakriitilisi märke, õiguslikku vormi ja domeenilõppu: „Notion“ hõlmab nii „Notion Labs, Inc.“ kui ka „notion.so“.",
+      "humanTitle": "Inimese kinnitus",
+      "humanBody": "Omanikud, administraatorid ja kinnitajad saavad teavituse. Kinnitamiseks on vaja pääsuvõtit. Kui teie pank nõuab oma tugevat autentimist (näiteks Qonto), kinnitage ka selle rakenduses.",
+      "expiryTitle": "Aegumine",
+      "expiryBody": "Töötlemata taotlus aegub 30 minuti pärast (seadistatav). Kasutamata kaart tühistatakse selle aegumisel."
+    }
+  }
+}

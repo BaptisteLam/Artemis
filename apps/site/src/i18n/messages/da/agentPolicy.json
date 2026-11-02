@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Skabelon: politik for AI-agenters udgifter",
+    "intro": "En gratis skabelon, som I kan tilpasse, til at styre udgifter afholdt af AI-agenter og dokumentere det menneskelige tilsyn, der kræves efter artikel 14 i EU's forordning om kunstig intelligens (AI Act). Udskriv siden, eller kopiér den til jeres wiki.",
+    "scope": {
+      "title": "1. Formål og anvendelsesområde",
+      "body": "Denne politik gælder for alle softwareagenter (samtaleassistenter, automatiseringer, scripts), der er autoriseret til at foretage køb på vegne af [VIRKSOMHED]. Ingen agent bruger virksomhedens eller en medarbejders betalingskort: hvert køb sker med et virtuelt engangskort, der anmodes om via Artemis."
+    },
+    "register": {
+      "title": "2. Agentregister",
+      "body": "Hver agent registreres med: navn, platform, ansvarlig person, formål, månedsbudget, grænse pr. køb, tilladte forretninger og i givet fald den kunde, agenten arbejder for."
+    },
+    "rules": {
+      "title": "3. Udgiftsregler",
+      "i1": "Månedsbudget pr. agent: [BELØB] €; grænse pr. køb: [BELØB] €.",
+      "i2": "Tilladte forretninger: [LISTE]; forbudte kategorier: spil om penge, pengeoverførsler, kontantlignende ydelser, værdipapirer.",
+      "i3": "Automatisk godkendelse kun under [BELØB] € og hos en tilladt forretning; derover er en menneskelig signatur obligatorisk.",
+      "i4": "Over [BELØB] € kræves to forskellige underskrivere."
+    },
+    "oversight": {
+      "title": "4. Menneskeligt tilsyn",
+      "body": "Personer med bemyndigelse til at godkende: [NAVNE/ROLLER]. Godkendelsen gives med adgangsnøgle på mandatets nøjagtige indhold (agent, beløb, forretning, formål). En anmodning, der ikke godkendes, udløber automatisk."
+    },
+    "records": {
+      "title": "5. Kvitteringer og bogføring",
+      "body": "Hvert køb matches med sin faktura inden for [N] timer; ellers suspenderes agenten. Udgifterne eksporteres hver måned (FEC eller Pennylane) og afstemmes med kontoudtogene."
+    },
+    "incidents": {
+      "title": "6. Hændelser",
+      "body": "Ved unormal adfærd, afvigelse i beløb eller forretning eller mistanke om promptinjektion fryser den ansvarlige person straks agenten (eller hele organisationen) og registrerer hændelsen."
+    },
+    "retention": {
+      "title": "7. Opbevaring og revision",
+      "body": "Den kædede revisionslog opbevares i [10] år. Der udarbejdes en tilsynsrapport hvert kvartal, som gennemgås af [ROLLE]. Politikken revideres hvert år."
+    },
+    "note": "Artemis udarbejder agentregistret og den kvartalsvise tilsynsrapport i planen {plan}."
+  }
+}

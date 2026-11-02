@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Kaarten",
+    "lead": "Eenmalige kaarten, uitgegeven bij uw banken. Het volledige kaartnummer wordt nooit opgeslagen.",
+    "linkAria": "Kaart •••• {last4}",
+    "cardAria": "Virtuele kaart eindigend op {last4}, houder {holder}, geldig tot {exp}",
+    "tagRevealed": "Overhandigd aan de agent",
+    "tagSingleUse": "Eenmalig",
+    "emptyTitle": "Geen kaarten",
+    "emptyText": "Kaarten verschijnen zodra een aanvraag is goedgekeurd.",
+    "colCard": "Kaart",
+    "colIssued": "Uitgegeven",
+    "colExpires": "Geldig tot",
+    "colRevealed": "Overhandigd aan de agent",
+    "colStatus": "Status",
+    "notRevealed": "Nee",
+    "request": "Aanvraag →"
+  }
+}

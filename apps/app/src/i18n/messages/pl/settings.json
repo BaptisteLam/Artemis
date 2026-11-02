@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Ustawienia",
+    "signOut": "Wyloguj się",
+    "language": {
+      "title": "Język",
+      "lead": "Język interfejsu na tym urządzeniu."
+    },
+    "notifications": {
+      "title": "Powiadomienia na tym urządzeniu",
+      "lead": "Otrzymuj powiadomienie o każdym wniosku. Na iPhonie najpierw dodaj Artemis do ekranu początkowego (Udostępnij → Do ekranu początk.).",
+      "notConfigured": "Powiadomienia push nie są skonfigurowane na tym serwerze (klucze VAPID). Powiadomienia e-mail pozostają aktywne.",
+      "unsupported": "Ta przeglądarka nie obsługuje powiadomień push.",
+      "denied": "Powiadomienia są zablokowane w ustawieniach przeglądarki.",
+      "enable": "Włącz powiadomienia",
+      "on": "Powiadomienia są włączone.",
+      "disable": "Wyłącz"
+    },
+    "slack": {
+      "lead": "Każdy oczekujący wniosek jest publikowany na kanale Slack z przyciskiem otwierającym zatwierdzanie kluczem dostępu. Utwórz w Slacku „Incoming Webhook” i wklej jego adres URL.",
+      "connected": "Slack jest podłączony.",
+      "disconnect": "Odłącz",
+      "urlLabel": "Adres URL webhooka Slack",
+      "connect": "Podłącz",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Przekazywanie kart agentom",
+      "confirmDirect": "Bezpośrednie przekazanie: numer karty jednorazowo przejdzie przez Artemis w drodze do agenta. Obejmuje Cię wtedy zakres PCI DSS, a w przypadku Revolut wymagana jest pisemna zgoda. Kontynuować?",
+      "linkTitle": "Tymczasowy link (zalecane)",
+      "linkText": "Agent otrzymuje jednorazowy link ważny 10 minut; kartę wyświetla bank wydający (Stripe Issuing). Numer nigdy nie przechodzi przez Artemis.",
+      "directTitle": "Bezpośrednie przekazanie (opcja zaawansowana)",
+      "directText": "Numer jest przekazywany agentowi tylko raz i nie jest przechowywany. Wymagane dla Revolut. Obejmuje Cię zakres PCI DSS."
+    },
+    "org": {
+      "title": "Organizacja",
+      "name": "Nazwa",
+      "rename": "Zmień nazwę"
+    },
+    "emergency": {
+      "title": "Sytuacja awaryjna",
+      "lead": "„Zamroź wszystko” zawiesza wszystkich agentów oraz anuluje aktywne karty i oczekujące wnioski. Użyj tej opcji, jeśli agent zachowuje się nietypowo lub doszło do wycieku tokenu.",
+      "confirmFreeze": "Zamrozić całą organizację? Wszyscy agenci zostaną zamrożeni, a aktywne karty anulowane.",
+      "unfreeze": "Odmroź organizację",
+      "freeze": "Zamroź wszystko teraz",
+      "afterUnfreeze": "Po odmrożeniu aktywuj ponownie każdego agenta na jego stronie."
+    },
+    "passkeys": {
+      "title": "Klucze dostępu",
+      "devicePrompt": "Nazwa urządzenia (np. iPhone Lei)",
+      "confirmDelete": "Usunąć ten klucz dostępu?",
+      "add": "Dodaj",
+      "lead": "Do zatwierdzenia wydatku wymagany jest klucz dostępu. Dodaj go na każdym urządzeniu, z którego korzystasz.",
+      "addedOn": "dodano {date}",
+      "delete": "Usuń",
+      "none": "Brak klucza dostępu: nie możesz jeszcze zatwierdzać wydatków."
+    }
+  }
+}

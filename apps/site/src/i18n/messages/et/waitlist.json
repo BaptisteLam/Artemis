@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Ootenimekiri",
+    "description": "Saage teade, kui päris pankade ühendused avanevad.",
+    "headline": "Olge esimeste seas.",
+    "lead": "Qonto ja Revoluti ühendused avanevad järk-järgult. Jätke meile oma e-posti aadress ja anname teada niipea, kui teie pank on saadaval.",
+    "email": "Töö e-post",
+    "company": "Ettevõte",
+    "useCase": "Mille eest peavad teie agendid maksma?",
+    "useCasePlaceholder": "API-d, SaaS, pilv, andmed…",
+    "submit": "Liitu ootenimekirjaga",
+    "sending": "Saatmine…",
+    "ok": "Aitäh, olete nimekirjas. Saadame teile e-kirja kohe, kui avame.",
+    "error": "Registreerumine ebaõnnestus. Proovige mõne aja pärast uuesti."
+  }
+}

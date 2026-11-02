@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Cum funcționează",
+    "description": "Cum le permite Artemis agenților dumneavoastră IA să plătească, în timp ce dumneavoastră păstrați controlul.",
+    "headline": "Agentul solicită, dumneavoastră decideți, banca plătește.",
+    "lead": "Artemis se află între agenții dumneavoastră și banca dumneavoastră. Aplică regulile dumneavoastră, colectează aprobarea și creează un card de unică folosință pentru suma exactă.",
+    "step1": {
+      "title": "1. Vă conectați banca",
+      "body": "Stripe Issuing (recomandat) sau Revolut Business: cardurile virtuale sunt create în contul <strong>dumneavoastră</strong> și debitate din fondurile <strong>dumneavoastră</strong>. Qonto se conectează pentru citire, înghețare și reconciliere. Artemis nu primește, nu deține și nu transferă niciodată bani. Pentru a încerca, Sandbox simulează o bancă."
+    },
+    "step2": {
+      "title": "2. Creați un agent și regulile sale",
+      "body": "Fiecare agent primește un token secret și o politică: buget lunar, limită per achiziție, monede, comercianți permiși sau blocați, categorii de comercianți, prag de aprobare automată și durata de valabilitate a cardului."
+    },
+    "step3": {
+      "title": "3. Agentul solicită un card",
+      "body": "Prin instrumentul MCP <code>request_card</code> sau prin API-ul REST. O solicitare care încalcă regulile este respinsă imediat, cu un motiv clar. Toate celelalte așteaptă aprobarea dumneavoastră, cu excepția sumelor mici la un comerciant de încredere, dacă ați permis acest lucru."
+    },
+    "step4": {
+      "title": "4. Aprobați cu un passkey",
+      "body": "Primiți o notificare. Ecranul mandatului afișează agentul, suma, comerciantul și scopul. Semnați cu passkey-ul dumneavoastră (Face ID, amprentă, cheie de securitate). Semnătura acoperă conținutul exact al mandatului."
+    },
+    "step5": {
+      "title": "5. Agentul plătește, Artemis reconciliază",
+      "body": "Cardul este de unică folosință, plafonat la sumă și expiră rapid. Agentul primește un link cu durată scurtă de viață: cardul este afișat de banca dumneavoastră, iar numărul nu trece niciodată prin Artemis. Imediat ce banca raportează tranzacția, Artemis o reconciliază, semnalează orice neconcordanță și arhivează documentul justificativ."
+    },
+    "demo": {
+      "mandate": "mandat · {id}",
+      "intent": "Scop: abonament pentru echipă, 5 utilizatori.",
+      "rules": "Reguli: limită {cap} · buget rămas {remaining}",
+      "signed": "Semnat cu passkey · acum {minutes} min",
+      "transactions": "tranzacții",
+      "matched": "Reconciliată",
+      "mismatch": "Neconcordanță"
+    }
+  }
+}

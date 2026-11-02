@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Karty",
+    "lead": "Karty jednorazowe wydane w Twoich bankach. Pełny numer karty nigdy nie jest przechowywany.",
+    "linkAria": "Karta •••• {last4}",
+    "cardAria": "Karta wirtualna o numerze kończącym się na {last4}, posiadacz {holder}, ważna do {exp}",
+    "tagRevealed": "Przekazana agentowi",
+    "tagSingleUse": "Jednorazowa",
+    "emptyTitle": "Brak kart",
+    "emptyText": "Karty pojawiają się po zatwierdzeniu wniosku.",
+    "colCard": "Karta",
+    "colIssued": "Wydana",
+    "colExpires": "Ważna do",
+    "colRevealed": "Przekazana agentowi",
+    "colStatus": "Status",
+    "notRevealed": "Nie",
+    "request": "Wniosek →"
+  }
+}

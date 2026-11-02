@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Wachtlijst",
+    "description": "Ontvang een bericht zodra de live bankconnectors beschikbaar zijn.",
+    "headline": "Wees een van de eersten.",
+    "lead": "De connectors voor Qonto en Revolut worden stapsgewijs opengesteld. Laat uw e-mailadres achter en wij laten het u weten zodra uw bank beschikbaar is.",
+    "email": "Zakelijk e-mailadres",
+    "company": "Bedrijf",
+    "useCase": "Waarvoor moeten uw agents betalen?",
+    "useCasePlaceholder": "API’s, SaaS, cloud, data…",
+    "submit": "Inschrijven op de wachtlijst",
+    "sending": "Bezig met verzenden…",
+    "ok": "Bedankt, u staat op de lijst. Wij mailen u zodra het zover is.",
+    "error": "Inschrijving mislukt. Probeer het zo meteen opnieuw."
+  }
+}

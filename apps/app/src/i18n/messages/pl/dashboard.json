@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · plan {plan}",
+    "title": "Pulpit",
+    "stats": {
+      "spent": "Wydano w tym miesiącu",
+      "pending": "Do zatwierdzenia",
+      "openQueue": "Otwórz kolejkę →",
+      "requests": "Wnioski w tym miesiącu"
+    },
+    "recent": {
+      "title": "Ostatnie wnioski",
+      "viewAll": "Zobacz wszystkie →",
+      "empty": "Brak wniosków w tym miesiącu. Podłącz agenta na stronie {agents}.",
+      "agentsLink": "Agenci"
+    },
+    "byAgent": {
+      "title": "Według agentów",
+      "manage": "Zarządzaj →",
+      "empty": "Brak agentów."
+    }
+  }
+}

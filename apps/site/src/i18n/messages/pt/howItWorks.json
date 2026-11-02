@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Como funciona",
+    "description": "Como o Artemis permite que os seus agentes de IA paguem, mantendo o controlo do seu lado.",
+    "headline": "O agente pede, a decisão é sua, o banco paga.",
+    "lead": "O Artemis situa-se entre os seus agentes e o seu banco. Aplica as suas regras, recolhe a sua aprovação e cria um cartão de utilização única pelo montante exato.",
+    "step1": {
+      "title": "1. Ligue o seu banco",
+      "body": "Stripe Issuing (recomendado) ou Revolut Business: os cartões virtuais são criados na <strong>sua</strong> conta e debitados nos <strong>seus</strong> fundos. O Qonto liga-se em modo de leitura, congelamento e reconciliação. O Artemis nunca recebe, detém nem transfere dinheiro. Para experimentar, o Sandbox simula um banco."
+    },
+    "step2": {
+      "title": "2. Crie um agente e as respetivas regras",
+      "body": "Cada agente recebe um token secreto e uma política: orçamento mensal, limite por compra, moedas, comerciantes autorizados ou bloqueados, categorias de comerciante, limiar de aprovação automática e validade do cartão."
+    },
+    "step3": {
+      "title": "3. O agente pede um cartão",
+      "body": "Através da ferramenta MCP <code>request_card</code> ou da API REST. Um pedido que infrinja as regras é recusado de imediato, com um motivo claro. Todos os outros aguardam a sua aprovação, exceto pequenos montantes num comerciante de confiança, se o tiver autorizado."
+    },
+    "step4": {
+      "title": "4. Aprove com uma chave de acesso",
+      "body": "Receberá uma notificação. O ecrã do mandato mostra o agente, o montante, o comerciante e a finalidade. Assina com a sua chave de acesso (Face ID, impressão digital, chave de segurança). A assinatura abrange o conteúdo exato do mandato."
+    },
+    "step5": {
+      "title": "5. O agente paga, o Artemis reconcilia",
+      "body": "O cartão é de utilização única, limitado ao montante, e expira rapidamente. O agente recebe uma ligação de curta duração: o cartão é apresentado pelo seu banco e o número nunca passa pelo Artemis. Assim que o banco comunica a transação, o Artemis reconcilia-a, assinala qualquer discrepância e arquiva o comprovativo."
+    },
+    "demo": {
+      "mandate": "mandato · {id}",
+      "intent": "Finalidade: subscrição da equipa, 5 lugares.",
+      "rules": "Regras: limite {cap} · orçamento restante {remaining}",
+      "signed": "Assinado com chave de acesso · há {minutes} min",
+      "transactions": "transações",
+      "matched": "Reconciliado",
+      "mismatch": "Discrepância"
+    }
+  }
+}

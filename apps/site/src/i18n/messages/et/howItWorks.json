@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Kuidas see töötab",
+    "description": "Kuidas Artemis laseb teie tehisintellekti agentidel maksta, samal ajal kui kontroll jääb teile.",
+    "headline": "Agent taotleb, teie otsustate, pank maksab.",
+    "lead": "Artemis asub teie agentide ja teie panga vahel. See rakendab teie reegleid, kogub teie kinnituse ja loob täpse summa jaoks ühekordse kaardi.",
+    "step1": {
+      "title": "1. Ühendate oma panga",
+      "body": "Stripe Issuing (soovitatav) või Revolut Business: virtuaalkaardid luuakse <strong>teie</strong> kontole ja kulud võetakse <strong>teie</strong> rahast. Qonto ühendatakse lugemisõigusega, külmutamiseks ja sobitamiseks. Artemis ei võta kunagi raha vastu, ei hoia ega kanna seda üle. Proovimiseks simuleerib Sandbox panka."
+    },
+    "step2": {
+      "title": "2. Loote agendi ja selle reeglid",
+      "body": "Iga agent saab salajase tokeni ja poliitika: kuueelarve, ostupõhine limiit, valuutad, lubatud või blokeeritud kaupmehed, kaupmehe kategooriad, automaatse kinnitamise piirmäär ja kaardi kehtivusaeg."
+    },
+    "step3": {
+      "title": "3. Agent taotleb kaarti",
+      "body": "MCP-tööriista <code>request_card</code> või REST API kaudu. Reegleid rikkuv taotlus lükatakse kohe tagasi selge põhjendusega. Kõik ülejäänud ootavad teie kinnitust, välja arvatud väikesed summad usaldusväärsele kaupmehele, kui olete selle lubanud."
+    },
+    "step4": {
+      "title": "4. Kinnitate pääsuvõtmega",
+      "body": "Saate teavituse. Volituse vaates on näha agent, summa, kaupmees ja eesmärk. Allkirjastate oma pääsuvõtmega (Face ID, sõrmejälg, turvavõti). Allkiri katab volituse täpse sisu."
+    },
+    "step5": {
+      "title": "5. Agent maksab, Artemis sobitab",
+      "body": "Kaart on ühekordne, piiratud summaga ja aegub kiiresti. Agent saab lühiajalise lingi: kaarti kuvab teie pank ja number ei liigu kunagi läbi Artemise. Niipea kui pank tehingust teatab, sobitab Artemis selle, märgib ära võimalikud lahknevused ja arhiveerib kviitungi."
+    },
+    "demo": {
+      "mandate": "volitus · {id}",
+      "intent": "Eesmärk: meeskonna tellimus, 5 kasutajakohta.",
+      "rules": "Reeglid: limiit {cap} · eelarvet alles {remaining}",
+      "signed": "Allkirjastatud pääsuvõtmega · {minutes} min tagasi",
+      "transactions": "tehingud",
+      "matched": "Sobitatud",
+      "mismatch": "Lahknevus"
+    }
+  }
+}

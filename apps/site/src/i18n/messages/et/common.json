@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Teie agendid maksavad. Viimane sõna jääb teile.",
+    "description": "Euroopa finantstulemüür teie tehisintellekti agentidele: kontroll, säästetud aeg ja AI Acti tõendid iga ostu kohta, teie valitud pangas."
+  },
+  "layout": {
+    "skip": "Liigu sisu juurde"
+  },
+  "nav": {
+    "aria": "Põhinavigatsioon",
+    "home": "Artemis, avaleht",
+    "howItWorks": "Kuidas see töötab",
+    "agencies": "Agentuurid",
+    "pricing": "Hinnad",
+    "docs": "Dokumentatsioon",
+    "security": "Turvalisus",
+    "login": "Logi sisse",
+    "cta": "Proovi"
+  },
+  "lang": {
+    "choose": "Valige keel"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agentuurid",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT ja n8n on nende vastavate omanike kaubamärgid. Artemis ei ole ühegi neist seotud.",
+    "product": "Toode",
+    "policyTemplate": "Poliitika mall",
+    "waitlist": "Ootenimekiri",
+    "restApi": "REST API",
+    "legal": "Õigusteave",
+    "legalNotice": "Väljaandja andmed",
+    "terms": "Müügitingimused",
+    "privacy": "Privaatsus"
+  },
+  "legal": {
+    "eyebrow": "Õigusteave",
+    "updated": "Viimati uuendatud: 1. november 2026.",
+    "frenchPrevails": "See leht on mugavuse huvides esitatud tõlge. Õiguslikult siduv on üksnes <a href=\"{href}\">prantsuskeelne versioon</a>.",
+    "vat": "Käibemaksu ei kohaldata, Prantsuse maksuseadustiku (CGI) artikkel 293 B",
+    "status": "Füüsilisest isikust ettevõtja (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (lehed ja API); Supabase, Inc. — andmeid hoitakse Euroopa Liidus (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentatsioon",
+    "start": "Alustamine",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI ja Claude'i oskus",
+    "api": "REST API",
+    "rules": "Reeglid ja kinnitamine"
+  },
+  "notFound": {
+    "title": "Lehte ei leitud",
+    "eyebrow": "Viga 404",
+    "headline": "Seda lehte ei ole olemas.",
+    "lead": "Link võib olla aegunud. Minge tagasi avalehele või sirvige dokumentatsiooni.",
+    "home": "Avaleht"
+  }
+}

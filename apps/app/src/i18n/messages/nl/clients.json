@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Klanten",
+    "lead": "Eén omgeving per klant: zijn agents, zijn maandbudget, uw opslag en een doorfacturatierapport dat klaar is om te versturen.",
+    "invalidBudget": "Ongeldig budget (bijv. 500 of 49,90).",
+    "upsell": "Klantomgevingen zijn inbegrepen in het abonnement Bureaus ({price} + {perClient} per actieve klant).",
+    "seePlans": "Abonnementen bekijken →",
+    "empty": "Geen klanten",
+    "emptyHint": "Maak een klant aan en koppel er daarna agents aan.",
+    "cols": {
+      "client": "Klant",
+      "agents": "Agents",
+      "spent": "Deze maand vastgelegd",
+      "budget": "Budget",
+      "markup": "Opslag"
+    },
+    "archived": "gearchiveerd",
+    "percent": "{value}%",
+    "report": "Rapport →",
+    "new": "Nieuwe klant",
+    "fields": {
+      "name": "Naam",
+      "billingEmail": "Factuur-e-mailadres",
+      "markup": "Doorfacturatie-opslag (%)",
+      "budget": "Maandbudget (€)",
+      "budgetHint": "Leeg = geen plafond per klant"
+    },
+    "create": "Klant aanmaken",
+    "exportFailed": "Export mislukt.",
+    "eyebrow": "Klant",
+    "month": "Maand",
+    "exportCsv": "CSV exporteren",
+    "monthPurchases": "Aankopen deze maand",
+    "markupPct": "Opslag {value}",
+    "toRebill": "Door te factureren",
+    "noPurchases": "Geen aankopen deze maand",
+    "lines": {
+      "date": "Datum",
+      "agent": "Agent",
+      "merchant": "Verkoper",
+      "purpose": "Doel",
+      "amount": "Bedrag",
+      "receipt": "Bon"
+    },
+    "yes": "Ja",
+    "missing": "Ontbreekt",
+    "archive": "Klant archiveren",
+    "reactivate": "Heractiveren",
+    "all": "← Alle klanten"
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Euroopa lahendus · tehisintellekti agendid",
+      "lead": "Euroopa finantstulemüür teie tehisintellekti agentidele. Claude, ChatGPT või n8n taotleb, teie allkirjastate ühe puudutusega ning iga kulu on kontrollitud, sobitatud ja tõendatud, teie valitud pangas.",
+      "tryFree": "Proovige tasuta →",
+      "seeDemo": "Vaadake demot",
+      "visualAria": "Näide: agendi taotlus ja selle ühekordne kaart",
+      "expired": "Aegunud",
+      "pending": "Ootel taotlus",
+      "toApprove": "Ootab kinnitust",
+      "purpose": "meeskonna tellimus",
+      "approve": "Kinnita mu pääsuvõtmega",
+      "decline": "Keeldu"
+    },
+    "trust": {
+      "aria": "Garantiid",
+      "europe": "Euroopalik",
+      "europeText": "Eurod, Euroopa pangad, andmed Frankfurdis, IKÜM.",
+      "funds": "Teie raha jääb teile",
+      "fundsText": "Artemis ei hoia kunagi raha.",
+      "number": "Kaardinumber ei läbi Artemist",
+      "numberText": "Kaarti kuvab teie pank, mitte meie.",
+      "aiAct": "Valmis AI Actiks",
+      "aiActText": "Iga kulu allkirjastatud, aheldatud logi, kvartaliaruanne."
+    },
+    "demo": {
+      "eyebrow": "Demo",
+      "title": "Taotlusest makseni 20 sekundiga.",
+      "explain": "Ilma ettevõtte kaarti kunagi jagamata.",
+      "step1": "Agent taotleb",
+      "window": "claude · vestlus",
+      "userMessage": "Telli meeskonnale Notion Plus, 5 kasutajakohta.",
+      "agentMessage": "Taotlesin kaardi summas {amount}. Ootan teie kinnitust.",
+      "step2": "Teie kinnitate",
+      "notification": "{agent} soovib kulutada {amount}",
+      "sheetTitle": "Kinnitage volitus",
+      "validity": "{minutes} min",
+      "faceId": "Allkirjasta Face ID-ga",
+      "step3": "Agent maksab",
+      "reconciled": "Sobitatud"
+    },
+    "benefits": {
+      "eyebrow": "Mida te ostate",
+      "title": "Mitte kaarti.",
+      "explain": "Pangad hakkavad neid juba tasuta jagama. Te ostate kontrolli, aega ja tõendeid.",
+      "control": {
+        "eyebrow": "Kontroll",
+        "title": "Ilma teie kinnituseta ei lähe midagi välja.",
+        "text": "Eelarved, limiidid, lubatud kaupmehed, kaitsemeetmed viipesüstete vastu. Teie piirmääradest suurem kulu ootab pääsuvõtmega antud allkirja ühelt või mitmelt kinnitajalt."
+      },
+      "time": {
+        "eyebrow": "Säästetud aeg",
+        "title": "Enam ei mingeid käsitsi loodud kaarte.",
+        "text": "Agent taotleb, teie allkirjastate ühe puudutusega, kaart luuakse teie pangas, tehing sobitatakse ja arve arhiveeritakse. Enam ei pea väljavõtteid läbi töötama ega kviitungeid taga ajama."
+      },
+      "proof": {
+        "eyebrow": "Tõendid",
+        "title": "Iga kulu on kinnitanud inimene.",
+        "text": "Allkirjastatud volitused, aheldatud ja muutmatu auditilogi ning kvartaalne järelevalvearuanne: see, mida nõuavad AI Act, teie finantsjuht ja audiitor, üleandmiseks valmis."
+      },
+      "agencies": {
+        "eyebrow": "Agentuuridele",
+        "title": "Üks eelarve ja üks arve kliendi kohta.",
+        "text": "Kliendi tööruumid, kliendipõhine kuueelarve, edasiarveldamise juurdehindlus ja saatmiseks valmis kuuaruanne. Teie kliendid näevad lõpuks, mille peale nende agendid kulutavad."
+      }
+    },
+    "how": {
+      "eyebrow": "Kuidas see töötab",
+      "title": "Neli sammu, ühtegi jagatud kaarti.",
+      "s1": "Agent taotleb",
+      "s1Text": "MCP või API kaudu: „{amount} Notionile, meeskonna tellimus“.",
+      "s2": "Reeglid filtreerivad",
+      "s2Text": "Eelarve, limiit, kaupmees: reeglitele mittevastav taotlus lükatakse kohe tagasi.",
+      "s3": "Teie kinnitate",
+      "s3Text": "Teavitus teie telefoni, allkiri pääsuvõtmega.",
+      "s4": "Agent maksab",
+      "s4Text": "Ühekordne kaart, täpne summa, lühike kehtivus, seejärel automaatne sobitamine."
+    },
+    "useCases": {
+      "eyebrow": "Kasutusjuhud",
+      "title": "Mida teie agendid juba ostavad.",
+      "explain": "Nüüd oma kaardiga.",
+      "api": {
+        "title": "API-d ja tokenid",
+        "text": "Laadige krediiti juurde, kui kvoot saab otsa, ilma et ettevõtte kaart jääks .env-faili."
+      },
+      "saas": {
+        "title": "SaaS-tellimused",
+        "text": "Tellige meeskonnale pakett või pikendage seda täpselt kinnitatud summa eest."
+      },
+      "cloud": {
+        "title": "Pilv ja domeenid",
+        "text": "Ostke domeeninimi või makske majutuse ülekulu keset juurutamist."
+      },
+      "data": {
+        "title": "Andmed ja B2B-ostud",
+        "text": "Makske andmestiku, kraapimistöö või tarvikute eest, kviitung lisatakse automaatselt.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Ausalt öeldes",
+      "title": "Kasutate ainult Stripe'i, Rampi või Mercuryt?",
+      "explain": "Need teevad juba osa tööst ära.",
+      "lead": "Artemis pakub seda, mida pank oma konkurentide heaks ei tee.",
+      "banks": "Mitu panka korraga",
+      "banksText": "Stripe Issuing, Revolut, Qonto ja Sandbox, juhitud ühest kohast ühe poliitika alusel.",
+      "accounting": "Prantsuse raamatupidamine",
+      "accountingText": "FEC- ja Pennylane'i eksport, kviitung iga volituse juures, automaatne sobitamine.",
+      "proof": "AI Acti tõendid üleandmiseks valmis",
+      "proofText": "Inimese allkiri iga kulu juures, aheldatud logi, agentide register, kvartaliaruanne.",
+      "agency": "Agentuurirežiim",
+      "agencyText": "Agendid mitmele kliendile, igaühel oma eelarve, juurdehindlus ja aruanne."
+    },
+    "europe": {
+      "eyebrow": "Euroopa lahendus",
+      "title": "Loodud Euroopas, Euroopa jaoks.",
+      "lead": "Ameerika agendikaardid räägivad dollarite, Ameerika pankade ja Ameerika õiguse keelt. Artemis räägib eurode, Euroopa pankade, IKÜMi, AI Acti ja Prantsuse raamatupidamise keelt.",
+      "banks": "Eurod ja Euroopa pangad: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "EL",
+      "data": "Andmed Frankfurdis, IKÜM, krüpteeritud pangaandmed",
+      "article": "Art 14",
+      "oversight": "AI Acti inimjärelevalve, tõendatud kulu kaupa",
+      "accounting": "Prantsuse raamatupidamine: FEC, Pennylane, lisatud kviitungid"
+    },
+    "compare": {
+      "eyebrow": "Võrdlus",
+      "title": "Teie pank väljastab kaardi.",
+      "explain": "Artemis juhib nende kõigi üle.",
+      "criterion": "Kriteerium",
+      "bankOnly": "Ainult teie pank (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Ainult teie pank",
+      "usCards": "Ameerika agendikaardid",
+      "usCardsShort": "USA agendikaardid",
+      "rows": {
+        "card": "Virtuaalkaart agendile",
+        "banks": "Mitu panka, üks poliitika",
+        "signature": "Inimese allkiri iga kulu juures (pääsuvõti)",
+        "aiAct": "Eksporditavad AI Acti tõendid",
+        "accounting": "Prantsuse raamatupidamine (FEC, Pennylane)",
+        "agency": "Agentuurirežiim (kliendipõhised eelarved ja edasiarveldamine)",
+        "europe": "Eurod, majutus ja andmed Euroopas"
+      },
+      "values": {
+        "yes": "Jah",
+        "no": "Ei",
+        "yesBank": "Jah, väljastab teie pank",
+        "yesQuorum": "Jah, kvoorumiga",
+        "dependsPlan": "Oleneb paketist",
+        "dependsBank": "Oleneb pangast",
+        "partial": "Osaliselt"
+      }
+    },
+    "builders": {
+      "eyebrow": "Arendajatele",
+      "title": "Ühendatud ühe reaga.",
+      "explain": "Claude, ChatGPT, n8n, Make või teie enda kood.",
+      "lead": "Kaug-MCP-server ja REST API. Tasuta Sandbox simuleeritud kaartidega, et testida ilma pangata.",
+      "connect": "Ühenda Claude →",
+      "window": "terminal"
+    },
+    "faq": {
+      "eyebrow": "Korduma kippuvad küsimused",
+      "title": "Mida meilt küsitakse.",
+      "more": "On teil veel küsimusi? Lugege lehte <a href=\"{security}\">Turvalisus</a> või <a href=\"{docs}\">dokumentatsiooni</a>."
+    },
+    "final": {
+      "title": "Hoidke oma agendid kontrolli all.",
+      "lead": "Euroopa finantstulemüür, Sandboxis tasuta, krediitkaarti pole vaja. Viimane sõna jääb teile.",
+      "signup": "Loo konto →",
+      "pricing": "Vaata hindu",
+      "holder": "teie.agent"
+    }
+  }
+}

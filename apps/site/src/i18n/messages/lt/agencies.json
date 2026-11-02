@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Agentūroms",
+    "description": "Automatizavimo agentūros: jūsų klientų agentai išleidžia kontroliuojamai, su biudžetu ir sąskaita kiekvienam klientui.",
+    "eyebrow": "Automatizavimo agentūros",
+    "headline": "Jūsų klientų agentai išleidžia. Jūs išrašote sąskaitas be vargo.",
+    "lead": "Kuriate n8n, Make ar Claude agentus savo klientams? Artemis atskiria išlaidas pagal klientus, kiekvienam taiko biudžetą ir paruošia pakartotinį sąskaitų išrašymą su jūsų antkainiu.",
+    "try": "Išbandyti nemokamai →",
+    "plan": "Planas {plan}: {base} + {client} už kiekvieną aktyvų klientą",
+    "spaces": {
+      "title": "Kiekvienam klientui – atskira darbo erdvė",
+      "body": "Priskirkite kiekvieną agentą klientui. Jo užklausos, kortelės, operacijos ir kvitai laikomi atskirai. Agentas niekada negali išleisti kito kliento biudžeto."
+    },
+    "budget": {
+      "title": "Mėnesio biudžetas kiekvienam klientui",
+      "body": "Nustatykite mėnesio limitą kiekvienam klientui, papildomai prie kiekvieno agento taisyklių. Jį viršijus, užklausa atmetama dar prieš pasiekiant žmogų."
+    },
+    "rebilling": {
+      "title": "Sąskaitos klientams vienu spustelėjimu",
+      "body": "Kiekvieną mėnesį Artemis paruošia ataskaitą kiekvienam klientui: nurašyti pirkimai, agentas, prekybininkas, kvitas, valdymo mokestis pagal jūsų antkainį, bendra suma sąskaitai. CSV eksportas, paruoštas išsiųsti arba importuoti į jūsų sąskaitų išrašymo įrankį."
+    },
+    "proof": {
+      "title": "Įrodymai jūsų klientams",
+      "body": "Kiekvieną mokėjimą pasirašo įgaliotas asmuo, o žurnalo pakeisti neįmanoma. Parodykite klientams, kad jų agentai yra prižiūrimi žmogaus, kaip reikalauja AI Act."
+    },
+    "european": {
+      "title": "Europietiška nuo pradžios iki galo",
+      "body": "Eurai, Europos bankai, duomenys Frankfurte, FEC ir Pennylane eksportas Prancūzijos apskaitai."
+    },
+    "demo": {
+      "window": "sąskaitos klientui · martin-bakery · lapkritis",
+      "subtotal": "Tarpinė suma",
+      "fee": "Valdymo mokestis 15 %",
+      "total": "Iš viso sąskaitai"
+    }
+  }
+}

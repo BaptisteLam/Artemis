@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Pentru agenții",
+    "description": "Agenții de automatizare: agenții clienților dumneavoastră cheltuiesc sub control, cu un buget și o factură pentru fiecare client.",
+    "eyebrow": "Agenții de automatizare",
+    "headline": "Agenții clienților dumneavoastră cheltuiesc. Dumneavoastră refacturați fără bătăi de cap.",
+    "lead": "Construiți agenți n8n, Make sau Claude pentru clienții dumneavoastră? Artemis separă cheltuielile pe client, aplică un buget fiecăruia și pregătește refacturarea cu marja dumneavoastră.",
+    "try": "Încercați gratuit →",
+    "plan": "Planul {plan}: {base} + {client} per client activ",
+    "spaces": {
+      "title": "Un spațiu de lucru per client",
+      "body": "Atribuiți fiecare agent unui client. Solicitările, cardurile, tranzacțiile și documentele justificative ale acestuia rămân separate. Un agent nu poate cheltui niciodată bugetul altui client."
+    },
+    "budget": {
+      "title": "Un buget lunar per client",
+      "body": "Stabiliți un plafon lunar pentru fiecare client, pe lângă regulile fiecărui agent. Peste acest plafon, solicitarea este respinsă înainte chiar să ajungă la o persoană."
+    },
+    "rebilling": {
+      "title": "Refacturare dintr-un clic",
+      "body": "În fiecare lună, Artemis pregătește un raport pentru fiecare client: achiziții debitate, agent, comerciant, document justificativ, comision de gestiune calculat pe baza marjei dumneavoastră, total de refacturat. Export CSV gata de trimis sau de importat în instrumentul dumneavoastră de facturare."
+    },
+    "proof": {
+      "title": "Dovezi pentru clienții dumneavoastră",
+      "body": "Fiecare plată este semnată de o persoană autorizată, iar jurnalul nu poate fi modificat. Arătați-le clienților că agenții lor se află sub supraveghere umană, așa cum cere AI Act."
+    },
+    "european": {
+      "title": "European, de la un capăt la altul",
+      "body": "Euro, bănci europene, date la Frankfurt, exporturi FEC și Pennylane pentru contabilitatea franceză."
+    },
+    "demo": {
+      "window": "refacturare · martin-bakery · noiembrie",
+      "subtotal": "Subtotal",
+      "fee": "Comision de gestiune 15%",
+      "total": "Total de refacturat"
+    }
+  }
+}

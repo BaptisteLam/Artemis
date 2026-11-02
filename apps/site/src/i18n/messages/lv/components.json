@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Darbojas ar",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Vienreizēja lietošana",
+      "aria": "Virtuālā karte, kas beidzas ar {last4}, kartes turētājs {holder}, derīga līdz {exp}",
+      "holder": "Kartes turētājs",
+      "expires": "Derīga līdz",
+      "debit": "Debets",
+      "virtual": "virtuāla",
+      "used": "Izmantota"
+    },
+    "faq": {
+      "q1": "Vai Artemis glabā manu naudu?",
+      "a1": "Nē. Kartes tiek veidotas jūsu pašu bankā (Qonto, Revolut Business vai Stripe Issuing), un maksājumi tiek norakstīti no jūsu konta. Artemis ir programmatūra: tā piemēro jūsu noteikumus, saņem jūsu apstiprinājumu un vada banku, izmantojot tās API. Tā nekad nesaņem, neglabā un nepārskaita līdzekļus.",
+      "q2": "Ko darīt, ja manu aģentu manipulē ar uzvednes injekciju?",
+      "a2": "Aģents var tikai lūgt. Katra karte ir vienreizējas lietošanas, ierobežota līdz precīzai summai, piesaistīta paredzētajam tirgotājam, un tās derīgums beidzas pēc 30 minūtēm. Ārpus jūsu noteikumiem pieprasījums tiek noraidīts; virs jūsu sliekšņa nekas netiek izmaksāts bez jūsu piekļuves atslēgas. Jebkura summas vai tirgotāja neatbilstība izraisa brīdinājumu, un poga “Iesaldēt visu” ar vienu klikšķi visu aptur.",
+      "q3": "Vai kartes numurs šķērso Artemis?",
+      "a3": "Nē, pēc noklusējuma ne. Norēķinoties aģents saņem vienreizējas lietošanas saiti, kas derīga 10 minūtes: tur karti tieši parāda izdevējbanka. Artemis nekad neredz, neglabā un nepārsūta numuru. Pēc atvēršanas saite vairs nedarbojas.",
+      "q4": "Kāpēc neizmantot vienkārši savu banku?",
+      "a4": "Ja izmantojat tikai Stripe, Ramp vai Mercury, tie jau dara daļu darba. Artemis piedāvā to, ko banka nedarīs saviem konkurentiem: vairākas bankas ar vienotu politiku, Francijas grāmatvedību (FEC, Pennylane), nodošanai gatavus AI Act pierādījumus un aģentūras režīmu.",
+      "q5": "Kuras bankas tiek atbalstītas?",
+      "a5": "Stripe Issuing (ieteicams) izveido kartes un parāda tās aģentam, numuram nekad nešķērsojot Artemis. Revolut Business darbojas saskaņā ar rakstisku vienošanos ar Revolut, karti nododot tieši. Qonto tiek pievienots lasīšanai, iesaldēšanai un saskaņošanai. Sandbox simulē banku, lai jūs varētu testēt, neko nepievienojot.",
+      "q6": "Cik tas maksā?",
+      "a6": "Sandbox ir bez maksas. Pēc tam {builder} (Builder), {team} (Team), {agency} + {client} par katru aktīvo klientu ({agencyPlan}) vai no {business} (Business) mēnesī. Pārsniedzot kvotu, {overage} par pilnvaru. Bez komisijas no jūsu izdevumiem: jūsu banka piemēro savu ierasto tarifu. {vat}.",
+      "q7": "Vai mani dati tiek glabāti Eiropā?",
+      "a7": "Jā. Datubāze tiek mitināta Eiropas Savienībā (Frankfurtē), bankas piekļuves dati ir šifrēti ar AES-256-GCM, un ķēdē saistītais audita žurnāls dokumentē AI Act prasīto cilvēka uzraudzību."
+    }
+  }
+}

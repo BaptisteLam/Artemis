@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Model: politică de cheltuieli pentru agenții IA",
+    "intro": "Un model gratuit, de adaptat, pentru reglementarea cheltuielilor efectuate de agenți de inteligență artificială și pentru documentarea supravegherii umane cerute de articolul 14 din Regulamentul european privind inteligența artificială (AI Act). Imprimați această pagină sau copiați-o în wiki-ul dumneavoastră.",
+    "scope": {
+      "title": "1. Obiect și domeniu de aplicare",
+      "body": "Prezenta politică se aplică oricărui agent software (asistent conversațional, automatizare, script) autorizat să efectueze o achiziție în numele [COMPANIE]. Niciun agent nu folosește cardul de plată al companiei sau al unui angajat: orice achiziție se face cu un card virtual de unică folosință solicitat prin Artemis."
+    },
+    "register": {
+      "title": "2. Registrul agenților",
+      "body": "Fiecare agent este înscris în registru cu: numele, platforma, persoana responsabilă, scopul, bugetul lunar, limita per achiziție, comercianții autorizați și, după caz, clientul pentru care lucrează."
+    },
+    "rules": {
+      "title": "3. Reguli de cheltuieli",
+      "i1": "Buget lunar per agent: [SUMĂ] €; limită per achiziție: [SUMĂ] €.",
+      "i2": "Comercianți autorizați: [LISTĂ]; categorii interzise: jocuri de noroc, transferuri de bani, cvasi-numerar, valori mobiliare.",
+      "i3": "Aprobare automată doar sub [SUMĂ] € și la un comerciant autorizat; peste această sumă, semnătura unei persoane este obligatorie.",
+      "i4": "Peste [SUMĂ] € sunt necesari doi semnatari distincți."
+    },
+    "oversight": {
+      "title": "4. Supraveghere umană",
+      "body": "Persoanele autorizate să aprobe sunt: [NUME / ROLURI]. Aprobarea se face prin passkey, pe conținutul exact al mandatului (agent, sumă, comerciant, scop). Orice solicitare neaprobată expiră automat."
+    },
+    "records": {
+      "title": "5. Documente justificative și contabilitate",
+      "body": "Fiecare achiziție este asociată facturii aferente în termen de [N] ore; în caz contrar, agentul este suspendat. Cheltuielile sunt exportate lunar (FEC sau Pennylane) și reconciliate cu extrasele bancare."
+    },
+    "incidents": {
+      "title": "6. Incidente",
+      "body": "În caz de comportament anormal, de neconcordanță de sumă sau de comerciant ori de suspiciune de prompt injection, persoana responsabilă îngheață imediat agentul (sau întreaga organizație) și înregistrează incidentul."
+    },
+    "retention": {
+      "title": "7. Păstrare și revizuire",
+      "body": "Jurnalul de audit înlănțuit se păstrează timp de [10] ani. În fiecare trimestru se întocmește un raport de supraveghere, examinat de [ROL]. Prezenta politică se revizuiește anual."
+    },
+    "note": "Artemis generează registrul agenților și raportul trimestrial de supraveghere în planul {plan}."
+  }
+}
