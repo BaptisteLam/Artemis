@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Get started with Artemis",
+      "lead": "From sign-up to your agent's first payment, in Sandbox, in five minutes.",
+      "step1": {
+        "title": "1. Create an account",
+        "body": "Sign up on <a href=\"{href}\">the app</a> with your email (magic link), create your organization and register a passkey: you will use it to approve spending."
+      },
+      "step2": {
+        "title": "2. Create an agent",
+        "body": "In <strong>Agents</strong>, create for example <code>notion.agent</code>. Artemis shows its token (<code>art_test_…</code> in Sandbox, <code>art_live_…</code> with a real bank) <strong>only once</strong>: copy it."
+      },
+      "step3": {
+        "title": "3. Connect the agent",
+        "fastest": "The fastest way: <code>npx artemis-agents init</code> (see <a href=\"{cli}\">CLI</a>).",
+        "server": "The MCP server is at <code>{url}</code>, with the header <code>Authorization: Bearer &lt;token&gt;</code>. Follow the guide for your tool: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> or <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. The purchase cycle",
+        "tool": "Tool",
+        "role": "Purpose",
+        "requestCard": "Requests a card: amount <strong>in cents</strong>, currency, merchant, purpose.",
+        "getRequestStatus": "Tracks the human approval.",
+        "getCardForCheckout": "Returns an <strong>ephemeral link</strong> (10 min, single use): the card is displayed by the bank, without going through Artemis.",
+        "listBudgets": "Monthly budget, spent, remaining, limit.",
+        "getSpendSummary": "Spending by merchant (day, week, month).",
+        "attachReceipt": "Attaches a receipt to the purchase.",
+        "cancelCard": "Cancels the card if the purchase no longer takes place."
+      },
+      "step5": {
+        "title": "5. Go live",
+        "body": "Choose a plan in <strong>Billing</strong>, then connect your bank in <strong>Banks</strong>. Agents linked to that bank receive real single-use cards."
+      }
+    },
+    "mcpClaude": {
+      "title": "Connect Claude",
+      "lead": "Claude Code, Claude Desktop and Claude connectors speak MCP over HTTP.",
+      "verify": "Check with <code>claude mcp list</code>, then ask for example: “Subscribe us to Notion for {price} with Artemis”.",
+      "desktopBody": "Open <em>Settings → Developer → Edit Config</em> and add:",
+      "instructionsTitle": "Useful instructions for the agent",
+      "instructionsBody": "Add to your system instructions:"
+    },
+    "mcpChatgpt": {
+      "title": "Connect ChatGPT",
+      "lead": "ChatGPT accepts remote MCP servers as custom connectors.",
+      "addTitle": "Add the connector",
+      "step1": "Open <em>Settings → Connectors → Advanced</em> and enable developer mode if your plan requires it.",
+      "step2": "Create a connector, URL: <code>{url}</code>.",
+      "step3": "Authentication: <code>Authorization</code> header with the value <code>Bearer art_…</code> (depending on the options offered by your ChatGPT workspace).",
+      "note": "The exact labels vary between ChatGPT plans; the address and header stay the same.",
+      "openaiTitle": "OpenAI agents (API)",
+      "openaiBody": "With the Responses API or the Agents SDK, declare a remote MCP tool pointing to <code>{url}</code> with the same header."
+    },
+    "cli": {
+      "title": "CLI, Claude skill and n8n",
+      "lead": "From zero to your first mandate in three minutes.",
+      "commandTitle": "One command",
+      "commandBody": "The command asks for the API URL and the agent token (created in the app, Agents page), checks access, saves the configuration in <code>~/.config/artemis/config.json</code>, adds the MCP server to Claude Code if it is installed and prints the configuration for Claude Desktop and n8n. With a Sandbox token and the <code>--demo</code> option, it creates a first test mandate for you to approve in the app.",
+      "skillTitle": "Claude skill",
+      "skillBody": "The <code>artemis-payments</code> skill teaches Claude to pay through Artemis: amount in cents, waiting for approval, opening the payment link at the right moment, receipt after the purchase, and rejecting injections. Copy the <code>integrations/claude-skill/artemis</code> folder from the repository into <code>~/.claude/skills/</code>.",
+      "n8nTitle": "n8n node",
+      "n8nBody": "Install the community node <code>n8n-nodes-artemis</code> (Settings → Community nodes). Operations: request a card, status, payment link, cancel, budget. Credentials: API URL and agent token."
+    },
+    "n8n": {
+      "title": "Connect n8n",
+      "lead": "Two options: the MCP Client node for an n8n AI agent, or HTTP requests for a classic workflow.",
+      "agentTitle": "n8n AI agent (MCP Client)",
+      "agentBody": "In an <em>AI Agent</em> node, add the <em>MCP Client</em> tool: transport <em>HTTP Streamable</em>, URL <code>{url}</code>, authentication <em>Header Auth</em> with <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "HTTP workflow",
+      "workflowBody": "Import the example workflow <code>examples/n8n/artemis-request-card.json</code> from the repository. It chains:",
+      "step1With": "with",
+      "step2": "a polling loop on <code>GET /v1/card-requests/:id</code> until the status is <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> to get the card's ephemeral link (10 minutes, single use)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "For Make, your scripts and your own agents. Same token as the MCP server.",
+      "authTitle": "Authentication",
+      "base": "Base URL: <code>{url}</code>. Limit: 60 requests per minute per agent.",
+      "endpointsTitle": "Endpoints",
+      "method": "Method",
+      "path": "Path",
+      "role": "Purpose",
+      "create": "Create a request",
+      "status": "Status of a request",
+      "reveal": "Ephemeral link to the card (10 min, single use)",
+      "cancel": "Cancel",
+      "receipts": "Attach a receipt",
+      "budgets": "Remaining budget",
+      "spendSummary": "Spending by merchant",
+      "exampleTitle": "Example",
+      "errorsTitle": "Errors",
+      "errorsBody": "Common codes: <code>invalid_amount</code> (the amount must be an integer in cents), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Rules and approval",
+      "lead": "How Artemis decides whether a request is rejected, approved automatically or submitted for your signature.",
+      "orderTitle": "Evaluation order",
+      "orderBody": "The first rule that is not met rejects the request:",
+      "o1": "Allowed currency (<code>currency_not_allowed</code>).",
+      "o2": "Positive amount below the per-purchase limit (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Monthly budget: the month's pending, approved and paid requests + the amount (<code>over_monthly_budget</code>). The month follows Paris time.",
+      "o4": "Blocked merchant, or missing from the allowlist if there is one (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Merchant category (MCC) blocked or not allowed (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Automatic approval",
+      "autoBody": "A request is approved without you if its amount is <strong>below</strong> the auto-approval threshold <strong>and</strong> the merchant is on the agent's allowlist. Without an allowlist, every request is submitted to you.",
+      "matchTitle": "Merchant matching",
+      "matchBody": "Names are compared ignoring case, accents, legal form and domain extension: “Notion” covers “Notion Labs, Inc.” and “notion.so”.",
+      "humanTitle": "Human approval",
+      "humanBody": "Owners, admins and approvers receive a notification. Approval requires a passkey. If your bank enforces its own strong customer authentication (Qonto, for example), also approve in its app.",
+      "expiryTitle": "Expiry",
+      "expiryBody": "An unprocessed request expires after 30 minutes (configurable). An unused card is cancelled when it expires."
+    }
+  }
+}
