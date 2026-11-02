@@ -1,26 +1,23 @@
 ---
 import DocsLayout from '../../../components/DocsLayout.astro';
-import { localeStaticPaths } from '../../../i18n';
+import { i18n, localeStaticPaths } from '../../../i18n';
 export function getStaticPaths() {
   return localeStaticPaths();
 }
+const { t } = i18n(Astro.url);
 ---
-<DocsLayout title="Règles et validation" lead="Comment Artemis décide qu'une demande est refusée, validée automatiquement ou soumise à votre signature.">
-  <h2>Ordre d'évaluation</h2>
-  <p>La première règle non respectée refuse la demande :</p>
+<DocsLayout title={t('docs.rules.title')} lead={t('docs.rules.lead')}>
+  <h2>{t('docs.rules.orderTitle')}</h2>
+  <p>{t('docs.rules.orderBody')}</p>
   <ol>
-    <li>Devise autorisée (<code>currency_not_allowed</code>).</li>
-    <li>Montant positif et sous le plafond par achat (<code>invalid_amount</code>, <code>over_transaction_limit</code>).</li>
-    <li>Budget mensuel : demandes en attente, validées et payées du mois + montant (<code>over_monthly_budget</code>). Le mois suit l'heure de Paris.</li>
-    <li>Marchand interdit, ou absent de la liste blanche si elle existe (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).</li>
-    <li>Catégorie marchande (MCC) interdite ou non autorisée (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).</li>
+    {(['o1', 'o2', 'o3', 'o4', 'o5'] as const).map((k) => <li><Fragment set:html={t(`docs.rules.${k}`)} /></li>)}
   </ol>
-  <h2>Validation automatique</h2>
-  <p>Une demande est validée sans vous si son montant est <strong>inférieur</strong> au seuil d'auto-validation <strong>et</strong> si le marchand figure dans la liste blanche de l'agent. Sans liste blanche, chaque demande vous est soumise.</p>
-  <h2>Correspondance des marchands</h2>
-  <p>Les noms sont comparés sans casse, sans accents, sans forme juridique ni extension de domaine : « Notion » couvre « Notion Labs, Inc. » et « notion.so ».</p>
-  <h2>Validation humaine</h2>
-  <p>Les propriétaires, administrateurs et approbateurs reçoivent une notification. La validation exige une passkey. Si votre banque impose sa propre authentification forte (Qonto par exemple), validez aussi dans son application.</p>
-  <h2>Expirations</h2>
-  <p>Une demande non traitée expire après 30 minutes (réglable). Une carte non utilisée est annulée à son expiration.</p>
+  <h2>{t('docs.rules.autoTitle')}</h2>
+  <p><Fragment set:html={t('docs.rules.autoBody')} /></p>
+  <h2>{t('docs.rules.matchTitle')}</h2>
+  <p>{t('docs.rules.matchBody')}</p>
+  <h2>{t('docs.rules.humanTitle')}</h2>
+  <p>{t('docs.rules.humanBody')}</p>
+  <h2>{t('docs.rules.expiryTitle')}</h2>
+  <p>{t('docs.rules.expiryBody')}</p>
 </DocsLayout>

@@ -1,19 +1,20 @@
 ---
 import DocsLayout from '../../../components/DocsLayout.astro';
 import { API_URL, MCP_URL } from '../../../config';
-import { localeStaticPaths } from '../../../i18n';
+import { i18n, localeStaticPaths } from '../../../i18n';
 export function getStaticPaths() {
   return localeStaticPaths();
 }
+const { t } = i18n(Astro.url);
 ---
-<DocsLayout title="Connecter n8n" lead="Deux options : le nœud MCP Client pour un agent IA n8n, ou des requêtes HTTP pour un workflow classique.">
-  <h2>Agent IA n8n (MCP Client)</h2>
-  <p>Dans un nœud <em>AI Agent</em>, ajoutez l'outil <em>MCP Client</em> : transport <em>HTTP Streamable</em>, URL <code>{MCP_URL}</code>, authentification <em>Header Auth</em> avec <code>Authorization: Bearer art_…</code>.</p>
-  <h2>Workflow HTTP</h2>
-  <p>Importez le workflow d'exemple <code>examples/n8n/artemis-request-card.json</code> du dépôt. Il enchaîne :</p>
+<DocsLayout title={t('docs.n8n.title')} lead={t('docs.n8n.lead')}>
+  <h2>{t('docs.n8n.agentTitle')}</h2>
+  <p><Fragment set:html={t('docs.n8n.agentBody', { url: MCP_URL })} /></p>
+  <h2>{t('docs.n8n.workflowTitle')}</h2>
+  <p><Fragment set:html={t('docs.n8n.workflowBody')} /></p>
   <ol>
-    <li><code>POST {API_URL}/v1/card-requests</code> avec <code>{`{ "amount": 4900, "merchant": "Notion", "purpose": "abonnement équipe" }`}</code></li>
-    <li>une boucle d'attente sur <code>GET /v1/card-requests/:id</code> jusqu'au statut <code>issued</code> ;</li>
-    <li><code>POST /v1/card-requests/:id/reveal</code> pour obtenir le lien éphémère de la carte (10 minutes, usage unique).</li>
+    <li><code>POST {API_URL}/v1/card-requests</code> {t('docs.n8n.step1With')} <code>{`{ "amount": 4900, "merchant": "Notion", "purpose": "team subscription" }`}</code></li>
+    <li><Fragment set:html={t('docs.n8n.step2')} /></li>
+    <li><Fragment set:html={t('docs.n8n.step3')} /></li>
   </ol>
 </DocsLayout>
