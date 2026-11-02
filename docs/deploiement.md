@@ -4,7 +4,8 @@ Durée : environ 45 minutes. Tout tient dans des offres gratuites. Seul un nom d
 
 ## 0. Ce qui est déjà fait
 
-- **Base de données Supabase** : projet `Artemis` (`jrlripockeiivegqbeng`, Francfort, offre gratuite) créé, migrations `packages/db/migrations/0001` à `0004` appliquées, bucket privé `receipts` créé.
+- **Base de données Supabase** : projet `Artemis` (`jrlripockeiivegqbeng`, Francfort, offre gratuite) créé, migrations `0001` à `0005` appliquées, bucket privé `receipts` créé.
+- **À appliquer** : migrations `0006` à `0010` (remise de carte, mode agence, garde-fous, quorum/Slack, abonnements). Supabase demande une confirmation car `0007` remplace la fonction `create_card_request`. Dans le tableau de bord Supabase (SQL Editor), exécutez dans l'ordre le contenu de `packages/db/migrations/0006_card_delivery.sql` à `0010_subscriptions.sql`, ou demandez à Claude de le faire en étant présent pour valider.
   - URL : `https://jrlripockeiivegqbeng.supabase.co`
   - Clé publique (publishable) : dans `apps/app/.env.production`
 
@@ -66,7 +67,7 @@ Mettez à jour `VITE_API_URL` dans `apps/app/.env.production` avec l'URL du Work
 ## 5. Encaisser les abonnements (Stripe, sans frais fixes)
 
 1. Créez un compte Stripe au nom de votre micro-entreprise.
-2. **Produits** : créez « Artemis Builder » 19 €/mois, « Team » 49 €/mois, « Business » 149 €/mois (récurrent). Copiez les trois `price_…`.
+2. **Produits** : créez « Artemis Builder » 29 €/mois, « Team » 99 €/mois, « Agences » 249 €/mois, « Business » 690 €/mois (récurrent). Copiez les quatre `price_…`.
 3. **Paramètres → Facturation → Factures** : ajoutez la mention « TVA non applicable, art. 293 B du CGI » dans le pied de facture.
 4. **Portail client** : activez-le (changement de plan, résiliation, factures).
 5. **Webhooks** : ajoutez `https://<worker>/webhooks/stripe-billing` avec les événements `checkout.session.completed`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`. Copiez le secret `whsec_…`.
@@ -77,6 +78,7 @@ npx wrangler secret put STRIPE_SECRET_KEY
 npx wrangler secret put STRIPE_WEBHOOK_SECRET
 npx wrangler secret put STRIPE_PRICE_BUILDER
 npx wrangler secret put STRIPE_PRICE_TEAM
+npx wrangler secret put STRIPE_PRICE_AGENCY
 npx wrangler secret put STRIPE_PRICE_BUSINESS
 ```
 
