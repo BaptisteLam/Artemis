@@ -1,0 +1,15 @@
+{
+  "transactions": {
+    "title": "Transactions",
+    "lead": "Operations reported by your banks and matched against mandates (last 90 days).",
+    "mismatches_one": "{count} transaction does not match its mandate. Review it and freeze the agent if needed.",
+    "mismatches_other": "{count} transactions do not match their mandate. Review them and freeze the agent if needed.",
+    "emptyTitle": "No transactions",
+    "emptyText": "They appear a few minutes after each payment.",
+    "colDate": "Date",
+    "colMerchant": "Merchant",
+    "colAmount": "Amount",
+    "colBankStatus": "Bank status",
+    "colMatch": "Matching"
+  }
+}

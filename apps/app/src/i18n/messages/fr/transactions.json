@@ -1,0 +1,16 @@
+{
+  "transactions": {
+    "title": "Transactions",
+    "lead": "Opérations remontées par vos banques et rapprochées des mandats (90 derniers jours).",
+    "mismatches_one": "{count} transaction ne correspond pas à son mandat. Vérifiez-la et gelez l'agent si nécessaire.",
+    "mismatches_many": "{count} transactions ne correspondent pas à leur mandat. Vérifiez-les et gelez l'agent si nécessaire.",
+    "mismatches_other": "{count} transactions ne correspondent pas à leur mandat. Vérifiez-les et gelez l'agent si nécessaire.",
+    "emptyTitle": "Aucune transaction",
+    "emptyText": "Elles apparaissent quelques minutes après chaque paiement.",
+    "colDate": "Date",
+    "colMerchant": "Marchand",
+    "colAmount": "Montant",
+    "colBankStatus": "Statut banque",
+    "colMatch": "Rapprochement"
+  }
+}

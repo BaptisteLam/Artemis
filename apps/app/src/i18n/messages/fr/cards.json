@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Cartes",
+    "lead": "Cartes à usage unique émises dans vos banques. Le numéro complet n'est jamais conservé.",
+    "linkAria": "Carte •••• {last4}",
+    "cardAria": "Carte virtuelle se terminant par {last4}, titulaire {holder}, expire le {exp}",
+    "tagRevealed": "Remise à l’agent",
+    "tagSingleUse": "Usage unique",
+    "emptyTitle": "Aucune carte",
+    "emptyText": "Les cartes apparaissent après validation d'une demande.",
+    "colCard": "Carte",
+    "colIssued": "Émise",
+    "colExpires": "Expire",
+    "colRevealed": "Remise à l'agent",
+    "colStatus": "Statut",
+    "notRevealed": "Non",
+    "request": "Demande →"
+  }
+}

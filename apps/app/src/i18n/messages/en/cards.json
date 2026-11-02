@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Cards",
+    "lead": "Single-use cards issued in your banks. The full card number is never stored.",
+    "linkAria": "Card •••• {last4}",
+    "cardAria": "Virtual card ending in {last4}, holder {holder}, expires {exp}",
+    "tagRevealed": "Handed to the agent",
+    "tagSingleUse": "Single use",
+    "emptyTitle": "No cards",
+    "emptyText": "Cards appear once a request has been approved.",
+    "colCard": "Card",
+    "colIssued": "Issued",
+    "colExpires": "Expires",
+    "colRevealed": "Handed to the agent",
+    "colStatus": "Status",
+    "notRevealed": "No",
+    "request": "Request →"
+  }
+}
