@@ -6,7 +6,8 @@ export type PolicyRejectCode =
   | 'merchant_blocked'
   | 'merchant_not_allowed'
   | 'mcc_blocked'
-  | 'mcc_not_allowed';
+  | 'mcc_not_allowed'
+  | 'too_many_requests';
 
 export type ErrorCode =
   | 'unauthorized'

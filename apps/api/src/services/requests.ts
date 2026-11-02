@@ -83,7 +83,18 @@ export async function createCardRequest(ctx: Ctx, agent: AgentRow, raw: unknown)
   const policy = policyFromRow(await store.getPolicy(agent.id));
   const monthStart = monthBounds(period).start;
   const spent = await store.sumCommitted(agent.id, monthStart);
-  const decision = evaluate(policy, { amountCents: input.amount, currency: input.currency, merchant: input.merchant, mcc: input.mcc }, spent);
+  let requestsLastHour = 0;
+  if (policy.maxRequestsPerHour != null) {
+    const bucket = Math.floor(now.getTime() / 3_600_000);
+    const allowed = await store.hitRateLimit(`velocity:${agent.id}:${bucket}`, 3600, policy.maxRequestsPerHour);
+    requestsLastHour = allowed ? 0 : policy.maxRequestsPerHour;
+  }
+  const recentAmounts = (await store.listCardRequests(org.id, { agentId: agent.id, limit: 40 }))
+    .filter((r) => r.status === 'approved' || r.status === 'issued' || r.status === 'completed')
+    .slice(0, 20)
+    .map((r) => Number(r.amount_cents));
+  const decision = evaluate(policy, { amountCents: input.amount, currency: input.currency, merchant: input.merchant, mcc: input.mcc }, spent, { requestsLastHour, recentAmounts });
+  const flags = decision.kind === 'require_approval' ? (decision.flags ?? []) : [];
 
   const base = {
     org_id: org.id,
@@ -114,7 +125,12 @@ export async function createCardRequest(ctx: Ctx, agent: AgentRow, raw: unknown)
 
   let row: CardRequestRow;
   try {
-    row = await store.createCardRequestAtomic({ ...base, status: 'pending' }, policy.monthlyBudgetCents, monthStart, client?.monthly_budget_cents ?? null);
+    row = await store.createCardRequestAtomic(
+      { ...base, status: 'pending', decision_reason: flags.length ? `flag: ${flags.join(', ')}` : null },
+      policy.monthlyBudgetCents,
+      monthStart,
+      client?.monthly_budget_cents ?? null,
+    );
   } catch (e) {
     if (e instanceof ArtemisError && e.code === 'over_monthly_budget') {
       return storeRejected('over_monthly_budget', 'Budget mensuel dépassé.');
@@ -135,6 +151,7 @@ export async function createCardRequest(ctx: Ctx, agent: AgentRow, raw: unknown)
     currency: input.currency,
     merchant: input.merchant,
     purpose: input.purpose,
+    ...(flags.length ? { flags } : {}),
   });
 
   if (decision.kind === 'auto_approve') {

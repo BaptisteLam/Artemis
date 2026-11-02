@@ -42,3 +42,24 @@ describe('evaluate', () => {
     expect(d.kind === 'reject' && d.message).toMatch(/budget/i);
   });
 });
+
+describe('garde-fous', () => {
+  it('blocks risky merchant categories by default (gambling, money transfer, quasi-cash, securities)', () => {
+    for (const mcc of ['7995', '4829', '6051', '6211']) expect(code(evaluate(p(), r({ mcc }), 0))).toBe('mcc_blocked');
+  });
+  it('lets an explicitly allowed risky category through', () => {
+    expect(code(evaluate(p({ mccAllow: ['4829'] }), r({ mcc: '4829' }), 0))).toBe('require_approval');
+  });
+  it('refuses beyond the hourly velocity limit', () => {
+    expect(code(evaluate(p({ maxRequestsPerHour: 5 }), r(), 0, { requestsLastHour: 5 }))).toBe('too_many_requests');
+    expect(code(evaluate(p({ maxRequestsPerHour: 5 }), r(), 0, { requestsLastHour: 4 }))).toBe('require_approval');
+  });
+  it('forces human approval on an amount far above the usual', () => {
+    const pol = p({ merchantAllow: ['Notion'], autoApproveBelowCents: 9000 });
+    const history = [1000, 1200, 900, 1100, 1000];
+    const d = evaluate(pol, r({ amountCents: 4900 }), 0, { recentAmounts: history });
+    expect(d.kind).toBe('require_approval');
+    expect(d.kind === 'require_approval' && d.flags).toContain('unusual_amount');
+    expect(code(evaluate(pol, r({ amountCents: 1500 }), 0, { recentAmounts: history }))).toBe('auto_approve');
+  });
+});

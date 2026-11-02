@@ -27,6 +27,8 @@ export function PolicyForm({ policy, onSave, disabled = false }: { policy: Polic
   const [cardTtl, setCardTtl] = useState(String(policy.card_ttl_minutes));
   const [reqTtl, setReqTtl] = useState(String(policy.request_ttl_minutes));
   const [freeze, setFreeze] = useState(policy.freeze_on_mismatch);
+  const [perHour, setPerHour] = useState(policy.max_requests_per_hour ? String(policy.max_requests_per_hour) : '');
+  const [receiptHours, setReceiptHours] = useState(policy.require_receipt_hours ? String(policy.require_receipt_hours) : '');
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [saved, setSaved] = useState(false);
   const save = useAction(onSave);
@@ -47,6 +49,10 @@ export function PolicyForm({ policy, onSave, disabled = false }: { policy: Polic
     if (!Number.isInteger(rt) || rt < 5 || rt > 10080) errs.reqTtl = 'Entre 5 et 10 080 minutes.';
     const curr = list(currencies).map((c) => c.toUpperCase());
     if (!curr.length || curr.some((c) => !/^[A-Z]{3}$/.test(c))) errs.curr = 'Codes ISO à 3 lettres, ex. EUR, USD.';
+    const ph = perHour.trim() ? Number(perHour) : null;
+    const rh = receiptHours.trim() ? Number(receiptHours) : null;
+    if (ph !== null && (!Number.isInteger(ph) || ph < 1 || ph > 1000)) errs.perHour = 'Entre 1 et 1 000, ou vide.';
+    if (rh !== null && (!Number.isInteger(rh) || rh < 1 || rh > 2160)) errs.receipt = 'Entre 1 et 2 160 heures, ou vide.';
     const mA = list(mccAllow);
     const mD = list(mccDeny);
     if ([...mA, ...mD].some((m) => !/^\d{4}$/.test(m))) errs.mcc = 'Codes MCC à 4 chiffres.';
@@ -64,6 +70,8 @@ export function PolicyForm({ policy, onSave, disabled = false }: { policy: Polic
       card_ttl_minutes: ct,
       request_ttl_minutes: rt,
       freeze_on_mismatch: freeze,
+      max_requests_per_hour: ph,
+      require_receipt_hours: rh,
     });
     if (ok !== undefined || !save.error) setSaved(true);
   }
@@ -105,6 +113,15 @@ export function PolicyForm({ policy, onSave, disabled = false }: { policy: Polic
             <input className="ar-input" inputMode="numeric" value={reqTtl} onChange={(e) => setReqTtl(e.target.value)} />
           </Field>
         </div>
+        <div className="form-row">
+          <Field label="Demandes max. par heure" error={errors.perHour} hint="Vide = illimité. Freine un agent emballé ou manipulé.">
+            <input className="ar-input" inputMode="numeric" value={perHour} onChange={(e) => setPerHour(e.target.value)} />
+          </Field>
+          <Field label="Justificatif exigé sous (heures)" error={errors.receipt} hint="Vide = désactivé. Passé ce délai, l'agent est gelé.">
+            <input className="ar-input" inputMode="numeric" value={receiptHours} onChange={(e) => setReceiptHours(e.target.value)} />
+          </Field>
+        </div>
+        <p className="ar-small ar-muted" style={{ margin: 0 }}>Toujours actifs : catégories à risque bloquées (jeux, transferts, quasi-espèces, titres) et validation humaine forcée sur un montant inhabituel (plus de 3 fois la médiane de l'agent).</p>
         <label className="ar-row ar-small">
           <input type="checkbox" checked={freeze} onChange={(e) => setFreeze(e.target.checked)} />
           Geler l'agent automatiquement en cas d'écart de montant ou de marchand

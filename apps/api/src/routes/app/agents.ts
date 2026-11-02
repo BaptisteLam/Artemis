@@ -125,6 +125,8 @@ const PolicyInput = z
     card_ttl_minutes: z.number().int().min(5).max(10080),
     request_ttl_minutes: z.number().int().min(5).max(10080),
     freeze_on_mismatch: z.boolean(),
+    max_requests_per_hour: z.number().int().min(1).max(1000).nullable(),
+    require_receipt_hours: z.number().int().min(1).max(2160).nullable(),
   })
   .partial();
 

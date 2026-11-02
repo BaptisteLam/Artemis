@@ -34,6 +34,8 @@ export interface PolicyRow {
   card_ttl_minutes: number;
   request_ttl_minutes: number;
   freeze_on_mismatch: boolean;
+  max_requests_per_hour?: number | null;
+  require_receipt_hours?: number | null;
   updated_at: string;
 }
 export interface CardRequestRow {

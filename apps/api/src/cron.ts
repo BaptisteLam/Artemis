@@ -43,12 +43,40 @@ export async function syncAll(ctx: Ctx) {
   }
 }
 
+/** Gel automatique des agents dont un achat payé n'a toujours pas de justificatif après le délai fixé. */
+export async function freezeMissingReceipts(ctx: Ctx) {
+  const now = ctx.now().getTime();
+  for (const org of await ctx.store.listOrganizations({ limit: 100000 })) {
+    const agents = (await ctx.store.listAgents(org.id)).filter((a) => a.status === 'active');
+    if (!agents.length) continue;
+    const receipts = new Set((await ctx.store.listReceipts(org.id)).map((r) => r.request_id));
+    let txs: Awaited<ReturnType<typeof ctx.store.listTransactions>> | null = null;
+    for (const agent of agents) {
+      const hours = (await ctx.store.getPolicy(agent.id))?.require_receipt_hours;
+      if (!hours) continue;
+      const completed = await ctx.store.listCardRequests(org.id, { agentId: agent.id, status: 'completed', limit: 200 });
+      for (const req of completed) {
+        if (receipts.has(req.id)) continue;
+        const card = await ctx.store.getCardByRequest(req.id);
+        if (!card) continue;
+        txs ??= await ctx.store.listTransactions(org.id, { limit: 5000 });
+        const paidAt = txs.filter((t) => t.card_id === card.id).map((t) => new Date(t.occurred_at).getTime()).sort()[0];
+        if (paidAt === undefined || now - paidAt < hours * 3_600_000) continue;
+        await ctx.store.updateAgent(agent.id, { status: 'frozen' });
+        await audit(ctx, org.id, { type: 'system', id: 'receipts' }, 'agent.frozen', agent.id, { reason: 'missing_receipt', request_id: req.id, hours });
+        break;
+      }
+    }
+  }
+}
+
 /** Tâche planifiée (toutes les 5 minutes). Elle maintient aussi la base Supabase active. */
 export async function runScheduled(ctx: Ctx) {
   await step('expire-requests', () => expireRequests(ctx));
   // Synchroniser AVANT d'expirer : une carte payée juste avant son expiration doit être rapprochée, pas annulée.
   await step('sync', () => syncAll(ctx));
   await step('expire-cards', () => expireCards(ctx));
+  await step('missing-receipts', () => freezeMissingReceipts(ctx));
 }
 
 export async function runScheduledFromEnv(env: Env): Promise<void> {

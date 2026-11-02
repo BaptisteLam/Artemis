@@ -14,6 +14,7 @@ export function policyFromRow(row: PolicyRow | null): Policy {
     autoApproveBelowCents: Number(row.auto_approve_below_cents),
     cardTtlMinutes: row.card_ttl_minutes,
     requestTtlMinutes: row.request_ttl_minutes,
+    maxRequestsPerHour: row.max_requests_per_hour ?? null,
   };
 }
 
@@ -31,5 +32,7 @@ export function defaultPolicyRow(agentId: string): Omit<PolicyRow, 'updated_at'>
     card_ttl_minutes: DEFAULT_POLICY.cardTtlMinutes,
     request_ttl_minutes: DEFAULT_POLICY.requestTtlMinutes,
     freeze_on_mismatch: false,
+    max_requests_per_hour: null,
+    require_receipt_hours: null,
   };
 }
