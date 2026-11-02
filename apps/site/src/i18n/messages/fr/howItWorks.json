@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Fonctionnement",
+    "description": "Comment Artemis permet à vos agents IA de payer sous votre contrôle.",
+    "headline": "L'agent demande, vous décidez, la banque paie.",
+    "lead": "Artemis se place entre vos agents et votre banque. Il applique vos règles, recueille votre validation et crée une carte à usage unique, au montant exact.",
+    "step1": {
+      "title": "1. Vous connectez votre banque",
+      "body": "Stripe Issuing (recommandé) ou Revolut Business : les cartes virtuelles sont créées dans <strong>votre</strong> compte et débitées sur <strong>vos</strong> fonds. Qonto se connecte en lecture, gel et rapprochement. Artemis ne reçoit, ne détient et ne transfère jamais d'argent. Pour essayer, la Sandbox simule une banque."
+    },
+    "step2": {
+      "title": "2. Vous créez un agent et ses règles",
+      "body": "Chaque agent reçoit un jeton secret et une politique : budget mensuel, plafond par achat, devises, marchands autorisés ou interdits, catégories marchandes, seuil d'auto-validation, durée de vie des cartes."
+    },
+    "step3": {
+      "title": "3. L'agent demande une carte",
+      "body": "Par l'outil MCP <code>request_card</code> ou l'API REST. Une demande hors règles est refusée immédiatement avec un motif clair. Les autres attendent votre validation, sauf petits montants chez un marchand de confiance si vous l'avez autorisé."
+    },
+    "step4": {
+      "title": "4. Vous validez avec une passkey",
+      "body": "Vous recevez une notification. L'écran du mandat montre l'agent, le montant, le marchand et l'intention. Vous signez avec votre passkey (Face ID, empreinte, clé de sécurité). La signature porte sur le contenu exact du mandat."
+    },
+    "step5": {
+      "title": "5. L'agent paie, Artemis rapproche",
+      "body": "La carte est à usage unique, limitée au montant, et expire vite. L'agent reçoit un lien éphémère : la carte s'affiche depuis votre banque, le numéro ne passe jamais par Artemis. Dès que la banque remonte la transaction, Artemis la rapproche, signale tout écart et range le justificatif."
+    },
+    "demo": {
+      "mandate": "mandat · {id}",
+      "intent": "Intention : abonnement équipe, 5 sièges.",
+      "rules": "Règles : plafond {cap} · budget restant {remaining}",
+      "signed": "Signé par passkey · il y a {minutes} min",
+      "transactions": "transactions",
+      "matched": "Rapprochée",
+      "mismatch": "Écart"
+    }
+  }
+}

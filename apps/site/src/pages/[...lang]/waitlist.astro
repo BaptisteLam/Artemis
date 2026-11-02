@@ -2,19 +2,20 @@
 import Base from '../../layouts/Base.astro';
 import PageHead from '../../components/PageHead.astro';
 import { API_URL } from '../../config';
-import { localeStaticPaths } from '../../i18n';
+import { i18n, localeStaticPaths } from '../../i18n';
 export function getStaticPaths() {
   return localeStaticPaths();
 }
+const { t } = i18n(Astro.url);
 ---
-<Base title="Liste d'attente" description="Soyez prévenu de l'ouverture des connecteurs bancaires réels.">
-  <PageHead eyebrow="Liste d'attente" title="Soyez parmi les premiers." lead="Les connecteurs Qonto et Revolut ouvrent progressivement. Laissez-nous votre email : nous vous prévenons dès que votre banque est disponible." />
+<Base title={t('waitlist.title')} description={t('waitlist.description')}>
+  <PageHead eyebrow={t('waitlist.title')} title={t('waitlist.headline')} lead={t('waitlist.lead')} />
   <div class="ar-container section">
-    <form class="form-grid ar-solid" id="waitlist" data-api={API_URL}>
-      <div class="ar-field"><label class="ar-field-label" for="email">Email professionnel</label><input class="ar-input" id="email" name="email" type="email" required autocomplete="email" /></div>
-      <div class="ar-field"><label class="ar-field-label" for="company">Entreprise</label><input class="ar-input" id="company" name="company" autocomplete="organization" /></div>
-      <div class="ar-field"><label class="ar-field-label" for="use_case">Que doivent payer vos agents ?</label><textarea class="ar-textarea" id="use_case" name="use_case" placeholder="API, SaaS, cloud, données…"></textarea></div>
-      <button class="ar-btn ar-btn-primary" type="submit">Rejoindre la liste</button>
+    <form class="form-grid ar-solid" id="waitlist" data-api={API_URL} data-msg-sending={t('waitlist.sending')} data-msg-ok={t('waitlist.ok')} data-msg-error={t('waitlist.error')}>
+      <div class="ar-field"><label class="ar-field-label" for="email">{t('waitlist.email')}</label><input class="ar-input" id="email" name="email" type="email" required autocomplete="email" /></div>
+      <div class="ar-field"><label class="ar-field-label" for="company">{t('waitlist.company')}</label><input class="ar-input" id="company" name="company" autocomplete="organization" /></div>
+      <div class="ar-field"><label class="ar-field-label" for="use_case">{t('waitlist.useCase')}</label><textarea class="ar-textarea" id="use_case" name="use_case" placeholder={t('waitlist.useCasePlaceholder')}></textarea></div>
+      <button class="ar-btn ar-btn-primary" type="submit">{t('waitlist.submit')}</button>
       <p class="form-msg" role="status" aria-live="polite"></p>
     </form>
   </div>
@@ -24,7 +25,7 @@ export function getStaticPaths() {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const data = Object.fromEntries(new FormData(form));
-      msg.textContent = 'Envoi…';
+      msg.textContent = form.dataset.msgSending ?? '';
       try {
         const res = await fetch(`${form.dataset.api}/v1/waitlist`, {
           method: 'POST',
@@ -33,9 +34,9 @@ export function getStaticPaths() {
         });
         if (!res.ok) throw new Error(String(res.status));
         form.reset();
-        msg.textContent = 'Merci, vous êtes inscrit. Nous vous écrivons dès l’ouverture.';
+        msg.textContent = form.dataset.msgOk ?? '';
       } catch {
-        msg.textContent = 'L’inscription a échoué. Réessayez dans un instant.';
+        msg.textContent = form.dataset.msgError ?? '';
       }
     });
   </script>

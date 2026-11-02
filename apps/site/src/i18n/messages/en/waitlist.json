@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Waitlist",
+    "description": "Get notified when live bank connectors open.",
+    "headline": "Be among the first.",
+    "lead": "The Qonto and Revolut connectors are opening gradually. Leave us your email and we will let you know as soon as your bank is available.",
+    "email": "Work email",
+    "company": "Company",
+    "useCase": "What do your agents need to pay for?",
+    "useCasePlaceholder": "APIs, SaaS, cloud, data…",
+    "submit": "Join the waitlist",
+    "sending": "Sending…",
+    "ok": "Thank you, you're on the list. We will email you as soon as it opens.",
+    "error": "Sign-up failed. Please try again in a moment."
+  }
+}
