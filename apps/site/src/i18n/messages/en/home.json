@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "The European solution · AI agents",
+      "lead": "The European financial firewall for your AI agents. Claude, ChatGPT or n8n ask, you sign with a single tap, and every expense is controlled, reconciled and proven, on the bank of your choice.",
+      "tryFree": "Try it free →",
+      "seeDemo": "Watch the demo",
+      "visualAria": "Example: an agent's request and its single-use card",
+      "expired": "Expired",
+      "pending": "Pending request",
+      "toApprove": "Awaiting approval",
+      "purpose": "team subscription",
+      "approve": "Approve with my passkey",
+      "decline": "Decline"
+    },
+    "trust": {
+      "aria": "Guarantees",
+      "europe": "European",
+      "europeText": "Euros, European banks, data in Frankfurt, GDPR.",
+      "funds": "Your funds stay with you",
+      "fundsText": "Artemis never holds money.",
+      "number": "Card number kept out of Artemis",
+      "numberText": "The card is displayed by your bank, not by us.",
+      "aiAct": "AI Act ready",
+      "aiActText": "Every expense signed, a chained log, a quarterly report."
+    },
+    "demo": {
+      "eyebrow": "Demo",
+      "title": "From request to payment in 20 seconds.",
+      "explain": "Without ever sharing the company card.",
+      "step1": "The agent asks",
+      "window": "claude · conversation",
+      "userMessage": "Subscribe the team to Notion Plus, 5 seats.",
+      "agentMessage": "I've requested a {amount} card. Waiting for your approval.",
+      "step2": "You approve",
+      "notification": "{agent} wants to spend {amount}",
+      "sheetTitle": "Approve the mandate",
+      "validity": "{minutes} min",
+      "faceId": "Sign with Face ID",
+      "step3": "The agent pays",
+      "reconciled": "Reconciled"
+    },
+    "benefits": {
+      "eyebrow": "What you're buying",
+      "title": "Not a card.",
+      "explain": "Banks are starting to give those away. You're buying control, time and proof.",
+      "control": {
+        "eyebrow": "Control",
+        "title": "Nothing goes out without your approval.",
+        "text": "Budgets, limits, allowed merchants, guardrails against prompt injection. Above your thresholds, every expense waits for your passkey signature, from one or more approvers."
+      },
+      "time": {
+        "eyebrow": "Time saved",
+        "title": "No more cards created by hand.",
+        "text": "The agent asks, you sign with a single tap, the card is created in your bank, the transaction is reconciled and the invoice filed. No more statements to tick off or receipts to chase."
+      },
+      "proof": {
+        "eyebrow": "Proof",
+        "title": "A human approved every expense.",
+        "text": "Signed mandates, a chained, tamper-proof audit log and a quarterly oversight report: what the AI Act, your CFO and your auditor ask for, ready to hand over."
+      },
+      "agencies": {
+        "eyebrow": "For agencies",
+        "title": "One budget and one invoice per client.",
+        "text": "Client workspaces, a monthly budget per client, a re-invoicing margin and a monthly report ready to send. Your clients finally see what their agents spend."
+      }
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "Four steps, no shared card.",
+      "s1": "The agent asks",
+      "s1Text": "Via MCP or the API: “{amount} at Notion, team subscription”.",
+      "s2": "The rules filter",
+      "s2Text": "Budget, limit, merchant: outside the rules, the request is refused on the spot.",
+      "s3": "You approve",
+      "s3Text": "A notification on your phone, a passkey signature.",
+      "s4": "The agent pays",
+      "s4Text": "A single-use card, the exact amount, a short expiry, then automatic reconciliation."
+    },
+    "useCases": {
+      "eyebrow": "Use cases",
+      "title": "What your agents already buy.",
+      "explain": "Now with a card of their own.",
+      "api": {
+        "title": "APIs and tokens",
+        "text": "Top up credits when the quota runs out, without leaving the company card in a .env file."
+      },
+      "saas": {
+        "title": "SaaS subscriptions",
+        "text": "Subscribe to or extend a plan for the team, for the exact amount approved."
+      },
+      "cloud": {
+        "title": "Cloud and domains",
+        "text": "Buy a domain name or pay a hosting overage in the middle of a deployment."
+      },
+      "data": {
+        "title": "Data and B2B purchases",
+        "text": "Pay for a dataset, a scraping job or supplies, with the receipt attached automatically.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Let's be honest",
+      "title": "Only using Stripe, Ramp or Mercury?",
+      "explain": "They already do part of the job.",
+      "lead": "Artemis brings what a bank won't do for its competitors.",
+      "banks": "Several banks at once",
+      "banksText": "Stripe Issuing, Revolut, Qonto and the Sandbox, run from one place under one policy.",
+      "accounting": "French accounting",
+      "accountingText": "FEC and Pennylane exports, a receipt attached to every mandate, automatic reconciliation.",
+      "proof": "AI Act proof, ready to hand over",
+      "proofText": "A human signature for every expense, a chained log, an agent register, a quarterly report.",
+      "agency": "An agency mode",
+      "agencyText": "Agents for several clients, each with its own budget, margin and report."
+    },
+    "europe": {
+      "eyebrow": "The European solution",
+      "title": "Built in Europe, for Europe.",
+      "lead": "American agent cards speak dollars, American banks and American law. Artemis speaks euros, European banks, GDPR, the AI Act and French accounting.",
+      "banks": "Euros and European banks: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "EU",
+      "data": "Data hosted in Frankfurt, GDPR, encrypted credentials",
+      "article": "Art. 14",
+      "oversight": "AI Act human oversight, proven expense by expense",
+      "accounting": "French accounting: FEC, Pennylane, attached receipts"
+    },
+    "compare": {
+      "eyebrow": "Comparison",
+      "title": "Your bank issues the card.",
+      "explain": "Artemis governs on top of all of them.",
+      "criterion": "Criterion",
+      "bankOnly": "Your bank alone (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Your bank alone",
+      "usCards": "American agent cards",
+      "usCardsShort": "US agent cards",
+      "rows": {
+        "card": "Virtual card for the agent",
+        "banks": "Several banks, one policy",
+        "signature": "Human signature for every expense (passkey)",
+        "aiAct": "Exportable AI Act proof",
+        "accounting": "French accounting (FEC, Pennylane)",
+        "agency": "Agency mode (budgets and re-invoicing per client)",
+        "europe": "Euros, hosting and data in Europe"
+      },
+      "values": {
+        "yes": "Yes",
+        "no": "No",
+        "yesBank": "Yes, issued by your bank",
+        "yesQuorum": "Yes, with quorum",
+        "dependsPlan": "Depends on the plan",
+        "dependsBank": "Depends on the bank",
+        "partial": "Partial"
+      }
+    },
+    "builders": {
+      "eyebrow": "For builders",
+      "title": "Plugged in with one line.",
+      "explain": "Claude, ChatGPT, n8n, Make or your own code.",
+      "lead": "A remote MCP server and a REST API. A free Sandbox with simulated cards to test without a bank.",
+      "connect": "Connect Claude →",
+      "window": "terminal"
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "title": "What people ask us.",
+      "more": "Another question? Read the <a href=\"{security}\">Security</a> page or the <a href=\"{docs}\">documentation</a>."
+    },
+    "final": {
+      "title": "Stay in control of your agents.",
+      "lead": "The European financial firewall, free in Sandbox, no credit card required. You keep the final say.",
+      "signup": "Create an account →",
+      "pricing": "See pricing",
+      "holder": "your.agent"
+    }
+  }
+}

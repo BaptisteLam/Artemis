@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Fonctionne avec",
+      "more": "MCP · API REST · Make"
+    },
+    "payCard": {
+      "singleUse": "Usage unique",
+      "aria": "Carte virtuelle se terminant par {last4}, titulaire {holder}, expire {exp}",
+      "holder": "Titulaire",
+      "expires": "Expire",
+      "debit": "Debit",
+      "virtual": "virtual",
+      "used": "Utilisée"
+    },
+    "faq": {
+      "q1": "Artemis détient-il mon argent ?",
+      "a1": "Non. Les cartes sont créées dans votre propre banque (Qonto, Revolut Business ou Stripe Issuing) et débitées sur votre compte. Artemis est un logiciel : il applique vos règles, recueille votre validation et pilote la banque par API. Il ne reçoit, ne détient et ne transfère jamais de fonds.",
+      "q2": "Et si mon agent est manipulé par une injection de prompt ?",
+      "a2": "L'agent ne peut que demander. Chaque carte est à usage unique, plafonnée au montant exact, verrouillée sur le marchand prévu et expire en 30 minutes. Hors de vos règles, la demande est refusée ; au-dessus de votre seuil, rien ne part sans votre passkey. Un écart de montant ou de marchand déclenche une alerte, et le bouton « Tout geler » coupe tout en un clic.",
+      "q3": "Le numéro de carte passe-t-il par Artemis ?",
+      "a3": "Non, par défaut. Au moment de payer, l'agent reçoit un lien à usage unique valable 10 minutes : la carte s'y affiche directement depuis la banque émettrice. Artemis ne voit, ne stocke ni ne relaie le numéro. Une fois ouvert, le lien ne fonctionne plus.",
+      "q4": "Pourquoi pas simplement ma banque ?",
+      "a4": "Si vous n'utilisez que Stripe, Ramp ou Mercury, ils font déjà une partie du travail. Artemis apporte ce qu'une banque ne fera pas pour ses concurrentes : plusieurs banques sous une seule politique, la compta française (FEC, Pennylane), une preuve AI Act prête à remettre et un mode agence.",
+      "q5": "Quelles banques sont compatibles ?",
+      "a5": "Stripe Issuing (recommandé) crée les cartes et les affiche à l'agent sans que le numéro passe par Artemis. Revolut Business fonctionne sous accord écrit de Revolut, en remise directe. Qonto se connecte en lecture, gel et rapprochement. La Sandbox simule une banque pour tester sans rien connecter.",
+      "q6": "Combien ça coûte ?",
+      "a6": "La Sandbox est gratuite. Ensuite {builder} (Builder), {team} (Team), {agency} + {client} par client actif ({agencyPlan}) ou dès {business} (Business) par mois. Au-delà du quota, {overage} par mandat. Aucune commission sur vos dépenses : votre banque applique son forfait habituel. {vat}.",
+      "q7": "Mes données sont-elles en Europe ?",
+      "a7": "Oui. La base est hébergée dans l'Union européenne (Francfort), les identifiants bancaires sont chiffrés en AES-256-GCM, et le journal d'audit chaîné documente la supervision humaine exigée par l'AI Act."
+    }
+  }
+}

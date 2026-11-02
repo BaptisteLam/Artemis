@@ -1,5 +1,6 @@
 ---
 /* Carte bancaire virtuelle réaliste (même rendu que le composant React PayCard de @artemis/ui). */
+import { i18n } from '../i18n';
 interface Props {
   last4: string;
   holder: string;
@@ -10,9 +11,10 @@ interface Props {
   class?: string;
   style?: string;
 }
-const { last4, holder, exp, tag = 'Usage unique', variant = 'cobalt', state = 'active', class: cls = '', style } = Astro.props;
+const { t } = i18n(Astro.url);
+const { last4, holder, exp, tag = t('components.payCard.singleUse'), variant = 'cobalt', state = 'active', class: cls = '', style } = Astro.props;
 ---
-<div class:list={['ar-paycard', `ar-paycard--${variant}`, cls]} data-state={state} role="img" aria-label={`Carte virtuelle se terminant par ${last4}, titulaire ${holder}, expire ${exp}`} style={style}>
+<div class:list={['ar-paycard', `ar-paycard--${variant}`, cls]} data-state={state} role="img" aria-label={t('components.payCard.aria', { last4, holder, exp })} style={style}>
   <div class="ar-paycard-inner" aria-hidden="true">
     <div class="ar-paycard-top">
       <span class="ar-paycard-brand"><svg viewBox="0 0 714 496"><path d="M0 496 L510 0 L510 280 L292 496 Z" /><path d="M510 280 H714 V496 H510 Z" /></svg>Artemis</span>
@@ -24,10 +26,10 @@ const { last4, holder, exp, tag = 'Usage unique', variant = 'cobalt', state = 'a
     </div>
     <div class="ar-paycard-num">{`•••• •••• •••• ${last4}`}</div>
     <div class="ar-paycard-bottom">
-      <div class="ar-paycard-field ar-paycard-field--grow"><small>Titulaire</small><span>{holder}</span></div>
-      <div class="ar-paycard-field"><small>Expire</small><span>{exp}</span></div>
-      <div class="ar-paycard-net">Debit<em>virtual</em></div>
+      <div class="ar-paycard-field ar-paycard-field--grow"><small>{t('components.payCard.holder')}</small><span>{holder}</span></div>
+      <div class="ar-paycard-field"><small>{t('components.payCard.expires')}</small><span>{exp}</span></div>
+      <div class="ar-paycard-net">{t('components.payCard.debit')}<em>{t('components.payCard.virtual')}</em></div>
     </div>
   </div>
-  {state === 'used' && <span class="ar-paycard-stamp">Utilisée</span>}
+  {state === 'used' && <span class="ar-paycard-stamp">{t('components.payCard.used')}</span>}
 </div>
