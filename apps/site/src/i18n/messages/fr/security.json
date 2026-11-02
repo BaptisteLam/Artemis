@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Sécurité et conformité",
+    "description": "Comment Artemis protège vos fonds, vos cartes et vos données.",
+    "eyebrow": "Sécurité",
+    "headline": "Conçu pour qu'un agent ne puisse rien faire seul.",
+    "lead": "Le pire scénario — un agent manipulé par une injection de prompt — est borné par la carte elle-même.",
+    "funds": {
+      "title": "Vos fonds ne quittent jamais votre banque",
+      "body": "Artemis est un logiciel. Les cartes sont émises par votre établissement (Qonto, Revolut Business, Stripe) sur votre compte. Nous ne détenons, ne recevons et ne transférons aucun fonds."
+    },
+    "defense": {
+      "title": "Défense en profondeur",
+      "i1": "Carte à usage unique, limitée au montant exact validé.",
+      "i2": "Expiration courte (30 minutes par défaut).",
+      "i3": "Règles par agent : budget, plafond, marchands, catégories.",
+      "i4": "Rapprochement automatique et alerte en cas d'écart de montant ou de marchand.",
+      "i5": "Bouton « Tout geler » : agents suspendus et cartes actives annulées en un clic.",
+      "i6": "Les agents ne peuvent que demander : aucun outil MCP ne modifie une règle ou n'approuve une dépense."
+    },
+    "cardNumbers": {
+      "title": "Numéros de carte",
+      "body": "Par défaut, le numéro complet et le cryptogramme ne passent jamais par Artemis : l'agent reçoit un lien éphémère à usage unique (10 minutes) et la carte s'affiche depuis la banque émettrice (Stripe Issuing Elements). Une remise directe existe en option avancée, désactivée par défaut ; même alors, rien n'est stocké."
+    },
+    "mandates": {
+      "title": "Mandats signés",
+      "body": "Chaque validation est une signature WebAuthn (passkey) sur l'empreinte SHA-256 du mandat : agent, montant, devise, marchand, intention, expiration. Le journal d'audit est chaîné par hachage et en insertion seule : toute altération est détectable."
+    },
+    "aiAct": {
+      "title": "AI Act et supervision humaine",
+      "body": "Le règlement européen sur l'IA demande aux déployeurs de journaliser et de superviser leurs systèmes. Le journal Artemis, exportable, documente qui a autorisé chaque dépense d'agent, quand et selon quelles règles."
+    },
+    "data": {
+      "title": "Données personnelles",
+      "body": "Base de données hébergée dans l'Union européenne (Supabase, Francfort). Identifiants bancaires chiffrés (AES-256-GCM). Voir la <a href=\"{href}\">politique de confidentialité</a>."
+    },
+    "report": {
+      "title": "Signaler une faille",
+      "body": "Écrivez à l'adresse indiquée dans les <a href=\"{href}\">mentions légales</a>. Nous répondons sous 72 heures."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Liste d'attente",
+    "description": "Soyez prévenu de l'ouverture des connecteurs bancaires réels.",
+    "headline": "Soyez parmi les premiers.",
+    "lead": "Les connecteurs Qonto et Revolut ouvrent progressivement. Laissez-nous votre email : nous vous prévenons dès que votre banque est disponible.",
+    "email": "Email professionnel",
+    "company": "Entreprise",
+    "useCase": "Que doivent payer vos agents ?",
+    "useCasePlaceholder": "API, SaaS, cloud, données…",
+    "submit": "Rejoindre la liste",
+    "sending": "Envoi…",
+    "ok": "Merci, vous êtes inscrit. Nous vous écrivons dès l’ouverture.",
+    "error": "L’inscription a échoué. Réessayez dans un instant."
+  }
+}

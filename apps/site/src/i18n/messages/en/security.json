@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Security and compliance",
+    "description": "How Artemis protects your funds, your cards and your data.",
+    "eyebrow": "Security",
+    "headline": "Built so that no agent can act on its own.",
+    "lead": "The worst case, an agent manipulated by a prompt injection, is contained by the card itself.",
+    "funds": {
+      "title": "Your funds never leave your bank",
+      "body": "Artemis is software. Cards are issued by your own provider (Qonto, Revolut Business, Stripe) on your account. We do not hold, receive or transfer any funds."
+    },
+    "defense": {
+      "title": "Defense in depth",
+      "i1": "Single-use card, capped at the exact approved amount.",
+      "i2": "Short expiry (30 minutes by default).",
+      "i3": "Rules per agent: budget, limit, merchants, categories.",
+      "i4": "Automatic reconciliation, with an alert on any amount or merchant mismatch.",
+      "i5": "“Freeze everything” button: agents suspended and active cards cancelled in one click.",
+      "i6": "Agents can only ask: no MCP tool can change a rule or approve a payment."
+    },
+    "cardNumbers": {
+      "title": "Card numbers",
+      "body": "By default, the full card number and security code never go through Artemis: the agent receives a short-lived, single-use link (10 minutes) and the card is displayed by the issuing bank (Stripe Issuing Elements). Direct delivery is available as an advanced option, off by default; even then, nothing is stored."
+    },
+    "mandates": {
+      "title": "Signed mandates",
+      "body": "Every approval is a WebAuthn (passkey) signature over the SHA-256 hash of the mandate: agent, amount, currency, merchant, purpose, expiry. The audit log is hash-chained and append-only: any tampering can be detected."
+    },
+    "aiAct": {
+      "title": "AI Act and human oversight",
+      "body": "The EU AI Act requires deployers to log and oversee their systems. The Artemis log, which you can export, records who authorized each agent payment, when, and under which rules."
+    },
+    "data": {
+      "title": "Personal data",
+      "body": "Database hosted in the European Union (Supabase, Frankfurt). Bank credentials encrypted (AES-256-GCM). See the <a href=\"{href}\">privacy policy</a>."
+    },
+    "report": {
+      "title": "Report a vulnerability",
+      "body": "Write to the address given in the <a href=\"{href}\">legal notice</a>. We reply within 72 hours."
+    }
+  }
+}

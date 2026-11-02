@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Template: AI agent spending policy",
+    "intro": "A free template to adapt, for governing spending made by artificial intelligence agents and documenting the human oversight required by Article 14 of the EU Artificial Intelligence Act (AI Act). Print this page or copy it into your wiki.",
+    "scope": {
+      "title": "1. Purpose and scope",
+      "body": "This policy applies to any software agent (conversational assistant, automation, script) authorized to make a purchase on behalf of [COMPANY]. No agent uses the payment card of the company or of an employee: every purchase goes through a single-use virtual card requested via Artemis."
+    },
+    "register": {
+      "title": "2. Agent register",
+      "body": "Each agent is recorded in the register with: its name, its platform, the human responsible for it, its purpose, its monthly budget, its per-purchase limit, its authorized merchants and, where applicable, the client it works for."
+    },
+    "rules": {
+      "title": "3. Spending rules",
+      "i1": "Monthly budget per agent: €[AMOUNT]; limit per purchase: €[AMOUNT].",
+      "i2": "Authorized merchants: [LIST]; prohibited categories: gambling, money transfers, quasi-cash, securities.",
+      "i3": "Automatic approval only below €[AMOUNT] and with an authorized merchant; above that, a human signature is mandatory.",
+      "i4": "Above €[AMOUNT], two separate signatories are required."
+    },
+    "oversight": {
+      "title": "4. Human oversight",
+      "body": "The persons authorized to approve are: [NAMES / ROLES]. Approval is given by passkey on the exact content of the mandate (agent, amount, merchant, purpose). Any request that is not approved expires automatically."
+    },
+    "records": {
+      "title": "5. Receipts and accounting",
+      "body": "Each purchase is matched with its invoice within [N] hours; failing that, the agent is suspended. Spending is exported monthly (FEC or Pennylane) and reconciled with bank statements."
+    },
+    "incidents": {
+      "title": "6. Incidents",
+      "body": "In the event of abnormal behavior, an amount or merchant discrepancy, or a suspected prompt injection, the person responsible immediately freezes the agent (or the entire organization) and records the incident."
+    },
+    "retention": {
+      "title": "7. Retention and review",
+      "body": "The chained audit log is kept for [10] years. An oversight report is produced every quarter and reviewed by [ROLE]. This policy is reviewed every year."
+    },
+    "note": "Artemis generates the agent register and the quarterly oversight report on the {plan} plan."
+  }
+}

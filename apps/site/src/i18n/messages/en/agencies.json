@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "For agencies",
+    "description": "Automation agencies: your clients' agents spend under control, with a budget and an invoice for each client.",
+    "eyebrow": "Automation agencies",
+    "headline": "Your clients' agents spend. You rebill without the hassle.",
+    "lead": "Do you build n8n, Make or Claude agents for your clients? Artemis separates spending by client, applies a budget to each one and prepares the rebilling with your margin.",
+    "try": "Try it for free →",
+    "plan": "{plan} plan: {base} + {client} per active client",
+    "spaces": {
+      "title": "One workspace per client",
+      "body": "Assign each agent to a client. Its requests, cards, transactions and receipts are kept separate. An agent can never spend another client's budget."
+    },
+    "budget": {
+      "title": "A monthly budget per client",
+      "body": "Set a monthly cap for each client, on top of each agent's rules. Beyond it, the request is rejected before it even reaches a human."
+    },
+    "rebilling": {
+      "title": "Rebilling in one click",
+      "body": "Every month, Artemis prepares a report for each client: purchases charged, agent, merchant, receipt, management fee based on your margin, total to rebill. CSV export ready to send or to import into your invoicing tool."
+    },
+    "proof": {
+      "title": "Proof for your clients",
+      "body": "Every payment is signed by an authorized person, and the log cannot be altered. Show your clients that their agents are under human oversight, as the AI Act requires."
+    },
+    "european": {
+      "title": "European, end to end",
+      "body": "Euros, European banks, data in Frankfurt, FEC and Pennylane exports for French accounting."
+    },
+    "demo": {
+      "window": "rebilling · martin-bakery · November",
+      "subtotal": "Subtotal",
+      "fee": "Management fee 15%",
+      "total": "Total to rebill"
+    }
+  }
+}

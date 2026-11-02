@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "How it works",
+    "description": "How Artemis lets your AI agents pay while you stay in control.",
+    "headline": "The agent asks, you decide, the bank pays.",
+    "lead": "Artemis sits between your agents and your bank. It applies your rules, collects your approval and creates a single-use card for the exact amount.",
+    "step1": {
+      "title": "1. You connect your bank",
+      "body": "Stripe Issuing (recommended) or Revolut Business: virtual cards are created in <strong>your</strong> account and charged to <strong>your</strong> funds. Qonto connects for read access, freezing and reconciliation. Artemis never receives, holds or transfers money. To try it out, the Sandbox simulates a bank."
+    },
+    "step2": {
+      "title": "2. You create an agent and its rules",
+      "body": "Each agent gets a secret token and a policy: monthly budget, per-purchase limit, currencies, allowed or blocked merchants, merchant categories, auto-approval threshold and card lifetime."
+    },
+    "step3": {
+      "title": "3. The agent requests a card",
+      "body": "Through the MCP tool <code>request_card</code> or the REST API. A request that breaks the rules is rejected immediately, with a clear reason. All others wait for your approval, except small amounts at a trusted merchant if you have allowed it."
+    },
+    "step4": {
+      "title": "4. You approve with a passkey",
+      "body": "You get a notification. The mandate screen shows the agent, the amount, the merchant and the purpose. You sign with your passkey (Face ID, fingerprint, security key). The signature covers the exact content of the mandate."
+    },
+    "step5": {
+      "title": "5. The agent pays, Artemis reconciles",
+      "body": "The card is single-use, capped at the amount, and expires quickly. The agent receives a short-lived link: the card is displayed by your bank, and the number never goes through Artemis. As soon as the bank reports the transaction, Artemis reconciles it, flags any discrepancy and files the receipt."
+    },
+    "demo": {
+      "mandate": "mandate · {id}",
+      "intent": "Purpose: team subscription, 5 seats.",
+      "rules": "Rules: limit {cap} · remaining budget {remaining}",
+      "signed": "Signed with passkey · {minutes} min ago",
+      "transactions": "transactions",
+      "matched": "Reconciled",
+      "mismatch": "Discrepancy"
+    }
+  }
+}
