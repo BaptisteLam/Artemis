@@ -1,0 +1,23 @@
+{
+  "subscriptions": {
+    "title": "Naročnine",
+    "lead": "Naročnine, ki so jih sklenili vaši agenti: kartica vezana na trgovca, mesečna omejitev, zaznavanje neaktivnih naročnin.",
+    "confirmCancel": "Prekličem to naročnino? Kartica bo preklicana pri banki.",
+    "planRequired": "Naročnine, ki jih upravljajo agenti, so vključene od paketa Team naprej.",
+    "seePlans": "Oglejte si pakete →",
+    "dormantAlert_one": "{count} naročnina brez plačila več kot {days} dni: razmislite o njeni odpovedi.",
+    "dormantAlert_two": "{count} naročnini brez plačila več kot {days} dni: razmislite o njuni odpovedi.",
+    "dormantAlert_few": "{count} naročnine brez plačila več kot {days} dni: razmislite o njihovi odpovedi.",
+    "dormantAlert_other": "{count} naročnin brez plačila več kot {days} dni: razmislite o njihovi odpovedi.",
+    "emptyTitle": "Ni naročnin",
+    "emptyText": "Agent ustvari naročnino z request_card in možnostjo ponavljajočega se plačila.",
+    "colMerchant": "Trgovec",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Mesečna omejitev",
+    "colPaid": "Plačano",
+    "colLastPayment": "Zadnje plačilo",
+    "colStatus": "Stanje",
+    "dormant": "Neaktivna",
+    "cancel": "Prekliči"
+  }
+}

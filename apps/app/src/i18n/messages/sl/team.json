@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Ekipa",
+    "lead": "Odobritelji prejemajo zahteve in jih podpisujejo s svojim ključem za dostop.",
+    "confirmRemove": "Odstranim tega člana?",
+    "cols": {
+      "member": "Član",
+      "role": "Vloga",
+      "since": "Od"
+    },
+    "you": "vi",
+    "remove": "Odstrani",
+    "invite": "Povabi",
+    "email": "E-pošta",
+    "role": "Vloga",
+    "send": "Pošlji povabilo",
+    "inviteLink": "Povezava do povabila (velja 7 dni):",
+    "expiresOn": "velja do {date}",
+    "revoke": "Prekliči"
+  }
+}

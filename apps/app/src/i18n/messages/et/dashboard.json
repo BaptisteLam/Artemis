@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · pakett {plan}",
+    "title": "Töölaud",
+    "stats": {
+      "spent": "Sel kuul kulutatud",
+      "pending": "Kinnitamiseks",
+      "openQueue": "Ava järjekord →",
+      "requests": "Taotlused sel kuul"
+    },
+    "recent": {
+      "title": "Viimased taotlused",
+      "viewAll": "Vaata kõiki →",
+      "empty": "Sel kuul taotlusi pole. Ühendage agent lehel {agents}.",
+      "agentsLink": "Agendid"
+    },
+    "byAgent": {
+      "title": "Agentide kaupa",
+      "manage": "Halda →",
+      "empty": "Agente pole."
+    }
+  }
+}

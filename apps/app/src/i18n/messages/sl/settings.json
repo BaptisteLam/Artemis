@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Nastavitve",
+    "signOut": "Odjava",
+    "language": {
+      "title": "Jezik",
+      "lead": "Jezik vmesnika v tej napravi."
+    },
+    "notifications": {
+      "title": "Obvestila v tej napravi",
+      "lead": "Prejmite obvestilo ob vsaki zahtevi. Na iPhonu najprej dodajte Artemis na začetni zaslon (Deli → Dodaj na začetni zaslon).",
+      "notConfigured": "Potisna obvestila na tem strežniku niso nastavljena (ključi VAPID). E-pošta ostaja aktivna.",
+      "unsupported": "Ta brskalnik ne podpira potisnih obvestil.",
+      "denied": "Obvestila so blokirana v nastavitvah brskalnika.",
+      "enable": "Vklopi obvestila",
+      "on": "Obvestila so vklopljena.",
+      "disable": "Izklopi"
+    },
+    "slack": {
+      "lead": "Vsaka čakajoča zahteva se objavi v kanalu Slack z gumbom, ki odpre odobritev s ključem za dostop. V Slacku ustvarite »Incoming Webhook« in prilepite njegov URL.",
+      "connected": "Slack je povezan.",
+      "disconnect": "Odklopi",
+      "urlLabel": "URL webhooka Slack",
+      "connect": "Poveži",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Predaja kartice agentom",
+      "confirmDirect": "Neposredna predaja: številka kartice bo na poti do agenta enkrat šla prek Artemis. S tem vstopite v obseg PCI DSS, pri Revolutu pa je potrebno pisno dovoljenje. Želite nadaljevati?",
+      "linkTitle": "Začasna povezava (priporočeno)",
+      "linkText": "Agent prejme povezavo za enkratno uporabo, ki velja 10 minut; kartico prikaže banka izdajateljica (Stripe Issuing). Številka nikoli ne gre prek Artemis.",
+      "directTitle": "Neposredna predaja (napredna možnost)",
+      "directText": "Številka se agentu posreduje samo enkrat in se ne shrani. Potrebno za Revolut. Vstopite v obseg PCI DSS."
+    },
+    "org": {
+      "title": "Organizacija",
+      "name": "Ime",
+      "rename": "Preimenuj"
+    },
+    "emergency": {
+      "title": "Nujni primeri",
+      "lead": "»Zamrzni vse« ustavi vse agente ter prekliče aktivne kartice in čakajoče zahteve. Uporabite to, če se agent vede nenavadno ali če je žeton ušel v javnost.",
+      "confirmFreeze": "Zamrznem celotno organizacijo? Vsi agenti bodo zamrznjeni, aktivne kartice pa preklicane.",
+      "unfreeze": "Odmrzni organizacijo",
+      "freeze": "Zamrzni vse zdaj",
+      "afterUnfreeze": "Po odmrznitvi ponovno aktivirajte vsakega agenta na njegovi strani."
+    },
+    "passkeys": {
+      "title": "Ključi za dostop",
+      "devicePrompt": "Ime naprave (npr. Lein iPhone)",
+      "confirmDelete": "Izbrišem ta ključ za dostop?",
+      "add": "Dodaj",
+      "lead": "Za odobritev izdatka je potreben ključ za dostop. Dodajte ga v vsako napravo, ki jo uporabljate.",
+      "addedOn": "dodan {date}",
+      "delete": "Izbriši",
+      "none": "Ni ključa za dostop: izdatkov še ne morete odobravati."
+    }
+  }
+}

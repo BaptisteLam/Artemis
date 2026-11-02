@@ -17,7 +17,7 @@
     },
     "connect": {
       "title": "Povežite svojega agenta",
-      "done": "Žeton sem kopiral →"
+      "done": "Žeton je kopiran →"
     },
     "passkey": {
       "title": "Vaš ključ za dostop za odobritve",

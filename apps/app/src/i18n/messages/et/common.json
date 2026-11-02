@@ -1,0 +1,90 @@
+{
+  "common": {
+    "loading": "Laadimine…",
+    "copy": "Kopeeri",
+    "copied": "Kopeeritud"
+  },
+  "lang": {
+    "choose": "Keel"
+  },
+  "nav": {
+    "dashboard": "Töölaud",
+    "requests": "Taotlused",
+    "agents": "Agendid",
+    "clients": "Kliendid",
+    "cards": "Kaardid",
+    "subscriptions": "Tellimused",
+    "transactions": "Tehingud",
+    "exports": "Ekspordid",
+    "banks": "Pangad",
+    "team": "Meeskond",
+    "audit": "Audit",
+    "billing": "Arveldus",
+    "settings": "Seaded"
+  },
+  "shell": {
+    "home": "Artemis, töölaud",
+    "organization": "Organisatsioon",
+    "admin": "Haldus",
+    "freezeAllHint": "Külmuta kõik agendid ja tühista aktiivsed kaardid",
+    "frozen": "Külmutatud",
+    "freezeAll": "Külmuta kõik",
+    "signOut": "Logi välja",
+    "navAria": "Rakenduse navigatsioon",
+    "pendingCount_one": "{count} ootel",
+    "pendingCount_other": "{count} ootel",
+    "frozenBanner": "Organisatsioon on külmutatud: uusi kaarte ei saa väljastada. Lõpetage külmutamine jaotises Seaded."
+  },
+  "status": {
+    "pending": "Kinnitamiseks",
+    "approved": "Kinnitatud",
+    "issued": "Kaart väljastatud",
+    "completed": "Makstud",
+    "rejected": "Tagasi lükatud",
+    "expired": "Aegunud",
+    "failed": "Panga viga",
+    "canceled": "Tühistatud",
+    "active": "Aktiivne",
+    "pending_bank_sca": "Panga kinnitus",
+    "used": "Kasutatud",
+    "frozen": "Külmutatud",
+    "matched": "Sobitatud",
+    "mismatch": "Lahknevus",
+    "unmatched": "Sobitamata"
+  },
+  "roles": {
+    "owner": "Omanik",
+    "admin": "Administraator",
+    "approver": "Kinnitaja",
+    "viewer": "Vaataja"
+  },
+  "errors": {
+    "network": "Võrk pole saadaval. Kontrollige oma ühendust.",
+    "unauthorized": "Teie seanss on aegunud. Palun logige uuesti sisse.",
+    "forbidden": "Teil ei ole selleks õigust.",
+    "not_found": "Ei leitud või pole enam saadaval.",
+    "invalid_input": "Osa andmeid on vigased. Palun kontrollige vormi.",
+    "rate_limited": "Liiga palju katseid. Oodake hetk ja proovige uuesti.",
+    "quota_exceeded": "Teie kuu volituste kvoot on täis.",
+    "subscription_inactive": "Teie tellimus ei ole aktiivne. Uuendage seda jaotises Arveldus.",
+    "org_frozen": "Organisatsioon on külmutatud.",
+    "agent_frozen": "See agent on külmutatud.",
+    "request_not_pending": "See taotlus ei ole enam ootel.",
+    "request_expired": "See taotlus on aegunud.",
+    "already_revealed": "See kaart on juba üle antud.",
+    "card_not_ready": "Kaart ei ole veel saadaval.",
+    "bank_error": "Pank keeldus toimingust.",
+    "plan_limit": "Teie paketi limiit on täis. Jätkamiseks valige kõrgem pakett.",
+    "over_client_budget": "Selle kliendi kuueelarve on ületatud.",
+    "internal": "Midagi läks valesti. Palun proovige uuesti.",
+    "currency_not_allowed": "Poliitika ei luba seda valuutat.",
+    "invalid_amount": "Vigane summa.",
+    "over_transaction_limit": "Summa ületab tehingupõhise limiidi.",
+    "over_monthly_budget": "Agendi kuueelarve on ületatud.",
+    "merchant_blocked": "Poliitika blokeerib selle kaupmehe.",
+    "merchant_not_allowed": "Seda kaupmeest pole lubatute loendis.",
+    "mcc_blocked": "See kaupmehe kategooria on blokeeritud.",
+    "mcc_not_allowed": "See kaupmehe kategooria ei ole lubatud.",
+    "too_many_requests": "Sellel agendil on viimase tunni jooksul liiga palju taotlusi."
+  }
+}

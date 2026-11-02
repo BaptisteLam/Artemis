@@ -1,0 +1,17 @@
+{
+  "transactions": {
+    "title": "Transakcije",
+    "lead": "Operacije, ki so jih sporočile vaše banke, usklajene s pooblastili (zadnjih 90 dni).",
+    "mismatches_one": "{count} transakcija se ne ujema s svojim pooblastilom. Preverite jo in po potrebi zamrznite agenta.",
+    "mismatches_two": "{count} transakciji se ne ujemata s svojima pooblastiloma. Preverite ju in po potrebi zamrznite agenta.",
+    "mismatches_few": "{count} transakcije se ne ujemajo s svojimi pooblastili. Preverite jih in po potrebi zamrznite agenta.",
+    "mismatches_other": "{count} transakcij se ne ujema s svojimi pooblastili. Preverite jih in po potrebi zamrznite agenta.",
+    "emptyTitle": "Ni transakcij",
+    "emptyText": "Prikažejo se nekaj minut po vsakem plačilu.",
+    "colDate": "Datum",
+    "colMerchant": "Trgovec",
+    "colAmount": "Znesek",
+    "colBankStatus": "Stanje v banki",
+    "colMatch": "Usklajevanje"
+  }
+}

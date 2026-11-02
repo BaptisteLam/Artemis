@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtriraj po stanju",
+      "all": "Vse",
+      "pending": "Za odobritev",
+      "issued": "Kartica izdana",
+      "completed": "Plačano",
+      "rejected": "Zavrnjeno",
+      "failed": "Neuspešno"
+    },
+    "list": {
+      "title": "Zahteve",
+      "lead": "Vsaka zahteva agenta z odločitvijo in kartico.",
+      "emptyTitle": "Ni zahtev",
+      "emptyBody": "Tukaj se bodo prikazale zahteve vaših agentov."
+    },
+    "decision": {
+      "notAllowed": "Odločajo lahko samo lastniki, skrbniki in odobritelji.",
+      "cancelledOnDevice": "Odobritev je bila preklicana v napravi.",
+      "reasonLabel": "Razlog za zavrnitev",
+      "reasonHint": "Agent ga bo videl.",
+      "confirmReject": "Potrdi zavrnitev",
+      "cancel": "Prekliči",
+      "signing": "Podpisovanje …",
+      "approve": "Odobri s ključem za dostop",
+      "reject": "Zavrni"
+    },
+    "detail": {
+      "confirmCancel": "Prekličem to zahtevo in njeno kartico?",
+      "receiptUnavailable": "Račun ni na voljo.",
+      "eyebrow": "Zahteva · {id}",
+      "amount": "Zahtevani znesek",
+      "agent": "Agent",
+      "mandateWindow": "pooblastilo · {id}",
+      "purpose": "Namen",
+      "category": "Kategorija",
+      "expires": "Velja do",
+      "rules": "Pravila",
+      "perTxLimit": "Omejitev",
+      "budget": "proračun",
+      "decision": "Odločitev",
+      "hash": "sha256 {hash}",
+      "quorum": "Sklepčnost: {signed} od {required} zahtevanih podpisov nad pragom.",
+      "unusualAmount": "Varovalka: nenavaden znesek za tega agenta, potrebna je odobritev s strani človeka.",
+      "autoApproved": "Samodejno odobreno po pravilih",
+      "signedByPasskey": "Pooblastilo podpisano s ključem za dostop",
+      "card": "Kartica",
+      "cardHolderFallback": "agent",
+      "cardAria": "Virtualna kartica s končnico {last4}, imetnik {holder}, velja do {exp}",
+      "bankSca": "Ustvarjanje kartice odobrite tudi v svoji bančni aplikaciji.",
+      "cardExpires": "Velja do {date}",
+      "handedOver": "predana agentu {time}",
+      "notHandedOver": "še ni predana agentu",
+      "qontoNotice": "Qonto kartic ne predaja agentom: prikažite jo tukaj in plačilo dokončajte sami.",
+      "showQontoCard": "Prikaži kartico (Qonto)",
+      "simulatePayment": "Simuliraj plačilo",
+      "cancelCard": "Prekliči kartico",
+      "noCard": "Izdana ni bila nobena kartica.",
+      "transactions": "Transakcije",
+      "noTransactions": "Banka ni sporočila nobene transakcije.",
+      "receipts": "Računi",
+      "addReceipt": "Dodaj",
+      "noReceipts": "Ni računov.",
+      "back": "← Vse zahteve"
+    }
+  }
+}
