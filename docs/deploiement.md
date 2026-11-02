@@ -45,7 +45,7 @@ Le déploiement est fait par **GitHub Actions** (`.github/workflows/deploy.yml`)
 
    Onglet *Variables* (facultatif) : `ADMIN_EMAILS` = votre email (accès à la page d'administration).
 
-4. Lancez le workflow (ou dites à Claude de le lancer). Le résumé du run affiche les trois adresses.
+4. Lancez le workflow (*Actions → Déploiement Cloudflare → Run workflow*), ou attendez le prochain push : il part seul après chaque CI verte. Le résumé du run affiche les trois adresses.
 
 Ce que le script fait seul : il lit votre sous-domaine, déploie les trois Workers avec les bonnes adresses croisées (CORS, passkeys, liens éphémères), pose `SUPABASE_URL`, et **génère une seule fois** `CONNECTIONS_KEY` (chiffrement des accès bancaires) et les clés VAPID (notifications push). Une clé déjà posée sur Cloudflare n'est jamais remplacée. Pour garder une copie de `CONNECTIONS_KEY`, générez-la vous-même (`openssl rand -base64 32`) et ajoutez-la comme secret GitHub **avant** le premier déploiement.
 
