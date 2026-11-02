@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · {plan} plan",
+    "title": "Dashboard",
+    "stats": {
+      "spent": "Spent this month",
+      "pending": "To approve",
+      "openQueue": "Open the queue →",
+      "requests": "Requests this month"
+    },
+    "recent": {
+      "title": "Latest requests",
+      "viewAll": "View all →",
+      "empty": "No requests this month. Connect an agent from the {agents} page.",
+      "agentsLink": "Agents"
+    },
+    "byAgent": {
+      "title": "By agent",
+      "manage": "Manage →",
+      "empty": "No agents."
+    }
+  }
+}

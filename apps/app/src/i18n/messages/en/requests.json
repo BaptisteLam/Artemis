@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filter by status",
+      "all": "All",
+      "pending": "To approve",
+      "issued": "Card issued",
+      "completed": "Paid",
+      "rejected": "Rejected",
+      "failed": "Failed"
+    },
+    "list": {
+      "title": "Requests",
+      "lead": "Every agent request, with its decision and its card.",
+      "emptyTitle": "No requests",
+      "emptyBody": "Your agents' requests will appear here."
+    },
+    "decision": {
+      "notAllowed": "Only owners, administrators and approvers can decide.",
+      "cancelledOnDevice": "Approval cancelled on the device.",
+      "reasonLabel": "Reason for rejection",
+      "reasonHint": "Visible to the agent.",
+      "confirmReject": "Confirm rejection",
+      "cancel": "Cancel",
+      "signing": "Signing…",
+      "approve": "Approve with my passkey",
+      "reject": "Reject"
+    },
+    "detail": {
+      "confirmCancel": "Cancel this request and its card?",
+      "receiptUnavailable": "Receipt unavailable.",
+      "eyebrow": "Request · {id}",
+      "amount": "Amount requested",
+      "agent": "Agent",
+      "mandateWindow": "mandate · {id}",
+      "purpose": "Purpose",
+      "category": "Category",
+      "expires": "Expires",
+      "rules": "Rules",
+      "perTxLimit": "Limit",
+      "budget": "budget",
+      "decision": "Decision",
+      "hash": "sha256 {hash}",
+      "quorum": "Quorum: {signed} of {required} required signatures above the threshold.",
+      "unusualAmount": "Safeguard: unusual amount for this agent, human approval required.",
+      "autoApproved": "Approved automatically by the rules",
+      "signedByPasskey": "Mandate signed with a passkey",
+      "card": "Card",
+      "cardHolderFallback": "agent",
+      "cardAria": "Virtual card ending in {last4}, holder {holder}, expires {exp}",
+      "bankSca": "Also approve the card creation in your banking app.",
+      "cardExpires": "Expires {date}",
+      "handedOver": "handed to the agent {time}",
+      "notHandedOver": "not yet handed to the agent",
+      "qontoNotice": "Qonto does not hand cards over to agents: display it here and complete the payment yourself.",
+      "showQontoCard": "Show the card (Qonto)",
+      "simulatePayment": "Simulate a payment",
+      "cancelCard": "Cancel the card",
+      "noCard": "No card issued.",
+      "transactions": "Transactions",
+      "noTransactions": "No transactions reported by the bank.",
+      "receipts": "Receipts",
+      "addReceipt": "Add",
+      "noReceipts": "No receipts.",
+      "back": "← All requests"
+    }
+  }
+}

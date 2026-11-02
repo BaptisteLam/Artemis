@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Amount, Button, Glass, Logo, Stage } from '@artemis/ui';
 import { API_URL } from '../../lib/config';
 import { CopyButton, ErrorAlert, Loading } from '../../components';
+import { t, useI18n } from '../../i18n';
 
 interface Meta {
   provider: 'sandbox' | 'stripe' | string;
@@ -26,8 +27,8 @@ function loadStripe(): Promise<(pk: string) => StripeLike> {
   return new Promise((resolve, reject) => {
     const s = document.createElement('script');
     s.src = 'https://js.stripe.com/v3/';
-    s.onload = () => (w.Stripe ? resolve(w.Stripe) : reject(new Error('Stripe.js indisponible')));
-    s.onerror = () => reject(new Error('Stripe.js indisponible'));
+    s.onload = () => (w.Stripe ? resolve(w.Stripe) : reject(new Error(t('reveal.errors.stripeUnavailable'))));
+    s.onerror = () => reject(new Error(t('reveal.errors.stripeUnavailable')));
     document.head.appendChild(s);
   });
 }
@@ -35,13 +36,14 @@ function loadStripe(): Promise<(pk: string) => StripeLike> {
 async function call<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${API_URL}${path}`, init);
   const body = (await res.json().catch(() => null)) as T & { error?: { message: string } };
-  if (!res.ok) throw new Error(body?.error?.message ?? 'Lien invalide, déjà utilisé ou expiré.');
+  if (!res.ok) throw new Error(body?.error?.message ?? t('reveal.errors.invalidLink'));
   return body;
 }
 
 /** Page publique du lien éphémère : affiche la carte une seule fois, depuis l'émetteur. */
 export function RevealCard() {
   const { token = '' } = useParams();
+  const { t } = useI18n();
   const [meta, setMeta] = useState<Meta | null>(null);
   const [card, setCard] = useState<SandboxCard | null>(null);
   const [stripeShown, setStripeShown] = useState(false);
@@ -62,7 +64,7 @@ export function RevealCard() {
         const Stripe = await loadStripe();
         const stripe = Stripe(meta.stripe.publishableKey);
         const { nonce, error: e } = await stripe.createEphemeralKeyNonce({ issuingCard: meta.stripe.cardId });
-        if (!nonce) throw new Error(e?.message ?? 'Stripe a refusé la demande.');
+        if (!nonce) throw new Error(e?.message ?? t('reveal.errors.stripeRefused'));
         const s = await call<{ stripe: { ephemeralKeySecret: string; cardId: string; nonce: string } }>(
           `/v1/reveal-links/${encodeURIComponent(token)}/session`,
           { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ nonce }) },
@@ -96,33 +98,33 @@ export function RevealCard() {
           {error && !meta ? <ErrorAlert error={error} /> : null}
           {meta ? (
             <div className="ar-stack">
-              <span className="ar-micro">Carte à usage unique · {meta.provider === 'sandbox' ? 'banque simulée' : 'émise par votre banque'}</span>
+              <span className="ar-micro">{meta.provider === 'sandbox' ? t('reveal.eyebrowSandbox') : t('reveal.eyebrowBank')}</span>
               <div className="ar-spread">
                 <strong>{meta.merchant}</strong>
                 <Amount cents={meta.amount} currency={meta.currency} />
               </div>
-              <p className="ar-small ar-muted" style={{ margin: 0 }}>Ce lien ne s'ouvre qu'une fois. La carte est plafonnée au montant ci-dessus et verrouillée sur ce marchand.</p>
+              <p className="ar-small ar-muted" style={{ margin: 0 }}>{t('reveal.lead')}</p>
               {card ? (
                 <div className="reveal-fields">
-                  <div><small>Numéro</small><strong className="ar-mono" data-testid="card-number">{card.number.replace(/(\d{4})(?=\d)/g, '$1 ')}</strong><CopyButton text={card.number} /></div>
-                  <div><small>Expiration</small><strong className="ar-mono">{exp}</strong><CopyButton text={exp} /></div>
-                  <div><small>Cryptogramme</small><strong className="ar-mono">{card.cvc}</strong><CopyButton text={card.cvc} /></div>
-                  <div><small>Titulaire</small><strong className="ar-mono">{card.name}</strong></div>
+                  <div><small>{t('reveal.fields.number')}</small><strong className="ar-mono" data-testid="card-number">{card.number.replace(/(\d{4})(?=\d)/g, '$1 ')}</strong><CopyButton text={card.number} /></div>
+                  <div><small>{t('reveal.fields.expiry')}</small><strong className="ar-mono">{exp}</strong><CopyButton text={exp} /></div>
+                  <div><small>{t('reveal.fields.cvc')}</small><strong className="ar-mono">{card.cvc}</strong><CopyButton text={card.cvc} /></div>
+                  <div><small>{t('reveal.fields.holder')}</small><strong className="ar-mono">{card.name}</strong></div>
                 </div>
               ) : stripeShown ? (
                 <div className="reveal-fields">
-                  <div><small>Numéro</small><div ref={refs.number} /></div>
-                  <div><small>Expiration</small><div ref={refs.expiry} /></div>
-                  <div><small>Cryptogramme</small><div ref={refs.cvc} /></div>
+                  <div><small>{t('reveal.fields.number')}</small><div ref={refs.number} /></div>
+                  <div><small>{t('reveal.fields.expiry')}</small><div ref={refs.expiry} /></div>
+                  <div><small>{t('reveal.fields.cvc')}</small><div ref={refs.cvc} /></div>
                 </div>
               ) : (
-                <Button onClick={() => void open()} disabled={busy}>{busy ? 'Ouverture…' : `Afficher la carte •••• ${meta.last4}`}</Button>
+                <Button onClick={() => void open()} disabled={busy}>{busy ? t('reveal.opening') : t('reveal.show', { last4: meta.last4 })}</Button>
               )}
               <ErrorAlert error={meta ? error : null} />
             </div>
           ) : null}
         </Glass>
-        <p className="ar-small" style={{ margin: 0, opacity: 0.85 }}>Le numéro s'affiche depuis la banque émettrice : il ne transite pas par Artemis.</p>
+        <p className="ar-small" style={{ margin: 0, opacity: 0.85 }}>{t('reveal.footer')}</p>
       </div>
     </Stage>
   );

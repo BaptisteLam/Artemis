@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtrer par statut",
+      "all": "Toutes",
+      "pending": "À valider",
+      "issued": "Carte émise",
+      "completed": "Payées",
+      "rejected": "Refusées",
+      "failed": "Échecs"
+    },
+    "list": {
+      "title": "Demandes",
+      "lead": "Chaque demande d'agent, avec sa décision et sa carte.",
+      "emptyTitle": "Aucune demande",
+      "emptyBody": "Les demandes de vos agents apparaîtront ici."
+    },
+    "decision": {
+      "notAllowed": "Seuls les propriétaires, administrateurs et approbateurs peuvent décider.",
+      "cancelledOnDevice": "Validation annulée sur l’appareil.",
+      "reasonLabel": "Motif du refus",
+      "reasonHint": "Visible par l'agent.",
+      "confirmReject": "Confirmer le refus",
+      "cancel": "Annuler",
+      "signing": "Signature en cours…",
+      "approve": "Approuver avec ma passkey",
+      "reject": "Refuser"
+    },
+    "detail": {
+      "confirmCancel": "Annuler cette demande et sa carte ?",
+      "receiptUnavailable": "Justificatif indisponible.",
+      "eyebrow": "Demande · {id}",
+      "amount": "Montant demandé",
+      "agent": "Agent",
+      "mandateWindow": "mandat · {id}",
+      "purpose": "Intention",
+      "category": "Catégorie",
+      "expires": "Expire",
+      "rules": "Règles",
+      "perTxLimit": "Plafond",
+      "budget": "budget",
+      "decision": "Décision",
+      "hash": "sha256 {hash}",
+      "quorum": "Quorum : {signed} signature(s) sur {required} requises au-dessus du seuil.",
+      "unusualAmount": "Garde-fou : montant inhabituel pour cet agent, validation humaine obligatoire.",
+      "autoApproved": "Validée automatiquement par les règles",
+      "signedByPasskey": "Mandat signé par passkey",
+      "card": "Carte",
+      "cardHolderFallback": "agent",
+      "cardAria": "Carte virtuelle se terminant par {last4}, titulaire {holder}, expire le {exp}",
+      "bankSca": "Validez aussi la création de la carte dans votre application bancaire.",
+      "cardExpires": "Expire {date}",
+      "handedOver": "remise à l'agent {time}",
+      "notHandedOver": "pas encore remise à l'agent",
+      "qontoNotice": "Qonto ne transmet pas la carte aux agents : affichez-la ici et finalisez le paiement vous-même.",
+      "showQontoCard": "Afficher la carte (Qonto)",
+      "simulatePayment": "Simuler un paiement",
+      "cancelCard": "Annuler la carte",
+      "noCard": "Aucune carte émise.",
+      "transactions": "Transactions",
+      "noTransactions": "Aucune transaction remontée par la banque.",
+      "receipts": "Justificatifs",
+      "addReceipt": "Ajouter",
+      "noReceipts": "Aucun justificatif.",
+      "back": "← Toutes les demandes"
+    }
+  }
+}
