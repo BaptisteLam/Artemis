@@ -18,6 +18,8 @@ export interface CreateCardInput {
   expiresAt: Date;
   label: string;
   idempotencyKey: string;
+  /** Carte d'abonnement : plafond par mois au lieu d'un usage unique. */
+  recurring?: 'month';
 }
 
 export interface CreatedCard {

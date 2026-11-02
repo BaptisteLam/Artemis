@@ -6,7 +6,7 @@ export interface SandboxState {
   seed: string;
   cards: Record<
     string,
-    { limitCents: number; currency: string; merchant: string; label: string; status: 'active' | 'used' | 'canceled'; expiresAt: string; idempotencyKey: string }
+    { limitCents: number; currency: string; merchant: string; label: string; status: 'active' | 'used' | 'canceled'; expiresAt: string; idempotencyKey: string; recurring?: boolean }
   >;
   transactions: Array<Omit<BankTransaction, 'occurredAt'> & { occurredAt: string }>;
 }
@@ -73,6 +73,7 @@ export class SandboxConnector implements BankConnector {
         status: 'active',
         expiresAt: input.expiresAt.toISOString(),
         idempotencyKey: input.idempotencyKey,
+        recurring: input.recurring === 'month',
       };
       await this.persist();
     }
@@ -108,7 +109,7 @@ export class SandboxConnector implements BankConnector {
       status: ok ? 'posted' : 'declined',
       occurredAt: now,
     };
-    if (ok) c!.status = 'used';
+    if (ok && !c!.recurring) c!.status = 'used';
     this.state.transactions.push({ ...tx, occurredAt: now.toISOString() });
     await this.persist();
     return tx;

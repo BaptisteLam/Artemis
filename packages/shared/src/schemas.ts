@@ -16,6 +16,8 @@ export const RequestCardInputSchema = z.object({
     .regex(/^\d{4}$/)
     .optional(),
   expires_in: z.number().int().min(5).max(10080).optional(),
+  /** Abonnement récurrent : carte verrouillée sur le marchand, plafond = montant par mois. */
+  recurring: z.object({ interval: z.literal('month') }).optional(),
 });
 
 export type RequestCardInput = z.infer<typeof RequestCardInputSchema>;

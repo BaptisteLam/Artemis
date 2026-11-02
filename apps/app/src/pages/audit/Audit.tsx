@@ -57,6 +57,16 @@ export function Audit() {
     a.click();
   });
   const canExport = org?.limits.auditExport;
+  const now = new Date();
+  const quarter = `${now.getUTCFullYear()}-Q${Math.floor(now.getUTCMonth() / 3) + 1}`;
+  const report = useAction(async () => {
+    const res = await fetch(`${API_URL}/app/compliance/report?quarter=${quarter}&format=html`, { headers: { Authorization: (await getAuthHeader()) ?? '', 'X-Org-Id': orgId ?? '' } });
+    if (!res.ok) throw new Error(((await res.json().catch(() => null)) as { error?: { message?: string } } | null)?.error?.message ?? 'Rapport indisponible.');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(await res.blob());
+    a.download = `artemis-supervision-${quarter}.html`;
+    a.click();
+  });
   return (
     <>
       <PageStage
@@ -66,11 +76,12 @@ export function Audit() {
           <>
             <Button variant="glass" onClick={() => void check.run()} disabled={check.busy}>Vérifier l'intégrité</Button>
             {canExport ? <Button variant="glass" onClick={() => void exportAll.run()}>Exporter</Button> : null}
+            {canExport ? <Button variant="glass" onClick={() => void report.run()}>Rapport AI Act {quarter}</Button> : null}
           </>
         }
       />
       <div className="ar-container page-body ar-stack">
-        <ErrorAlert error={error ?? check.error ?? exportAll.error} />
+        <ErrorAlert error={error ?? check.error ?? exportAll.error ?? report.error} />
         {verify ? (
           <div className={`alert ${verify.ok ? 'alert-info' : 'alert-error'}`}>
             {verify.ok ? `Chaîne intègre : ${verify.count} entrées vérifiées.` : `Chaîne rompue à l'entrée n° ${verify.brokenAt}.`}

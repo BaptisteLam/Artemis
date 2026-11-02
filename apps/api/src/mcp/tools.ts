@@ -41,6 +41,12 @@ export const TOOLS: ToolDef[] = [
         purpose: { type: 'string', description: "Raison de l'achat, lue par l'humain qui valide." },
         mcc: { type: 'string', pattern: '^\\d{4}$', description: 'Catégorie marchande (MCC), si connue.' },
         expires_in: { type: 'integer', minimum: 5, maximum: 10080, description: 'Durée de vie de la carte en minutes.' },
+        recurring: {
+          type: 'object',
+          properties: { interval: { type: 'string', enum: ['month'] } },
+          required: ['interval'],
+          description: 'Abonnement mensuel : carte verrouillée sur le marchand, plafonnée à amount par mois (plans Team et plus).',
+        },
       },
       required: ['amount', 'merchant', 'purpose'],
       additionalProperties: false,

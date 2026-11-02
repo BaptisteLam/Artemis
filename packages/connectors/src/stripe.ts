@@ -79,7 +79,7 @@ export class StripeIssuingConnector implements BankConnector {
         currency: input.currency.toLowerCase(),
         type: 'virtual',
         status: 'active',
-        spending_controls: { spending_limits: [{ amount: input.amountCents, interval: 'all_time' }] },
+        spending_controls: { spending_limits: [{ amount: input.amountCents, interval: input.recurring === 'month' ? 'monthly' : 'all_time' }] },
         metadata: { artemis_request: input.idempotencyKey, agent: input.label.slice(0, 100), merchant: input.merchant.slice(0, 100), expires_at: input.expiresAt.toISOString() },
       },
       `artemis-card-${input.idempotencyKey}`,

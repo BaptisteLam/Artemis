@@ -38,7 +38,12 @@ export async function applyBankTransaction(ctx: Ctx, conn: BankConnectionRow, t:
   const status = reconcile(row, request);
   if (status === 'unmatched') return row;
   await store.updateTransaction(row.id, { match_status: status });
-  if (status === 'matched') {
+  if (status === 'matched' && card.recurring) {
+    await audit(ctx, conn.org_id, { type: 'system', id: 'reconcile' }, 'subscription.charged', request.id, {
+      transaction_id: row.id,
+      amount_cents: Number(row.amount_cents),
+    });
+  } else if (status === 'matched') {
     await store.updateCard(card.id, { status: 'used' });
     await store.updateCardRequest(request.id, { status: 'completed' }, 'issued');
     await audit(ctx, conn.org_id, { type: 'system', id: 'reconcile' }, 'transaction.matched', request.id, {

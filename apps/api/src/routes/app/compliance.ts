@@ -6,6 +6,8 @@ import { verifyAuditChain } from '../../services/audit';
 import { exportCsv, exportFec, exportRows } from '../../services/exports';
 import { limitsFor } from '../../services/plan';
 import { parseDay } from './shared';
+import { complianceReport, complianceReportHtml } from '../../services/compliance';
+import { listSubscriptions } from '../../services/subscriptions';
 
 export const complianceRoutes = new Hono<AppEnv>();
 
@@ -64,4 +66,17 @@ complianceRoutes.get('/exports/fec', requireRole(...ANY_ROLE), async (c) => {
   return new Response(fec, {
     headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Content-Disposition': `attachment; filename="FEC-artemis.txt"` },
   });
+});
+
+complianceRoutes.get('/subscriptions', requireRole(...ANY_ROLE), async (c) => c.json({ subscriptions: await listSubscriptions(c.var.ctx, c.var.org.id) }));
+
+complianceRoutes.get('/compliance/report', requireRole('owner', 'admin'), async (c) => {
+  if (!limitsFor(c.var.org).auditExport) throw new ArtemisError('plan_limit', 'Le dossier AI Act est inclus dans le plan Business.');
+  const now = c.var.ctx.now();
+  const quarter = c.req.query('quarter') ?? `${now.getUTCFullYear()}-Q${Math.floor(now.getUTCMonth() / 3) + 1}`;
+  const report = await complianceReport(c.var.ctx, c.var.org.id, quarter);
+  if (c.req.query('format') === 'html') {
+    return new Response(complianceReportHtml(report), { headers: { 'Content-Type': 'text/html; charset=utf-8', 'Content-Disposition': `attachment; filename="artemis-supervision-${quarter}.html"` } });
+  }
+  return c.json(report);
 });

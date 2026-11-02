@@ -89,7 +89,9 @@ export class RevolutConnector implements BankConnector {
       virtual: true,
       holder_id: this.creds.holderId,
       label: `${input.label} · ${input.merchant}`.slice(0, 30),
-      spending_limits: { single: { amount: input.amountCents / 100, currency: input.currency } },
+      spending_limits: input.recurring === 'month'
+        ? { month: { amount: input.amountCents / 100, currency: input.currency } }
+        : { single: { amount: input.amountCents / 100, currency: input.currency } },
     });
     const exp = parseExpiry(c.expiry);
     return { providerCardId: c.id, last4: c.last_digits, expMonth: exp.m, expYear: exp.y, status: 'active' };

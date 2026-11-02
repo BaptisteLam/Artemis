@@ -11,6 +11,7 @@ const LINKS = [
   { to: '/agents', label: 'Agents' },
   { to: '/clients', label: 'Clients', hideSm: true },
   { to: '/cartes', label: 'Cartes', hideSm: true },
+  { to: '/abonnements', label: 'Abonnements', hideSm: true },
   { to: '/transactions', label: 'Transactions' },
   { to: '/exports', label: 'Exports', hideSm: true },
   { to: '/banques', label: 'Banques', hideSm: true },

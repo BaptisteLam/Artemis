@@ -22,7 +22,7 @@ import type {
 export type NewCardRequest = Pick<
   CardRequestRow,
   'org_id' | 'agent_id' | 'amount_cents' | 'currency' | 'merchant' | 'mcc' | 'purpose' | 'card_ttl_minutes' | 'expires_at'
-> & { status?: RequestStatus; decision_reason?: string | null; client_id?: string | null };
+> & { status?: RequestStatus; decision_reason?: string | null; client_id?: string | null; recurring_interval?: 'month' | null };
 
 export interface AuditInput {
   org_id: string;

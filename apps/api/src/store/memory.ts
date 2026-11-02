@@ -221,6 +221,7 @@ export class MemoryStore implements Store {
       mcc: input.mcc ?? null,
       purpose: input.purpose,
       card_ttl_minutes: input.card_ttl_minutes ?? null,
+      recurring_interval: input.recurring_interval ?? null,
       status: input.status ?? 'pending',
       decision_reason: input.decision_reason ?? null,
       decided_by: null,
@@ -317,7 +318,7 @@ export class MemoryStore implements Store {
 
   // Cartes
   async createCard(row: Omit<CardRow, 'id' | 'created_at' | 'revealed_at'>) {
-    const c: CardRow = { ...row, id: uuid(), revealed_at: null, created_at: now() };
+    const c: CardRow = { recurring: false, ...row, id: uuid(), revealed_at: null, created_at: now() };
     this.cards.set(c.id, c);
     return clone(c);
   }

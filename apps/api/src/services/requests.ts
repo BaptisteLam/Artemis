@@ -78,6 +78,9 @@ export async function createCardRequest(ctx: Ctx, agent: AgentRow, raw: unknown)
     throw new ArtemisError('quota_exceeded', `Quota mensuel atteint (${limits.requestsPerMonth} demandes). Passez à un plan supérieur.`);
   }
 
+  if (input.recurring && !limits.subscriptions) {
+    throw new ArtemisError('plan_limit', 'Les abonnements gérés par agent sont inclus à partir du plan Team.');
+  }
   const client = agent.client_id ? await store.getClient(agent.client_id) : null;
   if (client?.status === 'archived') throw new ArtemisError('invalid_input', `Le client ${client.name} est archivé.`);
   const policy = policyFromRow(await store.getPolicy(agent.id));
@@ -100,6 +103,7 @@ export async function createCardRequest(ctx: Ctx, agent: AgentRow, raw: unknown)
     org_id: org.id,
     agent_id: agent.id,
     client_id: client?.id ?? null,
+    recurring_interval: input.recurring ? ('month' as const) : null,
     amount_cents: input.amount,
     currency: input.currency,
     merchant: input.merchant,
@@ -273,8 +277,10 @@ export async function issueCard(ctx: Ctx, request: CardRequestRow): Promise<Card
   const agent = await ctx.store.getAgent(request.agent_id);
   try {
     const { conn, connector } = await connectorForAgentConnection(ctx, agent?.bank_connection_id ?? null);
+    const recurring = request.recurring_interval === 'month';
     const ttl = request.card_ttl_minutes ?? 30;
-    const expiresAt = new Date(ctx.now().getTime() + ttl * 60_000);
+    // Carte d'abonnement : reste active (plafond mensuel), jusqu'à résiliation.
+    const expiresAt = new Date(ctx.now().getTime() + (recurring ? 400 * 86_400_000 : ttl * 60_000));
     const created = await connector.createSingleUseCard({
       amountCents: Number(request.amount_cents),
       currency: request.currency,
@@ -282,6 +288,7 @@ export async function issueCard(ctx: Ctx, request: CardRequestRow): Promise<Card
       expiresAt,
       label: agent?.name ?? 'agent',
       idempotencyKey: request.id,
+      ...(recurring ? { recurring: 'month' as const } : {}),
     });
     const card = await ctx.store.createCard({
       request_id: request.id,
@@ -292,6 +299,7 @@ export async function issueCard(ctx: Ctx, request: CardRequestRow): Promise<Card
       exp_month: created.expMonth,
       exp_year: created.expYear,
       status: created.status,
+      recurring,
       expires_at: expiresAt.toISOString(),
     });
     const updated = await ctx.store.updateCardRequest(request.id, { status: 'issued' }, 'approved');

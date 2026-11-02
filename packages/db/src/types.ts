@@ -52,6 +52,7 @@ export interface CardRequestRow {
   mcc: string | null;
   purpose: string;
   card_ttl_minutes: number | null;
+  recurring_interval?: 'month' | null;
   status: RequestStatus;
   decision_reason: string | null;
   decided_by: string | null;
@@ -82,6 +83,7 @@ export interface CardRow {
   exp_month: number;
   exp_year: number;
   status: CardStatus;
+  recurring?: boolean;
   revealed_at: string | null;
   expires_at: string;
   created_at: string;
