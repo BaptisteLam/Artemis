@@ -11,7 +11,7 @@ test('parcours complet en Sandbox : inscription → agent → demande → passke
   });
 
   const email = `alice+${Date.now()}@exemple.fr`;
-  await page.goto('/signup');
+  await page.goto('/signup?lang=fr'); // parcours en français ; l'anglais est vérifié par les tests de composants
   await page.getByLabel('Email professionnel').fill(email);
   await page.getByRole('button', { name: 'Entrer (mode dev)' }).click();
 
