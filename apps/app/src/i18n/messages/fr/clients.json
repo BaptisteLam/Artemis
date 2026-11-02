@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Clients",
+    "lead": "Un espace par client : ses agents, son budget mensuel, votre marge et un rapport de refacturation prêt à envoyer.",
+    "invalidBudget": "Budget invalide (ex. 500 ou 49,90).",
+    "upsell": "Les espaces clients sont inclus dans le plan Agences ({price} + {perClient} par client actif).",
+    "seePlans": "Voir les plans →",
+    "empty": "Aucun client",
+    "emptyHint": "Créez un client puis rattachez-lui des agents.",
+    "cols": {
+      "client": "Client",
+      "agents": "Agents",
+      "spent": "Engagé ce mois",
+      "budget": "Budget",
+      "markup": "Marge"
+    },
+    "archived": "archivé",
+    "percent": "{value} %",
+    "report": "Rapport →",
+    "new": "Nouveau client",
+    "fields": {
+      "name": "Nom",
+      "billingEmail": "Email de facturation",
+      "markup": "Marge de refacturation (%)",
+      "budget": "Budget mensuel (€)",
+      "budgetHint": "Vide = sans plafond client"
+    },
+    "create": "Créer le client",
+    "exportFailed": "Export impossible.",
+    "eyebrow": "Client",
+    "month": "Mois",
+    "exportCsv": "Exporter le CSV",
+    "monthPurchases": "Achats du mois",
+    "markupPct": "Marge {value}",
+    "toRebill": "À refacturer",
+    "noPurchases": "Aucun achat ce mois-ci",
+    "lines": {
+      "date": "Date",
+      "agent": "Agent",
+      "merchant": "Marchand",
+      "purpose": "Objet",
+      "amount": "Montant",
+      "receipt": "Justificatif"
+    },
+    "yes": "Oui",
+    "missing": "Manquant",
+    "archive": "Archiver le client",
+    "reactivate": "Réactiver",
+    "all": "← Tous les clients"
+  }
+}

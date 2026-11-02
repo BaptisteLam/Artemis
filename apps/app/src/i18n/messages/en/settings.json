@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Settings",
+    "signOut": "Sign out",
+    "language": {
+      "title": "Language",
+      "lead": "Language of the interface on this device."
+    },
+    "notifications": {
+      "title": "Notifications on this device",
+      "lead": "Get a notification for every request. On iPhone, first add Artemis to your Home Screen (Share → Add to Home Screen).",
+      "notConfigured": "Push notifications are not configured on this server (VAPID keys). Emails remain active.",
+      "unsupported": "This browser does not support push notifications.",
+      "denied": "Notifications are blocked in the browser settings.",
+      "enable": "Enable notifications",
+      "on": "Notifications are on.",
+      "disable": "Turn off"
+    },
+    "slack": {
+      "lead": "Every pending request is posted to a Slack channel, with a button that opens passkey approval. Create an “Incoming Webhook” in Slack and paste its URL.",
+      "connected": "Slack is connected.",
+      "disconnect": "Disconnect",
+      "urlLabel": "Slack webhook URL",
+      "connect": "Connect",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Card handover to agents",
+      "confirmDirect": "Direct handover: the card number will pass through Artemis once on its way to the agent. This puts you in PCI DSS scope and, with Revolut, requires written approval. Continue?",
+      "linkTitle": "Ephemeral link (recommended)",
+      "linkText": "The agent receives a single-use link valid for 10 minutes; the card is displayed by the issuing bank (Stripe Issuing). The number never passes through Artemis.",
+      "directTitle": "Direct handover (advanced option)",
+      "directText": "The number is relayed to the agent only once, without being stored. Required for Revolut. You enter PCI DSS scope."
+    },
+    "org": {
+      "title": "Organization",
+      "name": "Name",
+      "rename": "Rename"
+    },
+    "emergency": {
+      "title": "Emergency",
+      "lead": "“Freeze all” suspends every agent and cancels active cards and pending requests. Use it if an agent behaves abnormally or if a token has leaked.",
+      "confirmFreeze": "Freeze the entire organization? All agents will be frozen and active cards cancelled.",
+      "unfreeze": "Unfreeze the organization",
+      "freeze": "Freeze everything now",
+      "afterUnfreeze": "After unfreezing, reactivate each agent from its page."
+    },
+    "passkeys": {
+      "title": "Passkeys",
+      "devicePrompt": "Device name (e.g. Lea's iPhone)",
+      "confirmDelete": "Delete this passkey?",
+      "add": "Add",
+      "lead": "A passkey is required to approve a spend. Add one on every device you use.",
+      "addedOn": "added on {date}",
+      "delete": "Delete",
+      "none": "No passkey: you can't approve spending yet."
+    }
+  }
+}

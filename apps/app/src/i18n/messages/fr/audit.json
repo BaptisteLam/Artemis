@@ -1,0 +1,95 @@
+{
+  "audit": {
+    "title": "Journal d'audit",
+    "lead": "Chaque événement est chaîné par hachage SHA-256 et ne peut être ni modifié ni supprimé : c'est votre preuve de supervision humaine (AI Act).",
+    "verify": "Vérifier l'intégrité",
+    "export": "Exporter",
+    "report": "Rapport AI Act {quarter}",
+    "exportFailed": "Export impossible.",
+    "reportUnavailable": "Rapport indisponible.",
+    "chainOk_one": "Chaîne intègre : {count} entrée vérifiée.",
+    "chainOk_many": "Chaîne intègre : {count} entrées vérifiées.",
+    "chainOk_other": "Chaîne intègre : {count} entrées vérifiées.",
+    "chainBroken": "Chaîne rompue à l'entrée n° {id}.",
+    "exportUpsell": "L'export signé du journal est inclus dans le plan Business.",
+    "seePlans": "Voir les plans",
+    "cols": {
+      "date": "Date",
+      "event": "Événement",
+      "actor": "Acteur",
+      "hash": "Empreinte"
+    },
+    "view": "voir",
+    "older": "Plus ancien →",
+    "actors": {
+      "user": "Utilisateur",
+      "agent": "Agent",
+      "system": "Système"
+    },
+    "actions": {
+      "org": {
+        "created": "Organisation créée",
+        "frozen": "Organisation gelée",
+        "unfrozen": "Organisation dégelée",
+        "card_delivery_changed": "Mode de remise des cartes modifié",
+        "slack_connected": "Slack connecté",
+        "slack_disconnected": "Slack déconnecté"
+      },
+      "agent": {
+        "created": "Agent créé",
+        "updated": "Agent modifié",
+        "deleted": "Agent supprimé",
+        "token_rotated": "Jeton régénéré",
+        "frozen": "Agent gelé"
+      },
+      "policy": {
+        "updated": "Règles modifiées"
+      },
+      "request": {
+        "created": "Demande créée",
+        "rejected": "Demande refusée",
+        "approved": "Mandat signé",
+        "auto_approved": "Validation automatique",
+        "approval_recorded": "Approbation enregistrée",
+        "expired": "Demande expirée"
+      },
+      "card": {
+        "issued": "Carte émise",
+        "issue_failed": "Échec d’émission",
+        "revealed": "Carte remise à l'agent",
+        "link_created": "Lien de carte créé",
+        "viewed": "Carte consultée",
+        "canceled": "Carte annulée",
+        "expired": "Carte expirée"
+      },
+      "transaction": {
+        "matched": "Transaction rapprochée",
+        "mismatch": "Écart détecté"
+      },
+      "receipt": {
+        "attached": "Justificatif ajouté"
+      },
+      "bank": {
+        "connected": "Banque connectée",
+        "disconnected": "Banque déconnectée"
+      },
+      "member": {
+        "invited": "Membre invité",
+        "joined": "Membre arrivé",
+        "removed": "Membre retiré",
+        "role_changed": "Rôle modifié"
+      },
+      "client": {
+        "created": "Client créé",
+        "updated": "Client modifié"
+      },
+      "billing": {
+        "subscribed": "Abonnement souscrit",
+        "updated": "Abonnement modifié"
+      },
+      "subscription": {
+        "charged": "Abonnement débité"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Exports comptables",
+    "lead": "Les dépenses débitées par vos banques, prêtes pour Pennylane, votre expert-comptable ou un tableur.",
+    "failed": "Export impossible.",
+    "from": "Du",
+    "to": "Au (exclu)",
+    "downloadCsv": "Télécharger le CSV",
+    "downloadFec": "Télécharger le FEC",
+    "formats": "CSV : séparateur point-virgule, compatible Excel. FEC : 18 colonnes réglementaires, débit 604000 / crédit 512000, importable dans Pennylane.",
+    "fecUpsell": "Le FEC est inclus à partir du plan Team.",
+    "seePlans": "Voir les plans"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Accounting exports",
+    "lead": "Expenses debited by your banks, ready for Pennylane, your accountant or a spreadsheet.",
+    "failed": "Export failed.",
+    "from": "From",
+    "to": "To (exclusive)",
+    "downloadCsv": "Download CSV",
+    "downloadFec": "Download FEC",
+    "formats": "CSV: semicolon-separated, Excel-compatible. FEC: 18 regulatory columns, debit 604000 / credit 512000, importable into Pennylane.",
+    "fecUpsell": "FEC is included from the Team plan.",
+    "seePlans": "See plans"
+  }
+}

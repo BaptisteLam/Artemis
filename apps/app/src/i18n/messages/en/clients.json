@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Clients",
+    "lead": "One workspace per client: their agents, their monthly budget, your markup and a re-invoicing report ready to send.",
+    "invalidBudget": "Invalid budget (e.g. 500 or 49.90).",
+    "upsell": "Client workspaces are included in the Agency plan ({price} + {perClient} per active client).",
+    "seePlans": "See plans →",
+    "empty": "No clients",
+    "emptyHint": "Create a client, then assign agents to it.",
+    "cols": {
+      "client": "Client",
+      "agents": "Agents",
+      "spent": "Committed this month",
+      "budget": "Budget",
+      "markup": "Markup"
+    },
+    "archived": "archived",
+    "percent": "{value}%",
+    "report": "Report →",
+    "new": "New client",
+    "fields": {
+      "name": "Name",
+      "billingEmail": "Billing email",
+      "markup": "Re-invoicing markup (%)",
+      "budget": "Monthly budget (€)",
+      "budgetHint": "Empty = no client cap"
+    },
+    "create": "Create client",
+    "exportFailed": "Export failed.",
+    "eyebrow": "Client",
+    "month": "Month",
+    "exportCsv": "Export CSV",
+    "monthPurchases": "Purchases this month",
+    "markupPct": "Markup {value}",
+    "toRebill": "To re-invoice",
+    "noPurchases": "No purchases this month",
+    "lines": {
+      "date": "Date",
+      "agent": "Agent",
+      "merchant": "Merchant",
+      "purpose": "Purpose",
+      "amount": "Amount",
+      "receipt": "Receipt"
+    },
+    "yes": "Yes",
+    "missing": "Missing",
+    "archive": "Archive client",
+    "reactivate": "Reactivate",
+    "all": "← All clients"
+  }
+}
