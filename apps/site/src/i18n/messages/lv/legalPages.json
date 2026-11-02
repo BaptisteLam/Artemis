@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Vispārīgie pārdošanas un lietošanas noteikumi",
+      "purposeTitle": "1. Priekšmets",
+      "purpose": "Šie noteikumi reglamentē piekļuvi programmatūrai Artemis, ko izdod {editor} ({status}, SIRET {siret}), un tās abonēšanu, ko veic klienti — profesionāļi. Pakalpojums ir paredzēts tikai profesionāļiem.",
+      "serviceTitle": "2. Pakalpojuma apraksts",
+      "service": "Artemis ļauj klientam noteikt izdevumu noteikumus saviem programmatūras aģentiem, apstiprināt to maksājumu pieprasījumus un, izmantojot savas bankas lietojumprogrammu saskarnes, vadīt vienreizējas lietošanas virtuālo karšu izveidi. Artemis nesniedz nekādus maksājumu pakalpojumus, neglabā nekādus līdzekļus un neizsniedz nekādas kartes. Attiecības ar banku, bankas komisijas maksas un stingrā autentifikācija ir regulētas tikai ar līgumu starp klientu un tā banku.",
+      "accountTitle": "3. Konts un drošība",
+      "account": "Klients ir atbildīgs par aģentu marķieru, piekļuves savam kontam un savu lietotāju piekļuves atslēgu konfidencialitāti, kā arī par noteikumiem, ko tas konfigurē. Jebkurš izdevums, ko apstiprinājis pilnvarots lietotājs vai kas atbilst automātiskas apstiprināšanas noteikumam, tiek uzskatīts par klienta atļautu.",
+      "pricesTitle": "4. Piedāvājumi un cenas",
+      "prices": "Piedāvājumi: Sandbox (bez maksas), Builder ({builder} / mēnesī), Team ({team} / mēnesī), Aģentūrām ({agency} / mēnesī + {perClient} par katru aktīvo klientu), Business (no {business} / mēnesī). Pārsniedzot maksas plāna mēneša kvotu, par katru papildu pilnvaru tiek iekasēts {overage}. Cenas ir neto. {vat}. Ikmēneša priekšapmaksa ar karti, izmantojot Stripe. Atjaunošana notiek automātiski; līguma izbeigšana stājas spēkā pašreizējā perioda beigās bez proporcionālas atmaksas.",
+      "quotasTitle": "5. Kvotas",
+      "quotas": "Katrs piedāvājums ietver kvotas (aģenti, pievienotās bankas, mēneša pieprasījumi). Pārsniedzot šīs kvotas, jauni pieprasījumi tiek noraidīti līdz nākamajam periodam vai piedāvājuma maiņai.",
+      "availabilityTitle": "6. Pieejamība",
+      "availability": "Izdevējs izmanto saprātīgus līdzekļus, lai nodrošinātu pakalpojuma pieejamību, negarantējot rezultātu. Pārtraukumi var rasties apkopes dēļ vai tehnisko un banku pakalpojumu sniedzēju dēļ.",
+      "liabilityTitle": "7. Atbildība",
+      "liability": "Izdevējs nav atbildīgs par pirkumiem, ko klienta aģenti veikuši sniegto atļauju ietvaros, par tirgotāju izvēli, par iegādāto preču vai pakalpojumu kvalitāti, kā arī par klienta bankas lēmumiem. Izdevēja atbildība neatkarīgi no tās iemesla ir ierobežota līdz summām, ko klients samaksājis pēdējo divpadsmit mēnešu laikā.",
+      "dataTitle": "8. Dati",
+      "data": "Personas datu apstrāde ir aprakstīta <a href=\"{href}\">privātuma politikā</a>. Klients jebkurā laikā var eksportēt savus datus.",
+      "lawTitle": "9. Piemērojamie tiesību akti",
+      "law": "Francijas tiesības. Ja nav panākta izlīgumā balstīta vienošanās, strīdus izskata tiesas, kuru jurisdikcijā atrodas izdevēja domicils."
+    },
+    "privacy": {
+      "title": "Privātuma politika",
+      "controllerTitle": "Pārzinis",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Apstrādātie dati",
+      "dataAccount": "Konts: e-pasts, organizācija, loma, piekļuves atslēgas (tikai publiskās atslēgas).",
+      "dataActivity": "Darbības: karšu pieprasījumi, parakstītas pilnvaras, bankas paziņotie darījumi, čeki, audita žurnāls.",
+      "dataBanks": "Banku savienojumi: šifrēti piekļuves marķieri (AES-256-GCM).",
+      "dataBilling": "Norēķini: tos apstrādā Stripe; Artemis neredz karšu numurus, ar kurām jūs maksājat par abonementu.",
+      "dataWaitlist": "Gaidīšanas saraksts: e-pasts, uzņēmums, lietošanas gadījums.",
+      "cardNumbers": "Artemis nekad neglabā jūsu aģentiem izsniegto karšu pilnu numuru vai drošības kodu.",
+      "purposesTitle": "Nolūki un tiesiskais pamats",
+      "purposes": "Līguma izpilde (pakalpojuma sniegšana), juridiski pienākumi (grāmatvedība), leģitīmās intereses (drošība, krāpšanas novēršana), piekrišana (gaidīšanas saraksts).",
+      "processorsTitle": "Apstrādātāji",
+      "processors": "Supabase (datubāze, Eiropas Savienība), Cloudflare (mitināšana un tīkls), Stripe (norēķini), Resend (transakciju e-pasti). Iespējamo nosūtīšanu ārpus ES reglamentē līguma standartklauzulas.",
+      "retentionTitle": "Glabāšanas termiņi",
+      "retention": "Konta dati: līguma darbības laiks, pēc tam 3 gadi. Audita žurnāls un grāmatvedības dati: 10 gadi. Gaidīšanas saraksts: 3 gadi bez mijiedarbības.",
+      "rightsTitle": "Jūsu tiesības",
+      "rights": "Piekļuve, labošana, dzēšana, pārnesamība, iebildumi un ierobežošana: rakstiet uz {email}. Jūs varat iesniegt sūdzību CNIL (cnil.fr).",
+      "cookiesTitle": "Sīkdatnes",
+      "cookies": "Vietne neizmanto reklāmas sīkdatnes un trešo pušu analītikas rīkus. Lietotne izmanto tikai jūsu sesijai nepieciešamo krātuvi."
+    },
+    "notice": {
+      "title": "Juridiskais paziņojums",
+      "editorTitle": "Izdevējs",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Adrese: {address}",
+      "contact": "Kontakti: {email}",
+      "directorTitle": "Publikācijas direktors",
+      "hostingTitle": "Mitināšana",
+      "natureTitle": "Pakalpojuma būtība",
+      "nature": "Artemis ir programmatūra mākslīgā intelekta aģentu izdevumu pārvaldībai. Artemis nav ne maksājumu iestāde, ne elektroniskās naudas iestāde: tā nesaņem, neglabā un nepārskaita nekādus līdzekļus. Maksājumu kartes izsniedz klienta kredītiestāde uz savu atbildību.",
+      "ipTitle": "Intelektuālais īpašums",
+      "ip": "Šīs vietnes saturs, preču zīmes un logotipi ir izdevēja īpašums. Jebkāda reproducēšana bez atļaujas ir aizliegta."
+    }
+  }
+}

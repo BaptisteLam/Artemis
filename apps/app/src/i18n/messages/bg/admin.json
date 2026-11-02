@@ -1,0 +1,20 @@
+{
+  "admin": {
+    "eyebrow": "Back office",
+    "title": "Artemis в цифри",
+    "mrr": "MRR",
+    "paying": "Плащащи клиенти",
+    "ofOrgs_one": "от {count} организация",
+    "ofOrgs_other": "от {count} организации",
+    "signups7d": "Регистрации (7 дни)",
+    "requests30d": "Заявки (30 дни)",
+    "orgs": "Организации",
+    "cols": {
+      "name": "Име",
+      "plan": "План",
+      "subscription": "Абонамент",
+      "created": "Създадена"
+    },
+    "waitlist": "Списък на чакащите ({total})"
+  }
+}

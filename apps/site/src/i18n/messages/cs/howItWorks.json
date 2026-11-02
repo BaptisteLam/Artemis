@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Jak to funguje",
+    "description": "Jak Artemis umožňuje vašim AI agentům platit, zatímco kontrolu máte vy.",
+    "headline": "Agent žádá, vy rozhodujete, banka platí.",
+    "lead": "Artemis stojí mezi vašimi agenty a vaší bankou. Uplatňuje vaše pravidla, získává vaše schválení a vytváří jednorázovou kartu na přesnou částku.",
+    "step1": {
+      "title": "1. Připojíte svou banku",
+      "body": "Stripe Issuing (doporučeno) nebo Revolut Business: virtuální karty se vytvářejí na <strong>vašem</strong> účtu a hradí se z <strong>vašich</strong> prostředků. Qonto se připojuje pro čtení, zmrazení a párování. Artemis nikdy nepřijímá, nedrží ani nepřevádí peníze. Pro vyzkoušení Sandbox simuluje banku."
+    },
+    "step2": {
+      "title": "2. Vytvoříte agenta a jeho pravidla",
+      "body": "Každý agent dostane tajný token a zásady: měsíční rozpočet, limit na nákup, měny, povolené nebo blokované obchodníky, kategorie obchodníků, práh automatického schválení a dobu platnosti karty."
+    },
+    "step3": {
+      "title": "3. Agent požádá o kartu",
+      "body": "Přes nástroj MCP <code>request_card</code> nebo REST API. Žádost, která porušuje pravidla, je okamžitě zamítnuta s jasným důvodem. Všechny ostatní čekají na vaše schválení, s výjimkou malých částek u důvěryhodného obchodníka, pokud jste to povolili."
+    },
+    "step4": {
+      "title": "4. Schválíte přístupovým klíčem",
+      "body": "Obdržíte oznámení. Obrazovka mandátu zobrazuje agenta, částku, obchodníka a účel. Podepíšete přístupovým klíčem (Face ID, otisk prstu, bezpečnostní klíč). Podpis se vztahuje na přesný obsah mandátu."
+    },
+    "step5": {
+      "title": "5. Agent platí, Artemis páruje",
+      "body": "Karta je jednorázová, omezená na danou částku a rychle vyprší. Agent obdrží krátkodobý odkaz: kartu zobrazí vaše banka a číslo nikdy neprojde přes Artemis. Jakmile banka transakci ohlásí, Artemis ji spáruje, upozorní na případný nesoulad a založí doklad."
+    },
+    "demo": {
+      "mandate": "mandát · {id}",
+      "intent": "Účel: týmové předplatné, 5 licencí.",
+      "rules": "Pravidla: limit {cap} · zbývající rozpočet {remaining}",
+      "signed": "Podepsáno přístupovým klíčem · před {minutes} min",
+      "transactions": "transakce",
+      "matched": "Spárováno",
+      "mismatch": "Nesoulad"
+    }
+  }
+}

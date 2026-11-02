@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Začínáme s Artemis",
+      "lead": "Od registrace k první platbě vašeho agenta, v Sandboxu, za pět minut.",
+      "step1": {
+        "title": "1. Vytvořte si účet",
+        "body": "Zaregistrujte se v <a href=\"{href}\">aplikaci</a> pomocí e-mailu (magický odkaz), vytvořte organizaci a zaregistrujte přístupový klíč: budete jím schvalovat výdaje."
+      },
+      "step2": {
+        "title": "2. Vytvořte agenta",
+        "body": "V sekci <strong>Agenti</strong> vytvořte například <code>notion.agent</code>. Artemis zobrazí jeho token (<code>art_test_…</code> v Sandboxu, <code>art_live_…</code> se skutečnou bankou) <strong>pouze jednou</strong>: zkopírujte si ho."
+      },
+      "step3": {
+        "title": "3. Připojte agenta",
+        "fastest": "Nejrychlejší cesta: <code>npx artemis-agents init</code> (viz <a href=\"{cli}\">CLI</a>).",
+        "server": "Server MCP je na adrese <code>{url}</code>, s hlavičkou <code>Authorization: Bearer &lt;token&gt;</code>. Postupujte podle návodu pro svůj nástroj: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> nebo <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. Průběh nákupu",
+        "tool": "Nástroj",
+        "role": "Účel",
+        "requestCard": "Požádá o kartu: částka <strong>v centech</strong>, měna, obchodník, účel.",
+        "getRequestStatus": "Sleduje lidské schválení.",
+        "getCardForCheckout": "Vrátí <strong>dočasný odkaz</strong> (10 min, jednorázový): kartu zobrazí banka, bez průchodu přes Artemis.",
+        "listBudgets": "Měsíční rozpočet, utraceno, zbývá, limit.",
+        "getSpendSummary": "Výdaje podle obchodníků (den, týden, měsíc).",
+        "attachReceipt": "Připojí k nákupu doklad.",
+        "cancelCard": "Zruší kartu, pokud se nákup neuskuteční."
+      },
+      "step5": {
+        "title": "5. Přechod do ostrého provozu",
+        "body": "Zvolte tarif v sekci <strong>Fakturace</strong> a poté připojte banku v sekci <strong>Banky</strong>. Agenti propojení s touto bankou dostávají skutečné jednorázové karty."
+      }
+    },
+    "mcpClaude": {
+      "title": "Připojení Claude",
+      "lead": "Claude Code, Claude Desktop a konektory Claude komunikují přes MCP po HTTP.",
+      "verify": "Ověřte příkazem <code>claude mcp list</code> a pak požádejte například: „Předplať nám Notion za {price} přes Artemis“.",
+      "desktopBody": "Otevřete <em>Nastavení → Vývojář → Upravit konfiguraci</em> a přidejte:",
+      "instructionsTitle": "Užitečné instrukce pro agenta",
+      "instructionsBody": "Přidejte do systémových instrukcí:"
+    },
+    "mcpChatgpt": {
+      "title": "Připojení ChatGPT",
+      "lead": "ChatGPT přijímá vzdálené servery MCP jako vlastní konektory.",
+      "addTitle": "Přidání konektoru",
+      "step1": "Otevřete <em>Nastavení → Konektory → Pokročilé</em> a zapněte vývojářský režim, pokud to váš tarif vyžaduje.",
+      "step2": "Vytvořte konektor, URL: <code>{url}</code>.",
+      "step3": "Ověřování: hlavička <code>Authorization</code> s hodnotou <code>Bearer art_…</code> (podle možností, které nabízí váš pracovní prostor ChatGPT).",
+      "note": "Přesné názvy položek se v jednotlivých tarifech ChatGPT liší; adresa a hlavička zůstávají stejné.",
+      "openaiTitle": "Agenti OpenAI (API)",
+      "openaiBody": "V Responses API nebo Agents SDK deklarujte vzdálený nástroj MCP odkazující na <code>{url}</code> se stejnou hlavičkou."
+    },
+    "cli": {
+      "title": "CLI, dovednost Claude a n8n",
+      "lead": "Od nuly k prvnímu mandátu za tři minuty.",
+      "commandTitle": "Jeden příkaz",
+      "commandBody": "Příkaz si vyžádá URL API a token agenta (vytvořený v aplikaci na stránce Agenti), ověří přístup, uloží konfiguraci do <code>~/.config/artemis/config.json</code>, přidá server MCP do Claude Code, pokud je nainstalován, a vypíše konfiguraci pro Claude Desktop a n8n. S tokenem Sandboxu a volbou <code>--demo</code> vytvoří první testovací mandát, který schválíte v aplikaci.",
+      "skillTitle": "Dovednost Claude",
+      "skillBody": "Dovednost <code>artemis-payments</code> naučí Claude platit přes Artemis: částka v centech, čekání na schválení, otevření platebního odkazu ve správnou chvíli, doklad po nákupu a odmítání injekcí. Zkopírujte složku <code>integrations/claude-skill/artemis</code> z repozitáře do <code>~/.claude/skills/</code>.",
+      "n8nTitle": "Uzel n8n",
+      "n8nBody": "Nainstalujte komunitní uzel <code>n8n-nodes-artemis</code> (Nastavení → Community nodes). Operace: žádost o kartu, stav, platební odkaz, zrušení, rozpočet. Přihlašovací údaje: URL API a token agenta."
+    },
+    "n8n": {
+      "title": "Připojení n8n",
+      "lead": "Dvě možnosti: uzel MCP Client pro AI agenta v n8n, nebo požadavky HTTP v klasickém workflow.",
+      "agentTitle": "AI agent v n8n (MCP Client)",
+      "agentBody": "V uzlu <em>AI Agent</em> přidejte nástroj <em>MCP Client</em>: transport <em>HTTP Streamable</em>, URL <code>{url}</code>, ověřování <em>Header Auth</em> s <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "Workflow HTTP",
+      "workflowBody": "Importujte ukázkové workflow <code>examples/n8n/artemis-request-card.json</code> z repozitáře. Postupně provede:",
+      "step1With": "s",
+      "step2": "cyklus dotazování na <code>GET /v1/card-requests/:id</code>, dokud stav není <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> pro získání dočasného odkazu na kartu (10 minut, jednorázový)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Pro Make, vaše skripty a vaše vlastní agenty. Stejný token jako pro server MCP.",
+      "authTitle": "Ověřování",
+      "base": "Základní URL: <code>{url}</code>. Limit: 60 požadavků za minutu na agenta.",
+      "endpointsTitle": "Endpointy",
+      "method": "Metoda",
+      "path": "Cesta",
+      "role": "Účel",
+      "create": "Vytvořit žádost",
+      "status": "Stav žádosti",
+      "reveal": "Dočasný odkaz na kartu (10 min, jednorázový)",
+      "cancel": "Zrušit",
+      "receipts": "Připojit doklad",
+      "budgets": "Zbývající rozpočet",
+      "spendSummary": "Výdaje podle obchodníků",
+      "exampleTitle": "Příklad",
+      "errorsTitle": "Chyby",
+      "errorsBody": "Běžné kódy: <code>invalid_amount</code> (částka musí být celé číslo v centech), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Pravidla a schvalování",
+      "lead": "Jak Artemis rozhoduje, zda bude žádost zamítnuta, schválena automaticky, nebo předložena k vašemu podpisu.",
+      "orderTitle": "Pořadí vyhodnocení",
+      "orderBody": "První nesplněné pravidlo žádost zamítne:",
+      "o1": "Povolená měna (<code>currency_not_allowed</code>).",
+      "o2": "Kladná částka pod limitem na nákup (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Měsíční rozpočet: čekající, schválené a zaplacené žádosti daného měsíce + aktuální částka (<code>over_monthly_budget</code>). Měsíc se počítá podle pařížského času.",
+      "o4": "Obchodník blokován nebo chybí na seznamu povolených, pokud takový seznam existuje (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Kategorie obchodníka (MCC) blokována nebo nepovolena (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Automatické schválení",
+      "autoBody": "Žádost je schválena bez vás, pokud je její částka <strong>pod</strong> prahem automatického schválení <strong>a</strong> obchodník je na seznamu povolených obchodníků agenta. Bez tohoto seznamu je vám předložena každá žádost.",
+      "matchTitle": "Porovnávání obchodníků",
+      "matchBody": "Názvy se porovnávají bez ohledu na velikost písmen, diakritiku, právní formu a koncovku domény: „Notion“ zahrnuje „Notion Labs, Inc.“ i „notion.so“.",
+      "humanTitle": "Lidské schválení",
+      "humanBody": "Vlastníci, administrátoři a schvalovatelé obdrží oznámení. Schválení vyžaduje přístupový klíč. Pokud vaše banka vyžaduje vlastní silné ověření klienta (například Qonto), schvalte operaci také v její aplikaci.",
+      "expiryTitle": "Vypršení",
+      "expiryBody": "Nevyřízená žádost vyprší po 30 minutách (nastavitelné). Nepoužitá karta se při vypršení zruší."
+    }
+  }
+}

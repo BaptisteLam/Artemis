@@ -1,0 +1,91 @@
+{
+  "common": {
+    "loading": "Se încarcă…",
+    "copy": "Copiați",
+    "copied": "Copiat"
+  },
+  "lang": {
+    "choose": "Limbă"
+  },
+  "nav": {
+    "dashboard": "Tablou de bord",
+    "requests": "Solicitări",
+    "agents": "Agenți",
+    "clients": "Clienți",
+    "cards": "Carduri",
+    "subscriptions": "Abonamente",
+    "transactions": "Tranzacții",
+    "exports": "Exporturi",
+    "banks": "Bănci",
+    "team": "Echipă",
+    "audit": "Audit",
+    "billing": "Facturare",
+    "settings": "Setări"
+  },
+  "shell": {
+    "home": "Artemis, tablou de bord",
+    "organization": "Organizație",
+    "admin": "Administrare",
+    "freezeAllHint": "Înghețați toți agenții și anulați cardurile active",
+    "frozen": "Înghețată",
+    "freezeAll": "Înghețați tot",
+    "signOut": "Deconectare",
+    "navAria": "Navigarea aplicației",
+    "pendingCount_one": "{count} în așteptare",
+    "pendingCount_few": "{count} în așteptare",
+    "pendingCount_other": "{count} în așteptare",
+    "frozenBanner": "Organizație înghețată: nu se mai poate emite niciun card nou. Dezghețați-o din Setări."
+  },
+  "status": {
+    "pending": "De aprobat",
+    "approved": "Aprobată",
+    "issued": "Card emis",
+    "completed": "Plătită",
+    "rejected": "Respinsă",
+    "expired": "Expirată",
+    "failed": "Eroare bancară",
+    "canceled": "Anulată",
+    "active": "Activ",
+    "pending_bank_sca": "Aprobare bancară",
+    "used": "Utilizat",
+    "frozen": "Înghețat",
+    "matched": "Asociată",
+    "mismatch": "Neconcordanță",
+    "unmatched": "Neasociată"
+  },
+  "roles": {
+    "owner": "Proprietar",
+    "admin": "Administrator",
+    "approver": "Aprobator",
+    "viewer": "Observator"
+  },
+  "errors": {
+    "network": "Rețea indisponibilă. Verificați conexiunea.",
+    "unauthorized": "Sesiunea a expirat. Vă rugăm să vă autentificați din nou.",
+    "forbidden": "Nu aveți permisiunea pentru această acțiune.",
+    "not_found": "Negăsit sau indisponibil.",
+    "invalid_input": "Unele informații nu sunt valide. Vă rugăm să verificați formularul.",
+    "rate_limited": "Prea multe încercări. Vă rugăm să așteptați puțin și să încercați din nou.",
+    "quota_exceeded": "Cota lunară de mandate a fost atinsă.",
+    "subscription_inactive": "Abonamentul dumneavoastră este inactiv. Actualizați-l din Facturare.",
+    "org_frozen": "Organizația este înghețată.",
+    "agent_frozen": "Acest agent este înghețat.",
+    "request_not_pending": "Această solicitare nu mai este în așteptare.",
+    "request_expired": "Această solicitare a expirat.",
+    "already_revealed": "Acest card a fost deja predat.",
+    "card_not_ready": "Cardul nu este încă disponibil.",
+    "bank_error": "Banca a refuzat operațiunea.",
+    "plan_limit": "Limita planului dumneavoastră a fost atinsă. Treceți la un plan superior pentru a continua.",
+    "over_client_budget": "Bugetul lunar al acestui client a fost depășit.",
+    "internal": "A apărut o eroare. Vă rugăm să încercați din nou.",
+    "currency_not_allowed": "Această monedă nu este permisă de politică.",
+    "invalid_amount": "Sumă nevalidă.",
+    "over_transaction_limit": "Suma depășește limita per tranzacție.",
+    "over_monthly_budget": "Bugetul lunar al agentului a fost depășit.",
+    "merchant_blocked": "Acest comerciant este blocat de politică.",
+    "merchant_not_allowed": "Acest comerciant nu figurează în lista celor permiși.",
+    "mcc_blocked": "Această categorie de comerciant este blocată.",
+    "mcc_not_allowed": "Această categorie de comerciant nu este permisă.",
+    "too_many_requests": "Prea multe solicitări în ultima oră pentru acest agent."
+  }
+}

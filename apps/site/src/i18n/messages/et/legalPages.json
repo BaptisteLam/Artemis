@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Üldised müügi- ja kasutustingimused",
+      "purposeTitle": "1. Ese",
+      "purpose": "Käesolevad tingimused reguleerivad juurdepääsu tarkvarale Artemis, mille väljaandja on {editor} ({status}, SIRET {siret}), ning selle tellimist ärikliendi poolt. Teenus on ette nähtud üksnes ettevõtjatele.",
+      "serviceTitle": "2. Teenuse kirjeldus",
+      "service": "Artemis võimaldab kliendil määrata oma tarkvaraagentidele kulureeglid, kinnitada nende maksetaotlusi ning juhtida oma panga rakendusliideste kaudu ühekordsete virtuaalkaartide loomist. Artemis ei osuta makseteenuseid, ei hoia raha ega väljasta kaarte. Pangasuhet, pangatasusid ja tugevat autentimist reguleerib eranditult kliendi ja tema panga vaheline leping.",
+      "accountTitle": "3. Konto ja turvalisus",
+      "account": "Klient vastutab agenditokenite, oma kontole juurdepääsu ja oma kasutajate pääsuvõtmete konfidentsiaalsuse ning enda seadistatud reeglite eest. Iga kulu, mille on kinnitanud volitatud kasutaja või mis vastab automaatse kinnitamise reeglile, loetakse kliendi poolt lubatuks.",
+      "pricesTitle": "4. Paketid ja hinnad",
+      "prices": "Paketid: Sandbox (tasuta), Builder ({builder} / kuu), Team ({team} / kuu), Agentuurid ({agency} / kuu + {perClient} iga aktiivse kliendi kohta), Business (alates {business} / kuu). Tasulise paketi kuukvooti ületava iga täiendava volituse eest võetakse tasu {overage}. Hinnad on netohinnad. {vat}. Igakuine ettemaks kaardiga Stripe'i kaudu. Tellimus uueneb automaatselt; lõpetamine jõustub jooksva perioodi lõpus, ilma proportsionaalse tagasimakseta.",
+      "quotasTitle": "5. Kvoodid",
+      "quotas": "Iga pakett sisaldab kvoote (agendid, ühendatud pangad, igakuised taotlused). Kvootide ületamisel lükatakse uued taotlused tagasi kuni järgmise perioodini või paketi vahetamiseni.",
+      "availabilityTitle": "6. Kättesaadavus",
+      "availability": "Väljaandja rakendab mõistlikke meetmeid teenuse kättesaadavuse tagamiseks, ilma tulemuskohustuseta. Katkestused võivad tekkida hoolduse tõttu või tehniliste ja pangateenuse osutajate tõttu.",
+      "liabilityTitle": "7. Vastutus",
+      "liability": "Väljaandja ei vastuta kliendi agentide poolt antud volituste piires tehtud ostude, kaupmeeste valiku, ostetud kaupade või teenuste kvaliteedi ega kliendi panga otsuste eest. Väljaandja vastutus kõigil põhjustel kokku on piiratud summadega, mille klient on viimase kaheteistkümne kuu jooksul tasunud.",
+      "dataTitle": "8. Andmed",
+      "data": "Isikuandmete töötlemist kirjeldatakse <a href=\"{href}\">privaatsuspoliitikas</a>. Klient võib oma andmed igal ajal eksportida.",
+      "lawTitle": "9. Kohaldatav õigus",
+      "law": "Kohaldatakse Prantsuse õigust. Kokkuleppe puudumisel on pädevad väljaandja elukoha järgsed kohtud."
+    },
+    "privacy": {
+      "title": "Privaatsuspoliitika",
+      "controllerTitle": "Vastutav töötleja",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Töödeldavad andmed",
+      "dataAccount": "Konto: e-post, organisatsioon, roll, pääsuvõtmed (ainult avalikud võtmed).",
+      "dataActivity": "Tegevus: kaarditaotlused, allkirjastatud volitused, panga edastatud tehingud, kviitungid, auditilogi.",
+      "dataBanks": "Pangaühendused: krüpteeritud juurdepääsutokenid (AES-256-GCM).",
+      "dataBilling": "Arveldus: haldab Stripe; Artemis ei näe kaardinumbreid, millega te oma tellimuse eest maksate.",
+      "dataWaitlist": "Ootenimekiri: e-post, ettevõte, kasutusjuht.",
+      "cardNumbers": "Artemis ei salvesta kunagi teie agentidele väljastatud kaartide täielikku numbrit ega turvakoodi.",
+      "purposesTitle": "Eesmärgid ja õiguslikud alused",
+      "purposes": "Lepingu täitmine (teenuse osutamine), juriidilised kohustused (raamatupidamine), õigustatud huvi (turvalisus, pettuste ennetamine), nõusolek (ootenimekiri).",
+      "processorsTitle": "Volitatud töötlejad",
+      "processors": "Supabase (andmebaas, Euroopa Liit), Cloudflare (majutus ja võrk), Stripe (arveldus), Resend (tehingupõhised e-kirjad). Võimalikke edastusi väljapoole ELi reguleerivad lepingu tüüptingimused.",
+      "retentionTitle": "Säilitamise tähtajad",
+      "retention": "Konto andmed: lepingu kehtivuse ajal ja seejärel 3 aastat. Auditilogi ja raamatupidamisandmed: 10 aastat. Ootenimekiri: 3 aastat ilma suhtluseta.",
+      "rightsTitle": "Teie õigused",
+      "rights": "Juurdepääs, parandamine, kustutamine, ülekantavus, vastuväite esitamine ja piiramine: kirjutage aadressil {email}. Teil on õigus esitada kaebus Prantsuse andmekaitseasutusele CNIL (cnil.fr).",
+      "cookiesTitle": "Küpsised",
+      "cookies": "Sait ei kasuta reklaamiküpsiseid ega kolmandate osapoolte analüüsivahendeid. Rakendus kasutab üksnes teie seansi jaoks vajalikku salvestusruumi."
+    },
+    "notice": {
+      "title": "Väljaandja andmed",
+      "editorTitle": "Väljaandja",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Aadress: {address}",
+      "contact": "Kontakt: {email}",
+      "directorTitle": "Väljaande eest vastutav isik",
+      "hostingTitle": "Majutus",
+      "natureTitle": "Teenuse olemus",
+      "nature": "Artemis on tarkvara tehisintellekti agentide kulude juhtimiseks. Artemis ei ole makseasutus ega e-raha asutus: see ei võta vastu, ei hoia ega kanna üle mingeid rahalisi vahendeid. Maksekaardid väljastab kliendi krediidiasutus omal vastutusel.",
+      "ipTitle": "Intellektuaalomand",
+      "ip": "Selle saidi sisu, kaubamärgid ja logod kuuluvad väljaandjale. Igasugune reprodutseerimine ilma loata on keelatud."
+    }
+  }
+}

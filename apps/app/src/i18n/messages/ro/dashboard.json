@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · planul {plan}",
+    "title": "Tablou de bord",
+    "stats": {
+      "spent": "Cheltuit luna aceasta",
+      "pending": "De aprobat",
+      "openQueue": "Deschideți coada →",
+      "requests": "Solicitări luna aceasta"
+    },
+    "recent": {
+      "title": "Ultimele solicitări",
+      "viewAll": "Vedeți toate →",
+      "empty": "Nicio solicitare luna aceasta. Conectați un agent din pagina {agents}.",
+      "agentsLink": "Agenți"
+    },
+    "byAgent": {
+      "title": "Pe agent",
+      "manage": "Gestionați →",
+      "empty": "Niciun agent."
+    }
+  }
+}

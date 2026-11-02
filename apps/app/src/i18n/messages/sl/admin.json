@@ -1,0 +1,22 @@
+{
+  "admin": {
+    "eyebrow": "Administracija",
+    "title": "Artemis v številkah",
+    "mrr": "MRR",
+    "paying": "Plačujoče stranke",
+    "ofOrgs_one": "od {count} organizacije",
+    "ofOrgs_two": "od {count} organizacij",
+    "ofOrgs_few": "od {count} organizacij",
+    "ofOrgs_other": "od {count} organizacij",
+    "signups7d": "Registracije (7 dni)",
+    "requests30d": "Zahteve (30 dni)",
+    "orgs": "Organizacije",
+    "cols": {
+      "name": "Ime",
+      "plan": "Paket",
+      "subscription": "Naročnina",
+      "created": "Ustvarjeno"
+    },
+    "waitlist": "Čakalni seznam ({total})"
+  }
+}

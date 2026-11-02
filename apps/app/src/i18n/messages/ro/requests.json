@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtrați după stare",
+      "all": "Toate",
+      "pending": "De aprobat",
+      "issued": "Card emis",
+      "completed": "Plătite",
+      "rejected": "Respinse",
+      "failed": "Eșuate"
+    },
+    "list": {
+      "title": "Solicitări",
+      "lead": "Fiecare solicitare a agenților, cu decizia și cardul aferent.",
+      "emptyTitle": "Nicio solicitare",
+      "emptyBody": "Solicitările agenților dumneavoastră vor apărea aici."
+    },
+    "decision": {
+      "notAllowed": "Doar proprietarii, administratorii și aprobatorii pot decide.",
+      "cancelledOnDevice": "Aprobare anulată pe dispozitiv.",
+      "reasonLabel": "Motivul respingerii",
+      "reasonHint": "Vizibil pentru agent.",
+      "confirmReject": "Confirmați respingerea",
+      "cancel": "Anulați",
+      "signing": "Se semnează…",
+      "approve": "Aprobă cu passkey-ul meu",
+      "reject": "Respingeți"
+    },
+    "detail": {
+      "confirmCancel": "Anulați această solicitare și cardul aferent?",
+      "receiptUnavailable": "Document justificativ indisponibil.",
+      "eyebrow": "Solicitare · {id}",
+      "amount": "Sumă solicitată",
+      "agent": "Agent",
+      "mandateWindow": "mandat · {id}",
+      "purpose": "Scop",
+      "category": "Categorie",
+      "expires": "Expiră",
+      "rules": "Reguli",
+      "perTxLimit": "Limită",
+      "budget": "buget",
+      "decision": "Decizie",
+      "hash": "sha256 {hash}",
+      "quorum": "Cvorum: {signed} din {required} semnături necesare peste prag.",
+      "unusualAmount": "Barieră de protecție: sumă neobișnuită pentru acest agent, aprobare umană obligatorie.",
+      "autoApproved": "Aprobată automat de reguli",
+      "signedByPasskey": "Mandat semnat cu passkey",
+      "card": "Card",
+      "cardHolderFallback": "agent",
+      "cardAria": "Card virtual care se termină în {last4}, titular {holder}, expiră la {exp}",
+      "bankSca": "Aprobați și crearea cardului în aplicația băncii dumneavoastră.",
+      "cardExpires": "Expiră la {date}",
+      "handedOver": "predat agentului {time}",
+      "notHandedOver": "încă nepredat agentului",
+      "qontoNotice": "Qonto nu predă cardurile agenților: afișați cardul aici și finalizați personal plata.",
+      "showQontoCard": "Afișați cardul (Qonto)",
+      "simulatePayment": "Simulați o plată",
+      "cancelCard": "Anulați cardul",
+      "noCard": "Niciun card emis.",
+      "transactions": "Tranzacții",
+      "noTransactions": "Nicio tranzacție raportată de bancă.",
+      "receipts": "Documente justificative",
+      "addReceipt": "Adăugați",
+      "noReceipts": "Niciun document justificativ.",
+      "back": "← Toate solicitările"
+    }
+  }
+}

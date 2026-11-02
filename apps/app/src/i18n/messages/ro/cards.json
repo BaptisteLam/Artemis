@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Carduri",
+    "lead": "Carduri de unică folosință emise în băncile dumneavoastră. Numărul complet al cardului nu este stocat niciodată.",
+    "linkAria": "Card •••• {last4}",
+    "cardAria": "Card virtual care se termină în {last4}, titular {holder}, expiră la {exp}",
+    "tagRevealed": "Predat agentului",
+    "tagSingleUse": "Unică folosință",
+    "emptyTitle": "Niciun card",
+    "emptyText": "Cardurile apar după aprobarea unei solicitări.",
+    "colCard": "Card",
+    "colIssued": "Emis",
+    "colExpires": "Expiră",
+    "colRevealed": "Predat agentului",
+    "colStatus": "Stare",
+    "notRevealed": "Nu",
+    "request": "Solicitare →"
+  }
+}

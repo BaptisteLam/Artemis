@@ -1,0 +1,22 @@
+{
+  "subscriptions": {
+    "title": "Abonamente",
+    "lead": "Abonamente contractate de agenții dumneavoastră: card blocat pe comerciant, limită lunară, detectarea abonamentelor inactive.",
+    "confirmCancel": "Anulați acest abonament? Cardul va fi anulat la bancă.",
+    "planRequired": "Abonamentele gestionate de agenți sunt incluse începând cu planul Team.",
+    "seePlans": "Vedeți planurile →",
+    "dormantAlert_one": "{count} abonament fără nicio plată de peste {days} zile: luați în considerare anularea lui.",
+    "dormantAlert_few": "{count} abonamente fără nicio plată de peste {days} zile: luați în considerare anularea lor.",
+    "dormantAlert_other": "{count} de abonamente fără nicio plată de peste {days} zile: luați în considerare anularea lor.",
+    "emptyTitle": "Niciun abonament",
+    "emptyText": "Un agent creează un abonament cu request_card și opțiunea recurentă.",
+    "colMerchant": "Comerciant",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Limită lunară",
+    "colPaid": "Plătit",
+    "colLastPayment": "Ultima plată",
+    "colStatus": "Stare",
+    "dormant": "Inactiv",
+    "cancel": "Anulați"
+  }
+}

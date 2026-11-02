@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Exporturi contabile",
+    "lead": "Cheltuieli debitate de băncile dumneavoastră, gata pentru Pennylane, contabilul dumneavoastră sau o foaie de calcul.",
+    "failed": "Exportul a eșuat.",
+    "from": "De la",
+    "to": "Până la (exclusiv)",
+    "downloadCsv": "Descărcați CSV",
+    "downloadFec": "Descărcați FEC",
+    "formats": "CSV: separat prin punct și virgulă, compatibil cu Excel. FEC: 18 coloane reglementare, debit 604000 / credit 512000, importabil în Pennylane.",
+    "fecUpsell": "FEC este inclus începând cu planul Team.",
+    "seePlans": "Vedeți planurile"
+  }
+}

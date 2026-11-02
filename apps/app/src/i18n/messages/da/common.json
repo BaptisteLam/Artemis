@@ -1,0 +1,90 @@
+{
+  "common": {
+    "loading": "Indlæser …",
+    "copy": "Kopiér",
+    "copied": "Kopieret"
+  },
+  "lang": {
+    "choose": "Sprog"
+  },
+  "nav": {
+    "dashboard": "Oversigt",
+    "requests": "Anmodninger",
+    "agents": "Agenter",
+    "clients": "Kunder",
+    "cards": "Kort",
+    "subscriptions": "Abonnementer",
+    "transactions": "Transaktioner",
+    "exports": "Eksporter",
+    "banks": "Banker",
+    "team": "Team",
+    "audit": "Revision",
+    "billing": "Fakturering",
+    "settings": "Indstillinger"
+  },
+  "shell": {
+    "home": "Artemis, oversigt",
+    "organization": "Organisation",
+    "admin": "Admin",
+    "freezeAllHint": "Frys alle agenter, og annullér aktive kort",
+    "frozen": "Frosset",
+    "freezeAll": "Frys alt",
+    "signOut": "Log ud",
+    "navAria": "Appnavigation",
+    "pendingCount_one": "{count} venter",
+    "pendingCount_other": "{count} venter",
+    "frozenBanner": "Organisationen er frosset: der kan ikke udstedes nye kort. Ophæv frysningen under Indstillinger."
+  },
+  "status": {
+    "pending": "Til godkendelse",
+    "approved": "Godkendt",
+    "issued": "Kort udstedt",
+    "completed": "Betalt",
+    "rejected": "Afvist",
+    "expired": "Udløbet",
+    "failed": "Bankfejl",
+    "canceled": "Annulleret",
+    "active": "Aktiv",
+    "pending_bank_sca": "Bankgodkendelse",
+    "used": "Brugt",
+    "frozen": "Frosset",
+    "matched": "Afstemt",
+    "mismatch": "Afvigelse",
+    "unmatched": "Ikke afstemt"
+  },
+  "roles": {
+    "owner": "Ejer",
+    "admin": "Administrator",
+    "approver": "Godkender",
+    "viewer": "Læser"
+  },
+  "errors": {
+    "network": "Netværket er ikke tilgængeligt. Tjek din forbindelse.",
+    "unauthorized": "Din session er udløbet. Log ind igen.",
+    "forbidden": "Du har ikke tilladelse til at gøre dette.",
+    "not_found": "Ikke fundet eller ikke længere tilgængelig.",
+    "invalid_input": "Nogle oplysninger er ugyldige. Tjek formularen.",
+    "rate_limited": "For mange forsøg. Vent et øjeblik, og prøv igen.",
+    "quota_exceeded": "Din månedlige mandatkvote er nået.",
+    "subscription_inactive": "Dit abonnement er inaktivt. Opdatér det under Fakturering.",
+    "org_frozen": "Organisationen er frosset.",
+    "agent_frozen": "Denne agent er frosset.",
+    "request_not_pending": "Denne anmodning venter ikke længere.",
+    "request_expired": "Denne anmodning er udløbet.",
+    "already_revealed": "Dette kort er allerede overdraget.",
+    "card_not_ready": "Kortet er ikke tilgængeligt endnu.",
+    "bank_error": "Banken afviste handlingen.",
+    "plan_limit": "Din plans grænse er nået. Opgrader for at fortsætte.",
+    "over_client_budget": "Kundens månedsbudget er overskredet.",
+    "internal": "Noget gik galt. Prøv igen.",
+    "currency_not_allowed": "Valutaen er ikke tilladt ifølge politikken.",
+    "invalid_amount": "Ugyldigt beløb.",
+    "over_transaction_limit": "Beløbet overstiger grænsen pr. transaktion.",
+    "over_monthly_budget": "Agentens månedsbudget er overskredet.",
+    "merchant_blocked": "Forretningen er spærret ifølge politikken.",
+    "merchant_not_allowed": "Forretningen står ikke på listen over tilladte forretninger.",
+    "mcc_blocked": "Forretningskategorien er spærret.",
+    "mcc_not_allowed": "Forretningskategorien er ikke tilladt.",
+    "too_many_requests": "For mange anmodninger fra denne agent inden for den seneste time."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Setări",
+    "signOut": "Deconectare",
+    "language": {
+      "title": "Limbă",
+      "lead": "Limba interfeței pe acest dispozitiv."
+    },
+    "notifications": {
+      "title": "Notificări pe acest dispozitiv",
+      "lead": "Primiți o notificare pentru fiecare solicitare. Pe iPhone, adăugați mai întâi Artemis pe ecranul principal (Partajați → Adăugați pe ecranul principal).",
+      "notConfigured": "Notificările push nu sunt configurate pe acest server (chei VAPID). Emailurile rămân active.",
+      "unsupported": "Acest browser nu acceptă notificările push.",
+      "denied": "Notificările sunt blocate în setările browserului.",
+      "enable": "Activați notificările",
+      "on": "Notificările sunt activate.",
+      "disable": "Dezactivați"
+    },
+    "slack": {
+      "lead": "Fiecare solicitare în așteptare este publicată într-un canal Slack, cu un buton care deschide aprobarea prin passkey. Creați un „Incoming Webhook” în Slack și lipiți URL-ul acestuia.",
+      "connected": "Slack este conectat.",
+      "disconnect": "Deconectați",
+      "urlLabel": "URL-ul webhookului Slack",
+      "connect": "Conectați",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Predarea cardurilor către agenți",
+      "confirmDirect": "Predare directă: numărul cardului va trece o dată prin Artemis în drum spre agent. Acest lucru vă include în perimetrul PCI DSS și, cu Revolut, necesită o aprobare scrisă. Continuați?",
+      "linkTitle": "Link efemer (recomandat)",
+      "linkText": "Agentul primește un link de unică folosință valabil 10 minute; cardul este afișat de banca emitentă (Stripe Issuing). Numărul nu trece niciodată prin Artemis.",
+      "directTitle": "Predare directă (opțiune avansată)",
+      "directText": "Numărul este transmis agentului o singură dată, fără a fi stocat. Obligatorie pentru Revolut. Intrați în perimetrul PCI DSS."
+    },
+    "org": {
+      "title": "Organizație",
+      "name": "Nume",
+      "rename": "Redenumiți"
+    },
+    "emergency": {
+      "title": "Urgență",
+      "lead": "„Înghețați tot” suspendă toți agenții și anulează cardurile active și solicitările în așteptare. Folosiți această funcție dacă un agent se comportă anormal sau dacă un token a fost divulgat.",
+      "confirmFreeze": "Înghețați întreaga organizație? Toți agenții vor fi înghețați, iar cardurile active vor fi anulate.",
+      "unfreeze": "Dezghețați organizația",
+      "freeze": "Înghețați tot acum",
+      "afterUnfreeze": "După dezghețare, reactivați fiecare agent din pagina sa."
+    },
+    "passkeys": {
+      "title": "Passkey-uri",
+      "devicePrompt": "Numele dispozitivului (ex. iPhone-ul Lea)",
+      "confirmDelete": "Ștergeți acest passkey?",
+      "add": "Adăugați",
+      "lead": "Pentru a aproba o cheltuială este necesar un passkey. Adăugați câte unul pe fiecare dispozitiv pe care îl folosiți.",
+      "addedOn": "adăugat la {date}",
+      "delete": "Ștergeți",
+      "none": "Niciun passkey: încă nu puteți aproba cheltuieli."
+    }
+  }
+}

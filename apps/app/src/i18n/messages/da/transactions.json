@@ -1,0 +1,15 @@
+{
+  "transactions": {
+    "title": "Transaktioner",
+    "lead": "Transaktioner indberettet af dine banker og afstemt med mandaterne (seneste 90 dage).",
+    "mismatches_one": "{count} transaktion stemmer ikke med sit mandat. Gennemgå den, og frys agenten om nødvendigt.",
+    "mismatches_other": "{count} transaktioner stemmer ikke med deres mandat. Gennemgå dem, og frys agenten om nødvendigt.",
+    "emptyTitle": "Ingen transaktioner",
+    "emptyText": "De vises et par minutter efter hver betaling.",
+    "colDate": "Dato",
+    "colMerchant": "Forretning",
+    "colAmount": "Beløb",
+    "colBankStatus": "Bankstatus",
+    "colMatch": "Afstemning"
+  }
+}

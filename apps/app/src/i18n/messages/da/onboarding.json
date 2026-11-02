@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Trin {step} af {total}",
+    "continue": "Fortsæt →",
+    "org": {
+      "title": "Din organisation",
+      "lead": "Du starter i Sandbox: simuleret bank, ingen gebyrer.",
+      "nameLabel": "Virksomhedens eller studiets navn"
+    },
+    "agent": {
+      "title": "Din første agent",
+      "lead": "Et kort navn, der siger, hvad den køber. Standardregler: {monthly} pr. måned, {perPurchase} pr. køb.",
+      "nameLabel": "Agentens navn",
+      "platformLabel": "Platform",
+      "platformOther": "Andet",
+      "submit": "Opret agenten →"
+    },
+    "connect": {
+      "title": "Tilslut din agent",
+      "done": "Jeg har kopieret token →"
+    },
+    "passkey": {
+      "title": "Din adgangsnøgle til godkendelse",
+      "lead": "Hver udgift signeres med Face ID, Touch ID, Windows Hello eller en sikkerhedsnøgle. Registrér den om muligt fra den telefon, der skal modtage notifikationerne.",
+      "deviceName": "Første enhed",
+      "saved": "Adgangsnøglen er registreret.",
+      "unsupported": "Denne browser understøtter ikke adgangsnøgler.",
+      "register": "Registrér en adgangsnøgle",
+      "openDashboard": "Åbn oversigten →",
+      "later": "Senere"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Stranke",
+    "lead": "Svoj prostor za vsako stranko: njeni agenti, njen mesečni proračun, vaš pribitek in poročilo za prefakturiranje, pripravljeno za pošiljanje.",
+    "invalidBudget": "Neveljaven proračun (npr. 500 ali 49,90).",
+    "upsell": "Prostori za stranke so vključeni v paket Agencije ({price} + {perClient} na aktivno stranko).",
+    "seePlans": "Oglejte si pakete →",
+    "empty": "Ni strank",
+    "emptyHint": "Ustvarite stranko, nato ji dodelite agente.",
+    "cols": {
+      "client": "Stranka",
+      "agents": "Agenti",
+      "spent": "Rezervirano ta mesec",
+      "budget": "Proračun",
+      "markup": "Pribitek"
+    },
+    "archived": "arhivirana",
+    "percent": "{value} %",
+    "report": "Poročilo →",
+    "new": "Nova stranka",
+    "fields": {
+      "name": "Ime",
+      "billingEmail": "E-poštni naslov za račune",
+      "markup": "Pribitek pri prefakturiranju (%)",
+      "budget": "Mesečni proračun (€)",
+      "budgetHint": "Prazno = brez zgornje meje za stranko"
+    },
+    "create": "Ustvari stranko",
+    "exportFailed": "Izvoz ni uspel.",
+    "eyebrow": "Stranka",
+    "month": "Mesec",
+    "exportCsv": "Izvozi CSV",
+    "monthPurchases": "Nakupi ta mesec",
+    "markupPct": "Pribitek {value}",
+    "toRebill": "Za prefakturiranje",
+    "noPurchases": "Ta mesec ni nakupov",
+    "lines": {
+      "date": "Datum",
+      "agent": "Agent",
+      "merchant": "Trgovec",
+      "purpose": "Namen",
+      "amount": "Znesek",
+      "receipt": "Račun"
+    },
+    "yes": "Da",
+    "missing": "Manjka",
+    "archive": "Arhiviraj stranko",
+    "reactivate": "Ponovno aktiviraj",
+    "all": "← Vse stranke"
+  }
+}

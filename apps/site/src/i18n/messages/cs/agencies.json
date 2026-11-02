@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Pro agentury",
+    "description": "Automatizační agentury: výdaje agentů vašich klientů pod kontrolou, s rozpočtem a fakturou pro každého klienta.",
+    "eyebrow": "Automatizační agentury",
+    "headline": "Agenti vašich klientů utrácejí. Vy přefakturujete bez starostí.",
+    "lead": "Vytváříte pro své klienty agenty v n8n, Make nebo Claude? Artemis rozdělí výdaje podle klientů, každému nastaví rozpočet a připraví přefakturaci s vaší marží.",
+    "try": "Vyzkoušet zdarma →",
+    "plan": "Tarif {plan}: {base} + {client} za aktivního klienta",
+    "spaces": {
+      "title": "Samostatný prostor pro každého klienta",
+      "body": "Přiřaďte každého agenta ke klientovi. Jeho žádosti, karty, transakce a doklady jsou vedeny odděleně. Agent nikdy nemůže utratit rozpočet jiného klienta."
+    },
+    "budget": {
+      "title": "Měsíční rozpočet pro každého klienta",
+      "body": "Nastavte každému klientovi měsíční strop, nad rámec pravidel jednotlivých agentů. Po jeho překročení je žádost zamítnuta dříve, než se vůbec dostane k člověku."
+    },
+    "rebilling": {
+      "title": "Přefakturace jedním kliknutím",
+      "body": "Artemis každý měsíc připraví pro každého klienta přehled: zaúčtované nákupy, agent, obchodník, doklad, poplatek za správu podle vaší marže, celkem k přefakturaci. Export CSV připravený k odeslání nebo k importu do vašeho fakturačního nástroje."
+    },
+    "proof": {
+      "title": "Důkaz pro vaše klienty",
+      "body": "Každou platbu podepisuje oprávněná osoba a protokol nelze změnit. Ukažte svým klientům, že jejich agenti jsou pod lidským dohledem, jak vyžaduje AI Act."
+    },
+    "european": {
+      "title": "Evropský od začátku do konce",
+      "body": "Eura, evropské banky, data ve Frankfurtu, exporty FEC a Pennylane pro francouzské účetnictví."
+    },
+    "demo": {
+      "window": "přefakturace · martin-bakery · listopad",
+      "subtotal": "Mezisoučet",
+      "fee": "Poplatek za správu 15 %",
+      "total": "Celkem k přefakturaci"
+    }
+  }
+}

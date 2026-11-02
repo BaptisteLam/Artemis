@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Team",
+    "lead": "Goedkeurders ontvangen de aanvragen en ondertekenen ze met hun toegangssleutel.",
+    "confirmRemove": "Dit lid verwijderen?",
+    "cols": {
+      "member": "Lid",
+      "role": "Rol",
+      "since": "Sinds"
+    },
+    "you": "u",
+    "remove": "Verwijderen",
+    "invite": "Uitnodigen",
+    "email": "E-mailadres",
+    "role": "Rol",
+    "send": "Uitnodiging versturen",
+    "inviteLink": "Uitnodigingslink (7 dagen geldig):",
+    "expiresOn": "verloopt op {date}",
+    "revoke": "Intrekken"
+  }
+}

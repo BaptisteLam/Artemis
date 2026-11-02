@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Team",
+    "lead": "Godkenderne modtager anmodninger og signerer dem med deres adgangsnøgle.",
+    "confirmRemove": "Fjern dette medlem?",
+    "cols": {
+      "member": "Medlem",
+      "role": "Rolle",
+      "since": "Siden"
+    },
+    "you": "dig",
+    "remove": "Fjern",
+    "invite": "Invitér",
+    "email": "E-mail",
+    "role": "Rolle",
+    "send": "Send invitation",
+    "inviteLink": "Invitationslink (gyldigt i 7 dage):",
+    "expiresOn": "udløber {date}",
+    "revoke": "Tilbagekald"
+  }
+}

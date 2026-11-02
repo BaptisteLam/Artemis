@@ -1,0 +1,94 @@
+{
+  "audit": {
+    "title": "Revisionslog",
+    "lead": "Hver hændelse kædes med en SHA-256-hash og kan hverken ændres eller slettes: det er din dokumentation for menneskeligt tilsyn (AI Act).",
+    "verify": "Verificér integriteten",
+    "export": "Eksportér",
+    "report": "AI Act-rapport {quarter}",
+    "exportFailed": "Eksporten mislykkedes.",
+    "reportUnavailable": "Rapporten er ikke tilgængelig.",
+    "chainOk_one": "Kæden er intakt: {count} post verificeret.",
+    "chainOk_other": "Kæden er intakt: {count} poster verificeret.",
+    "chainBroken": "Kæden er brudt ved post nr. {id}.",
+    "exportUpsell": "Signeret eksport af revisionsloggen er inkluderet i planen Business.",
+    "seePlans": "Se planerne",
+    "cols": {
+      "date": "Dato",
+      "event": "Hændelse",
+      "actor": "Aktør",
+      "hash": "Fingeraftryk"
+    },
+    "view": "vis",
+    "older": "Ældre →",
+    "actors": {
+      "user": "Bruger",
+      "agent": "Agent",
+      "system": "System"
+    },
+    "actions": {
+      "org": {
+        "created": "Organisation oprettet",
+        "frozen": "Organisation frosset",
+        "unfrozen": "Frysning af organisation ophævet",
+        "card_delivery_changed": "Måde for kortoverdragelse ændret",
+        "slack_connected": "Slack tilsluttet",
+        "slack_disconnected": "Slack afbrudt"
+      },
+      "agent": {
+        "created": "Agent oprettet",
+        "updated": "Agent opdateret",
+        "deleted": "Agent slettet",
+        "token_rotated": "Ny token genereret",
+        "frozen": "Agent frosset"
+      },
+      "policy": {
+        "updated": "Regler opdateret"
+      },
+      "request": {
+        "created": "Anmodning oprettet",
+        "rejected": "Anmodning afvist",
+        "approved": "Mandat signeret",
+        "auto_approved": "Automatisk godkendelse",
+        "approval_recorded": "Godkendelse registreret",
+        "expired": "Anmodning udløbet"
+      },
+      "card": {
+        "issued": "Kort udstedt",
+        "issue_failed": "Udstedelse af kort mislykkedes",
+        "revealed": "Kort overdraget til agenten",
+        "link_created": "Kortlink oprettet",
+        "viewed": "Kort vist",
+        "canceled": "Kort annulleret",
+        "expired": "Kort udløbet"
+      },
+      "transaction": {
+        "matched": "Transaktion afstemt",
+        "mismatch": "Afvigelse registreret"
+      },
+      "receipt": {
+        "attached": "Kvittering vedhæftet"
+      },
+      "bank": {
+        "connected": "Bank tilsluttet",
+        "disconnected": "Bank afbrudt"
+      },
+      "member": {
+        "invited": "Medlem inviteret",
+        "joined": "Medlem tilsluttet",
+        "removed": "Medlem fjernet",
+        "role_changed": "Rolle ændret"
+      },
+      "client": {
+        "created": "Kunde oprettet",
+        "updated": "Kunde opdateret"
+      },
+      "billing": {
+        "subscribed": "Abonnement tegnet",
+        "updated": "Abonnement opdateret"
+      },
+      "subscription": {
+        "charged": "Abonnement debiteret"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Bogføringseksporter",
+    "lead": "Udgifter debiteret af dine banker, klar til Pennylane, din revisor eller et regneark.",
+    "failed": "Eksporten mislykkedes.",
+    "from": "Fra",
+    "to": "Til (eksklusive)",
+    "downloadCsv": "Download CSV",
+    "downloadFec": "Download FEC",
+    "formats": "CSV: semikolonsepareret, kompatibel med Excel. FEC: 18 lovpligtige kolonner, debet 604000/kredit 512000, kan importeres i Pennylane.",
+    "fecUpsell": "FEC er inkluderet fra planen Team.",
+    "seePlans": "Se planerne"
+  }
+}

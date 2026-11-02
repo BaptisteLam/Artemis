@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · abonnement {plan}",
+    "title": "Dashboard",
+    "stats": {
+      "spent": "Uitgegeven deze maand",
+      "pending": "Goed te keuren",
+      "openQueue": "Wachtrij openen →",
+      "requests": "Aanvragen deze maand"
+    },
+    "recent": {
+      "title": "Laatste aanvragen",
+      "viewAll": "Alles bekijken →",
+      "empty": "Geen aanvragen deze maand. Koppel een agent via de pagina {agents}.",
+      "agentsLink": "Agents"
+    },
+    "byAgent": {
+      "title": "Per agent",
+      "manage": "Beheren →",
+      "empty": "Geen agents."
+    }
+  }
+}

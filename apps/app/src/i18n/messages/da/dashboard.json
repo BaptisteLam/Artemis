@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · planen {plan}",
+    "title": "Oversigt",
+    "stats": {
+      "spent": "Forbrugt denne måned",
+      "pending": "Til godkendelse",
+      "openQueue": "Åbn køen →",
+      "requests": "Anmodninger denne måned"
+    },
+    "recent": {
+      "title": "Seneste anmodninger",
+      "viewAll": "Se alle →",
+      "empty": "Ingen anmodninger denne måned. Tilslut en agent fra siden {agents}.",
+      "agentsLink": "Agenter"
+    },
+    "byAgent": {
+      "title": "Pr. agent",
+      "manage": "Administrér →",
+      "empty": "Ingen agenter."
+    }
+  }
+}

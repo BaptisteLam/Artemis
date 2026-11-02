@@ -1,0 +1,96 @@
+{
+  "audit": {
+    "title": "Revizijski dnevnik",
+    "lead": "Vsak dogodek je veriženo povezan z zgoščeno vrednostjo SHA-256 in ga ni mogoče spremeniti ali izbrisati: to je vaš dokaz o človeškem nadzoru (AI Act).",
+    "verify": "Preveri celovitost",
+    "export": "Izvozi",
+    "report": "Poročilo za AI Act {quarter}",
+    "exportFailed": "Izvoz ni uspel.",
+    "reportUnavailable": "Poročilo ni na voljo.",
+    "chainOk_one": "Veriga je nepoškodovana: preverjen {count} vnos.",
+    "chainOk_two": "Veriga je nepoškodovana: preverjena {count} vnosa.",
+    "chainOk_few": "Veriga je nepoškodovana: preverjeni {count} vnosi.",
+    "chainOk_other": "Veriga je nepoškodovana: preverjenih {count} vnosov.",
+    "chainBroken": "Veriga je prekinjena pri vnosu št. {id}.",
+    "exportUpsell": "Podpisan izvoz revizijskega dnevnika je vključen v paket Business.",
+    "seePlans": "Oglejte si pakete",
+    "cols": {
+      "date": "Datum",
+      "event": "Dogodek",
+      "actor": "Akter",
+      "hash": "Prstni odtis"
+    },
+    "view": "prikaži",
+    "older": "Starejše →",
+    "actors": {
+      "user": "Uporabnik",
+      "agent": "Agent",
+      "system": "Sistem"
+    },
+    "actions": {
+      "org": {
+        "created": "Organizacija ustvarjena",
+        "frozen": "Organizacija zamrznjena",
+        "unfrozen": "Organizacija odmrznjena",
+        "card_delivery_changed": "Način predaje kartice spremenjen",
+        "slack_connected": "Slack povezan",
+        "slack_disconnected": "Slack odklopljen"
+      },
+      "agent": {
+        "created": "Agent ustvarjen",
+        "updated": "Agent posodobljen",
+        "deleted": "Agent izbrisan",
+        "token_rotated": "Žeton na novo ustvarjen",
+        "frozen": "Agent zamrznjen"
+      },
+      "policy": {
+        "updated": "Pravila posodobljena"
+      },
+      "request": {
+        "created": "Zahteva ustvarjena",
+        "rejected": "Zahteva zavrnjena",
+        "approved": "Pooblastilo podpisano",
+        "auto_approved": "Samodejna odobritev",
+        "approval_recorded": "Odobritev zabeležena",
+        "expired": "Zahteva je potekla"
+      },
+      "card": {
+        "issued": "Kartica izdana",
+        "issue_failed": "Izdaja kartice ni uspela",
+        "revealed": "Kartica predana agentu",
+        "link_created": "Povezava do kartice ustvarjena",
+        "viewed": "Kartica prikazana",
+        "canceled": "Kartica preklicana",
+        "expired": "Kartica je potekla"
+      },
+      "transaction": {
+        "matched": "Transakcija usklajena",
+        "mismatch": "Zaznano neskladje"
+      },
+      "receipt": {
+        "attached": "Račun priložen"
+      },
+      "bank": {
+        "connected": "Banka povezana",
+        "disconnected": "Banka odklopljena"
+      },
+      "member": {
+        "invited": "Član povabljen",
+        "joined": "Član se je pridružil",
+        "removed": "Član odstranjen",
+        "role_changed": "Vloga spremenjena"
+      },
+      "client": {
+        "created": "Stranka ustvarjena",
+        "updated": "Stranka posodobljena"
+      },
+      "billing": {
+        "subscribed": "Naročnina sklenjena",
+        "updated": "Naročnina posodobljena"
+      },
+      "subscription": {
+        "charged": "Naročnina zaračunana"
+      }
+    }
+  }
+}

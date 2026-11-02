@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Korak {step} od {total}",
+    "continue": "Nadaljuj →",
+    "org": {
+      "title": "Vaša organizacija",
+      "lead": "Začnete v načinu Sandbox: simulirana banka, brez stroškov.",
+      "nameLabel": "Ime podjetja ali studia"
+    },
+    "agent": {
+      "title": "Vaš prvi agent",
+      "lead": "Kratko ime, ki pove, kaj kupuje. Privzeta pravila: {monthly} na mesec, {perPurchase} na nakup.",
+      "nameLabel": "Ime agenta",
+      "platformLabel": "Platforma",
+      "platformOther": "Drugo",
+      "submit": "Ustvari agenta →"
+    },
+    "connect": {
+      "title": "Povežite svojega agenta",
+      "done": "Žeton sem kopiral →"
+    },
+    "passkey": {
+      "title": "Vaš ključ za dostop za odobritve",
+      "lead": "Vsak izdatek boste podpisali s Face ID, Touch ID, Windows Hello ali varnostnim ključem. Če je mogoče, ga registrirajte v telefonu, ki bo prejemal obvestila.",
+      "deviceName": "Prva naprava",
+      "saved": "Ključ za dostop je registriran.",
+      "unsupported": "Ta brskalnik ne podpira ključev za dostop.",
+      "register": "Registriraj ključ za dostop",
+      "openDashboard": "Odpri nadzorno ploščo →",
+      "later": "Pozneje"
+    }
+  }
+}

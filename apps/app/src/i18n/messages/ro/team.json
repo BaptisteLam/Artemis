@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Echipă",
+    "lead": "Aprobatorii primesc solicitările și le semnează cu passkey-ul lor.",
+    "confirmRemove": "Eliminați acest membru?",
+    "cols": {
+      "member": "Membru",
+      "role": "Rol",
+      "since": "Din"
+    },
+    "you": "dumneavoastră",
+    "remove": "Eliminați",
+    "invite": "Invitați",
+    "email": "Email",
+    "role": "Rol",
+    "send": "Trimiteți invitația",
+    "inviteLink": "Link de invitație (valabil 7 zile):",
+    "expiresOn": "expiră la {date}",
+    "revoke": "Revocați"
+  }
+}

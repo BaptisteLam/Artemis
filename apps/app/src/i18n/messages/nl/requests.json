@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filteren op status",
+      "all": "Alle",
+      "pending": "Goed te keuren",
+      "issued": "Kaart uitgegeven",
+      "completed": "Betaald",
+      "rejected": "Afgewezen",
+      "failed": "Mislukt"
+    },
+    "list": {
+      "title": "Aanvragen",
+      "lead": "Elke aanvraag van uw agents, met de beslissing en de kaart.",
+      "emptyTitle": "Geen aanvragen",
+      "emptyBody": "De aanvragen van uw agents verschijnen hier."
+    },
+    "decision": {
+      "notAllowed": "Alleen eigenaren, beheerders en goedkeurders kunnen beslissen.",
+      "cancelledOnDevice": "Goedkeuring geannuleerd op het apparaat.",
+      "reasonLabel": "Reden van afwijzing",
+      "reasonHint": "Zichtbaar voor de agent.",
+      "confirmReject": "Afwijzing bevestigen",
+      "cancel": "Annuleren",
+      "signing": "Bezig met ondertekenen…",
+      "approve": "Goedkeuren met mijn toegangssleutel",
+      "reject": "Afwijzen"
+    },
+    "detail": {
+      "confirmCancel": "Deze aanvraag en de bijbehorende kaart annuleren?",
+      "receiptUnavailable": "Bon niet beschikbaar.",
+      "eyebrow": "Aanvraag · {id}",
+      "amount": "Aangevraagd bedrag",
+      "agent": "Agent",
+      "mandateWindow": "mandaat · {id}",
+      "purpose": "Doel",
+      "category": "Categorie",
+      "expires": "Verloopt",
+      "rules": "Regels",
+      "perTxLimit": "Limiet",
+      "budget": "budget",
+      "decision": "Beslissing",
+      "hash": "sha256 {hash}",
+      "quorum": "Quorum: {signed} van {required} vereiste handtekeningen boven de drempel.",
+      "unusualAmount": "Vangrail: ongebruikelijk bedrag voor deze agent, menselijke goedkeuring vereist.",
+      "autoApproved": "Automatisch goedgekeurd door de regels",
+      "signedByPasskey": "Mandaat ondertekend met een toegangssleutel",
+      "card": "Kaart",
+      "cardHolderFallback": "agent",
+      "cardAria": "Virtuele kaart eindigend op {last4}, houder {holder}, geldig tot {exp}",
+      "bankSca": "Keur het aanmaken van de kaart ook goed in uw bankapp.",
+      "cardExpires": "Geldig tot {date}",
+      "handedOver": "overhandigd aan de agent {time}",
+      "notHandedOver": "nog niet overhandigd aan de agent",
+      "qontoNotice": "Qonto overhandigt geen kaarten aan agents: toon de kaart hier en rond de betaling zelf af.",
+      "showQontoCard": "Kaart tonen (Qonto)",
+      "simulatePayment": "Een betaling simuleren",
+      "cancelCard": "Kaart annuleren",
+      "noCard": "Geen kaart uitgegeven.",
+      "transactions": "Transacties",
+      "noTransactions": "Geen transacties gemeld door de bank.",
+      "receipts": "Bonnen",
+      "addReceipt": "Toevoegen",
+      "noReceipts": "Geen bonnen.",
+      "back": "← Alle aanvragen"
+    }
+  }
+}

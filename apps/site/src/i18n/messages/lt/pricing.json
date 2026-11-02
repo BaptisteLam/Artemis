@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Kainos",
+    "description": "Nemokamas Sandbox, tada {a}, {b}, {c} arba {d} per mėnesį. Jokių komisinių nuo jūsų išlaidų.",
+    "headline": "Viena paprasta prenumerata. Jokių komisinių.",
+    "lead": "Mokate tik už programinę įrangą. Korteles išduoda jūsų bankas pagal jūsų įprastą banko planą.",
+    "popular": "Populiariausias",
+    "from": "nuo {price}",
+    "perMonth": "/ mėn.",
+    "start": "Pradėti",
+    "choose": "Pasirinkti {plan}",
+    "mandates": "{count} įgaliojimų / mėn.",
+    "sandbox": {
+      "pitch": "Išbandykite su imituotu banku.",
+      "i1": "1 agentas",
+      "i2": "Imituotas bankas",
+      "i3": "{count} imituotų įgaliojimų / mėn.",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Laisvai samdomam specialistui ar kūrėjui ir jo agentams.",
+      "i1": "3 agentai",
+      "i2": "1 prijungtas bankas",
+      "i4": "Tvirtinimas prieigos raktu",
+      "i5": "Apsauginės ribos nuo injekcijų"
+    },
+    "team": {
+      "pitch": "Startuoliui, turinčiam 5–50 darbuotojų.",
+      "i1": "10 agentų",
+      "i2": "2 bankai",
+      "i4": "Slack ir tvirtintojų kvorumas",
+      "i5": "Prenumeratos, FEC eksportas"
+    },
+    "agency": {
+      "pitch": "Automatizavimo agentūroms.",
+      "i1": "Neribotas klientų skaičius, 25 agentai",
+      "i3": "Biudžetas ir antkainis kiekvienam klientui",
+      "i4": "Mėnesio ataskaita sąskaitoms klientams išrašyti",
+      "i5": "+ {price} už kiekvieną aktyvų klientą"
+    },
+    "business": {
+      "pitch": "Reguliuojamoms sparčiai augančioms įmonėms.",
+      "i1": "Neribota",
+      "i2": "AI Act dokumentacija ir ataskaita",
+      "i3": "Pasirašyto audito žurnalo eksportas",
+      "i4": "Prioritetinė pagalba"
+    },
+    "faq": {
+      "title": "Dažniausiai užduodami klausimai",
+      "q1": "Ar yra mokesčių už kiekvieną kortelę?",
+      "a1": "Ne iš Artemis. Jūsų bankas taiko savo įkainius (virtualios kortelės įtrauktos į daugumą Qonto ir Revolut Business planų; Stripe Issuing taiko mokesčius pagal savo kainodarą).",
+      "q2": "Kas nutinka, jei viršiju kvotą?",
+      "a2": "Mokamame plane jūsų agentai dirba toliau: už kiekvieną įgaliojimą virš kvotos mėnesio pabaigoje imama {price}. Plane Sandbox užklausos atmetamos su kodu <code>quota_exceeded</code>.",
+      "q3": "Kaip apmokestinamas planas {plan}?",
+      "a3": "{base} per mėnesį ir {client} už kiekvieną aktyvų klientą, t. y. kiekvieną klientą, kuriam per mėnesį sukurtas bent vienas įgaliojimas.",
+      "q4": "Ar galiu atsisakyti bet kada?",
+      "a4": "Taip, skiltyje Atsiskaitymai. Prenumerata galioja iki apmokėto laikotarpio pabaigos; jūsų duomenis vis tiek bus galima eksportuoti.",
+      "q5": "PVM",
+      "a5": "Nurodytos kainos yra neto."
+    }
+  }
+}

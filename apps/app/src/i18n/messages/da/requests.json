@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtrér efter status",
+      "all": "Alle",
+      "pending": "Til godkendelse",
+      "issued": "Kort udstedt",
+      "completed": "Betalt",
+      "rejected": "Afvist",
+      "failed": "Mislykket"
+    },
+    "list": {
+      "title": "Anmodninger",
+      "lead": "Hver anmodning fra agenterne, med beslutning og kort.",
+      "emptyTitle": "Ingen anmodninger",
+      "emptyBody": "Dine agenters anmodninger vises her."
+    },
+    "decision": {
+      "notAllowed": "Kun ejere, administratorer og godkendere kan træffe beslutning.",
+      "cancelledOnDevice": "Godkendelsen blev annulleret på enheden.",
+      "reasonLabel": "Begrundelse for afvisning",
+      "reasonHint": "Synlig for agenten.",
+      "confirmReject": "Bekræft afvisning",
+      "cancel": "Annullér",
+      "signing": "Signerer …",
+      "approve": "Godkend med min adgangsnøgle",
+      "reject": "Afvis"
+    },
+    "detail": {
+      "confirmCancel": "Annullér denne anmodning og dens kort?",
+      "receiptUnavailable": "Kvitteringen er ikke tilgængelig.",
+      "eyebrow": "Anmodning · {id}",
+      "amount": "Anmodet beløb",
+      "agent": "Agent",
+      "mandateWindow": "mandat · {id}",
+      "purpose": "Formål",
+      "category": "Kategori",
+      "expires": "Udløber",
+      "rules": "Regler",
+      "perTxLimit": "Grænse",
+      "budget": "budget",
+      "decision": "Beslutning",
+      "hash": "sha256 {hash}",
+      "quorum": "Kvorum: {signed} af {required} påkrævede signaturer over tærsklen.",
+      "unusualAmount": "Sikkerhedsværn: usædvanligt beløb for denne agent, menneskelig godkendelse påkrævet.",
+      "autoApproved": "Godkendt automatisk af reglerne",
+      "signedByPasskey": "Mandat signeret med adgangsnøgle",
+      "card": "Kort",
+      "cardHolderFallback": "agent",
+      "cardAria": "Virtuelt kort, der ender på {last4}, kortholder {holder}, udløber {exp}",
+      "bankSca": "Godkend også oprettelsen af kortet i din bankapp.",
+      "cardExpires": "Udløber {date}",
+      "handedOver": "overdraget til agenten {time}",
+      "notHandedOver": "endnu ikke overdraget til agenten",
+      "qontoNotice": "Qonto overdrager ikke kort til agenter: vis kortet her, og gennemfør selv betalingen.",
+      "showQontoCard": "Vis kortet (Qonto)",
+      "simulatePayment": "Simulér en betaling",
+      "cancelCard": "Annullér kortet",
+      "noCard": "Intet kort udstedt.",
+      "transactions": "Transaktioner",
+      "noTransactions": "Ingen transaktioner indberettet af banken.",
+      "receipts": "Kvitteringer",
+      "addReceipt": "Tilføj",
+      "noReceipts": "Ingen kvitteringer.",
+      "back": "← Alle anmodninger"
+    }
+  }
+}

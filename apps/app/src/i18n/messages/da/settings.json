@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Indstillinger",
+    "signOut": "Log ud",
+    "language": {
+      "title": "Sprog",
+      "lead": "Grænsefladens sprog på denne enhed."
+    },
+    "notifications": {
+      "title": "Notifikationer på denne enhed",
+      "lead": "Få en notifikation for hver anmodning. På iPhone skal du først føje Artemis til hjemmeskærmen (Del → Føj til hjemmeskærm).",
+      "notConfigured": "Push-notifikationer er ikke konfigureret på denne server (VAPID-nøgler). E-mails er fortsat aktive.",
+      "unsupported": "Denne browser understøtter ikke push-notifikationer.",
+      "denied": "Notifikationerne er blokeret i browserens indstillinger.",
+      "enable": "Aktivér notifikationer",
+      "on": "Notifikationerne er slået til.",
+      "disable": "Slå fra"
+    },
+    "slack": {
+      "lead": "Hver ventende anmodning sendes til en Slack-kanal med en knap, der åbner godkendelsen med adgangsnøgle. Opret en »Incoming Webhook« i Slack, og indsæt dens URL.",
+      "connected": "Slack er tilsluttet.",
+      "disconnect": "Afbryd",
+      "urlLabel": "URL til Slack-webhook",
+      "connect": "Tilslut",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Overdragelse af kort til agenter",
+      "confirmDirect": "Direkte overdragelse: kortnummeret går én gang gennem Artemis på vej til agenten. Det bringer dig ind under PCI DSS og kræver, med Revolut, en skriftlig godkendelse. Fortsæt?",
+      "linkTitle": "Midlertidigt link (anbefales)",
+      "linkText": "Agenten modtager et engangslink, der er gyldigt i 10 minutter; kortet vises af den udstedende bank (Stripe Issuing). Nummeret går aldrig gennem Artemis.",
+      "directTitle": "Direkte overdragelse (avanceret mulighed)",
+      "directText": "Nummeret videresendes til agenten én gang uden at blive gemt. Påkrævet for Revolut. Du kommer ind under PCI DSS."
+    },
+    "org": {
+      "title": "Organisation",
+      "name": "Navn",
+      "rename": "Omdøb"
+    },
+    "emergency": {
+      "title": "Nødsituation",
+      "lead": "»Frys alt« suspenderer alle agenter og annullerer aktive kort og ventende anmodninger. Brug det, hvis en agent opfører sig unormalt, eller hvis en token er lækket.",
+      "confirmFreeze": "Frys hele organisationen? Alle agenter fryses, og aktive kort annulleres.",
+      "unfreeze": "Ophæv frysningen af organisationen",
+      "freeze": "Frys alt nu",
+      "afterUnfreeze": "Når frysningen er ophævet, skal du genaktivere hver agent fra dens side."
+    },
+    "passkeys": {
+      "title": "Adgangsnøgler",
+      "devicePrompt": "Enhedens navn (f.eks. Leas iPhone)",
+      "confirmDelete": "Slet denne adgangsnøgle?",
+      "add": "Tilføj",
+      "lead": "Der kræves en adgangsnøgle for at godkende en udgift. Tilføj én på hver enhed, du bruger.",
+      "addedOn": "tilføjet {date}",
+      "delete": "Slet",
+      "none": "Ingen adgangsnøgle: du kan endnu ikke godkende udgifter."
+    }
+  }
+}

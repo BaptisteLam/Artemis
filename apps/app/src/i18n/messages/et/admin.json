@@ -1,0 +1,20 @@
+{
+  "admin": {
+    "eyebrow": "Haldus",
+    "title": "Artemis arvudes",
+    "mrr": "MRR",
+    "paying": "Maksvad kliendid",
+    "ofOrgs_one": "{count} organisatsioonist",
+    "ofOrgs_other": "{count} organisatsioonist",
+    "signups7d": "Registreerumised (7 päeva)",
+    "requests30d": "Taotlused (30 päeva)",
+    "orgs": "Organisatsioonid",
+    "cols": {
+      "name": "Nimi",
+      "plan": "Pakett",
+      "subscription": "Tellimus",
+      "created": "Loodud"
+    },
+    "waitlist": "Ootenimekiri ({total})"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "billing": {
+    "title": "Facturare",
+    "lead": "Plan actual: {plan}. Solicitări în această lună: {usage}. TVA neaplicabilă, art. 293 B din Codul general al impozitelor francez (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Gestionați abonamentul și facturile",
+    "returnOk": "Vă mulțumim! Abonamentul dumneavoastră se activează (câteva secunde).",
+    "returnCanceled": "Plată anulată, nu s-a modificat nimic.",
+    "inactive": "Abonamentul dumneavoastră nu mai este activ ({status}). Funcționalitățile cu plată sunt suspendate: vă rugăm să actualizați metoda de plată.",
+    "unknown": "necunoscut",
+    "overage": "Peste cota unui plan cu plată, fiecare mandat suplimentar se facturează cu {price}.",
+    "overageCount_one": "Luna aceasta: {count} mandat.",
+    "overageCount_few": "Luna aceasta: {count} mandate.",
+    "overageCount_other": "Luna aceasta: {count} de mandate.",
+    "ownerOnly": "Doar un proprietar poate modifica abonamentul.",
+    "current": "Actual",
+    "from": "de la {price}",
+    "perMonth": "/ lună",
+    "choose": "Alegeți {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agenții",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agent",
+        "i2": "Bancă simulată",
+        "i3": "20 de mandate simulate / lună"
+      },
+      "builder": {
+        "i1": "3 agenți",
+        "i2": "1 bancă reală",
+        "i3": "50 de mandate / lună",
+        "i4": "Aprobare prin passkey și notificări"
+      },
+      "team": {
+        "i1": "10 agenți",
+        "i2": "2 bănci reale",
+        "i3": "300 de mandate / lună",
+        "i4": "Slack, cvorum de aprobatori, export FEC",
+        "i5": "Abonamente gestionate per agent"
+      },
+      "agency": {
+        "i1": "25 de agenți, clienți nelimitați",
+        "i2": "1.000 de mandate / lună",
+        "i3": "Bugete, adaos și refacturare per client",
+        "i4": "+ {price} per client activ"
+      },
+      "business": {
+        "i1": "Nelimitat",
+        "i2": "Dosar și raport AI Act",
+        "i3": "Export semnat al jurnalului de audit",
+        "i4": "Asistență prioritară"
+      }
+    }
+  }
+}

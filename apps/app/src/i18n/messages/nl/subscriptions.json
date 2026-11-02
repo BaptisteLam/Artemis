@@ -1,0 +1,21 @@
+{
+  "subscriptions": {
+    "title": "Abonnementen",
+    "lead": "Abonnementen die uw agents hebben afgesloten: kaart vergrendeld op de verkoper, maandlimiet, detectie van slapende abonnementen.",
+    "confirmCancel": "Dit abonnement opzeggen? De kaart wordt bij de bank geannuleerd.",
+    "planRequired": "Abonnementen beheerd door agents zijn inbegrepen vanaf het abonnement Team.",
+    "seePlans": "Abonnementen bekijken →",
+    "dormantAlert_one": "{count} abonnement zonder betaling sinds meer dan {days} dagen: overweeg het op te zeggen.",
+    "dormantAlert_other": "{count} abonnementen zonder betaling sinds meer dan {days} dagen: overweeg ze op te zeggen.",
+    "emptyTitle": "Geen abonnementen",
+    "emptyText": "Een agent sluit een abonnement af met request_card en de optie voor terugkerende betalingen.",
+    "colMerchant": "Verkoper",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Maandlimiet",
+    "colPaid": "Betaald",
+    "colLastPayment": "Laatste betaling",
+    "colStatus": "Status",
+    "dormant": "Slapend",
+    "cancel": "Opzeggen"
+  }
+}

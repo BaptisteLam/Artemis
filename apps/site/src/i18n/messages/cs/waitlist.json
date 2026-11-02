@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Čekací listina",
+    "description": "Nechte si poslat upozornění, až zpřístupníme připojení skutečných bank.",
+    "headline": "Buďte mezi prvními.",
+    "lead": "Konektory pro Qonto a Revolut zpřístupňujeme postupně. Zanechte nám svůj e-mail a dáme vám vědět, jakmile bude vaše banka k dispozici.",
+    "email": "Pracovní e-mail",
+    "company": "Společnost",
+    "useCase": "Za co potřebují vaši agenti platit?",
+    "useCasePlaceholder": "API, SaaS, cloud, data…",
+    "submit": "Zapsat se na čekací listinu",
+    "sending": "Odesílání…",
+    "ok": "Děkujeme, jste na seznamu. Jakmile spustíme, pošleme vám e-mail.",
+    "error": "Zápis se nezdařil. Zkuste to prosím za chvíli znovu."
+  }
+}

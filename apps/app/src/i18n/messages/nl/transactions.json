@@ -1,0 +1,15 @@
+{
+  "transactions": {
+    "title": "Transacties",
+    "lead": "Verrichtingen gemeld door uw banken en afgestemd met de mandaten (laatste 90 dagen).",
+    "mismatches_one": "{count} transactie komt niet overeen met haar mandaat. Controleer haar en blokkeer de agent indien nodig.",
+    "mismatches_other": "{count} transacties komen niet overeen met hun mandaat. Controleer ze en blokkeer de agent indien nodig.",
+    "emptyTitle": "Geen transacties",
+    "emptyText": "Ze verschijnen enkele minuten na elke betaling.",
+    "colDate": "Datum",
+    "colMerchant": "Verkoper",
+    "colAmount": "Bedrag",
+    "colBankStatus": "Bankstatus",
+    "colMatch": "Afstemming"
+  }
+}

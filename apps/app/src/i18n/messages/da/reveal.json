@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Engangskort · simuleret bank",
+    "eyebrowBank": "Engangskort · udstedt af din bank",
+    "lead": "Dette link kan kun åbnes én gang. Kortet er begrænset til beløbet ovenfor og låst til denne forretning.",
+    "fields": {
+      "number": "Nummer",
+      "expiry": "Udløb",
+      "cvc": "Sikkerhedskode",
+      "holder": "Kortholder"
+    },
+    "opening": "Åbner …",
+    "show": "Vis kort •••• {last4}",
+    "footer": "Nummeret vises direkte af den udstedende bank: det går aldrig gennem Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js er ikke tilgængeligt.",
+      "invalidLink": "Ugyldigt link, allerede brugt eller udløbet.",
+      "stripeRefused": "Stripe afviste anmodningen."
+    }
+  }
+}

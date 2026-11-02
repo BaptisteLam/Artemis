@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Uw agents betalen. U hebt het laatste woord.",
+    "unknownAgent": "Een agent",
+    "unknownMerchant": "een verkoper",
+    "requestPending": {
+      "title": "{agent} wil {amount} uitgeven",
+      "subject": "Goed te keuren: {amount} bij {merchant}",
+      "merchant": "Verkoper: {merchant}",
+      "purpose": "Doel: {purpose}",
+      "expires": "Zonder antwoord verloopt de aanvraag automatisch.",
+      "cta": "Bekijken en goedkeuren →",
+      "slack": "*{title}* bij *{merchant}*",
+      "slackCta": "Bekijken en ondertekenen met mijn toegangssleutel"
+    },
+    "cardIssueFailed": {
+      "subject": "Aanmaken van kaart mislukt bij {merchant}",
+      "title": "De bank heeft de kaart niet aangemaakt",
+      "fallback": "Bankfout.",
+      "cta": "Aanvraag bekijken →"
+    },
+    "mismatch": {
+      "subject": "Afwijking gedetecteerd: {amount} bij {merchant}",
+      "title": "Een transactie komt niet overeen met het mandaat",
+      "check": "Controleer de transactie en blokkeer de agent indien nodig.",
+      "cta": "Transacties bekijken →",
+      "pushTitle": "Afwijkende transactie"
+    },
+    "invitation": {
+      "subject": "Uitnodiging om lid te worden van {org} op Artemis",
+      "title": "Word lid van {org}",
+      "body": "U bent uitgenodigd om de uitgaven van de AI-agents van uw team goed te keuren en te volgen.",
+      "cta": "Uitnodiging accepteren →"
+    }
+  }
+}

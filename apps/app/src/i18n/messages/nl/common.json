@@ -1,0 +1,90 @@
+{
+  "common": {
+    "loading": "Bezig met laden…",
+    "copy": "Kopiëren",
+    "copied": "Gekopieerd"
+  },
+  "lang": {
+    "choose": "Taal"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "requests": "Aanvragen",
+    "agents": "Agents",
+    "clients": "Klanten",
+    "cards": "Kaarten",
+    "subscriptions": "Abonnementen",
+    "transactions": "Transacties",
+    "exports": "Exports",
+    "banks": "Banken",
+    "team": "Team",
+    "audit": "Audit",
+    "billing": "Facturatie",
+    "settings": "Instellingen"
+  },
+  "shell": {
+    "home": "Artemis, dashboard",
+    "organization": "Organisatie",
+    "admin": "Beheer",
+    "freezeAllHint": "Alle agents blokkeren en actieve kaarten annuleren",
+    "frozen": "Geblokkeerd",
+    "freezeAll": "Alles blokkeren",
+    "signOut": "Uitloggen",
+    "navAria": "Navigatie van de app",
+    "pendingCount_one": "{count} openstaand",
+    "pendingCount_other": "{count} openstaand",
+    "frozenBanner": "Organisatie geblokkeerd: er kan geen nieuwe kaart worden uitgegeven. Deblokkeer haar in Instellingen."
+  },
+  "status": {
+    "pending": "Goed te keuren",
+    "approved": "Goedgekeurd",
+    "issued": "Kaart uitgegeven",
+    "completed": "Betaald",
+    "rejected": "Afgewezen",
+    "expired": "Verlopen",
+    "failed": "Bankfout",
+    "canceled": "Geannuleerd",
+    "active": "Actief",
+    "pending_bank_sca": "Goedkeuring bank",
+    "used": "Gebruikt",
+    "frozen": "Geblokkeerd",
+    "matched": "Afgestemd",
+    "mismatch": "Afwijking",
+    "unmatched": "Niet afgestemd"
+  },
+  "roles": {
+    "owner": "Eigenaar",
+    "admin": "Beheerder",
+    "approver": "Goedkeurder",
+    "viewer": "Lezer"
+  },
+  "errors": {
+    "network": "Netwerk niet beschikbaar. Controleer uw verbinding.",
+    "unauthorized": "Uw sessie is verlopen. Log opnieuw in.",
+    "forbidden": "U hebt geen toestemming om dit te doen.",
+    "not_found": "Niet gevonden of niet meer beschikbaar.",
+    "invalid_input": "Sommige gegevens zijn ongeldig. Controleer het formulier.",
+    "rate_limited": "Te veel pogingen. Wacht even en probeer het opnieuw.",
+    "quota_exceeded": "Uw maandelijkse quotum aan mandaten is bereikt.",
+    "subscription_inactive": "Uw abonnement is inactief. Werk het bij in Facturatie.",
+    "org_frozen": "De organisatie is geblokkeerd.",
+    "agent_frozen": "Deze agent is geblokkeerd.",
+    "request_not_pending": "Deze aanvraag staat niet meer open.",
+    "request_expired": "Deze aanvraag is verlopen.",
+    "already_revealed": "Deze kaart is al overhandigd.",
+    "card_not_ready": "De kaart is nog niet beschikbaar.",
+    "bank_error": "De bank heeft de bewerking geweigerd.",
+    "plan_limit": "De limiet van uw abonnement is bereikt. Upgrade om door te gaan.",
+    "over_client_budget": "Het maandbudget van deze klant is overschreden.",
+    "internal": "Er is iets misgegaan. Probeer het opnieuw.",
+    "currency_not_allowed": "Deze valuta is niet toegestaan door het beleid.",
+    "invalid_amount": "Ongeldig bedrag.",
+    "over_transaction_limit": "Bedrag boven de limiet per transactie.",
+    "over_monthly_budget": "Het maandbudget van de agent is overschreden.",
+    "merchant_blocked": "Deze verkoper is geblokkeerd door het beleid.",
+    "merchant_not_allowed": "Deze verkoper staat niet op de lijst van toegestane verkopers.",
+    "mcc_blocked": "Deze verkopercategorie is geblokkeerd.",
+    "mcc_not_allowed": "Deze verkopercategorie is niet toegestaan.",
+    "too_many_requests": "Te veel aanvragen van deze agent in het afgelopen uur."
+  }
+}

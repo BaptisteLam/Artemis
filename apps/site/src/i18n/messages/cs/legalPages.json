@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Všeobecné obchodní podmínky a podmínky užívání",
+      "purposeTitle": "1. Předmět",
+      "purpose": "Tyto podmínky upravují přístup k softwaru Artemis, který vydává {editor} ({status}, SIRET {siret}), a jeho předplatné ze strany obchodních zákazníků. Služba je určena výhradně podnikatelům.",
+      "serviceTitle": "2. Popis služby",
+      "service": "Artemis umožňuje zákazníkovi stanovit pravidla výdajů pro jeho softwarové agenty, schvalovat jejich platební žádosti a prostřednictvím aplikačních programových rozhraní jeho vlastní banky řídit vytváření jednorázových virtuálních karet. Artemis neposkytuje žádné platební služby, nedrží žádné prostředky a nevydává žádné karty. Bankovní vztah, bankovní poplatky a silné ověření se řídí výhradně smlouvou mezi zákazníkem a jeho bankou.",
+      "accountTitle": "3. Účet a zabezpečení",
+      "account": "Zákazník odpovídá za důvěrnost tokenů agentů, přístupu ke svému účtu a přístupových klíčů svých uživatelů, jakož i za pravidla, která nastaví. Každý výdaj schválený oprávněným uživatelem nebo odpovídající pravidlu automatického schválení se považuje za autorizovaný zákazníkem.",
+      "pricesTitle": "4. Tarify a ceny",
+      "prices": "Tarify: Sandbox (zdarma), Builder ({builder} / měsíc), Team ({team} / měsíc), Agentury ({agency} / měsíc + {perClient} za aktivního klienta), Business (od {business} / měsíc). Po překročení měsíční kvóty placeného tarifu se každý další mandát účtuje částkou {overage}. Ceny jsou čisté. {vat}. Měsíční platba předem kartou prostřednictvím Stripe. Obnovení je automatické; výpověď nabývá účinnosti koncem běžného období, bez poměrného vrácení plateb.",
+      "quotasTitle": "5. Kvóty",
+      "quotas": "Každý tarif zahrnuje kvóty (agenti, připojené banky, měsíční žádosti). Po jejich překročení jsou nové žádosti zamítány až do následujícího období nebo do změny tarifu.",
+      "availabilityTitle": "6. Dostupnost",
+      "availability": "Vydavatel vynakládá přiměřené prostředky k zajištění dostupnosti služby, aniž by se zavazoval k výsledku. Může docházet k přerušením z důvodu údržby nebo v důsledku technických a bankovních poskytovatelů služeb.",
+      "liabilityTitle": "7. Odpovědnost",
+      "liability": "Vydavatel neodpovídá za nákupy uskutečněné agenty zákazníka v rozsahu udělených oprávnění, za výběr obchodníků, za kvalitu zakoupeného zboží nebo služeb ani za rozhodnutí banky zákazníka. Odpovědnost vydavatele je ze všech důvodů souhrnně omezena na částky zaplacené zákazníkem za posledních dvanáct měsíců.",
+      "dataTitle": "8. Data",
+      "data": "Zpracování osobních údajů je popsáno v <a href=\"{href}\">zásadách ochrany osobních údajů</a>. Zákazník může svá data kdykoli exportovat.",
+      "lawTitle": "9. Rozhodné právo",
+      "law": "Francouzské právo. Nedojde-li ke smírnému řešení, jsou příslušné soudy podle místa bydliště vydavatele."
+    },
+    "privacy": {
+      "title": "Zásady ochrany osobních údajů",
+      "controllerTitle": "Správce údajů",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Zpracovávané údaje",
+      "dataAccount": "Účet: e-mail, organizace, role, přístupové klíče (pouze veřejné klíče).",
+      "dataActivity": "Činnost: žádosti o kartu, podepsané mandáty, transakce ohlášené bankou, doklady, auditní protokol.",
+      "dataBanks": "Bankovní připojení: šifrované přístupové tokeny (AES-256-GCM).",
+      "dataBilling": "Fakturace: zajišťuje Stripe; Artemis nevidí čísla karet, kterými platíte předplatné.",
+      "dataWaitlist": "Čekací listina: e-mail, společnost, případ použití.",
+      "cardNumbers": "Artemis nikdy neukládá celé číslo ani bezpečnostní kód karet vydaných pro vaše agenty.",
+      "purposesTitle": "Účely a právní základy",
+      "purposes": "Plnění smlouvy (poskytování služby), právní povinnosti (účetnictví), oprávněný zájem (zabezpečení, prevence podvodů), souhlas (čekací listina).",
+      "processorsTitle": "Zpracovatelé",
+      "processors": "Supabase (databáze, Evropská unie), Cloudflare (hosting a síť), Stripe (fakturace), Resend (transakční e-maily). Případné předávání mimo EU se řídí standardními smluvními doložkami.",
+      "retentionTitle": "Doba uchovávání",
+      "retention": "Údaje účtu: po dobu trvání smlouvy a poté 3 roky. Auditní protokol a účetní údaje: 10 let. Čekací listina: 3 roky bez interakce.",
+      "rightsTitle": "Vaše práva",
+      "rights": "Přístup, oprava, výmaz, přenositelnost, námitka a omezení zpracování: napište na {email}. Můžete podat stížnost u CNIL (cnil.fr).",
+      "cookiesTitle": "Soubory cookie",
+      "cookies": "Web nepoužívá reklamní soubory cookie ani analytické nástroje třetích stran. Aplikace používá pouze úložiště nezbytné pro vaši relaci."
+    },
+    "notice": {
+      "title": "Právní upozornění",
+      "editorTitle": "Vydavatel",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Adresa: {address}",
+      "contact": "Kontakt: {email}",
+      "directorTitle": "Odpovědná osoba za obsah",
+      "hostingTitle": "Hosting",
+      "natureTitle": "Povaha služby",
+      "nature": "Artemis je software pro řízení výdajů agentů umělé inteligence. Artemis není platební institucí ani institucí elektronických peněz: nepřijímá, nedrží ani nepřevádí žádné prostředky. Platební karty vydává bankovní instituce zákazníka na svou odpovědnost.",
+      "ipTitle": "Duševní vlastnictví",
+      "ip": "Obsah, ochranné známky a loga tohoto webu jsou vlastnictvím vydavatele. Jakékoli rozmnožování bez svolení je zakázáno."
+    }
+  }
+}

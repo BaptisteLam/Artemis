@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Ξεκινήστε με το Artemis",
+      "lead": "Από την εγγραφή έως την πρώτη πληρωμή του πράκτορά σας, στο Sandbox, σε πέντε λεπτά.",
+      "step1": {
+        "title": "1. Δημιουργήστε λογαριασμό",
+        "body": "Εγγραφείτε στην <a href=\"{href}\">εφαρμογή</a> με το email σας (μαγικός σύνδεσμος), δημιουργήστε τον οργανισμό σας και καταχωρίστε ένα κλειδί πρόσβασης: με αυτό θα εγκρίνετε τις δαπάνες."
+      },
+      "step2": {
+        "title": "2. Δημιουργήστε έναν πράκτορα",
+        "body": "Στην ενότητα <strong>Πράκτορες</strong>, δημιουργήστε για παράδειγμα τον <code>notion.agent</code>. Το Artemis εμφανίζει το token του (<code>art_test_…</code> στο Sandbox, <code>art_live_…</code> με πραγματική τράπεζα) <strong>μόνο μία φορά</strong>: αντιγράψτε το."
+      },
+      "step3": {
+        "title": "3. Συνδέστε τον πράκτορα",
+        "fastest": "Ο ταχύτερος τρόπος: <code>npx artemis-agents init</code> (βλ. <a href=\"{cli}\">CLI</a>).",
+        "server": "Ο διακομιστής MCP βρίσκεται στη διεύθυνση <code>{url}</code>, με την κεφαλίδα <code>Authorization: Bearer &lt;token&gt;</code>. Ακολουθήστε τον οδηγό για το εργαλείο σας: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> ή <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. Ο κύκλος αγοράς",
+        "tool": "Εργαλείο",
+        "role": "Λειτουργία",
+        "requestCard": "Ζητά κάρτα: ποσό <strong>σε λεπτά του ευρώ</strong>, νόμισμα, έμπορος, σκοπός.",
+        "getRequestStatus": "Παρακολουθεί την ανθρώπινη έγκριση.",
+        "getCardForCheckout": "Επιστρέφει έναν <strong>εφήμερο σύνδεσμο</strong> (10 λεπτά, μίας χρήσης): η κάρτα εμφανίζεται από την τράπεζα, χωρίς να περάσει από το Artemis.",
+        "listBudgets": "Μηνιαίος προϋπολογισμός, δαπάνες, υπόλοιπο, όριο.",
+        "getSpendSummary": "Δαπάνες ανά έμπορο (ημέρα, εβδομάδα, μήνας).",
+        "attachReceipt": "Επισυνάπτει παραστατικό στην αγορά.",
+        "cancelCard": "Ακυρώνει την κάρτα αν η αγορά δεν πραγματοποιηθεί."
+      },
+      "step5": {
+        "title": "5. Μετάβαση σε παραγωγή",
+        "body": "Επιλέξτε πρόγραμμα στην ενότητα <strong>Χρέωση</strong> και, στη συνέχεια, συνδέστε την τράπεζά σας στην ενότητα <strong>Τράπεζες</strong>. Οι πράκτορες που συνδέονται με αυτή την τράπεζα λαμβάνουν πραγματικές κάρτες μίας χρήσης."
+      }
+    },
+    "mcpClaude": {
+      "title": "Συνδέστε το Claude",
+      "lead": "Το Claude Code, το Claude Desktop και οι connectors του Claude χρησιμοποιούν MCP μέσω HTTP.",
+      "verify": "Ελέγξτε με <code>claude mcp list</code> και, στη συνέχεια, ζητήστε για παράδειγμα: «Γράψε μας συνδρομή στο Notion για {price} με το Artemis».",
+      "desktopBody": "Ανοίξτε το <em>Settings → Developer → Edit Config</em> και προσθέστε:",
+      "instructionsTitle": "Χρήσιμες οδηγίες για τον πράκτορα",
+      "instructionsBody": "Προσθέστε στις οδηγίες συστήματος:"
+    },
+    "mcpChatgpt": {
+      "title": "Συνδέστε το ChatGPT",
+      "lead": "Το ChatGPT δέχεται απομακρυσμένους διακομιστές MCP ως προσαρμοσμένους connectors.",
+      "addTitle": "Προσθέστε τον connector",
+      "step1": "Ανοίξτε το <em>Settings → Connectors → Advanced</em> και ενεργοποιήστε τη λειτουργία προγραμματιστή, αν το απαιτεί το πρόγραμμά σας.",
+      "step2": "Δημιουργήστε έναν connector, URL: <code>{url}</code>.",
+      "step3": "Έλεγχος ταυτότητας: κεφαλίδα <code>Authorization</code> με τιμή <code>Bearer art_…</code> (ανάλογα με τις επιλογές που προσφέρει ο χώρος εργασίας σας στο ChatGPT).",
+      "note": "Οι ακριβείς ετικέτες διαφέρουν μεταξύ των προγραμμάτων του ChatGPT· η διεύθυνση και η κεφαλίδα παραμένουν ίδιες.",
+      "openaiTitle": "Πράκτορες OpenAI (API)",
+      "openaiBody": "Με το Responses API ή το Agents SDK, δηλώστε ένα απομακρυσμένο εργαλείο MCP που δείχνει στο <code>{url}</code> με την ίδια κεφαλίδα."
+    },
+    "cli": {
+      "title": "CLI, skill για το Claude και n8n",
+      "lead": "Από το μηδέν στην πρώτη σας εντολή σε τρία λεπτά.",
+      "commandTitle": "Μία εντολή",
+      "commandBody": "Η εντολή ζητά το URL του API και το token του πράκτορα (που δημιουργείται στην εφαρμογή, σελίδα Πράκτορες), ελέγχει την πρόσβαση, αποθηκεύει τη διαμόρφωση στο <code>~/.config/artemis/config.json</code>, προσθέτει τον διακομιστή MCP στο Claude Code αν είναι εγκατεστημένο και εμφανίζει τη διαμόρφωση για το Claude Desktop και το n8n. Με token Sandbox και την επιλογή <code>--demo</code>, δημιουργεί μια πρώτη δοκιμαστική εντολή για να την εγκρίνετε στην εφαρμογή.",
+      "skillTitle": "Skill για το Claude",
+      "skillBody": "Το skill <code>artemis-payments</code> μαθαίνει στο Claude να πληρώνει μέσω του Artemis: ποσό σε λεπτά του ευρώ, αναμονή έγκρισης, άνοιγμα του συνδέσμου πληρωμής την κατάλληλη στιγμή, παραστατικό μετά την αγορά και απόρριψη απόπειρων έγχυσης. Αντιγράψτε τον φάκελο <code>integrations/claude-skill/artemis</code> του αποθετηρίου στο <code>~/.claude/skills/</code>.",
+      "n8nTitle": "Κόμβος n8n",
+      "n8nBody": "Εγκαταστήστε τον κοινοτικό κόμβο <code>n8n-nodes-artemis</code> (Settings → Community nodes). Λειτουργίες: αίτημα κάρτας, κατάσταση, σύνδεσμος πληρωμής, ακύρωση, προϋπολογισμός. Διαπιστευτήρια: URL του API και token του πράκτορα."
+    },
+    "n8n": {
+      "title": "Συνδέστε το n8n",
+      "lead": "Δύο επιλογές: ο κόμβος MCP Client για έναν πράκτορα ΤΝ του n8n ή αιτήματα HTTP για μια κλασική ροή εργασιών.",
+      "agentTitle": "Πράκτορας ΤΝ του n8n (MCP Client)",
+      "agentBody": "Σε έναν κόμβο <em>AI Agent</em>, προσθέστε το εργαλείο <em>MCP Client</em>: μεταφορά <em>HTTP Streamable</em>, URL <code>{url}</code>, έλεγχος ταυτότητας <em>Header Auth</em> με <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "Ροή εργασιών HTTP",
+      "workflowBody": "Εισαγάγετε το παράδειγμα ροής εργασιών <code>examples/n8n/artemis-request-card.json</code> από το αποθετήριο. Περιλαμβάνει διαδοχικά:",
+      "step1With": "με",
+      "step2": "έναν βρόχο ελέγχου στο <code>GET /v1/card-requests/:id</code> έως ότου η κατάσταση γίνει <code>issued</code>·",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> για τη λήψη του εφήμερου συνδέσμου της κάρτας (10 λεπτά, μίας χρήσης)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Για το Make, τα σενάρια εντολών σας και τους δικούς σας πράκτορες. Ίδιο token με τον διακομιστή MCP.",
+      "authTitle": "Έλεγχος ταυτότητας",
+      "base": "Βασικό URL: <code>{url}</code>. Όριο: 60 αιτήματα ανά λεπτό ανά πράκτορα.",
+      "endpointsTitle": "Endpoints",
+      "method": "Μέθοδος",
+      "path": "Διαδρομή",
+      "role": "Λειτουργία",
+      "create": "Δημιουργία αιτήματος",
+      "status": "Κατάσταση αιτήματος",
+      "reveal": "Εφήμερος σύνδεσμος προς την κάρτα (10 λεπτά, μίας χρήσης)",
+      "cancel": "Ακύρωση",
+      "receipts": "Επισύναψη παραστατικού",
+      "budgets": "Υπόλοιπο προϋπολογισμού",
+      "spendSummary": "Δαπάνες ανά έμπορο",
+      "exampleTitle": "Παράδειγμα",
+      "errorsTitle": "Σφάλματα",
+      "errorsBody": "Συνήθεις κωδικοί: <code>invalid_amount</code> (το ποσό πρέπει να είναι ακέραιος αριθμός σε λεπτά του ευρώ), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Κανόνες και έγκριση",
+      "lead": "Πώς το Artemis αποφασίζει αν ένα αίτημα απορρίπτεται, εγκρίνεται αυτόματα ή υποβάλλεται για την υπογραφή σας.",
+      "orderTitle": "Σειρά αξιολόγησης",
+      "orderBody": "Ο πρώτος κανόνας που δεν τηρείται απορρίπτει το αίτημα:",
+      "o1": "Επιτρεπόμενο νόμισμα (<code>currency_not_allowed</code>).",
+      "o2": "Θετικό ποσό κάτω από το όριο ανά αγορά (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Μηνιαίος προϋπολογισμός: τα εκκρεμή, εγκεκριμένα και πληρωμένα αιτήματα του μήνα + το ποσό (<code>over_monthly_budget</code>). Ο μήνας ακολουθεί την ώρα Παρισιού.",
+      "o4": "Αποκλεισμένος έμπορος ή έμπορος που λείπει από τη λίστα επιτρεπόμενων, εφόσον υπάρχει (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Κατηγορία εμπόρου (MCC) αποκλεισμένη ή μη επιτρεπόμενη (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Αυτόματη έγκριση",
+      "autoBody": "Ένα αίτημα εγκρίνεται χωρίς εσάς αν το ποσό του είναι <strong>κάτω</strong> από το όριο αυτόματης έγκρισης <strong>και</strong> ο έμπορος βρίσκεται στη λίστα επιτρεπόμενων του πράκτορα. Χωρίς λίστα επιτρεπόμενων, κάθε αίτημα υποβάλλεται σε εσάς.",
+      "matchTitle": "Αντιστοίχιση εμπόρων",
+      "matchBody": "Τα ονόματα συγκρίνονται αγνοώντας πεζά/κεφαλαία, τόνους, νομική μορφή και κατάληξη τομέα: το «Notion» καλύπτει το «Notion Labs, Inc.» και το «notion.so».",
+      "humanTitle": "Ανθρώπινη έγκριση",
+      "humanBody": "Οι κάτοχοι, οι διαχειριστές και οι εγκρίνοντες λαμβάνουν ειδοποίηση. Η έγκριση απαιτεί κλειδί πρόσβασης. Αν η τράπεζά σας επιβάλλει δική της ισχυρή ταυτοποίηση πελάτη (όπως η Qonto), εγκρίνετε επίσης στην εφαρμογή της.",
+      "expiryTitle": "Λήξη",
+      "expiryBody": "Ένα αίτημα που δεν έχει διεκπεραιωθεί λήγει μετά από 30 λεπτά (ρυθμιζόμενο). Μια αχρησιμοποίητη κάρτα ακυρώνεται όταν λήξει."
+    }
+  }
+}

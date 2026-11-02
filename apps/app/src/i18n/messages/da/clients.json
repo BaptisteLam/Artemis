@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Kunder",
+    "lead": "Ét arbejdsområde pr. kunde: kundens agenter, månedsbudget, din avance og en rapport til viderefakturering, klar til at sende.",
+    "invalidBudget": "Ugyldigt budget (f.eks. 500 eller 49,90).",
+    "upsell": "Kundearbejdsområder er inkluderet i planen Bureauer ({price} + {perClient} pr. aktiv kunde).",
+    "seePlans": "Se planerne →",
+    "empty": "Ingen kunder",
+    "emptyHint": "Opret en kunde, og tilknyt derefter agenter til den.",
+    "cols": {
+      "client": "Kunde",
+      "agents": "Agenter",
+      "spent": "Disponeret denne måned",
+      "budget": "Budget",
+      "markup": "Avance"
+    },
+    "archived": "arkiveret",
+    "percent": "{value} %",
+    "report": "Rapport →",
+    "new": "Ny kunde",
+    "fields": {
+      "name": "Navn",
+      "billingEmail": "Faktureringsmail",
+      "markup": "Avance ved viderefakturering (%)",
+      "budget": "Månedsbudget (€)",
+      "budgetHint": "Tomt = intet loft for kunden"
+    },
+    "create": "Opret kunde",
+    "exportFailed": "Eksporten mislykkedes.",
+    "eyebrow": "Kunde",
+    "month": "Måned",
+    "exportCsv": "Eksportér CSV",
+    "monthPurchases": "Køb denne måned",
+    "markupPct": "Avance {value}",
+    "toRebill": "Til viderefakturering",
+    "noPurchases": "Ingen køb denne måned",
+    "lines": {
+      "date": "Dato",
+      "agent": "Agent",
+      "merchant": "Forretning",
+      "purpose": "Formål",
+      "amount": "Beløb",
+      "receipt": "Kvittering"
+    },
+    "yes": "Ja",
+    "missing": "Mangler",
+    "archive": "Arkivér kunde",
+    "reactivate": "Genaktivér",
+    "all": "← Alle kunder"
+  }
+}

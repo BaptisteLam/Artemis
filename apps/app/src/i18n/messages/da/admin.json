@@ -1,0 +1,20 @@
+{
+  "admin": {
+    "eyebrow": "Backoffice",
+    "title": "Artemis i tal",
+    "mrr": "MRR",
+    "paying": "Betalende kunder",
+    "ofOrgs_one": "ud af {count} organisation",
+    "ofOrgs_other": "ud af {count} organisationer",
+    "signups7d": "Tilmeldinger (7 dage)",
+    "requests30d": "Anmodninger (30 dage)",
+    "orgs": "Organisationer",
+    "cols": {
+      "name": "Navn",
+      "plan": "Plan",
+      "subscription": "Abonnement",
+      "created": "Oprettet"
+    },
+    "waitlist": "Venteliste ({total})"
+  }
+}

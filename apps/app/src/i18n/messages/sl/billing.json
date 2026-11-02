@@ -1,0 +1,61 @@
+{
+  "billing": {
+    "title": "Obračun",
+    "lead": "Trenutni paket: {plan}. Zahteve ta mesec: {usage}. DDV se ne obračuna, člen 293 B francoskega splošnega davčnega zakonika (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Upravljanje naročnine in računov",
+    "returnOk": "Hvala! Vaša naročnina se aktivira (nekaj sekund).",
+    "returnCanceled": "Plačilo je preklicano, nič ni bilo spremenjeno.",
+    "inactive": "Vaša naročnina ni več aktivna ({status}). Plačljive funkcije so začasno ustavljene: posodobite način plačila.",
+    "unknown": "neznano",
+    "overage": "Nad kvoto plačljivega paketa se vsako dodatno pooblastilo zaračuna {price}.",
+    "overageCount_one": "Ta mesec: {count} pooblastilo.",
+    "overageCount_two": "Ta mesec: {count} pooblastili.",
+    "overageCount_few": "Ta mesec: {count} pooblastila.",
+    "overageCount_other": "Ta mesec: {count} pooblastil.",
+    "ownerOnly": "Naročnino lahko spremeni samo lastnik.",
+    "current": "Trenutni",
+    "from": "od {price}",
+    "perMonth": "/ mesec",
+    "choose": "Izberite {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agencije",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agent",
+        "i2": "Simulirana banka",
+        "i3": "20 simuliranih pooblastil na mesec"
+      },
+      "builder": {
+        "i1": "3 agenti",
+        "i2": "1 prava banka",
+        "i3": "50 pooblastil na mesec",
+        "i4": "Odobritev s ključem za dostop in obvestila"
+      },
+      "team": {
+        "i1": "10 agentov",
+        "i2": "2 pravi banki",
+        "i3": "300 pooblastil na mesec",
+        "i4": "Slack, sklepčnost odobriteljev, izvoz FEC",
+        "i5": "Naročnine, upravljane za vsakega agenta"
+      },
+      "agency": {
+        "i1": "25 agentov, neomejeno število strank",
+        "i2": "1000 pooblastil na mesec",
+        "i3": "Proračuni, pribitek in prefakturiranje po strankah",
+        "i4": "+ {price} na aktivno stranko"
+      },
+      "business": {
+        "i1": "Neomejeno",
+        "i2": "Dokumentacija in poročilo za AI Act",
+        "i3": "Izvoz podpisanega revizijskega dnevnika",
+        "i4": "Prednostna podpora"
+      }
+    }
+  }
+}

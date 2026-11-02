@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Card de unică folosință · bancă simulată",
+    "eyebrowBank": "Card de unică folosință · emis de banca dumneavoastră",
+    "lead": "Acest link se deschide o singură dată. Cardul este plafonat la suma de mai sus și blocat pe acest comerciant.",
+    "fields": {
+      "number": "Număr",
+      "expiry": "Expirare",
+      "cvc": "Cod de securitate",
+      "holder": "Titular"
+    },
+    "opening": "Se deschide…",
+    "show": "Afișați cardul •••• {last4}",
+    "footer": "Numărul este afișat direct de banca emitentă: nu trece niciodată prin Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js nu este disponibil.",
+      "invalidLink": "Link nevalid, deja folosit sau expirat.",
+      "stripeRefused": "Stripe a refuzat solicitarea."
+    }
+  }
+}

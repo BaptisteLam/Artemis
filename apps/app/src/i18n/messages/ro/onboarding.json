@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Pasul {step} din {total}",
+    "continue": "Continuați →",
+    "org": {
+      "title": "Organizația dumneavoastră",
+      "lead": "Începeți în Sandbox: bancă simulată, fără costuri.",
+      "nameLabel": "Numele companiei sau al studioului"
+    },
+    "agent": {
+      "title": "Primul dumneavoastră agent",
+      "lead": "Un nume scurt care spune ce cumpără. Reguli implicite: {monthly} pe lună, {perPurchase} per achiziție.",
+      "nameLabel": "Numele agentului",
+      "platformLabel": "Platformă",
+      "platformOther": "Altele",
+      "submit": "Creați agentul →"
+    },
+    "connect": {
+      "title": "Conectați-vă agentul",
+      "done": "Am copiat tokenul →"
+    },
+    "passkey": {
+      "title": "Passkey-ul dumneavoastră de aprobare",
+      "lead": "Fiecare cheltuială va fi semnată cu Face ID, Touch ID, Windows Hello sau o cheie de securitate. Dacă este posibil, înregistrați-l de pe telefonul care va primi notificările.",
+      "deviceName": "Primul dispozitiv",
+      "saved": "Passkey înregistrat.",
+      "unsupported": "Acest browser nu acceptă passkey-uri.",
+      "register": "Înregistrați un passkey",
+      "openDashboard": "Deschideți tabloul de bord →",
+      "later": "Mai târziu"
+    }
+  }
+}

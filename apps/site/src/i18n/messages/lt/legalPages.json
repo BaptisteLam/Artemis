@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Bendrosios pardavimo ir naudojimosi sąlygos",
+      "purposeTitle": "1. Dalykas",
+      "purpose": "Šios sąlygos reglamentuoja prieigą prie programinės įrangos Artemis, kurią leidžia {editor} ({status}, SIRET {siret}), ir jos prenumeravimą, kurį atlieka profesionalūs klientai. Paslauga skirta tik profesionalams.",
+      "serviceTitle": "2. Paslaugos aprašymas",
+      "service": "Artemis leidžia klientui nustatyti savo programinių agentų išlaidų taisykles, tvirtinti jų mokėjimo užklausas ir per savo banko programavimo sąsajas valdyti vienkartinių virtualių kortelių kūrimą. Artemis neteikia jokių mokėjimo paslaugų, nelaiko jokių lėšų ir neišduoda jokių kortelių. Santykius su banku, banko mokesčius ir griežtą autentifikavimą reglamentuoja tik kliento ir jo banko sutartis.",
+      "accountTitle": "3. Paskyra ir saugumas",
+      "account": "Klientas atsako už agentų žetonų, prieigos prie savo paskyros ir savo naudotojų prieigos raktų konfidencialumą, taip pat už savo sukonfigūruotas taisykles. Bet kokia išlaida, kurią patvirtino įgaliotas naudotojas arba kuri atitinka automatinio patvirtinimo taisyklę, laikoma kliento leista.",
+      "pricesTitle": "4. Pasiūlymai ir kainos",
+      "prices": "Pasiūlymai: Sandbox (nemokamas), Builder ({builder} / mėn.), Team ({team} / mėn.), Agentūroms ({agency} / mėn. + {perClient} už kiekvieną aktyvų klientą), Business (nuo {business} / mėn.). Viršijus mokamo plano mėnesio kvotą, už kiekvieną papildomą įgaliojimą imama {overage}. Kainos yra neto. {vat}. Mokama kas mėnesį iš anksto kortele per Stripe. Atnaujinama automatiškai; sutarties nutraukimas įsigalioja einamojo laikotarpio pabaigoje, proporcingai negrąžinant sumokėtos sumos.",
+      "quotasTitle": "5. Kvotos",
+      "quotas": "Kiekvienas pasiūlymas apima kvotas (agentai, prijungti bankai, mėnesio užklausos). Jas viršijus, naujos užklausos atmetamos iki kito laikotarpio arba pasiūlymo pakeitimo.",
+      "availabilityTitle": "6. Prieinamumas",
+      "availability": "Leidėjas imasi pagrįstų priemonių paslaugos prieinamumui užtikrinti, negarantuodamas rezultato. Pertraukos gali įvykti dėl techninės priežiūros arba dėl techninių ir bankinių paslaugų teikėjų.",
+      "liabilityTitle": "7. Atsakomybė",
+      "liability": "Leidėjas neatsako už pirkimus, kuriuos kliento agentai atliko pagal suteiktus leidimus, už prekybininkų pasirinkimą, už įsigytų prekių ar paslaugų kokybę ir už kliento banko sprendimus. Leidėjo atsakomybė dėl visų priežasčių kartu apribojama sumomis, kurias klientas sumokėjo per pastaruosius dvylika mėnesių.",
+      "dataTitle": "8. Duomenys",
+      "data": "Asmens duomenų tvarkymas aprašytas <a href=\"{href}\">privatumo politikoje</a>. Klientas bet kada gali eksportuoti savo duomenis.",
+      "lawTitle": "9. Taikytina teisė",
+      "law": "Prancūzijos teisė. Nepavykus susitarti taikiai, ginčai sprendžiami teismuose, kurių jurisdikcijai priklauso leidėjo buveinė."
+    },
+    "privacy": {
+      "title": "Privatumo politika",
+      "controllerTitle": "Duomenų valdytojas",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Tvarkomi duomenys",
+      "dataAccount": "Paskyra: el. paštas, organizacija, vaidmuo, prieigos raktai (tik viešieji raktai).",
+      "dataActivity": "Veikla: kortelių užklausos, pasirašyti įgaliojimai, banko praneštos operacijos, kvitai, audito žurnalas.",
+      "dataBanks": "Banko jungtys: užšifruoti prieigos žetonai (AES-256-GCM).",
+      "dataBilling": "Atsiskaitymai: tvarko Stripe; Artemis nemato kortelių, kuriomis mokate už prenumeratą, numerių.",
+      "dataWaitlist": "Laukiančiųjų sąrašas: el. paštas, įmonė, naudojimo atvejis.",
+      "cardNumbers": "Artemis niekada nesaugo jūsų agentams išduotų kortelių viso numerio ar saugos kodo.",
+      "purposesTitle": "Tikslai ir teisiniai pagrindai",
+      "purposes": "Sutarties vykdymas (paslaugos teikimas), teisinės prievolės (apskaita), teisėtas interesas (saugumas, sukčiavimo prevencija), sutikimas (laukiančiųjų sąrašas).",
+      "processorsTitle": "Duomenų tvarkytojai",
+      "processors": "Supabase (duomenų bazė, Europos Sąjunga), Cloudflare (talpinimas ir tinklas), Stripe (atsiskaitymai), Resend (operaciniai el. laiškai). Galimą duomenų perdavimą už ES ribų reglamentuoja standartinės sutarčių sąlygos.",
+      "retentionTitle": "Saugojimo terminai",
+      "retention": "Paskyros duomenys: sutarties galiojimo laikotarpis, po to 3 metai. Audito žurnalas ir apskaitos duomenys: 10 metų. Laukiančiųjų sąrašas: 3 metai be sąveikos.",
+      "rightsTitle": "Jūsų teisės",
+      "rights": "Susipažinimas, ištaisymas, ištrynimas, perkeliamumas, nesutikimas ir apribojimas: rašykite adresu {email}. Galite pateikti skundą CNIL (cnil.fr).",
+      "cookiesTitle": "Slapukai",
+      "cookies": "Svetainė nenaudoja reklaminių slapukų ir trečiųjų šalių analizės įrankių. Programa naudoja tik jūsų sesijai būtiną saugyklą."
+    },
+    "notice": {
+      "title": "Teisinis pranešimas",
+      "editorTitle": "Leidėjas",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Adresas: {address}",
+      "contact": "Kontaktai: {email}",
+      "directorTitle": "Leidinio direktorius",
+      "hostingTitle": "Talpinimas",
+      "natureTitle": "Paslaugos pobūdis",
+      "nature": "Artemis yra dirbtinio intelekto agentų išlaidų valdymo programinė įranga. Artemis nėra nei mokėjimo įstaiga, nei elektroninių pinigų įstaiga: ji negauna, nelaiko ir neperveda jokių lėšų. Mokėjimo korteles išduoda kliento kredito įstaiga savo atsakomybe.",
+      "ipTitle": "Intelektinė nuosavybė",
+      "ip": "Šios svetainės turinys, prekių ženklai ir logotipai yra leidėjo nuosavybė. Bet koks atgaminimas be leidimo draudžiamas."
+    }
+  }
+}

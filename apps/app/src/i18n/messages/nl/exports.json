@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Boekhoudkundige exports",
+    "lead": "De uitgaven die uw banken hebben afgeschreven, klaar voor Pennylane, uw accountant of een spreadsheet.",
+    "failed": "Export mislukt.",
+    "from": "Van",
+    "to": "Tot (niet inbegrepen)",
+    "downloadCsv": "CSV downloaden",
+    "downloadFec": "FEC downloaden",
+    "formats": "CSV: gescheiden door puntkomma’s, compatibel met Excel. FEC: 18 wettelijk voorgeschreven kolommen, debet 604000 / credit 512000, te importeren in Pennylane.",
+    "fecUpsell": "FEC is inbegrepen vanaf het abonnement Team.",
+    "seePlans": "Abonnementen bekijken"
+  }
+}

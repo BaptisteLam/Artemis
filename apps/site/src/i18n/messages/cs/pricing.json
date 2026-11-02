@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Ceník",
+    "description": "Sandbox zdarma, poté {a}, {b}, {c} nebo {d} měsíčně. Žádná provize z vašich výdajů.",
+    "headline": "Jedno jednoduché předplatné. Žádná provize.",
+    "lead": "Platíte pouze za software. Karty vydává vaše banka v rámci vašeho obvyklého bankovního tarifu.",
+    "popular": "Nejoblíbenější",
+    "from": "od {price}",
+    "perMonth": "/ měsíc",
+    "start": "Začít",
+    "choose": "Zvolit {plan}",
+    "mandates": "{count} mandátů / měsíc",
+    "sandbox": {
+      "pitch": "Vyzkoušejte se simulovanou bankou.",
+      "i1": "1 agent",
+      "i2": "Simulovaná banka",
+      "i3": "{count} simulovaných mandátů / měsíc",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Pro freelancera nebo vývojáře a jeho agenty.",
+      "i1": "3 agenti",
+      "i2": "1 připojená banka",
+      "i4": "Schvalování přístupovým klíčem",
+      "i5": "Pojistky proti prompt injection"
+    },
+    "team": {
+      "pitch": "Pro startup s 5 až 50 lidmi.",
+      "i1": "10 agentů",
+      "i2": "2 banky",
+      "i4": "Slack a kvórum schvalovatelů",
+      "i5": "Předplatné, export FEC"
+    },
+    "agency": {
+      "pitch": "Pro automatizační agentury.",
+      "i1": "Neomezený počet klientů, 25 agentů",
+      "i3": "Rozpočet a marže pro každého klienta",
+      "i4": "Měsíční přehled k přefakturaci",
+      "i5": "+ {price} za aktivního klienta"
+    },
+    "business": {
+      "pitch": "Pro regulované scale-upy.",
+      "i1": "Bez omezení",
+      "i2": "Dokumentace a zpráva pro AI Act",
+      "i3": "Export podepsaného auditního protokolu",
+      "i4": "Prioritní podpora"
+    },
+    "faq": {
+      "title": "Časté dotazy",
+      "q1": "Platí se poplatky za kartu?",
+      "a1": "Ne ze strany Artemis. Vaše banka uplatňuje svůj vlastní tarif (virtuální karty jsou součástí většiny tarifů Qonto a Revolut Business; Stripe Issuing účtuje podle svého ceníku).",
+      "q2": "Co se stane, když překročím kvótu?",
+      "a2": "U placeného tarifu vaši agenti pokračují: každý mandát nad kvótu se na konci měsíce účtuje částkou {price}. V Sandboxu jsou žádosti zamítnuty s kódem <code>quota_exceeded</code>.",
+      "q3": "Jak se účtuje tarif {plan}?",
+      "a3": "{base} měsíčně plus {client} za aktivního klienta, tj. každého klienta, pro kterého byl během měsíce vytvořen alespoň jeden mandát.",
+      "q4": "Mohu kdykoli zrušit?",
+      "a4": "Ano, v sekci Fakturace. Předplatné běží do konce zaplaceného období; vaše data zůstávají k dispozici pro export.",
+      "q5": "DPH",
+      "a5": "Uvedené ceny jsou čisté."
+    }
+  }
+}

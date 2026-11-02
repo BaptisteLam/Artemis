@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Bănci",
+    "lead": "Cardurile sunt create în propria dumneavoastră bancă. Artemis nu vă deține niciodată fondurile.",
+    "bankAria": "Bancă",
+    "help": {
+      "stripe": "Cont Stripe cu Issuing activat (UE). Creați o cheie restricționată cu permisiuni de scriere pentru Issuing. Indicați un titular existent (ich_…) sau adresa companiei, pentru ca Artemis să creeze unul.",
+      "qonto": "Citire, înghețare și reconciliere: Qonto nu transmite cardul terților și interzice împrumutarea acestuia. Token OAuth din programul de parteneri Qonto; aprobatorul poate vizualiza în siguranță un card Qonto și poate finaliza el însuși plata.",
+      "revolut": "Plan Grow sau superior, acces „Cards API” activat de echipa de asistență și aprobare scrisă din partea Revolut (Valid Permission) înainte de orice utilizare în producție. Necesită predarea directă (Setări)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Cheie secretă restricționată",
+      "publishableKey": "Cheie publicabilă",
+      "stripeCardholder": "Titular Stripe",
+      "companyName": "Denumirea companiei",
+      "address": "Adresă",
+      "postalCode": "Cod poștal",
+      "city": "Oraș",
+      "country": "Țară",
+      "webhookSecret": "Secretul webhookului",
+      "accessToken": "Token de acces",
+      "refreshToken": "Token de reîmprospătare",
+      "oauthClientId": "ID client OAuth",
+      "oauthClientSecret": "Secret client OAuth",
+      "holderMemberId": "ID membru titular",
+      "bankAccountId": "ID cont bancar",
+      "environment": "Mediu",
+      "stagingToken": "Token de staging",
+      "clientAssertion": "Client assertion (JWT)",
+      "holderId": "ID titular"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… sau sk_test_…",
+      "stripePublishableKey": "pk_live_… (link efemer către card)",
+      "stripeCardholder": "ich_… (opțional)",
+      "ifNoCardholder": "Dacă nu există un titular",
+      "country": "Cod ISO, ex. RO",
+      "webhookSecret": "whsec_… (după crearea webhookului, vedeți mai jos)",
+      "bearerOAuth": "Bearer OAuth",
+      "optional": "Opțional",
+      "toRefreshToken": "Pentru reîmprospătarea tokenului",
+      "qontoMembershipId": "membership id Qonto",
+      "qontoBankAccountId": "bank_account id Qonto",
+      "sandboxOnly": "Doar Sandbox",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Opțional, pentru reîmprospătare",
+      "teamMemberOptional": "Membru al echipei (opțional)"
+    },
+    "encrypted": "Datele de acces sunt testate, apoi criptate (AES-256-GCM). Nu mai sunt afișate niciodată.",
+    "testing": "Se testează conexiunea…",
+    "connectProvider": "Conectați {name}",
+    "testOk": "Conexiune OK",
+    "testFailed": "Eșec: {detail}",
+    "confirmDisconnect": "Deconectați această bancă? Agenții care o folosesc nu vor mai putea obține un card.",
+    "lastSync": "Ultima sincronizare: {date}",
+    "stripeWebhook": "Webhook Stripe (evenimente issuing_transaction.*):",
+    "test": "Testați",
+    "disconnect": "Deconectați",
+    "connectRealBank": "Conectați o bancă reală",
+    "upgrade": "Conectarea unei bănci reale este inclusă începând cu planul Builder ({price}/lună).",
+    "choosePlan": "Alegeți un plan →"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Zabezpečení a soulad s předpisy",
+    "description": "Jak Artemis chrání vaše prostředky, karty a data.",
+    "eyebrow": "Zabezpečení",
+    "headline": "Navrženo tak, aby žádný agent nemohl jednat sám.",
+    "lead": "Nejhorší případ, agenta zmanipulovaného pomocí prompt injection, omezí samotná karta.",
+    "funds": {
+      "title": "Vaše prostředky nikdy neopustí vaši banku",
+      "body": "Artemis je software. Karty vydává váš vlastní poskytovatel (Qonto, Revolut Business, Stripe) na vašem účtu. Nedržíme, nepřijímáme ani nepřevádíme žádné prostředky."
+    },
+    "defense": {
+      "title": "Vícevrstvá ochrana",
+      "i1": "Jednorázová karta omezená na přesnou schválenou částku.",
+      "i2": "Krátká platnost (ve výchozím nastavení 30 minut).",
+      "i3": "Pravidla pro každého agenta: rozpočet, limit, obchodníci, kategorie.",
+      "i4": "Automatické párování s upozorněním při jakémkoli nesouladu částky nebo obchodníka.",
+      "i5": "Tlačítko „Zmrazit vše“: agenti pozastaveni a aktivní karty zrušeny jedním kliknutím.",
+      "i6": "Agenti mohou pouze žádat: žádný nástroj MCP nemůže změnit pravidlo ani schválit platbu."
+    },
+    "cardNumbers": {
+      "title": "Čísla karet",
+      "body": "Ve výchozím nastavení celé číslo karty a bezpečnostní kód nikdy neprocházejí přes Artemis: agent obdrží krátkodobý jednorázový odkaz (10 minut) a kartu zobrazí vydávající banka (Stripe Issuing Elements). Přímé předání je k dispozici jako pokročilá možnost, ve výchozím nastavení vypnutá; ani pak se nic neukládá."
+    },
+    "mandates": {
+      "title": "Podepsané mandáty",
+      "body": "Každé schválení je podpis WebAuthn (přístupový klíč) nad hashem SHA-256 mandátu: agent, částka, měna, obchodník, účel, platnost. Auditní protokol je zřetězený pomocí hashů a umožňuje pouze přidávání záznamů: jakoukoli manipulaci lze odhalit."
+    },
+    "aiAct": {
+      "title": "AI Act a lidský dohled",
+      "body": "Evropský AI Act vyžaduje, aby zavádějící subjekty své systémy zaznamenávaly a dohlížely na ně. Protokol Artemis, který můžete exportovat, zaznamenává, kdo schválil každou platbu agenta, kdy a podle jakých pravidel."
+    },
+    "data": {
+      "title": "Osobní údaje",
+      "body": "Databáze hostovaná v Evropské unii (Supabase, Frankfurt). Přístupové údaje k bankám šifrované (AES-256-GCM). Viz <a href=\"{href}\">zásady ochrany osobních údajů</a>."
+    },
+    "report": {
+      "title": "Nahlásit zranitelnost",
+      "body": "Napište na adresu uvedenou v <a href=\"{href}\">právním upozornění</a>. Odpovídáme do 72 hodin."
+    }
+  }
+}

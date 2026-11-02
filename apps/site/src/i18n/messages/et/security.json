@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Turvalisus ja vastavus",
+    "description": "Kuidas Artemis kaitseb teie raha, kaarte ja andmeid.",
+    "eyebrow": "Turvalisus",
+    "headline": "Loodud nii, et ükski agent ei saaks omal käel tegutseda.",
+    "lead": "Halvim stsenaarium, viipesüstega manipuleeritud agent, piiratakse kaardi enda abil.",
+    "funds": {
+      "title": "Teie raha ei lahku kunagi teie pangast",
+      "body": "Artemis on tarkvara. Kaardid väljastab teie enda teenusepakkuja (Qonto, Revolut Business, Stripe) teie kontole. Me ei hoia, ei võta vastu ega kanna üle mingeid rahalisi vahendeid."
+    },
+    "defense": {
+      "title": "Mitmekihiline kaitse",
+      "i1": "Ühekordne kaart, piiratud täpselt kinnitatud summaga.",
+      "i2": "Lühike kehtivus (vaikimisi 30 minutit).",
+      "i3": "Agendipõhised reeglid: eelarve, limiit, kaupmehed, kategooriad.",
+      "i4": "Automaatne sobitamine ja hoiatus iga summa või kaupmehe lahknevuse korral.",
+      "i5": "Nupp „Külmuta kõik“: agendid peatatakse ja aktiivsed kaardid tühistatakse ühe klõpsuga.",
+      "i6": "Agendid saavad ainult taotleda: ükski MCP-tööriist ei saa reeglit muuta ega makset kinnitada."
+    },
+    "cardNumbers": {
+      "title": "Kaardinumbrid",
+      "body": "Vaikimisi ei läbi kaardi täielik number ega turvakood kunagi Artemist: agent saab lühiajalise ühekordse lingi (10 minutit) ja kaarti kuvab väljastav pank (Stripe Issuing Elements). Otse üleandmine on saadaval täiendava valikuna, mis on vaikimisi välja lülitatud; ka siis ei salvestata midagi."
+    },
+    "mandates": {
+      "title": "Allkirjastatud volitused",
+      "body": "Iga kinnitus on WebAuthn-allkiri (pääsuvõti) volituse SHA-256-räsile: agent, summa, valuuta, kaupmees, eesmärk, aegumine. Auditilogi on räsidega aheldatud ja sinna saab ainult lisada: igasugune võltsimine on tuvastatav."
+    },
+    "aiAct": {
+      "title": "AI Act ja inimjärelevalve",
+      "body": "ELi tehisintellekti määrus (AI Act) nõuab, et juurutajad logiksid oma süsteeme ja teostaksid nende üle järelevalvet. Artemise logi, mida saate eksportida, salvestab, kes iga agendi makse kinnitas, millal ja milliste reeglite alusel."
+    },
+    "data": {
+      "title": "Isikuandmed",
+      "body": "Andmebaasi hoitakse Euroopa Liidus (Supabase, Frankfurt). Pangaandmed on krüpteeritud (AES-256-GCM). Vt <a href=\"{href}\">privaatsuspoliitikat</a>."
+    },
+    "report": {
+      "title": "Teatage haavatavusest",
+      "body": "Kirjutage <a href=\"{href}\">väljaandja andmetes</a> toodud aadressil. Vastame 72 tunni jooksul."
+    }
+  }
+}

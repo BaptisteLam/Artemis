@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Banker",
+    "lead": "Kortene oprettes i din egen bank. Artemis opbevarer aldrig dine midler.",
+    "bankAria": "Bank",
+    "help": {
+      "stripe": "Stripe-konto med Issuing aktiveret (EU). Opret en begrænset nøgle med skriveadgang til Issuing. Angiv en eksisterende kortholder (ich_…) eller din virksomheds adresse, så Artemis kan oprette en.",
+      "qonto": "Læseadgang, frysning og afstemning: Qonto udleverer ikke kortet til tredjeparter og forbyder udlån af det. OAuth-token fra Qontos partnerprogram; godkenderen kan få vist et Qonto-kort sikkert og selv gennemføre betalingen.",
+      "revolut": "Planen Grow eller højere, adgang til »Cards API« aktiveret af supporten og skriftlig godkendelse fra Revolut (Valid Permission) før enhver brug i produktion. Kræver direkte overdragelse (Indstillinger)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Begrænset hemmelig nøgle",
+      "publishableKey": "Offentlig nøgle",
+      "stripeCardholder": "Stripe-kortholder",
+      "companyName": "Virksomhedsnavn",
+      "address": "Adresse",
+      "postalCode": "Postnummer",
+      "city": "By",
+      "country": "Land",
+      "webhookSecret": "Webhook-hemmelighed",
+      "accessToken": "Adgangstoken",
+      "refreshToken": "Opdateringstoken",
+      "oauthClientId": "OAuth-klient-ID",
+      "oauthClientSecret": "OAuth-klienthemmelighed",
+      "holderMemberId": "Kortholderens medlems-ID",
+      "bankAccountId": "Bankkonto-ID",
+      "environment": "Miljø",
+      "stagingToken": "Staging-token",
+      "clientAssertion": "Klient-assertion (JWT)",
+      "holderId": "Kortholder-ID"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… eller sk_test_…",
+      "stripePublishableKey": "pk_live_… (midlertidigt kortlink)",
+      "stripeCardholder": "ich_… (valgfrit)",
+      "ifNoCardholder": "Hvis der ikke er nogen kortholder",
+      "country": "ISO-kode, f.eks. DK",
+      "webhookSecret": "whsec_… (når webhooken er oprettet, se nedenfor)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Valgfrit",
+      "toRefreshToken": "Til at opdatere token",
+      "qontoMembershipId": "Qonto membership id",
+      "qontoBankAccountId": "Qonto bank_account id",
+      "sandboxOnly": "Kun Sandbox",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Valgfrit, til opdatering",
+      "teamMemberOptional": "Teammedlem (valgfrit)"
+    },
+    "encrypted": "Loginoplysningerne testes og krypteres derefter (AES-256-GCM). De vises aldrig igen.",
+    "testing": "Tester forbindelsen …",
+    "connectProvider": "Tilslut {name}",
+    "testOk": "Forbindelsen virker",
+    "testFailed": "Mislykkedes: {detail}",
+    "confirmDisconnect": "Afbryd denne bank? Agenter, der bruger den, vil ikke længere kunne få et kort.",
+    "lastSync": "Seneste synkronisering: {date}",
+    "stripeWebhook": "Stripe-webhook (hændelserne issuing_transaction.*):",
+    "test": "Test",
+    "disconnect": "Afbryd",
+    "connectRealBank": "Tilslut en rigtig bank",
+    "upgrade": "Tilslutning af en rigtig bank er inkluderet fra planen Builder ({price}/måned).",
+    "choosePlan": "Vælg en plan →"
+  }
+}

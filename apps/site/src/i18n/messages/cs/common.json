@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Vaši agenti platí. Poslední slovo máte vy.",
+    "description": "Evropský finanční firewall pro vaše AI agenty: kontrola, úspora času a důkaz pro AI Act u každého nákupu, v bance podle vašeho výběru."
+  },
+  "layout": {
+    "skip": "Přejít na obsah"
+  },
+  "nav": {
+    "aria": "Hlavní navigace",
+    "home": "Artemis, domovská stránka",
+    "howItWorks": "Jak to funguje",
+    "agencies": "Agentury",
+    "pricing": "Ceník",
+    "docs": "Dokumentace",
+    "security": "Zabezpečení",
+    "login": "Přihlásit se",
+    "cta": "Vyzkoušet"
+  },
+  "lang": {
+    "choose": "Zvolte jazyk"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agentury",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT a n8n jsou ochranné známky příslušných vlastníků. Artemis není spojen s žádným z nich.",
+    "product": "Produkt",
+    "policyTemplate": "Vzor zásad",
+    "waitlist": "Čekací listina",
+    "restApi": "REST API",
+    "legal": "Právní informace",
+    "legalNotice": "Právní upozornění",
+    "terms": "Obchodní podmínky",
+    "privacy": "Ochrana soukromí"
+  },
+  "legal": {
+    "eyebrow": "Právní informace",
+    "updated": "Poslední aktualizace: 1. listopadu 2026.",
+    "frenchPrevails": "Tato stránka je překladem poskytnutým pro vaše pohodlí. Právně závazná je pouze <a href=\"{href}\">francouzská verze</a>.",
+    "vat": "DPH se neuplatňuje, čl. 293 B francouzského daňového zákoníku (CGI)",
+    "status": "Fyzická osoba podnikající (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (stránky a API); Supabase, Inc. — data uložená v Evropské unii (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentace",
+    "start": "Začínáme",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI a dovednost Claude",
+    "api": "REST API",
+    "rules": "Pravidla a schvalování"
+  },
+  "notFound": {
+    "title": "Stránka nenalezena",
+    "eyebrow": "Chyba 404",
+    "headline": "Tato stránka neexistuje.",
+    "lead": "Odkaz může být zastaralý. Vraťte se na domovskou stránku nebo si projděte dokumentaci.",
+    "home": "Domů"
+  }
+}

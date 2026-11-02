@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Eenmalige kaart · gesimuleerde bank",
+    "eyebrowBank": "Eenmalige kaart · uitgegeven door uw bank",
+    "lead": "Deze link kan maar één keer worden geopend. De kaart is begrensd op het bovenstaande bedrag en vergrendeld op deze verkoper.",
+    "fields": {
+      "number": "Nummer",
+      "expiry": "Vervaldatum",
+      "cvc": "Beveiligingscode",
+      "holder": "Kaarthouder"
+    },
+    "opening": "Bezig met openen…",
+    "show": "Kaart •••• {last4} tonen",
+    "footer": "Het nummer wordt rechtstreeks door de uitgevende bank getoond: het gaat nooit via Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js is niet beschikbaar.",
+      "invalidLink": "Ongeldige, al gebruikte of verlopen link.",
+      "stripeRefused": "Stripe heeft het verzoek geweigerd."
+    }
+  }
+}

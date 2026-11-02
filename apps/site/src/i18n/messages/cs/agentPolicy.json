@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Vzor: zásady výdajů AI agentů",
+    "intro": "Bezplatný vzor k úpravě, který slouží k řízení výdajů agentů umělé inteligence a k dokumentaci lidského dohledu vyžadovaného článkem 14 evropského aktu o umělé inteligenci (AI Act). Vytiskněte si tuto stránku nebo ji zkopírujte do své wiki.",
+    "scope": {
+      "title": "1. Účel a rozsah",
+      "body": "Tyto zásady se vztahují na každého softwarového agenta (konverzačního asistenta, automatizaci, skript), který je oprávněn nakupovat jménem [SPOLEČNOST]. Žádný agent nepoužívá platební kartu společnosti ani zaměstnance: každý nákup probíhá prostřednictvím jednorázové virtuální karty vyžádané přes Artemis."
+    },
+    "register": {
+      "title": "2. Registr agentů",
+      "body": "Každý agent je zapsán v registru s těmito údaji: název, platforma, odpovědná osoba, účel, měsíční rozpočet, limit na nákup, povolení obchodníci a případně klient, pro kterého pracuje."
+    },
+    "rules": {
+      "title": "3. Pravidla výdajů",
+      "i1": "Měsíční rozpočet na agenta: [ČÁSTKA] €; limit na nákup: [ČÁSTKA] €.",
+      "i2": "Povolení obchodníci: [SEZNAM]; zakázané kategorie: hazardní hry, převody peněz, kvazihotovost, cenné papíry.",
+      "i3": "Automatické schválení pouze pod [ČÁSTKA] € a u povoleného obchodníka; nad touto částkou je povinný lidský podpis.",
+      "i4": "Nad [ČÁSTKA] € jsou vyžadovány podpisy dvou různých osob."
+    },
+    "oversight": {
+      "title": "4. Lidský dohled",
+      "body": "Osoby oprávněné ke schvalování: [JMÉNA / FUNKCE]. Schválení se provádí přístupovým klíčem a vztahuje se na přesný obsah mandátu (agent, částka, obchodník, účel). Každá neschválená žádost automaticky vyprší."
+    },
+    "records": {
+      "title": "5. Doklady a účetnictví",
+      "body": "Každý nákup je spárován s fakturou do [N] hodin; jinak je agent pozastaven. Výdaje se každý měsíc exportují (FEC nebo Pennylane) a odsouhlasují s bankovními výpisy."
+    },
+    "incidents": {
+      "title": "6. Incidenty",
+      "body": "V případě neobvyklého chování, nesouladu částky nebo obchodníka či podezření na prompt injection odpovědná osoba okamžitě zmrazí agenta (nebo celou organizaci) a incident zaznamená."
+    },
+    "retention": {
+      "title": "7. Uchovávání a revize",
+      "body": "Řetězený auditní protokol se uchovává po dobu [10] let. Každé čtvrtletí se vypracovává zpráva o dohledu, kterou posuzuje [FUNKCE]. Tyto zásady se revidují každý rok."
+    },
+    "note": "V tarifu {plan} Artemis generuje registr agentů a čtvrtletní zprávu o dohledu."
+  }
+}

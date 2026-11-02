@@ -1,0 +1,59 @@
+{
+  "billing": {
+    "title": "Fakturering",
+    "lead": "Nuværende plan: {plan}. Anmodninger denne måned: {usage}. Moms finder ikke anvendelse, art. 293 B i den franske skattelov (CGI).",
+    "usageOf": "{used}/{limit}",
+    "manage": "Administrér abonnement og fakturaer",
+    "returnOk": "Tak! Dit abonnement bliver aktiveret (et par sekunder).",
+    "returnCanceled": "Betalingen blev annulleret, intet er ændret.",
+    "inactive": "Dit abonnement er ikke længere aktivt ({status}). De betalte funktioner er suspenderet: opdatér din betalingsmetode.",
+    "unknown": "ukendt",
+    "overage": "Ud over kvoten i en betalt plan faktureres hvert yderligere mandat med {price}.",
+    "overageCount_one": "Denne måned: {count} mandat.",
+    "overageCount_other": "Denne måned: {count} mandater.",
+    "ownerOnly": "Kun en ejer kan ændre abonnementet.",
+    "current": "Nuværende",
+    "from": "fra {price}",
+    "perMonth": "/måned",
+    "choose": "Vælg {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Bureauer",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agent",
+        "i2": "Simuleret bank",
+        "i3": "20 simulerede mandater/måned"
+      },
+      "builder": {
+        "i1": "3 agenter",
+        "i2": "1 rigtig bank",
+        "i3": "50 mandater/måned",
+        "i4": "Godkendelse med adgangsnøgle og notifikationer"
+      },
+      "team": {
+        "i1": "10 agenter",
+        "i2": "2 rigtige banker",
+        "i3": "300 mandater/måned",
+        "i4": "Slack, kvorum af godkendere, FEC-eksport",
+        "i5": "Abonnementer administreret pr. agent"
+      },
+      "agency": {
+        "i1": "25 agenter, ubegrænset antal kunder",
+        "i2": "1.000 mandater/måned",
+        "i3": "Budgetter, avance og viderefakturering pr. kunde",
+        "i4": "+ {price} pr. aktiv kunde"
+      },
+      "business": {
+        "i1": "Ubegrænset",
+        "i2": "AI Act-dossier og rapport",
+        "i3": "Signeret eksport af revisionsloggen",
+        "i4": "Prioriteret support"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Računovodski izvozi",
+    "lead": "Izdatki, ki so jih bremenile vaše banke, pripravljeni za Pennylane, vašega računovodjo ali preglednico.",
+    "failed": "Izvoz ni uspel.",
+    "from": "Od",
+    "to": "Do (brez tega dne)",
+    "downloadCsv": "Prenesi CSV",
+    "downloadFec": "Prenesi FEC",
+    "formats": "CSV: ločilo podpičje, združljivo z Excelom. FEC: 18 predpisanih stolpcev, breme 604000 / dobro 512000, mogoče uvoziti v Pennylane.",
+    "fecUpsell": "FEC je vključen od paketa Team naprej.",
+    "seePlans": "Oglejte si pakete"
+  }
+}

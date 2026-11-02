@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Instellingen",
+    "signOut": "Uitloggen",
+    "language": {
+      "title": "Taal",
+      "lead": "Taal van de interface op dit apparaat."
+    },
+    "notifications": {
+      "title": "Meldingen op dit apparaat",
+      "lead": "Ontvang een melding bij elke aanvraag. Voeg Artemis op de iPhone eerst toe aan uw beginscherm (Deel → Zet op beginscherm).",
+      "notConfigured": "Pushmeldingen zijn niet geconfigureerd op deze server (VAPID-sleutels). E-mails blijven actief.",
+      "unsupported": "Deze browser ondersteunt geen pushmeldingen.",
+      "denied": "Meldingen zijn geblokkeerd in de browserinstellingen.",
+      "enable": "Meldingen inschakelen",
+      "on": "Meldingen staan aan.",
+      "disable": "Uitschakelen"
+    },
+    "slack": {
+      "lead": "Elke openstaande aanvraag wordt in een Slack-kanaal geplaatst, met een knop die de goedkeuring met toegangssleutel opent. Maak in Slack een “Incoming Webhook” aan en plak de URL ervan.",
+      "connected": "Slack is gekoppeld.",
+      "disconnect": "Ontkoppelen",
+      "urlLabel": "URL van de Slack-webhook",
+      "connect": "Koppelen",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Overhandiging van kaarten aan agents",
+      "confirmDirect": "Rechtstreekse overhandiging: het kaartnummer gaat op weg naar de agent één keer via Artemis. Daarmee valt u onder de reikwijdte van PCI DSS en is bij Revolut schriftelijke toestemming vereist. Doorgaan?",
+      "linkTitle": "Tijdelijke link (aanbevolen)",
+      "linkText": "De agent krijgt een eenmalige link die 10 minuten geldig is; de kaart wordt getoond door de uitgevende bank (Stripe Issuing). Het nummer gaat nooit via Artemis.",
+      "directTitle": "Rechtstreekse overhandiging (geavanceerde optie)",
+      "directText": "Het nummer wordt slechts één keer aan de agent doorgegeven, zonder te worden opgeslagen. Vereist voor Revolut. U valt onder de reikwijdte van PCI DSS."
+    },
+    "org": {
+      "title": "Organisatie",
+      "name": "Naam",
+      "rename": "Naam wijzigen"
+    },
+    "emergency": {
+      "title": "Noodgeval",
+      "lead": "“Alles blokkeren” blokkeert alle agents en annuleert actieve kaarten en openstaande aanvragen. Gebruik dit als een agent zich afwijkend gedraagt of als een token is uitgelekt.",
+      "confirmFreeze": "De hele organisatie blokkeren? Alle agents worden geblokkeerd en actieve kaarten geannuleerd.",
+      "unfreeze": "Organisatie deblokkeren",
+      "freeze": "Nu alles blokkeren",
+      "afterUnfreeze": "Heractiveer na het deblokkeren elke agent via zijn eigen pagina."
+    },
+    "passkeys": {
+      "title": "Toegangssleutels",
+      "devicePrompt": "Naam van het apparaat (bijv. iPhone van Lea)",
+      "confirmDelete": "Deze toegangssleutel verwijderen?",
+      "add": "Toevoegen",
+      "lead": "Een toegangssleutel (passkey) is vereist om een uitgave goed te keuren. Voeg er een toe op elk apparaat dat u gebruikt.",
+      "addedOn": "toegevoegd op {date}",
+      "delete": "Verwijderen",
+      "none": "Geen toegangssleutel: u kunt nog geen uitgaven goedkeuren."
+    }
+  }
+}

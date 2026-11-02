@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Stap {step} van {total}",
+    "continue": "Doorgaan →",
+    "org": {
+      "title": "Uw organisatie",
+      "lead": "U begint in de Sandbox: gesimuleerde bank, geen kosten.",
+      "nameLabel": "Naam van het bedrijf of de studio"
+    },
+    "agent": {
+      "title": "Uw eerste agent",
+      "lead": "Een korte naam die zegt wat hij koopt. Standaardregels: {monthly} per maand, {perPurchase} per aankoop.",
+      "nameLabel": "Naam van de agent",
+      "platformLabel": "Platform",
+      "platformOther": "Overig",
+      "submit": "Agent aanmaken →"
+    },
+    "connect": {
+      "title": "Koppel uw agent",
+      "done": "Ik heb het token gekopieerd →"
+    },
+    "passkey": {
+      "title": "Uw toegangssleutel voor goedkeuringen",
+      "lead": "Elke uitgave wordt ondertekend met Face ID, Touch ID, Windows Hello of een beveiligingssleutel. Registreer uw toegangssleutel (passkey) bij voorkeur op de telefoon die de meldingen ontvangt.",
+      "deviceName": "Eerste apparaat",
+      "saved": "Toegangssleutel geregistreerd.",
+      "unsupported": "Deze browser ondersteunt geen toegangssleutels.",
+      "register": "Toegangssleutel registreren",
+      "openDashboard": "Dashboard openen →",
+      "later": "Later"
+    }
+  }
+}

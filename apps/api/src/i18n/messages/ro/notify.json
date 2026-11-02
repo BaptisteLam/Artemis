@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Agenții dumneavoastră plătesc. Ultimul cuvânt vă aparține.",
+    "unknownAgent": "Un agent",
+    "unknownMerchant": "un comerciant",
+    "requestPending": {
+      "title": "{agent} vrea să cheltuiască {amount}",
+      "subject": "De aprobat: {amount} la {merchant}",
+      "merchant": "Comerciant: {merchant}",
+      "purpose": "Scop: {purpose}",
+      "expires": "În lipsa unui răspuns, solicitarea expiră automat.",
+      "cta": "Examinați și aprobați →",
+      "slack": "*{title}* la *{merchant}*",
+      "slackCta": "Examinați și semnați cu passkey-ul meu"
+    },
+    "cardIssueFailed": {
+      "subject": "Crearea cardului a eșuat la {merchant}",
+      "title": "Banca nu a creat cardul",
+      "fallback": "Eroare bancară.",
+      "cta": "Vedeți solicitarea →"
+    },
+    "mismatch": {
+      "subject": "Neconcordanță detectată: {amount} la {merchant}",
+      "title": "O tranzacție nu corespunde mandatului",
+      "check": "Verificați tranzacția și, dacă este necesar, înghețați agentul.",
+      "cta": "Vedeți tranzacțiile →",
+      "pushTitle": "Neconcordanță la o tranzacție"
+    },
+    "invitation": {
+      "subject": "Invitație de a vă alătura echipei {org} pe Artemis",
+      "title": "Alăturați-vă echipei {org}",
+      "body": "Sunteți invitat să aprobați și să urmăriți cheltuielile agenților IA ai echipei dumneavoastră.",
+      "cta": "Acceptați invitația →"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Kort",
+    "lead": "Engangskort udstedt i dine banker. Det fulde kortnummer gemmes aldrig.",
+    "linkAria": "Kort •••• {last4}",
+    "cardAria": "Virtuelt kort, der ender på {last4}, kortholder {holder}, udløber {exp}",
+    "tagRevealed": "Overdraget til agenten",
+    "tagSingleUse": "Engangskort",
+    "emptyTitle": "Ingen kort",
+    "emptyText": "Kortene vises, når en anmodning er godkendt.",
+    "colCard": "Kort",
+    "colIssued": "Udstedt",
+    "colExpires": "Udløber",
+    "colRevealed": "Overdraget til agenten",
+    "colStatus": "Status",
+    "notRevealed": "Nej",
+    "request": "Anmodning →"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Банки",
+    "lead": "Картите се създават във вашата собствена банка. Artemis никога не държи вашите средства.",
+    "bankAria": "Банка",
+    "help": {
+      "stripe": "Акаунт в Stripe с активиран Issuing (ЕС). Създайте ограничен ключ с права за запис в Issuing. Въведете съществуващ титуляр (ich_…) или адреса на дружеството си, за да може Artemis да създаде такъв.",
+      "qonto": "Четене, замразяване и равняване: Qonto не предоставя картата на трети страни и забранява нейното преотстъпване. OAuth токен от партньорската програма на Qonto; одобряващият може да покаже картата на Qonto по защитен начин и сам да извърши плащането.",
+      "revolut": "План Grow или по-висок, достъп до „Cards API“, активиран от поддръжката, и писмено разрешение от Revolut (Valid Permission) преди всякаква реална употреба. Изисква директно предаване (Настройки)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Ограничен таен ключ",
+      "publishableKey": "Публичен ключ",
+      "stripeCardholder": "Титуляр в Stripe",
+      "companyName": "Име на дружеството",
+      "address": "Адрес",
+      "postalCode": "Пощенски код",
+      "city": "Град",
+      "country": "Държава",
+      "webhookSecret": "Таен ключ на webhook",
+      "accessToken": "Токен за достъп",
+      "refreshToken": "Токен за опресняване",
+      "oauthClientId": "OAuth ID на клиента",
+      "oauthClientSecret": "OAuth таен ключ на клиента",
+      "holderMemberId": "ID на члена титуляр",
+      "bankAccountId": "ID на банковата сметка",
+      "environment": "Среда",
+      "stagingToken": "Staging токен",
+      "clientAssertion": "Клиентско твърдение (JWT)",
+      "holderId": "ID на титуляря"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… или sk_test_…",
+      "stripePublishableKey": "pk_live_… (временна връзка към картата)",
+      "stripeCardholder": "ich_… (по избор)",
+      "ifNoCardholder": "Ако няма титуляр",
+      "country": "ISO код, напр. BG",
+      "webhookSecret": "whsec_… (след създаване на webhook, вижте по-долу)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "По избор",
+      "toRefreshToken": "За опресняване на токена",
+      "qontoMembershipId": "Qonto membership id",
+      "qontoBankAccountId": "Qonto bank_account id",
+      "sandboxOnly": "Само Sandbox",
+      "businessApi": "Business API",
+      "optionalForRefresh": "По избор, за опресняване",
+      "teamMemberOptional": "Член на екипа (по избор)"
+    },
+    "encrypted": "Идентификационните данни се тестват, след което се криптират (AES-256-GCM). Те никога повече не се показват.",
+    "testing": "Тестване на връзката…",
+    "connectProvider": "Свържи {name}",
+    "testOk": "Връзката е наред",
+    "testFailed": "Неуспех: {detail}",
+    "confirmDisconnect": "Да се изключи ли тази банка? Агентите, които я използват, вече няма да могат да получат карта.",
+    "lastSync": "Последна синхронизация: {date}",
+    "stripeWebhook": "Stripe webhook (събития issuing_transaction.*):",
+    "test": "Тествай",
+    "disconnect": "Изключи",
+    "connectRealBank": "Свържете реална банка",
+    "upgrade": "Свързването на реална банка е включено от план Builder ({price}/месец).",
+    "choosePlan": "Изберете план →"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Cenas",
+    "description": "Sandbox bez maksas, pēc tam {a}, {b}, {c} vai {d} mēnesī. Bez komisijas no jūsu izdevumiem.",
+    "headline": "Viens vienkāršs abonements. Bez komisijas.",
+    "lead": "Jūs maksājat tikai par programmatūru. Kartes izsniedz jūsu banka saskaņā ar jūsu ierasto bankas tarifu.",
+    "popular": "Populārākais",
+    "from": "no {price}",
+    "perMonth": "/ mēnesī",
+    "start": "Sākt",
+    "choose": "Izvēlēties {plan}",
+    "mandates": "{count} pilnvaras / mēnesī",
+    "sandbox": {
+      "pitch": "Izmēģiniet ar simulētu banku.",
+      "i1": "1 aģents",
+      "i2": "Simulēta banka",
+      "i3": "{count} simulētas pilnvaras / mēnesī",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Ārštata speciālistam vai izstrādātājam un viņa aģentiem.",
+      "i1": "3 aģenti",
+      "i2": "1 pievienota banka",
+      "i4": "Apstiprināšana ar piekļuves atslēgu",
+      "i5": "Drošības ierobežojumi pret injekcijām"
+    },
+    "team": {
+      "pitch": "Jaunuzņēmumam ar 5–50 darbiniekiem.",
+      "i1": "10 aģenti",
+      "i2": "2 bankas",
+      "i4": "Slack un apstiprinātāju kvorums",
+      "i5": "Abonementi, FEC eksports"
+    },
+    "agency": {
+      "pitch": "Automatizācijas aģentūrām.",
+      "i1": "Neierobežots klientu skaits, 25 aģenti",
+      "i3": "Budžets un uzcenojums katram klientam",
+      "i4": "Ikmēneša pārskats pārfakturēšanai",
+      "i5": "+ {price} par katru aktīvo klientu"
+    },
+    "business": {
+      "pitch": "Regulētiem augošiem uzņēmumiem.",
+      "i1": "Neierobežoti",
+      "i2": "AI Act dokumentācija un pārskats",
+      "i3": "Parakstīta audita žurnāla eksports",
+      "i4": "Prioritārs atbalsts"
+    },
+    "faq": {
+      "title": "Biežāk uzdotie jautājumi",
+      "q1": "Vai par katru karti ir maksa?",
+      "a1": "Ne no Artemis puses. Jūsu banka piemēro savu tarifu (virtuālās kartes ir iekļautas lielākajā daļā Qonto un Revolut Business plānu; Stripe Issuing iekasē maksu saskaņā ar savu cenrādi).",
+      "q2": "Kas notiek, ja pārsniedzu savu kvotu?",
+      "a2": "Maksas plānā jūsu aģenti turpina darbu: par katru pilnvaru virs kvotas mēneša beigās tiek iekasēts {price}. Plānā Sandbox pieprasījumi tiek noraidīti ar kodu <code>quota_exceeded</code>.",
+      "q3": "Kā tiek aprēķināta maksa par plānu {plan}?",
+      "a3": "{base} mēnesī, plus {client} par katru aktīvo klientu, t. i., katru klientu, kuram mēneša laikā izveidota vismaz viena pilnvara.",
+      "q4": "Vai varu atcelt jebkurā laikā?",
+      "a4": "Jā, sadaļā Norēķini. Abonements darbojas līdz apmaksātā perioda beigām; jūsu datus joprojām var eksportēt.",
+      "q5": "PVN",
+      "a5": "Norādītās cenas ir neto."
+    }
+  }
+}

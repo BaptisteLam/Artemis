@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Clienți",
+    "lead": "Un spațiu de lucru per client: agenții săi, bugetul său lunar, adaosul dumneavoastră și un raport de refacturare gata de trimis.",
+    "invalidBudget": "Buget nevalid (ex. 500 sau 49,90).",
+    "upsell": "Spațiile de lucru pentru clienți sunt incluse în planul Agenții ({price} + {perClient} per client activ).",
+    "seePlans": "Vedeți planurile →",
+    "empty": "Niciun client",
+    "emptyHint": "Creați un client, apoi atribuiți-i agenți.",
+    "cols": {
+      "client": "Client",
+      "agents": "Agenți",
+      "spent": "Angajat luna aceasta",
+      "budget": "Buget",
+      "markup": "Adaos"
+    },
+    "archived": "arhivat",
+    "percent": "{value}%",
+    "report": "Raport →",
+    "new": "Client nou",
+    "fields": {
+      "name": "Nume",
+      "billingEmail": "Email de facturare",
+      "markup": "Adaos de refacturare (%)",
+      "budget": "Buget lunar (€)",
+      "budgetHint": "Gol = fără plafon pentru client"
+    },
+    "create": "Creați clientul",
+    "exportFailed": "Exportul a eșuat.",
+    "eyebrow": "Client",
+    "month": "Lună",
+    "exportCsv": "Exportați CSV",
+    "monthPurchases": "Achizițiile lunii",
+    "markupPct": "Adaos {value}",
+    "toRebill": "De refacturat",
+    "noPurchases": "Nicio achiziție luna aceasta",
+    "lines": {
+      "date": "Dată",
+      "agent": "Agent",
+      "merchant": "Comerciant",
+      "purpose": "Scop",
+      "amount": "Sumă",
+      "receipt": "Justificativ"
+    },
+    "yes": "Da",
+    "missing": "Lipsă",
+    "archive": "Arhivați clientul",
+    "reactivate": "Reactivați",
+    "all": "← Toți clienții"
+  }
+}

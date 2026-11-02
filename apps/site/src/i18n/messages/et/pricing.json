@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Hinnad",
+    "description": "Tasuta Sandbox, seejärel {a}, {b}, {c} või {d} kuus. Teie kuludelt vahendustasu ei võeta.",
+    "headline": "Üks lihtne tellimus. Vahendustasuta.",
+    "lead": "Maksate ainult tarkvara eest. Kaardid väljastab teie pank teie tavapärase pangapaketi alusel.",
+    "popular": "Populaarseim",
+    "from": "alates {price}",
+    "perMonth": "/ kuu",
+    "start": "Alustage",
+    "choose": "Vali {plan}",
+    "mandates": "{count} volitust / kuu",
+    "sandbox": {
+      "pitch": "Proovige simuleeritud pangaga.",
+      "i1": "1 agent",
+      "i2": "Simuleeritud pank",
+      "i3": "{count} simuleeritud volitust / kuu",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Vabakutselisele või arendajale ja tema agentidele.",
+      "i1": "3 agenti",
+      "i2": "1 ühendatud pank",
+      "i4": "Kinnitamine pääsuvõtmega",
+      "i5": "Kaitsemeetmed süstete vastu"
+    },
+    "team": {
+      "pitch": "5–50 inimesega idufirmale.",
+      "i1": "10 agenti",
+      "i2": "2 panka",
+      "i4": "Slack ja kinnitajate kvoorum",
+      "i5": "Tellimused, FEC-eksport"
+    },
+    "agency": {
+      "pitch": "Automatiseerimisagentuuridele.",
+      "i1": "Piiramatu arv kliente, 25 agenti",
+      "i3": "Kliendipõhine eelarve ja juurdehindlus",
+      "i4": "Kuuaruanne edasiarveldamiseks",
+      "i5": "+ {price} iga aktiivse kliendi kohta"
+    },
+    "business": {
+      "pitch": "Reguleeritud kasvuettevõtetele.",
+      "i1": "Piiramatu",
+      "i2": "AI Acti toimik ja aruanne",
+      "i3": "Allkirjastatud auditilogi eksport",
+      "i4": "Eelistatud tugi"
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "q1": "Kas kaardipõhiseid tasusid on?",
+      "a1": "Artemise poolt mitte. Teie pank rakendab oma hinnakirja (virtuaalkaardid sisalduvad enamikus Qonto ja Revolut Businessi pakettides; Stripe Issuing võtab tasu oma hinnakirja järgi).",
+      "q2": "Mis juhtub, kui ületan oma kvoodi?",
+      "a2": "Tasulises paketis jätkavad teie agendid tööd: iga kvooti ületava volituse eest võetakse kuu lõpus tasu {price}. Sandboxis lükatakse taotlused tagasi koodiga <code>quota_exceeded</code>.",
+      "q3": "Kuidas paketti {plan} arveldatakse?",
+      "a3": "{base} kuus, lisaks {client} iga aktiivse kliendi kohta, st iga kliendi kohta, kelle jaoks loodi kuu jooksul vähemalt üks volitus.",
+      "q4": "Kas saan igal ajal lõpetada?",
+      "a4": "Jah, jaotises Arveldus. Tellimus kehtib makstud perioodi lõpuni; teie andmed jäävad eksporditavaks.",
+      "q5": "Käibemaks",
+      "a5": "Näidatud hinnad on netohinnad."
+    }
+  }
+}

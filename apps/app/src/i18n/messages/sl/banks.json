@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Banke",
+    "lead": "Kartice se ustvarijo pri vaši banki. Artemis nikoli ne hrani vaših sredstev.",
+    "bankAria": "Banka",
+    "help": {
+      "stripe": "Račun Stripe z vklopljenim Issuing (EU). Ustvarite omejen ključ z dovoljenji za pisanje za Issuing. Vnesite obstoječega imetnika kartice (ich_…) ali naslov svojega podjetja, da ga Artemis lahko ustvari.",
+      "qonto": "Branje, zamrznitev in usklajevanje: Qonto kartice ne posreduje tretjim osebam in prepoveduje njeno posojanje. Žeton OAuth iz partnerskega programa Qonto; odobritelj si lahko kartico Qonto varno ogleda in plačilo dokonča sam.",
+      "revolut": "Paket Grow ali višji, dostop »Cards API«, ki ga vklopi podpora, in pisno dovoljenje Revoluta (Valid Permission) pred kakršno koli produkcijsko uporabo. Zahteva neposredno predajo (Nastavitve)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Omejen skrivni ključ",
+      "publishableKey": "Javni ključ",
+      "stripeCardholder": "Imetnik kartice Stripe",
+      "companyName": "Ime podjetja",
+      "address": "Naslov",
+      "postalCode": "Poštna številka",
+      "city": "Kraj",
+      "country": "Država",
+      "webhookSecret": "Skrivnost webhooka",
+      "accessToken": "Dostopni žeton",
+      "refreshToken": "Žeton za osvežitev",
+      "oauthClientId": "ID odjemalca OAuth",
+      "oauthClientSecret": "Skrivnost odjemalca OAuth",
+      "holderMemberId": "ID člana – imetnika kartice",
+      "bankAccountId": "ID bančnega računa",
+      "environment": "Okolje",
+      "stagingToken": "Žeton za testno okolje",
+      "clientAssertion": "Client assertion (JWT)",
+      "holderId": "ID imetnika kartice"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… ali sk_test_…",
+      "stripePublishableKey": "pk_live_… (začasna povezava do kartice)",
+      "stripeCardholder": "ich_… (neobvezno)",
+      "ifNoCardholder": "Če imetnik kartice ne obstaja",
+      "country": "Koda ISO, npr. SI",
+      "webhookSecret": "whsec_… (ko je webhook ustvarjen, glejte spodaj)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Neobvezno",
+      "toRefreshToken": "Za osvežitev žetona",
+      "qontoMembershipId": "Qonto membership id",
+      "qontoBankAccountId": "Qonto bank_account id",
+      "sandboxOnly": "Samo Sandbox",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Neobvezno, za osvežitev",
+      "teamMemberOptional": "Član ekipe (neobvezno)"
+    },
+    "encrypted": "Dostopni podatki se preizkusijo, nato šifrirajo (AES-256-GCM). Nikoli več niso prikazani.",
+    "testing": "Preizkušanje povezave …",
+    "connectProvider": "Poveži {name}",
+    "testOk": "Povezava deluje",
+    "testFailed": "Neuspešno: {detail}",
+    "confirmDisconnect": "Odklopim to banko? Agenti, ki jo uporabljajo, ne bodo več mogli dobiti kartice.",
+    "lastSync": "Zadnja sinhronizacija: {date}",
+    "stripeWebhook": "Webhook Stripe (dogodki issuing_transaction.*):",
+    "test": "Preizkusi",
+    "disconnect": "Odklopi",
+    "connectRealBank": "Povežite pravo banko",
+    "upgrade": "Povezava prave banke je vključena od paketa Builder naprej ({price}/mesec).",
+    "choosePlan": "Izberite paket →"
+  }
+}

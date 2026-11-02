@@ -1,0 +1,16 @@
+{
+  "transactions": {
+    "title": "Tranzacții",
+    "lead": "Operațiuni raportate de băncile dumneavoastră și asociate mandatelor (ultimele 90 de zile).",
+    "mismatches_one": "{count} tranzacție nu corespunde mandatului său. Verificați-o și, dacă este necesar, înghețați agentul.",
+    "mismatches_few": "{count} tranzacții nu corespund mandatului lor. Verificați-le și, dacă este necesar, înghețați agentul.",
+    "mismatches_other": "{count} de tranzacții nu corespund mandatului lor. Verificați-le și, dacă este necesar, înghețați agentul.",
+    "emptyTitle": "Nicio tranzacție",
+    "emptyText": "Apar la câteva minute după fiecare plată.",
+    "colDate": "Dată",
+    "colMerchant": "Comerciant",
+    "colAmount": "Sumă",
+    "colBankStatus": "Stare bancară",
+    "colMatch": "Asociere"
+  }
+}

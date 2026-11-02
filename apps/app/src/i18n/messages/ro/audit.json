@@ -1,0 +1,95 @@
+{
+  "audit": {
+    "title": "Jurnal de audit",
+    "lead": "Fiecare eveniment este înlănțuit printr-un hash SHA-256 și nu poate fi nici modificat, nici șters: este dovada dumneavoastră de supraveghere umană (AI Act).",
+    "verify": "Verificați integritatea",
+    "export": "Exportați",
+    "report": "Raport AI Act {quarter}",
+    "exportFailed": "Exportul a eșuat.",
+    "reportUnavailable": "Raport indisponibil.",
+    "chainOk_one": "Lanț intact: {count} intrare verificată.",
+    "chainOk_few": "Lanț intact: {count} intrări verificate.",
+    "chainOk_other": "Lanț intact: {count} de intrări verificate.",
+    "chainBroken": "Lanț întrerupt la intrarea nr. {id}.",
+    "exportUpsell": "Exportul semnat al jurnalului de audit este inclus în planul Business.",
+    "seePlans": "Vedeți planurile",
+    "cols": {
+      "date": "Dată",
+      "event": "Eveniment",
+      "actor": "Autor",
+      "hash": "Amprentă"
+    },
+    "view": "vedeți",
+    "older": "Mai vechi →",
+    "actors": {
+      "user": "Utilizator",
+      "agent": "Agent",
+      "system": "Sistem"
+    },
+    "actions": {
+      "org": {
+        "created": "Organizație creată",
+        "frozen": "Organizație înghețată",
+        "unfrozen": "Organizație dezghețată",
+        "card_delivery_changed": "Mod de predare a cardurilor modificat",
+        "slack_connected": "Slack conectat",
+        "slack_disconnected": "Slack deconectat"
+      },
+      "agent": {
+        "created": "Agent creat",
+        "updated": "Agent modificat",
+        "deleted": "Agent șters",
+        "token_rotated": "Token regenerat",
+        "frozen": "Agent înghețat"
+      },
+      "policy": {
+        "updated": "Reguli modificate"
+      },
+      "request": {
+        "created": "Solicitare creată",
+        "rejected": "Solicitare respinsă",
+        "approved": "Mandat semnat",
+        "auto_approved": "Aprobare automată",
+        "approval_recorded": "Aprobare înregistrată",
+        "expired": "Solicitare expirată"
+      },
+      "card": {
+        "issued": "Card emis",
+        "issue_failed": "Emiterea cardului a eșuat",
+        "revealed": "Card predat agentului",
+        "link_created": "Link către card creat",
+        "viewed": "Card vizualizat",
+        "canceled": "Card anulat",
+        "expired": "Card expirat"
+      },
+      "transaction": {
+        "matched": "Tranzacție asociată",
+        "mismatch": "Neconcordanță detectată"
+      },
+      "receipt": {
+        "attached": "Document justificativ atașat"
+      },
+      "bank": {
+        "connected": "Bancă conectată",
+        "disconnected": "Bancă deconectată"
+      },
+      "member": {
+        "invited": "Membru invitat",
+        "joined": "Membru alăturat",
+        "removed": "Membru eliminat",
+        "role_changed": "Rol modificat"
+      },
+      "client": {
+        "created": "Client creat",
+        "updated": "Client modificat"
+      },
+      "billing": {
+        "subscribed": "Abonament activat",
+        "updated": "Abonament modificat"
+      },
+      "subscription": {
+        "charged": "Abonament debitat"
+      }
+    }
+  }
+}

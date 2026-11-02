@@ -1,0 +1,21 @@
+{
+  "subscriptions": {
+    "title": "Abonnementer",
+    "lead": "Abonnementer tegnet af dine agenter: kort låst til forretningen, månedsgrænse, registrering af hvilende abonnementer.",
+    "confirmCancel": "Opsig dette abonnement? Kortet annulleres i banken.",
+    "planRequired": "Abonnementer administreret af agenter er inkluderet fra planen Team.",
+    "seePlans": "Se planerne →",
+    "dormantAlert_one": "{count} abonnement uden betaling i mere end {days} dage: overvej at opsige det.",
+    "dormantAlert_other": "{count} abonnementer uden betaling i mere end {days} dage: overvej at opsige dem.",
+    "emptyTitle": "Ingen abonnementer",
+    "emptyText": "En agent opretter et abonnement med request_card og indstillingen for tilbagevendende betaling.",
+    "colMerchant": "Forretning",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Månedsgrænse",
+    "colPaid": "Betalt",
+    "colLastPayment": "Seneste betaling",
+    "colStatus": "Status",
+    "dormant": "Hvilende",
+    "cancel": "Opsig"
+  }
+}
