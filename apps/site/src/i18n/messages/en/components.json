@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Works with",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Single use",
+      "aria": "Virtual card ending in {last4}, cardholder {holder}, expires {exp}",
+      "holder": "Cardholder",
+      "expires": "Expires",
+      "debit": "Debit",
+      "virtual": "virtual",
+      "used": "Used"
+    },
+    "faq": {
+      "q1": "Does Artemis hold my money?",
+      "a1": "No. Cards are created in your own bank (Qonto, Revolut Business or Stripe Issuing) and charged to your account. Artemis is software: it applies your rules, collects your approval and drives the bank through its API. It never receives, holds or transfers funds.",
+      "q2": "What if my agent is manipulated by a prompt injection?",
+      "a2": "The agent can only ask. Every card is single-use, capped at the exact amount, locked to the intended merchant and expires in 30 minutes. Outside your rules, the request is refused; above your threshold, nothing goes out without your passkey. Any mismatch in amount or merchant triggers an alert, and the “Freeze all” button shuts everything down in one click.",
+      "q3": "Does the card number go through Artemis?",
+      "a3": "No, not by default. At checkout, the agent receives a single-use link valid for 10 minutes: the card is displayed there directly by the issuing bank. Artemis never sees, stores or relays the number. Once opened, the link stops working.",
+      "q4": "Why not just use my bank?",
+      "a4": "If you only use Stripe, Ramp or Mercury, they already do part of the job. Artemis brings what a bank won't do for its competitors: several banks under a single policy, French accounting (FEC, Pennylane), AI Act proof ready to hand over, and an agency mode.",
+      "q5": "Which banks are supported?",
+      "a5": "Stripe Issuing (recommended) creates the cards and displays them to the agent without the number ever going through Artemis. Revolut Business works under a written agreement with Revolut, with the card handed over directly. Qonto connects for reading, freezing and reconciliation. The Sandbox simulates a bank so you can test without connecting anything.",
+      "q6": "How much does it cost?",
+      "a6": "The Sandbox is free. Then {builder} (Builder), {team} (Team), {agency} + {client} per active client ({agencyPlan}) or from {business} (Business) per month. Beyond your quota, {overage} per mandate. No commission on your spending: your bank applies its usual plan. {vat}.",
+      "q7": "Is my data kept in Europe?",
+      "a7": "Yes. The database is hosted in the European Union (Frankfurt), bank credentials are encrypted with AES-256-GCM, and the chained audit log documents the human oversight required by the AI Act."
+    }
+  }
+}

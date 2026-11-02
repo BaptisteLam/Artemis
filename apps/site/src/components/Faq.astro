@@ -1,13 +1,19 @@
 ---
-const items = [
-  ['Artemis détient-il mon argent ?', "Non. Les cartes sont créées dans votre propre banque (Qonto, Revolut Business ou Stripe Issuing) et débitées sur votre compte. Artemis est un logiciel : il applique vos règles, recueille votre validation et pilote la banque par API. Il ne reçoit, ne détient et ne transfère jamais de fonds."],
-  ['Et si mon agent est manipulé par une injection de prompt ?', "L'agent ne peut que demander. Chaque carte est à usage unique, plafonnée au montant exact, verrouillée sur le marchand prévu et expire en 30 minutes. Hors de vos règles, la demande est refusée ; au-dessus de votre seuil, rien ne part sans votre passkey. Un écart de montant ou de marchand déclenche une alerte, et le bouton « Tout geler » coupe tout en un clic."],
-  ['Le numéro de carte passe-t-il par Artemis ?', "Non, par défaut. Au moment de payer, l'agent reçoit un lien à usage unique valable 10 minutes : la carte s'y affiche directement depuis la banque émettrice. Artemis ne voit, ne stocke ni ne relaie le numéro. Une fois ouvert, le lien ne fonctionne plus."],
-  ['Pourquoi pas simplement ma banque ?', "Si vous n'utilisez que Stripe, Ramp ou Mercury, ils font déjà une partie du travail. Artemis apporte ce qu'une banque ne fera pas pour ses concurrentes : plusieurs banques sous une seule politique, la compta française (FEC, Pennylane), une preuve AI Act prête à remettre et un mode agence."],
-  ['Quelles banques sont compatibles ?', "Stripe Issuing (recommandé) crée les cartes et les affiche à l'agent sans que le numéro passe par Artemis. Revolut Business fonctionne sous accord écrit de Revolut, en remise directe. Qonto se connecte en lecture, gel et rapprochement. La Sandbox simule une banque pour tester sans rien connecter."],
-  ['Combien ça coûte ?', "La Sandbox est gratuite. Ensuite 29 € (Builder), 99 € (Team), 249 € + 15 € par client actif (Agences) ou dès 690 € (Business) par mois. Au-delà du quota, 0,25 € par mandat. Aucune commission sur vos dépenses : votre banque applique son forfait habituel. TVA non applicable, art. 293 B du CGI."],
-  ['Mes données sont-elles en Europe ?', "Oui. La base est hébergée dans l'Union européenne (Francfort), les identifiants bancaires sont chiffrés en AES-256-GCM, et le journal d'audit chaîné documente la supervision humaine exigée par l'AI Act."],
-];
+import { OVERAGE_CENTS, PLAN_LIMITS } from '@artemis/shared';
+import { i18n } from '../i18n';
+const { t, money } = i18n(Astro.url);
+const eur = (n: number) => money(n * 100, { whole: true });
+const price = {
+  builder: eur(PLAN_LIMITS.builder.priceEur),
+  team: eur(PLAN_LIMITS.team.priceEur),
+  agency: eur(PLAN_LIMITS.agency.priceEur),
+  client: eur(PLAN_LIMITS.agency.perClientEur),
+  business: eur(PLAN_LIMITS.business.priceEur),
+  overage: money(OVERAGE_CENTS),
+  agencyPlan: t('plans.agency'),
+  vat: t('legal.vat'),
+};
+const items = [1, 2, 3, 4, 5, 6, 7].map((n) => [t(`components.faq.q${n}`), t(`components.faq.a${n}`, price)]);
 ---
 <div class="faq">
   {items.map(([q, a]) => (
