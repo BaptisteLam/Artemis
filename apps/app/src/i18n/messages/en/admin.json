@@ -1,0 +1,20 @@
+{
+  "admin": {
+    "eyebrow": "Back office",
+    "title": "Artemis in numbers",
+    "mrr": "MRR",
+    "paying": "Paying customers",
+    "ofOrgs_one": "out of {count} organization",
+    "ofOrgs_other": "out of {count} organizations",
+    "signups7d": "Sign-ups (7 days)",
+    "requests30d": "Requests (30 days)",
+    "orgs": "Organizations",
+    "cols": {
+      "name": "Name",
+      "plan": "Plan",
+      "subscription": "Subscription",
+      "created": "Created"
+    },
+    "waitlist": "Waitlist ({total})"
+  }
+}

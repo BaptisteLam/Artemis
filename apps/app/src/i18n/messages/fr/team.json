@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Équipe",
+    "lead": "Les approbateurs reçoivent les demandes et les signent avec leur passkey.",
+    "confirmRemove": "Retirer ce membre ?",
+    "cols": {
+      "member": "Membre",
+      "role": "Rôle",
+      "since": "Depuis"
+    },
+    "you": "vous",
+    "remove": "Retirer",
+    "invite": "Inviter",
+    "email": "Email",
+    "role": "Rôle",
+    "send": "Envoyer l'invitation",
+    "inviteLink": "Lien d'invitation (valable 7 jours) :",
+    "expiresOn": "expire le {date}",
+    "revoke": "Révoquer"
+  }
+}

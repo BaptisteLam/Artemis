@@ -1,0 +1,94 @@
+{
+  "audit": {
+    "title": "Audit log",
+    "lead": "Every event is chained with a SHA-256 hash and can be neither modified nor deleted: it is your proof of human oversight (AI Act).",
+    "verify": "Verify integrity",
+    "export": "Export",
+    "report": "AI Act report {quarter}",
+    "exportFailed": "Export failed.",
+    "reportUnavailable": "Report unavailable.",
+    "chainOk_one": "Chain intact: {count} entry verified.",
+    "chainOk_other": "Chain intact: {count} entries verified.",
+    "chainBroken": "Chain broken at entry no. {id}.",
+    "exportUpsell": "Signed export of the audit log is included in the Business plan.",
+    "seePlans": "See plans",
+    "cols": {
+      "date": "Date",
+      "event": "Event",
+      "actor": "Actor",
+      "hash": "Fingerprint"
+    },
+    "view": "view",
+    "older": "Older →",
+    "actors": {
+      "user": "User",
+      "agent": "Agent",
+      "system": "System"
+    },
+    "actions": {
+      "org": {
+        "created": "Organization created",
+        "frozen": "Organization frozen",
+        "unfrozen": "Organization unfrozen",
+        "card_delivery_changed": "Card handover mode changed",
+        "slack_connected": "Slack connected",
+        "slack_disconnected": "Slack disconnected"
+      },
+      "agent": {
+        "created": "Agent created",
+        "updated": "Agent updated",
+        "deleted": "Agent deleted",
+        "token_rotated": "Token regenerated",
+        "frozen": "Agent frozen"
+      },
+      "policy": {
+        "updated": "Rules updated"
+      },
+      "request": {
+        "created": "Request created",
+        "rejected": "Request rejected",
+        "approved": "Mandate signed",
+        "auto_approved": "Automatic approval",
+        "approval_recorded": "Approval recorded",
+        "expired": "Request expired"
+      },
+      "card": {
+        "issued": "Card issued",
+        "issue_failed": "Card issuance failed",
+        "revealed": "Card handed over to the agent",
+        "link_created": "Card link created",
+        "viewed": "Card viewed",
+        "canceled": "Card cancelled",
+        "expired": "Card expired"
+      },
+      "transaction": {
+        "matched": "Transaction matched",
+        "mismatch": "Mismatch detected"
+      },
+      "receipt": {
+        "attached": "Receipt attached"
+      },
+      "bank": {
+        "connected": "Bank connected",
+        "disconnected": "Bank disconnected"
+      },
+      "member": {
+        "invited": "Member invited",
+        "joined": "Member joined",
+        "removed": "Member removed",
+        "role_changed": "Role changed"
+      },
+      "client": {
+        "created": "Client created",
+        "updated": "Client updated"
+      },
+      "billing": {
+        "subscribed": "Subscription started",
+        "updated": "Subscription updated"
+      },
+      "subscription": {
+        "charged": "Subscription charged"
+      }
+    }
+  }
+}

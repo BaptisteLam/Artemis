@@ -4,6 +4,7 @@ import { useData } from '../../lib/useData';
 import type { OrganizationRow } from '../../lib/types';
 import { ErrorAlert, Loading, PageStage } from '../../components';
 import { formatDate } from '../../lib/format';
+import { useI18n } from '../../i18n';
 
 interface Stats {
   orgs: { total: number; byPlan: Record<string, number>; paying: number };
@@ -17,14 +18,15 @@ export function Admin() {
   const stats = useData<Stats>('/admin/stats');
   const orgs = useData<{ organizations: (OrganizationRow & { effective_plan: string })[] }>('/admin/orgs');
   const s = stats.data;
+  const { t, number } = useI18n();
   return (
     <>
-      <PageStage eyebrow="Back-office" title="Artemis en chiffres">
+      <PageStage eyebrow={t('admin.eyebrow')} title={t('admin.title')}>
         <div className="stat-grid">
-          <Glass tone="clear"><span className="ar-micro ar-muted">MRR</span><div className="ar-amount ar-amount-xl">{s ? formatAmount(s.mrrEur * 100) : '—'}</div></Glass>
-          <Glass tone="clear"><span className="ar-micro ar-muted">Clients payants</span><div className="ar-amount ar-amount-xl">{s?.orgs.paying ?? '—'}</div><span className="ar-small ar-muted">sur {s?.orgs.total ?? 0} organisations</span></Glass>
-          <Glass tone="clear"><span className="ar-micro ar-muted">Inscriptions 7 j</span><div className="ar-amount ar-amount-xl">{s?.signups7d ?? '—'}</div></Glass>
-          <Glass tone="clear"><span className="ar-micro ar-muted">Demandes 30 j</span><div className="ar-amount ar-amount-xl">{s?.requests30d ?? '—'}</div></Glass>
+          <Glass tone="clear"><span className="ar-micro ar-muted">{t('admin.mrr')}</span><div className="ar-amount ar-amount-xl">{s ? formatAmount(s.mrrEur * 100) : '—'}</div></Glass>
+          <Glass tone="clear"><span className="ar-micro ar-muted">{t('admin.paying')}</span><div className="ar-amount ar-amount-xl">{s ? number(s.orgs.paying) : '—'}</div><span className="ar-small ar-muted">{t('admin.ofOrgs', { count: s?.orgs.total ?? 0 })}</span></Glass>
+          <Glass tone="clear"><span className="ar-micro ar-muted">{t('admin.signups7d')}</span><div className="ar-amount ar-amount-xl">{s ? number(s.signups7d) : '—'}</div></Glass>
+          <Glass tone="clear"><span className="ar-micro ar-muted">{t('admin.requests30d')}</span><div className="ar-amount ar-amount-xl">{s ? number(s.requests30d) : '—'}</div></Glass>
         </div>
       </PageStage>
       <div className="ar-container page-body ar-stack" style={{ gap: 24 }}>
@@ -33,9 +35,9 @@ export function Admin() {
         {s ? (
           <div className="two-col">
             <section className="ar-solid ar-table-wrap">
-              <h2 className="ar-h3" style={{ marginBottom: 12 }}>Organisations</h2>
+              <h2 className="ar-h3" style={{ marginBottom: 12 }}>{t('admin.orgs')}</h2>
               <table className="ar-table">
-                <thead><tr><th>Nom</th><th>Plan</th><th>Abonnement</th><th>Créée</th></tr></thead>
+                <thead><tr><th>{t('admin.cols.name')}</th><th>{t('admin.cols.plan')}</th><th>{t('admin.cols.subscription')}</th><th>{t('admin.cols.created')}</th></tr></thead>
                 <tbody>
                   {orgs.data?.organizations.map((o) => (
                     <tr key={o.id}><td>{o.name}</td><td>{o.effective_plan}</td><td className="ar-small">{o.subscription_status ?? '—'}</td><td>{formatDate(o.created_at)}</td></tr>
@@ -44,7 +46,7 @@ export function Admin() {
               </table>
             </section>
             <section className="ar-solid">
-              <h2 className="ar-h3" style={{ marginBottom: 12 }}>Liste d'attente ({s.waitlist.total})</h2>
+              <h2 className="ar-h3" style={{ marginBottom: 12 }}>{t('admin.waitlist', { total: number(s.waitlist.total) })}</h2>
               <div className="list">
                 {s.waitlist.latest.map((w) => (
                   <div key={w.email} className="list-item">

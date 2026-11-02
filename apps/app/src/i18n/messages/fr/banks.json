@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Banques",
+    "lead": "Les cartes sont créées dans votre propre banque. Artemis ne détient jamais vos fonds.",
+    "bankAria": "Banque",
+    "help": {
+      "stripe": "Compte Stripe avec Issuing activé (UE). Créez une clé restreinte avec les droits Issuing en écriture. Indiquez un titulaire existant (ich_…) ou l'adresse de l'entreprise pour qu'Artemis le crée.",
+      "qonto": "Lecture, gel et rapprochement : Qonto ne transmet pas la carte à un tiers et interdit de la prêter. Jeton OAuth du programme partenaires Qonto ; l'approbateur peut afficher une carte Qonto de façon sécurisée et finaliser le paiement lui-même.",
+      "revolut": "Plan Grow ou supérieur, accès « Cards API » activé par le support, et accord écrit de Revolut (Valid Permission) avant toute production. Nécessite la remise directe (Réglages)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Clé secrète restreinte",
+      "publishableKey": "Clé publiable",
+      "stripeCardholder": "Titulaire Stripe",
+      "companyName": "Nom de l'entreprise",
+      "address": "Adresse",
+      "postalCode": "Code postal",
+      "city": "Ville",
+      "country": "Pays",
+      "webhookSecret": "Secret du webhook",
+      "accessToken": "Jeton d'accès",
+      "refreshToken": "Jeton de rafraîchissement",
+      "oauthClientId": "Client ID OAuth",
+      "oauthClientSecret": "Client secret OAuth",
+      "holderMemberId": "ID du membre titulaire",
+      "bankAccountId": "ID du compte bancaire",
+      "environment": "Environnement",
+      "stagingToken": "Staging token",
+      "clientAssertion": "Client assertion (JWT)",
+      "holderId": "ID du titulaire"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… ou sk_test_…",
+      "stripePublishableKey": "pk_live_… (lien éphémère de carte)",
+      "stripeCardholder": "ich_… (optionnel)",
+      "ifNoCardholder": "Si pas de titulaire",
+      "country": "Code ISO, ex. FR",
+      "webhookSecret": "whsec_… (après création du webhook, voir ci-dessous)",
+      "bearerOAuth": "Bearer OAuth",
+      "optional": "Optionnel",
+      "toRefreshToken": "Pour rafraîchir le jeton",
+      "qontoMembershipId": "membership id Qonto",
+      "qontoBankAccountId": "bank_account id Qonto",
+      "sandboxOnly": "Sandbox uniquement",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Optionnel, pour le rafraîchissement",
+      "teamMemberOptional": "Membre de l’équipe (optionnel)"
+    },
+    "encrypted": "Les identifiants sont testés puis chiffrés (AES-256-GCM). Ils ne sont plus jamais affichés.",
+    "testing": "Test de la connexion…",
+    "connectProvider": "Connecter {name}",
+    "testOk": "Connexion OK",
+    "testFailed": "Échec : {detail}",
+    "confirmDisconnect": "Déconnecter cette banque ? Les agents qui l’utilisent ne pourront plus obtenir de carte.",
+    "lastSync": "Dernière synchro : {date}",
+    "stripeWebhook": "Webhook Stripe (événements issuing_transaction.*) :",
+    "test": "Tester",
+    "disconnect": "Déconnecter",
+    "connectRealBank": "Connecter une vraie banque",
+    "upgrade": "La connexion d'une banque réelle est incluse à partir du plan Builder ({price}/mois).",
+    "choosePlan": "Choisir un plan →"
+  }
+}

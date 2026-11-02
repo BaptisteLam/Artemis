@@ -1,0 +1,59 @@
+{
+  "billing": {
+    "title": "Billing",
+    "lead": "Current plan: {plan}. Requests this month: {usage}. VAT not applicable, art. 293 B of the French General Tax Code (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Manage subscription and invoices",
+    "returnOk": "Thank you! Your subscription is being activated (a few seconds).",
+    "returnCanceled": "Payment cancelled, nothing was changed.",
+    "inactive": "Your subscription is no longer active ({status}). Paid features are suspended: please update your payment method.",
+    "unknown": "unknown",
+    "overage": "Beyond a paid plan's quota, each additional mandate is billed {price}.",
+    "overageCount_one": "This month: {count} mandate.",
+    "overageCount_other": "This month: {count} mandates.",
+    "ownerOnly": "Only an owner can change the subscription.",
+    "current": "Current",
+    "from": "from {price}",
+    "perMonth": "/ month",
+    "choose": "Choose {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agency",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agent",
+        "i2": "Simulated bank",
+        "i3": "20 simulated mandates / month"
+      },
+      "builder": {
+        "i1": "3 agents",
+        "i2": "1 real bank",
+        "i3": "50 mandates / month",
+        "i4": "Passkey approval and notifications"
+      },
+      "team": {
+        "i1": "10 agents",
+        "i2": "2 real banks",
+        "i3": "300 mandates / month",
+        "i4": "Slack, approver quorum, FEC export",
+        "i5": "Subscriptions managed per agent"
+      },
+      "agency": {
+        "i1": "25 agents, unlimited clients",
+        "i2": "1,000 mandates / month",
+        "i3": "Budgets, markup and re-invoicing per client",
+        "i4": "+ {price} per active client"
+      },
+      "business": {
+        "i1": "Unlimited",
+        "i2": "AI Act file and report",
+        "i3": "Signed audit log export",
+        "i4": "Priority support"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Team",
+    "lead": "Approvers receive requests and sign them with their passkey.",
+    "confirmRemove": "Remove this member?",
+    "cols": {
+      "member": "Member",
+      "role": "Role",
+      "since": "Since"
+    },
+    "you": "you",
+    "remove": "Remove",
+    "invite": "Invite",
+    "email": "Email",
+    "role": "Role",
+    "send": "Send invitation",
+    "inviteLink": "Invitation link (valid for 7 days):",
+    "expiresOn": "expires on {date}",
+    "revoke": "Revoke"
+  }
+}

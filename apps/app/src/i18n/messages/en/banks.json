@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Banks",
+    "lead": "Cards are created in your own bank. Artemis never holds your funds.",
+    "bankAria": "Bank",
+    "help": {
+      "stripe": "Stripe account with Issuing enabled (EU). Create a restricted key with Issuing write permissions. Enter an existing cardholder (ich_…) or your company address so Artemis can create one.",
+      "qonto": "Read access, freezing and reconciliation: Qonto does not pass the card on to third parties and forbids lending it. OAuth token from the Qonto partner programme; the approver can view a Qonto card securely and complete the payment themselves.",
+      "revolut": "Grow plan or higher, “Cards API” access enabled by support, and written approval from Revolut (Valid Permission) before any production use. Requires direct handover (Settings)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Restricted secret key",
+      "publishableKey": "Publishable key",
+      "stripeCardholder": "Stripe cardholder",
+      "companyName": "Company name",
+      "address": "Address",
+      "postalCode": "Postal code",
+      "city": "City",
+      "country": "Country",
+      "webhookSecret": "Webhook secret",
+      "accessToken": "Access token",
+      "refreshToken": "Refresh token",
+      "oauthClientId": "OAuth client ID",
+      "oauthClientSecret": "OAuth client secret",
+      "holderMemberId": "Cardholder member ID",
+      "bankAccountId": "Bank account ID",
+      "environment": "Environment",
+      "stagingToken": "Staging token",
+      "clientAssertion": "Client assertion (JWT)",
+      "holderId": "Cardholder ID"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… or sk_test_…",
+      "stripePublishableKey": "pk_live_… (ephemeral card link)",
+      "stripeCardholder": "ich_… (optional)",
+      "ifNoCardholder": "If there is no cardholder",
+      "country": "ISO code, e.g. FR",
+      "webhookSecret": "whsec_… (once the webhook is created, see below)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Optional",
+      "toRefreshToken": "To refresh the token",
+      "qontoMembershipId": "Qonto membership id",
+      "qontoBankAccountId": "Qonto bank_account id",
+      "sandboxOnly": "Sandbox only",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Optional, for refreshing",
+      "teamMemberOptional": "Team member (optional)"
+    },
+    "encrypted": "Credentials are tested, then encrypted (AES-256-GCM). They are never displayed again.",
+    "testing": "Testing the connection…",
+    "connectProvider": "Connect {name}",
+    "testOk": "Connection OK",
+    "testFailed": "Failed: {detail}",
+    "confirmDisconnect": "Disconnect this bank? Agents using it will no longer be able to get a card.",
+    "lastSync": "Last sync: {date}",
+    "stripeWebhook": "Stripe webhook (issuing_transaction.* events):",
+    "test": "Test",
+    "disconnect": "Disconnect",
+    "connectRealBank": "Connect a real bank",
+    "upgrade": "Connecting a real bank is included from the Builder plan ({price}/month).",
+    "choosePlan": "Choose a plan →"
+  }
+}

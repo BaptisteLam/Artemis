@@ -1,0 +1,60 @@
+{
+  "billing": {
+    "title": "Facturation",
+    "lead": "Plan actuel : {plan}. Demandes ce mois : {usage}. TVA non applicable, art. 293 B du CGI.",
+    "usageOf": "{used} / {limit}",
+    "manage": "Gérer l'abonnement et les factures",
+    "returnOk": "Merci ! Votre abonnement est en cours d'activation (quelques secondes).",
+    "returnCanceled": "Paiement annulé, aucun changement.",
+    "inactive": "Votre abonnement n'est plus actif ({status}). Les fonctions payantes sont suspendues : mettez à jour votre moyen de paiement.",
+    "unknown": "inconnu",
+    "overage": "Au-delà du quota d'un plan payant, chaque mandat supplémentaire est facturé {price}.",
+    "overageCount_one": "Ce mois-ci : {count} mandat.",
+    "overageCount_many": "Ce mois-ci : {count} mandats.",
+    "overageCount_other": "Ce mois-ci : {count} mandats.",
+    "ownerOnly": "Seul un propriétaire peut modifier l'abonnement.",
+    "current": "Actuel",
+    "from": "dès {price}",
+    "perMonth": "/ mois",
+    "choose": "Choisir {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agences",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agent",
+        "i2": "Banque simulée",
+        "i3": "20 mandats simulés / mois"
+      },
+      "builder": {
+        "i1": "3 agents",
+        "i2": "1 banque réelle",
+        "i3": "50 mandats / mois",
+        "i4": "Validation par passkey et notifications"
+      },
+      "team": {
+        "i1": "10 agents",
+        "i2": "2 banques réelles",
+        "i3": "300 mandats / mois",
+        "i4": "Slack, quorum d’approbateurs, export FEC",
+        "i5": "Abonnements gérés par agent"
+      },
+      "agency": {
+        "i1": "25 agents, clients illimités",
+        "i2": "1 000 mandats / mois",
+        "i3": "Budgets, marge et refacturation par client",
+        "i4": "+ {price} par client actif"
+      },
+      "business": {
+        "i1": "Illimité",
+        "i2": "Dossier et rapport AI Act",
+        "i3": "Export signé du journal",
+        "i4": "Accompagnement prioritaire"
+      }
+    }
+  }
+}

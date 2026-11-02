@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Réglages",
+    "signOut": "Se déconnecter",
+    "language": {
+      "title": "Langue",
+      "lead": "Langue de l'interface sur cet appareil."
+    },
+    "notifications": {
+      "title": "Notifications sur cet appareil",
+      "lead": "Recevez chaque demande en notification. Sur iPhone, ajoutez d'abord Artemis à l'écran d'accueil (Partager → Sur l'écran d'accueil).",
+      "notConfigured": "Les notifications push ne sont pas configurées sur ce serveur (clés VAPID). Les emails restent actifs.",
+      "unsupported": "Ce navigateur ne prend pas en charge les notifications push.",
+      "denied": "Notifications bloquées dans les réglages du navigateur.",
+      "enable": "Activer les notifications",
+      "on": "Notifications actives.",
+      "disable": "Désactiver"
+    },
+    "slack": {
+      "lead": "Chaque demande en attente est publiée dans un canal Slack, avec un bouton qui ouvre la validation par passkey. Créez un « Incoming Webhook » dans Slack et collez son URL.",
+      "connected": "Slack est connecté.",
+      "disconnect": "Déconnecter",
+      "urlLabel": "URL du webhook Slack",
+      "connect": "Connecter",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Remise des cartes aux agents",
+      "confirmDirect": "Remise directe : le numéro de carte transitera une fois par Artemis vers l'agent. Cela vous place dans le périmètre PCI DSS et, chez Revolut, exige un accord écrit. Continuer ?",
+      "linkTitle": "Lien éphémère (recommandé)",
+      "linkText": "L'agent reçoit un lien à usage unique valable 10 minutes ; la carte s'affiche depuis la banque émettrice (Stripe Issuing). Le numéro ne passe jamais par Artemis.",
+      "directTitle": "Remise directe (option avancée)",
+      "directText": "Le numéro est relayé une seule fois à l'agent, sans stockage. Nécessaire pour Revolut. Vous entrez dans le périmètre PCI DSS."
+    },
+    "org": {
+      "title": "Organisation",
+      "name": "Nom",
+      "rename": "Renommer"
+    },
+    "emergency": {
+      "title": "Urgence",
+      "lead": "« Tout geler » suspend tous les agents, annule les cartes actives et les demandes en attente. À utiliser si un agent se comporte anormalement ou si un jeton a fuité.",
+      "confirmFreeze": "Geler toute l’organisation ? Tous les agents seront gelés et les cartes actives annulées.",
+      "unfreeze": "Dégeler l'organisation",
+      "freeze": "Tout geler maintenant",
+      "afterUnfreeze": "Après le dégel, réactivez chaque agent depuis sa page."
+    },
+    "passkeys": {
+      "title": "Passkeys",
+      "devicePrompt": "Nom de l'appareil (ex. iPhone de Léa)",
+      "confirmDelete": "Supprimer cette passkey ?",
+      "add": "Ajouter",
+      "lead": "Une passkey est requise pour approuver une dépense. Ajoutez-en une sur chaque appareil que vous utilisez.",
+      "addedOn": "ajoutée le {date}",
+      "delete": "Supprimer",
+      "none": "Aucune passkey : vous ne pouvez pas encore approuver de dépenses."
+    }
+  }
+}
