@@ -1,0 +1,59 @@
+{
+  "billing": {
+    "title": "Arveldus",
+    "lead": "Praegune pakett: {plan}. Taotlusi sel kuul: {usage}. Käibemaksu ei kohaldata, Prantsuse maksuseadustiku (CGI) artikkel 293 B.",
+    "usageOf": "{used} / {limit}",
+    "manage": "Halda tellimust ja arveid",
+    "returnOk": "Aitäh! Teie tellimust aktiveeritakse (mõni sekund).",
+    "returnCanceled": "Makse tühistati, midagi ei muudetud.",
+    "inactive": "Teie tellimus ei ole enam aktiivne ({status}). Tasulised funktsioonid on peatatud: palun uuendage oma makseviisi.",
+    "unknown": "teadmata",
+    "overage": "Tasulise paketi kvooti ületava iga täiendava volituse eest võetakse tasu {price}.",
+    "overageCount_one": "Sel kuul: {count} volitus.",
+    "overageCount_other": "Sel kuul: {count} volitust.",
+    "ownerOnly": "Tellimust saab muuta ainult omanik.",
+    "current": "Praegune",
+    "from": "alates {price}",
+    "perMonth": "/ kuu",
+    "choose": "Vali {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agentuurid",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agent",
+        "i2": "Simuleeritud pank",
+        "i3": "20 simuleeritud volitust / kuu"
+      },
+      "builder": {
+        "i1": "3 agenti",
+        "i2": "1 päris pank",
+        "i3": "50 volitust / kuu",
+        "i4": "Kinnitamine pääsuvõtmega ja teavitused"
+      },
+      "team": {
+        "i1": "10 agenti",
+        "i2": "2 päris panka",
+        "i3": "300 volitust / kuu",
+        "i4": "Slack, kinnitajate kvoorum, FEC-eksport",
+        "i5": "Agendipõhiselt hallatavad tellimused"
+      },
+      "agency": {
+        "i1": "25 agenti, piiramatu arv kliente",
+        "i2": "1000 volitust / kuu",
+        "i3": "Kliendipõhised eelarved, juurdehindlus ja edasiarveldamine",
+        "i4": "+ {price} iga aktiivse kliendi kohta"
+      },
+      "business": {
+        "i1": "Piiramatu",
+        "i2": "AI Acti toimik ja aruanne",
+        "i3": "Allkirjastatud auditilogi eksport",
+        "i4": "Eelistatud tugi"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Kliendid",
+    "lead": "Iga kliendi jaoks oma tööruum: tema agendid, tema kuueelarve, teie juurdehindlus ja saatmiseks valmis edasiarveldamise aruanne.",
+    "invalidBudget": "Vigane eelarve (nt 500 või 49,90).",
+    "upsell": "Kliendi tööruumid sisalduvad paketis Agentuurid ({price} + {perClient} iga aktiivse kliendi kohta).",
+    "seePlans": "Vaata pakette →",
+    "empty": "Kliente pole",
+    "emptyHint": "Looge klient ja määrake seejärel talle agendid.",
+    "cols": {
+      "client": "Klient",
+      "agents": "Agendid",
+      "spent": "Sel kuul seotud",
+      "budget": "Eelarve",
+      "markup": "Juurdehindlus"
+    },
+    "archived": "arhiveeritud",
+    "percent": "{value}%",
+    "report": "Aruanne →",
+    "new": "Uus klient",
+    "fields": {
+      "name": "Nimi",
+      "billingEmail": "Arvelduse e-post",
+      "markup": "Edasiarveldamise juurdehindlus (%)",
+      "budget": "Kuueelarve (€)",
+      "budgetHint": "Tühi = kliendil ülemmäära pole"
+    },
+    "create": "Loo klient",
+    "exportFailed": "Eksport ebaõnnestus.",
+    "eyebrow": "Klient",
+    "month": "Kuu",
+    "exportCsv": "Ekspordi CSV",
+    "monthPurchases": "Selle kuu ostud",
+    "markupPct": "Juurdehindlus {value}",
+    "toRebill": "Edasiarveldada",
+    "noPurchases": "Sel kuul oste pole",
+    "lines": {
+      "date": "Kuupäev",
+      "agent": "Agent",
+      "merchant": "Kaupmees",
+      "purpose": "Eesmärk",
+      "amount": "Summa",
+      "receipt": "Kviitung"
+    },
+    "yes": "Jah",
+    "missing": "Puudub",
+    "archive": "Arhiveeri klient",
+    "reactivate": "Aktiveeri uuesti",
+    "all": "← Kõik kliendid"
+  }
+}

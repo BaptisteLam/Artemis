@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Pangad",
+    "lead": "Kaardid luuakse teie enda pangas. Artemis ei hoia kunagi teie raha.",
+    "bankAria": "Pank",
+    "help": {
+      "stripe": "Stripe'i konto, kus Issuing on lubatud (EL). Looge piiratud võti Issuingu kirjutusõigustega. Sisestage olemasolev kaardiomanik (ich_…) või oma ettevõtte aadress, et Artemis saaks kaardiomaniku luua.",
+      "qonto": "Lugemine, külmutamine ja sobitamine: Qonto ei anna kaarti kolmandatele isikutele ja keelab selle laenamise. OAuth-token Qonto partnerprogrammist; kinnitaja saab Qonto kaarti turvaliselt vaadata ja makse ise sooritada.",
+      "revolut": "Pakett Grow või kõrgem, klienditoe poolt lubatud „Cards API“ juurdepääs ja Revoluti kirjalik nõusolek (Valid Permission) enne igasugust reaalkasutust. Nõuab otse üleandmist (Seaded)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Piiratud salajane võti",
+      "publishableKey": "Avalik võti",
+      "stripeCardholder": "Stripe'i kaardiomanik",
+      "companyName": "Ettevõtte nimi",
+      "address": "Aadress",
+      "postalCode": "Postiindeks",
+      "city": "Linn",
+      "country": "Riik",
+      "webhookSecret": "Veebihaagi saladus",
+      "accessToken": "Juurdepääsutoken",
+      "refreshToken": "Värskendustoken",
+      "oauthClientId": "OAuthi kliendi ID",
+      "oauthClientSecret": "OAuthi kliendi saladus",
+      "holderMemberId": "Kaardiomaniku liikme ID",
+      "bankAccountId": "Pangakonto ID",
+      "environment": "Keskkond",
+      "stagingToken": "Testkeskkonna token",
+      "clientAssertion": "Kliendi kinnitus (JWT)",
+      "holderId": "Kaardiomaniku ID"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… või sk_test_…",
+      "stripePublishableKey": "pk_live_… (lühiajaline kaardi link)",
+      "stripeCardholder": "ich_… (valikuline)",
+      "ifNoCardholder": "Kui kaardiomanikku pole",
+      "country": "ISO-kood, nt EE",
+      "webhookSecret": "whsec_… (kui veebihaak on loodud, vt allpool)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Valikuline",
+      "toRefreshToken": "Tokeni värskendamiseks",
+      "qontoMembershipId": "Qonto membership id",
+      "qontoBankAccountId": "Qonto bank_account id",
+      "sandboxOnly": "Ainult Sandbox",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Valikuline, värskendamiseks",
+      "teamMemberOptional": "Meeskonnaliige (valikuline)"
+    },
+    "encrypted": "Mandaate testitakse ja seejärel krüpteeritakse (AES-256-GCM). Neid ei kuvata enam kunagi.",
+    "testing": "Ühenduse testimine…",
+    "connectProvider": "Ühenda {name}",
+    "testOk": "Ühendus korras",
+    "testFailed": "Ebaõnnestus: {detail}",
+    "confirmDisconnect": "Kas katkestada ühendus selle pangaga? Seda kasutavad agendid ei saa enam kaarti.",
+    "lastSync": "Viimane sünkroonimine: {date}",
+    "stripeWebhook": "Stripe'i veebihaak (sündmused issuing_transaction.*):",
+    "test": "Testi",
+    "disconnect": "Katkesta ühendus",
+    "connectRealBank": "Ühenda päris pank",
+    "upgrade": "Päris panga ühendamine sisaldub alates paketist Builder ({price}/kuu).",
+    "choosePlan": "Vali pakett →"
+  }
+}

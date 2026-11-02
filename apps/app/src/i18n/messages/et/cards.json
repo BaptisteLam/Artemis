@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Kaardid",
+    "lead": "Teie pankades väljastatud ühekordsed kaardid. Kaardi täielikku numbrit ei salvestata kunagi.",
+    "linkAria": "Kaart •••• {last4}",
+    "cardAria": "Virtuaalkaart, mille number lõpeb {last4}, kaardiomanik {holder}, kehtib kuni {exp}",
+    "tagRevealed": "Agendile üle antud",
+    "tagSingleUse": "Ühekordne",
+    "emptyTitle": "Kaarte pole",
+    "emptyText": "Kaardid ilmuvad siia pärast taotluse kinnitamist.",
+    "colCard": "Kaart",
+    "colIssued": "Väljastatud",
+    "colExpires": "Kehtib kuni",
+    "colRevealed": "Agendile üle antud",
+    "colStatus": "Olek",
+    "notRevealed": "Ei",
+    "request": "Taotlus →"
+  }
+}
