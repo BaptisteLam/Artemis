@@ -41,6 +41,9 @@ importers:
       '@artemis/db':
         specifier: workspace:*
         version: link:../../packages/db
+      '@artemis/i18n':
+        specifier: workspace:*
+        version: link:../../packages/i18n
       '@artemis/policy':
         specifier: workspace:*
         version: link:../../packages/policy
