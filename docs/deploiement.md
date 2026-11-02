@@ -92,7 +92,7 @@ Rien à payer pour vous : chaque client connecte **sa** banque dans l'app (page 
 ## 6 bis. Société et dépassements
 
 - **Micro-entreprise** au démarrage (plafond services 83 600 € en 2026-2028, franchise de TVA 37 500 €). Passez en **SASU** dès le premier contrat bancaire (Stripe Issuing, Revolut, Qonto) ou à 1 500 € de MRR : les partenaires bancaires exigent une société.
-- **Dépassements et clients d'agence** : créez dans Stripe deux compteurs (Billing → Meters) `artemis_mandate_overage` (0,25 €) et `artemis_active_client` (15 €), ajoutez-les aux prix concernés, puis ajoutez les secrets GitHub `STRIPE_METER_OVERAGE` et `STRIPE_METER_ACTIVE_CLIENT` (nom des événements).
+- **Dépassements et clients d'agence** : créez dans Stripe deux compteurs (*Billing → Meters*) `artemis_mandate_overage` et `artemis_active_client` (agrégation : somme), puis deux prix à l'usage rattachés à ces compteurs (0,25 € et 15 €, mensuels). Secrets GitHub : `STRIPE_METER_OVERAGE` / `STRIPE_METER_ACTIVE_CLIENT` (noms d'événements) et `STRIPE_PRICE_OVERAGE` / `STRIPE_PRICE_ACTIVE_CLIENT` (identifiants `price_…`). Les prix à l'usage sont ajoutés automatiquement au paiement (dépassement : Builder, Team, Agences ; client actif : Agences).
 - **Lien éphémère de carte (Stripe)** : chaque client Stripe renseigne aussi sa clé publiable (`pk_live_…`) dans la connexion ; la page `/c/<jeton>` de l'app affiche la carte via Stripe Issuing Elements, sans que le numéro passe par Artemis.
 
 ## 7. Vérifications avant d'ouvrir

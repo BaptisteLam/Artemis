@@ -1,4 +1,4 @@
-import { ArtemisError, type Plan } from '@artemis/shared';
+import { ArtemisError, PLAN_LIMITS, type Plan } from '@artemis/shared';
 import { formEncode } from '@artemis/connectors';
 import type { OrganizationRow } from '@artemis/db';
 import type { Ctx } from './context';
@@ -34,9 +34,13 @@ async function stripe<T>(ctx: Ctx, path: string, params: Record<string, unknown>
 export async function createCheckout(ctx: Ctx, org: OrganizationRow, email: string, plan: string) {
   if (!PAID.includes(plan as never)) throw new ArtemisError('invalid_input', 'Plan inconnu.');
   const price = priceFor(ctx, plan as Exclude<Plan, 'sandbox'>);
+  // Prix à l'usage (compteurs Stripe) : sans eux, les événements de compteur ne sont jamais facturés.
+  const lineItems: Record<string, unknown>[] = [{ price, quantity: 1 }];
+  if (ctx.env.STRIPE_PRICE_OVERAGE && Number.isFinite(PLAN_LIMITS[plan as Plan].requestsPerMonth)) lineItems.push({ price: ctx.env.STRIPE_PRICE_OVERAGE });
+  if (ctx.env.STRIPE_PRICE_ACTIVE_CLIENT && plan === 'agency') lineItems.push({ price: ctx.env.STRIPE_PRICE_ACTIVE_CLIENT });
   const session = await stripe<{ url: string }>(ctx, '/checkout/sessions', {
     mode: 'subscription',
-    line_items: [{ price, quantity: 1 }],
+    line_items: lineItems,
     success_url: `${ctx.env.APP_ORIGIN}/facturation?statut=ok`,
     cancel_url: `${ctx.env.APP_ORIGIN}/facturation?statut=annule`,
     client_reference_id: org.id,
@@ -85,7 +89,7 @@ export async function handleBillingEvent(ctx: Ctx, event: { type: string; data: 
     if (!org && sub.metadata?.org_id) org = await store.getOrganization(sub.metadata.org_id);
     if (!org) return;
     const deleted = event.type === 'customer.subscription.deleted';
-    const plan = deleted ? 'sandbox' : (planForPrice(ctx, sub.items?.data[0]?.price.id) ?? org.plan);
+    const plan = deleted ? 'sandbox' : ((sub.items?.data ?? []).map((i) => planForPrice(ctx, i.price.id)).find((p) => p) ?? org.plan);
     await store.updateOrganization(org.id, {
       plan,
       subscription_status: deleted ? 'canceled' : sub.status,

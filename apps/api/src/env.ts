@@ -19,6 +19,9 @@ export interface Env {
   STRIPE_PRICE_TEAM?: string;
   STRIPE_PRICE_AGENCY?: string;
   STRIPE_PRICE_BUSINESS?: string;
+  /** Prix à l'usage rattachés aux compteurs (ajoutés au paiement). */
+  STRIPE_PRICE_OVERAGE?: string;
+  STRIPE_PRICE_ACTIVE_CLIENT?: string;
   /** Noms d'événements des compteurs Stripe (Billing → Meters). */
   STRIPE_METER_OVERAGE?: string;
   STRIPE_METER_ACTIVE_CLIENT?: string;
