@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · plan {plan}",
+    "title": "Tableau de bord",
+    "stats": {
+      "spent": "Dépensé ce mois",
+      "pending": "À valider",
+      "openQueue": "Ouvrir la file →",
+      "requests": "Demandes du mois"
+    },
+    "recent": {
+      "title": "Dernières demandes",
+      "viewAll": "Tout voir →",
+      "empty": "Aucune demande ce mois-ci. Branchez un agent depuis la page {agents}.",
+      "agentsLink": "Agents"
+    },
+    "byAgent": {
+      "title": "Par agent",
+      "manage": "Gérer →",
+      "empty": "Aucun agent."
+    }
+  }
+}

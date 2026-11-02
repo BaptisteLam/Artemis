@@ -4,17 +4,19 @@ import { useData } from '../../lib/useData';
 import type { RequestWithAgent } from '../../lib/types';
 import { ErrorAlert, Loading, PageStage, StatusBadge } from '../../components';
 import { relativeTime } from '../../lib/format';
+import { useI18n } from '../../i18n';
 
 const FILTERS = [
-  ['', 'Toutes'],
-  ['pending', 'À valider'],
-  ['issued', 'Carte émise'],
-  ['completed', 'Payées'],
-  ['rejected', 'Refusées'],
-  ['failed', 'Échecs'],
+  ['', 'requests.filters.all'],
+  ['pending', 'requests.filters.pending'],
+  ['issued', 'requests.filters.issued'],
+  ['completed', 'requests.filters.completed'],
+  ['rejected', 'requests.filters.rejected'],
+  ['failed', 'requests.filters.failed'],
 ] as const;
 
 export function RequestsList() {
+  const { t } = useI18n();
   const [params, setParams] = useSearchParams();
   const status = params.get('status') ?? '';
   const agent = params.get('agent') ?? '';
@@ -24,18 +26,18 @@ export function RequestsList() {
   const { data, error, loading } = useData<{ requests: RequestWithAgent[] }>(`/app/requests?${q}`);
   return (
     <>
-      <PageStage title="Demandes" lead="Chaque demande d'agent, avec sa décision et sa carte." />
+      <PageStage title={t('requests.list.title')} lead={t('requests.list.lead')} />
       <div className="ar-container page-body">
-        <div className="tabs" role="group" aria-label="Filtrer par statut">
-          {FILTERS.map(([v, l]) => (
-            <button key={v} type="button" aria-pressed={status === v} onClick={() => setParams(v ? { status: v } : {})}>{l}</button>
+        <div className="tabs" role="group" aria-label={t('requests.filters.aria')}>
+          {FILTERS.map(([v, key]) => (
+            <button key={v} type="button" aria-pressed={status === v} onClick={() => setParams(v ? { status: v } : {})}>{t(key)}</button>
           ))}
         </div>
         <ErrorAlert error={error} />
         {loading && !data ? <Loading /> : null}
         {data ? (
           <section className="ar-solid">
-            {data.requests.length === 0 ? <EmptyState title="Aucune demande">Les demandes de vos agents apparaîtront ici.</EmptyState> : (
+            {data.requests.length === 0 ? <EmptyState title={t('requests.list.emptyTitle')}>{t('requests.list.emptyBody')}</EmptyState> : (
               <div className="list">
                 {data.requests.map((r) => (
                   <Link key={r.id} to={`/requests/${r.id}`} className="list-item">

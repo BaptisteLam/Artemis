@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Carte à usage unique · banque simulée",
+    "eyebrowBank": "Carte à usage unique · émise par votre banque",
+    "lead": "Ce lien ne s'ouvre qu'une fois. La carte est plafonnée au montant ci-dessus et verrouillée sur ce marchand.",
+    "fields": {
+      "number": "Numéro",
+      "expiry": "Expiration",
+      "cvc": "Cryptogramme",
+      "holder": "Titulaire"
+    },
+    "opening": "Ouverture…",
+    "show": "Afficher la carte •••• {last4}",
+    "footer": "Le numéro s'affiche depuis la banque émettrice : il ne transite pas par Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js indisponible.",
+      "invalidLink": "Lien invalide, déjà utilisé ou expiré.",
+      "stripeRefused": "Stripe a refusé la demande."
+    }
+  }
+}

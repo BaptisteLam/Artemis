@@ -8,6 +8,7 @@ vi.mock('@simplewebauthn/browser', () => ({
 
 import { startAuthentication } from '@simplewebauthn/browser';
 import { DecisionPanel } from './DecisionPanel';
+import { withI18n } from '../../testing/i18n';
 
 afterEach(cleanup);
 
@@ -20,16 +21,16 @@ describe('DecisionPanel', () => {
       return { request: { status: 'issued' } };
     });
     const onDone = vi.fn();
-    render(<DecisionPanel api={api as never} requestId="r1" canDecide onDone={onDone} />);
-    fireEvent.click(screen.getByRole('button', { name: /Approuver/ }));
+    render(withI18n(<DecisionPanel api={api as never} requestId="r1" canDecide onDone={onDone} />));
+    fireEvent.click(screen.getByRole('button', { name: /Approve/ }));
     await vi.waitFor(() => expect(onDone).toHaveBeenCalled());
     expect(startAuthentication).toHaveBeenCalledWith({ optionsJSON: { challenge: 'CHALLENGE-HASH' } });
     expect(calls.map((c) => c.path)).toEqual(['/app/requests/r1/approve/options', '/app/requests/r1/approve']);
     expect(calls[1]!.body).toEqual({ response: { id: 'cred', signed: 'CHALLENGE-HASH' } });
   });
   it('shows no decision buttons to viewers', () => {
-    render(<DecisionPanel api={vi.fn() as never} requestId="r1" canDecide={false} onDone={() => {}} />);
-    expect(screen.queryByRole('button', { name: /Approuver/ })).toBeNull();
-    expect(screen.queryByRole('button', { name: /Refuser/ })).toBeNull();
+    render(withI18n(<DecisionPanel api={vi.fn() as never} requestId="r1" canDecide={false} onDone={() => {}} />));
+    expect(screen.queryByRole('button', { name: /Approve/ })).toBeNull();
+    expect(screen.queryByRole('button', { name: /Reject/ })).toBeNull();
   });
 });

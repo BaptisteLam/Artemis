@@ -5,27 +5,30 @@ import { useData } from '../lib/useData';
 import type { Dashboard as DashboardData } from '../lib/types';
 import { ErrorAlert, Loading, PageStage, StatusBadge } from '../components';
 import { relativeTime } from '../lib/format';
+import { useI18n } from '../i18n';
 
 export function Dashboard() {
   const { org } = useOrg();
+  const { t, number } = useI18n();
   const { data, error, loading } = useData<DashboardData>('/app/dashboard');
   const plan = org?.effective_plan ?? 'sandbox';
-  const usage = org ? `${org.usage.requests} / ${org.limits.requestsPerMonth === null || !Number.isFinite(org.limits.requestsPerMonth) ? '∞' : org.limits.requestsPerMonth}` : '—';
+  const usage = org ? `${number(org.usage.requests)} / ${org.limits.requestsPerMonth === null || !Number.isFinite(org.limits.requestsPerMonth) ? '∞' : number(org.limits.requestsPerMonth)}` : '—';
+  const [emptyBefore, emptyAfter = ''] = t('dashboard.recent.empty').split('{agents}');
   return (
     <>
-      <PageStage eyebrow={`${org?.organization.name ?? ''} · plan ${plan}`} title="Tableau de bord">
+      <PageStage eyebrow={t('dashboard.eyebrow', { org: org?.organization.name ?? '', plan })} title={t('dashboard.title')}>
         <div className="stat-grid">
           <Glass tone="clear">
-            <span className="ar-micro ar-muted">Dépensé ce mois</span>
+            <span className="ar-micro ar-muted">{t('dashboard.stats.spent')}</span>
             <div><Amount cents={data?.spent_this_month ?? 0} size="xl" /></div>
           </Glass>
           <Glass tone="clear">
-            <span className="ar-micro ar-muted">À valider</span>
-            <div className="ar-amount ar-amount-xl">{data?.pending_count ?? 0}</div>
-            {data && data.pending_count > 0 ? <Link to="/requests?status=pending" style={{ color: 'inherit' }}>Ouvrir la file →</Link> : null}
+            <span className="ar-micro ar-muted">{t('dashboard.stats.pending')}</span>
+            <div className="ar-amount ar-amount-xl">{number(data?.pending_count ?? 0)}</div>
+            {data && data.pending_count > 0 ? <Link to="/requests?status=pending" style={{ color: 'inherit' }}>{t('dashboard.stats.openQueue')}</Link> : null}
           </Glass>
           <Glass tone="clear">
-            <span className="ar-micro ar-muted">Demandes du mois</span>
+            <span className="ar-micro ar-muted">{t('dashboard.stats.requests')}</span>
             <div className="ar-amount ar-amount-xl">{usage}</div>
           </Glass>
         </div>
@@ -36,9 +39,9 @@ export function Dashboard() {
         {data ? (
           <div className="two-col">
             <section className="ar-solid">
-              <div className="panel-title"><h2 className="ar-h3">Dernières demandes</h2><Link to="/requests">Tout voir →</Link></div>
+              <div className="panel-title"><h2 className="ar-h3">{t('dashboard.recent.title')}</h2><Link to="/requests">{t('dashboard.recent.viewAll')}</Link></div>
               {data.recent_requests.length === 0 ? (
-                <p className="ar-muted">Aucune demande ce mois-ci. Branchez un agent depuis la page <Link to="/agents">Agents</Link>.</p>
+                <p className="ar-muted">{emptyBefore}<Link to="/agents">{t('dashboard.recent.agentsLink')}</Link>{emptyAfter}</p>
               ) : (
                 <div className="list">
                   {data.recent_requests.map((r) => (
@@ -56,8 +59,8 @@ export function Dashboard() {
               )}
             </section>
             <section className="ar-solid">
-              <div className="panel-title"><h2 className="ar-h3">Par agent</h2><Link to="/agents">Gérer →</Link></div>
-              {data.by_agent.length === 0 ? <p className="ar-muted">Aucun agent.</p> : (
+              <div className="panel-title"><h2 className="ar-h3">{t('dashboard.byAgent.title')}</h2><Link to="/agents">{t('dashboard.byAgent.manage')}</Link></div>
+              {data.by_agent.length === 0 ? <p className="ar-muted">{t('dashboard.byAgent.empty')}</p> : (
                 <div className="list">
                   {data.by_agent.map((a) => (
                     <Link key={a.id} to={`/agents/${a.id}`} className="list-item">

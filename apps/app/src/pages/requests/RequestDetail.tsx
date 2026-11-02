@@ -5,15 +5,17 @@ import { useOrg } from '../../lib/OrgProvider';
 import { useData } from '../../lib/useData';
 import type { RequestDetail as Detail } from '../../lib/types';
 import { ErrorAlert, Loading, PageStage, StatusBadge, useAction } from '../../components';
-import { formatDateTime, relativeTime } from '../../lib/format';
+import { formatDateTime, relativeTime, statusLabel } from '../../lib/format';
 import { DecisionPanel } from './DecisionPanel';
 import { API_URL } from '../../lib/config';
 import { useAuth } from '../../auth/AuthProvider';
+import { useI18n } from '../../i18n';
 
 export function RequestDetail() {
   const { id } = useParams();
   const { api, can, orgId } = useOrg();
   const { getAuthHeader } = useAuth();
+  const { t, money } = useI18n();
   const { data, error, loading, reload } = useData<Detail>(`/app/requests/${id}`);
   const fileRef = useRef<HTMLInputElement>(null);
   const simulate = useAction(async () => {
@@ -21,7 +23,7 @@ export function RequestDetail() {
     await reload();
   });
   const cancel = useAction(async () => {
-    if (!confirm('Annuler cette demande et sa carte ?')) return;
+    if (!confirm(t('requests.detail.confirmCancel'))) return;
     await api(`/app/requests/${id}/cancel`, { method: 'POST' });
     await reload();
   });
@@ -37,7 +39,7 @@ export function RequestDetail() {
   });
   const openReceipt = useAction(async (receiptId: string) => {
     const res = await fetch(`${API_URL}/app/receipts/${receiptId}`, { headers: { Authorization: (await getAuthHeader()) ?? '', 'X-Org-Id': orgId ?? '' } });
-    if (!res.ok) throw new Error('Justificatif indisponible.');
+    if (!res.ok) throw new Error(t('requests.detail.receiptUnavailable'));
     window.open(URL.createObjectURL(await res.blob()), '_blank', 'noopener');
   });
 
@@ -47,19 +49,22 @@ export function RequestDetail() {
   const required = policy?.approvals_required ?? 1;
   const decider = can('owner', 'admin', 'approver');
   const isSandboxCard = card && card.provider_card_id.startsWith('sbx_');
+  const holder = agent?.name ?? t('requests.detail.cardHolderFallback');
+  const expMonth = card?.exp_month || 12;
+  const expYear = card?.exp_year || 2030;
 
   return (
     <>
-      <PageStage eyebrow={`Demande · ${r.id.slice(0, 8)}`} title={`${r.merchant}`} actions={<StatusBadge status={r.status} />}>
+      <PageStage eyebrow={t('requests.detail.eyebrow', { id: r.id.slice(0, 8) })} title={`${r.merchant}`} actions={<StatusBadge status={r.status} />}>
         <div className="stat-grid">
-          <Glass tone="clear"><span className="ar-micro ar-muted">Montant demandé</span><div><Amount cents={Number(r.amount_cents)} currency={r.currency} size="xl" /></div></Glass>
-          <Glass tone="clear"><span className="ar-micro ar-muted">Agent</span><div className="ar-h3 ar-mono">{agent?.name ?? '—'}</div><span className="ar-small ar-muted">{relativeTime(r.created_at)}</span></Glass>
+          <Glass tone="clear"><span className="ar-micro ar-muted">{t('requests.detail.amount')}</span><div><Amount cents={Number(r.amount_cents)} currency={r.currency} size="xl" /></div></Glass>
+          <Glass tone="clear"><span className="ar-micro ar-muted">{t('requests.detail.agent')}</span><div className="ar-h3 ar-mono">{agent?.name ?? '—'}</div><span className="ar-small ar-muted">{relativeTime(r.created_at)}</span></Glass>
         </div>
       </PageStage>
       <div className="ar-container page-body ar-stack" style={{ gap: 24 }}>
         <ErrorAlert error={simulate.error ?? cancel.error ?? upload.error ?? openReceipt.error ?? secureView.error} />
         <div className="two-col">
-          <Window title={`mandat · ${r.id.slice(0, 8)}`}>
+          <Window title={t('requests.detail.mandateWindow', { id: r.id.slice(0, 8) })}>
             <div className="mandate">
               <div className="ar-row">
                 <MerchantTile name={r.merchant} />
@@ -67,76 +72,86 @@ export function RequestDetail() {
                 <Amount cents={Number(r.amount_cents)} currency={r.currency} />
               </div>
               <dl>
-                <dt>Intention</dt><dd>{r.purpose}</dd>
-                {r.mcc ? <><dt>Catégorie</dt><dd className="ar-mono">{r.mcc}</dd></> : null}
-                <dt>Expire</dt><dd>{formatDateTime(r.expires_at)}</dd>
-                {policy ? <><dt>Règles</dt><dd>Plafond <Amount cents={Number(policy.per_tx_limit_cents)} size="sm" /> · budget <Amount cents={Number(policy.monthly_budget_cents)} size="sm" /></dd></> : null}
-                {r.decision_reason ? <><dt>Décision</dt><dd>{r.decision_reason}</dd></> : null}
+                <dt>{t('requests.detail.purpose')}</dt><dd>{r.purpose}</dd>
+                {r.mcc ? <><dt>{t('requests.detail.category')}</dt><dd className="ar-mono">{r.mcc}</dd></> : null}
+                <dt>{t('requests.detail.expires')}</dt><dd>{formatDateTime(r.expires_at)}</dd>
+                {policy ? <><dt>{t('requests.detail.rules')}</dt><dd>{t('requests.detail.perTxLimit')} <Amount cents={Number(policy.per_tx_limit_cents)} size="sm" /> · {t('requests.detail.budget')} <Amount cents={Number(policy.monthly_budget_cents)} size="sm" /></dd></> : null}
+                {r.decision_reason ? <><dt>{t('requests.detail.decision')}</dt><dd>{r.decision_reason}</dd></> : null}
               </dl>
               {r.status === 'pending' && required > 1 ? (
-                <div className="alert alert-info ar-small">Quorum : {approvals.length} signature(s) sur {required} requises au-dessus du seuil.</div>
+                <div className="alert alert-info ar-small">{t('requests.detail.quorum', { signed: approvals.length, required })}</div>
               ) : null}
-              {r.decision_reason?.startsWith('flag:') ? <div className="alert alert-warn ar-small">Garde-fou : montant inhabituel pour cet agent, validation humaine obligatoire.</div> : null}
+              {r.decision_reason?.startsWith('flag:') ? <div className="alert alert-warn ar-small">{t('requests.detail.unusualAmount')}</div> : null}
               {r.status === 'pending' ? (
                 <DecisionPanel api={api} requestId={r.id} canDecide={decider} onDone={() => void reload()} />
               ) : mandate ? (
                 <div className="alert alert-info ar-small">
-                  {mandate.auto_approved ? 'Validée automatiquement par les règles' : 'Mandat signé par passkey'} · {formatDateTime(mandate.signed_at)}
-                  <div className="ar-mono" style={{ fontSize: 11, overflowWrap: 'anywhere', marginTop: 4 }}>sha256 {mandate.payload_hash}</div>
+                  {mandate.auto_approved ? t('requests.detail.autoApproved') : t('requests.detail.signedByPasskey')} · {formatDateTime(mandate.signed_at)}
+                  <div className="ar-mono" style={{ fontSize: 11, overflowWrap: 'anywhere', marginTop: 4 }}>{t('requests.detail.hash', { hash: mandate.payload_hash })}</div>
                 </div>
               ) : null}
             </div>
           </Window>
           <div className="ar-stack" style={{ gap: 24 }}>
             <section className="ar-solid ar-stack">
-              <h2 className="ar-h3">Carte</h2>
+              <h2 className="ar-h3">{t('requests.detail.card')}</h2>
               {card ? (
                 <>
-                  <PayCard last4={card.last4} holder={agent?.name ?? 'agent'} expMonth={card.exp_month || 12} expYear={card.exp_year || 2030} state={card.status} variant={card.status === 'active' ? 'cobalt' : 'ink'} tag={`${(Number(r.amount_cents) / 100).toFixed(2).replace('.', ',')} € · ${r.merchant}`} />
+                  <PayCard
+                    last4={card.last4}
+                    holder={holder}
+                    expMonth={expMonth}
+                    expYear={expYear}
+                    state={card.status}
+                    variant={card.status === 'active' ? 'cobalt' : 'ink'}
+                    tag={`${money(Number(r.amount_cents), r.currency)} · ${r.merchant}`}
+                    stampLabel={statusLabel(card.status).label}
+                    ariaLabel={t('requests.detail.cardAria', { last4: card.last4, holder, exp: `${String(expMonth).padStart(2, '0')}/${String(expYear).slice(-2)}` })}
+                  />
                   <div className="ar-spread">
                     <span className="ar-mono">•••• {card.last4}</span>
                     <StatusBadge status={card.status} />
                   </div>
-                  {card.status === 'pending_bank_sca' ? <div className="alert alert-warn">Validez aussi la création de la carte dans votre application bancaire.</div> : null}
+                  {card.status === 'pending_bank_sca' ? <div className="alert alert-warn">{t('requests.detail.bankSca')}</div> : null}
                   <p className="ar-small ar-muted" style={{ margin: 0 }}>
-                    Expire {formatDateTime(card.expires_at)} · {card.revealed_at ? `remise à l'agent ${relativeTime(card.revealed_at)}` : "pas encore remise à l'agent"}
+                    {t('requests.detail.cardExpires', { date: formatDateTime(card.expires_at) })} · {card.revealed_at ? t('requests.detail.handedOver', { time: relativeTime(card.revealed_at) }) : t('requests.detail.notHandedOver')}
                   </p>
                   {bank_provider === 'qonto' ? (
-                    <div className="alert alert-info ar-small">Qonto ne transmet pas la carte aux agents : affichez-la ici et finalisez le paiement vous-même.</div>
+                    <div className="alert alert-info ar-small">{t('requests.detail.qontoNotice')}</div>
                   ) : null}
                   <div className="ar-row">
-                    {bank_provider === 'qonto' && card.status === 'active' && decider ? <Button size="sm" onClick={() => void secureView.run(card.id)}>Afficher la carte (Qonto)</Button> : null}
-                    {isSandboxCard && card.status === 'active' && decider ? <Button variant="ghost" size="sm" onClick={() => void simulate.run()}>Simuler un paiement</Button> : null}
-                    {['pending', 'approved', 'issued'].includes(r.status) && decider ? <Button variant="ghost" size="sm" onClick={() => void cancel.run()}>Annuler la carte</Button> : null}
+                    {bank_provider === 'qonto' && card.status === 'active' && decider ? <Button size="sm" onClick={() => void secureView.run(card.id)}>{t('requests.detail.showQontoCard')}</Button> : null}
+                    {isSandboxCard && card.status === 'active' && decider ? <Button variant="ghost" size="sm" onClick={() => void simulate.run()}>{t('requests.detail.simulatePayment')}</Button> : null}
+                    {['pending', 'approved', 'issued'].includes(r.status) && decider ? <Button variant="ghost" size="sm" onClick={() => void cancel.run()}>{t('requests.detail.cancelCard')}</Button> : null}
                   </div>
                 </>
-              ) : <p className="ar-muted" style={{ margin: 0 }}>Aucune carte émise.</p>}
+              ) : <p className="ar-muted" style={{ margin: 0 }}>{t('requests.detail.noCard')}</p>}
             </section>
             <section className="ar-solid ar-stack">
-              <h2 className="ar-h3">Transactions</h2>
-              {transactions.length ? transactions.map((t) => (
-                <div key={t.id} className="ar-spread">
-                  <span>{t.merchant_name}</span>
-                  <Amount cents={-Number(t.amount_cents)} currency={t.currency} size="sm" />
-                  <StatusBadge status={t.match_status} />
+              <h2 className="ar-h3">{t('requests.detail.transactions')}</h2>
+              {transactions.length ? transactions.map((tx) => (
+                <div key={tx.id} className="ar-spread">
+                  <span>{tx.merchant_name}</span>
+                  <Amount cents={-Number(tx.amount_cents)} currency={tx.currency} size="sm" />
+                  <StatusBadge status={tx.match_status} />
                 </div>
-              )) : <p className="ar-muted" style={{ margin: 0 }}>Aucune transaction remontée par la banque.</p>}
+              )) : <p className="ar-muted" style={{ margin: 0 }}>{t('requests.detail.noTransactions')}</p>}
             </section>
             <section className="ar-solid ar-stack">
               <div className="panel-title" style={{ margin: 0 }}>
-                <h2 className="ar-h3">Justificatifs</h2>
-                {decider ? <Button variant="ghost" size="sm" onClick={() => fileRef.current?.click()} disabled={upload.busy}>Ajouter</Button> : null}
+                <h2 className="ar-h3">{t('requests.detail.receipts')}</h2>
+                {decider ? <Button variant="ghost" size="sm" onClick={() => fileRef.current?.click()} disabled={upload.busy}>{t('requests.detail.addReceipt')}</Button> : null}
               </div>
               <input ref={fileRef} type="file" accept="application/pdf,image/png,image/jpeg" hidden onChange={(e) => { const f = e.target.files?.[0]; if (f) void upload.run(f); e.target.value = ''; }} />
               {receipts.length ? receipts.map((rc) => (
                 <button key={rc.id} type="button" className="list-item" style={{ border: 0, background: 'none', cursor: 'pointer', textAlign: 'left', padding: '8px 0' }} onClick={() => void openReceipt.run(rc.id)}>
                   <span className="grow">{rc.filename}</span><span className="ar-small ar-muted">{relativeTime(rc.created_at)}</span>
                 </button>
-              )) : <p className="ar-muted" style={{ margin: 0 }}>Aucun justificatif.</p>}
+              )) : <p className="ar-muted" style={{ margin: 0 }}>{t('requests.detail.noReceipts')}</p>}
             </section>
           </div>
         </div>
-        <Link to="/requests" className="muted-link">← Toutes les demandes</Link>
+        <Link to="/requests" className="muted-link">{t('requests.detail.back')}</Link>
       </div>
     </>
   );

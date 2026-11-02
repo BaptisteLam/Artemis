@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Single-use card · simulated bank",
+    "eyebrowBank": "Single-use card · issued by your bank",
+    "lead": "This link opens only once. The card is capped at the amount above and locked to this merchant.",
+    "fields": {
+      "number": "Number",
+      "expiry": "Expiry",
+      "cvc": "Security code",
+      "holder": "Cardholder"
+    },
+    "opening": "Opening…",
+    "show": "Show card •••• {last4}",
+    "footer": "The number is displayed directly by the issuing bank: it never passes through Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js is unavailable.",
+      "invalidLink": "Invalid link, already used or expired.",
+      "stripeRefused": "Stripe declined the request."
+    }
+  }
+}
