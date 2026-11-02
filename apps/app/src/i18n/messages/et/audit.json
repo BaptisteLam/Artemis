@@ -1,0 +1,94 @@
+{
+  "audit": {
+    "title": "Auditilogi",
+    "lead": "Iga sündmus on aheldatud SHA-256-räsiga ning seda ei saa muuta ega kustutada: see on teie tõend inimjärelevalve kohta (AI Act).",
+    "verify": "Kontrolli terviklust",
+    "export": "Ekspordi",
+    "report": "AI Acti aruanne {quarter}",
+    "exportFailed": "Eksport ebaõnnestus.",
+    "reportUnavailable": "Aruanne pole saadaval.",
+    "chainOk_one": "Ahel on terve: {count} kirje kontrollitud.",
+    "chainOk_other": "Ahel on terve: {count} kirjet kontrollitud.",
+    "chainBroken": "Ahel on katkenud kirje nr {id} juures.",
+    "exportUpsell": "Auditilogi allkirjastatud eksport sisaldub paketis Business.",
+    "seePlans": "Vaata pakette",
+    "cols": {
+      "date": "Kuupäev",
+      "event": "Sündmus",
+      "actor": "Toimija",
+      "hash": "Räsi"
+    },
+    "view": "vaata",
+    "older": "Vanemad →",
+    "actors": {
+      "user": "Kasutaja",
+      "agent": "Agent",
+      "system": "Süsteem"
+    },
+    "actions": {
+      "org": {
+        "created": "Organisatsioon loodud",
+        "frozen": "Organisatsioon külmutatud",
+        "unfrozen": "Organisatsiooni külmutamine lõpetatud",
+        "card_delivery_changed": "Kaardi üleandmise viis muudetud",
+        "slack_connected": "Slack ühendatud",
+        "slack_disconnected": "Slacki ühendus katkestatud"
+      },
+      "agent": {
+        "created": "Agent loodud",
+        "updated": "Agent uuendatud",
+        "deleted": "Agent kustutatud",
+        "token_rotated": "Token uuesti loodud",
+        "frozen": "Agent külmutatud"
+      },
+      "policy": {
+        "updated": "Reeglid uuendatud"
+      },
+      "request": {
+        "created": "Taotlus loodud",
+        "rejected": "Taotlus tagasi lükatud",
+        "approved": "Volitus allkirjastatud",
+        "auto_approved": "Automaatne kinnitus",
+        "approval_recorded": "Kinnitus registreeritud",
+        "expired": "Taotlus aegunud"
+      },
+      "card": {
+        "issued": "Kaart väljastatud",
+        "issue_failed": "Kaardi väljastamine ebaõnnestus",
+        "revealed": "Kaart agendile üle antud",
+        "link_created": "Kaardi link loodud",
+        "viewed": "Kaarti vaadatud",
+        "canceled": "Kaart tühistatud",
+        "expired": "Kaart aegunud"
+      },
+      "transaction": {
+        "matched": "Tehing sobitatud",
+        "mismatch": "Lahknevus tuvastatud"
+      },
+      "receipt": {
+        "attached": "Kviitung lisatud"
+      },
+      "bank": {
+        "connected": "Pank ühendatud",
+        "disconnected": "Panga ühendus katkestatud"
+      },
+      "member": {
+        "invited": "Liige kutsutud",
+        "joined": "Liige liitus",
+        "removed": "Liige eemaldatud",
+        "role_changed": "Roll muudetud"
+      },
+      "client": {
+        "created": "Klient loodud",
+        "updated": "Klient uuendatud"
+      },
+      "billing": {
+        "subscribed": "Tellimus alustatud",
+        "updated": "Tellimus uuendatud"
+      },
+      "subscription": {
+        "charged": "Tellimustasu võetud"
+      }
+    }
+  }
+}
