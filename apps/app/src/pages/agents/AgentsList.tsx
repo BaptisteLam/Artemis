@@ -5,24 +5,26 @@ import { useData } from '../../lib/useData';
 import type { AgentWithBudget } from '../../lib/types';
 import { ErrorAlert, Loading, PageStage, StatusBadge } from '../../components';
 import { relativeTime } from '../../lib/format';
+import { useI18n } from '../../i18n';
 
 export function AgentsList() {
   const { can } = useOrg();
+  const { t } = useI18n();
   const { data, error, loading } = useData<{ agents: AgentWithBudget[] }>('/app/agents');
   return (
     <>
       <PageStage
-        title="Agents"
-        lead="Chaque agent a son jeton, sa banque et ses règles. Il ne peut que demander : vous décidez."
-        actions={can('owner', 'admin') ? <Link className="ar-btn ar-btn-primary" to="/agents/new">Nouvel agent</Link> : null}
+        title={t('agents.list.title')}
+        lead={t('agents.list.lead')}
+        actions={can('owner', 'admin') ? <Link className="ar-btn ar-btn-primary" to="/agents/new">{t('agents.list.new')}</Link> : null}
       />
       <div className="ar-container page-body">
         <ErrorAlert error={error} />
         {loading && !data ? <Loading /> : null}
         {data && data.agents.length === 0 ? (
           <div className="ar-solid">
-            <EmptyState title="Aucun agent" action={can('owner', 'admin') ? <Link className="ar-btn ar-btn-primary" to="/agents/new">Créer un agent</Link> : undefined}>
-              Créez un agent pour obtenir son jeton MCP.
+            <EmptyState title={t('agents.list.emptyTitle')} action={can('owner', 'admin') ? <Link className="ar-btn ar-btn-primary" to="/agents/new">{t('agents.list.emptyAction')}</Link> : undefined}>
+              {t('agents.list.emptyText')}
             </EmptyState>
           </div>
         ) : null}
@@ -30,7 +32,7 @@ export function AgentsList() {
           <div className="ar-solid ar-table-wrap">
             <table className="ar-table">
               <thead>
-                <tr><th>Agent</th><th>Plateforme</th><th>Dépensé / budget</th><th>Restant</th><th>Dernière activité</th><th>Statut</th></tr>
+                <tr><th>{t('agents.list.colAgent')}</th><th>{t('agents.list.colPlatform')}</th><th>{t('agents.list.colSpent')}</th><th>{t('agents.list.colRemaining')}</th><th>{t('agents.list.colLastActivity')}</th><th>{t('agents.list.colStatus')}</th></tr>
               </thead>
               <tbody>
                 {data.agents.map((a) => (
@@ -44,7 +46,7 @@ export function AgentsList() {
                       </div>
                     </td>
                     <td><Amount cents={a.budget.remaining} size="sm" /></td>
-                    <td className="ar-small ar-muted">{a.last_used_at ? relativeTime(a.last_used_at) : 'Jamais'}</td>
+                    <td className="ar-small ar-muted">{a.last_used_at ? relativeTime(a.last_used_at) : t('agents.list.never')}</td>
                     <td><StatusBadge status={a.status === 'frozen' ? 'frozen' : 'active'} /></td>
                   </tr>
                 ))}

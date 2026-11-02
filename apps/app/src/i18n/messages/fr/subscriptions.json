@@ -1,0 +1,22 @@
+{
+  "subscriptions": {
+    "title": "Abonnements",
+    "lead": "Les abonnements souscrits par vos agents : carte verrouillée sur le marchand, plafond mensuel, détection des abonnements dormants.",
+    "confirmCancel": "Résilier cet abonnement ? La carte sera annulée chez la banque.",
+    "planRequired": "Les abonnements gérés par agent sont inclus à partir du plan Team.",
+    "seePlans": "Voir les plans →",
+    "dormantAlert_one": "{count} abonnement sans paiement depuis plus de {days} jours : pensez à le résilier.",
+    "dormantAlert_many": "{count} abonnements sans paiement depuis plus de {days} jours : pensez à les résilier.",
+    "dormantAlert_other": "{count} abonnements sans paiement depuis plus de {days} jours : pensez à les résilier.",
+    "emptyTitle": "Aucun abonnement",
+    "emptyText": "Un agent crée un abonnement avec request_card et l'option recurring.",
+    "colMerchant": "Marchand",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Plafond mensuel",
+    "colPaid": "Payé",
+    "colLastPayment": "Dernier paiement",
+    "colStatus": "Statut",
+    "dormant": "Dormant",
+    "cancel": "Résilier"
+  }
+}

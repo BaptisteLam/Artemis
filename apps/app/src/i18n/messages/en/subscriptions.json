@@ -1,0 +1,21 @@
+{
+  "subscriptions": {
+    "title": "Subscriptions",
+    "lead": "Subscriptions taken out by your agents: card locked to the merchant, monthly limit, detection of dormant subscriptions.",
+    "confirmCancel": "Cancel this subscription? The card will be cancelled at the bank.",
+    "planRequired": "Agent-managed subscriptions are included from the Team plan.",
+    "seePlans": "See plans →",
+    "dormantAlert_one": "{count} subscription without a payment for more than {days} days: consider cancelling it.",
+    "dormantAlert_other": "{count} subscriptions without a payment for more than {days} days: consider cancelling them.",
+    "emptyTitle": "No subscriptions",
+    "emptyText": "An agent creates a subscription with request_card and the recurring option.",
+    "colMerchant": "Merchant",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Monthly limit",
+    "colPaid": "Paid",
+    "colLastPayment": "Last payment",
+    "colStatus": "Status",
+    "dormant": "Dormant",
+    "cancel": "Cancel"
+  }
+}

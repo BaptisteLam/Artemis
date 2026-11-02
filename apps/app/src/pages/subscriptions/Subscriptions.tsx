@@ -4,6 +4,7 @@ import { useOrg } from '../../lib/OrgProvider';
 import { useData } from '../../lib/useData';
 import { ErrorAlert, Loading, PageStage, StatusBadge, useAction } from '../../components';
 import { formatDate } from '../../lib/format';
+import { useI18n } from '../../i18n';
 
 interface Sub {
   request_id: string;
@@ -22,26 +23,27 @@ interface Sub {
 
 export function Subscriptions() {
   const { api, can, org } = useOrg();
+  const { t } = useI18n();
   const { data, error, loading, reload } = useData<{ subscriptions: Sub[] }>('/app/subscriptions');
   const cancel = useAction(async (id: string) => {
-    if (!confirm('Résilier cet abonnement ? La carte sera annulée chez la banque.')) return;
+    if (!confirm(t('subscriptions.confirmCancel'))) return;
     await api(`/app/requests/${id}/cancel`, { method: 'POST' });
     await reload();
   });
   const dormant = data?.subscriptions.filter((s) => s.dormant).length ?? 0;
   return (
     <>
-      <PageStage title="Abonnements" lead="Les abonnements souscrits par vos agents : carte verrouillée sur le marchand, plafond mensuel, détection des abonnements dormants." />
+      <PageStage title={t('subscriptions.title')} lead={t('subscriptions.lead')} />
       <div className="ar-container page-body ar-stack">
         <ErrorAlert error={error ?? cancel.error} />
-        {!org?.limits.subscriptions ? <div className="alert alert-info">Les abonnements gérés par agent sont inclus à partir du plan Team. <Link to="/billing">Voir les plans →</Link></div> : null}
-        {dormant > 0 ? <div className="alert alert-warn">{dormant} abonnement(s) sans paiement depuis plus de 45 jours : pensez à les résilier.</div> : null}
+        {!org?.limits.subscriptions ? <div className="alert alert-info">{t('subscriptions.planRequired')} <Link to="/billing">{t('subscriptions.seePlans')}</Link></div> : null}
+        {dormant > 0 ? <div className="alert alert-warn">{t('subscriptions.dormantAlert', { count: dormant, days: 45 })}</div> : null}
         {loading && !data ? <Loading /> : null}
         {data ? (
           <section className="ar-solid ar-table-wrap">
-            {data.subscriptions.length === 0 ? <EmptyState title="Aucun abonnement">Un agent crée un abonnement avec request_card et l'option recurring.</EmptyState> : (
+            {data.subscriptions.length === 0 ? <EmptyState title={t('subscriptions.emptyTitle')}>{t('subscriptions.emptyText')}</EmptyState> : (
               <table className="ar-table">
-                <thead><tr><th>Marchand</th><th>Agent</th><th>Plafond mensuel</th><th>Payé</th><th>Dernier paiement</th><th>Statut</th><th /></tr></thead>
+                <thead><tr><th>{t('subscriptions.colMerchant')}</th><th>{t('subscriptions.colAgent')}</th><th>{t('subscriptions.colMonthlyLimit')}</th><th>{t('subscriptions.colPaid')}</th><th>{t('subscriptions.colLastPayment')}</th><th>{t('subscriptions.colStatus')}</th><th /></tr></thead>
                 <tbody>
                   {data.subscriptions.map((s) => (
                     <tr key={s.request_id}>
@@ -50,8 +52,8 @@ export function Subscriptions() {
                       <td><Amount cents={s.monthly_limit_cents} currency={s.currency} size="sm" /></td>
                       <td><Amount cents={s.total_paid_cents} currency={s.currency} size="sm" /> <span className="ar-small ar-muted">({s.payments})</span></td>
                       <td>{formatDate(s.last_payment_at)}</td>
-                      <td>{s.dormant ? <span className="ar-badge ar-badge-pending"><span className="ar-badge-dot" />Dormant</span> : <StatusBadge status={s.card_status} />}</td>
-                      <td>{can('owner', 'admin', 'approver') ? <Button variant="ghost" size="sm" onClick={() => void cancel.run(s.request_id)}>Résilier</Button> : null}</td>
+                      <td>{s.dormant ? <span className="ar-badge ar-badge-pending"><span className="ar-badge-dot" />{t('subscriptions.dormant')}</span> : <StatusBadge status={s.card_status} />}</td>
+                      <td>{can('owner', 'admin', 'approver') ? <Button variant="ghost" size="sm" onClick={() => void cancel.run(s.request_id)}>{t('subscriptions.cancel')}</Button> : null}</td>
                     </tr>
                   ))}
                 </tbody>

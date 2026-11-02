@@ -8,11 +8,13 @@ import { ErrorAlert, Loading, PageStage, StatusBadge, useAction } from '../../co
 import { PolicyForm } from './PolicyForm';
 import { McpConfig } from './McpConfig';
 import { relativeTime } from '../../lib/format';
+import { useI18n } from '../../i18n';
 
 export function AgentDetail() {
   const { id } = useParams();
   const { api, can } = useOrg();
   const navigate = useNavigate();
+  const { t } = useI18n();
   const manage = can('owner', 'admin');
   const { data, error, loading, reload } = useData<{ agent: PublicAgent; policy: PolicyRow; budget: Budget }>(`/app/agents/${id}`);
   const conns = useData<{ connections: PublicConnection[] }>('/app/connections');
@@ -25,11 +27,11 @@ export function AgentDetail() {
     await reload();
   });
   const rotate = useAction(async () => {
-    if (!confirm("Régénérer le jeton ? L'ancien cessera immédiatement de fonctionner.")) return;
+    if (!confirm(t('agents.detail.confirmRotate'))) return;
     setToken((await api<{ token: string }>(`/app/agents/${id}/token`, { method: 'POST' })).token);
   });
   const remove = useAction(async () => {
-    if (!confirm('Supprimer cet agent ? Son historique reste dans le journal.')) return;
+    if (!confirm(t('agents.detail.confirmDelete'))) return;
     await api(`/app/agents/${id}`, { method: 'DELETE' });
     navigate('/agents', { replace: true });
   });
@@ -46,16 +48,16 @@ export function AgentDetail() {
         actions={<StatusBadge status={agent.status === 'frozen' ? 'frozen' : 'active'} />}
       >
         <div className="stat-grid">
-          <div className="ar-glass"><span className="ar-micro ar-muted">Engagé ce mois</span><div><Amount cents={budget.spent} size="xl" /></div></div>
-          <div className="ar-glass"><span className="ar-micro ar-muted">Restant</span><div><Amount cents={budget.remaining} size="xl" /></div></div>
-          <div className="ar-glass"><span className="ar-micro ar-muted">Plafond par achat</span><div><Amount cents={budget.per_transaction_limit} size="xl" /></div></div>
+          <div className="ar-glass"><span className="ar-micro ar-muted">{t('agents.detail.spentThisMonth')}</span><div><Amount cents={budget.spent} size="xl" /></div></div>
+          <div className="ar-glass"><span className="ar-micro ar-muted">{t('agents.detail.remaining')}</span><div><Amount cents={budget.remaining} size="xl" /></div></div>
+          <div className="ar-glass"><span className="ar-micro ar-muted">{t('agents.detail.perPurchaseLimit')}</span><div><Amount cents={budget.per_transaction_limit} size="xl" /></div></div>
         </div>
       </PageStage>
       <div className="ar-container page-body ar-stack" style={{ gap: 24 }}>
         <ErrorAlert error={error ?? patch.error ?? rotate.error ?? remove.error} />
         <div className="two-col">
           <section className="ar-solid">
-            <h2 className="ar-h3" style={{ marginBottom: 16 }}>Règles</h2>
+            <h2 className="ar-h3" style={{ marginBottom: 16 }}>{t('agents.detail.rules')}</h2>
             <PolicyForm
               key={policy.updated_at}
               policy={policy}
@@ -68,16 +70,16 @@ export function AgentDetail() {
           </section>
           <div className="ar-stack" style={{ gap: 24 }}>
             <section className="ar-solid ar-stack">
-              <h2 className="ar-h3">Réglages</h2>
-              <Field label="Banque">
+              <h2 className="ar-h3">{t('agents.detail.settings')}</h2>
+              <Field label={t('agents.detail.bank')}>
                 <select className="ar-select" disabled={!manage} value={agent.bank_connection_id ?? ''} onChange={(e) => void patch.run({ bank_connection_id: e.target.value || null })}>
                   {conns.data?.connections.map((c) => <option key={c.id} value={c.id}>{c.label}</option>)}
                 </select>
               </Field>
               {clients.data && clients.data.clients.length > 0 ? (
-                <Field label="Client (mode agence)">
+                <Field label={t('agents.detail.client')}>
                   <select className="ar-select" disabled={!manage} value={agent.client_id ?? ''} onChange={(e) => void patch.run({ client_id: e.target.value || null })}>
-                    <option value="">Aucun</option>
+                    <option value="">{t('agents.detail.noClient')}</option>
                     {clients.data.clients.filter((c) => c.status === 'active').map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
                   </select>
                 </Field>
@@ -85,16 +87,16 @@ export function AgentDetail() {
               {manage ? (
                 <div className="ar-row">
                   <Button variant="ghost" onClick={() => void patch.run({ status: agent.status === 'frozen' ? 'active' : 'frozen' })}>
-                    {agent.status === 'frozen' ? 'Réactiver' : 'Geler'}
+                    {agent.status === 'frozen' ? t('agents.detail.unfreeze') : t('agents.detail.freeze')}
                   </Button>
-                  <Button variant="ghost" onClick={() => void rotate.run()}>Régénérer le jeton</Button>
-                  <Button variant="danger" onClick={() => void remove.run()}>Supprimer</Button>
+                  <Button variant="ghost" onClick={() => void rotate.run()}>{t('agents.detail.rotate')}</Button>
+                  <Button variant="danger" onClick={() => void remove.run()}>{t('agents.detail.delete')}</Button>
                 </div>
               ) : null}
               {token ? <McpConfig token={token} /> : null}
             </section>
             <section className="ar-solid">
-              <div className="panel-title"><h2 className="ar-h3">Demandes récentes</h2><Link to={`/requests?agent=${agent.id}`}>Tout voir →</Link></div>
+              <div className="panel-title"><h2 className="ar-h3">{t('agents.detail.recentRequests')}</h2><Link to={`/requests?agent=${agent.id}`}>{t('agents.detail.seeAll')}</Link></div>
               {reqs.data?.requests.length ? (
                 <div className="list">
                   {reqs.data.requests.map((r) => (
@@ -105,7 +107,7 @@ export function AgentDetail() {
                     </Link>
                   ))}
                 </div>
-              ) : <p className="ar-muted">Aucune demande.</p>}
+              ) : <p className="ar-muted">{t('agents.detail.noRequests')}</p>}
             </section>
           </div>
         </div>
