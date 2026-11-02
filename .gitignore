@@ -13,3 +13,4 @@ test-results
 playwright-report
 .superpowers
 dist-e2e
+.claude/worktrees/
