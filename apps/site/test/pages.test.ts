@@ -27,11 +27,14 @@ const PAGES = [
 describe('site build', () => {
   it.each(PAGES)('generates %s', (p) => expect(existsSync(resolve(dist, p))).toBe(true));
   it('home sells control, time, proof and agencies as the European solution', () => {
-    const html = readFileSync(resolve(dist, 'index.html'), 'utf8');
-    for (const t of ['La solution européenne', 'Pas une carte', 'Le contrôle', 'Le gain de temps', 'La preuve', 'Pour les agences', 'Soyons honnêtes', 'Plusieurs banques à la fois', 'Conçu en Europe']) expect(html).toContain(t);
+    const html = readFileSync(resolve(dist, 'index.html'), 'utf8').replace(/&#39;/g, "'");
+    for (const t of ['The European solution', 'Not a card', 'Control', 'Time saved', 'Proof', 'For agencies', "Let's be honest", 'Several banks at once', 'Built in Europe']) expect(html).toContain(t);
+    const fr = readFileSync(resolve(dist, 'fr/index.html'), 'utf8');
+    for (const t of ['La solution européenne', 'Pas une carte', 'Le contrôle', 'Le gain de temps', 'La preuve', 'Pour les agences', 'Soyons honnêtes', 'Plusieurs banques à la fois', 'Conçu en Europe']) expect(fr).toContain(t);
   });
   it('home carries the signature', () => {
-    expect(readFileSync(resolve(dist, 'index.html'), 'utf8')).toContain('Vous gardez le dernier mot');
+    expect(readFileSync(resolve(dist, 'index.html'), 'utf8')).toContain('You keep the final say');
+    expect(readFileSync(resolve(dist, 'fr/index.html'), 'utf8')).toContain('Vous gardez le dernier mot');
   });
   it('pricing lists the five plans in euros', () => {
     const html = readFileSync(resolve(dist, 'pricing/index.html'), 'utf8');
@@ -43,7 +46,7 @@ describe('site build', () => {
     for (const l of ['fr', 'de', 'pl', 'ga', 'mt']) for (const p of PAGES.filter((x) => x !== '404.html')) expect(existsSync(resolve(dist, l, p)), `${l}/${p}`).toBe(true);
     const html = readFileSync(resolve(dist, 'de/pricing/index.html'), 'utf8');
     expect(html).toContain('<html lang="de"');
-    expect(html.match(/hreflang=/g)?.length).toBe(25);
+    expect(html.match(/<link rel="alternate" hreflang=/g)?.length).toBe(25);
   });
   it('legal pages mention the VAT exemption, and that French prevails', () => {
     expect(readFileSync(resolve(dist, 'fr/terms/index.html'), 'utf8')).toContain('293 B du CGI');
