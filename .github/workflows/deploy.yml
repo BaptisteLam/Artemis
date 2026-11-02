@@ -1,0 +1,64 @@
+name: Déploiement Cloudflare
+# Déploie l'API (+ MCP, webhooks, cron), l'app et le site sur Cloudflare Workers
+# après chaque CI verte sur la branche principale, ou à la demande (onglet Actions → Run workflow).
+# Sans le secret CLOUDFLARE_API_TOKEN, le workflow s'arrête proprement sans rien faire.
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [claude/fervent-davinci-ll5kpx, main]
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CF_WORKERS_SUBDOMAIN: ${{ vars.CF_WORKERS_SUBDOMAIN }}
+      ADMIN_EMAILS: ${{ vars.ADMIN_EMAILS }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      CONNECTIONS_KEY: ${{ secrets.CONNECTIONS_KEY }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      VAPID_PUBLIC_KEY: ${{ secrets.VAPID_PUBLIC_KEY }}
+      VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+      STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+      STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+      STRIPE_PRICE_BUILDER: ${{ secrets.STRIPE_PRICE_BUILDER }}
+      STRIPE_PRICE_TEAM: ${{ secrets.STRIPE_PRICE_TEAM }}
+      STRIPE_PRICE_AGENCY: ${{ secrets.STRIPE_PRICE_AGENCY }}
+      STRIPE_PRICE_BUSINESS: ${{ secrets.STRIPE_PRICE_BUSINESS }}
+      STRIPE_METER_OVERAGE: ${{ secrets.STRIPE_METER_OVERAGE }}
+      STRIPE_METER_ACTIVE_CLIENT: ${{ secrets.STRIPE_METER_ACTIVE_CLIENT }}
+    steps:
+      - name: Secrets Cloudflare présents ?
+        id: gate
+        run: |
+          if [ -n "$CLOUDFLARE_API_TOKEN" ] && [ -n "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::CLOUDFLARE_API_TOKEN ou CLOUDFLARE_ACCOUNT_ID absent : déploiement ignoré (voir docs/deploiement.md)."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.ok == 'true'
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: pnpm/action-setup@v4
+        if: steps.gate.outputs.ok == 'true'
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.ok == 'true'
+        with:
+          node-version: 22
+          cache: pnpm
+      - if: steps.gate.outputs.ok == 'true'
+        run: pnpm install --frozen-lockfile
+      - name: Déployer
+        if: steps.gate.outputs.ok == 'true'
+        run: bash scripts/deploy.sh

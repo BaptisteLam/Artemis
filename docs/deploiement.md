@@ -12,57 +12,59 @@ Durée : environ 45 minutes. Tout tient dans des offres gratuites. Seul un nom d
 ## 1. Supabase : finir la configuration (5 min)
 
 1. Ouvrez le projet **Artemis** sur supabase.com.
-2. **Project Settings → API** : copiez la clé `service_role` (secrète, elle va uniquement dans le Worker, jamais dans le code).
-3. **Authentication → URL Configuration** :
-   - *Site URL* : l'adresse de l'app (ex. `https://artemis-app.pages.dev`)
-   - *Redirect URLs* : ajoutez `https://artemis-app.pages.dev/auth/callback` (et `http://localhost:5173/auth/callback` pour le développement)
+2. **Project Settings → API** : copiez la clé `service_role` (secrète : elle va uniquement dans les secrets GitHub, jamais dans le code).
+3. **Authentication → URL Configuration** : voir l'étape 3, une fois les adresses connues.
 4. **Authentication → Providers → Email** : laissez « Email » activé (lien magique). L'offre gratuite envoie peu d'emails par heure : branchez Resend en SMTP (étape 4) dès les premiers clients.
 
 > Garde-fou : un projet Supabase gratuit se met en pause après 7 jours sans activité. La tâche planifiée du Worker (toutes les 5 minutes) interroge la base et la garde active.
 
-## 2. Cloudflare : l'API (Worker) (15 min)
+## 2. Cloudflare : tout héberger (API + MCP, app, site) — 10 min, puis automatique
 
-```bash
-pnpm install
-cd apps/api
-npx wrangler login
-```
+Les trois services tournent sur **Cloudflare Workers** (offre gratuite) :
 
-```bash
-openssl rand -base64 32   # → CONNECTIONS_KEY (gardez-la précieusement : sans elle, les banques connectées sont illisibles)
-```
+| Worker | Contenu | Adresse |
+| --- | --- | --- |
+| `artemis-api` | API REST `/v1`, serveur MCP `/mcp`, webhooks, tâche planifiée (5 min) | `https://artemis-api.<sous-domaine>.workers.dev` |
+| `artemis-app` | Application (PWA) | `https://artemis-app.<sous-domaine>.workers.dev` |
+| `artemis-site` | Site public | `https://artemis-site.<sous-domaine>.workers.dev` |
 
-```bash
-npx wrangler secret put SUPABASE_URL                 # https://jrlripockeiivegqbeng.supabase.co
-npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY
-npx wrangler secret put CONNECTIONS_KEY
-```
+Le déploiement est fait par **GitHub Actions** (`.github/workflows/deploy.yml`) après chaque CI verte, ou à la demande (onglet *Actions* → *Déploiement Cloudflare* → *Run workflow*). Tant que les secrets ne sont pas posés, il s'arrête sans rien faire.
 
-Dans `apps/api/wrangler.toml`, section `[vars]`, remplacez les adresses par les vôtres (`APP_ORIGIN`, `SITE_ORIGIN`, `WEBAUTHN_RP_ID` = domaine de l'app sans `https://`, `WEBAUTHN_ORIGIN`, `ADMIN_EMAILS` = votre email), puis :
+À faire une seule fois :
 
-```bash
-npx wrangler deploy
-```
+1. **Cloudflare** → *My Profile → API Tokens → Create Token* → modèle **« Edit Cloudflare Workers »** → *Account Resources* : votre compte → créer. Copiez le jeton.
+2. Toujours dans Cloudflare, notez l'**Account ID** (colonne de droite de *Workers & Pages*). Si vous n'avez jamais ouvert *Workers & Pages*, ouvrez-le une fois : cela crée votre sous-domaine `workers.dev`.
+3. **GitHub** → dépôt *Artemis* → *Settings → Secrets and variables → Actions* → *New repository secret* :
 
-Notez l'URL affichée (`https://artemis-api.<compte>.workers.dev`) et testez `…/health`.
+| Secret | Valeur | Obligatoire |
+| --- | --- | --- |
+| `CLOUDFLARE_API_TOKEN` | le jeton de l'étape 1 | oui |
+| `CLOUDFLARE_ACCOUNT_ID` | l'Account ID | oui |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase → *Project Settings → API* → `service_role` | oui |
+| `RESEND_API_KEY`, `STRIPE_*` | voir étapes 4 et 5 | plus tard |
 
-## 3. Cloudflare Pages : l'app et le site (10 min)
+   Onglet *Variables* (facultatif) : `ADMIN_EMAILS` = votre email (accès à la page d'administration).
 
-Dans le tableau de bord Cloudflare → **Workers & Pages → Créer → Pages → Connecter à Git** (dépôt `Artemis`), créez deux projets :
+4. Lancez le workflow (ou dites à Claude de le lancer). Le résumé du run affiche les trois adresses.
 
-| Projet | Commande de build | Dossier de sortie | Variables |
-| --- | --- | --- | --- |
-| `artemis-app` | `pnpm install && pnpm --filter app build` | `apps/app/dist` | `VITE_API_URL`, `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `VITE_SITE_URL` |
-| `artemis` (site) | `pnpm install && pnpm --filter site build` | `apps/site/dist` | `PUBLIC_API_URL`, `PUBLIC_APP_URL`, `PUBLIC_SITE_URL` |
+Ce que le script fait seul : il lit votre sous-domaine, déploie les trois Workers avec les bonnes adresses croisées (CORS, passkeys, liens éphémères), pose `SUPABASE_URL`, et **génère une seule fois** `CONNECTIONS_KEY` (chiffrement des accès bancaires) et les clés VAPID (notifications push). Une clé déjà posée sur Cloudflare n'est jamais remplacée. Pour garder une copie de `CONNECTIONS_KEY`, générez-la vous-même (`openssl rand -base64 32`) et ajoutez-la comme secret GitHub **avant** le premier déploiement.
 
-Mettez à jour `VITE_API_URL` dans `apps/app/.env.production` avec l'URL du Worker.
+Déploiement depuis un poste : `CLOUDFLARE_API_TOKEN=… CLOUDFLARE_ACCOUNT_ID=… SUPABASE_SERVICE_ROLE_KEY=… bash scripts/deploy.sh`.
+
+## 3. Supabase : adresses de connexion (2 min, après le premier déploiement)
+
+**Authentication → URL Configuration** :
+- *Site URL* : `https://artemis-app.<sous-domaine>.workers.dev`
+- *Redirect URLs* : `https://artemis-app.<sous-domaine>.workers.dev/**` (et `http://localhost:5173/**` pour le développement)
 
 **Mentions légales** : complétez `apps/site/src/legal.ts` (nom, SIRET, adresse, email) avant d'ouvrir au public.
 
+**Nom de domaine (plus tard)** : ajoutez-le dans Cloudflare, attachez-le aux Workers (*Settings → Domains & Routes*), puis définissez `API_URL`, `APP_URL`, `SITE_URL` dans le workflow.
+
 ## 4. Optionnel mais recommandé
 
-- **Emails (Resend, gratuit 3 000/mois)** : créez un compte, vérifiez votre domaine, puis `npx wrangler secret put RESEND_API_KEY` et réglez `EMAIL_FROM` dans `wrangler.toml`. Vous pouvez aussi utiliser Resend comme SMTP dans Supabase (Authentication → SMTP).
-- **Notifications push** : `npx web-push generate-vapid-keys`, puis `wrangler secret put VAPID_PUBLIC_KEY` et `VAPID_PRIVATE_KEY`.
+- **Emails (Resend, gratuit 3 000/mois)** : créez un compte, vérifiez votre domaine, ajoutez le secret GitHub `RESEND_API_KEY` et réglez `EMAIL_FROM` dans `wrangler.toml`. Vous pouvez aussi utiliser Resend comme SMTP dans Supabase (Authentication → SMTP).
+- **Notifications push** : clés VAPID générées automatiquement au premier déploiement.
 
 ## 5. Encaisser les abonnements (Stripe, sans frais fixes)
 
@@ -71,16 +73,7 @@ Mettez à jour `VITE_API_URL` dans `apps/app/.env.production` avec l'URL du Work
 3. **Paramètres → Facturation → Factures** : ajoutez la mention « TVA non applicable, art. 293 B du CGI » dans le pied de facture.
 4. **Portail client** : activez-le (changement de plan, résiliation, factures).
 5. **Webhooks** : ajoutez `https://<worker>/webhooks/stripe-billing` avec les événements `checkout.session.completed`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`. Copiez le secret `whsec_…`.
-6. Secrets :
-
-```bash
-npx wrangler secret put STRIPE_SECRET_KEY
-npx wrangler secret put STRIPE_WEBHOOK_SECRET
-npx wrangler secret put STRIPE_PRICE_BUILDER
-npx wrangler secret put STRIPE_PRICE_TEAM
-npx wrangler secret put STRIPE_PRICE_AGENCY
-npx wrangler secret put STRIPE_PRICE_BUSINESS
-```
+6. Secrets GitHub (*Settings → Secrets and variables → Actions*) : `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_BUILDER`, `STRIPE_PRICE_TEAM`, `STRIPE_PRICE_AGENCY`, `STRIPE_PRICE_BUSINESS`, puis relancez le déploiement.
 
 Stripe prélève environ 1,5 % + 0,25 € par paiement européen : vous ne payez que lorsque vous encaissez.
 
@@ -99,7 +92,7 @@ Rien à payer pour vous : chaque client connecte **sa** banque dans l'app (page 
 ## 6 bis. Société et dépassements
 
 - **Micro-entreprise** au démarrage (plafond services 83 600 € en 2026-2028, franchise de TVA 37 500 €). Passez en **SASU** dès le premier contrat bancaire (Stripe Issuing, Revolut, Qonto) ou à 1 500 € de MRR : les partenaires bancaires exigent une société.
-- **Dépassements et clients d'agence** : créez dans Stripe deux compteurs (Billing → Meters) `artemis_mandate_overage` (0,25 €) et `artemis_active_client` (15 €), ajoutez-les aux prix concernés, puis `wrangler secret put STRIPE_METER_OVERAGE` et `STRIPE_METER_ACTIVE_CLIENT` (nom des événements).
+- **Dépassements et clients d'agence** : créez dans Stripe deux compteurs (Billing → Meters) `artemis_mandate_overage` (0,25 €) et `artemis_active_client` (15 €), ajoutez-les aux prix concernés, puis ajoutez les secrets GitHub `STRIPE_METER_OVERAGE` et `STRIPE_METER_ACTIVE_CLIENT` (nom des événements).
 - **Lien éphémère de carte (Stripe)** : chaque client Stripe renseigne aussi sa clé publiable (`pk_live_…`) dans la connexion ; la page `/c/<jeton>` de l'app affiche la carte via Stripe Issuing Elements, sans que le numéro passe par Artemis.
 
 ## 7. Vérifications avant d'ouvrir
@@ -115,7 +108,7 @@ Rien à payer pour vous : chaque client connecte **sa** banque dans l'app (page 
 
 | Poste | Coût |
 | --- | --- |
-| Cloudflare Workers + Pages (gratuit) | 0 € |
+| Cloudflare Workers (gratuit, 100 000 requêtes/jour) | 0 € |
 | Supabase (gratuit, UE) | 0 € |
 | Resend (gratuit) | 0 € |
 | Stripe Billing | % des encaissements seulement |
