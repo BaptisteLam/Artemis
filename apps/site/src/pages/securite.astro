@@ -18,7 +18,7 @@ import PageHead from '../components/PageHead.astro';
         <li>Les agents ne peuvent que demander : aucun outil MCP ne modifie une règle ou n'approuve une dépense.</li>
       </ul>
       <h2>Numéros de carte</h2>
-      <p>Le numéro complet et le cryptogramme ne sont jamais stockés par Artemis, ni en base, ni dans les journaux. Ils sont relayés une seule fois depuis votre banque vers l'agent, au moment du paiement, puis la remise est verrouillée.</p>
+      <p>Par défaut, le numéro complet et le cryptogramme ne passent jamais par Artemis : l'agent reçoit un lien éphémère à usage unique (10 minutes) et la carte s'affiche depuis la banque émettrice (Stripe Issuing Elements). Une remise directe existe en option avancée, désactivée par défaut ; même alors, rien n'est stocké.</p>
       <h2>Mandats signés</h2>
       <p>Chaque validation est une signature WebAuthn (passkey) sur l'empreinte SHA-256 du mandat : agent, montant, devise, marchand, intention, expiration. Le journal d'audit est chaîné par hachage et en insertion seule : toute altération est détectable.</p>
       <h2>AI Act et supervision humaine</h2>

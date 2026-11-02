@@ -42,10 +42,19 @@ test('parcours complet en Sandbox : inscription → agent → demande → passke
   await page.getByRole('button', { name: 'Approuver avec ma passkey' }).click();
   await expect(page.getByText('Mandat signé par passkey')).toBeVisible();
 
-  // L'agent récupère la carte une seule fois
+  // L'agent récupère un lien éphémère (le numéro ne passe pas par Artemis), l'ouvre une seule fois
   const reveal = await request.post(`${API}/v1/card-requests/${request_id}/reveal`, { headers: auth });
   expect(reveal.status()).toBe(200);
-  expect((await reveal.json()).number).toMatch(/^\d{16}$/);
+  const link = await reveal.json();
+  expect(link.delivery).toBe('issuer_link');
+  expect(JSON.stringify(link)).not.toMatch(/\d{16}/);
+  const agentPage = await context.newPage();
+  await agentPage.goto(link.checkout_url);
+  await agentPage.getByRole('button', { name: /Afficher la carte/ }).click();
+  await expect(agentPage.getByTestId('card-number')).toHaveText(/^\d{4} \d{4} \d{4} \d{4}$/);
+  await agentPage.reload();
+  await expect(agentPage.getByText(/déjà utilisé ou expiré/)).toBeVisible();
+  await agentPage.close();
   expect((await request.post(`${API}/v1/card-requests/${request_id}/reveal`, { headers: auth })).status()).toBe(409);
 
   // Paiement simulé puis rapprochement

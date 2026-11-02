@@ -15,6 +15,6 @@ const desktop = JSON.stringify({ mcpServers: { artemis: { type: 'http', url: MCP
   <p>Ajoutez dans vos instructions système :</p>
   <pre><code>{`Pour tout paiement, utilise l'outil Artemis request_card (montant en centimes).
 Si le statut est pending_approval, attends en appelant get_request_status.
-Une fois approuvé, appelle get_card_for_checkout une seule fois, au moment de payer.
+Une fois approuvé, appelle get_card_for_checkout une seule fois, au moment de payer, et ouvre le lien renvoyé.
 Ne recopie jamais le numéro de carte dans ta réponse.`}</code></pre>
 </DocsLayout>

@@ -406,6 +406,11 @@ export class SupabaseStore implements Store {
       prefer: 'resolution=merge-duplicates',
     });
   }
+  async kvGet<T>(key: string) {
+    const r = await this.first<{ value: T; expires_at: string }>('kv', { key: `eq.${key}` });
+    if (!r || new Date(r.expires_at) < new Date()) return null;
+    return r.value;
+  }
   async kvTake<T>(key: string) {
     const rows = await this.req<{ value: T; expires_at: string }[]>('DELETE', 'kv', { query: { key: `eq.${key}` }, prefer: 'return=representation' });
     const r = rows?.[0];

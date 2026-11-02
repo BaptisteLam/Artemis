@@ -4,7 +4,8 @@ import { z } from 'zod';
 import { ArtemisError, parseWith } from '@artemis/shared';
 import type { AppEnv } from '../http/types';
 import { agentAuth } from '../http/auth';
-import { cancelCard, createCardRequest, getRequestStatus, revealCardForCheckout } from '../services/requests';
+import { cancelCard, createCardRequest, deliverCardForCheckout, getRequestStatus } from '../services/requests';
+import { getRevealLink, openRevealSession } from '../services/revealLinks';
 import { budgetsFor, spendSummary } from '../services/spend';
 import { addReceipt, decodeBase64, fetchReceiptUrl } from '../services/receipts';
 
@@ -26,6 +27,22 @@ v1.post('/waitlist', async (c) => {
   const body = parseWith(Waitlist, await c.req.json().catch(() => ({})));
   await c.var.ctx.store.waitlistAdd({ email: body.email.toLowerCase(), company: body.company ?? null, use_case: body.use_case ?? null });
   return c.json({ ok: true });
+});
+
+// Liens éphémères de carte : publics (le jeton fait office de secret), consultés par la page /c/:token de l'app.
+v1.use('/reveal-links/*', async (c, next) => cors({ origin: c.env.APP_ORIGIN, allowMethods: ['GET', 'POST', 'OPTIONS'], allowHeaders: ['Content-Type'] })(c, next));
+v1.use('/reveal-links/*', async (c, next) => {
+  const ip = c.req.header('cf-connecting-ip') ?? 'unknown';
+  const minute = Math.floor(c.var.ctx.now().getTime() / 60_000);
+  if (!(await c.var.ctx.store.hitRateLimit(`reveal:${ip}:${minute}`, 60, 30))) throw new ArtemisError('rate_limited', 'Trop de tentatives.');
+  c.header('Cache-Control', 'no-store');
+  c.header('Referrer-Policy', 'no-referrer');
+  await next();
+});
+v1.get('/reveal-links/:token', async (c) => c.json(await getRevealLink(c.var.ctx, c.req.param('token'))));
+v1.post('/reveal-links/:token/session', async (c) => {
+  const body = (await c.req.json().catch(() => ({}))) as { nonce?: string };
+  return c.json(await openRevealSession(c.var.ctx, c.req.param('token'), typeof body.nonce === 'string' ? body.nonce : undefined));
 });
 
 const Receipt = z.object({
@@ -62,7 +79,7 @@ agentRoutes.post('/card-requests', async (c) => {
 agentRoutes.get('/card-requests/:id', async (c) => c.json(await getRequestStatus(c.var.ctx, c.var.agent, c.req.param('id'))));
 
 agentRoutes.post('/card-requests/:id/reveal', async (c) => {
-  const card = await revealCardForCheckout(c.var.ctx, c.var.agent, c.req.param('id'));
+  const card = await deliverCardForCheckout(c.var.ctx, c.var.agent, c.req.param('id'));
   c.header('Cache-Control', 'no-store');
   return c.json(card);
 });

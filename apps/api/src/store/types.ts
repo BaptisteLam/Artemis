@@ -145,6 +145,7 @@ export interface Store {
   /** true si la requête est autorisée dans la fenêtre. */
   hitRateLimit(key: string, windowSec: number, max: number): Promise<boolean>;
   kvSet(key: string, value: unknown, ttlSec: number): Promise<void>;
+  kvGet<T>(key: string): Promise<T | null>;
   /** Lit et supprime la valeur (usage unique). */
   kvTake<T>(key: string): Promise<T | null>;
 }

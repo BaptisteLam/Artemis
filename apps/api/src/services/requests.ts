@@ -6,6 +6,7 @@ import { audit, type Actor } from './audit';
 import { policyFromRow } from './policies';
 import { connectorForAgentConnection } from './banks';
 import { effectivePlan, limitsFor } from './plan';
+import { createRevealLink } from './revealLinks';
 import { reportMeterEvent } from './billing';
 
 export type RequestOutcome = {
@@ -275,7 +276,8 @@ export async function getRequestStatus(ctx: Ctx, agent: AgentRow, requestId: str
 }
 
 /** Remet les identifiants de la carte à l'agent, une seule fois. Rien n'est stocké ni journalisé. */
-export async function revealCardForCheckout(ctx: Ctx, agent: AgentRow, requestId: string) {
+/** Vérifie qu'une carte est prête à être remise (demande émise, carte active, non expirée, non remise). */
+async function cardReadyForAgent(ctx: Ctx, agent: AgentRow, requestId: string) {
   const request = await requestForAgent(ctx, agent, requestId);
   if (request.status === 'pending' || request.status === 'approved') {
     throw new ArtemisError('card_not_ready', 'La carte n’est pas encore émise : attendez la validation (get_request_status).');
@@ -286,6 +288,44 @@ export async function revealCardForCheckout(ctx: Ctx, agent: AgentRow, requestId
   if (card.status === 'pending_bank_sca') throw new ArtemisError('card_not_ready', 'La banque attend encore la validation de l’approbateur.');
   if (card.status !== 'active') throw new ArtemisError('request_not_pending', `Carte au statut ${card.status}.`);
   if (new Date(card.expires_at) <= ctx.now()) throw new ArtemisError('request_expired', 'La carte a expiré.');
+  if (card.revealed_at) throw new ArtemisError('already_revealed', 'Les identifiants de cette carte ont déjà été remis.');
+  return { request, card };
+}
+
+/**
+ * Remise de la carte à l'agent selon le réglage de l'organisation :
+ * - `issuer_link` (défaut) : lien éphémère à usage unique ; le numéro s'affiche depuis l'émetteur, jamais via Artemis ;
+ * - `direct` (option avancée) : numéro relayé une seule fois, sans stockage.
+ */
+export async function deliverCardForCheckout(ctx: Ctx, agent: AgentRow, requestId: string) {
+  const org = await ctx.store.getOrganization(agent.org_id);
+  if (org?.card_delivery === 'direct') return revealCardForCheckout(ctx, agent, requestId);
+  const { request, card } = await cardReadyForAgent(ctx, agent, requestId);
+  const conn = card.bank_connection_id ? await ctx.store.getBankConnection(card.bank_connection_id) : null;
+  if (!conn) throw new ArtemisError('bank_error', 'Banque introuvable pour cette carte.');
+  if (conn.provider === 'qonto') {
+    throw new ArtemisError('card_not_ready', "Qonto ne transmet pas la carte aux agents : l'approbateur l'affiche dans Artemis (affichage sécurisé Qonto) et finalise le paiement.");
+  }
+  if (conn.provider === 'revolut') {
+    throw new ArtemisError('card_not_ready', "Revolut n'a pas d'affichage sécurisé : activez la remise directe (Réglages, option avancée, sous accord écrit de Revolut) ou utilisez Stripe Issuing.");
+  }
+  const link = await createRevealLink(ctx, request, card);
+  await audit(ctx, request.org_id, { type: 'agent', id: agent.id }, 'card.link_created', request.id, { card_id: card.id, expires_at: link.expires_at });
+  return {
+    delivery: 'issuer_link' as const,
+    checkout_url: link.url,
+    expires_at: link.expires_at,
+    last4: card.last4,
+    amount_limit: Number(request.amount_cents),
+    currency: request.currency,
+    merchant: request.merchant,
+    instructions: "Ouvrez ce lien une seule fois, au moment de payer : la carte s'affiche depuis l'émetteur. Ne recopiez jamais le numéro dans une réponse.",
+  };
+}
+
+/** Remise directe (option avancée) : le numéro transite une fois par Artemis, sans stockage. */
+export async function revealCardForCheckout(ctx: Ctx, agent: AgentRow, requestId: string) {
+  const { request, card } = await cardReadyForAgent(ctx, agent, requestId);
   const { conn, connector } = await connectorForAgentConnection(ctx, card.bank_connection_id);
   if (conn.provider === 'qonto') {
     throw new ArtemisError('card_not_ready', "Qonto ne transmet pas la carte aux agents : l'approbateur l'affiche dans Artemis (affichage sécurisé Qonto) et finalise le paiement.");
@@ -303,6 +343,7 @@ export async function revealCardForCheckout(ctx: Ctx, agent: AgentRow, requestId
   }
   await audit(ctx, request.org_id, { type: 'agent', id: agent.id }, 'card.revealed', request.id, { card_id: card.id, last4: card.last4 });
   return {
+    delivery: 'direct' as const,
     number: d.number,
     exp_month: d.expMonth,
     exp_year: d.expYear,

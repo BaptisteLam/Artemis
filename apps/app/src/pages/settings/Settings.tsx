@@ -48,6 +48,30 @@ function Notifications() {
   );
 }
 
+function CardDelivery() {
+  const { api, org, refresh } = useOrg();
+  const current = org?.organization.card_delivery ?? 'issuer_link';
+  const save = useAction(async (mode: 'issuer_link' | 'direct') => {
+    if (mode === 'direct' && !confirm("Remise directe : le numéro de carte transitera une fois par Artemis vers l'agent. Cela vous place dans le périmètre PCI DSS et, chez Revolut, exige un accord écrit. Continuer ?")) return;
+    await api('/app/org', { method: 'PATCH', body: { card_delivery: mode } });
+    await refresh();
+  });
+  return (
+    <section className="ar-solid ar-stack">
+      <h2 className="ar-h3">Remise des cartes aux agents</h2>
+      <label className="ar-row ar-small" style={{ alignItems: 'flex-start' }}>
+        <input type="radio" name="delivery" checked={current === 'issuer_link'} onChange={() => void save.run('issuer_link')} />
+        <span><strong>Lien éphémère (recommandé)</strong><br />L'agent reçoit un lien à usage unique valable 10 minutes ; la carte s'affiche depuis la banque émettrice (Stripe Issuing). Le numéro ne passe jamais par Artemis.</span>
+      </label>
+      <label className="ar-row ar-small" style={{ alignItems: 'flex-start' }}>
+        <input type="radio" name="delivery" checked={current === 'direct'} onChange={() => void save.run('direct')} />
+        <span><strong>Remise directe (option avancée)</strong><br />Le numéro est relayé une seule fois à l'agent, sans stockage. Nécessaire pour Revolut. Vous entrez dans le périmètre PCI DSS.</span>
+      </label>
+      <ErrorAlert error={save.error} />
+    </section>
+  );
+}
+
 export function Settings() {
   const { api, org, can, refresh } = useOrg();
   const { email, signOut } = useAuth();
@@ -82,6 +106,7 @@ export function Settings() {
             <ErrorAlert error={rename.error} />
           </section>
         ) : null}
+        {can('owner') ? <CardDelivery /> : null}
         {can('owner', 'admin') ? (
           <section className="ar-solid ar-stack danger-zone" id="urgence">
             <h2 className="ar-h3">Urgence</h2>

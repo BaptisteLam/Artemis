@@ -14,6 +14,7 @@ export interface OrganizationRow {
   stripe_subscription_id: string | null;
   subscription_status: string | null;
   frozen_at: string | null;
+  card_delivery: 'issuer_link' | 'direct';
   created_at: string;
 }
 export interface MembershipRow { org_id: string; user_id: string; email: string | null; role: MemberRole; created_at: string }

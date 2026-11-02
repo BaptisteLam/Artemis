@@ -71,3 +71,11 @@ a.list-item:hover { background: color-mix(in srgb, var(--ar-sky) 40%, transparen
 .paycard-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); margin-bottom: 24px; }
 .paycard-link { display: block; text-decoration: none; border-radius: 14px; }
 .paycard-link .ar-paycard { max-width: none; }
+
+/* Page du lien éphémère de carte */
+.reveal-fields { display: grid; gap: 12px; }
+.reveal-fields > div { display: grid; grid-template-columns: 110px 1fr auto; align-items: center; gap: 8px; padding: 10px 12px; border-radius: var(--ar-radius-sm); background: var(--ar-surface); border: 1px solid var(--ar-line); }
+.reveal-fields small { font-size: 12px; color: var(--ar-ink-muted); }
+.reveal-fields strong { font-size: 16px; letter-spacing: 0.04em; overflow-wrap: anywhere; }
+.reveal-fields .copy { position: static; }
+@media (max-width: 420px) { .reveal-fields > div { grid-template-columns: 1fr auto; } .reveal-fields small { grid-column: 1 / -1; } }

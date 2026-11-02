@@ -11,7 +11,7 @@ type RpcRequest = { jsonrpc: '2.0'; id?: string | number | null; method: string;
 
 const INSTRUCTIONS =
   "Artemis donne des cartes virtuelles à usage unique, validées par un humain. Pour payer : request_card (montant en centimes) → " +
-  'si pending_approval, attendre avec get_request_status → get_card_for_checkout une seule fois au moment de payer → attach_receipt après achat. ' +
+  'si pending_approval, attendre avec get_request_status → get_card_for_checkout une seule fois au moment de payer (ouvrir le lien renvoyé) → attach_receipt après achat. ' +
   'Ne jamais afficher le numéro de carte.';
 
 /** Serveur MCP sans état (transport HTTP streamable, réponses JSON). */

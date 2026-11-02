@@ -17,6 +17,7 @@ const PROVIDERS: Record<Provider, { name: string; fields: { key: string; label: 
     help: "Compte Stripe avec Issuing activé (UE). Créez une clé restreinte avec les droits Issuing en écriture. Indiquez un titulaire existant (ich_…) ou l'adresse de l'entreprise pour qu'Artemis le crée.",
     fields: [
       { key: 'secretKey', label: 'Clé secrète restreinte', hint: 'rk_live_… ou sk_test_…', secret: true },
+      { key: 'publishableKey', label: 'Clé publiable', hint: 'pk_live_… (lien éphémère de carte)' },
       { key: 'cardholderId', label: 'Titulaire Stripe', hint: 'ich_… (optionnel)' },
       { key: 'companyName', label: "Nom de l'entreprise", hint: 'Si pas de titulaire' },
       { key: 'billing.line1', label: 'Adresse', hint: 'Si pas de titulaire' },

@@ -57,7 +57,7 @@ export class MemoryStore implements Store {
 
   // Organisations
   async createOrganization(input: { name: string }) {
-    const row: OrganizationRow = { id: uuid(), name: input.name, plan: 'sandbox', stripe_customer_id: null, stripe_subscription_id: null, subscription_status: null, frozen_at: null, created_at: now() };
+    const row: OrganizationRow = { id: uuid(), name: input.name, plan: 'sandbox', stripe_customer_id: null, stripe_subscription_id: null, subscription_status: null, frozen_at: null, card_delivery: 'issuer_link', created_at: now() };
     this.orgs.set(row.id, row);
     return clone(row);
   }
@@ -466,6 +466,11 @@ export class MemoryStore implements Store {
   }
   async kvSet(key: string, value: unknown, ttlSec: number) {
     this.kv.set(key, { value: clone(value), expiresAt: Date.now() + ttlSec * 1000 });
+  }
+  async kvGet<T>(key: string) {
+    const e = this.kv.get(key);
+    if (!e || e.expiresAt < Date.now()) return null;
+    return clone(e.value) as T;
   }
   async kvTake<T>(key: string) {
     const e = this.kv.get(key);

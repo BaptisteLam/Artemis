@@ -19,6 +19,7 @@ import { Settings } from './pages/settings/Settings';
 import { Invitation } from './pages/Invitation';
 import { Billing } from './pages/billing/Billing';
 import { Admin } from './pages/admin/Admin';
+import { RevealCard } from './pages/reveal/RevealCard';
 import { Loading } from './components';
 
 function RequireAuth() {
@@ -33,6 +34,7 @@ export const router = createBrowserRouter([
   { path: '/connexion', element: <Login mode="login" /> },
   { path: '/inscription', element: <Login mode="signup" /> },
   { path: '/auth/callback', element: <AuthCallback /> },
+  { path: '/c/:token', element: <RevealCard /> },
   {
     element: <RequireAuth />,
     children: [

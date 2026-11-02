@@ -10,6 +10,6 @@ import { API_URL, MCP_URL } from '../../config';
   <ol>
     <li><code>POST {API_URL}/v1/card-requests</code> avec <code>{`{ "amount": 4900, "merchant": "Notion", "purpose": "abonnement équipe" }`}</code></li>
     <li>une boucle d'attente sur <code>GET /v1/card-requests/:id</code> jusqu'au statut <code>issued</code> ;</li>
-    <li><code>POST /v1/card-requests/:id/reveal</code> pour obtenir la carte, une seule fois.</li>
+    <li><code>POST /v1/card-requests/:id/reveal</code> pour obtenir le lien éphémère de la carte (10 minutes, usage unique).</li>
   </ol>
 </DocsLayout>

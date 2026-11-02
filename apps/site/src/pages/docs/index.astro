@@ -15,7 +15,7 @@ import { APP_URL, MCP_URL } from '../../config';
     <tbody>
       <tr><td><code>request_card</code></td><td>Demande une carte : montant <strong>en centimes</strong>, devise, marchand, intention.</td></tr>
       <tr><td><code>get_request_status</code></td><td>Suit la validation humaine.</td></tr>
-      <tr><td><code>get_card_for_checkout</code></td><td>Renvoie numéro, date et cryptogramme, <strong>une seule fois</strong>.</td></tr>
+      <tr><td><code>get_card_for_checkout</code></td><td>Renvoie un <strong>lien éphémère</strong> (10 min, usage unique) : la carte s'affiche depuis la banque, sans passer par Artemis.</td></tr>
       <tr><td><code>list_budgets</code></td><td>Budget du mois, dépensé, restant, plafond.</td></tr>
       <tr><td><code>get_spend_summary</code></td><td>Dépenses par marchand (jour, semaine, mois).</td></tr>
       <tr><td><code>attach_receipt</code></td><td>Joint un justificatif à l'achat.</td></tr>

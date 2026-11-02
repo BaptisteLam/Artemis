@@ -42,8 +42,16 @@ orgRoutes.get('/org', requireRole(...ANY_ROLE), async (c) => {
 });
 
 orgRoutes.patch('/org', requireRole(...MANAGERS), async (c) => {
-  const { name } = parseWith(Name, await c.req.json().catch(() => ({})));
-  return c.json({ organization: await c.var.ctx.store.updateOrganization(c.var.org.id, { name }) });
+  const body = parseWith(
+    z.object({ name: z.string().trim().min(1).max(120).optional(), card_delivery: z.enum(['issuer_link', 'direct']).optional() }),
+    await c.req.json().catch(() => ({})),
+  );
+  if (body.card_delivery && c.var.membership.role !== 'owner') throw new ArtemisError('forbidden', 'Seul un propriétaire peut changer le mode de remise des cartes.');
+  const org = await c.var.ctx.store.updateOrganization(c.var.org.id, body);
+  if (body.card_delivery) {
+    await audit(c.var.ctx, c.var.org.id, { type: 'user', id: c.var.user.id }, 'org.card_delivery_changed', c.var.org.id, { card_delivery: body.card_delivery });
+  }
+  return c.json({ organization: org });
 });
 
 orgRoutes.get('/dashboard', requireRole(...ANY_ROLE), async (c) => {

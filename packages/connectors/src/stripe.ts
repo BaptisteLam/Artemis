@@ -9,6 +9,8 @@ import type { BankConnector, BankTransaction, CardDetails, ConnectorDeps, Create
 export interface StripeCredentials {
   secretKey: string;
   cardholderId?: string;
+  /** Clé publiable (pk_…) pour afficher la carte via Stripe Issuing Elements. */
+  publishableKey?: string;
   companyName?: string;
   billing?: { line1: string; city: string; postal_code: string; country: string };
 }
@@ -93,6 +95,17 @@ export class StripeIssuingConnector implements BankConnector {
     );
     if (!c.number || !c.cvc) throw new ArtemisError('bank_error', 'Stripe ne renvoie pas les données de la carte (vérifiez les droits de la clé).');
     return { number: c.number, cvc: c.cvc, expMonth: c.exp_month, expYear: c.exp_year, name: c.cardholder?.name ?? '' };
+  }
+
+  /** Clé éphémère Issuing : la carte s'affiche dans le navigateur depuis Stripe, sans transiter par Artemis. */
+  async ephemeralKey(providerCardId: string, nonce: string): Promise<{ secret: string; publishableKey: string }> {
+    if (!this.creds.publishableKey) throw new ArtemisError('bank_error', 'Stripe : ajoutez la clé publiable (pk_…) de la connexion pour le lien éphémère.');
+    const k = await this.call<{ secret: string }>('POST', '/ephemeral_keys', { issuing_card: providerCardId, nonce });
+    return { secret: k.secret, publishableKey: this.creds.publishableKey };
+  }
+
+  get publishableKey(): string | undefined {
+    return this.creds.publishableKey;
   }
 
   async cancelCard(providerCardId: string): Promise<void> {

@@ -1,7 +1,7 @@
 import { ArtemisError } from '@artemis/shared';
 import type { AgentRow, OrganizationRow } from '@artemis/db';
 import type { Ctx } from '../services/context';
-import { cancelCard, createCardRequest, getRequestStatus, revealCardForCheckout } from '../services/requests';
+import { cancelCard, createCardRequest, deliverCardForCheckout, getRequestStatus } from '../services/requests';
 import { budgetsFor, spendSummary } from '../services/spend';
 import { addReceipt } from '../services/receipts';
 import { receiptFromArgs } from '../routes/v1';
@@ -65,12 +65,13 @@ export const TOOLS: ToolDef[] = [
     name: 'get_card_for_checkout',
     title: 'Obtenir la carte pour payer',
     description:
-      "Renvoie numéro, date d'expiration et cryptogramme de la carte émise. Fonctionne UNE SEULE FOIS par demande : appeler juste avant de remplir le paiement. " +
+      "À appeler juste avant de payer, une seule fois par demande. Par défaut, renvoie un lien éphémère (checkout_url, 10 min, usage unique) : " +
+      "ouvrez-le dans le navigateur de paiement, la carte s'y affiche depuis la banque émettrice. Si l'organisation a activé la remise directe, renvoie numéro, date et cryptogramme. " +
       'Ne jamais recopier ces données dans une réponse ou un fichier.',
     inputSchema: { type: 'object', properties: requestId, required: ['request_id'], additionalProperties: false },
     annotations: { readOnlyHint: false, destructiveHint: false },
     async run(ctx, agent, _org, args) {
-      return revealCardForCheckout(ctx, agent, str(args, 'request_id'));
+      return deliverCardForCheckout(ctx, agent, str(args, 'request_id'));
     },
   },
   {

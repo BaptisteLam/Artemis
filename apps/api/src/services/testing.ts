@@ -6,7 +6,7 @@ import type { Ctx, Notifier } from './context';
 import type { Plan } from '@artemis/shared';
 
 /** Fabrique un contexte de test complet : organisation, banque Sandbox, agent, membres. */
-export async function setupWorld(opts: { plan?: Plan; policy?: Record<string, unknown> } = {}) {
+export async function setupWorld(opts: { plan?: Plan; policy?: Record<string, unknown>; cardDelivery?: 'issuer_link' | 'direct' } = {}) {
   const store = new MemoryStore();
   const calls: string[] = [];
   const notify: Notifier = {
@@ -28,6 +28,7 @@ export async function setupWorld(opts: { plan?: Plan; policy?: Record<string, un
   const org = await store.updateOrganization((await store.createOrganization({ name: 'Studio Lumen' })).id, {
     plan: opts.plan ?? 'team',
     subscription_status: opts.plan === 'sandbox' ? null : 'active',
+    card_delivery: opts.cardDelivery ?? 'direct',
   });
   const conn = await store.createBankConnection({
     org_id: org.id,
