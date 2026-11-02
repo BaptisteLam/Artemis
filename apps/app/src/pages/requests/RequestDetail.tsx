@@ -43,7 +43,8 @@ export function RequestDetail() {
 
   if (loading && !data) return <div className="ar-container page-body"><Loading /></div>;
   if (!data) return <div className="ar-container page-body"><ErrorAlert error={error} /></div>;
-  const { request: r, agent, mandate, card, receipts, transactions, policy, bank_provider } = data;
+  const { request: r, agent, mandate, card, receipts, transactions, policy, bank_provider, approvals = [] } = data;
+  const required = policy?.approvals_required ?? 1;
   const decider = can('owner', 'admin', 'approver');
   const isSandboxCard = card && card.provider_card_id.startsWith('sbx_');
 
@@ -72,6 +73,10 @@ export function RequestDetail() {
                 {policy ? <><dt>Règles</dt><dd>Plafond <Amount cents={Number(policy.per_tx_limit_cents)} size="sm" /> · budget <Amount cents={Number(policy.monthly_budget_cents)} size="sm" /></dd></> : null}
                 {r.decision_reason ? <><dt>Décision</dt><dd>{r.decision_reason}</dd></> : null}
               </dl>
+              {r.status === 'pending' && required > 1 ? (
+                <div className="alert alert-info ar-small">Quorum : {approvals.length} signature(s) sur {required} requises au-dessus du seuil.</div>
+              ) : null}
+              {r.decision_reason?.startsWith('flag:') ? <div className="alert alert-warn ar-small">Garde-fou : montant inhabituel pour cet agent, validation humaine obligatoire.</div> : null}
               {r.status === 'pending' ? (
                 <DecisionPanel api={api} requestId={r.id} canDecide={decider} onDone={() => void reload()} />
               ) : mandate ? (

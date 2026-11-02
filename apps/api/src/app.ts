@@ -14,6 +14,7 @@ import { mcp } from './mcp/server';
 import { pushRoutes } from './routes/push';
 import { createNotifier } from './services/notify';
 import { appRoutes } from './routes/app';
+import { publicOrg } from './routes/app/shared';
 import { webhooks } from './routes/webhooks';
 import { billingRoutes, billingWebhook } from './routes/billing';
 import { adminRoutes } from './routes/admin';
@@ -90,7 +91,7 @@ export function createApp(deps: AppDeps = {}) {
     const user = c.var.user;
     const memberships = await c.var.ctx.store.listMembershipsForUser(user.id);
     const organizations = await Promise.all(
-      memberships.map(async (m) => ({ role: m.role, organization: await c.var.ctx.store.getOrganization(m.org_id) })),
+      memberships.map(async (m) => ({ role: m.role, organization: publicOrg(await c.var.ctx.store.getOrganization(m.org_id)) })),
     );
     return c.json({ user, organizations: organizations.filter((o) => o.organization) });
   });

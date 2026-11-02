@@ -1,5 +1,6 @@
 import type {
   AgentRow,
+  ApprovalRow,
   AuditRow,
   BankConnectionRow,
   CardRequestRow,
@@ -98,6 +99,11 @@ export interface Store {
   listClients(orgId: string): Promise<ClientRow[]>;
   updateClient(id: string, patch: Partial<ClientRow>): Promise<ClientRow>;
   sumCommittedForClient(clientId: string, from: Date): Promise<number>;
+
+  // Approbations (quorum)
+  /** Ajoute une approbation ; renvoie null si cet utilisateur a déjà approuvé. */
+  addApproval(row: Omit<ApprovalRow, 'created_at'>): Promise<ApprovalRow | null>;
+  listApprovals(requestId: string): Promise<ApprovalRow[]>;
 
   // Mandats
   createMandate(row: MandateRow): Promise<MandateRow>;

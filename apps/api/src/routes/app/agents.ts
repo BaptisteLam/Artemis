@@ -127,6 +127,8 @@ const PolicyInput = z
     freeze_on_mismatch: z.boolean(),
     max_requests_per_hour: z.number().int().min(1).max(1000).nullable(),
     require_receipt_hours: z.number().int().min(1).max(2160).nullable(),
+    approvals_required: z.number().int().min(1).max(3),
+    quorum_above_cents: z.number().int().min(0).max(100_000_000).nullable(),
   })
   .partial();
 

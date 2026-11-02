@@ -1,5 +1,6 @@
 import { buildPushPayload } from '@block65/webcrypto-web-push';
 import { formatAmount } from '@artemis/shared';
+import { decryptCredentials } from '@artemis/connectors';
 import type { MemberRole } from '@artemis/db';
 import { safeLog } from '../http/errors';
 import type { Ctx, Notifier } from './context';
@@ -66,6 +67,28 @@ export function createNotifier(ctx: Ctx, opts: { buildPush?: PushBuilder } = {})
     );
   }
 
+  async function slack(orgId: string, text: string, url: string, label: string) {
+    const org = await store.getOrganization(orgId);
+    if (!org?.slack_webhook_ciphertext) return;
+    try {
+      const { url: hook } = await decryptCredentials<{ url: string }>(org.slack_webhook_ciphertext, env.CONNECTIONS_KEY);
+      if (!/^https:\/\/hooks\.slack\.com\//.test(hook)) return;
+      await ctx.fetch(hook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          text,
+          blocks: [
+            { type: 'section', text: { type: 'mrkdwn', text } },
+            { type: 'actions', elements: [{ type: 'button', text: { type: 'plain_text', text: label }, url, style: 'primary' }] },
+          ],
+        }),
+      });
+    } catch (e) {
+      safeLog('slack', e);
+    }
+  }
+
   return {
     async requestPending(orgId, requestId) {
       const request = await store.getCardRequest(requestId);
@@ -85,6 +108,7 @@ export function createNotifier(ctx: Ctx, opts: { buildPush?: PushBuilder } = {})
           }),
         ),
         push(who.map((m) => m.user_id), { title, body: `${request.merchant} · ${request.purpose}`, url: `/demandes/${requestId}`, tag: requestId }),
+        slack(orgId, `*${title}* chez *${request.merchant}*\n_${request.purpose}_`, url, 'Voir et signer avec ma passkey'),
       ]);
     },
     async cardIssueFailed(orgId, requestId) {

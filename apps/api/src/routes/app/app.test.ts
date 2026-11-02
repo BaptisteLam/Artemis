@@ -147,4 +147,17 @@ describe('app routes', () => {
     expect(v.ok).toBe(true);
     expect(v.count).toBeGreaterThan(0);
   });
+
+  it('never exposes the Slack webhook and gates it by plan', async () => {
+    const { org, as } = await newOrg();
+    const res = await as('PATCH', '/app/org', { slack_webhook_url: 'https://hooks.slack.com/services/T0/B0/xyz' });
+    expect(res.status).toBe(403);
+    await store.updateOrganization(org.id, { plan: 'team', subscription_status: 'active' });
+    const ok = await as('PATCH', '/app/org', { slack_webhook_url: 'https://hooks.slack.com/services/T0/B0/xyz' });
+    expect(ok.status).toBe(200);
+    const text = await (await as('GET', '/app/org')).text();
+    expect(text).not.toContain('hooks.slack.com');
+    expect(text).not.toContain('slack_webhook_ciphertext');
+    expect(JSON.parse(text).organization.slack_connected).toBe(true);
+  });
 });

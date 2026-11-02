@@ -1,6 +1,7 @@
 import { ArtemisError, sha256Hex } from '@artemis/shared';
 import type {
   AgentRow,
+  ApprovalRow,
   AuditRow,
   BankConnectionRow,
   CardRequestRow,
@@ -41,6 +42,7 @@ export class MemoryStore implements Store {
   agents = new Map<string, AgentRow>();
   policies = new Map<string, PolicyRow>();
   clients = new Map<string, ClientRow>();
+  approvals: ApprovalRow[] = [];
   requests = new Map<string, CardRequestRow>();
   mandates = new Map<string, MandateRow>();
   cards = new Map<string, CardRow>();
@@ -290,6 +292,17 @@ export class MemoryStore implements Store {
       if (r.client_id === clientId && r.created_at >= from.toISOString() && COMMITTED.has(r.status)) s += r.amount_cents;
     }
     return s;
+  }
+
+  // Approbations
+  async addApproval(row: Omit<ApprovalRow, 'created_at'>) {
+    if (this.approvals.some((a) => a.request_id === row.request_id && a.user_id === row.user_id)) return null;
+    const a: ApprovalRow = { ...row, created_at: now() };
+    this.approvals.push(a);
+    return clone(a);
+  }
+  async listApprovals(requestId: string) {
+    return clone(this.approvals.filter((a) => a.request_id === requestId));
   }
 
   // Mandats

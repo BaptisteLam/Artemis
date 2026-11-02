@@ -28,6 +28,8 @@ export function PolicyForm({ policy, onSave, disabled = false }: { policy: Polic
   const [reqTtl, setReqTtl] = useState(String(policy.request_ttl_minutes));
   const [freeze, setFreeze] = useState(policy.freeze_on_mismatch);
   const [perHour, setPerHour] = useState(policy.max_requests_per_hour ? String(policy.max_requests_per_hour) : '');
+  const [approvals, setApprovals] = useState(String(policy.approvals_required ?? 1));
+  const [quorumAbove, setQuorumAbove] = useState(policy.quorum_above_cents != null ? euros(Number(policy.quorum_above_cents)) : '');
   const [receiptHours, setReceiptHours] = useState(policy.require_receipt_hours ? String(policy.require_receipt_hours) : '');
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [saved, setSaved] = useState(false);
@@ -53,6 +55,9 @@ export function PolicyForm({ policy, onSave, disabled = false }: { policy: Polic
     const rh = receiptHours.trim() ? Number(receiptHours) : null;
     if (ph !== null && (!Number.isInteger(ph) || ph < 1 || ph > 1000)) errs.perHour = 'Entre 1 et 1 000, ou vide.';
     if (rh !== null && (!Number.isInteger(rh) || rh < 1 || rh > 2160)) errs.receipt = 'Entre 1 et 2 160 heures, ou vide.';
+    const ar = Number(approvals);
+    const qa = quorumAbove.trim() ? parseEurosToCents(quorumAbove) : null;
+    if (quorumAbove.trim() && qa === null) errs.quorum = 'Montant invalide.';
     const mA = list(mccAllow);
     const mD = list(mccDeny);
     if ([...mA, ...mD].some((m) => !/^\d{4}$/.test(m))) errs.mcc = 'Codes MCC à 4 chiffres.';
@@ -72,6 +77,8 @@ export function PolicyForm({ policy, onSave, disabled = false }: { policy: Polic
       freeze_on_mismatch: freeze,
       max_requests_per_hour: ph,
       require_receipt_hours: rh,
+      approvals_required: ar,
+      quorum_above_cents: qa,
     });
     if (ok !== undefined || !save.error) setSaved(true);
   }
@@ -119,6 +126,18 @@ export function PolicyForm({ policy, onSave, disabled = false }: { policy: Polic
           </Field>
           <Field label="Justificatif exigé sous (heures)" error={errors.receipt} hint="Vide = désactivé. Passé ce délai, l'agent est gelé.">
             <input className="ar-input" inputMode="numeric" value={receiptHours} onChange={(e) => setReceiptHours(e.target.value)} />
+          </Field>
+        </div>
+        <div className="form-row">
+          <Field label="Signatures requises" hint="Quorum d'approbateurs distincts (plans Team et plus).">
+            <select className="ar-select" value={approvals} onChange={(e) => setApprovals(e.target.value)}>
+              <option value="1">1 approbateur</option>
+              <option value="2">2 approbateurs</option>
+              <option value="3">3 approbateurs</option>
+            </select>
+          </Field>
+          <Field label="Quorum à partir de (€)" error={errors.quorum} hint="Vide = pour toutes les demandes.">
+            <input className="ar-input" inputMode="decimal" value={quorumAbove} onChange={(e) => setQuorumAbove(e.target.value)} />
           </Field>
         </div>
         <p className="ar-small ar-muted" style={{ margin: 0 }}>Toujours actifs : catégories à risque bloquées (jeux, transferts, quasi-espèces, titres) et validation humaine forcée sur un montant inhabituel (plus de 3 fois la médiane de l'agent).</p>

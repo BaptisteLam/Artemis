@@ -24,7 +24,7 @@ export interface Me {
 }
 
 export interface OrgInfo {
-  organization: OrganizationRow;
+  organization: OrganizationRow & { slack_connected?: boolean };
   role: Role;
   effective_plan: Plan;
   limits: PlanLimits;
@@ -48,6 +48,7 @@ export interface RequestDetail {
   agent: { id: string; name: string; platform: string } | null;
   policy: PolicyRow | null;
   mandate: MandateRow | null;
+  approvals?: { user_id: string; created_at: string }[];
   card: CardRow | null;
   bank_provider: 'sandbox' | 'stripe' | 'qonto' | 'revolut' | null;
   receipts: ReceiptRow[];

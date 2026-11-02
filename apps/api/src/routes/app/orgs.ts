@@ -2,6 +2,7 @@ import { Hono } from 'hono';
 import { z } from 'zod';
 import { ArtemisError, currentBudgetMonth, monthBounds, parseWith, randomToken, sha256Hex } from '@artemis/shared';
 import { encryptCredentials, newSandboxState } from '@artemis/connectors';
+import { publicOrg } from './shared';
 import type { AppEnv } from '../../http/types';
 import { ANY_ROLE, MANAGERS, requireRole } from '../../http/auth';
 import { audit } from '../../services/audit';
@@ -26,14 +27,14 @@ orgRoutes.post('/orgs', async (c) => {
     credentials_ciphertext: await encryptCredentials(newSandboxState(), env.CONNECTIONS_KEY),
   });
   await audit(c.var.ctx, org.id, { type: 'user', id: user.id }, 'org.created', org.id, { name });
-  return c.json({ organization: org }, 201);
+  return c.json({ organization: publicOrg(org) }, 201);
 });
 
 orgRoutes.get('/org', requireRole(...ANY_ROLE), async (c) => {
   const org = c.var.org;
   const period = currentBudgetMonth(c.var.ctx.now());
   return c.json({
-    organization: org,
+    organization: publicOrg(org),
     role: c.var.membership.role,
     effective_plan: effectivePlan(org),
     limits: limitsFor(org),
@@ -43,15 +44,26 @@ orgRoutes.get('/org', requireRole(...ANY_ROLE), async (c) => {
 
 orgRoutes.patch('/org', requireRole(...MANAGERS), async (c) => {
   const body = parseWith(
-    z.object({ name: z.string().trim().min(1).max(120).optional(), card_delivery: z.enum(['issuer_link', 'direct']).optional() }),
+    z.object({
+      name: z.string().trim().min(1).max(120).optional(),
+      card_delivery: z.enum(['issuer_link', 'direct']).optional(),
+      slack_webhook_url: z.string().trim().regex(/^https:\/\/hooks\.slack\.com\/services\/[\w/]+$/, 'URL de webhook Slack attendue (https://hooks.slack.com/services/…)').nullable().optional(),
+    }),
     await c.req.json().catch(() => ({})),
   );
   if (body.card_delivery && c.var.membership.role !== 'owner') throw new ArtemisError('forbidden', 'Seul un propriétaire peut changer le mode de remise des cartes.');
-  const org = await c.var.ctx.store.updateOrganization(c.var.org.id, body);
+  const { slack_webhook_url, ...rest } = body;
+  const patch: Record<string, unknown> = { ...rest };
+  if (slack_webhook_url !== undefined) {
+    if (slack_webhook_url && !limitsFor(c.var.org).slack) throw new ArtemisError('plan_limit', 'Les notifications Slack sont incluses à partir du plan Team.');
+    patch.slack_webhook_ciphertext = slack_webhook_url ? await encryptCredentials({ url: slack_webhook_url }, c.env.CONNECTIONS_KEY) : null;
+    await audit(c.var.ctx, c.var.org.id, { type: 'user', id: c.var.user.id }, slack_webhook_url ? 'org.slack_connected' : 'org.slack_disconnected', c.var.org.id, {});
+  }
+  const org = await c.var.ctx.store.updateOrganization(c.var.org.id, patch);
   if (body.card_delivery) {
     await audit(c.var.ctx, c.var.org.id, { type: 'user', id: c.var.user.id }, 'org.card_delivery_changed', c.var.org.id, { card_delivery: body.card_delivery });
   }
-  return c.json({ organization: org });
+  return c.json({ organization: publicOrg(org) });
 });
 
 orgRoutes.get('/dashboard', requireRole(...ANY_ROLE), async (c) => {
@@ -155,7 +167,7 @@ orgRoutes.post('/invitations/accept', async (c) => {
   await store.addMembership({ org_id: inv.org_id, user_id: user.id, email: user.email, role: inv.role });
   await store.markInvitationAccepted(inv.id);
   await audit(c.var.ctx, inv.org_id, { type: 'user', id: user.id }, 'member.joined', user.id, { role: inv.role });
-  return c.json({ organization: await store.getOrganization(inv.org_id), role: inv.role });
+  return c.json({ organization: publicOrg(await store.getOrganization(inv.org_id)), role: inv.role });
 });
 
 // Gel d'urgence

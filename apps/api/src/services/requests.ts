@@ -210,8 +210,33 @@ export async function approveRequest(ctx: Ctx, user: UserInfo, orgId: string, re
   const { request, agent } = await loadPendingForDecision(ctx, user, orgId, requestId);
   const payload = mandatePayload(request, agent);
   const hash = await sha256Hex(canonicalJson(payload));
+  const policyRow = await ctx.store.getPolicy(agent.id);
+  const org = await ctx.store.getOrganization(orgId);
+  const required = org && limitsFor(org).quorum ? (policyRow?.approvals_required ?? 1) : 1;
+  const quorumApplies = required > 1 && Number(request.amount_cents) >= Number(policyRow?.quorum_above_cents ?? 0);
+  if (quorumApplies && (await ctx.store.listApprovals(request.id)).some((a) => a.user_id === user.id)) {
+    throw new ArtemisError('forbidden', 'Vous avez déjà signé cette demande : un autre approbateur doit signer.');
+  }
   const sig = await verify(request, hash);
   const now = ctx.now().toISOString();
+  const recorded = await ctx.store.addApproval({
+    request_id: request.id,
+    org_id: orgId,
+    user_id: user.id,
+    passkey_id: sig.passkeyId,
+    payload_hash: hash,
+    signature: sig.signature,
+    authenticator_data: sig.authenticatorData,
+    client_data_json: sig.clientDataJSON,
+  });
+  if (!recorded) throw new ArtemisError('forbidden', 'Vous avez déjà signé cette demande : un autre approbateur doit signer.');
+  if (quorumApplies) {
+    const count = (await ctx.store.listApprovals(request.id)).length;
+    if (count < required) {
+      await audit(ctx, orgId, { type: 'user', id: user.id }, 'request.approval_recorded', request.id, { payload_hash: hash, approvals: count, required });
+      return request;
+    }
+  }
   const approved = await ctx.store.updateCardRequest(request.id, { status: 'approved', decided_by: user.id, decided_at: now }, 'pending');
   if (!approved) throw new ArtemisError('request_not_pending', "Cette demande n'est plus en attente.");
   await ctx.store.createMandate({

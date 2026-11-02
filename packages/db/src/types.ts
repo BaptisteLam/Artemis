@@ -15,6 +15,7 @@ export interface OrganizationRow {
   subscription_status: string | null;
   frozen_at: string | null;
   card_delivery: 'issuer_link' | 'direct';
+  slack_webhook_ciphertext?: string | null;
   created_at: string;
 }
 export interface MembershipRow { org_id: string; user_id: string; email: string | null; role: MemberRole; created_at: string }
@@ -35,6 +36,8 @@ export interface PolicyRow {
   request_ttl_minutes: number;
   freeze_on_mismatch: boolean;
   max_requests_per_hour?: number | null;
+  approvals_required?: number;
+  quorum_above_cents?: number | null;
   require_receipt_hours?: number | null;
   updated_at: string;
 }
@@ -111,5 +114,16 @@ export interface ClientRow {
   markup_pct: number;
   monthly_budget_cents: number | null;
   status: 'active' | 'archived';
+  created_at: string;
+}
+export interface ApprovalRow {
+  request_id: string;
+  org_id: string;
+  user_id: string;
+  passkey_id: string;
+  payload_hash: string;
+  signature: string;
+  authenticator_data: string;
+  client_data_json: string;
   created_at: string;
 }

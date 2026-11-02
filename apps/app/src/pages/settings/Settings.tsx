@@ -48,6 +48,32 @@ function Notifications() {
   );
 }
 
+function SlackSetting() {
+  const { api, org, refresh } = useOrg();
+  const [url, setUrl] = useState('');
+  const save = useAction(async (value: string | null) => {
+    await api('/app/org', { method: 'PATCH', body: { slack_webhook_url: value } });
+    setUrl('');
+    await refresh();
+  });
+  const connected = !!org?.organization.slack_connected;
+  return (
+    <section className="ar-solid ar-stack">
+      <h2 className="ar-h3">Slack</h2>
+      <p className="ar-small ar-muted" style={{ margin: 0 }}>Chaque demande en attente est publiée dans un canal Slack, avec un bouton qui ouvre la validation par passkey. Créez un « Incoming Webhook » dans Slack et collez son URL.</p>
+      {connected ? (
+        <div className="ar-row"><span className="ar-small">Slack est connecté.</span><Button variant="ghost" size="sm" onClick={() => void save.run(null)}>Déconnecter</Button></div>
+      ) : (
+        <div className="form-row" style={{ alignItems: 'end' }}>
+          <Field label="URL du webhook Slack"><input className="ar-input ar-mono" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://hooks.slack.com/services/…" /></Field>
+          <div><Button onClick={() => void save.run(url.trim())} disabled={save.busy || !url.trim()}>Connecter</Button></div>
+        </div>
+      )}
+      <ErrorAlert error={save.error} />
+    </section>
+  );
+}
+
 function CardDelivery() {
   const { api, org, refresh } = useOrg();
   const current = org?.organization.card_delivery ?? 'issuer_link';
@@ -106,6 +132,7 @@ export function Settings() {
             <ErrorAlert error={rename.error} />
           </section>
         ) : null}
+        {can('owner', 'admin') ? <SlackSetting /> : null}
         {can('owner') ? <CardDelivery /> : null}
         {can('owner', 'admin') ? (
           <section className="ar-solid ar-stack danger-zone" id="urgence">

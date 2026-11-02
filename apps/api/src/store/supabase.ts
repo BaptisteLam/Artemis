@@ -1,6 +1,7 @@
 import { ArtemisError } from '@artemis/shared';
 import type {
   AgentRow,
+  ApprovalRow,
   AuditRow,
   BankConnectionRow,
   CardRequestRow,
@@ -263,6 +264,19 @@ export class SupabaseStore implements Store {
   }
   countRequestsSince(from: Date) {
     return this.count('card_requests', { created_at: `gte.${from.toISOString()}` });
+  }
+
+  // Approbations
+  async addApproval(row: Omit<ApprovalRow, 'created_at'>) {
+    const rows = await this.req<ApprovalRow[]>('POST', 'approvals', {
+      query: { on_conflict: 'request_id,user_id' },
+      body: row,
+      prefer: 'return=representation,resolution=ignore-duplicates',
+    });
+    return rows[0] ?? null;
+  }
+  listApprovals(requestId: string) {
+    return this.select<ApprovalRow>('approvals', { request_id: `eq.${requestId}`, order: 'created_at.asc' });
   }
 
   // Mandats

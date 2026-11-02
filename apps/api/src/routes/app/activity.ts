@@ -27,12 +27,13 @@ activityRoutes.get('/requests/:id', requireRole(...ANY_ROLE), async (c) => {
   const { store } = c.var.ctx;
   const request = await store.getCardRequest(c.req.param('id'));
   if (!request || request.org_id !== c.var.org.id) throw new ArtemisError('not_found', 'Demande introuvable.');
-  const [agent, mandate, card, receipts, policy] = await Promise.all([
+  const [agent, mandate, card, receipts, policy, approvals] = await Promise.all([
     store.getAgent(request.agent_id),
     store.getMandate(request.id),
     store.getCardByRequest(request.id),
     store.listReceipts(c.var.org.id, request.id),
     store.getPolicy(request.agent_id),
+    store.listApprovals(request.id),
   ]);
   const bankConn = card?.bank_connection_id ? await store.getBankConnection(card.bank_connection_id) : null;
   const transactions = card ? (await store.listTransactions(c.var.org.id, { limit: 2000 })).filter((t) => t.card_id === card.id) : [];
@@ -41,6 +42,7 @@ activityRoutes.get('/requests/:id', requireRole(...ANY_ROLE), async (c) => {
     agent: agent ? { id: agent.id, name: agent.name, platform: agent.platform } : null,
     policy,
     mandate,
+    approvals: approvals.map((a) => ({ user_id: a.user_id, created_at: a.created_at })),
     card,
     bank_provider: bankConn?.provider ?? null,
     receipts,
