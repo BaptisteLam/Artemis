@@ -53,6 +53,8 @@ export interface Store {
   listMembershipsForUser(userId: string): Promise<MembershipRow[]>;
   listMembers(orgId: string): Promise<MembershipRow[]>;
   updateMembershipRole(orgId: string, userId: string, role: MembershipRow['role']): Promise<void>;
+  /** Langue de l'utilisateur, sur toutes ses organisations. */
+  setUserLocale(userId: string, locale: string): Promise<void>;
   removeMembership(orgId: string, userId: string): Promise<void>;
 
   // Invitations

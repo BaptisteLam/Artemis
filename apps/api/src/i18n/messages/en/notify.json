@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Your agents pay. You keep the final say.",
+    "unknownAgent": "An agent",
+    "unknownMerchant": "a merchant",
+    "requestPending": {
+      "title": "{agent} wants to spend {amount}",
+      "subject": "To approve: {amount} at {merchant}",
+      "merchant": "Merchant: {merchant}",
+      "purpose": "Purpose: {purpose}",
+      "expires": "Without an answer, the request expires automatically.",
+      "cta": "Review and approve →",
+      "slack": "*{title}* at *{merchant}*",
+      "slackCta": "Review and sign with my passkey"
+    },
+    "cardIssueFailed": {
+      "subject": "Card creation failed at {merchant}",
+      "title": "The bank didn't create the card",
+      "fallback": "Bank error.",
+      "cta": "View the request →"
+    },
+    "mismatch": {
+      "subject": "Mismatch detected: {amount} at {merchant}",
+      "title": "A transaction doesn't match the mandate",
+      "check": "Check the transaction and freeze the agent if needed.",
+      "cta": "View transactions →",
+      "pushTitle": "Transaction mismatch"
+    },
+    "invitation": {
+      "subject": "Invitation to join {org} on Artemis",
+      "title": "Join {org}",
+      "body": "You're invited to approve and track your team's AI agent spending.",
+      "cta": "Accept the invitation →"
+    }
+  }
+}

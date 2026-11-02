@@ -104,6 +104,9 @@ export class MemoryStore implements Store {
   async listMembers(orgId: string) {
     return clone(this.memberships.filter((m) => m.org_id === orgId));
   }
+  async setUserLocale(userId: string, locale: string) {
+    for (const m of this.memberships) if (m.user_id === userId) m.locale = locale;
+  }
   async updateMembershipRole(orgId: string, userId: string, role: MembershipRow['role']) {
     const m = this.memberships.find((x) => x.org_id === orgId && x.user_id === userId) ?? notFound('Membre');
     m.role = role;

@@ -18,7 +18,7 @@ export interface OrganizationRow {
   slack_webhook_ciphertext?: string | null;
   created_at: string;
 }
-export interface MembershipRow { org_id: string; user_id: string; email: string | null; role: MemberRole; created_at: string }
+export interface MembershipRow { org_id: string; user_id: string; email: string | null; role: MemberRole; locale?: string | null; created_at: string }
 export interface InvitationRow { id: string; org_id: string; email: string; role: MemberRole; token_hash: string; invited_by: string | null; expires_at: string; accepted_at: string | null; created_at: string }
 export interface BankConnectionRow { id: string; org_id: string; provider: BankProvider; label: string; credentials_ciphertext: string; status: string; last_sync_at: string | null; created_at: string }
 export interface AgentRow { id: string; org_id: string; name: string; platform: string; token_hash: string; token_prefix: string; bank_connection_id: string | null; client_id?: string | null; status: 'active' | 'frozen'; last_used_at: string | null; created_at: string }

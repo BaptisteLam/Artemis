@@ -41,7 +41,7 @@ describe('Slack', () => {
     await createNotifier({ ...w.ctx, fetch: f }).requestPending(w.org.id, r.requestId);
     const slack = calls.find((c) => c.url.startsWith('https://hooks.slack.com/'));
     expect(slack).toBeTruthy();
-    expect(slack!.body).toContain('49,00');
-    expect(slack!.body).toContain(`http://localhost:5173/demandes/${r.requestId}`);
+    expect(slack!.body).toContain('€49.00');
+    expect(slack!.body).toContain(`http://localhost:5173/requests/${r.requestId}`);
   });
 });

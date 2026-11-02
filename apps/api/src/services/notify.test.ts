@@ -25,8 +25,19 @@ describe('notifier', () => {
     const emails = calls.filter((c) => c.url === 'https://api.resend.com/emails').map((c) => JSON.parse(c.body));
     expect(emails).toHaveLength(1);
     expect(emails[0].to).toEqual(['owner@exemple.fr']);
-    expect(emails[0].html).toContain(`http://localhost:5173/demandes/${r.requestId}`);
-    expect(emails[0].subject).toContain('49,00');
+    expect(emails[0].html).toContain(`http://localhost:5173/requests/${r.requestId}`);
+    expect(emails[0].subject).toContain('€49.00');
+  });
+  it('writes to each recipient in their own language', async () => {
+    const w = await setupWorld();
+    await w.store.setUserLocale(w.owner.id, 'fr');
+    const r = await createCardRequest(w.ctx, w.agent, { amount: 4900, merchant: 'Notion', purpose: 'abonnement' });
+    const { calls, f } = recorder();
+    await createNotifier({ ...w.ctx, fetch: f, env: { ...w.ctx.env, RESEND_API_KEY: 're_test' } }, { buildPush: fakePush }).requestPending(w.org.id, r.requestId);
+    const mail = JSON.parse(calls.find((c) => c.url === 'https://api.resend.com/emails')!.body);
+    expect(mail.subject.replace(/\s/g, ' ')).toBe('À valider : 49,00 € chez Notion');
+    expect(mail.html).toContain('<html lang="fr">');
+    expect(mail.html).toContain('Vous gardez le dernier mot');
   });
   it('sends no email without a Resend key', async () => {
     const w = await setupWorld();

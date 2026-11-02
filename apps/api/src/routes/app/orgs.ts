@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
 import { z } from 'zod';
+import { LOCALES } from '@artemis/i18n';
 import { ArtemisError, currentBudgetMonth, monthBounds, parseWith, randomToken, sha256Hex } from '@artemis/shared';
 import { encryptCredentials, newSandboxState } from '@artemis/connectors';
 import { publicOrg } from './shared';
@@ -28,6 +29,13 @@ orgRoutes.post('/orgs', async (c) => {
   });
   await audit(c.var.ctx, org.id, { type: 'user', id: user.id }, 'org.created', org.id, { name });
   return c.json({ organization: publicOrg(org) }, 201);
+});
+
+/** Langue de l'utilisateur connecté (emails et notifications). */
+orgRoutes.put('/me/locale', async (c) => {
+  const { locale } = parseWith(z.object({ locale: z.enum(LOCALES) }), await c.req.json().catch(() => ({})));
+  await c.var.ctx.store.setUserLocale(c.var.user.id, locale);
+  return c.json({ locale });
 });
 
 orgRoutes.get('/org', requireRole(...ANY_ROLE), async (c) => {
@@ -146,7 +154,7 @@ orgRoutes.post('/invitations', requireRole(...MANAGERS), async (c) => {
     expires_at: new Date(c.var.ctx.now().getTime() + 7 * 86_400_000).toISOString(),
   });
   const link = `${c.env.APP_ORIGIN}/invitation?token=${token}`;
-  c.var.ctx.defer(c.var.ctx.notify.invitation(body.email, c.var.org.name, link));
+  c.var.ctx.defer(c.var.ctx.notify.invitation(body.email, c.var.org.name, link, c.var.membership.locale));
   await audit(c.var.ctx, c.var.org.id, { type: 'user', id: c.var.user.id }, 'member.invited', body.email, { role: body.role });
   const { token_hash: _t, ...publicInv } = inv;
   return c.json({ invitation: publicInv, link }, 201);

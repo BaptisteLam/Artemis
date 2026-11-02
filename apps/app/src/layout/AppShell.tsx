@@ -27,7 +27,7 @@ export function AppShell() {
   const { email, signOut } = useAuth();
   const { me, org, orgId, setOrgId, loading, error, api, can } = useOrg();
   const navigate = useNavigate();
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [pending, setPending] = useState(0);
 
   useEffect(() => {
@@ -44,6 +44,12 @@ export function AppShell() {
       clearInterval(timer);
     };
   }, [api, org]);
+
+  // Langue de l'utilisateur côté serveur : emails et notifications dans sa langue.
+  useEffect(() => {
+    if (!me) return;
+    void api('/app/me/locale', { method: 'PUT', body: { locale } }).catch(() => undefined);
+  }, [api, me, locale]);
 
   useEffect(() => {
     if (!loading && me && me.organizations.length === 0) navigate('/welcome', { replace: true });

@@ -5,7 +5,7 @@ export interface Notifier {
   requestPending(orgId: string, requestId: string): Promise<void>;
   cardIssueFailed(orgId: string, requestId: string): Promise<void>;
   transactionMismatch(orgId: string, transactionId: string): Promise<void>;
-  invitation(email: string, orgName: string, link: string): Promise<void>;
+  invitation(email: string, orgName: string, link: string, locale?: string | null): Promise<void>;
 }
 
 export const noopNotifier: Notifier = {

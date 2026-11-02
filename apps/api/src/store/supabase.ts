@@ -125,6 +125,9 @@ export class SupabaseStore implements Store {
   listMembers(orgId: string) {
     return this.select<MembershipRow>('memberships', { org_id: `eq.${orgId}`, order: 'created_at.asc' });
   }
+  async setUserLocale(userId: string, locale: string) {
+    await this.patch('memberships', { user_id: `eq.${userId}` }, { locale });
+  }
   async updateMembershipRole(orgId: string, userId: string, role: MembershipRow['role']) {
     await this.patch('memberships', { org_id: `eq.${orgId}`, user_id: `eq.${userId}` }, { role });
   }

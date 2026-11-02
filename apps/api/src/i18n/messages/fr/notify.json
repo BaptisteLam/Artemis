@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Vos agents paient. Vous gardez le dernier mot.",
+    "unknownAgent": "Un agent",
+    "unknownMerchant": "un marchand",
+    "requestPending": {
+      "title": "{agent} veut dépenser {amount}",
+      "subject": "À valider : {amount} chez {merchant}",
+      "merchant": "Marchand : {merchant}",
+      "purpose": "Intention : {purpose}",
+      "expires": "Sans réponse, la demande expire automatiquement.",
+      "cta": "Voir et valider →",
+      "slack": "*{title}* chez *{merchant}*",
+      "slackCta": "Voir et signer avec ma passkey"
+    },
+    "cardIssueFailed": {
+      "subject": "Échec de création de carte chez {merchant}",
+      "title": "La banque n’a pas créé la carte",
+      "fallback": "Erreur bancaire.",
+      "cta": "Voir la demande →"
+    },
+    "mismatch": {
+      "subject": "Écart détecté : {amount} chez {merchant}",
+      "title": "Une transaction ne correspond pas au mandat",
+      "check": "Vérifiez la transaction et gelez l’agent si nécessaire.",
+      "cta": "Voir les transactions →",
+      "pushTitle": "Écart sur une transaction"
+    },
+    "invitation": {
+      "subject": "Invitation à rejoindre {org} sur Artemis",
+      "title": "Rejoignez {org}",
+      "body": "Vous êtes invité à valider et suivre les dépenses des agents IA de votre équipe.",
+      "cta": "Accepter l’invitation →"
+    }
+  }
+}
