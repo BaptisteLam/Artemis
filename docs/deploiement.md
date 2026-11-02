@@ -5,7 +5,7 @@ Durée : environ 45 minutes. Tout tient dans des offres gratuites. Seul un nom d
 ## 0. Ce qui est déjà fait
 
 - **Base de données Supabase** : projet `Artemis` (`jrlripockeiivegqbeng`, Francfort, offre gratuite) créé, migrations `0001` à `0005` appliquées, bucket privé `receipts` créé.
-- **Appliquées** (2 nov. 2026) : migrations `0006` à `0010` regroupées sous `0006_0010_v2_features` (remise de carte, mode agence, garde-fous, quorum/Slack, abonnements). Sur le projet hébergé, l'ancienne version à 3 arguments de `create_card_request` reste en place mais n'est plus appelée ; l'API utilise toujours la version à 4 arguments.
+- **Appliquées** (2 nov. 2026) : `0011_performance` (index des clés étrangères, RLS optimisée) et migrations `0006` à `0010` regroupées sous `0006_0010_v2_features` (remise de carte, mode agence, garde-fous, quorum/Slack, abonnements). Sur le projet hébergé, l'ancienne version à 3 arguments de `create_card_request` reste en place mais n'est plus appelée ; l'API utilise toujours la version à 4 arguments.
   - URL : `https://jrlripockeiivegqbeng.supabase.co`
   - Clé publique (publishable) : dans `apps/app/.env.production`
 
