@@ -13,7 +13,7 @@ export function Invitation() {
     const r = await api<{ organization: { id: string } }>('/app/invitations/accept', { method: 'POST', body: { token: params.get('token') } });
     setOrgId(r.organization.id);
     await refresh();
-    navigate('/reglages', { replace: true });
+    navigate('/settings', { replace: true });
   });
   useEffect(() => {
     if (started.current) return;

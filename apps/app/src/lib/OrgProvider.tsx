@@ -74,6 +74,7 @@ export function OrgProvider({ children }: { children: ReactNode }) {
 
 export function useOrg(): OrgState {
   const ctx = useContext(OrgContext);
+  // i18n-ignore : message destiné aux développeurs.
   if (!ctx) throw new Error('useOrg hors OrgProvider');
   return ctx;
 }

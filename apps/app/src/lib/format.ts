@@ -1,45 +1,37 @@
-export { formatAmount, parseEurosToCents } from '@artemis/shared';
+import { INTL_TAG, formatDate as fmtDate, formatMoney } from '@artemis/i18n';
+import { currentLocale, t } from '../i18n';
+export { parseEurosToCents } from '@artemis/shared';
 
-const rtf = new Intl.RelativeTimeFormat('fr', { numeric: 'auto' });
-const dtf = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
-const df = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+/** Montant en centimes, au format de la langue courante. */
+export const formatAmount = (cents: number, currency = 'EUR', opts: { sign?: boolean } = {}) => formatMoney(currentLocale(), cents, currency, opts);
 
-/** « il y a 2 min » sous un jour, date au-delà. */
+/** « il y a 2 min » sous un jour, date au-delà — dans la langue courante. */
 export function relativeTime(iso: string | null | undefined, now = Date.now()): string {
   if (!iso) return '—';
-  const t = new Date(iso).getTime();
-  const diff = (t - now) / 1000;
+  const rtf = new Intl.RelativeTimeFormat(INTL_TAG[currentLocale()], { numeric: 'auto' });
+  const time = new Date(iso).getTime();
+  const diff = (time - now) / 1000;
   const abs = Math.abs(diff);
   if (abs < 60) return rtf.format(Math.round(diff), 'second');
   if (abs < 3600) return rtf.format(Math.round(diff / 60), 'minute');
   if (abs < 86400) return rtf.format(Math.round(diff / 3600), 'hour');
-  return dtf.format(new Date(t));
+  return fmtDate(currentLocale(), new Date(time), 'datetime');
 }
 
-export const formatDate = (iso: string | null | undefined) => (iso ? df.format(new Date(iso)) : '—');
-export const formatDateTime = (iso: string | null | undefined) => (iso ? dtf.format(new Date(iso)) : '—');
+export const formatDate = (iso: string | null | undefined) => (iso ? fmtDate(currentLocale(), iso, 'date') : '—');
+export const formatDateTime = (iso: string | null | undefined) => (iso ? fmtDate(currentLocale(), iso, 'datetime') : '—');
 
-export const STATUS_LABEL: Record<string, { label: string; tone: 'gain' | 'loss' | 'pending' | 'info' | 'neutral' }> = {
-  pending: { label: 'À valider', tone: 'pending' },
-  approved: { label: 'Validée', tone: 'info' },
-  issued: { label: 'Carte émise', tone: 'info' },
-  completed: { label: 'Payée', tone: 'gain' },
-  rejected: { label: 'Refusée', tone: 'loss' },
-  expired: { label: 'Expirée', tone: 'neutral' },
-  failed: { label: 'Échec banque', tone: 'loss' },
-  canceled: { label: 'Annulée', tone: 'neutral' },
-  active: { label: 'Active', tone: 'info' },
-  pending_bank_sca: { label: 'Validation banque', tone: 'pending' },
-  used: { label: 'Utilisée', tone: 'gain' },
-  frozen: { label: 'Gelé', tone: 'loss' },
-  matched: { label: 'Rapprochée', tone: 'gain' },
-  mismatch: { label: 'Écart', tone: 'loss' },
-  unmatched: { label: 'Non rapprochée', tone: 'neutral' },
+export type Tone = 'gain' | 'loss' | 'pending' | 'info' | 'neutral';
+const STATUS_TONE: Record<string, Tone> = {
+  pending: 'pending', approved: 'info', issued: 'info', completed: 'gain', rejected: 'loss', expired: 'neutral', failed: 'loss',
+  canceled: 'neutral', active: 'info', pending_bank_sca: 'pending', used: 'gain', frozen: 'loss', matched: 'gain', mismatch: 'loss', unmatched: 'neutral',
 };
 
-export const ROLE_LABEL: Record<string, string> = {
-  owner: 'Propriétaire',
-  admin: 'Administrateur',
-  approver: 'Approbateur',
-  viewer: 'Lecteur',
-};
+/** Libellé traduit et couleur d'un statut (demande, carte, agent, rapprochement). */
+export function statusLabel(status: string): { label: string; tone: Tone } {
+  const tone = STATUS_TONE[status];
+  return tone ? { label: t(`status.${status}`), tone } : { label: status, tone: 'neutral' };
+}
+
+export const ROLES = ['owner', 'admin', 'approver', 'viewer'] as const;
+export const roleLabel = (role: string) => ((ROLES as readonly string[]).includes(role) ? t(`roles.${role}`) : role);

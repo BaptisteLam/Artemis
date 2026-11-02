@@ -72,9 +72,9 @@ export function Login({ mode }: { mode: 'login' | 'signup' }) {
               </Button>
               <p className="ar-small ar-muted" style={{ margin: 0 }}>
                 {mode === 'signup' ? (
-                  <>Déjà inscrit ? <a href="/connexion">Se connecter</a></>
+                  <>Déjà inscrit ? <a href="/login">Se connecter</a></>
                 ) : (
-                  <>Pas encore de compte ? <a href="/inscription">Créer un compte</a></>
+                  <>Pas encore de compte ? <a href="/signup">Créer un compte</a></>
                 )}
               </p>
             </form>

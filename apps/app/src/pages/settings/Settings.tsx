@@ -135,7 +135,7 @@ export function Settings() {
         {can('owner', 'admin') ? <SlackSetting /> : null}
         {can('owner') ? <CardDelivery /> : null}
         {can('owner', 'admin') ? (
-          <section className="ar-solid ar-stack danger-zone" id="urgence">
+          <section className="ar-solid ar-stack danger-zone" id="emergency">
             <h2 className="ar-h3">Urgence</h2>
             <p className="ar-small" style={{ margin: 0 }}>
               « Tout geler » suspend tous les agents, annule les cartes actives et les demandes en attente. À utiliser si un agent se comporte anormalement ou si un jeton a fuité.

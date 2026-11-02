@@ -41,8 +41,8 @@ export async function createCheckout(ctx: Ctx, org: OrganizationRow, email: stri
   const session = await stripe<{ url: string }>(ctx, '/checkout/sessions', {
     mode: 'subscription',
     line_items: lineItems,
-    success_url: `${ctx.env.APP_ORIGIN}/facturation?statut=ok`,
-    cancel_url: `${ctx.env.APP_ORIGIN}/facturation?statut=annule`,
+    success_url: `${ctx.env.APP_ORIGIN}/billing?status=ok`,
+    cancel_url: `${ctx.env.APP_ORIGIN}/billing?status=canceled`,
     client_reference_id: org.id,
     customer: org.stripe_customer_id ?? undefined,
     customer_email: org.stripe_customer_id ? undefined : email,
@@ -59,7 +59,7 @@ export async function createCheckout(ctx: Ctx, org: OrganizationRow, email: stri
 export async function createPortal(ctx: Ctx, org: OrganizationRow) {
   if (!org.stripe_customer_id) throw new ArtemisError('invalid_input', 'Aucun abonnement à gérer.');
   if (!ctx.env.STRIPE_SECRET_KEY) throw new ArtemisError('invalid_input', 'La facturation n’est pas encore configurée (Stripe).');
-  const s = await stripe<{ url: string }>(ctx, '/billing_portal/sessions', { customer: org.stripe_customer_id, return_url: `${ctx.env.APP_ORIGIN}/facturation` });
+  const s = await stripe<{ url: string }>(ctx, '/billing_portal/sessions', { customer: org.stripe_customer_id, return_url: `${ctx.env.APP_ORIGIN}/billing` });
   return s.url;
 }
 

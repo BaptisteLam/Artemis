@@ -1,7 +1,11 @@
-# Site marketing Artemis — Worker Cloudflare avec fichiers statiques (build Astro dans dist/).
+# Site marketing Artemis — Worker Cloudflare (détection de langue) devant les fichiers statiques (build Astro dans dist/).
 name = "artemis-site"
+main = "worker/index.ts"
 compatibility_date = "2025-06-01"
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
 not_found_handling = "404-page"
+# Le Worker ne s'exécute que pour les pages (pas pour les scripts, styles et images).
+run_worker_first = ["/*", "!/_astro/*", "!/*.svg", "!/*.txt", "!/*.png", "!/*.ico"]

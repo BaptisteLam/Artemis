@@ -11,3 +11,4 @@ export { EmptyState } from './components/EmptyState';
 export { MerchantTile } from './components/MerchantTile';
 export { LOGO_BLADE, LOGO_BLOCK, LOGO_VIEWBOX } from './logo/paths';
 export { PayCard, type PayCardVariant, type PayCardState } from './components/PayCard';
+export * from './locale';

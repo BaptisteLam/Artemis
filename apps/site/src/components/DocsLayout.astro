@@ -1,24 +1,26 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHead from './PageHead.astro';
+import { i18n, stripLocale } from '../i18n';
 interface Props { title: string; lead?: string }
 const { title, lead } = Astro.props;
-const path = Astro.url.pathname.replace(/\/$/, '');
+const { t, href } = i18n(Astro.url);
+const path = stripLocale(Astro.url.pathname).replace(/\/$/, '');
 const links = [
-  ['/docs', 'Démarrer'],
-  ['/docs/mcp-claude', 'Claude (MCP)'],
-  ['/docs/mcp-chatgpt', 'ChatGPT (MCP)'],
-  ['/docs/cli', 'CLI et skill Claude'],
+  ['/docs', t('docsNav.start')],
+  ['/docs/mcp-claude', t('docsNav.claude')],
+  ['/docs/mcp-chatgpt', t('docsNav.chatgpt')],
+  ['/docs/cli', t('docsNav.cli')],
   ['/docs/n8n', 'n8n'],
-  ['/docs/api', 'API REST'],
-  ['/docs/regles', 'Règles et validation'],
-];
+  ['/docs/api', t('docsNav.api')],
+  ['/docs/rules', t('docsNav.rules')],
+] as const;
 ---
 <Base title={title} description={lead}>
-  <PageHead eyebrow="Documentation" title={title} lead={lead} />
+  <PageHead eyebrow={t('docsNav.eyebrow')} title={title} lead={lead} />
   <div class="ar-container section docs-layout">
-    <nav class="docs-nav" aria-label="Documentation">
-      {links.map(([href, label]) => <a href={href} aria-current={path === href ? 'page' : undefined}>{label}</a>)}
+    <nav class="docs-nav" aria-label={t('docsNav.eyebrow')}>
+      {links.map(([to, label]) => <a href={href(to)} aria-current={path === to ? 'page' : undefined}>{label}</a>)}
     </nav>
     <article class="prose"><slot /></article>
   </div>

@@ -34,7 +34,7 @@ export function Subscriptions() {
       <PageStage title="Abonnements" lead="Les abonnements souscrits par vos agents : carte verrouillée sur le marchand, plafond mensuel, détection des abonnements dormants." />
       <div className="ar-container page-body ar-stack">
         <ErrorAlert error={error ?? cancel.error} />
-        {!org?.limits.subscriptions ? <div className="alert alert-info">Les abonnements gérés par agent sont inclus à partir du plan Team. <Link to="/facturation">Voir les plans →</Link></div> : null}
+        {!org?.limits.subscriptions ? <div className="alert alert-info">Les abonnements gérés par agent sont inclus à partir du plan Team. <Link to="/billing">Voir les plans →</Link></div> : null}
         {dormant > 0 ? <div className="alert alert-warn">{dormant} abonnement(s) sans paiement depuis plus de 45 jours : pensez à les résilier.</div> : null}
         {loading && !data ? <Loading /> : null}
         {data ? (
@@ -45,7 +45,7 @@ export function Subscriptions() {
                 <tbody>
                   {data.subscriptions.map((s) => (
                     <tr key={s.request_id}>
-                      <td><Link to={`/demandes/${s.request_id}`}>{s.merchant}</Link><div className="ar-small ar-muted">•••• {s.last4}</div></td>
+                      <td><Link to={`/requests/${s.request_id}`}>{s.merchant}</Link><div className="ar-small ar-muted">•••• {s.last4}</div></td>
                       <td className="ar-mono">{s.agent}</td>
                       <td><Amount cents={s.monthly_limit_cents} currency={s.currency} size="sm" /></td>
                       <td><Amount cents={s.total_paid_cents} currency={s.currency} size="sm" /> <span className="ar-small ar-muted">({s.payments})</span></td>

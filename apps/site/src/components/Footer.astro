@@ -1,5 +1,6 @@
 ---
-import { LEGAL } from '../legal';
+import { i18n } from '../i18n';
+const { t, href } = i18n(Astro.url);
 ---
 <footer class="site-footer">
   <div class="ar-container cols">
@@ -8,21 +9,21 @@ import { LEGAL } from '../legal';
         <svg viewBox="0 0 714 496" height="16" width="23" fill="var(--ar-cobalt)" aria-hidden="true"><path d="M0 496 L510 0 L510 280 L292 496 Z"/><path d="M510 280 H714 V496 H510 Z"/></svg>
         Artemis
       </p>
-      <p>Vos agents paient. Vous gardez le dernier mot.</p>
-      <p>{LEGAL.vat}</p>
-      <p class="ar-small">Claude, ChatGPT et n8n sont des marques de leurs propriétaires respectifs. Artemis n'est affilié à aucun d'eux.</p>
+      <p>{t('meta.tagline')}</p>
+      <p>{t('legal.vat')}</p>
+      <p class="ar-small">{t('footer.trademarks')}</p>
     </div>
     <div>
-      <p class="ar-micro">Produit</p>
-      <ul><li><a href="/fonctionnement">Fonctionnement</a></li><li><a href="/tarifs">Tarifs</a></li><li><a href="/agences">Agences</a></li><li><a href="/ressources/politique-agents">Modèle de politique</a></li><li><a href="/securite">Sécurité</a></li><li><a href="/liste-attente">Liste d'attente</a></li></ul>
+      <p class="ar-micro">{t('footer.product')}</p>
+      <ul><li><a href={href('/how-it-works')}>{t('nav.howItWorks')}</a></li><li><a href={href('/pricing')}>{t('nav.pricing')}</a></li><li><a href={href('/agencies')}>{t('nav.agencies')}</a></li><li><a href={href('/resources/agent-policy')}>{t('footer.policyTemplate')}</a></li><li><a href={href('/security')}>{t('nav.security')}</a></li><li><a href={href('/waitlist')}>{t('footer.waitlist')}</a></li></ul>
     </div>
     <div>
-      <p class="ar-micro">Docs</p>
-      <ul><li><a href="/docs/mcp-claude">Claude</a></li><li><a href="/docs/mcp-chatgpt">ChatGPT</a></li><li><a href="/docs/n8n">n8n</a></li><li><a href="/docs/api">API REST</a></li></ul>
+      <p class="ar-micro">{t('nav.docs')}</p>
+      <ul><li><a href={href('/docs/mcp-claude')}>Claude</a></li><li><a href={href('/docs/mcp-chatgpt')}>ChatGPT</a></li><li><a href={href('/docs/n8n')}>n8n</a></li><li><a href={href('/docs/api')}>{t('footer.restApi')}</a></li></ul>
     </div>
     <div>
-      <p class="ar-micro">Légal</p>
-      <ul><li><a href="/mentions-legales">Mentions légales</a></li><li><a href="/cgv">CGV</a></li><li><a href="/confidentialite">Confidentialité</a></li></ul>
+      <p class="ar-micro">{t('footer.legal')}</p>
+      <ul><li><a href={href('/legal-notice')}>{t('footer.legalNotice')}</a></li><li><a href={href('/terms')}>{t('footer.terms')}</a></li><li><a href={href('/privacy')}>{t('footer.privacy')}</a></li></ul>
     </div>
   </div>
 </footer>

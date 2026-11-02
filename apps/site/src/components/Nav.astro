@@ -1,23 +1,27 @@
 ---
 import { APP_URL } from '../config';
-const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+import { i18n, stripLocale } from '../i18n';
+import LangSwitch from './LangSwitch.astro';
+const { t, href, locale } = i18n(Astro.url);
+const path = stripLocale(Astro.url.pathname).replace(/\/$/, '') || '/';
 const links = [
-  { href: '/fonctionnement', label: 'Fonctionnement', xs: true },
-  { href: '/agences', label: 'Agences', hide: true },
-  { href: '/tarifs', label: 'Tarifs' },
-  { href: '/docs', label: 'Docs' },
-  { href: '/securite', label: 'Sécurité', hide: true },
+  { to: '/how-it-works', label: t('nav.howItWorks'), xs: true },
+  { to: '/agencies', label: t('nav.agencies'), hide: true },
+  { to: '/pricing', label: t('nav.pricing') },
+  { to: '/docs', label: t('nav.docs') },
+  { to: '/security', label: t('nav.security'), hide: true },
 ];
 ---
 <header class="site-header">
-  <nav class="ar-nav" aria-label="Navigation principale">
-    <a href="/" class="brand" aria-label="Artemis, accueil">
+  <nav class="ar-nav" aria-label={t('nav.aria')}>
+    <a href={href('/')} class="brand" aria-label={t('nav.home')}>
       <svg viewBox="0 0 714 496" height="18" width="26" fill="var(--ar-cobalt)" aria-hidden="true"><path d="M0 496 L510 0 L510 280 L292 496 Z"/><path d="M510 280 H714 V496 H510 Z"/></svg>
     </a>
     {links.map((l) => (
-      <a href={l.href} class={l.hide ? 'hide-sm' : l.xs ? 'hide-xs' : ''} aria-current={path.startsWith(l.href) ? 'page' : undefined}>{l.label}</a>
+      <a href={href(l.to)} class={l.hide ? 'hide-sm' : l.xs ? 'hide-xs' : ''} aria-current={path.startsWith(l.to) ? 'page' : undefined}>{l.label}</a>
     ))}
-    <a href={`${APP_URL}/connexion`} class="hide-sm">Connexion</a>
-    <a href={`${APP_URL}/inscription`} class="nav-cta">Essayer</a>
+    <a href={`${APP_URL}/login?lang=${locale}`} class="hide-sm">{t('nav.login')}</a>
+    <LangSwitch />
+    <a href={`${APP_URL}/signup?lang=${locale}`} class="nav-cta">{t('nav.cta')}</a>
   </nav>
 </header>

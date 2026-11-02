@@ -1,0 +1,91 @@
+{
+  "common": {
+    "loading": "Chargement…",
+    "copy": "Copier",
+    "copied": "Copié"
+  },
+  "lang": {
+    "choose": "Langue"
+  },
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "requests": "Demandes",
+    "agents": "Agents",
+    "clients": "Clients",
+    "cards": "Cartes",
+    "subscriptions": "Abonnements",
+    "transactions": "Transactions",
+    "exports": "Exports",
+    "banks": "Banques",
+    "team": "Équipe",
+    "audit": "Audit",
+    "billing": "Facturation",
+    "settings": "Réglages"
+  },
+  "shell": {
+    "home": "Artemis, tableau de bord",
+    "organization": "Organisation",
+    "admin": "Admin",
+    "freezeAllHint": "Geler tous les agents et annuler les cartes actives",
+    "frozen": "Gelé",
+    "freezeAll": "Tout geler",
+    "signOut": "Déconnexion",
+    "navAria": "Navigation de l'application",
+    "pendingCount_one": "{count} en attente",
+    "pendingCount_many": "{count} en attente",
+    "pendingCount_other": "{count} en attente",
+    "frozenBanner": "Organisation gelée : aucune nouvelle carte ne peut être émise. Dégelez-la dans Réglages."
+  },
+  "status": {
+    "pending": "À valider",
+    "approved": "Validée",
+    "issued": "Carte émise",
+    "completed": "Payée",
+    "rejected": "Refusée",
+    "expired": "Expirée",
+    "failed": "Échec banque",
+    "canceled": "Annulée",
+    "active": "Active",
+    "pending_bank_sca": "Validation banque",
+    "used": "Utilisée",
+    "frozen": "Gelé",
+    "matched": "Rapprochée",
+    "mismatch": "Écart",
+    "unmatched": "Non rapprochée"
+  },
+  "roles": {
+    "owner": "Propriétaire",
+    "admin": "Administrateur",
+    "approver": "Approbateur",
+    "viewer": "Lecteur"
+  },
+  "errors": {
+    "network": "Réseau indisponible. Vérifiez votre connexion.",
+    "unauthorized": "Votre session a expiré. Reconnectez-vous.",
+    "forbidden": "Vous n'avez pas les droits pour cette action.",
+    "not_found": "Introuvable, ou plus disponible.",
+    "invalid_input": "Certaines informations sont invalides. Vérifiez le formulaire.",
+    "rate_limited": "Trop de tentatives. Patientez un instant puis réessayez.",
+    "quota_exceeded": "Le quota mensuel de mandats est atteint.",
+    "subscription_inactive": "Votre abonnement est inactif. Mettez-le à jour dans Facturation.",
+    "org_frozen": "L'organisation est gelée.",
+    "agent_frozen": "Cet agent est gelé.",
+    "request_not_pending": "Cette demande n'est plus en attente.",
+    "request_expired": "Cette demande a expiré.",
+    "already_revealed": "Cette carte a déjà été remise.",
+    "card_not_ready": "La carte n'est pas encore disponible.",
+    "bank_error": "La banque a refusé l'opération.",
+    "plan_limit": "La limite de votre forfait est atteinte. Changez de forfait pour continuer.",
+    "over_client_budget": "Le budget mensuel de ce client est dépassé.",
+    "internal": "Une erreur est survenue. Réessayez.",
+    "currency_not_allowed": "Cette devise n'est pas autorisée par la politique.",
+    "invalid_amount": "Montant invalide.",
+    "over_transaction_limit": "Montant supérieur au plafond par transaction.",
+    "over_monthly_budget": "Le budget mensuel de l'agent est dépassé.",
+    "merchant_blocked": "Ce marchand est bloqué par la politique.",
+    "merchant_not_allowed": "Ce marchand n'est pas dans la liste autorisée.",
+    "mcc_blocked": "Cette catégorie de marchand est bloquée.",
+    "mcc_not_allowed": "Cette catégorie de marchand n'est pas autorisée.",
+    "too_many_requests": "Trop de demandes dans l'heure pour cet agent."
+  }
+}

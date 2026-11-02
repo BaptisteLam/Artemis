@@ -136,7 +136,7 @@ export function RequestDetail() {
             </section>
           </div>
         </div>
-        <Link to="/demandes" className="muted-link">← Toutes les demandes</Link>
+        <Link to="/requests" className="muted-link">← Toutes les demandes</Link>
       </div>
     </>
   );

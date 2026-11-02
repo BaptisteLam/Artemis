@@ -1,0 +1,30 @@
+---
+import LegalLayout from '../../../components/LegalLayout.astro';
+import { localeStaticPaths } from '../../../i18n';
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+---
+<LegalLayout title="Modèle : politique de dépenses des agents IA">
+  <p>Modèle gratuit à adapter, pour encadrer les dépenses faites par des agents d'intelligence artificielle et documenter le contrôle humain exigé par l'article 14 du règlement européen sur l'IA (AI Act). Imprimez cette page ou copiez-la dans votre wiki.</p>
+  <h2>1. Objet et périmètre</h2>
+  <p>La présente politique s'applique à tout agent logiciel (assistant conversationnel, automatisation, script) autorisé à engager une dépense au nom de [ENTREPRISE]. Aucun agent n'utilise la carte bancaire de l'entreprise ou d'un salarié : chaque achat passe par une carte virtuelle à usage unique demandée via Artemis.</p>
+  <h2>2. Registre des agents</h2>
+  <p>Chaque agent est inscrit au registre avec : son nom, sa plateforme, son responsable humain, son objet, son budget mensuel, son plafond par achat, ses marchands autorisés et, le cas échéant, le client pour lequel il travaille.</p>
+  <h2>3. Règles de dépense</h2>
+  <ul>
+    <li>Budget mensuel par agent : [MONTANT] € ; plafond par achat : [MONTANT] €.</li>
+    <li>Marchands autorisés : [LISTE] ; catégories interdites : jeux d'argent, transferts d'argent, quasi-espèces, titres financiers.</li>
+    <li>Validation automatique uniquement sous [MONTANT] € et chez un marchand autorisé ; au-delà, signature humaine obligatoire.</li>
+    <li>Au-delà de [MONTANT] €, deux signataires distincts sont requis.</li>
+  </ul>
+  <h2>4. Contrôle humain</h2>
+  <p>Les personnes habilitées à valider sont : [NOMS / FONCTIONS]. La validation se fait par passkey sur le contenu exact du mandat (agent, montant, marchand, objet). Toute demande non validée expire automatiquement.</p>
+  <h2>5. Justificatifs et comptabilité</h2>
+  <p>Chaque achat est accompagné de sa facture dans un délai de [N] heures ; à défaut, l'agent est suspendu. Les dépenses sont exportées mensuellement (FEC ou Pennylane) et rapprochées des relevés bancaires.</p>
+  <h2>6. Incidents</h2>
+  <p>En cas de comportement anormal, d'écart de montant ou de marchand, ou de suspicion d'injection de consigne, le responsable gèle immédiatement l'agent (ou toute l'organisation) et consigne l'incident.</p>
+  <h2>7. Conservation et revue</h2>
+  <p>Le journal d'audit chaîné est conservé [10] ans. Un rapport de supervision est produit chaque trimestre et revu par [FONCTION]. La présente politique est revue chaque année.</p>
+  <p><em>Artemis génère le registre des agents et le rapport trimestriel de supervision dans le plan Business.</em></p>
+</LegalLayout>

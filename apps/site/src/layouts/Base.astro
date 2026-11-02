@@ -4,17 +4,22 @@ import '@artemis/ui/base.css';
 import '../styles/site.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { LOCALES, INTL_TAG } from '@artemis/i18n';
+import { i18n, localePath, stripLocale } from '../i18n';
 
 interface Props {
   title: string;
   description?: string;
   stage?: boolean;
 }
-const { title, description = 'Le pare-feu financier européen de vos agents IA : contrôle, gain de temps et preuve AI Act de chaque dépense, sur la banque de votre choix.', stage = false } = Astro.props;
-const fullTitle = title === 'Artemis' ? 'Artemis — Vos agents paient. Vous gardez le dernier mot.' : `${title} · Artemis`;
+const { t, locale } = i18n(Astro.url);
+const { title, description = t('meta.description'), stage = false } = Astro.props;
+const fullTitle = title === 'Artemis' ? `Artemis — ${t('meta.tagline')}` : `${title} · Artemis`;
+const base = stripLocale(Astro.url.pathname);
+const abs = (l: (typeof LOCALES)[number]) => new URL(localePath(l, base), Astro.site ?? Astro.url).href;
 ---
 <!doctype html>
-<html lang="fr">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,11 +27,15 @@ const fullTitle = title === 'Artemis' ? 'Artemis — Vos agents paient. Vous gar
     <meta name="description" content={description} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
+    <meta property="og:locale" content={INTL_TAG[locale].replace('-', '_')} />
+    <link rel="canonical" href={abs(locale)} />
+    {LOCALES.map((l) => <link rel="alternate" hreflang={l} href={abs(l)} />)}
+    <link rel="alternate" hreflang="x-default" href={abs('en')} />
     <meta name="theme-color" content="#0000ff" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body class={stage ? 'has-stage' : ''}>
-    <a class="ar-sr skip" href="#contenu">Aller au contenu</a>
+    <a class="ar-sr skip" href="#contenu">{t('layout.skip')}</a>
     <Nav />
     <main id="contenu">
       <slot />

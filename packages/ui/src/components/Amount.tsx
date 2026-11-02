@@ -1,4 +1,5 @@
-import { formatAmount } from '@artemis/shared';
+import { formatMoney } from '@artemis/i18n';
+import { getUiLocale } from '../locale';
 
 export function Amount({
   cents,
@@ -18,7 +19,7 @@ export function Amount({
   return (
     <span className={`ar-amount ar-amount-${size} ${tone} ${className}`.trim()}>
       {arrow && <span aria-hidden="true">{arrow}</span>}
-      {formatAmount(cents, currency, { sign })}
+      {formatMoney(getUiLocale(), cents, currency, { sign })}
     </span>
   );
 }

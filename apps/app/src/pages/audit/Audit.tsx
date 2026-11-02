@@ -87,7 +87,7 @@ export function Audit() {
             {verify.ok ? `Chaîne intègre : ${verify.count} entrées vérifiées.` : `Chaîne rompue à l'entrée n° ${verify.brokenAt}.`}
           </div>
         ) : null}
-        {!canExport ? <p className="ar-small ar-muted">L'export signé du journal est inclus dans le plan Business. <Link to="/facturation">Voir les plans</Link></p> : null}
+        {!canExport ? <p className="ar-small ar-muted">L'export signé du journal est inclus dans le plan Business. <Link to="/billing">Voir les plans</Link></p> : null}
         {loading && !data ? <Loading /> : null}
         {data ? (
           <section className="ar-solid ar-table-wrap">
@@ -98,7 +98,7 @@ export function Audit() {
                   <tr key={e.id}>
                     <td className="ar-mono">{e.id}</td>
                     <td>{formatDateTime(e.created_at)}</td>
-                    <td>{ACTIONS[e.action] ?? e.action}{e.action.startsWith('request') || e.action.startsWith('card') ? <> · <Link to={`/demandes/${e.subject}`}>voir</Link></> : null}</td>
+                    <td>{ACTIONS[e.action] ?? e.action}{e.action.startsWith('request') || e.action.startsWith('card') ? <> · <Link to={`/requests/${e.subject}`}>voir</Link></> : null}</td>
                     <td className="ar-small">{e.actor_type}</td>
                     <td className="ar-mono" style={{ fontSize: 11 }}>{e.hash.slice(0, 12)}…</td>
                   </tr>

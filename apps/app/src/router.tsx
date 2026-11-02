@@ -1,4 +1,5 @@
 import { Navigate, Outlet, createBrowserRouter, useLocation } from 'react-router-dom';
+import { legacyRedirect } from './lib/legacyRoutes';
 import { useAuth } from './auth/AuthProvider';
 import { AuthCallback, Login } from './auth/Login';
 import { AppShell } from './layout/AppShell';
@@ -28,44 +29,50 @@ function RequireAuth() {
   const { ready, email } = useAuth();
   const location = useLocation();
   if (!ready) return <div className="ar-container" style={{ padding: 48 }}><Loading /></div>;
-  if (!email) return <Navigate to={`/connexion?next=${encodeURIComponent(location.pathname + location.search)}`} replace />;
+  if (!email) return <Navigate to={`/login?next=${encodeURIComponent(location.pathname + location.search)}`} replace />;
   return <Outlet />;
 }
 
+/** Anciennes adresses françaises (liens des emails déjà envoyés) → nouvelles adresses ; sinon accueil. */
+function NotFoundRedirect() {
+  const location = useLocation();
+  return <Navigate to={legacyRedirect(location.pathname, location.search, location.hash) ?? '/'} replace />;
+}
+
 export const router = createBrowserRouter([
-  { path: '/connexion', element: <Login mode="login" /> },
-  { path: '/inscription', element: <Login mode="signup" /> },
+  { path: '/login', element: <Login mode="login" /> },
+  { path: '/signup', element: <Login mode="signup" /> },
   { path: '/auth/callback', element: <AuthCallback /> },
   { path: '/c/:token', element: <RevealCard /> },
   {
     element: <RequireAuth />,
     children: [
-      { path: '/bienvenue', element: <Onboarding /> },
+      { path: '/welcome', element: <Onboarding /> },
       { path: '/invitation', element: <Invitation /> },
       {
         element: <AppShell />,
         children: [
           { path: '/', element: <Dashboard /> },
           { path: '/agents', element: <AgentsList /> },
-          { path: '/agents/nouveau', element: <AgentNew /> },
+          { path: '/agents/new', element: <AgentNew /> },
           { path: '/agents/:id', element: <AgentDetail /> },
-          { path: '/banques', element: <Banks /> },
-          { path: '/demandes', element: <RequestsList /> },
-          { path: '/demandes/:id', element: <RequestDetail /> },
-          { path: '/cartes', element: <Cards /> },
+          { path: '/banks', element: <Banks /> },
+          { path: '/requests', element: <RequestsList /> },
+          { path: '/requests/:id', element: <RequestDetail /> },
+          { path: '/cards', element: <Cards /> },
           { path: '/transactions', element: <Transactions /> },
-          { path: '/equipe', element: <Team /> },
+          { path: '/team', element: <Team /> },
           { path: '/audit', element: <Audit /> },
           { path: '/exports', element: <Exports /> },
-          { path: '/reglages', element: <Settings /> },
-          { path: '/facturation', element: <Billing /> },
+          { path: '/settings', element: <Settings /> },
+          { path: '/billing', element: <Billing /> },
           { path: '/admin', element: <Admin /> },
           { path: '/clients', element: <Clients /> },
-          { path: '/abonnements', element: <Subscriptions /> },
+          { path: '/subscriptions', element: <Subscriptions /> },
           { path: '/clients/:id', element: <ClientDetail /> },
         ],
       },
     ],
   },
-  { path: '*', element: <Navigate to="/" replace /> },
+  { path: '*', element: <NotFoundRedirect /> },
 ]);

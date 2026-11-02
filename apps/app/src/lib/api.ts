@@ -34,11 +34,12 @@ export function createApiClient(cfg: ApiClientConfig): ApiClient {
     try {
       res = await f(`${cfg.baseUrl}${path}`, { method: opts.method ?? 'GET', headers, body });
     } catch {
-      throw new ArtemisError('internal', 'Réseau indisponible. Vérifiez votre connexion.');
+      // i18n-ignore : message destiné aux développeurs (l'utilisateur voit la traduction du code d'erreur).
+      throw new ArtemisError('network', 'Network unavailable.');
     }
     if (!res.ok) {
       const payload = (await res.json().catch(() => null)) as { error?: { code?: ErrorCode; message?: string } } | null;
-      throw new ArtemisError(payload?.error?.code ?? 'internal', payload?.error?.message ?? `Erreur ${res.status}`);
+      throw new ArtemisError(payload?.error?.code ?? 'internal', payload?.error?.message ?? `HTTP ${res.status}`);
     }
     if (opts.raw) return res as unknown as T;
     const text = await res.text();

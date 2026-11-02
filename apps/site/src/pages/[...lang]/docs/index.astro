@@ -1,0 +1,32 @@
+---
+import DocsLayout from '../../../components/DocsLayout.astro';
+import { APP_URL, MCP_URL } from '../../../config';
+import { localeStaticPaths } from '../../../i18n';
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+---
+<DocsLayout title="Démarrer avec Artemis" lead="De l'inscription au premier paiement d'agent, en Sandbox, en cinq minutes.">
+  <h2>1. Créer un compte</h2>
+  <p>Inscrivez-vous sur <a href={`${APP_URL}/signup`}>l'application</a> avec votre email (lien magique), créez votre organisation et enregistrez une passkey : elle servira à valider les dépenses.</p>
+  <h2>2. Créer un agent</h2>
+  <p>Dans <strong>Agents</strong>, créez par exemple <code>notion.agent</code>. Artemis affiche son jeton (<code>art_test_…</code> en Sandbox, <code>art_live_…</code> avec une vraie banque) <strong>une seule fois</strong> : copiez-le.</p>
+  <h2>3. Brancher l'agent</h2>
+  <p>Le plus rapide : <code>npx artemis-agents init</code> (voir <a href="/docs/cli">CLI</a>).</p>
+  <p>Le serveur MCP est à l'adresse <code>{MCP_URL}</code>, avec l'en-tête <code>Authorization: Bearer &lt;jeton&gt;</code>. Suivez le guide de votre outil : <a href="/docs/mcp-claude">Claude</a>, <a href="/docs/mcp-chatgpt">ChatGPT</a>, <a href="/docs/n8n">n8n</a> ou <a href="/docs/api">API REST</a>.</p>
+  <h2>4. Le cycle d'un achat</h2>
+  <table>
+    <thead><tr><th>Outil</th><th>Rôle</th></tr></thead>
+    <tbody>
+      <tr><td><code>request_card</code></td><td>Demande une carte : montant <strong>en centimes</strong>, devise, marchand, intention.</td></tr>
+      <tr><td><code>get_request_status</code></td><td>Suit la validation humaine.</td></tr>
+      <tr><td><code>get_card_for_checkout</code></td><td>Renvoie un <strong>lien éphémère</strong> (10 min, usage unique) : la carte s'affiche depuis la banque, sans passer par Artemis.</td></tr>
+      <tr><td><code>list_budgets</code></td><td>Budget du mois, dépensé, restant, plafond.</td></tr>
+      <tr><td><code>get_spend_summary</code></td><td>Dépenses par marchand (jour, semaine, mois).</td></tr>
+      <tr><td><code>attach_receipt</code></td><td>Joint un justificatif à l'achat.</td></tr>
+      <tr><td><code>cancel_card</code></td><td>Annule la carte si l'achat n'a plus lieu.</td></tr>
+    </tbody>
+  </table>
+  <h2>5. Passer en réel</h2>
+  <p>Choisissez un plan dans <strong>Facturation</strong>, puis connectez votre banque dans <strong>Banques</strong>. Les agents reliés à cette banque reçoivent de vraies cartes à usage unique.</p>
+</DocsLayout>

@@ -1,10 +1,19 @@
 ---
+import { LEGAL_AUTHORITATIVE_LOCALE } from '@artemis/i18n';
 import Base from '../layouts/Base.astro';
 import PageHead from './PageHead.astro';
+import { i18n, localePath, stripLocale } from '../i18n';
 interface Props { title: string }
 const { title } = Astro.props;
+const { t, locale } = i18n(Astro.url);
+const authoritative = localePath(LEGAL_AUTHORITATIVE_LOCALE, stripLocale(Astro.url.pathname));
 ---
 <Base title={title}>
-  <PageHead eyebrow="Légal" title={title} lead="Dernière mise à jour : 1er novembre 2026." />
-  <div class="ar-container section"><article class="prose"><slot /></article></div>
+  <PageHead eyebrow={t('legal.eyebrow')} title={title} lead={t('legal.updated')} />
+  <div class="ar-container section">
+    {locale !== LEGAL_AUTHORITATIVE_LOCALE && (
+      <p class="ar-solid legal-notice-lang" role="note"><Fragment set:html={t('legal.frenchPrevails', { href: authoritative })} /></p>
+    )}
+    <article class="prose"><slot /></article>
+  </div>
 </Base>

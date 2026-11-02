@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Your agents pay. You keep the final say.",
+    "description": "The European financial firewall for your AI agents: control, time saved and AI Act proof for every purchase, on the bank of your choice."
+  },
+  "layout": {
+    "skip": "Skip to content"
+  },
+  "nav": {
+    "aria": "Main navigation",
+    "home": "Artemis, home",
+    "howItWorks": "How it works",
+    "agencies": "Agencies",
+    "pricing": "Pricing",
+    "docs": "Docs",
+    "security": "Security",
+    "login": "Log in",
+    "cta": "Try it"
+  },
+  "lang": {
+    "choose": "Choose a language"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agency",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT and n8n are trademarks of their respective owners. Artemis is not affiliated with any of them.",
+    "product": "Product",
+    "policyTemplate": "Policy template",
+    "waitlist": "Waitlist",
+    "restApi": "REST API",
+    "legal": "Legal",
+    "legalNotice": "Legal notice",
+    "terms": "Terms of sale",
+    "privacy": "Privacy"
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "updated": "Last updated: 1 November 2026.",
+    "frenchPrevails": "This page is a translation provided for convenience. Only the <a href=\"{href}\">French version</a> is legally binding.",
+    "vat": "VAT not applicable, art. 293 B of the French Tax Code (CGI)",
+    "status": "Sole trader (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (pages and API); Supabase, Inc. — data hosted in the European Union (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Documentation",
+    "start": "Get started",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI and Claude skill",
+    "api": "REST API",
+    "rules": "Rules and approval"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "eyebrow": "Error 404",
+    "headline": "This page doesn't exist.",
+    "lead": "The link may be out of date. Go back to the home page or browse the documentation.",
+    "home": "Home"
+  }
+}

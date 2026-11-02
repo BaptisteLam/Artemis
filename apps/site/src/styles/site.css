@@ -195,3 +195,17 @@ html, body { overflow-x: clip; }
 .europe-list span { font-size: 14px; color: var(--ar-on-canvas-muted); }
 @media (max-width: 900px) { .honest, .europe-inner { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .europe-list { grid-template-columns: 1fr; } }
+
+/* Sélecteur de langue */
+.lang-switch { position: relative; }
+.lang-switch summary { list-style: none; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; font: 500 13px/1 var(--ar-font-mono, monospace); color: var(--ar-ink-2, inherit); padding: 6px 8px; border-radius: 8px; }
+.lang-switch summary::-webkit-details-marker { display: none; }
+.lang-switch summary:hover, .lang-switch[open] summary { background: rgba(255, 255, 255, 0.08); }
+.lang-switch ul { position: absolute; right: 0; top: calc(100% + 8px); z-index: 50; margin: 0; padding: 6px; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(120px, 1fr)); gap: 2px; max-height: min(70vh, 520px); overflow: auto; background: var(--ar-surface, #0b0b2e); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; box-shadow: 0 18px 48px rgba(0, 0, 40, 0.45); backdrop-filter: blur(18px); }
+.lang-switch li a { display: block; padding: 8px 10px; border-radius: 8px; font-size: 14px; white-space: nowrap; }
+.lang-switch li a:hover, .lang-switch li a[aria-current='true'] { background: rgba(255, 255, 255, 0.08); }
+.lang-switch li a[aria-current='true'] { font-weight: 600; }
+@media (max-width: 520px) { .lang-switch ul { position: fixed; left: 16px; right: 16px; top: 64px; grid-template-columns: repeat(2, 1fr); } }
+
+/* Avertissement : traduction des pages juridiques */
+.legal-notice-lang { padding: 14px 18px; margin: 0 0 32px; font-size: 14px; }

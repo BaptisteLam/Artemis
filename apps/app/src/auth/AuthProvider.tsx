@@ -72,6 +72,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
 export function useAuth(): AuthState {
   const ctx = useContext(AuthContext);
+  // i18n-ignore : message destiné aux développeurs.
   if (!ctx) throw new Error('useAuth hors AuthProvider');
   return ctx;
 }

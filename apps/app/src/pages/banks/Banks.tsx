@@ -148,7 +148,7 @@ export function Banks() {
           <section className="ar-solid">
             <h2 className="ar-h3" style={{ marginBottom: 12 }}>Connecter une vraie banque</h2>
             {paid ? <ConnectForm onDone={() => void reload()} /> : (
-              <div className="alert alert-info">La connexion d'une banque réelle est incluse à partir du plan Builder (29 €/mois). <Link to="/facturation">Choisir un plan →</Link></div>
+              <div className="alert alert-info">La connexion d'une banque réelle est incluse à partir du plan Builder (29 €/mois). <Link to="/billing">Choisir un plan →</Link></div>
             )}
           </section>
         ) : null}

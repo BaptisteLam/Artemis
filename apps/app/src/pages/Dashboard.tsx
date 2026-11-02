@@ -22,7 +22,7 @@ export function Dashboard() {
           <Glass tone="clear">
             <span className="ar-micro ar-muted">À valider</span>
             <div className="ar-amount ar-amount-xl">{data?.pending_count ?? 0}</div>
-            {data && data.pending_count > 0 ? <Link to="/demandes?status=pending" style={{ color: 'inherit' }}>Ouvrir la file →</Link> : null}
+            {data && data.pending_count > 0 ? <Link to="/requests?status=pending" style={{ color: 'inherit' }}>Ouvrir la file →</Link> : null}
           </Glass>
           <Glass tone="clear">
             <span className="ar-micro ar-muted">Demandes du mois</span>
@@ -36,13 +36,13 @@ export function Dashboard() {
         {data ? (
           <div className="two-col">
             <section className="ar-solid">
-              <div className="panel-title"><h2 className="ar-h3">Dernières demandes</h2><Link to="/demandes">Tout voir →</Link></div>
+              <div className="panel-title"><h2 className="ar-h3">Dernières demandes</h2><Link to="/requests">Tout voir →</Link></div>
               {data.recent_requests.length === 0 ? (
                 <p className="ar-muted">Aucune demande ce mois-ci. Branchez un agent depuis la page <Link to="/agents">Agents</Link>.</p>
               ) : (
                 <div className="list">
                   {data.recent_requests.map((r) => (
-                    <Link key={r.id} to={`/demandes/${r.id}`} className="list-item">
+                    <Link key={r.id} to={`/requests/${r.id}`} className="list-item">
                       <MerchantTile name={r.merchant} />
                       <div className="grow">
                         <div>{r.merchant}</div>

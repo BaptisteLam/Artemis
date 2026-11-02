@@ -35,7 +35,7 @@ export function Clients() {
       <PageStage title="Clients" lead="Un espace par client : ses agents, son budget mensuel, votre marge et un rapport de refacturation prêt à envoyer." />
       <div className="ar-container page-body ar-stack" style={{ gap: 24 }}>
         <ErrorAlert error={error} />
-        {!allowed ? <div className="alert alert-info">Les espaces clients sont inclus dans le plan Agences (249 € + 15 € par client actif). <Link to="/facturation">Voir les plans →</Link></div> : null}
+        {!allowed ? <div className="alert alert-info">Les espaces clients sont inclus dans le plan Agences (249 € + 15 € par client actif). <Link to="/billing">Voir les plans →</Link></div> : null}
         {loading && !data ? <Loading /> : null}
         {data ? (
           <section className="ar-solid ar-table-wrap">

@@ -1,5 +1,5 @@
 import { Glass } from '@artemis/ui';
-import { formatAmount } from '@artemis/shared';
+import { formatAmount } from '../../lib/format';
 import { useData } from '../../lib/useData';
 import type { OrganizationRow } from '../../lib/types';
 import { ErrorAlert, Loading, PageStage } from '../../components';

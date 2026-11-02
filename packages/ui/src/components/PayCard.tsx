@@ -4,7 +4,8 @@ import { LOGO_BLADE, LOGO_BLOCK, LOGO_VIEWBOX } from '../logo/paths';
 export type PayCardVariant = 'cobalt' | 'glass' | 'ink';
 export type PayCardState = 'active' | 'pending_bank_sca' | 'used' | 'canceled' | 'expired';
 
-const STAMP: Partial<Record<PayCardState, string>> = { used: 'Utilisée', canceled: 'Annulée', expired: 'Expirée', pending_bank_sca: 'En attente' };
+/** Libellés par défaut (anglais) ; l'app passe les libellés traduits via `stampLabel` et `ariaLabel`. */
+const STAMP: Partial<Record<PayCardState, string>> = { used: 'Used', canceled: 'Cancelled', expired: 'Expired', pending_bank_sca: 'Pending' };
 
 /** Carte bancaire virtuelle réaliste (format ISO ID-1). N'affiche jamais le numéro complet. */
 export function PayCard({
@@ -12,10 +13,12 @@ export function PayCard({
   holder,
   expMonth,
   expYear,
-  tag = 'Usage unique',
+  tag = 'Single use',
   variant = 'cobalt',
   state = 'active',
   corner,
+  stampLabel,
+  ariaLabel,
   className = '',
   style,
 }: {
@@ -27,17 +30,21 @@ export function PayCard({
   variant?: PayCardVariant;
   state?: PayCardState;
   corner?: ReactNode;
+  /** Texte du tampon (carte utilisée, annulée…), déjà traduit. */
+  stampLabel?: string;
+  /** Description accessible, déjà traduite. */
+  ariaLabel?: string;
   className?: string;
   style?: CSSProperties;
 }) {
   const exp = `${String(expMonth).padStart(2, '0')}/${String(expYear).slice(-2)}`;
-  const stamp = STAMP[state];
+  const stamp = state === 'active' ? undefined : (stampLabel ?? STAMP[state]);
   return (
     <div
       className={`ar-paycard ar-paycard--${variant} ${className}`.trim()}
       data-state={state}
       role="img"
-      aria-label={`Carte virtuelle se terminant par ${last4}, titulaire ${holder}, expire ${exp}`}
+      aria-label={ariaLabel ?? `Virtual card ending in ${last4}, holder ${holder}, expires ${exp}`}
       style={style}
     >
       <div className="ar-paycard-inner" aria-hidden="true">

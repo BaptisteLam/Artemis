@@ -24,7 +24,7 @@ export function Billing() {
   const portal = useAction(async () => {
     window.location.href = (await api<{ url: string }>('/app/billing/portal', { method: 'POST' })).url;
   });
-  const status = params.get('statut');
+  const status = params.get('status');
   const limit = org?.limits.requestsPerMonth;
   return (
     <>
@@ -35,7 +35,7 @@ export function Billing() {
       />
       <div className="ar-container page-body ar-stack" style={{ gap: 24 }}>
         {status === 'ok' ? <div className="alert alert-info">Merci ! Votre abonnement est en cours d'activation (quelques secondes).</div> : null}
-        {status === 'annule' ? <div className="alert alert-warn">Paiement annulé, aucun changement.</div> : null}
+        {status === 'canceled' ? <div className="alert alert-warn">Paiement annulé, aucun changement.</div> : null}
         {org && org.organization.plan !== 'sandbox' && current === 'sandbox' ? (
           <div className="alert alert-error">Votre abonnement n'est plus actif ({org.organization.subscription_status ?? 'inconnu'}). Les fonctions payantes sont suspendues : mettez à jour votre moyen de paiement.</div>
         ) : null}

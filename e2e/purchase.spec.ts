@@ -11,7 +11,7 @@ test('parcours complet en Sandbox : inscription → agent → demande → passke
   });
 
   const email = `alice+${Date.now()}@exemple.fr`;
-  await page.goto('/inscription');
+  await page.goto('/signup');
   await page.getByLabel('Email professionnel').fill(email);
   await page.getByRole('button', { name: 'Entrer (mode dev)' }).click();
 
@@ -37,7 +37,7 @@ test('parcours complet en Sandbox : inscription → agent → demande → passke
   expect(status).toBe('pending_approval');
 
   // L'humain valide avec sa passkey
-  await page.goto('/demandes');
+  await page.goto('/requests');
   await page.getByRole('link', { name: /Notion/ }).first().click();
   await page.getByRole('button', { name: 'Approuver avec ma passkey' }).click();
   await expect(page.getByText('Mandat signé par passkey')).toBeVisible();

@@ -1,6 +1,7 @@
 ---
-import { formatAmount } from '@artemis/shared';
+import { i18n } from '../i18n';
 interface Props { cents: number; size?: 'xl' | 'md' | 'sm'; sign?: boolean }
 const { cents, size = 'md', sign = false } = Astro.props;
+const { money } = i18n(Astro.url);
 ---
-<span class:list={['ar-amount', `ar-amount-${size}`, sign && cents > 0 && 'ar-amount-gain', sign && cents < 0 && 'ar-amount-loss']}>{sign && cents !== 0 ? (cents > 0 ? '↑ ' : '↓ ') : ''}{formatAmount(cents, 'EUR', { sign })}</span>
+<span class:list={['ar-amount', `ar-amount-${size}`, sign && cents > 0 && 'ar-amount-gain', sign && cents < 0 && 'ar-amount-loss']}>{sign && cents !== 0 ? (cents > 0 ? '↑ ' : '↓ ') : ''}{money(cents, { sign })}</span>

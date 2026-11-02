@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Pricing",
+    "description": "Free Sandbox, then {a}, {b}, {c} or {d} per month. No commission on your spending.",
+    "headline": "One simple subscription. No commission.",
+    "lead": "You only pay for the software. Cards are issued by your bank, under your usual banking plan.",
+    "popular": "Most popular",
+    "from": "from {price}",
+    "perMonth": "/ month",
+    "start": "Get started",
+    "choose": "Choose {plan}",
+    "mandates": "{count} mandates / month",
+    "sandbox": {
+      "pitch": "Try it with a simulated bank.",
+      "i1": "1 agent",
+      "i2": "Simulated bank",
+      "i3": "{count} simulated mandates / month",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "For a freelancer or developer and their agents.",
+      "i1": "3 agents",
+      "i2": "1 connected bank",
+      "i4": "Passkey approval",
+      "i5": "Anti-injection guardrails"
+    },
+    "team": {
+      "pitch": "For a startup of 5 to 50 people.",
+      "i1": "10 agents",
+      "i2": "2 banks",
+      "i4": "Slack and approver quorum",
+      "i5": "Subscriptions, FEC export"
+    },
+    "agency": {
+      "pitch": "For automation agencies.",
+      "i1": "Unlimited clients, 25 agents",
+      "i3": "Budget and margin per client",
+      "i4": "Monthly report to re-invoice",
+      "i5": "+ {price} per active client"
+    },
+    "business": {
+      "pitch": "For regulated scale-ups.",
+      "i1": "Unlimited",
+      "i2": "AI Act file and report",
+      "i3": "Signed audit log export",
+      "i4": "Priority support"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "Are there per-card fees?",
+      "a1": "Not from Artemis. Your bank applies its own plan (virtual cards are included in most Qonto and Revolut Business plans; Stripe Issuing charges according to its own pricing).",
+      "q2": "What happens if I go over my quota?",
+      "a2": "On a paid plan, your agents keep going: each mandate beyond the quota is billed {price} at the end of the month. On Sandbox, requests are refused with the code <code>quota_exceeded</code>.",
+      "q3": "How is the {plan} plan billed?",
+      "a3": "{base} per month, plus {client} per active client, meaning each client for whom at least one mandate was created during the month.",
+      "q4": "Can I cancel at any time?",
+      "a4": "Yes, from the Billing area. The subscription runs until the end of the paid period; your data stays exportable.",
+      "q5": "VAT",
+      "a5": "Prices shown are net."
+    }
+  }
+}

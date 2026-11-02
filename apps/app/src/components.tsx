@@ -1,7 +1,8 @@
 import { useState, type ReactNode } from 'react';
 import { Badge, Button, Stage } from '@artemis/ui';
 import type { ArtemisError } from '@artemis/shared';
-import { STATUS_LABEL } from './lib/format';
+import { statusLabel } from './lib/format';
+import { t, useI18n } from './i18n';
 
 export function PageStage({ eyebrow, title, lead, children, actions }: { eyebrow?: string; title: string; lead?: string; children?: ReactNode; actions?: ReactNode }) {
   return (
@@ -22,28 +23,41 @@ export function PageStage({ eyebrow, title, lead, children, actions }: { eyebrow
 }
 
 export function StatusBadge({ status }: { status: string }) {
-  const s = STATUS_LABEL[status] ?? { label: status, tone: 'neutral' as const };
+  const s = statusLabel(status);
   return <Badge tone={s.tone} label={s.label} live={status === 'pending'} />;
+}
+
+/** Message d'erreur traduit : selon le code renvoyé par l'API (`errors.<code>`), sinon le message reçu. */
+export function errorMessage(error: ArtemisError | Error): string {
+  const code = (error as ArtemisError).code;
+  if (code) {
+    const key = `errors.${code}`;
+    const msg = t(key);
+    if (msg !== key) return msg;
+  }
+  return error.message;
 }
 
 export function ErrorAlert({ error }: { error: ArtemisError | Error | null | undefined }) {
   if (!error) return null;
   return (
     <div className="alert alert-error" role="alert">
-      {error.message}
+      {errorMessage(error)}
     </div>
   );
 }
 
-export function Loading({ label = 'Chargement…' }: { label?: string }) {
+export function Loading({ label }: { label?: string }) {
+  const { t } = useI18n();
   return (
     <p className="ar-muted" role="status" aria-live="polite">
-      {label}
+      {label ?? t('common.loading')}
     </p>
   );
 }
 
-export function CopyButton({ text, label = 'Copier' }: { text: string; label?: string }) {
+export function CopyButton({ text, label }: { text: string; label?: string }) {
+  const { t } = useI18n();
   const [done, setDone] = useState(false);
   return (
     <Button
@@ -61,7 +75,7 @@ export function CopyButton({ text, label = 'Copier' }: { text: string; label?: s
       }}
       style={{ background: 'var(--ar-surface)' }}
     >
-      {done ? 'Copié' : label}
+      {done ? t('common.copied') : (label ?? t('common.copy'))}
     </Button>
   );
 }

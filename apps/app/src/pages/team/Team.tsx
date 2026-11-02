@@ -4,7 +4,7 @@ import { useOrg } from '../../lib/OrgProvider';
 import { useData } from '../../lib/useData';
 import type { MembershipRow, Role } from '../../lib/types';
 import { CopyButton, ErrorAlert, Loading, PageStage, useAction } from '../../components';
-import { formatDate, ROLE_LABEL } from '../../lib/format';
+import { formatDate, ROLES, roleLabel } from '../../lib/format';
 
 interface Invitation { id: string; email: string; role: Role; expires_at: string }
 
@@ -54,9 +54,9 @@ export function Team() {
                     <td>
                       {can('owner') && m.user_id !== me?.user.id ? (
                         <select className="ar-select" style={{ minHeight: 32 }} value={m.role} onChange={(e) => void changeRole.run(m.user_id, e.target.value as Role)}>
-                          {Object.entries(ROLE_LABEL).map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+                          {ROLES.map((v) => <option key={v} value={v}>{roleLabel(v)}</option>)}
                         </select>
-                      ) : ROLE_LABEL[m.role]}
+                      ) : roleLabel(m.role)}
                     </td>
                     <td>{formatDate(m.created_at)}</td>
                     <td>{manage && m.user_id !== me?.user.id ? <Button variant="ghost" size="sm" onClick={() => void removeMember.run(m.user_id)}>Retirer</Button> : null}</td>
@@ -73,7 +73,7 @@ export function Team() {
               <Field label="Email"><input className="ar-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required /></Field>
               <Field label="Rôle">
                 <select className="ar-select" value={role} onChange={(e) => setRole(e.target.value as Role)}>
-                  {Object.entries(ROLE_LABEL).filter(([v]) => v !== 'owner' || can('owner')).map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+                  {ROLES.filter((v) => v !== 'owner' || can('owner')).map((v) => <option key={v} value={v}>{roleLabel(v)}</option>)}
                 </select>
               </Field>
               <div><Button type="submit" disabled={invite.busy}>Envoyer l'invitation</Button></div>
@@ -85,7 +85,7 @@ export function Team() {
               <div className="list">
                 {invites.data.invitations.map((i) => (
                   <div key={i.id} className="list-item">
-                    <div className="grow">{i.email}<div className="sub">{ROLE_LABEL[i.role]} · expire le {formatDate(i.expires_at)}</div></div>
+                    <div className="grow">{i.email}<div className="sub">{roleLabel(i.role)} · expire le {formatDate(i.expires_at)}</div></div>
                     <Button variant="ghost" size="sm" onClick={() => void revoke.run(i.id)}>Révoquer</Button>
                   </div>
                 ))}

@@ -31,7 +31,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^3.2.4
-        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1)
+        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)
 
   apps/api:
     dependencies:
@@ -71,7 +71,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^3.2.4
-        version: 3.2.7(@types/debug@4.1.13)(@types/node@22.20.5)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1)
+        version: 3.2.7(@types/debug@4.1.13)(@types/node@22.20.5)(jsdom@25.0.1)
       wrangler:
         specifier: ^4.0.0
         version: 4.156.0(@cloudflare/workers-types@4.20260702.1)(@types/node@22.20.5)
@@ -81,6 +81,9 @@ importers:
       '@artemis/db':
         specifier: workspace:*
         version: link:../../packages/db
+      '@artemis/i18n':
+        specifier: workspace:*
+        version: link:../../packages/i18n
       '@artemis/shared':
         specifier: workspace:*
         version: link:../../packages/shared
@@ -126,13 +129,16 @@ importers:
         version: 5.4.21(@types/node@26.6.6)
       vitest:
         specifier: ^3.2.4
-        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1)
+        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)
       wrangler:
         specifier: ^4.0.0
         version: 4.156.0(@types/node@26.6.6)
 
   apps/site:
     dependencies:
+      '@artemis/i18n':
+        specifier: workspace:*
+        version: link:../../packages/i18n
       '@artemis/shared':
         specifier: workspace:*
         version: link:../../packages/shared
@@ -154,7 +160,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^3.2.4
-        version: 3.2.7(@types/debug@4.1.13)(@types/node@22.20.5)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1)
+        version: 3.2.7(@types/debug@4.1.13)(@types/node@22.20.5)(jsdom@25.0.1)
       wrangler:
         specifier: ^4.0.0
         version: 4.156.0(@cloudflare/workers-types@4.20260702.1)(@types/node@22.20.5)
@@ -169,7 +175,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^3.2.4
-        version: 3.2.7(@types/debug@4.1.13)(@types/node@22.20.5)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1)
+        version: 3.2.7(@types/debug@4.1.13)(@types/node@22.20.5)(jsdom@25.0.1)
 
   packages/connectors:
     dependencies:
@@ -182,7 +188,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^3.2.4
-        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1)
+        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)
 
   packages/db:
     devDependencies:
@@ -197,7 +203,20 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^3.2.4
-        version: 3.2.7(@types/debug@4.1.13)(@types/node@22.20.5)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1)
+        version: 3.2.7(@types/debug@4.1.13)(@types/node@22.20.5)(jsdom@25.0.1)
+
+  packages/i18n:
+    dependencies:
+      '@astrojs/compiler':
+        specifier: ^2.13.1
+        version: 2.13.1
+      typescript:
+        specifier: ^5.6.3
+        version: 5.9.3
+    devDependencies:
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)
 
   packages/policy:
     dependencies:
@@ -210,7 +229,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^3.2.4
-        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1)
+        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)
 
   packages/shared:
     dependencies:
@@ -223,10 +242,13 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^3.2.4
-        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1)
+        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)
 
   packages/ui:
     dependencies:
+      '@artemis/i18n':
+        specifier: workspace:*
+        version: link:../i18n
       '@artemis/shared':
         specifier: workspace:*
         version: link:../shared
@@ -254,7 +276,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^3.2.4
-        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1)
+        version: 3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)
 
 packages:
 
@@ -3366,46 +3388,6 @@ packages:
       yaml:
         optional: true
 
-  vite@7.3.7:
-    resolution: {integrity: sha512-AHEzTORMbi7/7aXp7w7KZ5+DCUdSeLsJz0grY8xHpc9DHdYb0vQu6DqJfm2tOw3gDExNgPgnJTXxM6syYFHaCA==}
-    engines: {node: ^20.19.0 || >=22.12.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^20.19.0 || >=22.12.0
-      jiti: '>=1.21.0'
-      less: ^4.0.0
-      lightningcss: ^1.21.0
-      sass: ^1.70.0
-      sass-embedded: ^1.70.0
-      stylus: '>=0.54.8'
-      sugarss: ^5.0.0
-      terser: ^5.16.0
-      tsx: ^4.8.1
-      yaml: ^2.4.2
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      jiti:
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      sass-embedded:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-      tsx:
-        optional: true
-      yaml:
-        optional: true
-
   vitefu@1.1.3:
     resolution: {integrity: sha512-ub4okH7Z5KLjb6hDyjqrGXqWtWvoYdU3IGm/NorpgHncKoLTCfRIbvlhBm7r0YstIaQRYlp4yEbFqDcKSzXSSg==}
     peerDependencies:
@@ -4985,13 +4967,13 @@ snapshots:
       chai: 5.3.3
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.2.7(vite@7.3.7(@types/node@26.6.6)(tsx@4.23.15)(yaml@2.9.1))':
+  '@vitest/mocker@3.2.7(vite@5.4.21(@types/node@26.6.6))':
     dependencies:
       '@vitest/spy': 3.2.7
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.3.7(@types/node@26.6.6)(tsx@4.23.15)(yaml@2.9.1)
+      vite: 5.4.21(@types/node@26.6.6)
 
   '@vitest/pretty-format@3.2.7':
     dependencies:
@@ -6982,43 +6964,15 @@ snapshots:
       tsx: 4.23.15
       yaml: 2.9.1
 
-  vite@7.3.7(@types/node@22.20.5)(tsx@4.23.15)(yaml@2.9.1):
-    dependencies:
-      esbuild: 0.28.2
-      fdir: 6.5.0(picomatch@4.0.7)
-      picomatch: 4.0.7
-      postcss: 8.5.32
-      rollup: 4.67.4
-      tinyglobby: 0.2.17
-    optionalDependencies:
-      '@types/node': 22.20.5
-      fsevents: 2.3.3
-      tsx: 4.23.15
-      yaml: 2.9.1
-
-  vite@7.3.7(@types/node@26.6.6)(tsx@4.23.15)(yaml@2.9.1):
-    dependencies:
-      esbuild: 0.28.2
-      fdir: 6.5.0(picomatch@4.0.7)
-      picomatch: 4.0.7
-      postcss: 8.5.32
-      rollup: 4.67.4
-      tinyglobby: 0.2.17
-    optionalDependencies:
-      '@types/node': 26.6.6
-      fsevents: 2.3.3
-      tsx: 4.23.15
-      yaml: 2.9.1
-
   vitefu@1.1.3(vite@6.4.5(@types/node@22.20.5)(tsx@4.23.15)(yaml@2.9.1)):
     optionalDependencies:
       vite: 6.4.5(@types/node@22.20.5)(tsx@4.23.15)(yaml@2.9.1)
 
-  vitest@3.2.7(@types/debug@4.1.13)(@types/node@22.20.5)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1):
+  vitest@3.2.7(@types/debug@4.1.13)(@types/node@22.20.5)(jsdom@25.0.1):
     dependencies:
       '@types/chai': 5.2.3
       '@vitest/expect': 3.2.7
-      '@vitest/mocker': 3.2.7(vite@7.3.7(@types/node@26.6.6)(tsx@4.23.15)(yaml@2.9.1))
+      '@vitest/mocker': 3.2.7(vite@5.4.21(@types/node@26.6.6))
       '@vitest/pretty-format': 3.2.7
       '@vitest/runner': 3.2.7
       '@vitest/snapshot': 3.2.7
@@ -7036,7 +6990,7 @@ snapshots:
       tinyglobby: 0.2.17
       tinypool: 1.1.1
       tinyrainbow: 2.0.0
-      vite: 7.3.7(@types/node@22.20.5)(tsx@4.23.15)(yaml@2.9.1)
+      vite: 5.4.21(@types/node@22.20.5)
       vite-node: 3.2.4(@types/node@22.20.5)
       why-is-node-running: 2.3.0
     optionalDependencies:
@@ -7044,7 +6998,6 @@ snapshots:
       '@types/node': 22.20.5
       jsdom: 25.0.1
     transitivePeerDependencies:
-      - jiti
       - less
       - lightningcss
       - msw
@@ -7054,14 +7007,12 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-      - tsx
-      - yaml
 
-  vitest@3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1)(tsx@4.23.15)(yaml@2.9.1):
+  vitest@3.2.7(@types/debug@4.1.13)(@types/node@26.6.6)(jsdom@25.0.1):
     dependencies:
       '@types/chai': 5.2.3
       '@vitest/expect': 3.2.7
-      '@vitest/mocker': 3.2.7(vite@7.3.7(@types/node@26.6.6)(tsx@4.23.15)(yaml@2.9.1))
+      '@vitest/mocker': 3.2.7(vite@5.4.21(@types/node@26.6.6))
       '@vitest/pretty-format': 3.2.7
       '@vitest/runner': 3.2.7
       '@vitest/snapshot': 3.2.7
@@ -7079,7 +7030,7 @@ snapshots:
       tinyglobby: 0.2.17
       tinypool: 1.1.1
       tinyrainbow: 2.0.0
-      vite: 7.3.7(@types/node@26.6.6)(tsx@4.23.15)(yaml@2.9.1)
+      vite: 5.4.21(@types/node@26.6.6)
       vite-node: 3.2.4(@types/node@26.6.6)
       why-is-node-running: 2.3.0
     optionalDependencies:
@@ -7087,7 +7038,6 @@ snapshots:
       '@types/node': 26.6.6
       jsdom: 25.0.1
     transitivePeerDependencies:
-      - jiti
       - less
       - lightningcss
       - msw
@@ -7097,8 +7047,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-      - tsx
-      - yaml
 
   volar-service-css@0.0.71(@volar/language-service@2.4.30(typescript@5.9.3)):
     dependencies:

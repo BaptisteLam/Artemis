@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { PLAN_LIMITS } from '@artemis/shared';
+import { APP_URL } from '../../config';
+import { i18n, localeStaticPaths } from '../../i18n';
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+const { t, money, number, locale } = i18n(Astro.url);
+const eur = (n: number) => money(n * 100, { whole: true });
+const plans = [
+  { id: 'sandbox', items: [t('pricing.sandbox.i1'), t('pricing.sandbox.i2'), t('pricing.sandbox.i3', { count: number(PLAN_LIMITS.sandbox.requestsPerMonth) }), t('pricing.sandbox.i4')] },
+  { id: 'builder', items: [t('pricing.builder.i1'), t('pricing.builder.i2'), t('pricing.mandates', { count: number(PLAN_LIMITS.builder.requestsPerMonth) }), t('pricing.builder.i4'), t('pricing.builder.i5')] },
+  { id: 'team', items: [t('pricing.team.i1'), t('pricing.team.i2'), t('pricing.mandates', { count: number(PLAN_LIMITS.team.requestsPerMonth) }), t('pricing.team.i4'), t('pricing.team.i5')] },
+  { id: 'agency', featured: true, items: [t('pricing.agency.i1'), t('pricing.mandates', { count: number(PLAN_LIMITS.agency.requestsPerMonth) }), t('pricing.agency.i3'), t('pricing.agency.i4'), t('pricing.agency.i5', { price: eur(15) })] },
+  { id: 'business', items: [t('pricing.business.i1'), t('pricing.business.i2'), t('pricing.business.i3'), t('pricing.business.i4')] },
+] as const;
+const overage = money(25);
+---
+<Base title={t('pricing.title')} description={t('pricing.description', { a: eur(29), b: eur(99), c: eur(249), d: eur(690) })}>
+  <PageHead eyebrow={t('pricing.title')} title={t('pricing.headline')} lead={t('pricing.lead')} />
+  <div class="ar-container section">
+    <div class="price-grid">
+      {plans.map((p) => (
+        <div class:list={['ar-solid', 'price', 'featured' in p && 'price-featured']}>
+          <div class="ar-spread"><h2 class="ar-h3">{t(`plans.${p.id}`)}</h2>{'featured' in p && <span class="ar-badge ar-badge-info"><span class="ar-badge-dot"></span>{t('pricing.popular')}</span>}</div>
+          <div><span class="ar-amount ar-amount-xl">{p.id === 'business' ? t('pricing.from', { price: eur(PLAN_LIMITS[p.id].priceEur) }) : eur(PLAN_LIMITS[p.id].priceEur)}</span> <span class="ar-muted ar-small">{t('pricing.perMonth')}</span></div>
+          <p class="ar-muted ar-small" style="margin:0">{t(`pricing.${p.id}.pitch`)}</p>
+          <ul>{p.items.map((i) => <li>{i}</li>)}</ul>
+          <a class:list={['ar-btn', 'featured' in p ? 'ar-btn-primary' : 'ar-btn-ghost']} style="margin-top:auto" href={`${APP_URL}/signup?plan=${p.id}&lang=${locale}`}>{p.id === 'sandbox' ? t('pricing.start') : t('pricing.choose', { plan: t(`plans.${p.id}`) })}</a>
+        </div>
+      ))}
+    </div>
+    <article class="prose" style="margin-top:64px">
+      <h2>{t('pricing.faq.title')}</h2>
+      <h3>{t('pricing.faq.q1')}</h3>
+      <p>{t('pricing.faq.a1')}</p>
+      <h3>{t('pricing.faq.q2')}</h3>
+      <p><Fragment set:html={t('pricing.faq.a2', { price: overage })} /></p>
+      <h3>{t('pricing.faq.q3', { plan: t('plans.agency') })}</h3>
+      <p>{t('pricing.faq.a3', { base: eur(249), client: eur(15) })}</p>
+      <h3>{t('pricing.faq.q4')}</h3>
+      <p>{t('pricing.faq.a4')}</p>
+      <h3>{t('pricing.faq.q5')}</h3>
+      <p>{t('legal.vat')}. {t('pricing.faq.a5')}</p>
+    </article>
+  </div>
+</Base>

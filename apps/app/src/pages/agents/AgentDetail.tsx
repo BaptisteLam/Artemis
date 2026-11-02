@@ -94,11 +94,11 @@ export function AgentDetail() {
               {token ? <McpConfig token={token} /> : null}
             </section>
             <section className="ar-solid">
-              <div className="panel-title"><h2 className="ar-h3">Demandes récentes</h2><Link to={`/demandes?agent=${agent.id}`}>Tout voir →</Link></div>
+              <div className="panel-title"><h2 className="ar-h3">Demandes récentes</h2><Link to={`/requests?agent=${agent.id}`}>Tout voir →</Link></div>
               {reqs.data?.requests.length ? (
                 <div className="list">
                   {reqs.data.requests.map((r) => (
-                    <Link key={r.id} to={`/demandes/${r.id}`} className="list-item">
+                    <Link key={r.id} to={`/requests/${r.id}`} className="list-item">
                       <div className="grow"><div>{r.merchant}</div><div className="sub">{relativeTime(r.created_at)}</div></div>
                       <Amount cents={Number(r.amount_cents)} currency={r.currency} size="sm" />
                       <StatusBadge status={r.status} />

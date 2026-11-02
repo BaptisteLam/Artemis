@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Vos agents paient. Vous gardez le dernier mot.",
+    "description": "Le pare-feu financier européen de vos agents IA : contrôle, gain de temps et preuve AI Act de chaque dépense, sur la banque de votre choix."
+  },
+  "layout": {
+    "skip": "Aller au contenu"
+  },
+  "nav": {
+    "aria": "Navigation principale",
+    "home": "Artemis, accueil",
+    "howItWorks": "Fonctionnement",
+    "agencies": "Agences",
+    "pricing": "Tarifs",
+    "docs": "Docs",
+    "security": "Sécurité",
+    "login": "Connexion",
+    "cta": "Essayer"
+  },
+  "lang": {
+    "choose": "Choisir une langue"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agences",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT et n8n sont des marques de leurs propriétaires respectifs. Artemis n'est affilié à aucun d'eux.",
+    "product": "Produit",
+    "policyTemplate": "Modèle de politique",
+    "waitlist": "Liste d'attente",
+    "restApi": "API REST",
+    "legal": "Légal",
+    "legalNotice": "Mentions légales",
+    "terms": "CGV",
+    "privacy": "Confidentialité"
+  },
+  "legal": {
+    "eyebrow": "Légal",
+    "updated": "Dernière mise à jour : 1er novembre 2026.",
+    "frenchPrevails": "Cette page est une traduction fournie pour information. Seule la <a href=\"{href}\">version française</a> fait foi.",
+    "vat": "TVA non applicable, art. 293 B du CGI",
+    "status": "Entrepreneur individuel (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (pages et API) ; Supabase, Inc. — données hébergées dans l’Union européenne (Francfort)."
+  },
+  "docsNav": {
+    "eyebrow": "Documentation",
+    "start": "Démarrer",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI et skill Claude",
+    "api": "API REST",
+    "rules": "Règles et validation"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "eyebrow": "Erreur 404",
+    "headline": "Cette page n'existe pas.",
+    "lead": "Le lien est peut-être ancien. Revenez à l'accueil ou consultez la documentation.",
+    "home": "Accueil"
+  }
+}

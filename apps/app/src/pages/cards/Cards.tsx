@@ -18,7 +18,7 @@ export function Cards() {
           {data.cards.length > 0 ? (
             <div className="paycard-grid">
               {data.cards.slice(0, 6).map((c) => (
-                <Link key={c.id} to={`/demandes/${c.request_id}`} className="paycard-link" aria-label={`Carte •••• ${c.last4}`}>
+                <Link key={c.id} to={`/requests/${c.request_id}`} className="paycard-link" aria-label={`Carte •••• ${c.last4}`}>
                   <PayCard last4={c.last4} holder={c.provider_card_id.startsWith('sbx_') ? 'sandbox' : 'agent'} expMonth={c.exp_month} expYear={c.exp_year} state={c.status} variant={c.status === 'active' ? 'cobalt' : 'ink'} tag={c.revealed_at ? 'Remise à l’agent' : 'Usage unique'} />
                 </Link>
               ))}
@@ -36,7 +36,7 @@ export function Cards() {
                       <td>{formatDateTime(c.expires_at)}</td>
                       <td>{c.revealed_at ? relativeTime(c.revealed_at) : 'Non'}</td>
                       <td><StatusBadge status={c.status} /></td>
-                      <td><Link to={`/demandes/${c.request_id}`}>Demande →</Link></td>
+                      <td><Link to={`/requests/${c.request_id}`}>Demande →</Link></td>
                     </tr>
                   ))}
                 </tbody>

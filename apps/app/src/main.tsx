@@ -7,17 +7,22 @@ import './app.css';
 import { AuthProvider } from './auth/AuthProvider';
 import { OrgProvider } from './lib/OrgProvider';
 import { router } from './router';
+import { I18nProvider, initI18n } from './i18n';
 
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => void navigator.serviceWorker.register('/sw.js').catch(() => undefined));
 }
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <AuthProvider>
-      <OrgProvider>
-        <RouterProvider router={router} />
-      </OrgProvider>
-    </AuthProvider>
-  </StrictMode>,
+void initI18n().then(() =>
+  createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+      <AuthProvider>
+        <OrgProvider>
+          <I18nProvider>
+            <RouterProvider router={router} />
+          </I18nProvider>
+        </OrgProvider>
+      </AuthProvider>
+    </StrictMode>,
+  ),
 );

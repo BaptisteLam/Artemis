@@ -9,11 +9,11 @@ afterEach(cleanup);
 describe('ui', () => {
   it('Amount renders a true minus', () => {
     const { container } = render(<Amount cents={-4210} />);
-    expect(container.textContent).toContain('−42,10');
+    expect(container.textContent).toContain('−€42.10');
   });
   it('Amount with sign shows plus and arrow', () => {
     const { container } = render(<Amount cents={2499} sign />);
-    expect(container.textContent).toContain('+24,99');
+    expect(container.textContent).toContain('+€24.99');
     expect(container.textContent).toContain('↑');
   });
   it('Badge renders its label', () => {
@@ -27,5 +27,15 @@ describe('ui', () => {
   it('tokens.css defines the electric blue canvas', () => {
     const css = readFileSync(resolve(process.cwd(), 'src/tokens.css'), 'utf8');
     expect(css).toContain('--ar-canvas: #0000ff');
+  });
+});
+
+describe('ui locale', async () => {
+  const { setUiLocale } = await import('../locale');
+  it('formats amounts in the current language', () => {
+    setUiLocale('fr');
+    const { container } = render(<Amount cents={-4210} />);
+    expect(container.textContent?.replace(/\s/g, ' ')).toContain('−42,10 €');
+    setUiLocale('en');
   });
 });

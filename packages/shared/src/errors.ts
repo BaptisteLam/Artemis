@@ -27,6 +27,7 @@ export type ErrorCode =
   | 'plan_limit'
   | 'over_client_budget'
   | 'internal'
+  | 'network'
   | PolicyRejectCode;
 
 export function httpStatusFor(code: ErrorCode): number {

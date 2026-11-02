@@ -1,0 +1,36 @@
+---
+import DocsLayout from '../../../components/DocsLayout.astro';
+import { API_URL } from '../../../config';
+import { localeStaticPaths } from '../../../i18n';
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+---
+<DocsLayout title="API REST" lead="Pour Make, vos scripts et vos propres agents. Même jeton que le MCP.">
+  <h2>Authentification</h2>
+  <pre><code>{`Authorization: Bearer art_live_…`}</code></pre>
+  <p>Base : <code>{API_URL}</code>. Limite : 60 requêtes par minute et par agent.</p>
+  <h2>Points d'accès</h2>
+  <table>
+    <thead><tr><th>Méthode</th><th>Chemin</th><th>Rôle</th></tr></thead>
+    <tbody>
+      <tr><td>POST</td><td><code>/v1/card-requests</code></td><td>Créer une demande</td></tr>
+      <tr><td>GET</td><td><code>/v1/card-requests/:id</code></td><td>Statut d'une demande</td></tr>
+      <tr><td>POST</td><td><code>/v1/card-requests/:id/reveal</code></td><td>Lien éphémère vers la carte (10 min, usage unique)</td></tr>
+      <tr><td>POST</td><td><code>/v1/card-requests/:id/cancel</code></td><td>Annuler</td></tr>
+      <tr><td>POST</td><td><code>/v1/card-requests/:id/receipts</code></td><td>Joindre un justificatif</td></tr>
+      <tr><td>GET</td><td><code>/v1/budgets</code></td><td>Budget restant</td></tr>
+      <tr><td>GET</td><td><code>/v1/spend-summary?period=month</code></td><td>Dépenses par marchand</td></tr>
+    </tbody>
+  </table>
+  <h2>Exemple</h2>
+  <pre><code>{`curl -X POST ${API_URL}/v1/card-requests \\
+  -H "Authorization: Bearer art_test_…" \\
+  -H "Content-Type: application/json" \\
+  -d '{"amount":4900,"currency":"EUR","merchant":"Notion","purpose":"abonnement équipe"}'
+
+{"request_id":"…","status":"pending_approval"}`}</code></pre>
+  <h2>Erreurs</h2>
+  <pre><code>{`{ "error": { "code": "over_monthly_budget", "message": "…" } }`}</code></pre>
+  <p>Codes courants : <code>invalid_amount</code> (le montant doit être un entier en centimes), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>.</p>
+</DocsLayout>

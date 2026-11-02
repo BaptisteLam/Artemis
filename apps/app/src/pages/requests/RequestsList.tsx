@@ -38,7 +38,7 @@ export function RequestsList() {
             {data.requests.length === 0 ? <EmptyState title="Aucune demande">Les demandes de vos agents apparaîtront ici.</EmptyState> : (
               <div className="list">
                 {data.requests.map((r) => (
-                  <Link key={r.id} to={`/demandes/${r.id}`} className="list-item">
+                  <Link key={r.id} to={`/requests/${r.id}`} className="list-item">
                     <MerchantTile name={r.merchant} />
                     <div className="grow">
                       <div>{r.merchant} <span className="ar-muted ar-small">· {r.purpose}</span></div>

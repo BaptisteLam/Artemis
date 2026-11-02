@@ -1,0 +1,90 @@
+{
+  "common": {
+    "loading": "Loading…",
+    "copy": "Copy",
+    "copied": "Copied"
+  },
+  "lang": {
+    "choose": "Language"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "requests": "Requests",
+    "agents": "Agents",
+    "clients": "Clients",
+    "cards": "Cards",
+    "subscriptions": "Subscriptions",
+    "transactions": "Transactions",
+    "exports": "Exports",
+    "banks": "Banks",
+    "team": "Team",
+    "audit": "Audit",
+    "billing": "Billing",
+    "settings": "Settings"
+  },
+  "shell": {
+    "home": "Artemis, dashboard",
+    "organization": "Organization",
+    "admin": "Admin",
+    "freezeAllHint": "Freeze all agents and cancel active cards",
+    "frozen": "Frozen",
+    "freezeAll": "Freeze all",
+    "signOut": "Sign out",
+    "navAria": "App navigation",
+    "pendingCount_one": "{count} pending",
+    "pendingCount_other": "{count} pending",
+    "frozenBanner": "Organization frozen: no new card can be issued. Unfreeze it in Settings."
+  },
+  "status": {
+    "pending": "To approve",
+    "approved": "Approved",
+    "issued": "Card issued",
+    "completed": "Paid",
+    "rejected": "Rejected",
+    "expired": "Expired",
+    "failed": "Bank failure",
+    "canceled": "Cancelled",
+    "active": "Active",
+    "pending_bank_sca": "Bank approval",
+    "used": "Used",
+    "frozen": "Frozen",
+    "matched": "Matched",
+    "mismatch": "Mismatch",
+    "unmatched": "Unmatched"
+  },
+  "roles": {
+    "owner": "Owner",
+    "admin": "Administrator",
+    "approver": "Approver",
+    "viewer": "Viewer"
+  },
+  "errors": {
+    "network": "Network unavailable. Check your connection.",
+    "unauthorized": "Your session has expired. Please sign in again.",
+    "forbidden": "You don't have permission to do this.",
+    "not_found": "Not found, or no longer available.",
+    "invalid_input": "Some information is invalid. Please check the form.",
+    "rate_limited": "Too many attempts. Please wait a moment and try again.",
+    "quota_exceeded": "Your monthly mandate quota is reached.",
+    "subscription_inactive": "Your subscription is inactive. Update it in Billing.",
+    "org_frozen": "The organization is frozen.",
+    "agent_frozen": "This agent is frozen.",
+    "request_not_pending": "This request is no longer pending.",
+    "request_expired": "This request has expired.",
+    "already_revealed": "This card has already been handed over.",
+    "card_not_ready": "The card is not available yet.",
+    "bank_error": "The bank refused the operation.",
+    "plan_limit": "Your plan's limit is reached. Upgrade to continue.",
+    "over_client_budget": "This client's monthly budget is exceeded.",
+    "internal": "Something went wrong. Please try again.",
+    "currency_not_allowed": "This currency is not allowed by the policy.",
+    "invalid_amount": "Invalid amount.",
+    "over_transaction_limit": "Amount above the per-transaction limit.",
+    "over_monthly_budget": "The agent's monthly budget is exceeded.",
+    "merchant_blocked": "This merchant is blocked by the policy.",
+    "merchant_not_allowed": "This merchant is not on the allowed list.",
+    "mcc_blocked": "This merchant category is blocked.",
+    "mcc_not_allowed": "This merchant category is not allowed.",
+    "too_many_requests": "Too many requests in the last hour for this agent."
+  }
+}

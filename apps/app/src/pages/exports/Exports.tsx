@@ -38,7 +38,7 @@ export function Exports() {
           </div>
           <p className="ar-small ar-muted" style={{ margin: 0 }}>
             CSV : séparateur point-virgule, compatible Excel. FEC : 18 colonnes réglementaires, débit 604000 / crédit 512000, importable dans Pennylane.
-            {!org?.limits.fec ? <> Le FEC est inclus à partir du plan Team. <Link to="/facturation">Voir les plans</Link></> : null}
+            {!org?.limits.fec ? <> Le FEC est inclus à partir du plan Team. <Link to="/billing">Voir les plans</Link></> : null}
           </p>
         </section>
       </div>

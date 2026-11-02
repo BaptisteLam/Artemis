@@ -95,7 +95,7 @@ export function createNotifier(ctx: Ctx, opts: { buildPush?: PushBuilder } = {})
       if (!request) return;
       const agent = await store.getAgent(request.agent_id);
       const amount = formatAmount(Number(request.amount_cents), request.currency);
-      const url = `${env.APP_ORIGIN}/demandes/${requestId}`;
+      const url = `${env.APP_ORIGIN}/requests/${requestId}`;
       const who = await recipients(orgId);
       const title = `${agent?.name ?? 'Un agent'} veut dépenser ${amount}`;
       await Promise.all([
@@ -107,7 +107,7 @@ export function createNotifier(ctx: Ctx, opts: { buildPush?: PushBuilder } = {})
             href: url,
           }),
         ),
-        push(who.map((m) => m.user_id), { title, body: `${request.merchant} · ${request.purpose}`, url: `/demandes/${requestId}`, tag: requestId }),
+        push(who.map((m) => m.user_id), { title, body: `${request.merchant} · ${request.purpose}`, url: `/requests/${requestId}`, tag: requestId }),
         slack(orgId, `*${title}* chez *${request.merchant}*\n_${request.purpose}_`, url, 'Voir et signer avec ma passkey'),
       ]);
     },
@@ -115,7 +115,7 @@ export function createNotifier(ctx: Ctx, opts: { buildPush?: PushBuilder } = {})
       const request = await store.getCardRequest(requestId);
       if (!request) return;
       const who = await recipients(orgId);
-      const url = `${env.APP_ORIGIN}/demandes/${requestId}`;
+      const url = `${env.APP_ORIGIN}/requests/${requestId}`;
       await email(
         who.map((m) => m.email).filter((e): e is string => !!e),
         `Échec de création de carte chez ${request.merchant}`,

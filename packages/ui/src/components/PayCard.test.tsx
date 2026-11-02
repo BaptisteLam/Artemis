@@ -14,10 +14,10 @@ describe('PayCard', () => {
   });
   it('is labelled for assistive tech without exposing a full number', () => {
     const { getByRole } = render(<PayCard last4="0005" holder="api.agent" expMonth={1} expYear={2030} />);
-    expect(getByRole('img').getAttribute('aria-label')).toBe('Carte virtuelle se terminant par 0005, titulaire api.agent, expire 01/30');
+    expect(getByRole('img').getAttribute('aria-label')).toBe('Virtual card ending in 0005, holder api.agent, expires 01/30');
   });
   it('stamps used or canceled cards', () => {
     const { container } = render(<PayCard last4="1111" holder="x" expMonth={1} expYear={2030} state="used" />);
-    expect(container.querySelector('.ar-paycard-stamp')?.textContent).toBe('Utilisée');
+    expect(container.querySelector('.ar-paycard-stamp')?.textContent).toBe('Used');
   });
 });

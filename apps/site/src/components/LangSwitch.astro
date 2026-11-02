@@ -1,0 +1,25 @@
+---
+import { LOCALES, LOCALE_NAMES } from '@artemis/i18n';
+import { i18n, localePath, stripLocale } from '../i18n';
+const { t, locale } = i18n(Astro.url);
+const base = stripLocale(Astro.url.pathname);
+---
+<details class="lang-switch">
+  <summary aria-label={t('lang.choose')} title={t('lang.choose')}>
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+    <span>{locale.toUpperCase()}</span>
+  </summary>
+  <ul role="list">
+    {LOCALES.map((l) => (
+      <li><a href={localePath(l, base)} hreflang={l} lang={l} data-lang={l} aria-current={l === locale ? 'true' : undefined}>{LOCALE_NAMES[l]}</a></li>
+    ))}
+  </ul>
+</details>
+<script>
+  // Mémorise le choix explicite : la détection automatique ne s'applique plus ensuite.
+  document.querySelectorAll<HTMLAnchorElement>('.lang-switch a[data-lang]').forEach((a) =>
+    a.addEventListener('click', () => {
+      document.cookie = `artemis_lang=${a.dataset.lang}; path=/; max-age=31536000; samesite=lax`;
+    }),
+  );
+</script>

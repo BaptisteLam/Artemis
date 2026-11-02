@@ -14,14 +14,14 @@ export function AgentsList() {
       <PageStage
         title="Agents"
         lead="Chaque agent a son jeton, sa banque et ses règles. Il ne peut que demander : vous décidez."
-        actions={can('owner', 'admin') ? <Link className="ar-btn ar-btn-primary" to="/agents/nouveau">Nouvel agent</Link> : null}
+        actions={can('owner', 'admin') ? <Link className="ar-btn ar-btn-primary" to="/agents/new">Nouvel agent</Link> : null}
       />
       <div className="ar-container page-body">
         <ErrorAlert error={error} />
         {loading && !data ? <Loading /> : null}
         {data && data.agents.length === 0 ? (
           <div className="ar-solid">
-            <EmptyState title="Aucun agent" action={can('owner', 'admin') ? <Link className="ar-btn ar-btn-primary" to="/agents/nouveau">Créer un agent</Link> : undefined}>
+            <EmptyState title="Aucun agent" action={can('owner', 'admin') ? <Link className="ar-btn ar-btn-primary" to="/agents/new">Créer un agent</Link> : undefined}>
               Créez un agent pour obtenir son jeton MCP.
             </EmptyState>
           </div>

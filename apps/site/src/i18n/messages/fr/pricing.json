@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Tarifs",
+    "description": "Sandbox gratuite, puis {a}, {b}, {c} ou {d} par mois. Aucune commission sur vos dépenses.",
+    "headline": "Un abonnement simple. Aucune commission.",
+    "lead": "Vous ne payez que le logiciel. Les cartes sont émises par votre banque, selon votre forfait bancaire habituel.",
+    "popular": "Le plus choisi",
+    "from": "dès {price}",
+    "perMonth": "/ mois",
+    "start": "Commencer",
+    "choose": "Choisir {plan}",
+    "mandates": "{count} mandats / mois",
+    "sandbox": {
+      "pitch": "Tester avec une banque simulée.",
+      "i1": "1 agent",
+      "i2": "Banque simulée",
+      "i3": "{count} mandats simulés / mois",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Pour un freelance ou un dev et ses agents.",
+      "i1": "3 agents",
+      "i2": "1 banque connectée",
+      "i4": "Validation par passkey",
+      "i5": "Garde-fous anti-injection"
+    },
+    "team": {
+      "pitch": "Pour une startup de 5 à 50 personnes.",
+      "i1": "10 agents",
+      "i2": "2 banques",
+      "i4": "Slack et quorum d’approbateurs",
+      "i5": "Abonnements, export FEC"
+    },
+    "agency": {
+      "pitch": "Pour les agences d’automatisation.",
+      "i1": "Clients illimités, 25 agents",
+      "i3": "Budgets et marge par client",
+      "i4": "Rapport mensuel à refacturer",
+      "i5": "+ {price} par client actif"
+    },
+    "business": {
+      "pitch": "Pour les scale-ups régulées.",
+      "i1": "Illimité",
+      "i2": "Dossier et rapport AI Act",
+      "i3": "Export signé du journal",
+      "i4": "Accompagnement prioritaire"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": "Y a-t-il des frais par carte ?",
+      "a1": "Pas chez Artemis. Votre banque applique son propre forfait (les cartes virtuelles sont incluses dans la plupart des offres Qonto et Revolut Business ; Stripe Issuing facture selon sa grille).",
+      "q2": "Que se passe-t-il si je dépasse mon quota ?",
+      "a2": "Sur un plan payant, vos agents continuent : chaque mandat au-delà du quota est facturé {price} à la fin du mois. En Sandbox, les demandes sont refusées avec le code <code>quota_exceeded</code>.",
+      "q3": "Comment est facturé le plan {plan} ?",
+      "a3": "{base} par mois, plus {client} par client actif, c'est-à-dire chaque client pour lequel au moins un mandat a été créé dans le mois.",
+      "q4": "Puis-je résilier à tout moment ?",
+      "a4": "Oui, depuis l'espace Facturation. L'abonnement court jusqu'à la fin de la période payée ; vos données restent exportables.",
+      "q5": "TVA",
+      "a5": "Les prix affichés sont nets."
+    }
+  }
+}

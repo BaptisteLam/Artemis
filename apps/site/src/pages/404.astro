@@ -1,15 +1,4 @@
 ---
-import StageFx from '../components/StageFx.astro';
-import Base from '../layouts/Base.astro';
+import NotFound from '../views/NotFound.astro';
 ---
-<Base title="Page introuvable">
-  <section class="ar-stage">
-    <StageFx />
-    <div class="ar-container hero">
-      <span class="ar-micro eyebrow">Erreur 404</span>
-      <h1 class="ar-h1">Cette page n'existe pas.</h1>
-      <p class="ar-lead">Le lien est peut-être ancien. Revenez à l'accueil ou consultez la documentation.</p>
-      <div class="ar-row"><a class="ar-btn ar-btn-primary" href="/">Accueil →</a><a class="ar-btn ar-btn-ghost" href="/docs">Docs</a></div>
-    </div>
-  </section>
-</Base>
+<NotFound />

@@ -15,7 +15,8 @@
   "dependencies": {
     "@artemis/shared": "workspace:*",
     "@artemis/ui": "workspace:*",
-    "astro": "^5.14.0"
+    "astro": "^5.14.0",
+    "@artemis/i18n": "workspace:*"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",

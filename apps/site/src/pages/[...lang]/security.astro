@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { localeStaticPaths } from '../../i18n';
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+---
+<Base title="Sécurité et conformité" description="Comment Artemis protège vos fonds, vos cartes et vos données.">
+  <PageHead eyebrow="Sécurité" title="Conçu pour qu'un agent ne puisse rien faire seul." lead="Le pire scénario — un agent manipulé par une injection de prompt — est borné par la carte elle-même." />
+  <div class="ar-container section">
+    <article class="prose">
+      <h2>Vos fonds ne quittent jamais votre banque</h2>
+      <p>Artemis est un logiciel. Les cartes sont émises par votre établissement (Qonto, Revolut Business, Stripe) sur votre compte. Nous ne détenons, ne recevons et ne transférons aucun fonds.</p>
+      <h2>Défense en profondeur</h2>
+      <ul class="check">
+        <li>Carte à usage unique, limitée au montant exact validé.</li>
+        <li>Expiration courte (30 minutes par défaut).</li>
+        <li>Règles par agent : budget, plafond, marchands, catégories.</li>
+        <li>Rapprochement automatique et alerte en cas d'écart de montant ou de marchand.</li>
+        <li>Bouton « Tout geler » : agents suspendus et cartes actives annulées en un clic.</li>
+        <li>Les agents ne peuvent que demander : aucun outil MCP ne modifie une règle ou n'approuve une dépense.</li>
+      </ul>
+      <h2>Numéros de carte</h2>
+      <p>Par défaut, le numéro complet et le cryptogramme ne passent jamais par Artemis : l'agent reçoit un lien éphémère à usage unique (10 minutes) et la carte s'affiche depuis la banque émettrice (Stripe Issuing Elements). Une remise directe existe en option avancée, désactivée par défaut ; même alors, rien n'est stocké.</p>
+      <h2>Mandats signés</h2>
+      <p>Chaque validation est une signature WebAuthn (passkey) sur l'empreinte SHA-256 du mandat : agent, montant, devise, marchand, intention, expiration. Le journal d'audit est chaîné par hachage et en insertion seule : toute altération est détectable.</p>
+      <h2>AI Act et supervision humaine</h2>
+      <p>Le règlement européen sur l'IA demande aux déployeurs de journaliser et de superviser leurs systèmes. Le journal Artemis, exportable, documente qui a autorisé chaque dépense d'agent, quand et selon quelles règles.</p>
+      <h2>Données personnelles</h2>
+      <p>Base de données hébergée dans l'Union européenne (Supabase, Francfort). Identifiants bancaires chiffrés (AES-256-GCM). Voir la <a href="/confidentialite">politique de confidentialité</a>.</p>
+      <h2>Signaler une faille</h2>
+      <p>Écrivez à l'adresse indiquée dans les <a href="/mentions-legales">mentions légales</a>. Nous répondons sous 72 heures.</p>
+    </article>
+  </div>
+</Base>

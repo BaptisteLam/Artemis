@@ -1,0 +1,17 @@
+---
+import StageFx from '../components/StageFx.astro';
+import Base from '../layouts/Base.astro';
+import { i18n } from '../i18n';
+const { t, href } = i18n(Astro.url);
+---
+<Base title={t('notFound.title')}>
+  <section class="ar-stage">
+    <StageFx />
+    <div class="ar-container hero">
+      <span class="ar-micro eyebrow">{t('notFound.eyebrow')}</span>
+      <h1 class="ar-h1">{t('notFound.headline')}</h1>
+      <p class="ar-lead">{t('notFound.lead')}</p>
+      <div class="ar-row"><a class="ar-btn ar-btn-primary" href={href('/')}>{t('notFound.home')} →</a><a class="ar-btn ar-btn-ghost" href={href('/docs')}>{t('nav.docs')}</a></div>
+    </div>
+  </section>
+</Base>
