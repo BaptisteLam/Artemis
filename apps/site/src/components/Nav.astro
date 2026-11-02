@@ -3,6 +3,7 @@ import { APP_URL } from '../config';
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const links = [
   { href: '/fonctionnement', label: 'Fonctionnement', xs: true },
+  { href: '/agences', label: 'Agences', hide: true },
   { href: '/tarifs', label: 'Tarifs' },
   { href: '/docs', label: 'Docs' },
   { href: '/securite', label: 'Sécurité', hide: true },

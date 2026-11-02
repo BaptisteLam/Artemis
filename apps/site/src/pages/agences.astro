@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import Window from '../components/Window.astro';
+import Amount from '../components/Amount.astro';
+import { APP_URL } from '../config';
+---
+<Base title="Pour les agences" description="Agences d'automatisation : les agents de vos clients dépensent sous contrôle, avec un budget et une facture par client.">
+  <PageHead eyebrow="Agences d'automatisation" title="Les agents de vos clients dépensent. Vous refacturez sans effort." lead="Vous construisez des agents n8n, Make ou Claude pour vos clients ? Artemis sépare les dépenses par client, applique un budget à chacun et prépare la refacturation avec votre marge.">
+    <div class="ar-row" style="margin-top:24px">
+      <a class="ar-btn ar-btn-primary" href={`${APP_URL}/inscription?plan=agency`}>Essayer gratuitement →</a>
+      <a class="ar-btn ar-btn-ghost" href="/tarifs">Plan Agences : 249 € + 15 € par client actif</a>
+    </div>
+  </PageHead>
+  <div class="ar-container section hero-grid" style="align-items:start">
+    <article class="prose">
+      <h2>Un espace par client</h2>
+      <p>Rattachez chaque agent à un client. Ses demandes, ses cartes, ses transactions et ses justificatifs sont séparés. Un agent ne peut jamais dépenser le budget d'un autre client.</p>
+      <h2>Un budget mensuel par client</h2>
+      <p>Fixez un plafond mensuel par client, en plus des règles de chaque agent. Au-delà, la demande est refusée avant même d'arriver à un humain.</p>
+      <h2>La refacturation en un clic</h2>
+      <p>Chaque mois, Artemis prépare le rapport de chaque client : achats débités, agent, marchand, justificatif, frais de gestion selon votre marge, total à refacturer. Export CSV prêt à envoyer ou à importer dans votre outil de facturation.</p>
+      <h2>La preuve pour vos clients</h2>
+      <p>Chaque dépense est signée par une personne habilitée, et le journal ne peut pas être modifié. Montrez à vos clients que leurs agents sont sous contrôle humain, comme l'exige l'AI Act.</p>
+      <h2>Européen, de bout en bout</h2>
+      <p>Euros, banques européennes, données à Francfort, export FEC et Pennylane pour la compta française.</p>
+    </article>
+    <Window title="refacturation · boulangerie-martin · novembre">
+      <table class="ar-table">
+        <tr><td>Notion</td><td class="ar-mono">menu.agent</td><td><Amount cents={4900} size="sm" /></td></tr>
+        <tr><td>OpenAI API</td><td class="ar-mono">avis.agent</td><td><Amount cents={2000} size="sm" /></td></tr>
+        <tr><td>Canva</td><td class="ar-mono">menu.agent</td><td><Amount cents={1200} size="sm" /></td></tr>
+        <tr><td><strong>Sous-total</strong></td><td></td><td><Amount cents={8100} size="sm" /></td></tr>
+        <tr><td>Frais de gestion 15 %</td><td></td><td><Amount cents={1215} size="sm" /></td></tr>
+        <tr><td><strong>À refacturer</strong></td><td></td><td><Amount cents={9315} size="sm" /></td></tr>
+      </table>
+    </Window>
+  </div>
+</Base>

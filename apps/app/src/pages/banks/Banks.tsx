@@ -29,7 +29,7 @@ const PROVIDERS: Record<Provider, { name: string; fields: { key: string; label: 
   },
   qonto: {
     name: 'Qonto',
-    help: "Jeton d'accès OAuth obtenu via le programme partenaires Qonto (Business API). La création de carte peut exiger votre validation dans l'app Qonto.",
+    help: "Lecture, gel et rapprochement : Qonto ne transmet pas la carte à un tiers et interdit de la prêter. Jeton OAuth du programme partenaires Qonto ; l'approbateur peut afficher une carte Qonto de façon sécurisée et finaliser le paiement lui-même.",
     fields: [
       { key: 'accessToken', label: "Jeton d'accès", hint: 'Bearer OAuth', secret: true },
       { key: 'refreshToken', label: 'Jeton de rafraîchissement', hint: 'Optionnel', secret: true },
@@ -43,7 +43,7 @@ const PROVIDERS: Record<Provider, { name: string; fields: { key: string; label: 
   },
   revolut: {
     name: 'Revolut Business',
-    help: "Plan payant Revolut Business et accès « Cards API » activé par le support Revolut. Jeton d'accès de l'API Business.",
+    help: "Plan Grow ou supérieur, accès « Cards API » activé par le support, et accord écrit de Revolut (Valid Permission) avant toute production. Nécessite la remise directe (Réglages).",
     fields: [
       { key: 'accessToken', label: "Jeton d'accès", hint: 'Business API', secret: true },
       { key: 'refreshToken', label: 'Jeton de rafraîchissement', hint: 'Optionnel', secret: true },

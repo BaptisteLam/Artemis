@@ -19,10 +19,17 @@ const PAGES = [
   'confidentialite/index.html',
   'liste-attente/index.html',
   '404.html',
+  'agences/index.html',
+  'docs/cli/index.html',
+  'ressources/politique-agents/index.html',
 ];
 
 describe('site build', () => {
   it.each(PAGES)('generates %s', (p) => expect(existsSync(resolve(dist, p))).toBe(true));
+  it('home sells control, time, proof and agencies as the European solution', () => {
+    const html = readFileSync(resolve(dist, 'index.html'), 'utf8');
+    for (const t of ['La solution européenne', 'Pas une carte', 'Le contrôle', 'Le gain de temps', 'La preuve', 'Pour les agences', 'Soyons honnêtes', 'Plusieurs banques à la fois', 'Conçu en Europe']) expect(html).toContain(t);
+  });
   it('home carries the signature', () => {
     expect(readFileSync(resolve(dist, 'index.html'), 'utf8')).toContain('Vous gardez le dernier mot');
   });
