@@ -5,23 +5,23 @@ import { resolve } from 'node:path';
 const dist = resolve(process.cwd(), 'dist');
 const PAGES = [
   'index.html',
-  'fonctionnement/index.html',
-  'tarifs/index.html',
-  'securite/index.html',
+  'how-it-works/index.html',
+  'pricing/index.html',
+  'security/index.html',
   'docs/index.html',
   'docs/mcp-claude/index.html',
   'docs/mcp-chatgpt/index.html',
   'docs/n8n/index.html',
   'docs/api/index.html',
-  'docs/regles/index.html',
-  'mentions-legales/index.html',
-  'cgv/index.html',
-  'confidentialite/index.html',
-  'liste-attente/index.html',
+  'docs/rules/index.html',
+  'legal-notice/index.html',
+  'terms/index.html',
+  'privacy/index.html',
+  'waitlist/index.html',
   '404.html',
-  'agences/index.html',
+  'agencies/index.html',
   'docs/cli/index.html',
-  'ressources/politique-agents/index.html',
+  'resources/agent-policy/index.html',
 ];
 
 describe('site build', () => {
@@ -34,10 +34,21 @@ describe('site build', () => {
     expect(readFileSync(resolve(dist, 'index.html'), 'utf8')).toContain('Vous gardez le dernier mot');
   });
   it('pricing lists the five plans in euros', () => {
-    const html = readFileSync(resolve(dist, 'tarifs/index.html'), 'utf8');
-    for (const p of ['Sandbox', 'Builder', 'Team', 'Agences', 'Business', '29', '99', '249', '690', '0,25']) expect(html).toContain(p);
+    const html = readFileSync(resolve(dist, 'pricing/index.html'), 'utf8');
+    for (const p of ['Sandbox', 'Builder', 'Team', 'Agency', 'Business', '€29', '€99', '€249', '€690', '€0.25']) expect(html).toContain(p);
+    const fr = readFileSync(resolve(dist, 'fr/pricing/index.html'), 'utf8').replace(/\s/g, ' ');
+    for (const p of ['Agences', '29 €', '0,25 €']) expect(fr).toContain(p);
   });
-  it('legal pages mention the VAT exemption', () => {
-    expect(readFileSync(resolve(dist, 'cgv/index.html'), 'utf8')).toContain('293 B du CGI');
+  it('every page exists in the 24 languages, with hreflang alternates', () => {
+    for (const l of ['fr', 'de', 'pl', 'ga', 'mt']) for (const p of PAGES.filter((x) => x !== '404.html')) expect(existsSync(resolve(dist, l, p)), `${l}/${p}`).toBe(true);
+    const html = readFileSync(resolve(dist, 'de/pricing/index.html'), 'utf8');
+    expect(html).toContain('<html lang="de"');
+    expect(html.match(/hreflang=/g)?.length).toBe(25);
+  });
+  it('legal pages mention the VAT exemption, and that French prevails', () => {
+    expect(readFileSync(resolve(dist, 'fr/terms/index.html'), 'utf8')).toContain('293 B du CGI');
+    expect(readFileSync(resolve(dist, 'terms/index.html'), 'utf8')).toContain('293 B');
+    expect(readFileSync(resolve(dist, 'de/terms/index.html'), 'utf8')).toContain('/fr/terms');
+    expect(readFileSync(resolve(dist, 'fr/terms/index.html'), 'utf8')).not.toContain('legal-notice-lang');
   });
 });
