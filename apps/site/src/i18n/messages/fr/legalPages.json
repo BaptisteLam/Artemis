@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Conditions générales de vente et d'utilisation",
+      "purposeTitle": "1. Objet",
+      "purpose": "Les présentes conditions régissent l'accès au logiciel Artemis, édité par {editor} ({status}, SIRET {siret}), et sa souscription par des clients professionnels. Le service est réservé aux professionnels.",
+      "serviceTitle": "2. Description du service",
+      "service": "Artemis permet à un client de définir des règles de dépense pour ses agents logiciels, de valider leurs demandes de paiement et de piloter, via les interfaces de programmation de sa propre banque, la création de cartes virtuelles à usage unique. Artemis ne fournit aucun service de paiement, ne détient aucun fonds et n'émet aucune carte. La relation bancaire, les frais bancaires et l'authentification forte relèvent exclusivement du contrat entre le client et sa banque.",
+      "accountTitle": "3. Compte et sécurité",
+      "account": "Le client est responsable de la confidentialité des jetons d'agent, des accès à son compte et des passkeys de ses utilisateurs, ainsi que des règles qu'il configure. Toute dépense validée par un utilisateur habilité ou conforme à une règle de validation automatique est réputée autorisée par le client.",
+      "pricesTitle": "4. Offres et prix",
+      "prices": "Offres : Sandbox (gratuite), Builder ({builder} / mois), Team ({team} / mois), Agences ({agency} / mois + {perClient} par client actif), Business (à partir de {business} / mois). Au-delà du quota mensuel d'un plan payant, chaque mandat supplémentaire est facturé {overage}. Prix nets. {vat}. Paiement mensuel d'avance par carte via Stripe. Le renouvellement est automatique ; la résiliation prend effet à la fin de la période en cours, sans remboursement prorata.",
+      "quotasTitle": "5. Quotas",
+      "quotas": "Chaque offre comprend des quotas (agents, banques connectées, demandes mensuelles). Au-delà, les nouvelles demandes sont refusées jusqu'à la période suivante ou un changement d'offre.",
+      "availabilityTitle": "6. Disponibilité",
+      "availability": "L'éditeur met en œuvre des moyens raisonnables pour assurer la disponibilité du service, sans garantie de résultat. Des interruptions peuvent survenir pour maintenance ou du fait des prestataires techniques et bancaires.",
+      "liabilityTitle": "7. Responsabilité",
+      "liability": "L'éditeur ne saurait être tenu responsable des achats effectués par les agents du client dans le cadre des autorisations données, du choix des marchands, de la qualité des biens ou services achetés, ni des décisions de la banque du client. La responsabilité de l'éditeur, toutes causes confondues, est limitée aux sommes payées par le client au cours des douze derniers mois.",
+      "dataTitle": "8. Données",
+      "data": "Le traitement des données personnelles est décrit dans la <a href=\"{href}\">politique de confidentialité</a>. Le client peut exporter ses données à tout moment.",
+      "lawTitle": "9. Droit applicable",
+      "law": "Droit français. À défaut d'accord amiable, compétence des tribunaux du ressort du domicile de l'éditeur."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "controllerTitle": "Responsable de traitement",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Données traitées",
+      "dataAccount": "Compte : email, organisation, rôle, passkeys (clés publiques uniquement).",
+      "dataActivity": "Activité : demandes de carte, mandats signés, transactions remontées par la banque, justificatifs, journal d'audit.",
+      "dataBanks": "Connexions bancaires : jetons d'accès chiffrés (AES-256-GCM).",
+      "dataBilling": "Facturation : gérée par Stripe ; Artemis ne voit pas vos numéros de carte de paiement d'abonnement.",
+      "dataWaitlist": "Liste d'attente : email, entreprise, cas d'usage.",
+      "cardNumbers": "Artemis ne conserve jamais le numéro complet ni le cryptogramme des cartes émises pour vos agents.",
+      "purposesTitle": "Finalités et bases légales",
+      "purposes": "Exécution du contrat (fourniture du service), obligations légales (comptabilité), intérêt légitime (sécurité, prévention de la fraude), consentement (liste d'attente).",
+      "processorsTitle": "Sous-traitants",
+      "processors": "Supabase (base de données, Union européenne), Cloudflare (hébergement et réseau), Stripe (facturation), Resend (emails transactionnels). Des clauses contractuelles types encadrent les éventuels transferts hors UE.",
+      "retentionTitle": "Durées de conservation",
+      "retention": "Données de compte : durée du contrat puis 3 ans. Journal d'audit et données comptables : 10 ans. Liste d'attente : 3 ans sans interaction.",
+      "rightsTitle": "Vos droits",
+      "rights": "Accès, rectification, effacement, portabilité, opposition et limitation : écrivez à {email}. Vous pouvez saisir la CNIL (cnil.fr).",
+      "cookiesTitle": "Cookies",
+      "cookies": "Le site n'utilise aucun cookie publicitaire ni outil de mesure tiers. L'application utilise uniquement le stockage nécessaire à votre session."
+    },
+    "notice": {
+      "title": "Mentions légales",
+      "editorTitle": "Éditeur",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET : {siret}",
+      "address": "Adresse : {address}",
+      "contact": "Contact : {email}",
+      "directorTitle": "Directeur de la publication",
+      "hostingTitle": "Hébergement",
+      "natureTitle": "Nature du service",
+      "nature": "Artemis est un logiciel de gouvernance des dépenses d'agents d'intelligence artificielle. Artemis n'est ni un établissement de paiement ni un établissement de monnaie électronique : il ne reçoit, ne détient et ne transfère aucun fonds. Les cartes de paiement sont émises par l'établissement bancaire du client, sous sa responsabilité.",
+      "ipTitle": "Propriété intellectuelle",
+      "ip": "Les contenus, marques et logos de ce site sont la propriété de l'éditeur. Toute reproduction sans autorisation est interdite."
+    }
+  }
+}

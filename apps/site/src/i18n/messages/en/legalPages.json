@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Terms and Conditions of Sale and Use",
+      "purposeTitle": "1. Purpose",
+      "purpose": "These terms govern access to the Artemis software, published by {editor} ({status}, SIRET {siret}), and its subscription by business customers. The service is reserved for professionals.",
+      "serviceTitle": "2. Description of the service",
+      "service": "Artemis enables a customer to define spending rules for its software agents, to approve their payment requests and to control, through the application programming interfaces of its own bank, the creation of single-use virtual cards. Artemis provides no payment service, holds no funds and issues no cards. The banking relationship, bank fees and strong authentication are governed exclusively by the contract between the customer and its bank.",
+      "accountTitle": "3. Account and security",
+      "account": "The customer is responsible for the confidentiality of agent tokens, of access to its account and of its users' passkeys, as well as for the rules it configures. Any expense approved by an authorised user or compliant with an automatic approval rule is deemed to have been authorised by the customer.",
+      "pricesTitle": "4. Plans and prices",
+      "prices": "Plans: Sandbox (free), Builder ({builder} / month), Team ({team} / month), Agency ({agency} / month + {perClient} per active client), Business (from {business} / month). Beyond the monthly quota of a paid plan, each additional mandate is billed at {overage}. Prices are net. {vat}. Monthly payment in advance by card via Stripe. Renewal is automatic; termination takes effect at the end of the current period, with no pro rata refund.",
+      "quotasTitle": "5. Quotas",
+      "quotas": "Each plan includes quotas (agents, connected banks, monthly requests). Beyond these quotas, new requests are refused until the following period or a change of plan.",
+      "availabilityTitle": "6. Availability",
+      "availability": "The publisher uses reasonable means to ensure the availability of the service, without any obligation of result. Interruptions may occur for maintenance or because of technical and banking service providers.",
+      "liabilityTitle": "7. Liability",
+      "liability": "The publisher shall not be held liable for purchases made by the customer's agents within the scope of the authorisations given, for the choice of merchants, for the quality of the goods or services purchased, or for the decisions of the customer's bank. The publisher's liability, for all causes combined, is limited to the sums paid by the customer over the last twelve months.",
+      "dataTitle": "8. Data",
+      "data": "The processing of personal data is described in the <a href=\"{href}\">privacy policy</a>. The customer may export its data at any time.",
+      "lawTitle": "9. Governing law",
+      "law": "French law. Failing an amicable settlement, the courts with jurisdiction over the publisher's place of domicile shall have jurisdiction."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "controllerTitle": "Data controller",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Data processed",
+      "dataAccount": "Account: email, organisation, role, passkeys (public keys only).",
+      "dataActivity": "Activity: card requests, signed mandates, transactions reported by the bank, receipts, audit log.",
+      "dataBanks": "Bank connections: encrypted access tokens (AES-256-GCM).",
+      "dataBilling": "Billing: handled by Stripe; Artemis does not see the card numbers you use to pay for your subscription.",
+      "dataWaitlist": "Waitlist: email, company, use case.",
+      "cardNumbers": "Artemis never stores the full number or the security code of the cards issued for your agents.",
+      "purposesTitle": "Purposes and legal bases",
+      "purposes": "Performance of the contract (provision of the service), legal obligations (accounting), legitimate interest (security, fraud prevention), consent (waitlist).",
+      "processorsTitle": "Processors",
+      "processors": "Supabase (database, European Union), Cloudflare (hosting and network), Stripe (billing), Resend (transactional emails). Standard contractual clauses govern any transfers outside the EU.",
+      "retentionTitle": "Retention periods",
+      "retention": "Account data: term of the contract, then 3 years. Audit log and accounting data: 10 years. Waitlist: 3 years without interaction.",
+      "rightsTitle": "Your rights",
+      "rights": "Access, rectification, erasure, portability, objection and restriction: write to {email}. You may lodge a complaint with the CNIL (cnil.fr).",
+      "cookiesTitle": "Cookies",
+      "cookies": "The site uses no advertising cookies and no third-party analytics tools. The application only uses the storage necessary for your session."
+    },
+    "notice": {
+      "title": "Legal notice",
+      "editorTitle": "Publisher",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Address: {address}",
+      "contact": "Contact: {email}",
+      "directorTitle": "Publication director",
+      "hostingTitle": "Hosting",
+      "natureTitle": "Nature of the service",
+      "nature": "Artemis is software for governing the spending of artificial intelligence agents. Artemis is neither a payment institution nor an electronic money institution: it does not receive, hold or transfer any funds. Payment cards are issued by the customer's banking institution, under its responsibility.",
+      "ipTitle": "Intellectual property",
+      "ip": "The content, trademarks and logos of this site are the property of the publisher. Any reproduction without authorisation is prohibited."
+    }
+  }
+}
