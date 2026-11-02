@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Malli: tekoälyagenttien kulukäytäntö",
+    "intro": "Maksuton, muokattava malli tekoälyagenttien tekemien kulujen hallintaan ja EU:n tekoälysäädöksen (AI Act) 14 artiklan edellyttämän ihmisen valvonnan dokumentointiin. Tulosta tämä sivu tai kopioi se wikiisi.",
+    "scope": {
+      "title": "1. Tarkoitus ja soveltamisala",
+      "body": "Tätä käytäntöä sovelletaan kaikkiin ohjelmistoagentteihin (keskusteluavustaja, automaatio, skripti), joilla on oikeus tehdä ostoja yrityksen [YRITYS] puolesta. Yksikään agentti ei käytä yrityksen tai työntekijän maksukorttia: jokainen osto tehdään kertakäyttöisellä virtuaalikortilla, joka pyydetään Artemisin kautta."
+    },
+    "register": {
+      "title": "2. Agenttirekisteri",
+      "body": "Jokainen agentti kirjataan rekisteriin seuraavin tiedoin: nimi, alusta, vastuuhenkilö, käyttötarkoitus, kuukausibudjetti, ostokohtainen raja, sallitut kauppiaat sekä tarvittaessa asiakas, jolle agentti työskentelee."
+    },
+    "rules": {
+      "title": "3. Kulusäännöt",
+      "i1": "Agenttikohtainen kuukausibudjetti: [SUMMA] €; ostokohtainen raja: [SUMMA] €.",
+      "i2": "Sallitut kauppiaat: [LUETTELO]; kielletyt luokat: rahapelit, rahansiirrot, käteiseen rinnastettavat maksuvälineet, arvopaperit.",
+      "i3": "Automaattinen hyväksyntä vain alle [SUMMA] euron ostoissa ja sallitulta kauppiaalta; muissa tapauksissa ihmisen allekirjoitus on pakollinen.",
+      "i4": "Yli [SUMMA] euron ostoihin tarvitaan kaksi eri allekirjoittajaa."
+    },
+    "oversight": {
+      "title": "4. Ihmisen valvonta",
+      "body": "Hyväksymään valtuutetut henkilöt ovat: [NIMET / ROOLIT]. Hyväksyntä annetaan pääsyavaimella valtuutuksen tarkkaan sisältöön (agentti, summa, kauppias, tarkoitus). Hyväksymätön pyyntö vanhenee automaattisesti."
+    },
+    "records": {
+      "title": "5. Kuitit ja kirjanpito",
+      "body": "Jokaiseen ostoon liitetään lasku [N] tunnin kuluessa; muussa tapauksessa agentti jäädytetään. Kulut viedään kuukausittain (FEC tai Pennylane) ja täsmäytetään tiliotteisiin."
+    },
+    "incidents": {
+      "title": "6. Poikkeamat",
+      "body": "Jos agentti toimii poikkeavasti, summassa tai kauppiaassa havaitaan poikkeama tai epäillään kehoteinjektiota, vastuuhenkilö jäädyttää välittömästi agentin (tai koko organisaation) ja kirjaa tapahtuneen."
+    },
+    "retention": {
+      "title": "7. Säilytys ja tarkistus",
+      "body": "Ketjutettua tarkastuslokia säilytetään [10] vuotta. Valvontaraportti laaditaan neljännesvuosittain, ja sen tarkastaa [ROOLI]. Tämä käytäntö tarkistetaan vuosittain."
+    },
+    "note": "Artemis luo agenttirekisterin ja neljännesvuosittaisen valvontaraportin paketissa {plan}."
+  }
+}

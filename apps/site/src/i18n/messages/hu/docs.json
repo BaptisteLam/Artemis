@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Első lépések az Artemisszel",
+      "lead": "A regisztrációtól az ügynöke első fizetéséig, Sandboxban, öt perc alatt.",
+      "step1": {
+        "title": "1. Fiók létrehozása",
+        "body": "Regisztráljon <a href=\"{href}\">az alkalmazásban</a> az e-mail-címével (varázslinkkel), hozza létre a szervezetét, és regisztráljon egy passkey-t: ezzel hagyja majd jóvá a költéseket."
+      },
+      "step2": {
+        "title": "2. Ügynök létrehozása",
+        "body": "Az <strong>Ügynökök</strong> menüpontban hozza létre például a <code>notion.agent</code> ügynököt. Az Artemis a tokenjét (<code>art_test_…</code> Sandboxban, <code>art_live_…</code> valódi bankkal) <strong>csak egyszer</strong> jeleníti meg: másolja ki."
+      },
+      "step3": {
+        "title": "3. Az ügynök csatlakoztatása",
+        "fastest": "A leggyorsabb módszer: <code>npx artemis-agents init</code> (lásd: <a href=\"{cli}\">CLI</a>).",
+        "server": "Az MCP-szerver címe <code>{url}</code>, a fejléc <code>Authorization: Bearer &lt;token&gt;</code>. Kövesse az eszközének megfelelő útmutatót: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> vagy <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. A vásárlási folyamat",
+        "tool": "Eszköz",
+        "role": "Feladat",
+        "requestCard": "Kártyát igényel: összeg <strong>centben</strong>, pénznem, kereskedő, cél.",
+        "getRequestStatus": "Követi az emberi jóváhagyást.",
+        "getCardForCheckout": "<strong>Ideiglenes hivatkozást</strong> ad vissza (10 perc, egyszer használatos): a kártyát a bank jeleníti meg, az Artemis megkerülésével.",
+        "listBudgets": "Havi keret, elköltött összeg, fennmaradó összeg, limit.",
+        "getSpendSummary": "Költések kereskedőnként (nap, hét, hónap).",
+        "attachReceipt": "Bizonylatot csatol a vásárláshoz.",
+        "cancelCard": "Visszavonja a kártyát, ha a vásárlás elmarad."
+      },
+      "step5": {
+        "title": "5. Éles használat",
+        "body": "Válasszon csomagot a <strong>Számlázás</strong> menüpontban, majd csatlakoztassa a bankját a <strong>Bankok</strong> menüpontban. Az adott bankhoz rendelt ügynökök valódi, egyszer használatos kártyákat kapnak."
+      }
+    },
+    "mcpClaude": {
+      "title": "A Claude csatlakoztatása",
+      "lead": "A Claude Code, a Claude Desktop és a Claude-konnektorok HTTP-n keresztül kommunikálnak MCP-vel.",
+      "verify": "Ellenőrizze a <code>claude mcp list</code> paranccsal, majd kérje például ezt: „Fizess elő nekünk a Notionra {price} összegben az Artemisszel”.",
+      "desktopBody": "Nyissa meg a <em>Settings → Developer → Edit Config</em> menüt, és adja hozzá a következőt:",
+      "instructionsTitle": "Hasznos utasítások az ügynöknek",
+      "instructionsBody": "Adja hozzá a rendszerutasításaihoz:"
+    },
+    "mcpChatgpt": {
+      "title": "A ChatGPT csatlakoztatása",
+      "lead": "A ChatGPT egyéni konnektorként fogadja el a távoli MCP-szervereket.",
+      "addTitle": "A konnektor hozzáadása",
+      "step1": "Nyissa meg a <em>Settings → Connectors → Advanced</em> menüt, és kapcsolja be a fejlesztői módot, ha az előfizetése ezt igényli.",
+      "step2": "Hozzon létre egy konnektort, URL: <code>{url}</code>.",
+      "step3": "Hitelesítés: <code>Authorization</code> fejléc <code>Bearer art_…</code> értékkel (a ChatGPT-munkaterülete által kínált lehetőségektől függően).",
+      "note": "A pontos feliratok ChatGPT-előfizetésenként eltérnek; a cím és a fejléc ugyanaz marad.",
+      "openaiTitle": "OpenAI-ügynökök (API)",
+      "openaiBody": "A Responses API vagy az Agents SDK használatakor deklaráljon egy távoli MCP-eszközt, amely a <code>{url}</code> címre mutat, ugyanezzel a fejléccel."
+    },
+    "cli": {
+      "title": "CLI, Claude-skill és n8n",
+      "lead": "A nulláról az első megbízásig három perc alatt.",
+      "commandTitle": "Egyetlen parancs",
+      "commandBody": "A parancs bekéri az API URL-jét és az ügynök tokenjét (amelyet az alkalmazás Ügynökök oldalán hozhat létre), ellenőrzi a hozzáférést, elmenti a konfigurációt a <code>~/.config/artemis/config.json</code> fájlba, hozzáadja az MCP-szervert a Claude Code-hoz, ha az telepítve van, és kiírja a Claude Desktop és az n8n konfigurációját. Sandbox-tokennel és a <code>--demo</code> kapcsolóval létrehoz egy első tesztmegbízást, amelyet az alkalmazásban hagyhat jóvá.",
+      "skillTitle": "Claude-skill",
+      "skillBody": "Az <code>artemis-payments</code> skill megtanítja a Claude-nak, hogyan fizessen az Artemisen keresztül: összeg centben, a jóváhagyás kivárása, a fizetési hivatkozás megnyitása a megfelelő pillanatban, bizonylat a vásárlás után és az injektálási kísérletek elutasítása. Másolja a tárhely <code>integrations/claude-skill/artemis</code> mappáját a <code>~/.claude/skills/</code> könyvtárba.",
+      "n8nTitle": "n8n-csomópont",
+      "n8nBody": "Telepítse az <code>n8n-nodes-artemis</code> közösségi csomópontot (Settings → Community nodes). Műveletek: kártyaigénylés, állapot, fizetési hivatkozás, visszavonás, keret. Hitelesítő adatok: API URL és ügynöktoken."
+    },
+    "n8n": {
+      "title": "Az n8n csatlakoztatása",
+      "lead": "Két lehetőség: az MCP Client csomópont egy n8n MI-ügynökhöz, vagy HTTP-kérések egy klasszikus munkafolyamathoz.",
+      "agentTitle": "n8n MI-ügynök (MCP Client)",
+      "agentBody": "Egy <em>AI Agent</em> csomópontban adja hozzá az <em>MCP Client</em> eszközt: átvitel <em>HTTP Streamable</em>, URL <code>{url}</code>, hitelesítés <em>Header Auth</em>, értéke <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "HTTP-munkafolyamat",
+      "workflowBody": "Importálja a tárhelyből az <code>examples/n8n/artemis-request-card.json</code> példamunkafolyamatot. Lépései:",
+      "step1With": "a következővel:",
+      "step2": "lekérdezési ciklus a <code>GET /v1/card-requests/:id</code> végponton, amíg az állapot <code>issued</code> nem lesz;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> a kártya ideiglenes hivatkozásának lekéréséhez (10 perc, egyszer használatos)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Make-hez, saját szkriptjeihez és saját ügynökeihez. Ugyanaz a token, mint az MCP-szerverhez.",
+      "authTitle": "Hitelesítés",
+      "base": "Alap-URL: <code>{url}</code>. Korlát: percenként 60 kérés ügynökönként.",
+      "endpointsTitle": "Végpontok",
+      "method": "Metódus",
+      "path": "Útvonal",
+      "role": "Feladat",
+      "create": "Igénylés létrehozása",
+      "status": "Igénylés állapota",
+      "reveal": "Ideiglenes hivatkozás a kártyához (10 perc, egyszer használatos)",
+      "cancel": "Visszavonás",
+      "receipts": "Bizonylat csatolása",
+      "budgets": "Fennmaradó keret",
+      "spendSummary": "Költések kereskedőnként",
+      "exampleTitle": "Példa",
+      "errorsTitle": "Hibák",
+      "errorsBody": "Gyakori kódok: <code>invalid_amount</code> (az összegnek centben megadott egész számnak kell lennie), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Szabályok és jóváhagyás",
+      "lead": "Hogyan dönti el az Artemis, hogy egy igénylést elutasít, automatikusan jóváhagy, vagy az Ön aláírására bocsát.",
+      "orderTitle": "Kiértékelési sorrend",
+      "orderBody": "Az első nem teljesülő szabály elutasítja az igénylést:",
+      "o1": "Engedélyezett pénznem (<code>currency_not_allowed</code>).",
+      "o2": "Pozitív összeg a vásárlásonkénti limit alatt (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Havi keret: a hónap függőben lévő, jóváhagyott és kifizetett igénylései + az összeg (<code>over_monthly_budget</code>). A hónap a párizsi időt követi.",
+      "o4": "Letiltott kereskedő, vagy hiányzik az engedélyezési listáról, ha van ilyen (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Letiltott vagy nem engedélyezett kereskedői kategória (MCC) (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Automatikus jóváhagyás",
+      "autoBody": "Egy igénylést az Ön közreműködése nélkül hagy jóvá a rendszer, ha az összege az automatikus jóváhagyási küszöb <strong>alatt</strong> van, <strong>és</strong> a kereskedő szerepel az ügynök engedélyezési listáján. Engedélyezési lista nélkül minden igénylés Önhöz kerül.",
+      "matchTitle": "Kereskedők egyeztetése",
+      "matchBody": "A rendszer a neveket a kis- és nagybetűk, az ékezetek, a cégforma és a domainvégződés figyelmen kívül hagyásával hasonlítja össze: a „Notion” lefedi a „Notion Labs, Inc.” és a „notion.so” nevet is.",
+      "humanTitle": "Emberi jóváhagyás",
+      "humanBody": "A tulajdonosok, adminisztrátorok és jóváhagyók értesítést kapnak. A jóváhagyáshoz passkey szükséges. Ha a bankja saját erős ügyfél-hitelesítést alkalmaz (például a Qonto), a jóváhagyást a banki alkalmazásban is meg kell adnia.",
+      "expiryTitle": "Lejárat",
+      "expiryBody": "A fel nem dolgozott igénylés 30 perc után lejár (ez beállítható). A fel nem használt kártya lejáratkor visszavonásra kerül."
+    }
+  }
+}

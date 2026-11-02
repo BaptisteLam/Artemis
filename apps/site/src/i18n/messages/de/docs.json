@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Erste Schritte mit Artemis",
+      "lead": "Von der Registrierung bis zur ersten Zahlung Ihres Agenten, in der Sandbox, in fünf Minuten.",
+      "step1": {
+        "title": "1. Konto erstellen",
+        "body": "Registrieren Sie sich in <a href=\"{href}\">der App</a> mit Ihrer E-Mail-Adresse (Magic Link), legen Sie Ihre Organisation an und registrieren Sie einen Passkey: Damit geben Sie Ausgaben frei."
+      },
+      "step2": {
+        "title": "2. Agenten erstellen",
+        "body": "Erstellen Sie unter <strong>Agenten</strong> zum Beispiel <code>notion.agent</code>. Artemis zeigt sein Token (<code>art_test_…</code> in der Sandbox, <code>art_live_…</code> mit einer echten Bank) <strong>nur ein einziges Mal</strong> an: Kopieren Sie es."
+      },
+      "step3": {
+        "title": "3. Agenten verbinden",
+        "fastest": "Am schnellsten geht es mit <code>npx artemis-agents init</code> (siehe <a href=\"{cli}\">CLI</a>).",
+        "server": "Der MCP-Server ist unter <code>{url}</code> erreichbar, mit dem Header <code>Authorization: Bearer &lt;token&gt;</code>. Folgen Sie der Anleitung für Ihr Tool: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> oder <a href=\"{api}\">REST-API</a>."
+      },
+      "step4": {
+        "title": "4. Der Kaufablauf",
+        "tool": "Tool",
+        "role": "Zweck",
+        "requestCard": "Fragt eine Karte an: Betrag <strong>in Cent</strong>, Währung, Händler, Zweck.",
+        "getRequestStatus": "Verfolgt die menschliche Freigabe.",
+        "getCardForCheckout": "Liefert einen <strong>kurzlebigen Link</strong> (10 Min., einmalig nutzbar): Die Karte wird von der Bank angezeigt, ohne über Artemis zu laufen.",
+        "listBudgets": "Monatsbudget, ausgegeben, verbleibend, Limit.",
+        "getSpendSummary": "Ausgaben nach Händler (Tag, Woche, Monat).",
+        "attachReceipt": "Hängt einen Beleg an den Kauf an.",
+        "cancelCard": "Storniert die Karte, wenn der Kauf nicht mehr stattfindet."
+      },
+      "step5": {
+        "title": "5. Live gehen",
+        "body": "Wählen Sie unter <strong>Abrechnung</strong> einen Tarif und verbinden Sie dann unter <strong>Banken</strong> Ihre Bank. Agenten, die mit dieser Bank verknüpft sind, erhalten echte Einmalkarten."
+      }
+    },
+    "mcpClaude": {
+      "title": "Claude verbinden",
+      "lead": "Claude Code, Claude Desktop und die Claude-Konnektoren sprechen MCP über HTTP.",
+      "verify": "Prüfen Sie mit <code>claude mcp list</code> und bitten Sie dann zum Beispiel: „Abonniere Notion für {price} mit Artemis“.",
+      "desktopBody": "Öffnen Sie <em>Settings → Developer → Edit Config</em> und fügen Sie hinzu:",
+      "instructionsTitle": "Nützliche Anweisungen für den Agenten",
+      "instructionsBody": "Ergänzen Sie Ihre Systemanweisungen um:"
+    },
+    "mcpChatgpt": {
+      "title": "ChatGPT verbinden",
+      "lead": "ChatGPT akzeptiert entfernte MCP-Server als benutzerdefinierte Konnektoren.",
+      "addTitle": "Konnektor hinzufügen",
+      "step1": "Öffnen Sie <em>Einstellungen → Konnektoren → Erweitert</em> und aktivieren Sie den Entwicklermodus, falls Ihr Tarif dies erfordert.",
+      "step2": "Erstellen Sie einen Konnektor, URL: <code>{url}</code>.",
+      "step3": "Authentifizierung: Header <code>Authorization</code> mit dem Wert <code>Bearer art_…</code> (je nach den Optionen Ihres ChatGPT-Workspace).",
+      "note": "Die genauen Bezeichnungen variieren je nach ChatGPT-Tarif; Adresse und Header bleiben gleich.",
+      "openaiTitle": "OpenAI-Agenten (API)",
+      "openaiBody": "Deklarieren Sie mit der Responses API oder dem Agents SDK ein entferntes MCP-Tool, das auf <code>{url}</code> zeigt, mit demselben Header."
+    },
+    "cli": {
+      "title": "CLI, Claude-Skill und n8n",
+      "lead": "Von null zum ersten Mandat in drei Minuten.",
+      "commandTitle": "Ein einziger Befehl",
+      "commandBody": "Der Befehl fragt nach der API-URL und dem Agenten-Token (in der App auf der Seite „Agenten“ erstellt), prüft den Zugriff, speichert die Konfiguration in <code>~/.config/artemis/config.json</code>, fügt den MCP-Server zu Claude Code hinzu, falls es installiert ist, und gibt die Konfiguration für Claude Desktop und n8n aus. Mit einem Sandbox-Token und der Option <code>--demo</code> erstellt er ein erstes Testmandat, das Sie in der App freigeben.",
+      "skillTitle": "Claude-Skill",
+      "skillBody": "Der Skill <code>artemis-payments</code> bringt Claude bei, über Artemis zu bezahlen: Betrag in Cent, Warten auf die Freigabe, Öffnen des Zahlungslinks im richtigen Moment, Beleg nach dem Kauf und Abwehr von Injections. Kopieren Sie den Ordner <code>integrations/claude-skill/artemis</code> aus dem Repository nach <code>~/.claude/skills/</code>.",
+      "n8nTitle": "n8n-Node",
+      "n8nBody": "Installieren Sie die Community-Node <code>n8n-nodes-artemis</code> (Settings → Community nodes). Operationen: Karte anfragen, Status, Zahlungslink, Stornieren, Budget. Zugangsdaten: API-URL und Agenten-Token."
+    },
+    "n8n": {
+      "title": "n8n verbinden",
+      "lead": "Zwei Möglichkeiten: die Node MCP Client für einen n8n-KI-Agenten oder HTTP-Anfragen für einen klassischen Workflow.",
+      "agentTitle": "n8n-KI-Agent (MCP Client)",
+      "agentBody": "Fügen Sie in einer <em>AI Agent</em>-Node das Tool <em>MCP Client</em> hinzu: Transport <em>HTTP Streamable</em>, URL <code>{url}</code>, Authentifizierung <em>Header Auth</em> mit <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "HTTP-Workflow",
+      "workflowBody": "Importieren Sie den Beispiel-Workflow <code>examples/n8n/artemis-request-card.json</code> aus dem Repository. Er führt nacheinander aus:",
+      "step1With": "mit",
+      "step2": "eine Polling-Schleife auf <code>GET /v1/card-requests/:id</code>, bis der Status <code>issued</code> lautet;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code>, um den kurzlebigen Link zur Karte zu erhalten (10 Minuten, einmalig nutzbar)."
+    },
+    "api": {
+      "title": "REST-API",
+      "lead": "Für Make, Ihre Skripte und Ihre eigenen Agenten. Dasselbe Token wie für den MCP-Server.",
+      "authTitle": "Authentifizierung",
+      "base": "Basis-URL: <code>{url}</code>. Limit: 60 Anfragen pro Minute und Agent.",
+      "endpointsTitle": "Endpunkte",
+      "method": "Methode",
+      "path": "Pfad",
+      "role": "Zweck",
+      "create": "Anfrage erstellen",
+      "status": "Status einer Anfrage",
+      "reveal": "Kurzlebiger Link zur Karte (10 Min., einmalig nutzbar)",
+      "cancel": "Stornieren",
+      "receipts": "Beleg anhängen",
+      "budgets": "Verbleibendes Budget",
+      "spendSummary": "Ausgaben nach Händler",
+      "exampleTitle": "Beispiel",
+      "errorsTitle": "Fehler",
+      "errorsBody": "Häufige Codes: <code>invalid_amount</code> (der Betrag muss eine ganze Zahl in Cent sein), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Regeln und Freigabe",
+      "lead": "Wie Artemis entscheidet, ob eine Anfrage abgelehnt, automatisch freigegeben oder Ihnen zur Signatur vorgelegt wird.",
+      "orderTitle": "Prüfreihenfolge",
+      "orderBody": "Die erste nicht erfüllte Regel lehnt die Anfrage ab:",
+      "o1": "Zulässige Währung (<code>currency_not_allowed</code>).",
+      "o2": "Positiver Betrag unterhalb des Limits pro Kauf (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Monatsbudget: offene, freigegebene und bezahlte Anfragen des Monats + der Betrag (<code>over_monthly_budget</code>). Der Monat richtet sich nach Pariser Zeit.",
+      "o4": "Gesperrter Händler oder nicht in der Positivliste, falls eine besteht (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Händlerkategorie (MCC) gesperrt oder nicht zugelassen (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Automatische Freigabe",
+      "autoBody": "Eine Anfrage wird ohne Sie freigegeben, wenn ihr Betrag <strong>unter</strong> dem Schwellenwert für die automatische Freigabe liegt <strong>und</strong> der Händler auf der Positivliste des Agenten steht. Ohne Positivliste wird Ihnen jede Anfrage vorgelegt.",
+      "matchTitle": "Händlerabgleich",
+      "matchBody": "Namen werden ohne Berücksichtigung von Groß-/Kleinschreibung, Akzenten, Rechtsform und Domain-Endung verglichen: „Notion“ deckt „Notion Labs, Inc.“ und „notion.so“ ab.",
+      "humanTitle": "Menschliche Freigabe",
+      "humanBody": "Inhaber, Administratoren und Freigeber erhalten eine Benachrichtigung. Die Freigabe erfordert einen Passkey. Verlangt Ihre Bank ihre eigene starke Kundenauthentifizierung (zum Beispiel Qonto), geben Sie zusätzlich in deren App frei.",
+      "expiryTitle": "Ablauf",
+      "expiryBody": "Eine nicht bearbeitete Anfrage verfällt nach 30 Minuten (konfigurierbar). Eine nicht verwendete Karte wird bei Ablauf storniert."
+    }
+  }
+}

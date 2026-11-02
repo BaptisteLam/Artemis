@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Grāmatvedības eksports",
+    "lead": "Jūsu banku norakstītie izdevumi, gatavi Pennylane, jūsu grāmatvedim vai izklājlapai.",
+    "failed": "Eksports neizdevās.",
+    "from": "No",
+    "to": "Līdz (neieskaitot)",
+    "downloadCsv": "Lejupielādēt CSV",
+    "downloadFec": "Lejupielādēt FEC",
+    "formats": "CSV: atdalīts ar semikolu, saderīgs ar Excel. FEC: 18 normatīvās kolonnas, debets 604000 / kredīts 512000, importējams Pennylane.",
+    "fecUpsell": "FEC ir iekļauts, sākot no plāna Team.",
+    "seePlans": "Skatīt plānus"
+  }
+}

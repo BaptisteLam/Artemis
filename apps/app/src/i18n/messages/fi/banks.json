@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Pankit",
+    "lead": "Kortit luodaan omassa pankissasi. Artemis ei koskaan säilytä varojasi.",
+    "bankAria": "Pankki",
+    "help": {
+      "stripe": "Stripe-tili, jossa Issuing on käytössä (EU). Luo rajoitettu avain, jolla on Issuing-kirjoitusoikeudet. Anna olemassa oleva kortinhaltija (ich_…) tai yrityksesi osoite, jotta Artemis voi luoda kortinhaltijan.",
+      "qonto": "Lukuoikeus, jäädyttäminen ja täsmäytys: Qonto ei luovuta korttia kolmansille osapuolille ja kieltää sen lainaamisen. OAuth-token Qonton kumppaniohjelmasta; hyväksyjä voi katsoa Qonto-korttia turvallisesti ja suorittaa maksun itse.",
+      "revolut": "Grow-paketti tai ylempi, tuen käyttöön ottama ”Cards API” -käyttöoikeus sekä Revolutin kirjallinen hyväksyntä (Valid Permission) ennen tuotantokäyttöä. Edellyttää suoraa luovutusta (Asetukset)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Rajoitettu salainen avain",
+      "publishableKey": "Julkinen avain",
+      "stripeCardholder": "Stripe-kortinhaltija",
+      "companyName": "Yrityksen nimi",
+      "address": "Osoite",
+      "postalCode": "Postinumero",
+      "city": "Kaupunki",
+      "country": "Maa",
+      "webhookSecret": "Webhook-salaisuus",
+      "accessToken": "Käyttöoikeustoken",
+      "refreshToken": "Päivitystoken",
+      "oauthClientId": "OAuth-asiakastunnus",
+      "oauthClientSecret": "OAuth-asiakassalaisuus",
+      "holderMemberId": "Kortinhaltijan jäsentunnus",
+      "bankAccountId": "Pankkitilin tunnus",
+      "environment": "Ympäristö",
+      "stagingToken": "Staging-token",
+      "clientAssertion": "Asiakasvakuutus (JWT)",
+      "holderId": "Kortinhaltijan tunnus"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… tai sk_test_…",
+      "stripePublishableKey": "pk_live_… (lyhytikäinen korttilinkki)",
+      "stripeCardholder": "ich_… (valinnainen)",
+      "ifNoCardholder": "Jos kortinhaltijaa ei ole",
+      "country": "ISO-koodi, esim. FI",
+      "webhookSecret": "whsec_… (kun webhook on luotu, katso alta)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Valinnainen",
+      "toRefreshToken": "Tokenin päivittämiseen",
+      "qontoMembershipId": "Qonton membership id",
+      "qontoBankAccountId": "Qonton bank_account id",
+      "sandboxOnly": "Vain Sandbox",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Valinnainen, päivittämiseen",
+      "teamMemberOptional": "Tiimin jäsen (valinnainen)"
+    },
+    "encrypted": "Tunnistetiedot testataan ja salataan sitten (AES-256-GCM). Niitä ei enää koskaan näytetä.",
+    "testing": "Testataan yhteyttä…",
+    "connectProvider": "Liitä {name}",
+    "testOk": "Yhteys toimii",
+    "testFailed": "Epäonnistui: {detail}",
+    "confirmDisconnect": "Katkaistaanko yhteys tähän pankkiin? Sitä käyttävät agentit eivät voi enää saada korttia.",
+    "lastSync": "Viimeisin synkronointi: {date}",
+    "stripeWebhook": "Stripe-webhook (issuing_transaction.*-tapahtumat):",
+    "test": "Testaa",
+    "disconnect": "Katkaise yhteys",
+    "connectRealBank": "Liitä oikea pankki",
+    "upgrade": "Oikean pankin liittäminen sisältyy Builder-pakettiin ja sitä ylempiin ({price}/kk).",
+    "choosePlan": "Valitse paketti →"
+  }
+}

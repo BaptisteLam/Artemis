@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Kertakäyttöinen kortti · simuloitu pankki",
+    "eyebrowBank": "Kertakäyttöinen kortti · pankkisi myöntämä",
+    "lead": "Tämä linkki avautuu vain kerran. Kortti on rajattu yllä olevaan summaan ja lukittu tähän kauppiaaseen.",
+    "fields": {
+      "number": "Numero",
+      "expiry": "Voimassa",
+      "cvc": "Turvakoodi",
+      "holder": "Kortinhaltija"
+    },
+    "opening": "Avataan…",
+    "show": "Näytä kortti •••• {last4}",
+    "footer": "Numeron näyttää suoraan kortin myöntänyt pankki: se ei koskaan kulje Artemisin kautta.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js ei ole käytettävissä.",
+      "invalidLink": "Linkki on virheellinen, jo käytetty tai vanhentunut.",
+      "stripeRefused": "Stripe hylkäsi pyynnön."
+    }
+  }
+}

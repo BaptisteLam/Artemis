@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Oibríonn sé le",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Aonúsáide",
+      "aria": "Cárta fíorúil dar críoch {last4}, sealbhóir cárta {holder}, dul in éag {exp}",
+      "holder": "Sealbhóir cárta",
+      "expires": "Dul in éag",
+      "debit": "Dochar",
+      "virtual": "fíorúil",
+      "used": "Úsáidte"
+    },
+    "faq": {
+      "q1": "An gcoinníonn Artemis m'airgead?",
+      "a1": "Ní choinníonn. Cruthaítear na cártaí i do bhanc féin (Qonto, Revolut Business nó Stripe Issuing) agus gearrtar ar do chuntas iad. Bogearraí is ea Artemis: cuireann sé do rialacha i bhfeidhm, bailíonn sé do fhormheas agus stiúrann sé an banc trína API. Ní fhaigheann sé, ní choinníonn sé agus ní aistríonn sé cistí choíche.",
+      "q2": "Cad a tharlaíonn má ionramháiltear mo ghníomhaire le instealladh leideanna (prompt injection)?",
+      "a2": "Ní féidir leis an ngníomhaire ach iarratas a dhéanamh. Is cárta aonúsáide é gach cárta, teoranta don mhéid beacht, faoi ghlas don cheannaí atá i gceist agus téann sé in éag i gceann 30 nóiméad. Lasmuigh de do rialacha, diúltaítear don iarratas; os cionn do thairsí, ní imíonn faic gan do passkey. Spreagann aon neamhréir sa mhéid nó sa cheannaí foláireamh, agus stopann an cnaipe “Reoigh gach rud” gach rud le cliceáil amháin.",
+      "q3": "An dtéann uimhir an chárta trí Artemis?",
+      "a3": "Ní théann, de réir réamhshocraithe. Ag an tseiceáil amach, faigheann an gníomhaire nasc aonúsáide atá bailí ar feadh 10 nóiméad: taispeánann an banc eisiúna an cárta ansin go díreach. Ní fheiceann, ní stórálann agus ní athsheolann Artemis an uimhir choíche. Nuair a osclaítear é, stopann an nasc ag obair.",
+      "q4": "Cén fáth nach n-úsáidfinn mo bhanc amháin?",
+      "a4": "Mura n-úsáideann tú ach Stripe, Ramp nó Mercury, déanann siad cuid den obair cheana féin. Tugann Artemis an méid nach ndéanfaidh banc dá iomaitheoirí: roinnt banc faoi bheartas amháin, cuntasaíocht Fhrancach (FEC, Pennylane), cruthúnas don AI Act réidh le tabhairt ar láimh, agus mód gníomhaireachta.",
+      "q5": "Cé na bainc a dtacaítear leo?",
+      "a5": "Cruthaíonn Stripe Issuing (molta) na cártaí agus taispeánann sé don ghníomhaire iad gan an uimhir a dhul trí Artemis choíche. Oibríonn Revolut Business faoi chomhaontú i scríbhinn le Revolut, agus tugtar an cárta go díreach don ghníomhaire. Ceanglaítear Qonto le haghaidh léamh, reo agus réiteach. Déanann an Sandbox aithris ar bhanc ionas gur féidir leat tástáil gan aon rud a cheangal.",
+      "q6": "Cé mhéad a chosnaíonn sé?",
+      "a6": "Tá an Sandbox saor in aisce. Ina dhiaidh sin, {builder} (Builder), {team} (Team), {agency} + {client} in aghaidh an chliaint ghníomhaigh ({agencyPlan}) nó ó {business} (Business) in aghaidh na míosa. Thar do chuóta, {overage} in aghaidh an tsainordaithe. Gan aon choimisiún ar do chaiteachas: cuireann do bhanc a ghnáthphlean i bhfeidhm. {vat}.",
+      "q7": "An gcoinnítear mo shonraí san Eoraip?",
+      "a7": "Coinnítear. Tá an bunachar sonraí á óstáil san Aontas Eorpach (Frankfurt), criptítear na dintiúir bhainc le AES-256-GCM, agus doiciméadaíonn an loga iniúchta slabhraithe an mhaoirseacht dhaonna a éilíonn an AI Act."
+    }
+  }
+}

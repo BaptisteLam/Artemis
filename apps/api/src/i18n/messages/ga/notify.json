@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Íocann do ghníomhairí. Is agatsa atá an focal deiridh.",
+    "unknownAgent": "Gníomhaire",
+    "unknownMerchant": "ceannaí",
+    "requestPending": {
+      "title": "Ba mhaith le {agent} {amount} a chaitheamh",
+      "subject": "Le formheas: {amount} ag {merchant}",
+      "merchant": "Ceannaí: {merchant}",
+      "purpose": "Cuspóir: {purpose}",
+      "expires": "Mura dtugtar freagra, téann an t-iarratas in éag go huathoibríoch.",
+      "cta": "Athbhreithnigh agus formheas →",
+      "slack": "*{title}* ag *{merchant}*",
+      "slackCta": "Athbhreithnigh agus sínigh le mo passkey"
+    },
+    "cardIssueFailed": {
+      "subject": "Theip ar chruthú an chárta ag {merchant}",
+      "title": "Níor chruthaigh an banc an cárta",
+      "fallback": "Earráid bhainc.",
+      "cta": "Féach ar an iarratas →"
+    },
+    "mismatch": {
+      "subject": "Neamhréir aimsithe: {amount} ag {merchant}",
+      "title": "Ní mheaitseálann idirbheart leis an sainordú",
+      "check": "Seiceáil an t-idirbheart agus reoigh an gníomhaire más gá.",
+      "cta": "Féach ar na hidirbhearta →",
+      "pushTitle": "Neamhréir idirbhirt"
+    },
+    "invitation": {
+      "subject": "Cuireadh dul isteach in {org} ar Artemis",
+      "title": "Téigh isteach in {org}",
+      "body": "Tugtar cuireadh duit caiteachas ghníomhairí IS d'fhoirne a fhormheas agus a leanúint.",
+      "cta": "Glac leis an gcuireadh →"
+    }
+  }
+}

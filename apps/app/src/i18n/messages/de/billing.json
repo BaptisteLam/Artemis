@@ -1,0 +1,59 @@
+{
+  "billing": {
+    "title": "Abrechnung",
+    "lead": "Aktueller Tarif: {plan}. Anfragen diesen Monat: {usage}. Keine Umsatzsteuer ausgewiesen gemäß Art. 293 B des französischen Steuergesetzbuchs (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Abonnement und Rechnungen verwalten",
+    "returnOk": "Vielen Dank! Ihr Abonnement wird aktiviert (einige Sekunden).",
+    "returnCanceled": "Zahlung abgebrochen, es wurde nichts geändert.",
+    "inactive": "Ihr Abonnement ist nicht mehr aktiv ({status}). Kostenpflichtige Funktionen sind ausgesetzt: Bitte aktualisieren Sie Ihre Zahlungsmethode.",
+    "unknown": "unbekannt",
+    "overage": "Über das Kontingent eines kostenpflichtigen Tarifs hinaus wird jedes zusätzliche Mandat mit {price} berechnet.",
+    "overageCount_one": "Diesen Monat: {count} Mandat.",
+    "overageCount_other": "Diesen Monat: {count} Mandate.",
+    "ownerOnly": "Nur ein Inhaber kann das Abonnement ändern.",
+    "current": "Aktuell",
+    "from": "ab {price}",
+    "perMonth": "/ Monat",
+    "choose": "{plan} wählen",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agenturen",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 Agent",
+        "i2": "Simulierte Bank",
+        "i3": "20 simulierte Mandate / Monat"
+      },
+      "builder": {
+        "i1": "3 Agenten",
+        "i2": "1 echte Bank",
+        "i3": "50 Mandate / Monat",
+        "i4": "Freigabe per Passkey und Benachrichtigungen"
+      },
+      "team": {
+        "i1": "10 Agenten",
+        "i2": "2 echte Banken",
+        "i3": "300 Mandate / Monat",
+        "i4": "Slack, Freigeber-Quorum, FEC-Export",
+        "i5": "Abonnements pro Agent verwaltet"
+      },
+      "agency": {
+        "i1": "25 Agenten, unbegrenzt viele Kunden",
+        "i2": "1.000 Mandate / Monat",
+        "i3": "Budgets, Aufschlag und Weiterberechnung pro Kunde",
+        "i4": "+ {price} pro aktivem Kunden"
+      },
+      "business": {
+        "i1": "Unbegrenzt",
+        "i2": "AI-Act-Dossier und -Bericht",
+        "i3": "Signierter Export des Audit-Logs",
+        "i4": "Priorisierter Support"
+      }
+    }
+  }
+}

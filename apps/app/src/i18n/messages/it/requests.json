@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtra per stato",
+      "all": "Tutte",
+      "pending": "Da approvare",
+      "issued": "Carta emessa",
+      "completed": "Pagate",
+      "rejected": "Rifiutate",
+      "failed": "Non riuscite"
+    },
+    "list": {
+      "title": "Richieste",
+      "lead": "Ogni richiesta degli agenti, con la relativa decisione e la relativa carta.",
+      "emptyTitle": "Nessuna richiesta",
+      "emptyBody": "Le richieste dei suoi agenti compariranno qui."
+    },
+    "decision": {
+      "notAllowed": "Solo proprietari, amministratori e approvatori possono decidere.",
+      "cancelledOnDevice": "Approvazione annullata sul dispositivo.",
+      "reasonLabel": "Motivo del rifiuto",
+      "reasonHint": "Visibile all'agente.",
+      "confirmReject": "Conferma il rifiuto",
+      "cancel": "Annulla",
+      "signing": "Firma in corso…",
+      "approve": "Approva con la mia passkey",
+      "reject": "Rifiuta"
+    },
+    "detail": {
+      "confirmCancel": "Annullare questa richiesta e la relativa carta?",
+      "receiptUnavailable": "Giustificativo non disponibile.",
+      "eyebrow": "Richiesta · {id}",
+      "amount": "Importo richiesto",
+      "agent": "Agente",
+      "mandateWindow": "mandato · {id}",
+      "purpose": "Finalità",
+      "category": "Categoria",
+      "expires": "Scadenza",
+      "rules": "Regole",
+      "perTxLimit": "Limite",
+      "budget": "budget",
+      "decision": "Decisione",
+      "hash": "sha256 {hash}",
+      "quorum": "Quorum: {signed} firme su {required} richieste oltre la soglia.",
+      "unusualAmount": "Barriera di sicurezza: importo insolito per questo agente, approvazione umana obbligatoria.",
+      "autoApproved": "Approvata automaticamente dalle regole",
+      "signedByPasskey": "Mandato firmato con passkey",
+      "card": "Carta",
+      "cardHolderFallback": "agente",
+      "cardAria": "Carta virtuale che termina con {last4}, titolare {holder}, scadenza {exp}",
+      "bankSca": "Approvi anche la creazione della carta nella sua app bancaria.",
+      "cardExpires": "Scade il {date}",
+      "handedOver": "consegnata all'agente {time}",
+      "notHandedOver": "non ancora consegnata all'agente",
+      "qontoNotice": "Qonto non consegna le carte agli agenti: la visualizzi qui e completi il pagamento personalmente.",
+      "showQontoCard": "Mostra la carta (Qonto)",
+      "simulatePayment": "Simula un pagamento",
+      "cancelCard": "Annulla la carta",
+      "noCard": "Nessuna carta emessa.",
+      "transactions": "Transazioni",
+      "noTransactions": "Nessuna transazione comunicata dalla banca.",
+      "receipts": "Giustificativi",
+      "addReceipt": "Aggiungi",
+      "noReceipts": "Nessun giustificativo.",
+      "back": "← Tutte le richieste"
+    }
+  }
+}

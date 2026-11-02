@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Preise",
+    "description": "Kostenlose Sandbox, danach {a}, {b}, {c} oder {d} pro Monat. Keine Provision auf Ihre Ausgaben.",
+    "headline": "Ein einfaches Abonnement. Keine Provision.",
+    "lead": "Sie zahlen nur für die Software. Die Karten werden von Ihrer Bank ausgegeben, zu Ihrem üblichen Kontomodell.",
+    "popular": "Am beliebtesten",
+    "from": "ab {price}",
+    "perMonth": "/ Monat",
+    "start": "Loslegen",
+    "choose": "{plan} wählen",
+    "mandates": "{count} Mandate / Monat",
+    "sandbox": {
+      "pitch": "Mit einer simulierten Bank ausprobieren.",
+      "i1": "1 Agent",
+      "i2": "Simulierte Bank",
+      "i3": "{count} simulierte Mandate / Monat",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Für Freelancer oder Entwickler und ihre Agenten.",
+      "i1": "3 Agenten",
+      "i2": "1 verbundene Bank",
+      "i4": "Freigabe per Passkey",
+      "i5": "Schutzmechanismen gegen Injection"
+    },
+    "team": {
+      "pitch": "Für Startups mit 5 bis 50 Personen.",
+      "i1": "10 Agenten",
+      "i2": "2 Banken",
+      "i4": "Slack und Freigeber-Quorum",
+      "i5": "Abonnements, FEC-Export"
+    },
+    "agency": {
+      "pitch": "Für Automatisierungsagenturen.",
+      "i1": "Unbegrenzt viele Kunden, 25 Agenten",
+      "i3": "Budget und Marge pro Kunde",
+      "i4": "Monatsbericht zur Weiterberechnung",
+      "i5": "+ {price} pro aktivem Kunden"
+    },
+    "business": {
+      "pitch": "Für regulierte Scale-ups.",
+      "i1": "Unbegrenzt",
+      "i2": "AI-Act-Dossier und -Bericht",
+      "i3": "Signierter Export des Audit-Logs",
+      "i4": "Priorisierter Support"
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "q1": "Gibt es Gebühren pro Karte?",
+      "a1": "Nicht von Artemis. Ihre Bank wendet ihr eigenes Kontomodell an (virtuelle Karten sind in den meisten Tarifen von Qonto und Revolut Business enthalten; Stripe Issuing rechnet nach eigener Preisliste ab).",
+      "q2": "Was passiert, wenn ich mein Kontingent überschreite?",
+      "a2": "In einem kostenpflichtigen Tarif arbeiten Ihre Agenten weiter: Jedes Mandat über dem Kontingent wird am Monatsende mit {price} berechnet. In der Sandbox werden Anfragen mit dem Code <code>quota_exceeded</code> abgelehnt.",
+      "q3": "Wie wird der Tarif {plan} abgerechnet?",
+      "a3": "{base} pro Monat zuzüglich {client} pro aktivem Kunden, also pro Kunde, für den im Laufe des Monats mindestens ein Mandat erstellt wurde.",
+      "q4": "Kann ich jederzeit kündigen?",
+      "a4": "Ja, im Bereich Abrechnung. Das Abonnement läuft bis zum Ende des bezahlten Zeitraums; Ihre Daten bleiben exportierbar.",
+      "q5": "Umsatzsteuer",
+      "a5": "Die angezeigten Preise sind Nettopreise."
+    }
+  }
+}

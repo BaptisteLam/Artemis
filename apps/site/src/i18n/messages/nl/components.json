@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Werkt met",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Eenmalig",
+      "aria": "Virtuele kaart eindigend op {last4}, kaarthouder {holder}, geldig tot {exp}",
+      "holder": "Kaarthouder",
+      "expires": "Geldig tot",
+      "debit": "Debit",
+      "virtual": "virtueel",
+      "used": "Gebruikt"
+    },
+    "faq": {
+      "q1": "Beheert Artemis mijn geld?",
+      "a1": "Nee. De kaarten worden aangemaakt bij uw eigen bank (Qonto, Revolut Business of Stripe Issuing) en van uw rekening afgeschreven. Artemis is software: het past uw regels toe, verzamelt uw goedkeuring en stuurt de bank aan via haar API. Het ontvangt, bewaart of verplaatst nooit geld.",
+      "q2": "Wat als mijn agent wordt gemanipuleerd door een prompt injection?",
+      "a2": "De agent kan alleen aanvragen. Elke kaart is eenmalig, begrensd op het exacte bedrag, vergrendeld op de beoogde verkoper en verloopt na 30 minuten. Buiten uw regels wordt de aanvraag geweigerd; boven uw drempel gaat er niets de deur uit zonder uw toegangssleutel. Elke afwijking in bedrag of verkoper geeft een waarschuwing, en de knop “Alles blokkeren” legt alles in één klik stil.",
+      "q3": "Gaat het kaartnummer via Artemis?",
+      "a3": "Nee, standaard niet. Bij het afrekenen krijgt de agent een eenmalige link die 10 minuten geldig is: daar wordt de kaart rechtstreeks door de uitgevende bank getoond. Artemis ziet, bewaart of verstuurt het nummer nooit. Na het openen werkt de link niet meer.",
+      "q4": "Waarom niet gewoon mijn bank gebruiken?",
+      "a4": "Als u alleen Stripe, Ramp of Mercury gebruikt, doen die al een deel van het werk. Artemis biedt wat een bank niet voor haar concurrenten doet: meerdere banken onder één beleid, Franse boekhouding (FEC, Pennylane), AI Act-bewijs dat u direct kunt overleggen, en een bureaumodus.",
+      "q5": "Welke banken worden ondersteund?",
+      "a5": "Stripe Issuing (aanbevolen) maakt de kaarten aan en toont ze aan de agent zonder dat het nummer ooit via Artemis gaat. Revolut Business werkt met schriftelijke toestemming van Revolut, waarbij de kaart rechtstreeks wordt overhandigd. Qonto wordt gekoppeld voor inzage, blokkeren en afstemming. De Sandbox simuleert een bank, zodat u kunt testen zonder iets te koppelen.",
+      "q6": "Wat kost het?",
+      "a6": "De Sandbox is gratis. Daarna {builder} (Builder), {team} (Team), {agency} + {client} per actieve klant ({agencyPlan}) of vanaf {business} (Business) per maand. Boven uw quotum {overage} per mandaat. Geen commissie op uw uitgaven: uw bank rekent haar gebruikelijke tarief. {vat}.",
+      "q7": "Blijven mijn gegevens in Europa?",
+      "a7": "Ja. De database wordt gehost in de Europese Unie (Frankfurt), bankgegevens worden versleuteld met AES-256-GCM en het geketende auditlogboek documenteert het menselijk toezicht dat de AI Act vereist."
+    }
+  }
+}

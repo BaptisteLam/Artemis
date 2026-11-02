@@ -1,0 +1,23 @@
+{
+  "admin": {
+    "eyebrow": "Cúloifig",
+    "title": "Artemis i bhfigiúirí",
+    "mrr": "MRR",
+    "paying": "Custaiméirí íoctha",
+    "ofOrgs_one": "as {count} eagraíocht",
+    "ofOrgs_two": "as {count} eagraíocht",
+    "ofOrgs_few": "as {count} eagraíocht",
+    "ofOrgs_many": "as {count} n-eagraíocht",
+    "ofOrgs_other": "as {count} eagraíocht",
+    "signups7d": "Clárúcháin (7 lá)",
+    "requests30d": "Iarratais (30 lá)",
+    "orgs": "Eagraíochtaí",
+    "cols": {
+      "name": "Ainm",
+      "plan": "Plean",
+      "subscription": "Síntiús",
+      "created": "Cruthaithe"
+    },
+    "waitlist": "Liosta feithimh ({total})"
+  }
+}

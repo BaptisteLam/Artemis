@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Export contabili",
+    "lead": "Spese addebitate dalle sue banche, pronte per Pennylane, il suo commercialista o un foglio di calcolo.",
+    "failed": "Esportazione non riuscita.",
+    "from": "Dal",
+    "to": "Al (escluso)",
+    "downloadCsv": "Scarica CSV",
+    "downloadFec": "Scarica FEC",
+    "formats": "CSV: separato da punto e virgola, compatibile con Excel. FEC: 18 colonne regolamentari, dare 604000 / avere 512000, importabile in Pennylane.",
+    "fecUpsell": "Il FEC è incluso a partire dal piano Team.",
+    "seePlans": "Vedi i piani"
+  }
+}

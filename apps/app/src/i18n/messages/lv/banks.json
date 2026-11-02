@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Bankas",
+    "lead": "Kartes tiek veidotas jūsu pašu bankā. Artemis nekad neglabā jūsu līdzekļus.",
+    "bankAria": "Banka",
+    "help": {
+      "stripe": "Stripe konts ar aktivizētu Issuing (ES). Izveidojiet ierobežotu atslēgu ar Issuing rakstīšanas atļaujām. Norādiet esošu kartes turētāju (ich_…) vai sava uzņēmuma adresi, lai Artemis to varētu izveidot.",
+      "qonto": "Lasīšanas piekļuve, iesaldēšana un saskaņošana: Qonto nenodod karti trešajām personām un aizliedz to aizdot. OAuth marķieris no Qonto partneru programmas; apstiprinātājs var droši apskatīt Qonto karti un pats veikt maksājumu.",
+      "revolut": "Plāns Grow vai augstāks, atbalsta dienesta aktivizēta piekļuve “Cards API” un Revolut rakstisks apstiprinājums (Valid Permission) pirms jebkādas lietošanas produkcijas vidē. Nepieciešama tiešā nodošana (Iestatījumi)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Ierobežotā slepenā atslēga",
+      "publishableKey": "Publiskā atslēga",
+      "stripeCardholder": "Stripe kartes turētājs",
+      "companyName": "Uzņēmuma nosaukums",
+      "address": "Adrese",
+      "postalCode": "Pasta indekss",
+      "city": "Pilsēta",
+      "country": "Valsts",
+      "webhookSecret": "Webhook noslēpums",
+      "accessToken": "Piekļuves marķieris",
+      "refreshToken": "Atjaunošanas marķieris",
+      "oauthClientId": "OAuth klienta ID",
+      "oauthClientSecret": "OAuth klienta noslēpums",
+      "holderMemberId": "Kartes turētāja dalībnieka ID",
+      "bankAccountId": "Bankas konta ID",
+      "environment": "Vide",
+      "stagingToken": "Testa vides marķieris",
+      "clientAssertion": "Klienta apliecinājums (JWT)",
+      "holderId": "Kartes turētāja ID"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… vai sk_test_…",
+      "stripePublishableKey": "pk_live_… (īslaicīga kartes saite)",
+      "stripeCardholder": "ich_… (neobligāti)",
+      "ifNoCardholder": "Ja kartes turētāja nav",
+      "country": "ISO kods, piem., LV",
+      "webhookSecret": "whsec_… (kad webhook ir izveidots, skatīt zemāk)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Neobligāti",
+      "toRefreshToken": "Marķiera atjaunošanai",
+      "qontoMembershipId": "Qonto membership id",
+      "qontoBankAccountId": "Qonto bank_account id",
+      "sandboxOnly": "Tikai testa videi (sandbox)",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Neobligāti, atjaunošanai",
+      "teamMemberOptional": "Komandas dalībnieks (neobligāti)"
+    },
+    "encrypted": "Piekļuves dati tiek pārbaudīti un pēc tam šifrēti (AES-256-GCM). Tie vairs nekad netiek parādīti.",
+    "testing": "Notiek savienojuma pārbaude…",
+    "connectProvider": "Pievienot {name}",
+    "testOk": "Savienojums darbojas",
+    "testFailed": "Neizdevās: {detail}",
+    "confirmDisconnect": "Atvienot šo banku? Aģenti, kas to izmanto, vairs nevarēs saņemt karti.",
+    "lastSync": "Pēdējā sinhronizācija: {date}",
+    "stripeWebhook": "Stripe webhook (notikumi issuing_transaction.*):",
+    "test": "Pārbaudīt",
+    "disconnect": "Atvienot",
+    "connectRealBank": "Pievienot īstu banku",
+    "upgrade": "Īstas bankas pievienošana ir iekļauta, sākot no plāna Builder ({price} mēnesī).",
+    "choosePlan": "Izvēlēties plānu →"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Bankai",
+    "lead": "Kortelės kuriamos jūsų pačių banke. Artemis niekada nelaiko jūsų lėšų.",
+    "bankAria": "Bankas",
+    "help": {
+      "stripe": "Stripe paskyra su įjungta Issuing funkcija (ES). Sukurkite ribotą raktą su Issuing rašymo teisėmis. Nurodykite esamą kortelės turėtoją (ich_…) arba savo įmonės adresą, kad Artemis galėtų jį sukurti.",
+      "qonto": "Skaitymo prieiga, įšaldymas ir suderinimas: Qonto neperduoda kortelės tretiesiems asmenims ir draudžia ją skolinti. OAuth žetonas iš Qonto partnerių programos; tvirtintojas gali saugiai peržiūrėti Qonto kortelę ir pats atlikti mokėjimą.",
+      "revolut": "Planas Grow arba aukštesnis, pagalbos tarnybos įjungta „Cards API“ prieiga ir rašytinis Revolut leidimas (Valid Permission) prieš bet kokį naudojimą gamybinėje aplinkoje. Būtinas tiesioginis perdavimas (Nustatymai)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Ribotas slaptasis raktas",
+      "publishableKey": "Viešasis raktas",
+      "stripeCardholder": "Stripe kortelės turėtojas",
+      "companyName": "Įmonės pavadinimas",
+      "address": "Adresas",
+      "postalCode": "Pašto kodas",
+      "city": "Miestas",
+      "country": "Šalis",
+      "webhookSecret": "Webhook paslaptis",
+      "accessToken": "Prieigos žetonas",
+      "refreshToken": "Atnaujinimo žetonas",
+      "oauthClientId": "OAuth kliento ID",
+      "oauthClientSecret": "OAuth kliento paslaptis",
+      "holderMemberId": "Kortelės turėtojo nario ID",
+      "bankAccountId": "Banko sąskaitos ID",
+      "environment": "Aplinka",
+      "stagingToken": "Bandomosios aplinkos žetonas",
+      "clientAssertion": "Kliento patvirtinimas (JWT)",
+      "holderId": "Kortelės turėtojo ID"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… arba sk_test_…",
+      "stripePublishableKey": "pk_live_… (laikina kortelės nuoroda)",
+      "stripeCardholder": "ich_… (neprivaloma)",
+      "ifNoCardholder": "Jei kortelės turėtojo nėra",
+      "country": "ISO kodas, pvz., LT",
+      "webhookSecret": "whsec_… (sukūrus webhook, žr. toliau)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Neprivaloma",
+      "toRefreshToken": "Žetonui atnaujinti",
+      "qontoMembershipId": "Qonto membership id",
+      "qontoBankAccountId": "Qonto bank_account id",
+      "sandboxOnly": "Tik bandomajai aplinkai (sandbox)",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Neprivaloma, atnaujinimui",
+      "teamMemberOptional": "Komandos narys (neprivaloma)"
+    },
+    "encrypted": "Prisijungimo duomenys patikrinami, tada užšifruojami (AES-256-GCM). Jie daugiau niekada nerodomi.",
+    "testing": "Tikrinamas ryšys…",
+    "connectProvider": "Prijungti {name}",
+    "testOk": "Ryšys veikia",
+    "testFailed": "Nepavyko: {detail}",
+    "confirmDisconnect": "Atjungti šį banką? Jį naudojantys agentai nebegalės gauti kortelės.",
+    "lastSync": "Paskutinis sinchronizavimas: {date}",
+    "stripeWebhook": "Stripe webhook (įvykiai issuing_transaction.*):",
+    "test": "Tikrinti",
+    "disconnect": "Atjungti",
+    "connectRealBank": "Prijungti tikrą banką",
+    "upgrade": "Tikro banko prijungimas įtrauktas nuo plano Builder ({price} per mėnesį).",
+    "choosePlan": "Pasirinkti planą →"
+  }
+}

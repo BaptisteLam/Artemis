@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Agenttisi maksavat. Viimeinen sana on sinun.",
+    "unknownAgent": "Agentti",
+    "unknownMerchant": "kauppias",
+    "requestPending": {
+      "title": "{agent} haluaa käyttää {amount}",
+      "subject": "Hyväksyttävänä: {amount}, {merchant}",
+      "merchant": "Kauppias: {merchant}",
+      "purpose": "Tarkoitus: {purpose}",
+      "expires": "Jos et vastaa, pyyntö vanhenee automaattisesti.",
+      "cta": "Tarkista ja hyväksy →",
+      "slack": "*{title}* – kauppias *{merchant}*",
+      "slackCta": "Tarkista ja allekirjoita pääsyavaimellani"
+    },
+    "cardIssueFailed": {
+      "subject": "Kortin luominen epäonnistui: {merchant}",
+      "title": "Pankki ei luonut korttia",
+      "fallback": "Pankkivirhe.",
+      "cta": "Näytä pyyntö →"
+    },
+    "mismatch": {
+      "subject": "Poikkeama havaittu: {amount}, {merchant}",
+      "title": "Tapahtuma ei vastaa valtuutusta",
+      "check": "Tarkista tapahtuma ja jäädytä agentti tarvittaessa.",
+      "cta": "Näytä tapahtumat →",
+      "pushTitle": "Tapahtumassa poikkeama"
+    },
+    "invitation": {
+      "subject": "Kutsu liittyä organisaatioon {org} Artemisissa",
+      "title": "Liity organisaatioon {org}",
+      "body": "Sinut on kutsuttu hyväksymään ja seuraamaan tiimisi tekoälyagenttien kuluja.",
+      "cta": "Hyväksy kutsu →"
+    }
+  }
+}

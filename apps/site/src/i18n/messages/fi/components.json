@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Toimii näiden kanssa",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Kertakäyttöinen",
+      "aria": "Virtuaalikortti, jonka numero päättyy {last4}, kortinhaltija {holder}, voimassa {exp}",
+      "holder": "Kortinhaltija",
+      "expires": "Voimassa",
+      "debit": "Debit",
+      "virtual": "virtuaalinen",
+      "used": "Käytetty"
+    },
+    "faq": {
+      "q1": "Säilyttääkö Artemis rahojani?",
+      "a1": "Ei. Kortit luodaan omassa pankissasi (Qonto, Revolut Business tai Stripe Issuing) ja veloitetaan tililtäsi. Artemis on ohjelmisto: se soveltaa sääntöjäsi, kerää hyväksyntäsi ja ohjaa pankkia sen API:n kautta. Se ei koskaan vastaanota, säilytä tai siirrä varoja.",
+      "q2": "Entä jos agenttiani manipuloidaan kehoteinjektiolla?",
+      "a2": "Agentti voi vain pyytää. Jokainen kortti on kertakäyttöinen, rajattu tarkalleen pyydettyyn summaan, lukittu aiottuun kauppiaaseen ja vanhenee 30 minuutissa. Sääntöjesi vastainen pyyntö hylätään, ja kynnysarvosi ylittyessä mitään ei makseta ilman pääsyavaintasi. Jokainen poikkeama summassa tai kauppiaassa laukaisee hälytyksen, ja ”Jäädytä kaikki” -painike pysäyttää kaiken yhdellä napsautuksella.",
+      "q3": "Kulkeeko kortin numero Artemisin kautta?",
+      "a3": "Ei oletuksena. Maksuvaiheessa agentti saa kertakäyttöisen linkin, joka on voimassa 10 minuuttia: kortin näyttää suoraan sen myöntänyt pankki. Artemis ei koskaan näe, tallenna tai välitä numeroa. Kun linkki on avattu, se lakkaa toimimasta.",
+      "q4": "Miksi en vain käyttäisi pankkiani?",
+      "a4": "Jos käytät pelkästään Stripeä, Rampia tai Mercurya, ne hoitavat jo osan työstä. Artemis tuo sen, mitä pankki ei tee kilpailijoidensa hyväksi: useita pankkeja yhden käytännön alla, ranskalaisen kirjanpidon (FEC, Pennylane), luovutusvalmiit AI Act -todisteet ja toimistotilan.",
+      "q5": "Mitä pankkeja tuetaan?",
+      "a5": "Stripe Issuing (suositeltu) luo kortit ja näyttää ne agentille ilman, että numero kulkee koskaan Artemisin kautta. Revolut Business toimii Revolutin kanssa tehdyn kirjallisen sopimuksen perusteella, ja kortti luovutetaan suoraan. Qonto liitetään lukemista, jäädyttämistä ja täsmäytystä varten. Sandbox simuloi pankkia, joten voit testata liittämättä mitään.",
+      "q6": "Paljonko se maksaa?",
+      "a6": "Sandbox on maksuton. Sen jälkeen {builder} (Builder), {team} (Team), {agency} + {client} jokaisesta aktiivisesta asiakkaasta ({agencyPlan}) tai alkaen {business} (Business) kuukaudessa. Kiintiön ylittävistä valtuutuksista veloitetaan {overage} kappaleelta. Kuluistasi ei peritä provisiota: pankkisi soveltaa tavanomaista hinnoitteluaan. {vat}.",
+      "q7": "Säilytetäänkö tietoni Euroopassa?",
+      "a7": "Kyllä. Tietokanta sijaitsee Euroopan unionissa (Frankfurt), pankkitunnukset salataan AES-256-GCM:llä, ja ketjutettu tarkastusloki dokumentoi AI Actin edellyttämän ihmisen valvonnan."
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · paketti {plan}",
+    "title": "Koontinäyttö",
+    "stats": {
+      "spent": "Käytetty tässä kuussa",
+      "pending": "Hyväksyttävänä",
+      "openQueue": "Avaa jono →",
+      "requests": "Pyynnöt tässä kuussa"
+    },
+    "recent": {
+      "title": "Viimeisimmät pyynnöt",
+      "viewAll": "Näytä kaikki →",
+      "empty": "Ei pyyntöjä tässä kuussa. Yhdistä agentti sivulla {agents}.",
+      "agentsLink": "Agentit"
+    },
+    "byAgent": {
+      "title": "Agenteittain",
+      "manage": "Hallitse →",
+      "empty": "Ei agentteja."
+    }
+  }
+}

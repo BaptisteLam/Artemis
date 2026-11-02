@@ -1,0 +1,92 @@
+{
+  "common": {
+    "loading": "Načítava sa…",
+    "copy": "Kopírovať",
+    "copied": "Skopírované"
+  },
+  "lang": {
+    "choose": "Jazyk"
+  },
+  "nav": {
+    "dashboard": "Prehľad",
+    "requests": "Žiadosti",
+    "agents": "Agenti",
+    "clients": "Klienti",
+    "cards": "Karty",
+    "subscriptions": "Predplatné",
+    "transactions": "Transakcie",
+    "exports": "Exporty",
+    "banks": "Banky",
+    "team": "Tím",
+    "audit": "Audit",
+    "billing": "Fakturácia",
+    "settings": "Nastavenia"
+  },
+  "shell": {
+    "home": "Artemis, prehľad",
+    "organization": "Organizácia",
+    "admin": "Administrácia",
+    "freezeAllHint": "Zmraziť všetkých agentov a zrušiť aktívne karty",
+    "frozen": "Zmrazené",
+    "freezeAll": "Zmraziť všetko",
+    "signOut": "Odhlásiť sa",
+    "navAria": "Navigácia aplikácie",
+    "pendingCount_one": "{count} čakajúca",
+    "pendingCount_few": "{count} čakajúce",
+    "pendingCount_many": "{count} čakajúcej",
+    "pendingCount_other": "{count} čakajúcich",
+    "frozenBanner": "Organizácia je zmrazená: nemožno vydať žiadnu novú kartu. Rozmrazte ju v Nastaveniach."
+  },
+  "status": {
+    "pending": "Na schválenie",
+    "approved": "Schválená",
+    "issued": "Karta vydaná",
+    "completed": "Zaplatená",
+    "rejected": "Zamietnutá",
+    "expired": "Platnosť vypršala",
+    "failed": "Chyba banky",
+    "canceled": "Zrušená",
+    "active": "Aktívna",
+    "pending_bank_sca": "Schválenie v banke",
+    "used": "Použitá",
+    "frozen": "Zmrazená",
+    "matched": "Spárovaná",
+    "mismatch": "Nezhoda",
+    "unmatched": "Nespárovaná"
+  },
+  "roles": {
+    "owner": "Vlastník",
+    "admin": "Administrátor",
+    "approver": "Schvaľovateľ",
+    "viewer": "Čitateľ"
+  },
+  "errors": {
+    "network": "Sieť nie je dostupná. Skontrolujte pripojenie.",
+    "unauthorized": "Vaša relácia vypršala. Prihláste sa znova.",
+    "forbidden": "Na túto akciu nemáte oprávnenie.",
+    "not_found": "Nenašlo sa alebo už nie je k dispozícii.",
+    "invalid_input": "Niektoré údaje sú neplatné. Skontrolujte formulár.",
+    "rate_limited": "Príliš veľa pokusov. Chvíľu počkajte a skúste to znova.",
+    "quota_exceeded": "Dosiahli ste mesačnú kvótu mandátov.",
+    "subscription_inactive": "Vaše predplatné je neaktívne. Aktualizujte ho v sekcii Fakturácia.",
+    "org_frozen": "Organizácia je zmrazená.",
+    "agent_frozen": "Tento agent je zmrazený.",
+    "request_not_pending": "Táto žiadosť už nečaká na rozhodnutie.",
+    "request_expired": "Platnosť tejto žiadosti vypršala.",
+    "already_revealed": "Táto karta už bola odovzdaná.",
+    "card_not_ready": "Karta zatiaľ nie je k dispozícii.",
+    "bank_error": "Banka operáciu zamietla.",
+    "plan_limit": "Dosiahli ste limit svojho plánu. Ak chcete pokračovať, prejdite na vyšší plán.",
+    "over_client_budget": "Mesačný rozpočet tohto klienta je prekročený.",
+    "internal": "Niečo sa pokazilo. Skúste to znova.",
+    "currency_not_allowed": "Politika túto menu nepovoľuje.",
+    "invalid_amount": "Neplatná suma.",
+    "over_transaction_limit": "Suma prekračuje limit na transakciu.",
+    "over_monthly_budget": "Mesačný rozpočet agenta je prekročený.",
+    "merchant_blocked": "Politika tohto obchodníka blokuje.",
+    "merchant_not_allowed": "Tento obchodník nie je na zozname povolených.",
+    "mcc_blocked": "Táto kategória obchodníkov je blokovaná.",
+    "mcc_not_allowed": "Táto kategória obchodníkov nie je povolená.",
+    "too_many_requests": "Tento agent mal za poslednú hodinu príliš veľa žiadostí."
+  }
+}

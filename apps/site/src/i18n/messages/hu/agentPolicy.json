@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Sablon: MI-ügynökök költési szabályzata",
+    "intro": "Ingyenes, testre szabható sablon a mesterséges intelligencián alapuló ügynökök költéseinek szabályozásához és a mesterséges intelligenciáról szóló uniós rendelet (AI Act) 14. cikke által előírt emberi felügyelet dokumentálásához. Nyomtassa ki ezt az oldalt, vagy másolja be a belső wikijébe.",
+    "scope": {
+      "title": "1. Cél és hatály",
+      "body": "Ez a szabályzat minden olyan szoftverügynökre (beszélgető asszisztens, automatizálás, szkript) vonatkozik, amely jogosult a(z) [VÁLLALAT] nevében vásárolni. Egyetlen ügynök sem használja a vállalat vagy egy munkavállaló bankkártyáját: minden vásárlás az Artemisen keresztül igényelt, egyszer használatos virtuális kártyával történik."
+    },
+    "register": {
+      "title": "2. Ügynöknyilvántartás",
+      "body": "Minden ügynök szerepel a nyilvántartásban a következő adatokkal: neve, platformja, a felelős személy, a feladata, a havi kerete, a vásárlásonkénti limitje, az engedélyezett kereskedők és adott esetben az ügyfél, akinek dolgozik."
+    },
+    "rules": {
+      "title": "3. Költési szabályok",
+      "i1": "Havi keret ügynökönként: [ÖSSZEG] €; limit vásárlásonként: [ÖSSZEG] €.",
+      "i2": "Engedélyezett kereskedők: [LISTA]; tiltott kategóriák: szerencsejáték, pénzátutalás, készpénz-helyettesítők, értékpapírok.",
+      "i3": "Automatikus jóváhagyás csak [ÖSSZEG] € alatt és engedélyezett kereskedőnél; e fölött kötelező az emberi aláírás.",
+      "i4": "[ÖSSZEG] € fölött két különböző aláíró szükséges."
+    },
+    "oversight": {
+      "title": "4. Emberi felügyelet",
+      "body": "A jóváhagyásra jogosult személyek: [NEVEK / SZEREPKÖRÖK]. A jóváhagyás passkey-vel történik, a megbízás pontos tartalmára (ügynök, összeg, kereskedő, cél). A jóvá nem hagyott igénylések automatikusan lejárnak."
+    },
+    "records": {
+      "title": "5. Bizonylatok és könyvelés",
+      "body": "Minden vásárláshoz [N] órán belül hozzá kell rendelni a számlát; ennek hiányában az ügynököt fel kell függeszteni. A költések havonta exportálásra kerülnek (FEC vagy Pennylane), és egyeztetésre kerülnek a bankszámlakivonatokkal."
+    },
+    "incidents": {
+      "title": "6. Incidensek",
+      "body": "Rendellenes viselkedés, összeg- vagy kereskedőeltérés, illetve feltételezett promptinjektálás esetén a felelős személy azonnal befagyasztja az ügynököt (vagy a teljes szervezetet), és rögzíti az incidenst."
+    },
+    "retention": {
+      "title": "7. Megőrzés és felülvizsgálat",
+      "body": "A láncolt auditnaplót [10] évig kell megőrizni. Negyedévente felügyeleti jelentés készül, amelyet [SZEREPKÖR] vizsgál felül. Ezt a szabályzatot évente felül kell vizsgálni."
+    },
+    "note": "Az ügynöknyilvántartást és a negyedéves felügyeleti jelentést az Artemis a(z) {plan} csomagban állítja elő."
+  }
+}

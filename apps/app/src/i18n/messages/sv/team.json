@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Team",
+    "lead": "Godkännarna tar emot begäranden och signerar dem med sin lösennyckel.",
+    "confirmRemove": "Ta bort den här medlemmen?",
+    "cols": {
+      "member": "Medlem",
+      "role": "Roll",
+      "since": "Sedan"
+    },
+    "you": "du",
+    "remove": "Ta bort",
+    "invite": "Bjud in",
+    "email": "E-post",
+    "role": "Roll",
+    "send": "Skicka inbjudan",
+    "inviteLink": "Inbjudningslänk (giltig i 7 dagar):",
+    "expiresOn": "går ut {date}",
+    "revoke": "Återkalla"
+  }
+}

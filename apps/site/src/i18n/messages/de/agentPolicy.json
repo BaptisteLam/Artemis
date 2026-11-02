@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Vorlage: Ausgabenrichtlinie für KI-Agenten",
+    "intro": "Eine kostenlose, anpassbare Vorlage, um die Ausgaben von Agenten künstlicher Intelligenz zu regeln und die menschliche Aufsicht zu dokumentieren, die Artikel 14 der europäischen KI-Verordnung (AI Act) verlangt. Drucken Sie diese Seite aus oder übernehmen Sie sie in Ihr Wiki.",
+    "scope": {
+      "title": "1. Zweck und Geltungsbereich",
+      "body": "Diese Richtlinie gilt für jeden Software-Agenten (Chat-Assistent, Automatisierung, Skript), der berechtigt ist, im Namen von [UNTERNEHMEN] einen Kauf zu tätigen. Kein Agent verwendet die Zahlungskarte des Unternehmens oder eines Mitarbeiters: Jeder Kauf erfolgt über eine virtuelle Einmalkarte, die über Artemis angefragt wird."
+    },
+    "register": {
+      "title": "2. Agentenregister",
+      "body": "Jeder Agent wird mit folgenden Angaben im Register erfasst: Name, Plattform, verantwortliche Person, Zweck, Monatsbudget, Limit pro Kauf, zugelassene Händler und gegebenenfalls der Kunde, für den er arbeitet."
+    },
+    "rules": {
+      "title": "3. Ausgaberegeln",
+      "i1": "Monatsbudget pro Agent: [BETRAG] €; Limit pro Kauf: [BETRAG] €.",
+      "i2": "Zugelassene Händler: [LISTE]; verbotene Kategorien: Glücksspiel, Geldtransfers, bargeldähnliche Transaktionen, Wertpapiere.",
+      "i3": "Automatische Freigabe nur unter [BETRAG] € und bei einem zugelassenen Händler; darüber ist eine menschliche Signatur Pflicht.",
+      "i4": "Über [BETRAG] € sind zwei verschiedene Unterzeichnende erforderlich."
+    },
+    "oversight": {
+      "title": "4. Menschliche Aufsicht",
+      "body": "Freigabeberechtigt sind: [NAMEN / FUNKTIONEN]. Die Freigabe erfolgt per Passkey auf den genauen Inhalt des Mandats (Agent, Betrag, Händler, Zweck). Jede nicht freigegebene Anfrage verfällt automatisch."
+    },
+    "records": {
+      "title": "5. Belege und Buchhaltung",
+      "body": "Jedem Kauf wird innerhalb von [N] Stunden seine Rechnung zugeordnet; andernfalls wird der Agent gesperrt. Die Ausgaben werden monatlich exportiert (FEC oder Pennylane) und mit den Kontoauszügen abgeglichen."
+    },
+    "incidents": {
+      "title": "6. Vorfälle",
+      "body": "Bei auffälligem Verhalten, einer Abweichung bei Betrag oder Händler oder dem Verdacht auf eine Prompt-Injection sperrt die verantwortliche Person sofort den Agenten (oder die gesamte Organisation) und dokumentiert den Vorfall."
+    },
+    "retention": {
+      "title": "7. Aufbewahrung und Überprüfung",
+      "body": "Das verkettete Audit-Log wird [10] Jahre lang aufbewahrt. Jedes Quartal wird ein Aufsichtsbericht erstellt und von [FUNKTION] geprüft. Diese Richtlinie wird jährlich überprüft."
+    },
+    "note": "Artemis erstellt das Agentenregister und den vierteljährlichen Aufsichtsbericht im Tarif {plan}."
+  }
+}

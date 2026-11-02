@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Bankok",
+    "lead": "A kártyák az Ön saját bankjában jönnek létre. Az Artemis soha nem kezeli az Ön pénzét.",
+    "bankAria": "Bank",
+    "help": {
+      "stripe": "Stripe-fiók bekapcsolt Issuing szolgáltatással (EU). Hozzon létre egy korlátozott kulcsot Issuing írási jogosultsággal. Adjon meg egy meglévő kártyabirtokost (ich_…) vagy a cég címét, hogy az Artemis létrehozhasson egyet.",
+      "qonto": "Olvasás, befagyasztás és egyeztetés: a Qonto nem adja át a kártyát harmadik félnek, és tiltja annak kölcsönadását. OAuth-token a Qonto partnerprogramjából; a jóváhagyó biztonságosan megtekintheti a Qonto-kártyát, és maga végezheti el a fizetést.",
+      "revolut": "Grow vagy magasabb csomag, az ügyfélszolgálat által bekapcsolt „Cards API” hozzáférés, valamint a Revolut írásos engedélye (Valid Permission) minden éles használat előtt. Közvetlen átadást igényel (Beállítások)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Korlátozott titkos kulcs",
+      "publishableKey": "Nyilvános kulcs",
+      "stripeCardholder": "Stripe-kártyabirtokos",
+      "companyName": "Cégnév",
+      "address": "Cím",
+      "postalCode": "Irányítószám",
+      "city": "Település",
+      "country": "Ország",
+      "webhookSecret": "Webhook titkos kulcsa",
+      "accessToken": "Hozzáférési token",
+      "refreshToken": "Frissítési token",
+      "oauthClientId": "OAuth-kliensazonosító",
+      "oauthClientSecret": "OAuth-klienstitok",
+      "holderMemberId": "Kártyabirtokos tagazonosítója",
+      "bankAccountId": "Bankszámla-azonosító",
+      "environment": "Környezet",
+      "stagingToken": "Staging token",
+      "clientAssertion": "Client assertion (JWT)",
+      "holderId": "Kártyabirtokos azonosítója"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… vagy sk_test_…",
+      "stripePublishableKey": "pk_live_… (ideiglenes kártyahivatkozás)",
+      "stripeCardholder": "ich_… (nem kötelező)",
+      "ifNoCardholder": "Ha nincs kártyabirtokos",
+      "country": "ISO-kód, pl. HU",
+      "webhookSecret": "whsec_… (a webhook létrehozása után, lásd lent)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Nem kötelező",
+      "toRefreshToken": "A token frissítéséhez",
+      "qontoMembershipId": "Qonto membership id",
+      "qontoBankAccountId": "Qonto bank_account id",
+      "sandboxOnly": "Csak Sandbox",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Nem kötelező, a frissítéshez",
+      "teamMemberOptional": "Csapattag (nem kötelező)"
+    },
+    "encrypted": "A hozzáférési adatokat teszteljük, majd titkosítjuk (AES-256-GCM). Soha többé nem jelennek meg.",
+    "testing": "Kapcsolat tesztelése…",
+    "connectProvider": "{name} csatlakoztatása",
+    "testOk": "A kapcsolat rendben",
+    "testFailed": "Sikertelen: {detail}",
+    "confirmDisconnect": "Leválasztja ezt a bankot? Az ezt használó ügynökök többé nem kaphatnak kártyát.",
+    "lastSync": "Utolsó szinkronizálás: {date}",
+    "stripeWebhook": "Stripe-webhook (issuing_transaction.* események):",
+    "test": "Teszt",
+    "disconnect": "Leválasztás",
+    "connectRealBank": "Valódi bank csatlakoztatása",
+    "upgrade": "Valódi bank csatlakoztatása a Builder csomagtól érhető el ({price}/hó).",
+    "choosePlan": "Csomag választása →"
+  }
+}

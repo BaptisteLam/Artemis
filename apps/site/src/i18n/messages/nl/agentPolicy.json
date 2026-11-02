@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Sjabloon: uitgavenbeleid voor AI-agents",
+    "intro": "Een gratis sjabloon om aan te passen, voor het beheersen van uitgaven door agents met artificiële intelligentie en het documenteren van het menselijk toezicht dat artikel 14 van de Europese AI-verordening (AI Act) vereist. Druk deze pagina af of kopieer haar naar uw wiki.",
+    "scope": {
+      "title": "1. Doel en toepassingsgebied",
+      "body": "Dit beleid geldt voor elke software-agent (conversationele assistent, automatisering, script) die bevoegd is om namens [BEDRIJF] een aankoop te doen. Geen enkele agent gebruikt de betaalkaart van het bedrijf of van een medewerker: elke aankoop verloopt via een virtuele eenmalige kaart die via Artemis wordt aangevraagd."
+    },
+    "register": {
+      "title": "2. Register van agents",
+      "body": "Elke agent wordt in het register opgenomen met: zijn naam, zijn platform, de verantwoordelijke persoon, zijn doel, zijn maandbudget, zijn limiet per aankoop, zijn toegestane verkopers en, in voorkomend geval, de klant voor wie hij werkt."
+    },
+    "rules": {
+      "title": "3. Uitgavenregels",
+      "i1": "Maandbudget per agent: € [BEDRAG]; limiet per aankoop: € [BEDRAG].",
+      "i2": "Toegestane verkopers: [LIJST]; verboden categorieën: kansspelen, geldovermakingen, quasi-contanten, effecten.",
+      "i3": "Automatische goedkeuring alleen onder € [BEDRAG] en bij een toegestane verkoper; daarboven is een menselijke handtekening verplicht.",
+      "i4": "Boven € [BEDRAG] zijn twee verschillende ondertekenaars vereist."
+    },
+    "oversight": {
+      "title": "4. Menselijk toezicht",
+      "body": "De personen die mogen goedkeuren zijn: [NAMEN / FUNCTIES]. Goedkeuring gebeurt met een toegangssleutel (passkey) op de exacte inhoud van het mandaat (agent, bedrag, verkoper, doel). Elke aanvraag die niet wordt goedgekeurd, verloopt automatisch."
+    },
+    "records": {
+      "title": "5. Bonnen en boekhouding",
+      "body": "Aan elke aankoop wordt binnen [N] uur de factuur gekoppeld; zo niet, dan wordt de agent geblokkeerd. De uitgaven worden maandelijks geëxporteerd (FEC of Pennylane) en afgestemd met de bankafschriften."
+    },
+    "incidents": {
+      "title": "6. Incidenten",
+      "body": "Bij afwijkend gedrag, een afwijking in bedrag of verkoper, of een vermoeden van prompt injection blokkeert de verantwoordelijke persoon onmiddellijk de agent (of de hele organisatie) en registreert het incident."
+    },
+    "retention": {
+      "title": "7. Bewaring en herziening",
+      "body": "Het geketende auditlogboek wordt [10] jaar bewaard. Elk kwartaal wordt een toezichtsrapport opgesteld en beoordeeld door [FUNCTIE]. Dit beleid wordt jaarlijks herzien."
+    },
+    "note": "Artemis genereert het register van agents en het driemaandelijkse toezichtsrapport in het abonnement {plan}."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "För byråer",
+    "description": "Automationsbyråer: era kunders agenter spenderar under kontroll, med en budget och en faktura per kund.",
+    "eyebrow": "Automationsbyråer",
+    "headline": "Dina kunders agenter spenderar. Du vidarefakturerar utan krångel.",
+    "lead": "Bygger du agenter i n8n, Make eller Claude åt dina kunder? Artemis håller isär utgifterna per kund, tillämpar en budget för var och en och förbereder vidarefaktureringen med ditt påslag.",
+    "try": "Prova gratis →",
+    "plan": "Planen {plan}: {base} + {client} per aktiv kund",
+    "spaces": {
+      "title": "En arbetsyta per kund",
+      "body": "Koppla varje agent till en kund. Dess begäranden, kort, transaktioner och kvitton hålls åtskilda. En agent kan aldrig använda en annan kunds budget."
+    },
+    "budget": {
+      "title": "En månadsbudget per kund",
+      "body": "Ange ett månadstak för varje kund, utöver varje agents regler. Över taket avvisas begäran innan den ens når en människa."
+    },
+    "rebilling": {
+      "title": "Vidarefakturering med ett klick",
+      "body": "Varje månad sammanställer Artemis en rapport per kund: debiterade köp, agent, handlare, kvitto, administrationsavgift baserad på ditt påslag och totalt att vidarefakturera. CSV-export, redo att skicka eller importera i ditt faktureringsverktyg."
+    },
+    "proof": {
+      "title": "Bevis för dina kunder",
+      "body": "Varje betalning signeras av en behörig person och loggen kan inte ändras. Visa dina kunder att deras agenter står under mänsklig tillsyn, så som AI Act kräver."
+    },
+    "european": {
+      "title": "Europeiskt hela vägen",
+      "body": "Euro, europeiska banker, data i Frankfurt, FEC- och Pennylane-export för fransk bokföring."
+    },
+    "demo": {
+      "window": "vidarefakturering · martin-bakery · november",
+      "subtotal": "Delsumma",
+      "fee": "Administrationsavgift 15 %",
+      "total": "Totalt att vidarefakturera"
+    }
+  }
+}

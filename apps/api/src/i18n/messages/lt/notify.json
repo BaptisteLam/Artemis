@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Jūsų agentai moka. Paskutinis žodis lieka jums.",
+    "unknownAgent": "Agentas",
+    "unknownMerchant": "prekybininkas",
+    "requestPending": {
+      "title": "{agent} nori išleisti {amount}",
+      "subject": "Reikia patvirtinti: {amount}, prekybininkas {merchant}",
+      "merchant": "Prekybininkas: {merchant}",
+      "purpose": "Tikslas: {purpose}",
+      "expires": "Negavus atsakymo, užklausos galiojimas baigiasi automatiškai.",
+      "cta": "Peržiūrėti ir patvirtinti →",
+      "slack": "*{title}*, prekybininkas *{merchant}*",
+      "slackCta": "Peržiūrėti ir pasirašyti prieigos raktu"
+    },
+    "cardIssueFailed": {
+      "subject": "Nepavyko sukurti kortelės, prekybininkas {merchant}",
+      "title": "Bankas nesukūrė kortelės",
+      "fallback": "Banko klaida.",
+      "cta": "Peržiūrėti užklausą →"
+    },
+    "mismatch": {
+      "subject": "Aptiktas neatitikimas: {amount}, prekybininkas {merchant}",
+      "title": "Operacija neatitinka įgaliojimo",
+      "check": "Patikrinkite operaciją ir, jei reikia, įšaldykite agentą.",
+      "cta": "Peržiūrėti operacijas →",
+      "pushTitle": "Operacijos neatitikimas"
+    },
+    "invitation": {
+      "subject": "Kvietimas prisijungti prie {org} platformoje Artemis",
+      "title": "Prisijunkite prie {org}",
+      "body": "Esate kviečiami tvirtinti ir stebėti savo komandos DI agentų išlaidas.",
+      "cta": "Priimti kvietimą →"
+    }
+  }
+}

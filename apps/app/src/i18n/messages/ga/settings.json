@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Socruithe",
+    "signOut": "Logáil amach",
+    "language": {
+      "title": "Teanga",
+      "lead": "Teanga na comhéadaine ar an ngléas seo."
+    },
+    "notifications": {
+      "title": "Fógraí ar an ngléas seo",
+      "lead": "Faigh fógra do gach iarratas. Ar iPhone, cuir Artemis le do Scáileán Baile ar dtús (Comhroinn → Cuir leis an Scáileán Baile).",
+      "notConfigured": "Níl fógraí brú cumraithe ar an bhfreastalaí seo (eochracha VAPID). Fanann ríomhphoist gníomhach.",
+      "unsupported": "Ní thacaíonn an brabhsálaí seo le fógraí brú.",
+      "denied": "Tá fógraí blocáilte i socruithe an bhrabhsálaí.",
+      "enable": "Cumasaigh fógraí",
+      "on": "Tá fógraí ar siúl.",
+      "disable": "Múch"
+    },
+    "slack": {
+      "lead": "Postáiltear gach iarratas atá ar feitheamh chuig cainéal Slack, le cnaipe a osclaíonn formheas le passkey. Cruthaigh “Incoming Webhook” in Slack agus greamaigh a URL.",
+      "connected": "Tá Slack ceangailte.",
+      "disconnect": "Dícheangail",
+      "urlLabel": "URL webhook Slack",
+      "connect": "Ceangail",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Cártaí a thabhairt do ghníomhairí",
+      "confirmDirect": "Tabhairt dhíreach: rachaidh uimhir an chárta trí Artemis uair amháin ar a bealach chuig an ngníomhaire. Cuireann sé seo faoi raon feidhme PCI DSS thú agus, le Revolut, teastaíonn cead i scríbhinn. Leanúint ar aghaidh?",
+      "linkTitle": "Nasc gearrshaolach (molta)",
+      "linkText": "Faigheann an gníomhaire nasc aonúsáide atá bailí ar feadh 10 nóiméad; taispeánann an banc eisiúna an cárta (Stripe Issuing). Ní théann an uimhir trí Artemis choíche.",
+      "directTitle": "Tabhairt dhíreach (rogha ardleibhéil)",
+      "directText": "Seoltar an uimhir chuig an ngníomhaire uair amháin, gan í a stóráil. Riachtanach do Revolut. Téann tú faoi raon feidhme PCI DSS."
+    },
+    "org": {
+      "title": "Eagraíocht",
+      "name": "Ainm",
+      "rename": "Athainmnigh"
+    },
+    "emergency": {
+      "title": "Éigeandáil",
+      "lead": "Cuireann “Reoigh gach rud” gach gníomhaire ar fionraí agus cealaíonn sé na cártaí gníomhacha agus na hiarratais atá ar feitheamh. Úsáid é má iompraíonn gníomhaire go neamhghnách nó má sceitheadh comhartha.",
+      "confirmFreeze": "An eagraíocht ar fad a reo? Reofar gach gníomhaire agus cealófar na cártaí gníomhacha.",
+      "unfreeze": "Dí-reoigh an eagraíocht",
+      "freeze": "Reoigh gach rud anois",
+      "afterUnfreeze": "Tar éis an dí-reo, athghníomhachtaigh gach gníomhaire óna leathanach féin."
+    },
+    "passkeys": {
+      "title": "Passkeys",
+      "devicePrompt": "Ainm an ghléis (m.sh. iPhone Léa)",
+      "confirmDelete": "An passkey seo a scriosadh?",
+      "add": "Cuir leis",
+      "lead": "Teastaíonn passkey chun caiteachas a fhormheas. Cuir ceann leis ar gach gléas a úsáideann tú.",
+      "addedOn": "curtha leis ar {date}",
+      "delete": "Scrios",
+      "none": "Gan passkey: ní féidir leat caiteachas a fhormheas fós."
+    }
+  }
+}

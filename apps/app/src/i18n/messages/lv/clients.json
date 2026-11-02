@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Klienti",
+    "lead": "Katram klientam sava darbvieta: viņa aģenti, viņa mēneša budžets, jūsu uzcenojums un pārrēķināšanas pārskats, gatavs nosūtīšanai.",
+    "invalidBudget": "Nederīgs budžets (piem., 500 vai 49.90).",
+    "upsell": "Klientu darbvietas ir iekļautas plānā Aģentūrām ({price} + {perClient} par katru aktīvo klientu).",
+    "seePlans": "Skatīt plānus →",
+    "empty": "Nav klientu",
+    "emptyHint": "Izveidojiet klientu un pēc tam piešķiriet tam aģentus.",
+    "cols": {
+      "client": "Klients",
+      "agents": "Aģenti",
+      "spent": "Saistības šomēnes",
+      "budget": "Budžets",
+      "markup": "Uzcenojums"
+    },
+    "archived": "arhivēts",
+    "percent": "{value}%",
+    "report": "Pārskats →",
+    "new": "Jauns klients",
+    "fields": {
+      "name": "Nosaukums",
+      "billingEmail": "E-pasts rēķiniem",
+      "markup": "Pārrēķināšanas uzcenojums (%)",
+      "budget": "Mēneša budžets (€)",
+      "budgetHint": "Tukšs = bez klienta limita"
+    },
+    "create": "Izveidot klientu",
+    "exportFailed": "Eksports neizdevās.",
+    "eyebrow": "Klients",
+    "month": "Mēnesis",
+    "exportCsv": "Eksportēt CSV",
+    "monthPurchases": "Pirkumi šomēnes",
+    "markupPct": "Uzcenojums {value}",
+    "toRebill": "Jāpārrēķina",
+    "noPurchases": "Šomēnes pirkumu nav",
+    "lines": {
+      "date": "Datums",
+      "agent": "Aģents",
+      "merchant": "Tirgotājs",
+      "purpose": "Mērķis",
+      "amount": "Summa",
+      "receipt": "Čeks"
+    },
+    "yes": "Jā",
+    "missing": "Trūkst",
+    "archive": "Arhivēt klientu",
+    "reactivate": "Aktivizēt no jauna",
+    "all": "← Visi klienti"
+  }
+}

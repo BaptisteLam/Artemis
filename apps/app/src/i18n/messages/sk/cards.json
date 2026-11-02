@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Karty",
+    "lead": "Jednorazové karty vydané vo vašich bankách. Úplné číslo karty sa nikdy neukladá.",
+    "linkAria": "Karta •••• {last4}",
+    "cardAria": "Virtuálna karta končiaca na {last4}, držiteľ {holder}, platnosť do {exp}",
+    "tagRevealed": "Odovzdaná agentovi",
+    "tagSingleUse": "Jednorazová",
+    "emptyTitle": "Žiadne karty",
+    "emptyText": "Karty sa zobrazia po schválení žiadosti.",
+    "colCard": "Karta",
+    "colIssued": "Vydaná",
+    "colExpires": "Platnosť",
+    "colRevealed": "Odovzdaná agentovi",
+    "colStatus": "Stav",
+    "notRevealed": "Nie",
+    "request": "Žiadosť →"
+  }
+}

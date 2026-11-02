@@ -1,0 +1,16 @@
+{
+  "transactions": {
+    "title": "Transazioni",
+    "lead": "Operazioni comunicate dalle sue banche e abbinate ai mandati (ultimi 90 giorni).",
+    "mismatches_one": "{count} transazione non corrisponde al relativo mandato. La verifichi e, se necessario, congeli l'agente.",
+    "mismatches_many": "{count} transazioni non corrispondono al relativo mandato. Le verifichi e, se necessario, congeli l'agente.",
+    "mismatches_other": "{count} transazioni non corrispondono al relativo mandato. Le verifichi e, se necessario, congeli l'agente.",
+    "emptyTitle": "Nessuna transazione",
+    "emptyText": "Compaiono qualche minuto dopo ogni pagamento.",
+    "colDate": "Data",
+    "colMerchant": "Esercente",
+    "colAmount": "Importo",
+    "colBankStatus": "Stato bancario",
+    "colMatch": "Abbinamento"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "transactions": {
+    "title": "Transakcije",
+    "lead": "Operacije koje su prijavile vaše banke i koje su povezane s nalozima (posljednjih 90 dana).",
+    "mismatches_one": "{count} transakcija ne odgovara svojem nalogu. Provjerite je i po potrebi zamrznite agenta.",
+    "mismatches_few": "{count} transakcije ne odgovaraju svojem nalogu. Provjerite ih i po potrebi zamrznite agenta.",
+    "mismatches_other": "{count} transakcija ne odgovara svojem nalogu. Provjerite ih i po potrebi zamrznite agenta.",
+    "emptyTitle": "Nema transakcija",
+    "emptyText": "Pojavljuju se nekoliko minuta nakon svakog plaćanja.",
+    "colDate": "Datum",
+    "colMerchant": "Trgovac",
+    "colAmount": "Iznos",
+    "colBankStatus": "Status u banci",
+    "colMatch": "Povezivanje"
+  }
+}

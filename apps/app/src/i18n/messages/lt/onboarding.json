@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Žingsnis {step} iš {total}",
+    "continue": "Tęsti →",
+    "org": {
+      "title": "Jūsų organizacija",
+      "lead": "Pradedate su planu Sandbox: imituotas bankas, be mokesčių.",
+      "nameLabel": "Įmonės ar studijos pavadinimas"
+    },
+    "agent": {
+      "title": "Jūsų pirmasis agentas",
+      "lead": "Trumpas pavadinimas, nusakantis, ką jis perka. Numatytosios taisyklės: {monthly} per mėnesį, {perPurchase} vienam pirkimui.",
+      "nameLabel": "Agento pavadinimas",
+      "platformLabel": "Platforma",
+      "platformOther": "Kita",
+      "submit": "Sukurti agentą →"
+    },
+    "connect": {
+      "title": "Prijunkite savo agentą",
+      "done": "Nukopijavau žetoną →"
+    },
+    "passkey": {
+      "title": "Jūsų tvirtinimo prieigos raktas",
+      "lead": "Kiekviena išlaida bus pasirašoma naudojant Face ID, Touch ID, Windows Hello arba saugos raktą. Jei įmanoma, užregistruokite jį telefone, kuriuo gausite pranešimus.",
+      "deviceName": "Pirmasis įrenginys",
+      "saved": "Prieigos raktas užregistruotas.",
+      "unsupported": "Ši naršyklė nepalaiko prieigos raktų.",
+      "register": "Užregistruoti prieigos raktą",
+      "openDashboard": "Atidaryti suvestinę →",
+      "later": "Vėliau"
+    }
+  }
+}

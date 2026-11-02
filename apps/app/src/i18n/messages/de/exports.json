@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Buchhaltungsexporte",
+    "lead": "Die von Ihren Banken belasteten Ausgaben, bereit für Pennylane, Ihre Steuerberatung oder eine Tabellenkalkulation.",
+    "failed": "Export fehlgeschlagen.",
+    "from": "Von",
+    "to": "Bis (ausschließlich)",
+    "downloadCsv": "CSV herunterladen",
+    "downloadFec": "FEC herunterladen",
+    "formats": "CSV: Semikolon als Trennzeichen, Excel-kompatibel. FEC: 18 vorgeschriebene Spalten, Soll 604000 / Haben 512000, in Pennylane importierbar.",
+    "fecUpsell": "FEC ist ab dem Tarif Team enthalten.",
+    "seePlans": "Tarife ansehen"
+  }
+}

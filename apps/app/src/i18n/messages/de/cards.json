@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Karten",
+    "lead": "Einmalkarten, ausgegeben bei Ihren Banken. Die vollständige Kartennummer wird nie gespeichert.",
+    "linkAria": "Karte •••• {last4}",
+    "cardAria": "Virtuelle Karte mit Endziffern {last4}, Inhaber {holder}, gültig bis {exp}",
+    "tagRevealed": "An den Agenten übergeben",
+    "tagSingleUse": "Einmalkarte",
+    "emptyTitle": "Keine Karten",
+    "emptyText": "Karten erscheinen, sobald eine Anfrage freigegeben wurde.",
+    "colCard": "Karte",
+    "colIssued": "Ausgegeben",
+    "colExpires": "Gültig bis",
+    "colRevealed": "An den Agenten übergeben",
+    "colStatus": "Status",
+    "notRevealed": "Nein",
+    "request": "Anfrage →"
+  }
+}

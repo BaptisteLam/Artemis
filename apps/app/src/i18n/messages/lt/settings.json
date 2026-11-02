@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Nustatymai",
+    "signOut": "Atsijungti",
+    "language": {
+      "title": "Kalba",
+      "lead": "Sąsajos kalba šiame įrenginyje."
+    },
+    "notifications": {
+      "title": "Pranešimai šiame įrenginyje",
+      "lead": "Gaukite pranešimą apie kiekvieną užklausą. „iPhone“ įrenginyje pirmiausia pridėkite Artemis prie pradžios ekrano (Bendrinti → Įtraukti į pradžios ekraną).",
+      "notConfigured": "Šiame serveryje tiesioginiai pranešimai nesukonfigūruoti (VAPID raktai). El. laiškai ir toliau siunčiami.",
+      "unsupported": "Ši naršyklė nepalaiko tiesioginių pranešimų.",
+      "denied": "Pranešimai užblokuoti naršyklės nustatymuose.",
+      "enable": "Įjungti pranešimus",
+      "on": "Pranešimai įjungti.",
+      "disable": "Išjungti"
+    },
+    "slack": {
+      "lead": "Kiekviena laukianti užklausa paskelbiama Slack kanale su mygtuku, kuris atidaro tvirtinimą prieigos raktu. Sukurkite Slack „Incoming Webhook“ ir įklijuokite jo URL.",
+      "connected": "Slack prijungtas.",
+      "disconnect": "Atjungti",
+      "urlLabel": "Slack webhook URL",
+      "connect": "Prijungti",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Kortelės perdavimas agentams",
+      "confirmDirect": "Tiesioginis perdavimas: kortelės numeris vieną kartą pereis per Artemis pakeliui pas agentą. Dėl to patenkate į PCI DSS taikymo sritį, o naudojant Revolut reikalingas rašytinis leidimas. Tęsti?",
+      "linkTitle": "Laikina nuoroda (rekomenduojama)",
+      "linkText": "Agentas gauna vienkartinę nuorodą, galiojančią 10 minučių; kortelę rodo ją išdavęs bankas (Stripe Issuing). Numeris niekada nepereina per Artemis.",
+      "directTitle": "Tiesioginis perdavimas (išplėstinė parinktis)",
+      "directText": "Numeris perduodamas agentui tik vieną kartą ir nesaugomas. Būtina naudojant Revolut. Patenkate į PCI DSS taikymo sritį."
+    },
+    "org": {
+      "title": "Organizacija",
+      "name": "Pavadinimas",
+      "rename": "Pervadinti"
+    },
+    "emergency": {
+      "title": "Avarinė situacija",
+      "lead": "„Įšaldyti viską“ sustabdo visus agentus ir atšaukia aktyvias korteles bei laukiančias užklausas. Naudokite, jei agentas elgiasi neįprastai arba nutekėjo žetonas.",
+      "confirmFreeze": "Įšaldyti visą organizaciją? Visi agentai bus įšaldyti, o aktyvios kortelės atšauktos.",
+      "unfreeze": "Atšildyti organizaciją",
+      "freeze": "Įšaldyti viską dabar",
+      "afterUnfreeze": "Atšildę organizaciją, iš naujo aktyvinkite kiekvieną agentą jo puslapyje."
+    },
+    "passkeys": {
+      "title": "Prieigos raktai",
+      "devicePrompt": "Įrenginio pavadinimas (pvz., Lėjos iPhone)",
+      "confirmDelete": "Ištrinti šį prieigos raktą?",
+      "add": "Pridėti",
+      "lead": "Norint patvirtinti išlaidą, reikalingas prieigos raktas. Pridėkite jį kiekviename naudojamame įrenginyje.",
+      "addedOn": "pridėtas {date}",
+      "delete": "Ištrinti",
+      "none": "Prieigos rakto nėra: kol kas negalite tvirtinti išlaidų."
+    }
+  }
+}

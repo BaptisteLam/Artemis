@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Europsko rješenje · AI agenti",
+      "lead": "Europski financijski vatrozid za vaše AI agente. Claude, ChatGPT ili n8n traže, vi potpisujete jednim dodirom, a svaki je trošak kontroliran, usklađen i dokazan, u banci po vašem izboru.",
+      "tryFree": "Isprobajte besplatno →",
+      "seeDemo": "Pogledajte demo",
+      "visualAria": "Primjer: zahtjev agenta i njegova jednokratna kartica",
+      "expired": "Isteklo",
+      "pending": "Zahtjev na čekanju",
+      "toApprove": "Čeka odobrenje",
+      "purpose": "pretplata za tim",
+      "approve": "Odobri pristupnim ključem",
+      "decline": "Odbij"
+    },
+    "trust": {
+      "aria": "Jamstva",
+      "europe": "Europski",
+      "europeText": "Euri, europske banke, podaci u Frankfurtu, GDPR.",
+      "funds": "Vaša sredstva ostaju kod vas",
+      "fundsText": "Artemis nikada ne drži novac.",
+      "number": "Broj kartice ne prolazi kroz Artemis",
+      "numberText": "Karticu prikazuje vaša banka, a ne mi.",
+      "aiAct": "Spremno za AI Act",
+      "aiActText": "Svaki trošak potpisan, ulančani zapisnik, tromjesečno izvješće."
+    },
+    "demo": {
+      "eyebrow": "Demo",
+      "title": "Od zahtjeva do plaćanja za 20 sekundi.",
+      "explain": "A da nikada ne dijelite karticu društva.",
+      "step1": "Agent traži",
+      "window": "claude · razgovor",
+      "userMessage": "Pretplati tim na Notion Plus, 5 korisnika.",
+      "agentMessage": "Zatražio sam karticu na {amount}. Čekam vaše odobrenje.",
+      "step2": "Vi odobravate",
+      "notification": "{agent} želi potrošiti {amount}",
+      "sheetTitle": "Odobrite nalog",
+      "validity": "{minutes} min",
+      "faceId": "Potpiši s Face ID",
+      "step3": "Agent plaća",
+      "reconciled": "Usklađeno"
+    },
+    "benefits": {
+      "eyebrow": "Što zapravo kupujete",
+      "title": "Ne karticu.",
+      "explain": "Banke ih već počinju davati besplatno. Kupujete kontrolu, vrijeme i dokaz.",
+      "control": {
+        "eyebrow": "Kontrola",
+        "title": "Ništa ne prolazi bez vašeg odobrenja.",
+        "text": "Budžeti, limiti, dopušteni trgovci, zaštitni mehanizmi protiv prompt injectiona. Iznad vaših pragova svaki trošak čeka potpis pristupnim ključem, jednog ili više odobravatelja."
+      },
+      "time": {
+        "eyebrow": "Ušteda vremena",
+        "title": "Gotovo s ručnim izdavanjem kartica.",
+        "text": "Agent traži, vi potpisujete jednim dodirom, kartica se izdaje u vašoj banci, transakcija se usklađuje, a račun arhivira. Nema više provjeravanja izvoda stavku po stavku ni traženja potvrda."
+      },
+      "proof": {
+        "eyebrow": "Dokaz",
+        "title": "Čovjek je odobrio svaki trošak.",
+        "text": "Potpisani nalozi, ulančani revizijski zapisnik otporan na izmjene i tromjesečno izvješće o nadzoru: ono što traže AI Act, vaš financijski direktor i vaš revizor, spremno za predaju."
+      },
+      "agencies": {
+        "eyebrow": "Za agencije",
+        "title": "Jedan budžet i jedan račun po klijentu.",
+        "text": "Prostori za klijente, mjesečni budžet po klijentu, marža za prefakturiranje i mjesečno izvješće spremno za slanje. Vaši klijenti napokon vide što njihovi agenti troše."
+      }
+    },
+    "how": {
+      "eyebrow": "Kako radi",
+      "title": "Četiri koraka, bez dijeljene kartice.",
+      "s1": "Agent traži",
+      "s1Text": "Putem MCP-a ili API-ja: „{amount} kod Notiona, pretplata za tim”.",
+      "s2": "Pravila filtriraju",
+      "s2Text": "Budžet, limit, trgovac: izvan pravila zahtjev se odmah odbija.",
+      "s3": "Vi odobravate",
+      "s3Text": "Obavijest na mobitelu, potpis pristupnim ključem.",
+      "s4": "Agent plaća",
+      "s4Text": "Jednokratna kartica, točan iznos, kratak rok valjanosti, zatim automatsko usklađivanje."
+    },
+    "useCases": {
+      "eyebrow": "Primjeri korištenja",
+      "title": "Što vaši agenti već kupuju.",
+      "explain": "Sada s vlastitom karticom.",
+      "api": {
+        "title": "API-ji i tokeni",
+        "text": "Nadoplata kredita kad se kvota potroši, bez ostavljanja kartice društva u .env datoteci."
+      },
+      "saas": {
+        "title": "SaaS pretplate",
+        "text": "Pretplata ili produljenje paketa za tim, za točno odobreni iznos."
+      },
+      "cloud": {
+        "title": "Cloud i domene",
+        "text": "Kupnja naziva domene ili plaćanje prekoračenja hostinga usred implementacije."
+      },
+      "data": {
+        "title": "Podaci i B2B kupnje",
+        "text": "Plaćanje skupa podataka, scraping posla ili potrošnog materijala, uz automatski priloženu potvrdu.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Budimo iskreni",
+      "title": "Koristite samo Stripe, Ramp ili Mercury?",
+      "explain": "Oni već obavljaju dio posla.",
+      "lead": "Artemis donosi ono što banka neće napraviti za svoje konkurente.",
+      "banks": "Više banaka istodobno",
+      "banksText": "Stripe Issuing, Revolut, Qonto i Sandbox, upravljani s jednog mjesta pod jedinstvenom politikom.",
+      "accounting": "Francusko računovodstvo",
+      "accountingText": "FEC i Pennylane izvozi, potvrda priložena uz svaki nalog, automatsko usklađivanje.",
+      "proof": "Dokaz za AI Act, spreman za predaju",
+      "proofText": "Potpis čovjeka za svaki trošak, ulančani zapisnik, registar agenata, tromjesečno izvješće.",
+      "agency": "Način rada za agencije",
+      "agencyText": "Agenti za više klijenata, svaki s vlastitim budžetom, maržom i izvješćem."
+    },
+    "europe": {
+      "eyebrow": "Europsko rješenje",
+      "title": "Izgrađeno u Europi, za Europu.",
+      "lead": "Američke kartice za agente govore jezikom dolara, američkih banaka i američkog prava. Artemis govori jezikom eura, europskih banaka, GDPR-a, AI Acta i francuskog računovodstva.",
+      "banks": "Euri i europske banke: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "EU",
+      "data": "Podaci smješteni u Frankfurtu, GDPR, šifrirane vjerodajnice",
+      "article": "Čl. 14.",
+      "oversight": "Ljudski nadzor prema AI Actu, dokazan za svaki trošak",
+      "accounting": "Francusko računovodstvo: FEC, Pennylane, priložene potvrde"
+    },
+    "compare": {
+      "eyebrow": "Usporedba",
+      "title": "Vaša banka izdaje karticu.",
+      "explain": "Artemis upravlja iznad svih njih.",
+      "criterion": "Kriterij",
+      "bankOnly": "Samo vaša banka (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Samo vaša banka",
+      "usCards": "Američke kartice za agente",
+      "usCardsShort": "Američke kartice",
+      "rows": {
+        "card": "Virtualna kartica za agenta",
+        "banks": "Više banaka, jedna politika",
+        "signature": "Potpis čovjeka za svaki trošak (pristupni ključ)",
+        "aiAct": "Dokaz za AI Act koji se može izvesti",
+        "accounting": "Francusko računovodstvo (FEC, Pennylane)",
+        "agency": "Način rada za agencije (budžeti i prefakturiranje po klijentu)",
+        "europe": "Euri, hosting i podaci u Europi"
+      },
+      "values": {
+        "yes": "Da",
+        "no": "Ne",
+        "yesBank": "Da, izdaje je vaša banka",
+        "yesQuorum": "Da, uz kvorum",
+        "dependsPlan": "Ovisi o paketu",
+        "dependsBank": "Ovisi o banci",
+        "partial": "Djelomično"
+      }
+    },
+    "builders": {
+      "eyebrow": "Za developere",
+      "title": "Povezano jednim retkom.",
+      "explain": "Claude, ChatGPT, n8n, Make ili vaš vlastiti kod.",
+      "lead": "Udaljeni MCP poslužitelj i REST API. Besplatan Sandbox sa simuliranim karticama za testiranje bez banke.",
+      "connect": "Povežite Claude →",
+      "window": "terminal"
+    },
+    "faq": {
+      "eyebrow": "Česta pitanja",
+      "title": "Što nas ljudi pitaju.",
+      "more": "Imate drugo pitanje? Pročitajte stranicu <a href=\"{security}\">Sigurnost</a> ili <a href=\"{docs}\">dokumentaciju</a>."
+    },
+    "final": {
+      "title": "Zadržite kontrolu nad svojim agentima.",
+      "lead": "Europski financijski vatrozid, besplatan u Sandboxu, bez kreditne kartice. Zadnja riječ ostaje vama.",
+      "signup": "Izradite račun →",
+      "pricing": "Pogledajte cijene",
+      "holder": "vas.agent"
+    }
+  }
+}

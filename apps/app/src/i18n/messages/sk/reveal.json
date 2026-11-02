@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Jednorazová karta · simulovaná banka",
+    "eyebrowBank": "Jednorazová karta · vydaná vašou bankou",
+    "lead": "Tento odkaz sa otvorí iba raz. Karta je obmedzená na uvedenú sumu a viazaná na tohto obchodníka.",
+    "fields": {
+      "number": "Číslo",
+      "expiry": "Platnosť",
+      "cvc": "Bezpečnostný kód",
+      "holder": "Držiteľ"
+    },
+    "opening": "Otvára sa…",
+    "show": "Zobraziť kartu •••• {last4}",
+    "footer": "Číslo zobrazuje priamo vydávajúca banka: nikdy neprechádza cez Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js nie je k dispozícii.",
+      "invalidLink": "Neplatný odkaz, už použitý alebo s vypršanou platnosťou.",
+      "stripeRefused": "Stripe žiadosť zamietol."
+    }
+  }
+}

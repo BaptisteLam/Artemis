@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Kartes",
+    "lead": "Vienreizējas lietošanas kartes, kas izsniegtas jūsu bankās. Pilns kartes numurs nekad netiek glabāts.",
+    "linkAria": "Karte •••• {last4}",
+    "cardAria": "Virtuālā karte, kas beidzas ar {last4}, turētājs {holder}, derīga līdz {exp}",
+    "tagRevealed": "Nodota aģentam",
+    "tagSingleUse": "Vienreizēja lietošana",
+    "emptyTitle": "Nav karšu",
+    "emptyText": "Kartes parādās, kad pieprasījums ir apstiprināts.",
+    "colCard": "Karte",
+    "colIssued": "Izsniegta",
+    "colExpires": "Derīga līdz",
+    "colRevealed": "Nodota aģentam",
+    "colStatus": "Statuss",
+    "notRevealed": "Nē",
+    "request": "Pieprasījums →"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Easpórtálacha cuntasaíochta",
+    "lead": "Caiteachas a ghearr do bhainc, réidh do Pennylane, do do chuntasóir nó do scarbhileog.",
+    "failed": "Theip ar an easpórtáil.",
+    "from": "Ó",
+    "to": "Go (eisiach)",
+    "downloadCsv": "Íoslódáil CSV",
+    "downloadFec": "Íoslódáil FEC",
+    "formats": "CSV: scartha le leathstadanna, comhoiriúnach le Excel. FEC: 18 gcolún rialála, dochar 604000 / creidmheas 512000, is féidir é a iompórtáil isteach i Pennylane.",
+    "fecUpsell": "Tá FEC san áireamh ón bplean Team.",
+    "seePlans": "Féach na pleananna"
+  }
+}

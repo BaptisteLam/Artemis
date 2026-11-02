@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Kunder",
+    "lead": "En arbetsyta per kund: kundens agenter, månadsbudget, ditt påslag och en rapport för vidarefakturering redo att skicka.",
+    "invalidBudget": "Ogiltig budget (t.ex. 500 eller 49,90).",
+    "upsell": "Kundarbetsytor ingår i planen Byråer ({price} + {perClient} per aktiv kund).",
+    "seePlans": "Se planerna →",
+    "empty": "Inga kunder",
+    "emptyHint": "Skapa en kund och koppla sedan agenter till den.",
+    "cols": {
+      "client": "Kund",
+      "agents": "Agenter",
+      "spent": "Bundet denna månad",
+      "budget": "Budget",
+      "markup": "Påslag"
+    },
+    "archived": "arkiverad",
+    "percent": "{value} %",
+    "report": "Rapport →",
+    "new": "Ny kund",
+    "fields": {
+      "name": "Namn",
+      "billingEmail": "E-post för fakturering",
+      "markup": "Påslag vid vidarefakturering (%)",
+      "budget": "Månadsbudget (€)",
+      "budgetHint": "Tomt = inget tak för kunden"
+    },
+    "create": "Skapa kund",
+    "exportFailed": "Exporten misslyckades.",
+    "eyebrow": "Kund",
+    "month": "Månad",
+    "exportCsv": "Exportera CSV",
+    "monthPurchases": "Köp denna månad",
+    "markupPct": "Påslag {value}",
+    "toRebill": "Att vidarefakturera",
+    "noPurchases": "Inga köp denna månad",
+    "lines": {
+      "date": "Datum",
+      "agent": "Agent",
+      "merchant": "Handlare",
+      "purpose": "Syfte",
+      "amount": "Belopp",
+      "receipt": "Kvitto"
+    },
+    "yes": "Ja",
+    "missing": "Saknas",
+    "archive": "Arkivera kund",
+    "reactivate": "Återaktivera",
+    "all": "← Alla kunder"
+  }
+}

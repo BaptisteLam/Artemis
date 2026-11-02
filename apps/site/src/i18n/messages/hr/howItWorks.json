@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Kako radi",
+    "description": "Kako Artemis omogućuje vašim AI agentima plaćanje dok vi zadržavate kontrolu.",
+    "headline": "Agent traži, vi odlučujete, banka plaća.",
+    "lead": "Artemis stoji između vaših agenata i vaše banke. Primjenjuje vaša pravila, prikuplja vaše odobrenje i izdaje jednokratnu karticu na točan iznos.",
+    "step1": {
+      "title": "1. Povezujete svoju banku",
+      "body": "Stripe Issuing (preporučeno) ili Revolut Business: virtualne kartice izdaju se na <strong>vašem</strong> računu i terete <strong>vaša</strong> sredstva. Qonto se povezuje za čitanje, zamrzavanje i usklađivanje. Artemis nikada ne prima, ne drži niti prenosi novac. Za isprobavanje Sandbox simulira banku."
+    },
+    "step2": {
+      "title": "2. Izrađujete agenta i njegova pravila",
+      "body": "Svaki agent dobiva tajni token i politiku: mjesečni budžet, limit po kupnji, valute, dopušteni ili blokirani trgovci, kategorije trgovaca, prag automatskog odobrenja i rok valjanosti kartice."
+    },
+    "step3": {
+      "title": "3. Agent traži karticu",
+      "body": "Putem MCP alata <code>request_card</code> ili REST API-ja. Zahtjev koji krši pravila odmah se odbija, uz jasan razlog. Svi ostali čekaju vaše odobrenje, osim malih iznosa kod pouzdanog trgovca ako ste to dopustili."
+    },
+    "step4": {
+      "title": "4. Odobravate pristupnim ključem",
+      "body": "Dobivate obavijest. Zaslon naloga prikazuje agenta, iznos, trgovca i svrhu. Potpisujete svojim pristupnim ključem (Face ID, otisak prsta, sigurnosni ključ). Potpis obuhvaća točan sadržaj naloga."
+    },
+    "step5": {
+      "title": "5. Agent plaća, Artemis usklađuje",
+      "body": "Kartica je jednokratna, ograničena na iznos i brzo istječe. Agent dobiva kratkotrajnu poveznicu: karticu prikazuje vaša banka, a broj nikada ne prolazi kroz Artemis. Čim banka prijavi transakciju, Artemis je usklađuje, označava svako odstupanje i arhivira potvrdu."
+    },
+    "demo": {
+      "mandate": "nalog · {id}",
+      "intent": "Svrha: pretplata za tim, 5 korisnika.",
+      "rules": "Pravila: limit {cap} · preostali budžet {remaining}",
+      "signed": "Potpisano pristupnim ključem · prije {minutes} min",
+      "transactions": "transakcije",
+      "matched": "Usklađeno",
+      "mismatch": "Odstupanje"
+    }
+  }
+}

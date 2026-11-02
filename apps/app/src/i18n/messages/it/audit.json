@@ -1,0 +1,95 @@
+{
+  "audit": {
+    "title": "Registro di audit",
+    "lead": "Ogni evento è concatenato con un hash SHA-256 e non può essere né modificato né eliminato: è la sua prova di supervisione umana (AI Act).",
+    "verify": "Verifica l'integrità",
+    "export": "Esporta",
+    "report": "Report AI Act {quarter}",
+    "exportFailed": "Esportazione non riuscita.",
+    "reportUnavailable": "Report non disponibile.",
+    "chainOk_one": "Catena integra: {count} voce verificata.",
+    "chainOk_many": "Catena integra: {count} voci verificate.",
+    "chainOk_other": "Catena integra: {count} voci verificate.",
+    "chainBroken": "Catena interrotta alla voce n. {id}.",
+    "exportUpsell": "L'export firmato del registro di audit è incluso nel piano Business.",
+    "seePlans": "Vedi i piani",
+    "cols": {
+      "date": "Data",
+      "event": "Evento",
+      "actor": "Autore",
+      "hash": "Impronta"
+    },
+    "view": "vedi",
+    "older": "Meno recenti →",
+    "actors": {
+      "user": "Utente",
+      "agent": "Agente",
+      "system": "Sistema"
+    },
+    "actions": {
+      "org": {
+        "created": "Organizzazione creata",
+        "frozen": "Organizzazione congelata",
+        "unfrozen": "Organizzazione scongelata",
+        "card_delivery_changed": "Modalità di consegna delle carte modificata",
+        "slack_connected": "Slack collegato",
+        "slack_disconnected": "Slack scollegato"
+      },
+      "agent": {
+        "created": "Agente creato",
+        "updated": "Agente modificato",
+        "deleted": "Agente eliminato",
+        "token_rotated": "Token rigenerato",
+        "frozen": "Agente congelato"
+      },
+      "policy": {
+        "updated": "Regole modificate"
+      },
+      "request": {
+        "created": "Richiesta creata",
+        "rejected": "Richiesta rifiutata",
+        "approved": "Mandato firmato",
+        "auto_approved": "Approvazione automatica",
+        "approval_recorded": "Approvazione registrata",
+        "expired": "Richiesta scaduta"
+      },
+      "card": {
+        "issued": "Carta emessa",
+        "issue_failed": "Emissione della carta non riuscita",
+        "revealed": "Carta consegnata all'agente",
+        "link_created": "Link alla carta creato",
+        "viewed": "Carta visualizzata",
+        "canceled": "Carta annullata",
+        "expired": "Carta scaduta"
+      },
+      "transaction": {
+        "matched": "Transazione abbinata",
+        "mismatch": "Discrepanza rilevata"
+      },
+      "receipt": {
+        "attached": "Giustificativo allegato"
+      },
+      "bank": {
+        "connected": "Banca collegata",
+        "disconnected": "Banca scollegata"
+      },
+      "member": {
+        "invited": "Membro invitato",
+        "joined": "Membro entrato",
+        "removed": "Membro rimosso",
+        "role_changed": "Ruolo modificato"
+      },
+      "client": {
+        "created": "Cliente creato",
+        "updated": "Cliente modificato"
+      },
+      "billing": {
+        "subscribed": "Abbonamento sottoscritto",
+        "updated": "Abbonamento modificato"
+      },
+      "subscription": {
+        "charged": "Abbonamento addebitato"
+      }
+    }
+  }
+}

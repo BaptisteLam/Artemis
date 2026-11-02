@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtrar por estado",
+      "all": "Todas",
+      "pending": "Por aprobar",
+      "issued": "Tarjeta emitida",
+      "completed": "Pagadas",
+      "rejected": "Rechazadas",
+      "failed": "Fallidas"
+    },
+    "list": {
+      "title": "Solicitudes",
+      "lead": "Cada solicitud de un agente, con su decisión y su tarjeta.",
+      "emptyTitle": "Ninguna solicitud",
+      "emptyBody": "Las solicitudes de sus agentes aparecerán aquí."
+    },
+    "decision": {
+      "notAllowed": "Solo los propietarios, administradores y aprobadores pueden decidir.",
+      "cancelledOnDevice": "Aprobación cancelada en el dispositivo.",
+      "reasonLabel": "Motivo del rechazo",
+      "reasonHint": "Visible para el agente.",
+      "confirmReject": "Confirmar el rechazo",
+      "cancel": "Cancelar",
+      "signing": "Firmando…",
+      "approve": "Aprobar con mi llave de acceso",
+      "reject": "Rechazar"
+    },
+    "detail": {
+      "confirmCancel": "¿Cancelar esta solicitud y su tarjeta?",
+      "receiptUnavailable": "Justificante no disponible.",
+      "eyebrow": "Solicitud · {id}",
+      "amount": "Importe solicitado",
+      "agent": "Agente",
+      "mandateWindow": "mandato · {id}",
+      "purpose": "Finalidad",
+      "category": "Categoría",
+      "expires": "Caduca",
+      "rules": "Reglas",
+      "perTxLimit": "Límite",
+      "budget": "presupuesto",
+      "decision": "Decisión",
+      "hash": "sha256 {hash}",
+      "quorum": "Quórum: {signed} de {required} firmas necesarias por encima del umbral.",
+      "unusualAmount": "Salvaguarda: importe inusual para este agente, aprobación humana obligatoria.",
+      "autoApproved": "Aprobada automáticamente por las reglas",
+      "signedByPasskey": "Mandato firmado con llave de acceso",
+      "card": "Tarjeta",
+      "cardHolderFallback": "agente",
+      "cardAria": "Tarjeta virtual terminada en {last4}, titular {holder}, caduca {exp}",
+      "bankSca": "Apruebe también la creación de la tarjeta en la aplicación de su banco.",
+      "cardExpires": "Caduca el {date}",
+      "handedOver": "entregada al agente {time}",
+      "notHandedOver": "aún no entregada al agente",
+      "qontoNotice": "Qonto no entrega tarjetas a los agentes: muéstrela aquí y complete el pago usted mismo.",
+      "showQontoCard": "Mostrar la tarjeta (Qonto)",
+      "simulatePayment": "Simular un pago",
+      "cancelCard": "Cancelar la tarjeta",
+      "noCard": "Ninguna tarjeta emitida.",
+      "transactions": "Transacciones",
+      "noTransactions": "El banco no ha comunicado ninguna transacción.",
+      "receipts": "Justificantes",
+      "addReceipt": "Añadir",
+      "noReceipts": "Ningún justificante.",
+      "back": "← Todas las solicitudes"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Dina agenter betalar. Du har sista ordet.",
+    "unknownAgent": "En agent",
+    "unknownMerchant": "en handlare",
+    "requestPending": {
+      "title": "{agent} vill spendera {amount}",
+      "subject": "Att godkänna: {amount} hos {merchant}",
+      "merchant": "Handlare: {merchant}",
+      "purpose": "Syfte: {purpose}",
+      "expires": "Utan svar upphör begäran automatiskt att gälla.",
+      "cta": "Granska och godkänn →",
+      "slack": "*{title}* hos *{merchant}*",
+      "slackCta": "Granska och signera med min lösennyckel"
+    },
+    "cardIssueFailed": {
+      "subject": "Kortet kunde inte skapas hos {merchant}",
+      "title": "Banken skapade inte kortet",
+      "fallback": "Bankfel.",
+      "cta": "Visa begäran →"
+    },
+    "mismatch": {
+      "subject": "Avvikelse upptäckt: {amount} hos {merchant}",
+      "title": "En transaktion stämmer inte med mandatet",
+      "check": "Kontrollera transaktionen och frys agenten vid behov.",
+      "cta": "Visa transaktioner →",
+      "pushTitle": "Avvikande transaktion"
+    },
+    "invitation": {
+      "subject": "Inbjudan att gå med i {org} på Artemis",
+      "title": "Gå med i {org}",
+      "body": "Du har bjudits in för att godkänna och följa ditt teams utgifter för AI-agenter.",
+      "cta": "Acceptera inbjudan →"
+    }
+  }
+}

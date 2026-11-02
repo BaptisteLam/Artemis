@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Equipo",
+    "lead": "Los aprobadores reciben las solicitudes y las firman con su llave de acceso.",
+    "confirmRemove": "¿Retirar a este miembro?",
+    "cols": {
+      "member": "Miembro",
+      "role": "Rol",
+      "since": "Desde"
+    },
+    "you": "usted",
+    "remove": "Retirar",
+    "invite": "Invitar",
+    "email": "Correo electrónico",
+    "role": "Rol",
+    "send": "Enviar invitación",
+    "inviteLink": "Enlace de invitación (válido durante 7 días):",
+    "expiresOn": "caduca el {date}",
+    "revoke": "Revocar"
+  }
+}

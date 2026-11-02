@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Funguje s",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Jednorazová",
+      "aria": "Virtuálna karta končiaca na {last4}, držiteľ {holder}, platnosť do {exp}",
+      "holder": "Držiteľ",
+      "expires": "Platnosť",
+      "debit": "Debetná",
+      "virtual": "virtuálna",
+      "used": "Použitá"
+    },
+    "faq": {
+      "q1": "Spravuje Artemis moje peniaze?",
+      "a1": "Nie. Karty sa vytvárajú vo vašej vlastnej banke (Qonto, Revolut Business alebo Stripe Issuing) a strhávajú sa z vášho účtu. Artemis je softvér: uplatňuje vaše pravidlá, zbiera vaše schválenie a ovláda banku cez jej API. Nikdy neprijíma, nedrží ani neprevádza finančné prostriedky.",
+      "q2": "Čo ak môjho agenta zmanipuluje prompt injection?",
+      "a2": "Agent môže iba žiadať. Každá karta je jednorazová, obmedzená na presnú sumu, viazaná na určeného obchodníka a jej platnosť vyprší za 30 minút. Mimo vašich pravidiel sa žiadosť zamietne; nad vaším limitom nič neodíde bez vášho prístupového kľúča. Akákoľvek nezhoda v sume alebo obchodníkovi spustí upozornenie a tlačidlo „Zmraziť všetko“ jedným kliknutím všetko zastaví.",
+      "q3": "Prechádza číslo karty cez Artemis?",
+      "a3": "Nie, predvolene nie. Pri platbe agent dostane jednorazový odkaz platný 10 minút: kartu v ňom zobrazuje priamo vydávajúca banka. Artemis číslo nikdy nevidí, neukladá ani nepreposiela. Po otvorení odkaz prestane fungovať.",
+      "q4": "Prečo nepoužiť priamo moju banku?",
+      "a4": "Ak používate len Stripe, Ramp alebo Mercury, časť práce už robia. Artemis prináša to, čo banka pre svojich konkurentov neurobí: viacero bánk pod jednou politikou, francúzske účtovníctvo (FEC, Pennylane), dôkaz pre AI Act pripravený na odovzdanie a režim pre agentúry.",
+      "q5": "Ktoré banky sú podporované?",
+      "a5": "Stripe Issuing (odporúčané) vytvára karty a zobrazuje ich agentovi bez toho, aby číslo prešlo cez Artemis. Revolut Business funguje na základe písomného súhlasu Revolutu, s priamym odovzdaním karty. Qonto sa pripája na čítanie, zmrazenie a párovanie. Sandbox simuluje banku, aby ste mohli testovať bez pripájania čohokoľvek.",
+      "q6": "Koľko to stojí?",
+      "a6": "Sandbox je zadarmo. Potom {builder} (Builder), {team} (Team), {agency} + {client} za každého aktívneho klienta ({agencyPlan}) alebo od {business} (Business) mesačne. Nad rámec kvóty {overage} za mandát. Žiadna provízia z vašich výdavkov: vaša banka uplatňuje svoj bežný sadzobník. {vat}.",
+      "q7": "Zostávajú moje dáta v Európe?",
+      "a7": "Áno. Databáza je hostovaná v Európskej únii (Frankfurt), bankové prístupové údaje sú šifrované pomocou AES-256-GCM a reťazený auditný denník dokumentuje ľudský dohľad vyžadovaný aktom AI Act."
+    }
+  }
+}

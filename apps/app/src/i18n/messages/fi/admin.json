@@ -1,0 +1,20 @@
+{
+  "admin": {
+    "eyebrow": "Hallinta",
+    "title": "Artemis lukuina",
+    "mrr": "MRR",
+    "paying": "Maksavat asiakkaat",
+    "ofOrgs_one": "{count} organisaatiosta",
+    "ofOrgs_other": "{count} organisaatiosta",
+    "signups7d": "Rekisteröitymiset (7 päivää)",
+    "requests30d": "Pyynnöt (30 päivää)",
+    "orgs": "Organisaatiot",
+    "cols": {
+      "name": "Nimi",
+      "plan": "Paketti",
+      "subscription": "Tilaus",
+      "created": "Luotu"
+    },
+    "waitlist": "Odotuslista ({total})"
+  }
+}

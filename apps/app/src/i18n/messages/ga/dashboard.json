@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · plean {plan}",
+    "title": "Painéal",
+    "stats": {
+      "spent": "Caite an mhí seo",
+      "pending": "Le formheas",
+      "openQueue": "Oscail an scuaine →",
+      "requests": "Iarratais an mhí seo"
+    },
+    "recent": {
+      "title": "Iarratais is déanaí",
+      "viewAll": "Féach gach ceann →",
+      "empty": "Gan iarratais an mhí seo. Ceangail gníomhaire ón leathanach {agents}.",
+      "agentsLink": "Gníomhairí"
+    },
+    "byAgent": {
+      "title": "De réir gníomhaire",
+      "manage": "Bainistigh →",
+      "empty": "Gan ghníomhairí."
+    }
+  }
+}

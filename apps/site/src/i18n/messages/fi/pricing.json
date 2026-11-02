@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Hinnat",
+    "description": "Maksuton Sandbox, sen jälkeen {a}, {b}, {c} tai {d} kuukaudessa. Ei provisiota kuluistasi.",
+    "headline": "Yksi selkeä tilaus. Ei provisiota.",
+    "lead": "Maksat vain ohjelmistosta. Kortit myöntää pankkisi tavanomaisella pankkihinnoittelullasi.",
+    "popular": "Suosituin",
+    "from": "alkaen {price}",
+    "perMonth": "/ kk",
+    "start": "Aloita",
+    "choose": "Valitse {plan}",
+    "mandates": "{count} valtuutusta / kk",
+    "sandbox": {
+      "pitch": "Kokeile simuloidulla pankilla.",
+      "i1": "1 agentti",
+      "i2": "Simuloitu pankki",
+      "i3": "{count} simuloitua valtuutusta / kk",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Freelancerille tai kehittäjälle ja hänen agenteilleen.",
+      "i1": "3 agenttia",
+      "i2": "1 liitetty pankki",
+      "i4": "Hyväksyntä pääsyavaimella",
+      "i5": "Suojakaiteet injektioita vastaan"
+    },
+    "team": {
+      "pitch": "5–50 hengen startupille.",
+      "i1": "10 agenttia",
+      "i2": "2 pankkia",
+      "i4": "Slack ja hyväksyjien päätösvaltaisuussääntö",
+      "i5": "Tilaukset, FEC-vienti"
+    },
+    "agency": {
+      "pitch": "Automaatiotoimistoille.",
+      "i1": "Rajattomasti asiakkaita, 25 agenttia",
+      "i3": "Asiakaskohtainen budjetti ja kate",
+      "i4": "Kuukausiraportti jälleenlaskutusta varten",
+      "i5": "+ {price} jokaisesta aktiivisesta asiakkaasta"
+    },
+    "business": {
+      "pitch": "Säännellyille kasvuyrityksille.",
+      "i1": "Rajaton",
+      "i2": "AI Act -asiakirjat ja -raportti",
+      "i3": "Allekirjoitetun tarkastuslokin vienti",
+      "i4": "Ensisijainen tuki"
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "q1": "Peritäänkö korttikohtaisia maksuja?",
+      "a1": "Artemis ei peri. Pankkisi soveltaa omaa hinnoitteluaan (virtuaalikortit sisältyvät useimpiin Qonton ja Revolut Businessin paketteihin; Stripe Issuing veloittaa oman hinnastonsa mukaan).",
+      "q2": "Mitä tapahtuu, jos kiintiöni ylittyy?",
+      "a2": "Maksullisessa paketissa agenttisi jatkavat toimintaansa: jokaisesta kiintiön ylittävästä valtuutuksesta veloitetaan {price} kuun lopussa. Sandboxissa pyynnöt hylätään koodilla <code>quota_exceeded</code>.",
+      "q3": "Miten paketti {plan} laskutetaan?",
+      "a3": "{base} kuukaudessa sekä {client} jokaisesta aktiivisesta asiakkaasta, eli jokaisesta asiakkaasta, jolle on luotu kuukauden aikana vähintään yksi valtuutus.",
+      "q4": "Voinko irtisanoa milloin tahansa?",
+      "a4": "Kyllä, Laskutus-osiossa. Tilaus on voimassa maksetun jakson loppuun; tietosi ovat edelleen vietävissä.",
+      "q5": "ALV",
+      "a5": "Näytetyt hinnat ovat nettohintoja."
+    }
+  }
+}

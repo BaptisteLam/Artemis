@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Condizioni generali di vendita e di utilizzo",
+      "purposeTitle": "1. Oggetto",
+      "purpose": "Le presenti condizioni disciplinano l'accesso al software Artemis, edito da {editor} ({status}, SIRET {siret}), e la sua sottoscrizione da parte di clienti professionali. Il servizio è riservato ai professionisti.",
+      "serviceTitle": "2. Descrizione del servizio",
+      "service": "Artemis consente a un cliente di definire regole di spesa per i propri agenti software, di approvarne le richieste di pagamento e di gestire, tramite le interfacce di programmazione della propria banca, la creazione di carte virtuali monouso. Artemis non fornisce alcun servizio di pagamento, non detiene alcun fondo e non emette alcuna carta. Il rapporto bancario, le spese bancarie e l'autenticazione forte sono disciplinati esclusivamente dal contratto tra il cliente e la sua banca.",
+      "accountTitle": "3. Account e sicurezza",
+      "account": "Il cliente è responsabile della riservatezza dei token degli agenti, degli accessi al proprio account e delle passkey dei propri utenti, nonché delle regole che configura. Qualsiasi spesa approvata da un utente autorizzato o conforme a una regola di approvazione automatica si considera autorizzata dal cliente.",
+      "pricesTitle": "4. Piani e prezzi",
+      "prices": "Piani: Sandbox (gratuito), Builder ({builder} / mese), Team ({team} / mese), Agenzie ({agency} / mese + {perClient} per cliente attivo), Business (a partire da {business} / mese). Oltre la quota mensile di un piano a pagamento, ogni mandato aggiuntivo è fatturato {overage}. Prezzi netti. {vat}. Pagamento mensile anticipato con carta tramite Stripe. Il rinnovo è automatico; la disdetta ha effetto alla fine del periodo in corso, senza rimborso pro rata.",
+      "quotasTitle": "5. Quote",
+      "quotas": "Ogni piano comprende delle quote (agenti, banche collegate, richieste mensili). Oltre tali quote, le nuove richieste vengono rifiutate fino al periodo successivo o a un cambio di piano.",
+      "availabilityTitle": "6. Disponibilità",
+      "availability": "L'editore adotta mezzi ragionevoli per garantire la disponibilità del servizio, senza alcuna obbligazione di risultato. Possono verificarsi interruzioni per manutenzione o a causa dei fornitori di servizi tecnici e bancari.",
+      "liabilityTitle": "7. Responsabilità",
+      "liability": "L'editore non può essere ritenuto responsabile degli acquisti effettuati dagli agenti del cliente nell'ambito delle autorizzazioni concesse, della scelta degli esercenti, della qualità dei beni o servizi acquistati, né delle decisioni della banca del cliente. La responsabilità dell'editore, per qualsiasi causa, è limitata alle somme pagate dal cliente negli ultimi dodici mesi.",
+      "dataTitle": "8. Dati",
+      "data": "Il trattamento dei dati personali è descritto nell'<a href=\"{href}\">informativa sulla privacy</a>. Il cliente può esportare i propri dati in qualsiasi momento.",
+      "lawTitle": "9. Legge applicabile",
+      "law": "Legge francese. In mancanza di una composizione amichevole, sono competenti i tribunali del luogo di domicilio dell'editore."
+    },
+    "privacy": {
+      "title": "Informativa sulla privacy",
+      "controllerTitle": "Titolare del trattamento",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Dati trattati",
+      "dataAccount": "Account: email, organizzazione, ruolo, passkey (solo chiavi pubbliche).",
+      "dataActivity": "Attività: richieste di carta, mandati firmati, transazioni comunicate dalla banca, giustificativi, registro di audit.",
+      "dataBanks": "Connessioni bancarie: token di accesso cifrati (AES-256-GCM).",
+      "dataBilling": "Fatturazione: gestita da Stripe; Artemis non vede i numeri delle carte con cui paga il suo abbonamento.",
+      "dataWaitlist": "Lista d'attesa: email, azienda, caso d'uso.",
+      "cardNumbers": "Artemis non conserva mai il numero completo né il codice di sicurezza delle carte emesse per i suoi agenti.",
+      "purposesTitle": "Finalità e basi giuridiche",
+      "purposes": "Esecuzione del contratto (fornitura del servizio), obblighi di legge (contabilità), legittimo interesse (sicurezza, prevenzione delle frodi), consenso (lista d'attesa).",
+      "processorsTitle": "Responsabili del trattamento",
+      "processors": "Supabase (database, Unione europea), Cloudflare (hosting e rete), Stripe (fatturazione), Resend (email transazionali). Eventuali trasferimenti al di fuori dell'UE sono disciplinati da clausole contrattuali tipo.",
+      "retentionTitle": "Periodi di conservazione",
+      "retention": "Dati dell'account: durata del contratto, poi 3 anni. Registro di audit e dati contabili: 10 anni. Lista d'attesa: 3 anni senza interazione.",
+      "rightsTitle": "I suoi diritti",
+      "rights": "Accesso, rettifica, cancellazione, portabilità, opposizione e limitazione: scriva a {email}. Può proporre reclamo alla CNIL (cnil.fr).",
+      "cookiesTitle": "Cookie",
+      "cookies": "Il sito non utilizza cookie pubblicitari né strumenti di analisi di terze parti. L'applicazione utilizza solo l'archiviazione necessaria alla sua sessione."
+    },
+    "notice": {
+      "title": "Note legali",
+      "editorTitle": "Editore",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Indirizzo: {address}",
+      "contact": "Contatto: {email}",
+      "directorTitle": "Direttore della pubblicazione",
+      "hostingTitle": "Hosting",
+      "natureTitle": "Natura del servizio",
+      "nature": "Artemis è un software di governance delle spese degli agenti di intelligenza artificiale. Artemis non è né un istituto di pagamento né un istituto di moneta elettronica: non riceve, non detiene e non trasferisce alcun fondo. Le carte di pagamento sono emesse dall'istituto bancario del cliente, sotto la sua responsabilità.",
+      "ipTitle": "Proprietà intellettuale",
+      "ip": "I contenuti, i marchi e i loghi di questo sito sono di proprietà dell'editore. È vietata qualsiasi riproduzione senza autorizzazione."
+    }
+  }
+}

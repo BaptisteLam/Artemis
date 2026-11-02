@@ -1,0 +1,17 @@
+{
+  "transactions": {
+    "title": "Transakcie",
+    "lead": "Operácie nahlásené vašimi bankami a spárované s mandátmi (posledných 90 dní).",
+    "mismatches_one": "{count} transakcia nezodpovedá svojmu mandátu. Skontrolujte ju a v prípade potreby zmrazte agenta.",
+    "mismatches_few": "{count} transakcie nezodpovedajú svojmu mandátu. Skontrolujte ich a v prípade potreby zmrazte agenta.",
+    "mismatches_many": "{count} transakcie nezodpovedá svojmu mandátu. Skontrolujte ich a v prípade potreby zmrazte agenta.",
+    "mismatches_other": "{count} transakcií nezodpovedá svojmu mandátu. Skontrolujte ich a v prípade potreby zmrazte agenta.",
+    "emptyTitle": "Žiadne transakcie",
+    "emptyText": "Zobrazia sa niekoľko minút po každej platbe.",
+    "colDate": "Dátum",
+    "colMerchant": "Obchodník",
+    "colAmount": "Suma",
+    "colBankStatus": "Stav v banke",
+    "colMatch": "Párovanie"
+  }
+}

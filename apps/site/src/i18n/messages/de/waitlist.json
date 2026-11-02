@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Warteliste",
+    "description": "Lassen Sie sich benachrichtigen, sobald die Live-Bankkonnektoren verfügbar sind.",
+    "headline": "Seien Sie unter den Ersten.",
+    "lead": "Die Konnektoren für Qonto und Revolut werden schrittweise freigeschaltet. Hinterlassen Sie Ihre E-Mail-Adresse, und wir melden uns, sobald Ihre Bank verfügbar ist.",
+    "email": "Geschäftliche E-Mail-Adresse",
+    "company": "Unternehmen",
+    "useCase": "Wofür müssen Ihre Agenten bezahlen?",
+    "useCasePlaceholder": "APIs, SaaS, Cloud, Daten …",
+    "submit": "Auf die Warteliste",
+    "sending": "Wird gesendet …",
+    "ok": "Vielen Dank, Sie stehen auf der Liste. Wir schreiben Ihnen, sobald es losgeht.",
+    "error": "Die Anmeldung ist fehlgeschlagen. Bitte versuchen Sie es gleich noch einmal."
+  }
+}

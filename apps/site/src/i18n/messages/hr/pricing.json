@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Cijene",
+    "description": "Besplatan Sandbox, zatim {a}, {b}, {c} ili {d} mjesečno. Bez provizije na vašu potrošnju.",
+    "headline": "Jedna jednostavna pretplata. Bez provizije.",
+    "lead": "Plaćate samo softver. Kartice izdaje vaša banka, prema vašem uobičajenom bankovnom tarifnom modelu.",
+    "popular": "Najpopularnije",
+    "from": "od {price}",
+    "perMonth": "/ mjesečno",
+    "start": "Započnite",
+    "choose": "Odaberite {plan}",
+    "mandates": "{count} naloga / mjesečno",
+    "sandbox": {
+      "pitch": "Isprobajte sa simuliranom bankom.",
+      "i1": "1 agent",
+      "i2": "Simulirana banka",
+      "i3": "{count} simuliranih naloga / mjesečno",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Za freelancera ili developera i njegove agente.",
+      "i1": "3 agenta",
+      "i2": "1 povezana banka",
+      "i4": "Odobravanje pristupnim ključem",
+      "i5": "Zaštitni mehanizmi protiv injectiona"
+    },
+    "team": {
+      "pitch": "Za startup od 5 do 50 ljudi.",
+      "i1": "10 agenata",
+      "i2": "2 banke",
+      "i4": "Slack i kvorum odobravatelja",
+      "i5": "Pretplate, FEC izvoz"
+    },
+    "agency": {
+      "pitch": "Za agencije za automatizaciju.",
+      "i1": "Neograničen broj klijenata, 25 agenata",
+      "i3": "Budžet i marža po klijentu",
+      "i4": "Mjesečno izvješće za prefakturiranje",
+      "i5": "+ {price} po aktivnom klijentu"
+    },
+    "business": {
+      "pitch": "Za regulirane scale-upove.",
+      "i1": "Neograničeno",
+      "i2": "Dokumentacija i izvješće za AI Act",
+      "i3": "Izvoz potpisanog revizijskog zapisnika",
+      "i4": "Prioritetna podrška"
+    },
+    "faq": {
+      "title": "Česta pitanja",
+      "q1": "Postoje li naknade po kartici?",
+      "a1": "Ne kod Artemisa. Vaša banka primjenjuje vlastiti tarifni model (virtualne kartice uključene su u većinu Qonto i Revolut Business paketa; Stripe Issuing naplaćuje prema vlastitom cjeniku).",
+      "q2": "Što se događa ako prekoračim kvotu?",
+      "a2": "U plaćenom paketu vaši agenti nastavljaju raditi: svaki nalog iznad kvote naplaćuje se {price} na kraju mjeseca. U Sandboxu se zahtjevi odbijaju s kodom <code>quota_exceeded</code>.",
+      "q3": "Kako se naplaćuje paket {plan}?",
+      "a3": "{base} mjesečno, plus {client} po aktivnom klijentu, odnosno po svakom klijentu za kojeg je tijekom mjeseca izrađen barem jedan nalog.",
+      "q4": "Mogu li otkazati u bilo kojem trenutku?",
+      "a4": "Da, u odjeljku Naplata. Pretplata traje do kraja plaćenog razdoblja; vaši podaci i dalje se mogu izvesti.",
+      "q5": "PDV",
+      "a5": "Prikazane cijene su neto."
+    }
+  }
+}

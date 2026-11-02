@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Téarmaí agus Coinníollacha Díolacháin agus Úsáide",
+      "purposeTitle": "1. Cuspóir",
+      "purpose": "Rialaíonn na téarmaí seo rochtain ar bhogearraí Artemis, arna bhfoilsiú ag {editor} ({status}, SIRET {siret}), agus an síntiús leo ag custaiméirí gnó. Tá an tseirbhís curtha in áirithe do dhaoine gairmiúla.",
+      "serviceTitle": "2. Cur síos ar an tseirbhís",
+      "service": "Cuireann Artemis ar chumas custaiméara rialacha caiteachais a shainiú dá ghníomhairí bogearraí, a n-iarratais íocaíochta a fhormheas agus cruthú cártaí fíorúla aonúsáide a rialú, trí chomhéadain ríomhchlárúcháin feidhmchlár a bhainc féin. Ní sholáthraíonn Artemis aon seirbhís íocaíochta, ní choinníonn sé aon chistí agus ní eisíonn sé aon chártaí. Is é an conradh idir an custaiméir agus a bhanc amháin a rialaíonn an caidreamh baincéireachta, na táillí bainc agus an fíordheimhniú láidir.",
+      "accountTitle": "3. Cuntas agus slándáil",
+      "account": "Tá an custaiméir freagrach as rúndacht chomharthaí na ngníomhairí, na rochtana ar a chuntas agus passkeys a úsáideoirí, chomh maith leis na rialacha a chumraíonn sé. Meastar gur údaraigh an custaiméir aon chaiteachas a d'fhormheas úsáideoir údaraithe nó a chomhlíonann riail formheasa uathoibríoch.",
+      "pricesTitle": "4. Pleananna agus praghsanna",
+      "prices": "Pleananna: Sandbox (saor in aisce), Builder ({builder} / mí), Team ({team} / mí), Gníomhaireachtaí ({agency} / mí + {perClient} in aghaidh an chliaint ghníomhaigh), Business (ó {business} / mí). Thar an gcuóta míosúil de chuid plean íoctha, gearrtar {overage} ar gach sainordú breise. Is praghsanna glana iad na praghsanna. {vat}. Íocaíocht mhíosúil roimh ré le cárta trí Stripe. Is uathoibríoch an athnuachan; tagann an foirceannadh i bhfeidhm ag deireadh na tréimhse reatha, gan aon aisíocaíocht pro rata.",
+      "quotasTitle": "5. Cuótaí",
+      "quotas": "Áirítear cuótaí i ngach plean (gníomhairí, bainc cheangailte, iarratais mhíosúla). Thar na cuótaí sin, diúltaítear d'iarratais nua go dtí an chéad tréimhse eile nó go dtí go n-athraítear an plean.",
+      "availabilityTitle": "6. Infhaighteacht",
+      "availability": "Úsáideann an foilsitheoir modhanna réasúnta chun infhaighteacht na seirbhíse a áirithiú, gan aon oibleagáid toraidh. D'fhéadfadh briseadh tarlú mar gheall ar chothabháil nó de dheasca soláthraithe seirbhísí teicniúla agus baincéireachta.",
+      "liabilityTitle": "7. Dliteanas",
+      "liability": "Ní bheidh an foilsitheoir faoi dhliteanas i leith ceannachán a rinne gníomhairí an chustaiméara laistigh de raon feidhme na n-údaruithe a tugadh, i leith rogha na gceannaithe, i leith cháilíocht na n-earraí nó na seirbhísí a ceannaíodh, ná i leith chinntí bhanc an chustaiméara. Tá dliteanas an fhoilsitheora, ar gach cúis le chéile, teoranta do na suimeanna a d'íoc an custaiméir le dhá mhí dhéag anuas.",
+      "dataTitle": "8. Sonraí",
+      "data": "Déantar cur síos ar phróiseáil sonraí pearsanta sa <a href=\"{href}\">bheartas príobháideachais</a>. Is féidir leis an gcustaiméir a shonraí a easpórtáil tráth ar bith.",
+      "lawTitle": "9. An dlí is infheidhme",
+      "law": "Dlí na Fraince. Mura ndéantar socrú cairdiúil, beidh dlínse ag na cúirteanna a bhfuil dlínse acu ar áit chónaithe an fhoilsitheora."
+    },
+    "privacy": {
+      "title": "Beartas príobháideachais",
+      "controllerTitle": "Rialaitheoir sonraí",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Sonraí a phróiseáiltear",
+      "dataAccount": "Cuntas: ríomhphost, eagraíocht, ról, passkeys (eochracha poiblí amháin).",
+      "dataActivity": "Gníomhaíocht: iarratais ar chártaí, sainorduithe sínithe, idirbhearta a thuairiscíonn an banc, admhálacha, loga iniúchta.",
+      "dataBanks": "Naisc bhainc: comharthaí rochtana criptithe (AES-256-GCM).",
+      "dataBilling": "Billeáil: láimhseáilte ag Stripe; ní fheiceann Artemis uimhreacha na gcártaí a úsáideann tú chun íoc as do shíntiús.",
+      "dataWaitlist": "Liosta feithimh: ríomhphost, cuideachta, cás úsáide.",
+      "cardNumbers": "Ní stórálann Artemis choíche uimhir iomlán ná cód slándála na gcártaí a eisítear do do ghníomhairí.",
+      "purposesTitle": "Cuspóirí agus bunúis dhlíthiúla",
+      "purposes": "Comhlíonadh an chonartha (soláthar na seirbhíse), oibleagáidí dlíthiúla (cuntasaíocht), leas dlisteanach (slándáil, cosc ar chalaois), toiliú (liosta feithimh).",
+      "processorsTitle": "Próiseálaithe",
+      "processors": "Supabase (bunachar sonraí, an tAontas Eorpach), Cloudflare (óstáil agus líonra), Stripe (billeáil), Resend (ríomhphoist idirbheartaíochta). Rialaíonn clásail chonarthacha chaighdeánacha aon aistrithe lasmuigh den AE.",
+      "retentionTitle": "Tréimhsí coinneála",
+      "retention": "Sonraí cuntais: téarma an chonartha, agus 3 bliana ina dhiaidh sin. Loga iniúchta agus sonraí cuntasaíochta: 10 mbliana. Liosta feithimh: 3 bliana gan idirghníomhaíocht.",
+      "rightsTitle": "Do chearta",
+      "rights": "Rochtain, ceartú, scriosadh, iniomparthacht, agóid agus srianadh: scríobh chuig {email}. Is féidir leat gearán a dhéanamh leis an CNIL (cnil.fr).",
+      "cookiesTitle": "Fianáin",
+      "cookies": "Ní úsáideann an suíomh aon fhianáin fógraíochta ná aon uirlisí anailíse tríú páirtí. Ní úsáideann an feidhmchlár ach an stóráil is gá do do sheisiún."
+    },
+    "notice": {
+      "title": "Fógra dlíthiúil",
+      "editorTitle": "Foilsitheoir",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Seoladh: {address}",
+      "contact": "Teagmháil: {email}",
+      "directorTitle": "Stiúrthóir foilsitheoireachta",
+      "hostingTitle": "Óstáil",
+      "natureTitle": "Cineál na seirbhíse",
+      "nature": "Bogearraí is ea Artemis chun caiteachas gníomhairí intleachta saorga a rialú. Ní institiúid íocaíochta ná institiúid ríomh-airgid é Artemis: ní fhaigheann sé, ní choinníonn sé agus ní aistríonn sé aon chistí. Is í institiúid bhaincéireachta an chustaiméara a eisíonn na cártaí íocaíochta, faoina freagracht féin.",
+      "ipTitle": "Maoin intleachtúil",
+      "ip": "Is leis an bhfoilsitheoir ábhar, trádmharcanna agus lógónna an tsuímh seo. Tá cosc ar aon atáirgeadh gan údarú."
+    }
+  }
+}

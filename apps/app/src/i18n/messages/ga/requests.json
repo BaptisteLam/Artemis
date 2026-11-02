@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Scag de réir stádais",
+      "all": "Gach ceann",
+      "pending": "Le formheas",
+      "issued": "Cárta eisithe",
+      "completed": "Íoctha",
+      "rejected": "Diúltaithe",
+      "failed": "Teipthe"
+    },
+    "list": {
+      "title": "Iarratais",
+      "lead": "Gach iarratas ó ghníomhaire, lena chinneadh agus lena chárta.",
+      "emptyTitle": "Gan iarratais",
+      "emptyBody": "Taispeánfar iarratais do ghníomhairí anseo."
+    },
+    "decision": {
+      "notAllowed": "Ní féidir ach le húinéirí, le riarthóirí agus le formheastóirí cinneadh a dhéanamh.",
+      "cancelledOnDevice": "Cealaíodh an formheas ar an ngléas.",
+      "reasonLabel": "Cúis an diúltaithe",
+      "reasonHint": "Infheicthe ag an ngníomhaire.",
+      "confirmReject": "Deimhnigh an diúltú",
+      "cancel": "Cealaigh",
+      "signing": "Á shíniú…",
+      "approve": "Formheas le mo passkey",
+      "reject": "Diúltaigh"
+    },
+    "detail": {
+      "confirmCancel": "An t-iarratas seo agus a chárta a chealú?",
+      "receiptUnavailable": "Níl an admháil ar fáil.",
+      "eyebrow": "Iarratas · {id}",
+      "amount": "Méid iarrtha",
+      "agent": "Gníomhaire",
+      "mandateWindow": "sainordú · {id}",
+      "purpose": "Cuspóir",
+      "category": "Catagóir",
+      "expires": "Dul in éag",
+      "rules": "Rialacha",
+      "perTxLimit": "Teorainn",
+      "budget": "buiséad",
+      "decision": "Cinneadh",
+      "hash": "sha256 {hash}",
+      "quorum": "Córam: {signed} as {required} síniú riachtanach os cionn na tairsí.",
+      "unusualAmount": "Coimirce: méid neamhghnách don ghníomhaire seo, formheas daonna ag teastáil.",
+      "autoApproved": "Formheasta go huathoibríoch ag na rialacha",
+      "signedByPasskey": "Sainordú sínithe le passkey",
+      "card": "Cárta",
+      "cardHolderFallback": "gníomhaire",
+      "cardAria": "Cárta fíorúil dar críoch {last4}, sealbhóir {holder}, dul in éag {exp}",
+      "bankSca": "Formheas cruthú an chárta i d'aip bhainc freisin.",
+      "cardExpires": "Dul in éag {date}",
+      "handedOver": "tugtha don ghníomhaire {time}",
+      "notHandedOver": "níor tugadh don ghníomhaire fós",
+      "qontoNotice": "Ní thugann Qonto cártaí do ghníomhairí: taispeáin anseo é agus cuir an íocaíocht i gcrích tú féin.",
+      "showQontoCard": "Taispeáin an cárta (Qonto)",
+      "simulatePayment": "Ionsamhlaigh íocaíocht",
+      "cancelCard": "Cealaigh an cárta",
+      "noCard": "Níor eisíodh aon chárta.",
+      "transactions": "Idirbhearta",
+      "noTransactions": "Níor thuairiscigh an banc aon idirbheart.",
+      "receipts": "Admhálacha",
+      "addReceipt": "Cuir leis",
+      "noReceipts": "Gan admhálacha.",
+      "back": "← Gach iarratas"
+    }
+  }
+}

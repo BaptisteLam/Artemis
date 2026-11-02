@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtrera efter status",
+      "all": "Alla",
+      "pending": "Att godkänna",
+      "issued": "Kort utfärdat",
+      "completed": "Betalda",
+      "rejected": "Avvisade",
+      "failed": "Misslyckade"
+    },
+    "list": {
+      "title": "Begäranden",
+      "lead": "Varje begäran från agenterna, med beslut och kort.",
+      "emptyTitle": "Inga begäranden",
+      "emptyBody": "Dina agenters begäranden visas här."
+    },
+    "decision": {
+      "notAllowed": "Endast ägare, administratörer och godkännare kan fatta beslut.",
+      "cancelledOnDevice": "Godkännandet avbröts på enheten.",
+      "reasonLabel": "Anledning till avvisning",
+      "reasonHint": "Synlig för agenten.",
+      "confirmReject": "Bekräfta avvisning",
+      "cancel": "Avbryt",
+      "signing": "Signerar …",
+      "approve": "Godkänn med min lösennyckel",
+      "reject": "Avvisa"
+    },
+    "detail": {
+      "confirmCancel": "Avbryta den här begäran och spärra dess kort?",
+      "receiptUnavailable": "Kvittot är inte tillgängligt.",
+      "eyebrow": "Begäran · {id}",
+      "amount": "Begärt belopp",
+      "agent": "Agent",
+      "mandateWindow": "mandat · {id}",
+      "purpose": "Syfte",
+      "category": "Kategori",
+      "expires": "Löper ut",
+      "rules": "Regler",
+      "perTxLimit": "Gräns",
+      "budget": "budget",
+      "decision": "Beslut",
+      "hash": "sha256 {hash}",
+      "quorum": "Kvorum: {signed} av {required} signaturer som krävs över tröskeln.",
+      "unusualAmount": "Skyddsspärr: ovanligt belopp för den här agenten, mänskligt godkännande krävs.",
+      "autoApproved": "Godkänd automatiskt enligt reglerna",
+      "signedByPasskey": "Mandatet signerat med lösennyckel",
+      "card": "Kort",
+      "cardHolderFallback": "agent",
+      "cardAria": "Virtuellt kort som slutar på {last4}, kortinnehavare {holder}, giltigt till {exp}",
+      "bankSca": "Godkänn även skapandet av kortet i din bankapp.",
+      "cardExpires": "Giltigt till {date}",
+      "handedOver": "överlämnat till agenten {time}",
+      "notHandedOver": "ännu inte överlämnat till agenten",
+      "qontoNotice": "Qonto överlämnar inte kort till agenter: visa kortet här och genomför betalningen själv.",
+      "showQontoCard": "Visa kortet (Qonto)",
+      "simulatePayment": "Simulera en betalning",
+      "cancelCard": "Spärra kortet",
+      "noCard": "Inget kort utfärdat.",
+      "transactions": "Transaktioner",
+      "noTransactions": "Inga transaktioner rapporterade av banken.",
+      "receipts": "Kvitton",
+      "addReceipt": "Lägg till",
+      "noReceipts": "Inga kvitton.",
+      "back": "← Alla begäranden"
+    }
+  }
+}

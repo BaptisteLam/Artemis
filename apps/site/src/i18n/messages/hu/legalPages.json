@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Általános értékesítési és felhasználási feltételek",
+      "purposeTitle": "1. Tárgy",
+      "purpose": "Jelen feltételek szabályozzák a(z) {editor} ({status}, SIRET {siret}) által kiadott Artemis szoftverhez való hozzáférést, valamint az arra történő előfizetést üzleti ügyfelek részéről. A szolgáltatás kizárólag szakmai felhasználók számára érhető el.",
+      "serviceTitle": "2. A szolgáltatás leírása",
+      "service": "Az Artemis lehetővé teszi az ügyfél számára, hogy költési szabályokat határozzon meg szoftverügynökei részére, jóváhagyja azok fizetési igényléseit, és saját bankjának alkalmazásprogramozási felületein keresztül vezérelje egyszer használatos virtuális kártyák létrehozását. Az Artemis nem nyújt pénzforgalmi szolgáltatást, nem kezel pénzeszközöket és nem bocsát ki kártyákat. A banki jogviszonyra, a banki díjakra és az erős hitelesítésre kizárólag az ügyfél és bankja között létrejött szerződés irányadó.",
+      "accountTitle": "3. Fiók és biztonság",
+      "account": "Az ügyfél felel az ügynöktokenek, a fiókjához való hozzáférés és felhasználói passkey-jeinek bizalmas kezeléséért, valamint az általa beállított szabályokért. Minden olyan kiadás, amelyet egy jogosult felhasználó jóváhagyott, vagy amely megfelel egy automatikus jóváhagyási szabálynak, az ügyfél által engedélyezettnek minősül.",
+      "pricesTitle": "4. Csomagok és árak",
+      "prices": "Csomagok: Sandbox (ingyenes), Builder ({builder} / hó), Team ({team} / hó), Ügynökség ({agency} / hó + {perClient} aktív ügyfelenként), Business ({business} / hó-tól). Egy fizetős csomag havi kvótáján felül minden további megbízás díja {overage}. Az árak nettó árak. {vat}. Havi előrefizetés bankkártyával, a Stripe-on keresztül. A megújítás automatikus; a felmondás a folyamatban lévő időszak végén lép hatályba, időarányos visszatérítés nélkül.",
+      "quotasTitle": "5. Kvóták",
+      "quotas": "Minden csomag kvótákat tartalmaz (ügynökök, csatlakoztatott bankok, havi igénylések). E kvótákon felül az új igényléseket a rendszer a következő időszakig vagy a csomagváltásig elutasítja.",
+      "availabilityTitle": "6. Rendelkezésre állás",
+      "availability": "A kiadó észszerű eszközökkel törekszik a szolgáltatás rendelkezésre állásának biztosítására, eredménykötelem nélkül. Karbantartás, illetve a műszaki és banki szolgáltatók miatt üzemszünetek fordulhatnak elő.",
+      "liabilityTitle": "7. Felelősség",
+      "liability": "A kiadó nem tehető felelőssé az ügyfél ügynökei által a megadott felhatalmazások keretében végrehajtott vásárlásokért, a kereskedők kiválasztásáért, a megvásárolt áruk vagy szolgáltatások minőségéért, sem az ügyfél bankjának döntéseiért. A kiadó felelőssége, valamennyi jogcímet együttvéve, az ügyfél által az utolsó tizenkét hónapban megfizetett összegekre korlátozódik.",
+      "dataTitle": "8. Adatok",
+      "data": "A személyes adatok kezelését az <a href=\"{href}\">adatvédelmi tájékoztató</a> ismerteti. Az ügyfél adatait bármikor exportálhatja.",
+      "lawTitle": "9. Irányadó jog",
+      "law": "A francia jog az irányadó. Békés rendezés hiányában a kiadó lakóhelye szerint illetékes bíróságok rendelkeznek joghatósággal."
+    },
+    "privacy": {
+      "title": "Adatvédelmi tájékoztató",
+      "controllerTitle": "Adatkezelő",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Kezelt adatok",
+      "dataAccount": "Fiók: e-mail-cím, szervezet, szerepkör, passkey-k (kizárólag nyilvános kulcsok).",
+      "dataActivity": "Tevékenység: kártyaigénylések, aláírt megbízások, a bank által jelentett tranzakciók, bizonylatok, auditnapló.",
+      "dataBanks": "Banki kapcsolatok: titkosított hozzáférési tokenek (AES-256-GCM).",
+      "dataBilling": "Számlázás: a Stripe kezeli; az Artemis nem látja azoknak a kártyáknak a számát, amelyekkel Ön az előfizetését fizeti.",
+      "dataWaitlist": "Várólista: e-mail-cím, vállalat, felhasználási eset.",
+      "cardNumbers": "Az Artemis soha nem tárolja az ügynökei számára kibocsátott kártyák teljes számát vagy biztonsági kódját.",
+      "purposesTitle": "Adatkezelési célok és jogalapok",
+      "purposes": "Szerződés teljesítése (a szolgáltatás nyújtása), jogi kötelezettségek (könyvelés), jogos érdek (biztonság, csalásmegelőzés), hozzájárulás (várólista).",
+      "processorsTitle": "Adatfeldolgozók",
+      "processors": "Supabase (adatbázis, Európai Unió), Cloudflare (tárhely és hálózat), Stripe (számlázás), Resend (tranzakciós e-mailek). Az EU-n kívülre irányuló esetleges adattovábbításokra általános szerződési feltételek vonatkoznak.",
+      "retentionTitle": "Megőrzési idők",
+      "retention": "Fiókadatok: a szerződés időtartama, majd 3 év. Auditnapló és számviteli adatok: 10 év. Várólista: 3 év interakció hiányában.",
+      "rightsTitle": "Az Ön jogai",
+      "rights": "Hozzáférés, helyesbítés, törlés, adathordozhatóság, tiltakozás és korlátozás: írjon a(z) {email} címre. Panaszt nyújthat be a CNIL-hez (cnil.fr).",
+      "cookiesTitle": "Sütik",
+      "cookies": "A webhely nem használ reklámcélú sütiket és harmadik féltől származó analitikai eszközöket. Az alkalmazás kizárólag a munkamenetéhez szükséges tárolást használja."
+    },
+    "notice": {
+      "title": "Impresszum",
+      "editorTitle": "Kiadó",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Cím: {address}",
+      "contact": "Kapcsolat: {email}",
+      "directorTitle": "A kiadványért felelős személy",
+      "hostingTitle": "Tárhelyszolgáltató",
+      "natureTitle": "A szolgáltatás jellege",
+      "nature": "Az Artemis a mesterséges intelligencián alapuló ügynökök költéseinek szabályozására szolgáló szoftver. Az Artemis sem pénzforgalmi intézménynek, sem elektronikuspénz-kibocsátó intézménynek nem minősül: semmilyen pénzeszközt nem fogad, nem őriz és nem utal. A fizetési kártyákat az ügyfél hitelintézete bocsátja ki, saját felelősségére.",
+      "ipTitle": "Szellemi tulajdon",
+      "ip": "A webhely tartalma, védjegyei és logói a kiadó tulajdonát képezik. Engedély nélküli többszörözésük tilos."
+    }
+  }
+}

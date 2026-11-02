@@ -1,0 +1,22 @@
+{
+  "subscriptions": {
+    "title": "Abonementi",
+    "lead": "Jūsu aģentu noformētie abonementi: karte piesaistīta tirgotājam, mēneša limits, neaktīvu abonementu noteikšana.",
+    "confirmCancel": "Atcelt šo abonementu? Karte tiks anulēta bankā.",
+    "planRequired": "Aģentu pārvaldīti abonementi ir iekļauti, sākot no plāna Team.",
+    "seePlans": "Skatīt plānus →",
+    "dormantAlert_zero": "{count} abonementiem nav bijis maksājumu ilgāk par {days} d.: apsveriet to atcelšanu.",
+    "dormantAlert_one": "{count} abonementam nav bijis maksājumu ilgāk par {days} d.: apsveriet tā atcelšanu.",
+    "dormantAlert_other": "{count} abonementiem nav bijis maksājumu ilgāk par {days} d.: apsveriet to atcelšanu.",
+    "emptyTitle": "Nav abonementu",
+    "emptyText": "Aģents izveido abonementu ar request_card un atkārtota maksājuma opciju.",
+    "colMerchant": "Tirgotājs",
+    "colAgent": "Aģents",
+    "colMonthlyLimit": "Mēneša limits",
+    "colPaid": "Samaksāts",
+    "colLastPayment": "Pēdējais maksājums",
+    "colStatus": "Statuss",
+    "dormant": "Neaktīvs",
+    "cancel": "Atcelt"
+  }
+}

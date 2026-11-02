@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Väntelista",
+    "description": "Få besked när anslutningarna till riktiga banker öppnar.",
+    "headline": "Bli en av de första.",
+    "lead": "Anslutningarna till Qonto och Revolut öppnas successivt. Lämna din e-postadress så hör vi av oss så snart din bank är tillgänglig.",
+    "email": "Jobbmejl",
+    "company": "Företag",
+    "useCase": "Vad behöver dina agenter betala för?",
+    "useCasePlaceholder": "API:er, SaaS, moln, data …",
+    "submit": "Gå med i väntelistan",
+    "sending": "Skickar …",
+    "ok": "Tack, du står på listan. Vi mejlar dig så snart det öppnar.",
+    "error": "Registreringen misslyckades. Försök igen om en stund."
+  }
+}

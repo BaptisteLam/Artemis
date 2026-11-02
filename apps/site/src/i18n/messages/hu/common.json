@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Az ügynökei fizetnek. Az utolsó szó az Öné.",
+    "description": "Európai pénzügyi tűzfal MI-ügynökei számára: kontroll, időmegtakarítás és AI Act szerinti bizonyíték minden vásárlásról, az Ön által választott banknál."
+  },
+  "layout": {
+    "skip": "Ugrás a tartalomhoz"
+  },
+  "nav": {
+    "aria": "Fő navigáció",
+    "home": "Artemis, kezdőlap",
+    "howItWorks": "Működés",
+    "agencies": "Ügynökségek",
+    "pricing": "Árak",
+    "docs": "Dokumentáció",
+    "security": "Biztonság",
+    "login": "Bejelentkezés",
+    "cta": "Kipróbálom"
+  },
+  "lang": {
+    "choose": "Nyelv kiválasztása"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Ügynökség",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "A Claude, a ChatGPT és az n8n a megfelelő tulajdonosaik védjegyei. Az Artemis egyikükhöz sem kapcsolódik.",
+    "product": "Termék",
+    "policyTemplate": "Szabályzatsablon",
+    "waitlist": "Várólista",
+    "restApi": "REST API",
+    "legal": "Jogi információk",
+    "legalNotice": "Impresszum",
+    "terms": "ÁSZF",
+    "privacy": "Adatvédelem"
+  },
+  "legal": {
+    "eyebrow": "Jogi információk",
+    "updated": "Utolsó frissítés: 2026. november 1.",
+    "frenchPrevails": "Ez az oldal tájékoztatási célú fordítás. Jogilag kizárólag a <a href=\"{href}\">francia nyelvű változat</a> az irányadó.",
+    "vat": "Áfa nem kerül felszámításra, a francia általános adótörvénykönyv (CGI) 293 B. cikke alapján",
+    "status": "Egyéni vállalkozó (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (oldalak és API); Supabase, Inc. — az adatok tárolása az Európai Unióban (Frankfurt) történik."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentáció",
+    "start": "Első lépések",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI és Claude-skill",
+    "api": "REST API",
+    "rules": "Szabályok és jóváhagyás"
+  },
+  "notFound": {
+    "title": "Az oldal nem található",
+    "eyebrow": "404-es hiba",
+    "headline": "Ez az oldal nem létezik.",
+    "lead": "Lehet, hogy a hivatkozás elavult. Térjen vissza a kezdőlapra, vagy böngéssze a dokumentációt.",
+    "home": "Kezdőlap"
+  }
+}

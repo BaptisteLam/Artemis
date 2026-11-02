@@ -1,0 +1,20 @@
+{
+  "admin": {
+    "eyebrow": "Back office",
+    "title": "Az Artemis számokban",
+    "mrr": "MRR",
+    "paying": "Fizető ügyfelek",
+    "ofOrgs_one": "{count} szervezetből",
+    "ofOrgs_other": "{count} szervezetből",
+    "signups7d": "Regisztrációk (7 nap)",
+    "requests30d": "Igénylések (30 nap)",
+    "orgs": "Szervezetek",
+    "cols": {
+      "name": "Név",
+      "plan": "Csomag",
+      "subscription": "Előfizetés",
+      "created": "Létrehozva"
+    },
+    "waitlist": "Várólista ({total})"
+  }
+}

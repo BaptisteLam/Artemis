@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Könyvelési exportok",
+    "lead": "A bankjai által terhelt kiadások, készen a Pennylane, a könyvelője vagy egy táblázat számára.",
+    "failed": "Az exportálás nem sikerült.",
+    "from": "Kezdete",
+    "to": "Vége (nem beleértve)",
+    "downloadCsv": "CSV letöltése",
+    "downloadFec": "FEC letöltése",
+    "formats": "CSV: pontosvesszővel tagolt, Excel-kompatibilis. FEC: 18 előírt oszlop, terhelés 604000 / jóváírás 512000, a Pennylane-be importálható.",
+    "fecUpsell": "A FEC a Team csomagtól érhető el.",
+    "seePlans": "Csomagok megtekintése"
+  }
+}

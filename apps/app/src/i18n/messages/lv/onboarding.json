@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "{step}. solis no {total}",
+    "continue": "Turpināt →",
+    "org": {
+      "title": "Jūsu organizācija",
+      "lead": "Jūs sākat ar plānu Sandbox: simulēta banka, bez maksas.",
+      "nameLabel": "Uzņēmuma vai studijas nosaukums"
+    },
+    "agent": {
+      "title": "Jūsu pirmais aģents",
+      "lead": "Īss nosaukums, kas norāda, ko tas pērk. Noklusējuma noteikumi: {monthly} mēnesī, {perPurchase} vienam pirkumam.",
+      "nameLabel": "Aģenta nosaukums",
+      "platformLabel": "Platforma",
+      "platformOther": "Cita",
+      "submit": "Izveidot aģentu →"
+    },
+    "connect": {
+      "title": "Pievienojiet savu aģentu",
+      "done": "Marķieris nokopēts →"
+    },
+    "passkey": {
+      "title": "Jūsu apstiprināšanas piekļuves atslēga",
+      "lead": "Katrs izdevums tiks parakstīts ar Face ID, Touch ID, Windows Hello vai drošības atslēgu. Ja iespējams, reģistrējiet to tālrunī, kurā saņemsiet paziņojumus.",
+      "deviceName": "Pirmā ierīce",
+      "saved": "Piekļuves atslēga reģistrēta.",
+      "unsupported": "Šī pārlūkprogramma neatbalsta piekļuves atslēgas.",
+      "register": "Reģistrēt piekļuves atslēgu",
+      "openDashboard": "Atvērt pārskatu →",
+      "later": "Vēlāk"
+    }
+  }
+}

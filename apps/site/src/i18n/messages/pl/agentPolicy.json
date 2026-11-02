@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Wzór: polityka wydatków agentów AI",
+    "intro": "Bezpłatny wzór do dostosowania, służący do regulowania wydatków ponoszonych przez agentów sztucznej inteligencji i dokumentowania nadzoru ze strony człowieka wymaganego przez art. 14 unijnego aktu w sprawie sztucznej inteligencji (AI Act). Wydrukuj tę stronę lub skopiuj ją do swojej wiki.",
+    "scope": {
+      "title": "1. Cel i zakres",
+      "body": "Niniejsza polityka dotyczy każdego agenta programowego (asystenta konwersacyjnego, automatyzacji, skryptu) upoważnionego do dokonywania zakupów w imieniu [FIRMA]. Żaden agent nie korzysta z karty płatniczej firmy ani pracownika: każdy zakup odbywa się za pomocą jednorazowej karty wirtualnej, o którą wnioskuje się przez Artemis."
+    },
+    "register": {
+      "title": "2. Rejestr agentów",
+      "body": "Każdy agent jest wpisany do rejestru wraz z: nazwą, platformą, odpowiedzialnym za niego człowiekiem, celem, budżetem miesięcznym, limitem na zakup, dozwolonymi sprzedawcami oraz, w stosownych przypadkach, klientem, dla którego pracuje."
+    },
+    "rules": {
+      "title": "3. Zasady wydatków",
+      "i1": "Budżet miesięczny na agenta: [KWOTA] €; limit na zakup: [KWOTA] €.",
+      "i2": "Dozwoleni sprzedawcy: [LISTA]; zakazane kategorie: gry hazardowe, przekazy pieniężne, quasi-gotówka, papiery wartościowe.",
+      "i3": "Automatyczne zatwierdzanie wyłącznie poniżej [KWOTA] € i u dozwolonego sprzedawcy; powyżej tej kwoty podpis człowieka jest obowiązkowy.",
+      "i4": "Powyżej [KWOTA] € wymagane są podpisy dwóch różnych osób."
+    },
+    "oversight": {
+      "title": "4. Nadzór człowieka",
+      "body": "Osoby upoważnione do zatwierdzania: [IMIONA I NAZWISKA / FUNKCJE]. Zatwierdzenie odbywa się kluczem dostępu i obejmuje dokładną treść upoważnienia (agent, kwota, sprzedawca, cel). Każdy niezatwierdzony wniosek wygasa automatycznie."
+    },
+    "records": {
+      "title": "5. Dowody zakupu i księgowość",
+      "body": "Każdy zakup zostaje powiązany z fakturą w ciągu [N] godzin; w przeciwnym razie agent zostaje zawieszony. Wydatki są eksportowane co miesiąc (FEC lub Pennylane) i uzgadniane z wyciągami bankowymi."
+    },
+    "incidents": {
+      "title": "6. Incydenty",
+      "body": "W przypadku nietypowego zachowania, rozbieżności kwoty lub sprzedawcy albo podejrzenia prompt injection osoba odpowiedzialna natychmiast zamraża agenta (lub całą organizację) i rejestruje incydent."
+    },
+    "retention": {
+      "title": "7. Przechowywanie i przegląd",
+      "body": "Łańcuchowy dziennik audytu jest przechowywany przez [10] lat. Co kwartał sporządzany jest raport z nadzoru, który weryfikuje [FUNKCJA]. Polityka podlega przeglądowi co roku."
+    },
+    "note": "W planie {plan} Artemis generuje rejestr agentów i kwartalny raport z nadzoru."
+  }
+}

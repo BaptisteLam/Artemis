@@ -1,0 +1,94 @@
+{
+  "audit": {
+    "title": "Tarkastusloki",
+    "lead": "Jokainen tapahtuma ketjutetaan SHA-256-tiivisteellä, eikä sitä voi muuttaa tai poistaa: se on todisteesi ihmisen valvonnasta (AI Act).",
+    "verify": "Tarkista eheys",
+    "export": "Vie",
+    "report": "AI Act -raportti {quarter}",
+    "exportFailed": "Vienti epäonnistui.",
+    "reportUnavailable": "Raportti ei ole saatavilla.",
+    "chainOk_one": "Ketju on eheä: {count} merkintä tarkistettu.",
+    "chainOk_other": "Ketju on eheä: {count} merkintää tarkistettu.",
+    "chainBroken": "Ketju katkeaa merkinnän nro {id} kohdalla.",
+    "exportUpsell": "Tarkastuslokin allekirjoitettu vienti sisältyy Business-pakettiin.",
+    "seePlans": "Katso paketit",
+    "cols": {
+      "date": "Päivämäärä",
+      "event": "Tapahtuma",
+      "actor": "Toimija",
+      "hash": "Tiiviste"
+    },
+    "view": "näytä",
+    "older": "Vanhemmat →",
+    "actors": {
+      "user": "Käyttäjä",
+      "agent": "Agentti",
+      "system": "Järjestelmä"
+    },
+    "actions": {
+      "org": {
+        "created": "Organisaatio luotu",
+        "frozen": "Organisaatio jäädytetty",
+        "unfrozen": "Organisaation jäädytys purettu",
+        "card_delivery_changed": "Kortin luovutustapa muutettu",
+        "slack_connected": "Slack yhdistetty",
+        "slack_disconnected": "Slack-yhteys katkaistu"
+      },
+      "agent": {
+        "created": "Agentti luotu",
+        "updated": "Agentti päivitetty",
+        "deleted": "Agentti poistettu",
+        "token_rotated": "Token luotu uudelleen",
+        "frozen": "Agentti jäädytetty"
+      },
+      "policy": {
+        "updated": "Säännöt päivitetty"
+      },
+      "request": {
+        "created": "Pyyntö luotu",
+        "rejected": "Pyyntö hylätty",
+        "approved": "Valtuutus allekirjoitettu",
+        "auto_approved": "Automaattinen hyväksyntä",
+        "approval_recorded": "Hyväksyntä kirjattu",
+        "expired": "Pyyntö vanhentunut"
+      },
+      "card": {
+        "issued": "Kortti myönnetty",
+        "issue_failed": "Kortin myöntäminen epäonnistui",
+        "revealed": "Kortti luovutettu agentille",
+        "link_created": "Korttilinkki luotu",
+        "viewed": "Korttia katsottu",
+        "canceled": "Kortti peruutettu",
+        "expired": "Kortti vanhentunut"
+      },
+      "transaction": {
+        "matched": "Tapahtuma täsmäytetty",
+        "mismatch": "Poikkeama havaittu"
+      },
+      "receipt": {
+        "attached": "Kuitti liitetty"
+      },
+      "bank": {
+        "connected": "Pankki liitetty",
+        "disconnected": "Pankkiyhteys katkaistu"
+      },
+      "member": {
+        "invited": "Jäsen kutsuttu",
+        "joined": "Jäsen liittyi",
+        "removed": "Jäsen poistettu",
+        "role_changed": "Rooli muutettu"
+      },
+      "client": {
+        "created": "Asiakas luotu",
+        "updated": "Asiakas päivitetty"
+      },
+      "billing": {
+        "subscribed": "Tilaus aloitettu",
+        "updated": "Tilaus päivitetty"
+      },
+      "subscription": {
+        "charged": "Tilausmaksu veloitettu"
+      }
+    }
+  }
+}

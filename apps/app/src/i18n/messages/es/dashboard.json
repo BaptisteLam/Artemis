@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · plan {plan}",
+    "title": "Panel",
+    "stats": {
+      "spent": "Gastado este mes",
+      "pending": "Por aprobar",
+      "openQueue": "Abrir la cola →",
+      "requests": "Solicitudes este mes"
+    },
+    "recent": {
+      "title": "Últimas solicitudes",
+      "viewAll": "Ver todas →",
+      "empty": "Ninguna solicitud este mes. Conecte un agente desde la página {agents}.",
+      "agentsLink": "Agentes"
+    },
+    "byAgent": {
+      "title": "Por agente",
+      "manage": "Gestionar →",
+      "empty": "Ningún agente."
+    }
+  }
+}

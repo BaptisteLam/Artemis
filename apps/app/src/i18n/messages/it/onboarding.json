@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Passaggio {step} di {total}",
+    "continue": "Continua →",
+    "org": {
+      "title": "La sua organizzazione",
+      "lead": "Si parte in Sandbox: banca simulata, nessun costo.",
+      "nameLabel": "Nome dell'azienda o dello studio"
+    },
+    "agent": {
+      "title": "Il suo primo agente",
+      "lead": "Un nome breve che dica che cosa acquista. Regole predefinite: {monthly} al mese, {perPurchase} per acquisto.",
+      "nameLabel": "Nome dell'agente",
+      "platformLabel": "Piattaforma",
+      "platformOther": "Altro",
+      "submit": "Crea l'agente →"
+    },
+    "connect": {
+      "title": "Colleghi il suo agente",
+      "done": "Ho copiato il token →"
+    },
+    "passkey": {
+      "title": "La sua passkey di approvazione",
+      "lead": "Ogni spesa verrà firmata con Face ID, Touch ID, Windows Hello o una chiave di sicurezza. Se possibile, la registri dal telefono che riceverà le notifiche.",
+      "deviceName": "Primo dispositivo",
+      "saved": "Passkey registrata.",
+      "unsupported": "Questo browser non supporta le passkey.",
+      "register": "Registra una passkey",
+      "openDashboard": "Apri la dashboard →",
+      "later": "Più tardi"
+    }
+  }
+}

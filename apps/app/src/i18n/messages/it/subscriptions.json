@@ -1,0 +1,22 @@
+{
+  "subscriptions": {
+    "title": "Abbonamenti",
+    "lead": "Abbonamenti sottoscritti dai suoi agenti: carta vincolata all'esercente, limite mensile, rilevamento degli abbonamenti inattivi.",
+    "confirmCancel": "Annullare questo abbonamento? La carta verrà annullata presso la banca.",
+    "planRequired": "Gli abbonamenti gestiti dagli agenti sono inclusi a partire dal piano Team.",
+    "seePlans": "Vedi i piani →",
+    "dormantAlert_one": "{count} abbonamento senza pagamenti da oltre {days} giorni: valuti di disdirlo.",
+    "dormantAlert_many": "{count} abbonamenti senza pagamenti da oltre {days} giorni: valuti di disdirli.",
+    "dormantAlert_other": "{count} abbonamenti senza pagamenti da oltre {days} giorni: valuti di disdirli.",
+    "emptyTitle": "Nessun abbonamento",
+    "emptyText": "Un agente crea un abbonamento con request_card e l'opzione ricorrente.",
+    "colMerchant": "Esercente",
+    "colAgent": "Agente",
+    "colMonthlyLimit": "Limite mensile",
+    "colPaid": "Pagato",
+    "colLastPayment": "Ultimo pagamento",
+    "colStatus": "Stato",
+    "dormant": "Inattivo",
+    "cancel": "Annulla"
+  }
+}

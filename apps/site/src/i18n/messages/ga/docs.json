@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Tosú le Artemis",
+      "lead": "Ón gclárú go dtí an chéad íocaíocht ag do ghníomhaire, sa Sandbox, i gceann cúig nóiméad.",
+      "step1": {
+        "title": "1. Cruthaigh cuntas",
+        "body": "Cláraigh ar <a href=\"{href}\">an aip</a> le do ríomhphost (nasc draíochta), cruthaigh d'eagraíocht agus cláraigh passkey: úsáidfidh tú é chun caiteachas a fhormheas."
+      },
+      "step2": {
+        "title": "2. Cruthaigh gníomhaire",
+        "body": "In <strong>Gníomhairí</strong>, cruthaigh mar shampla <code>notion.agent</code>. Taispeánann Artemis a chomhartha (<code>art_test_…</code> sa Sandbox, <code>art_live_…</code> le fíorbhanc) <strong>uair amháin</strong>: cóipeáil é."
+      },
+      "step3": {
+        "title": "3. Ceangail an gníomhaire",
+        "fastest": "An bealach is tapúla: <code>npx artemis-agents init</code> (féach <a href=\"{cli}\">CLI</a>).",
+        "server": "Tá an freastalaí MCP ag <code>{url}</code>, leis an gceanntásc <code>Authorization: Bearer &lt;token&gt;</code>. Lean an treoir do d'uirlis: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> nó <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. An timthriall ceannaigh",
+        "tool": "Uirlis",
+        "role": "Feidhm",
+        "requestCard": "Iarrann sé cárta: méid <strong>i gceintí</strong>, airgeadra, ceannaí, cuspóir.",
+        "getRequestStatus": "Leanann sé an formheas daonna.",
+        "getCardForCheckout": "Tugann sé <strong>nasc gearrshaolach</strong> ar ais (10 nóim, úsáid amháin): taispeánann an banc an cárta, gan dul trí Artemis.",
+        "listBudgets": "Buiséad míosúil, caite, fágtha, teorainn.",
+        "getSpendSummary": "Caiteachas de réir ceannaí (lá, seachtain, mí).",
+        "attachReceipt": "Ceanglaíonn sé admháil leis an gceannach.",
+        "cancelCard": "Cealaíonn sé an cárta mura dtarlóidh an ceannach a thuilleadh."
+      },
+      "step5": {
+        "title": "5. Téigh beo",
+        "body": "Roghnaigh plean in <strong>Billeáil</strong>, ansin ceangail do bhanc in <strong>Bainc</strong>. Faigheann na gníomhairí atá nasctha leis an mbanc sin fíorchártaí aonúsáide."
+      }
+    },
+    "mcpClaude": {
+      "title": "Ceangail Claude",
+      "lead": "Labhraíonn Claude Code, Claude Desktop agus nascóirí Claude MCP thar HTTP.",
+      "verify": "Seiceáil le <code>claude mcp list</code>, ansin iarr mar shampla: “Liostáil sinn le Notion ar {price} le Artemis”.",
+      "desktopBody": "Oscail <em>Settings → Developer → Edit Config</em> agus cuir leis:",
+      "instructionsTitle": "Treoracha úsáideacha don ghníomhaire",
+      "instructionsBody": "Cuir le do threoracha córais:"
+    },
+    "mcpChatgpt": {
+      "title": "Ceangail ChatGPT",
+      "lead": "Glacann ChatGPT le freastalaithe MCP cianda mar nascóirí saincheaptha.",
+      "addTitle": "Cuir an nascóir leis",
+      "step1": "Oscail <em>Settings → Connectors → Advanced</em> agus cumasaigh mód an fhorbróra má éilíonn do phlean é.",
+      "step2": "Cruthaigh nascóir, URL: <code>{url}</code>.",
+      "step3": "Fíordheimhniú: ceanntásc <code>Authorization</code> leis an luach <code>Bearer art_…</code> (ag brath ar na roghanna a thairgeann do spás oibre ChatGPT).",
+      "note": "Bíonn na lipéid bheachta éagsúil ó phlean ChatGPT go plean eile; fanann an seoladh agus an ceanntásc mar an gcéanna.",
+      "openaiTitle": "Gníomhairí OpenAI (API)",
+      "openaiBody": "Leis an Responses API nó leis an Agents SDK, fógair uirlis MCP chianda a dhíríonn ar <code>{url}</code> leis an gceanntásc céanna."
+    },
+    "cli": {
+      "title": "CLI, scil Claude agus n8n",
+      "lead": "Ó nialas go dtí do chéad sainordú i gceann trí nóiméad.",
+      "commandTitle": "Ordú amháin",
+      "commandBody": "Iarrann an t-ordú URL an API agus comhartha an ghníomhaire (a cruthaíodh san aip, leathanach Gníomhairí), seiceálann sé an rochtain, sábhálann sé an chumraíocht in <code>~/.config/artemis/config.json</code>, cuireann sé an freastalaí MCP le Claude Code má tá sé suiteáilte agus taispeánann sé an chumraíocht do Claude Desktop agus n8n. Le comhartha Sandbox agus an rogha <code>--demo</code>, cruthaíonn sé céad sainordú tástála duit le formheas san aip.",
+      "skillTitle": "Scil Claude",
+      "skillBody": "Múineann an scil <code>artemis-payments</code> do Claude conas íoc trí Artemis: méid i gceintí, fanacht ar fhormheas, an nasc íocaíochta a oscailt ag an nóiméad ceart, admháil tar éis an cheannaigh, agus instealltaí a dhiúltú. Cóipeáil an fillteán <code>integrations/claude-skill/artemis</code> ón stór go <code>~/.claude/skills/</code>.",
+      "n8nTitle": "Nód n8n",
+      "n8nBody": "Suiteáil an nód pobail <code>n8n-nodes-artemis</code> (Settings → Community nodes). Oibríochtaí: cárta a iarraidh, stádas, nasc íocaíochta, cealú, buiséad. Dintiúir: URL an API agus comhartha an ghníomhaire."
+    },
+    "n8n": {
+      "title": "Ceangail n8n",
+      "lead": "Dhá rogha: an nód MCP Client do ghníomhaire IS n8n, nó iarratais HTTP do shreabhadh oibre clasaiceach.",
+      "agentTitle": "Gníomhaire IS n8n (MCP Client)",
+      "agentBody": "I nód <em>AI Agent</em>, cuir an uirlis <em>MCP Client</em> leis: iompar <em>HTTP Streamable</em>, URL <code>{url}</code>, fíordheimhniú <em>Header Auth</em> le <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "Sreabhadh oibre HTTP",
+      "workflowBody": "Iompórtáil an sreabhadh oibre samplach <code>examples/n8n/artemis-request-card.json</code> ón stór. Déanann sé na céimeanna seo i ndiaidh a chéile:",
+      "step1With": "le",
+      "step2": "lúb vótaíochta ar <code>GET /v1/card-requests/:id</code> go dtí go mbeidh an stádas <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> chun nasc gearrshaolach an chárta a fháil (10 nóiméad, úsáid amháin)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Do Make, do do scripteanna agus do do ghníomhairí féin. An comhartha céanna leis an bhfreastalaí MCP.",
+      "authTitle": "Fíordheimhniú",
+      "base": "URL bunúsach: <code>{url}</code>. Teorainn: 60 iarratas sa nóiméad in aghaidh an ghníomhaire.",
+      "endpointsTitle": "Críochphointí",
+      "method": "Modh",
+      "path": "Conair",
+      "role": "Feidhm",
+      "create": "Iarratas a chruthú",
+      "status": "Stádas iarratais",
+      "reveal": "Nasc gearrshaolach chuig an gcárta (10 nóim, úsáid amháin)",
+      "cancel": "Cealaigh",
+      "receipts": "Admháil a cheangal",
+      "budgets": "Buiséad fágtha",
+      "spendSummary": "Caiteachas de réir ceannaí",
+      "exampleTitle": "Sampla",
+      "errorsTitle": "Earráidí",
+      "errorsBody": "Cóid choitianta: <code>invalid_amount</code> (caithfidh an méid a bheith ina shlánuimhir i gceintí), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Rialacha agus formheas",
+      "lead": "Conas a chinneann Artemis an ndiúltaítear d'iarratas, an bhformheastar go huathoibríoch é nó an gcuirtear faoi bhráid do shínithe é.",
+      "orderTitle": "Ord na meastóireachta",
+      "orderBody": "Diúltaíonn an chéad riail nach gcomhlíontar don iarratas:",
+      "o1": "Airgeadra ceadaithe (<code>currency_not_allowed</code>).",
+      "o2": "Méid dearfach faoi bhun na teorann in aghaidh an cheannaigh (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Buiséad míosúil: iarratais na míosa atá ar feitheamh, formheasta agus íoctha + an méid (<code>over_monthly_budget</code>). Leanann an mhí am Pháras.",
+      "o4": "Ceannaí blocáilte, nó ceannaí nach bhfuil ar an liosta ceadaithe más ann dó (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Catagóir ceannaí (MCC) blocáilte nó gan cheadú (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Formheas uathoibríoch",
+      "autoBody": "Formheastar iarratas gan tú más <strong>faoi bhun</strong> na tairsí uathfhormheasa atá a mhéid <strong>agus</strong> má tá an ceannaí ar liosta ceadaithe an ghníomhaire. Gan liosta ceadaithe, cuirtear gach iarratas faoi do bhráid.",
+      "matchTitle": "Meaitseáil ceannaithe",
+      "matchBody": "Déantar ainmneacha a chur i gcomparáid gan aird ar chás na litreacha, ar shínte fada, ar fhoirm dhlíthiúil ná ar iarmhír an fhearainn: clúdaíonn “Notion” “Notion Labs, Inc.” agus “notion.so”.",
+      "humanTitle": "Formheas daonna",
+      "humanBody": "Faigheann úinéirí, riarthóirí agus formheastóirí fógra. Teastaíonn passkey chun formheas a thabhairt. Má fhorfheidhmíonn do bhanc a fhíordheimhniú láidir custaiméara féin (Qonto, mar shampla), formheas ina aip siúd freisin.",
+      "expiryTitle": "Dul in éag",
+      "expiryBody": "Téann iarratas nach bpróiseáiltear in éag tar éis 30 nóiméad (inchumraithe). Cealaítear cárta nár úsáideadh nuair a théann sé in éag."
+    }
+  }
+}

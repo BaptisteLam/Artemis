@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Ihre Agenten zahlen. Das letzte Wort haben Sie.",
+    "unknownAgent": "Ein Agent",
+    "unknownMerchant": "einem Händler",
+    "requestPending": {
+      "title": "{agent} möchte {amount} ausgeben",
+      "subject": "Freizugeben: {amount} bei {merchant}",
+      "merchant": "Händler: {merchant}",
+      "purpose": "Zweck: {purpose}",
+      "expires": "Ohne Antwort verfällt die Anfrage automatisch.",
+      "cta": "Prüfen und freigeben →",
+      "slack": "*{title}* bei *{merchant}*",
+      "slackCta": "Prüfen und mit meinem Passkey signieren"
+    },
+    "cardIssueFailed": {
+      "subject": "Kartenerstellung bei {merchant} fehlgeschlagen",
+      "title": "Die Bank hat die Karte nicht erstellt",
+      "fallback": "Bankfehler.",
+      "cta": "Anfrage ansehen →"
+    },
+    "mismatch": {
+      "subject": "Abweichung erkannt: {amount} bei {merchant}",
+      "title": "Eine Transaktion stimmt nicht mit dem Mandat überein",
+      "check": "Prüfen Sie die Transaktion und sperren Sie den Agenten bei Bedarf.",
+      "cta": "Transaktionen ansehen →",
+      "pushTitle": "Abweichung bei Transaktion"
+    },
+    "invitation": {
+      "subject": "Einladung zu {org} auf Artemis",
+      "title": "Treten Sie {org} bei",
+      "body": "Sie sind eingeladen, die Ausgaben der KI-Agenten Ihres Teams freizugeben und zu verfolgen.",
+      "cta": "Einladung annehmen →"
+    }
+  }
+}

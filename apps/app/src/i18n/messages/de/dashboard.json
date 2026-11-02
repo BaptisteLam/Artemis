@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · Tarif {plan}",
+    "title": "Dashboard",
+    "stats": {
+      "spent": "Diesen Monat ausgegeben",
+      "pending": "Freizugeben",
+      "openQueue": "Warteschlange öffnen →",
+      "requests": "Anfragen diesen Monat"
+    },
+    "recent": {
+      "title": "Letzte Anfragen",
+      "viewAll": "Alle ansehen →",
+      "empty": "Keine Anfragen diesen Monat. Verbinden Sie einen Agenten auf der Seite {agents}.",
+      "agentsLink": "Agenten"
+    },
+    "byAgent": {
+      "title": "Nach Agent",
+      "manage": "Verwalten →",
+      "empty": "Keine Agenten."
+    }
+  }
+}

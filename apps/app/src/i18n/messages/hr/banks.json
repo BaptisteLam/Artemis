@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Banke",
+    "lead": "Kartice se izdaju u vašoj banci. Artemis nikada ne drži vaša sredstva.",
+    "bankAria": "Banka",
+    "help": {
+      "stripe": "Stripe račun s uključenim Issuingom (EU). Izradite ograničeni ključ s dopuštenjima pisanja za Issuing. Unesite postojećeg vlasnika kartice (ich_…) ili adresu svojeg društva kako bi ga Artemis mogao izraditi.",
+      "qonto": "Čitanje, zamrzavanje i usklađivanje: Qonto ne predaje karticu trećim stranama i zabranjuje njezino posuđivanje. OAuth token iz Qonto partnerskog programa; odobravatelj može sigurno prikazati Qonto karticu i sam dovršiti plaćanje.",
+      "revolut": "Paket Grow ili viši, pristup „Cards API” koji uključuje podrška i pisano odobrenje Revoluta (Valid Permission) prije bilo kakve produkcijske upotrebe. Zahtijeva izravnu predaju (Postavke)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Ograničeni tajni ključ",
+      "publishableKey": "Javni ključ",
+      "stripeCardholder": "Stripe vlasnik kartice",
+      "companyName": "Naziv društva",
+      "address": "Adresa",
+      "postalCode": "Poštanski broj",
+      "city": "Grad",
+      "country": "Država",
+      "webhookSecret": "Tajna webhooka",
+      "accessToken": "Pristupni token",
+      "refreshToken": "Token za osvježavanje",
+      "oauthClientId": "OAuth ID klijenta",
+      "oauthClientSecret": "OAuth tajna klijenta",
+      "holderMemberId": "ID člana vlasnika kartice",
+      "bankAccountId": "ID bankovnog računa",
+      "environment": "Okruženje",
+      "stagingToken": "Staging token",
+      "clientAssertion": "Tvrdnja klijenta (JWT)",
+      "holderId": "ID vlasnika kartice"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… ili sk_test_…",
+      "stripePublishableKey": "pk_live_… (privremena poveznica na karticu)",
+      "stripeCardholder": "ich_… (neobavezno)",
+      "ifNoCardholder": "Ako nema vlasnika kartice",
+      "country": "ISO kod, npr. HR",
+      "webhookSecret": "whsec_… (nakon izrade webhooka, vidi niže)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Neobavezno",
+      "toRefreshToken": "Za osvježavanje tokena",
+      "qontoMembershipId": "Qonto membership id",
+      "qontoBankAccountId": "Qonto bank_account id",
+      "sandboxOnly": "Samo Sandbox",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Neobavezno, za osvježavanje",
+      "teamMemberOptional": "Član tima (neobavezno)"
+    },
+    "encrypted": "Vjerodajnice se testiraju, a zatim šifriraju (AES-256-GCM). Nikada se više ne prikazuju.",
+    "testing": "Testiranje veze…",
+    "connectProvider": "Poveži {name}",
+    "testOk": "Veza je u redu",
+    "testFailed": "Neuspjeh: {detail}",
+    "confirmDisconnect": "Odspojiti ovu banku? Agenti koji je koriste više neće moći dobiti karticu.",
+    "lastSync": "Posljednja sinkronizacija: {date}",
+    "stripeWebhook": "Stripe webhook (događaji issuing_transaction.*):",
+    "test": "Testiraj",
+    "disconnect": "Odspoji",
+    "connectRealBank": "Povežite stvarnu banku",
+    "upgrade": "Povezivanje stvarne banke uključeno je od paketa Builder ({price}/mjesečno).",
+    "choosePlan": "Odaberite paket →"
+  }
+}

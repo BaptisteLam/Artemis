@@ -1,0 +1,59 @@
+{
+  "billing": {
+    "title": "Számlázás",
+    "lead": "Jelenlegi csomag: {plan}. Igénylések ebben a hónapban: {usage}. Áfa nem kerül felszámításra, a francia általános adótörvénykönyv (CGI) 293 B. cikke alapján.",
+    "usageOf": "{used} / {limit}",
+    "manage": "Előfizetés és számlák kezelése",
+    "returnOk": "Köszönjük! Az előfizetése aktiválása folyamatban van (néhány másodperc).",
+    "returnCanceled": "A fizetés megszakadt, semmi sem változott.",
+    "inactive": "Az előfizetése már nem aktív ({status}). A fizetős funkciók szünetelnek: kérjük, frissítse a fizetési módját.",
+    "unknown": "ismeretlen",
+    "overage": "Egy fizetős csomag kvótáján felül minden további megbízás díja {price}.",
+    "overageCount_one": "Ebben a hónapban: {count} megbízás.",
+    "overageCount_other": "Ebben a hónapban: {count} megbízás.",
+    "ownerOnly": "Csak tulajdonos módosíthatja az előfizetést.",
+    "current": "Jelenlegi",
+    "from": "{price}-tól",
+    "perMonth": "/ hó",
+    "choose": "{plan} kiválasztása",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Ügynökség",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 ügynök",
+        "i2": "Szimulált bank",
+        "i3": "20 szimulált megbízás / hó"
+      },
+      "builder": {
+        "i1": "3 ügynök",
+        "i2": "1 valódi bank",
+        "i3": "50 megbízás / hó",
+        "i4": "Jóváhagyás passkey-vel és értesítések"
+      },
+      "team": {
+        "i1": "10 ügynök",
+        "i2": "2 valódi bank",
+        "i3": "300 megbízás / hó",
+        "i4": "Slack, jóváhagyói kvórum, FEC-export",
+        "i5": "Ügynökönként kezelt előfizetések"
+      },
+      "agency": {
+        "i1": "25 ügynök, korlátlan számú ügyfél",
+        "i2": "1000 megbízás / hó",
+        "i3": "Keretek, árrés és továbbszámlázás ügyfelenként",
+        "i4": "+ {price} aktív ügyfelenként"
+      },
+      "business": {
+        "i1": "Korlátlan",
+        "i2": "AI Act-dokumentáció és -jelentés",
+        "i3": "Aláírt auditnapló exportálása",
+        "i4": "Kiemelt támogatás"
+      }
+    }
+  }
+}

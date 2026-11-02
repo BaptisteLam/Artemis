@@ -1,0 +1,23 @@
+{
+  "subscriptions": {
+    "title": "Predplatné",
+    "lead": "Predplatné, ktoré uzavreli vaši agenti: karta viazaná na obchodníka, mesačný limit, zisťovanie nevyužívaných predplatných.",
+    "confirmCancel": "Zrušiť toto predplatné? Karta bude v banke zrušená.",
+    "planRequired": "Predplatné spravované agentmi je súčasťou plánov od Team.",
+    "seePlans": "Pozrieť plány →",
+    "dormantAlert_one": "{count} predplatné bez platby viac ako {days} dní: zvážte jeho zrušenie.",
+    "dormantAlert_few": "{count} predplatné bez platby viac ako {days} dní: zvážte ich zrušenie.",
+    "dormantAlert_many": "{count} predplatného bez platby viac ako {days} dní: zvážte ich zrušenie.",
+    "dormantAlert_other": "{count} predplatných bez platby viac ako {days} dní: zvážte ich zrušenie.",
+    "emptyTitle": "Žiadne predplatné",
+    "emptyText": "Agent vytvorí predplatné cez request_card s voľbou opakovanej platby.",
+    "colMerchant": "Obchodník",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Mesačný limit",
+    "colPaid": "Zaplatené",
+    "colLastPayment": "Posledná platba",
+    "colStatus": "Stav",
+    "dormant": "Nevyužívané",
+    "cancel": "Zrušiť"
+  }
+}

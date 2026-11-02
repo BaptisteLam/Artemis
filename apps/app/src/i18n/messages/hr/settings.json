@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Postavke",
+    "signOut": "Odjava",
+    "language": {
+      "title": "Jezik",
+      "lead": "Jezik sučelja na ovom uređaju."
+    },
+    "notifications": {
+      "title": "Obavijesti na ovom uređaju",
+      "lead": "Primajte obavijest za svaki zahtjev. Na iPhoneu najprije dodajte Artemis na početni zaslon (Dijeli → Dodaj na početni zaslon).",
+      "notConfigured": "Push obavijesti nisu konfigurirane na ovom poslužitelju (VAPID ključevi). E-poruke ostaju aktivne.",
+      "unsupported": "Ovaj preglednik ne podržava push obavijesti.",
+      "denied": "Obavijesti su blokirane u postavkama preglednika.",
+      "enable": "Uključi obavijesti",
+      "on": "Obavijesti su uključene.",
+      "disable": "Isključi"
+    },
+    "slack": {
+      "lead": "Svaki zahtjev na čekanju objavljuje se u Slack kanalu, s gumbom koji otvara odobravanje pristupnim ključem. U Slacku izradite „Incoming Webhook” i zalijepite njegov URL.",
+      "connected": "Slack je povezan.",
+      "disconnect": "Odspoji",
+      "urlLabel": "URL Slack webhooka",
+      "connect": "Poveži",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Predaja kartice agentima",
+      "confirmDirect": "Izravna predaja: broj kartice jednom će proći kroz Artemis na putu do agenta. Time ulazite u opseg PCI DSS-a, a s Revolutom je potrebno pisano odobrenje. Nastaviti?",
+      "linkTitle": "Privremena poveznica (preporučeno)",
+      "linkText": "Agent dobiva jednokratnu poveznicu valjanu 10 minuta; karticu prikazuje banka izdavateljica (Stripe Issuing). Broj nikada ne prolazi kroz Artemis.",
+      "directTitle": "Izravna predaja (napredna opcija)",
+      "directText": "Broj se agentu prosljeđuje samo jednom, bez pohranjivanja. Obvezno za Revolut. Ulazite u opseg PCI DSS-a."
+    },
+    "org": {
+      "title": "Organizacija",
+      "name": "Naziv",
+      "rename": "Preimenuj"
+    },
+    "emergency": {
+      "title": "Hitni slučaj",
+      "lead": "„Zamrzni sve” suspendira sve agente i poništava aktivne kartice i zahtjeve na čekanju. Upotrijebite ga ako se agent ponaša neuobičajeno ili ako je token procurio.",
+      "confirmFreeze": "Zamrznuti cijelu organizaciju? Svi će agenti biti zamrznuti, a aktivne kartice poništene.",
+      "unfreeze": "Odmrzni organizaciju",
+      "freeze": "Zamrzni sve odmah",
+      "afterUnfreeze": "Nakon odmrzavanja ponovno aktivirajte svakog agenta na njegovoj stranici."
+    },
+    "passkeys": {
+      "title": "Pristupni ključevi",
+      "devicePrompt": "Naziv uređaja (npr. Lein iPhone)",
+      "confirmDelete": "Izbrisati ovaj pristupni ključ?",
+      "add": "Dodaj",
+      "lead": "Za odobravanje troška potreban je pristupni ključ. Dodajte ga na svaki uređaj koji koristite.",
+      "addedOn": "dodano {date}",
+      "delete": "Izbriši",
+      "none": "Nema pristupnog ključa: još ne možete odobravati potrošnju."
+    }
+  }
+}

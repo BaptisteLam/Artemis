@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Plantilla: política de gasto de los agentes de IA",
+    "intro": "Una plantilla gratuita y adaptable para regular el gasto realizado por agentes de inteligencia artificial y documentar la supervisión humana exigida por el artículo 14 del Reglamento europeo de Inteligencia Artificial (AI Act). Imprima esta página o cópiela en su wiki.",
+    "scope": {
+      "title": "1. Objeto y ámbito de aplicación",
+      "body": "Esta política se aplica a todo agente de software (asistente conversacional, automatización, script) autorizado a realizar una compra en nombre de [EMPRESA]. Ningún agente utiliza la tarjeta de pago de la empresa ni la de un empleado: toda compra se realiza con una tarjeta virtual de un solo uso solicitada a través de Artemis."
+    },
+    "register": {
+      "title": "2. Registro de agentes",
+      "body": "Cada agente figura en el registro con: su nombre, su plataforma, la persona responsable, su finalidad, su presupuesto mensual, su límite por compra, sus comercios autorizados y, en su caso, el cliente para el que trabaja."
+    },
+    "rules": {
+      "title": "3. Reglas de gasto",
+      "i1": "Presupuesto mensual por agente: [IMPORTE] €; límite por compra: [IMPORTE] €.",
+      "i2": "Comercios autorizados: [LISTA]; categorías prohibidas: juegos de azar, transferencias de dinero, cuasiefectivo, valores.",
+      "i3": "Aprobación automática solo por debajo de [IMPORTE] € y con un comercio autorizado; por encima, la firma de una persona es obligatoria.",
+      "i4": "Por encima de [IMPORTE] €, se exigen dos firmantes distintos."
+    },
+    "oversight": {
+      "title": "4. Supervisión humana",
+      "body": "Las personas autorizadas a aprobar son: [NOMBRES / CARGOS]. La aprobación se otorga con llave de acceso sobre el contenido exacto del mandato (agente, importe, comercio, finalidad). Toda solicitud no aprobada caduca automáticamente."
+    },
+    "records": {
+      "title": "5. Justificantes y contabilidad",
+      "body": "Cada compra se asocia a su factura en un plazo de [N] horas; de lo contrario, el agente queda suspendido. El gasto se exporta cada mes (FEC o Pennylane) y se concilia con los extractos bancarios."
+    },
+    "incidents": {
+      "title": "6. Incidentes",
+      "body": "En caso de comportamiento anómalo, discrepancia de importe o de comercio, o sospecha de inyección de prompt, la persona responsable congela de inmediato el agente (o toda la organización) y registra el incidente."
+    },
+    "retention": {
+      "title": "7. Conservación y revisión",
+      "body": "El registro de auditoría encadenado se conserva durante [10] años. Cada trimestre se elabora un informe de supervisión, que revisa [CARGO]. Esta política se revisa cada año."
+    },
+    "note": "Artemis genera el registro de agentes y el informe trimestral de supervisión en el plan {plan}."
+  }
+}

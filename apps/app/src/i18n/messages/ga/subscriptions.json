@@ -1,0 +1,24 @@
+{
+  "subscriptions": {
+    "title": "Síntiúis",
+    "lead": "Síntiúis a thóg do ghníomhairí: cárta faoi ghlas don cheannaí, teorainn mhíosúil, brath síntiús díomhaoin.",
+    "confirmCancel": "An síntiús seo a chealú? Cealófar an cárta ag an mbanc.",
+    "planRequired": "Tá síntiúis arna mbainistiú ag gníomhairí san áireamh ón bplean Team.",
+    "seePlans": "Féach na pleananna →",
+    "dormantAlert_one": "{count} síntiús gan íocaíocht le breis agus {days} lá: smaoinigh ar é a chealú.",
+    "dormantAlert_two": "{count} shíntiús gan íocaíocht le breis agus {days} lá: smaoinigh ar iad a chealú.",
+    "dormantAlert_few": "{count} shíntiús gan íocaíocht le breis agus {days} lá: smaoinigh ar iad a chealú.",
+    "dormantAlert_many": "{count} síntiús gan íocaíocht le breis agus {days} lá: smaoinigh ar iad a chealú.",
+    "dormantAlert_other": "{count} síntiús gan íocaíocht le breis agus {days} lá: smaoinigh ar iad a chealú.",
+    "emptyTitle": "Gan síntiúis",
+    "emptyText": "Cruthaíonn gníomhaire síntiús le request_card agus an rogha athfhillteach.",
+    "colMerchant": "Ceannaí",
+    "colAgent": "Gníomhaire",
+    "colMonthlyLimit": "Teorainn mhíosúil",
+    "colPaid": "Íoctha",
+    "colLastPayment": "Íocaíocht dheireanach",
+    "colStatus": "Stádas",
+    "dormant": "Díomhaoin",
+    "cancel": "Cealaigh"
+  }
+}

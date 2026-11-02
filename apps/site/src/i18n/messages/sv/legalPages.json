@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Allmänna försäljnings- och användarvillkor",
+      "purposeTitle": "1. Syfte",
+      "purpose": "Dessa villkor reglerar åtkomsten till programvaran Artemis, som ges ut av {editor} ({status}, SIRET {siret}), och företagskunders tecknande av abonnemang på den. Tjänsten är förbehållen näringsidkare.",
+      "serviceTitle": "2. Beskrivning av tjänsten",
+      "service": "Artemis gör det möjligt för en kund att fastställa utgiftsregler för sina programvaruagenter, att godkänna deras betalningsbegäranden och att, via de programmeringsgränssnitt som kundens egen bank tillhandahåller, styra skapandet av virtuella engångskort. Artemis tillhandahåller inga betaltjänster, förvarar inga medel och utfärdar inga kort. Bankförbindelsen, bankavgifterna och den starka autentiseringen regleras uteslutande av avtalet mellan kunden och dess bank.",
+      "accountTitle": "3. Konto och säkerhet",
+      "account": "Kunden ansvarar för sekretessen kring agenternas tokens, åtkomsten till sitt konto och sina användares lösennycklar, liksom för de regler kunden konfigurerar. Varje utgift som godkänts av en behörig användare eller som överensstämmer med en regel för automatiskt godkännande anses ha godkänts av kunden.",
+      "pricesTitle": "4. Planer och priser",
+      "prices": "Planer: Sandbox (gratis), Builder ({builder}/månad), Team ({team}/månad), Byråer ({agency}/månad + {perClient} per aktiv kund), Business (från {business}/månad). Utöver den månatliga kvoten i en betald plan debiteras varje ytterligare mandat med {overage}. Priserna anges exklusive skatt. {vat}. Månatlig betalning i förskott med kort via Stripe. Förnyelse sker automatiskt; uppsägning får verkan vid utgången av den pågående perioden, utan proportionell återbetalning.",
+      "quotasTitle": "5. Kvoter",
+      "quotas": "Varje plan omfattar kvoter (agenter, anslutna banker, begäranden per månad). Utöver dessa kvoter avvisas nya begäranden fram till följande period eller till dess att planen ändras.",
+      "availabilityTitle": "6. Tillgänglighet",
+      "availability": "Utgivaren vidtar skäliga åtgärder för att säkerställa tjänstens tillgänglighet, utan något resultatåtagande. Avbrott kan förekomma på grund av underhåll eller till följd av tekniska leverantörer och bankleverantörer.",
+      "liabilityTitle": "7. Ansvar",
+      "liability": "Utgivaren kan inte hållas ansvarig för köp som kundens agenter gör inom ramen för de lämnade behörigheterna, för valet av handlare, för kvaliteten på köpta varor eller tjänster eller för beslut som fattas av kundens bank. Utgivarens ansvar, oavsett grund, är begränsat till de belopp som kunden har betalat under de senaste tolv månaderna.",
+      "dataTitle": "8. Uppgifter",
+      "data": "Behandlingen av personuppgifter beskrivs i <a href=\"{href}\">integritetspolicyn</a>. Kunden kan när som helst exportera sina uppgifter.",
+      "lawTitle": "9. Tillämplig lag",
+      "law": "Fransk lag. Om ingen uppgörelse i godo nås är domstolarna med behörighet för utgivarens hemvist behöriga."
+    },
+    "privacy": {
+      "title": "Integritetspolicy",
+      "controllerTitle": "Personuppgiftsansvarig",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Uppgifter som behandlas",
+      "dataAccount": "Konto: e-postadress, organisation, roll, lösennycklar (endast publika nycklar).",
+      "dataActivity": "Aktivitet: kortbegäranden, signerade mandat, transaktioner som rapporterats av banken, kvitton, granskningslogg.",
+      "dataBanks": "Bankanslutningar: krypterade åtkomsttokens (AES-256-GCM).",
+      "dataBilling": "Fakturering: hanteras av Stripe; Artemis ser inte numren på de kort du använder för att betala ditt abonnemang.",
+      "dataWaitlist": "Väntelista: e-postadress, företag, användningsfall.",
+      "cardNumbers": "Artemis lagrar aldrig det fullständiga numret eller säkerhetskoden för de kort som utfärdas för dina agenter.",
+      "purposesTitle": "Ändamål och rättslig grund",
+      "purposes": "Fullgörande av avtal (tillhandahållande av tjänsten), rättsliga förpliktelser (bokföring), berättigat intresse (säkerhet, förebyggande av bedrägerier), samtycke (väntelista).",
+      "processorsTitle": "Personuppgiftsbiträden",
+      "processors": "Supabase (databas, Europeiska unionen), Cloudflare (hosting och nätverk), Stripe (fakturering), Resend (transaktionella e-postmeddelanden). Standardavtalsklausuler reglerar eventuella överföringar utanför EU.",
+      "retentionTitle": "Lagringstider",
+      "retention": "Kontouppgifter: avtalets löptid, därefter 3 år. Granskningslogg och bokföringsuppgifter: 10 år. Väntelista: 3 år utan interaktion.",
+      "rightsTitle": "Dina rättigheter",
+      "rights": "Tillgång, rättelse, radering, dataportabilitet, invändning och begränsning: skriv till {email}. Du kan lämna in ett klagomål till CNIL (cnil.fr).",
+      "cookiesTitle": "Cookies",
+      "cookies": "Webbplatsen använder inga reklamcookies och inga analysverktyg från tredje part. Applikationen använder endast den lagring som är nödvändig för din session."
+    },
+    "notice": {
+      "title": "Rättslig information",
+      "editorTitle": "Utgivare",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Adress: {address}",
+      "contact": "Kontakt: {email}",
+      "directorTitle": "Ansvarig utgivare",
+      "hostingTitle": "Hosting",
+      "natureTitle": "Tjänstens art",
+      "nature": "Artemis är en programvara för att styra utgifterna för agenter baserade på artificiell intelligens. Artemis är varken ett betalningsinstitut eller ett institut för elektroniska pengar: det tar inte emot, förvarar eller överför några medel. Betalkorten utfärdas av kundens bankinstitut, under dess ansvar.",
+      "ipTitle": "Immateriella rättigheter",
+      "ip": "Innehållet, varumärkena och logotyperna på denna webbplats tillhör utgivaren. All återgivning utan tillstånd är förbjuden."
+    }
+  }
+}

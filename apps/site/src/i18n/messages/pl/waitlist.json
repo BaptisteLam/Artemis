@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Lista oczekujących",
+    "description": "Otrzymaj powiadomienie, gdy udostępnimy połączenia z prawdziwymi bankami.",
+    "headline": "Bądź wśród pierwszych.",
+    "lead": "Konektory Qonto i Revolut są udostępniane stopniowo. Zostaw nam swój adres e-mail, a damy Ci znać, gdy tylko Twój bank będzie dostępny.",
+    "email": "Służbowy adres e-mail",
+    "company": "Firma",
+    "useCase": "Za co muszą płacić Twoi agenci?",
+    "useCasePlaceholder": "API, SaaS, chmura, dane…",
+    "submit": "Dołącz do listy oczekujących",
+    "sending": "Wysyłanie…",
+    "ok": "Dziękujemy, jesteś na liście. Napiszemy do Ciebie, gdy tylko ruszymy.",
+    "error": "Zapis nie powiódł się. Spróbuj ponownie za chwilę."
+  }
+}

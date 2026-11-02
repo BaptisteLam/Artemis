@@ -1,0 +1,22 @@
+{
+  "subscriptions": {
+    "title": "Pretplate",
+    "lead": "Pretplate koje su ugovorili vaši agenti: kartica vezana uz trgovca, mjesečni limit, otkrivanje neaktivnih pretplata.",
+    "confirmCancel": "Otkazati ovu pretplatu? Kartica će biti poništena u banci.",
+    "planRequired": "Pretplate kojima upravljaju agenti uključene su od paketa Team.",
+    "seePlans": "Pogledajte pakete →",
+    "dormantAlert_one": "{count} pretplata bez plaćanja dulje od {days} dana: razmislite o njezinu otkazivanju.",
+    "dormantAlert_few": "{count} pretplate bez plaćanja dulje od {days} dana: razmislite o njihovu otkazivanju.",
+    "dormantAlert_other": "{count} pretplata bez plaćanja dulje od {days} dana: razmislite o njihovu otkazivanju.",
+    "emptyTitle": "Nema pretplata",
+    "emptyText": "Agent izrađuje pretplatu pomoću request_card i opcije ponavljanja.",
+    "colMerchant": "Trgovac",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Mjesečni limit",
+    "colPaid": "Plaćeno",
+    "colLastPayment": "Posljednje plaćanje",
+    "colStatus": "Status",
+    "dormant": "Neaktivna",
+    "cancel": "Otkaži"
+  }
+}

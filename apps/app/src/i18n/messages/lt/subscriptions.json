@@ -1,0 +1,23 @@
+{
+  "subscriptions": {
+    "title": "Prenumeratos",
+    "lead": "Jūsų agentų užsakytos prenumeratos: kortelė susieta su prekybininku, mėnesio limitas, neaktyvių prenumeratų aptikimas.",
+    "confirmCancel": "Atšaukti šią prenumeratą? Kortelė bus atšaukta banke.",
+    "planRequired": "Agentų valdomos prenumeratos įtrauktos nuo plano Team.",
+    "seePlans": "Peržiūrėti planus →",
+    "dormantAlert_one": "{count} prenumerata be mokėjimų ilgiau nei {days} d.: apsvarstykite galimybę ją atšaukti.",
+    "dormantAlert_few": "{count} prenumeratos be mokėjimų ilgiau nei {days} d.: apsvarstykite galimybę jas atšaukti.",
+    "dormantAlert_many": "{count} prenumeratos be mokėjimų ilgiau nei {days} d.: apsvarstykite galimybę jas atšaukti.",
+    "dormantAlert_other": "{count} prenumeratų be mokėjimų ilgiau nei {days} d.: apsvarstykite galimybę jas atšaukti.",
+    "emptyTitle": "Prenumeratų nėra",
+    "emptyText": "Agentas sukuria prenumeratą naudodamas request_card su pasikartojančio mokėjimo parinktimi.",
+    "colMerchant": "Prekybininkas",
+    "colAgent": "Agentas",
+    "colMonthlyLimit": "Mėnesio limitas",
+    "colPaid": "Sumokėta",
+    "colLastPayment": "Paskutinis mokėjimas",
+    "colStatus": "Būsena",
+    "dormant": "Neaktyvi",
+    "cancel": "Atšaukti"
+  }
+}

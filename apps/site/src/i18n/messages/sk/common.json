@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Vaši agenti platia. Posledné slovo máte vy.",
+    "description": "Európsky finančný firewall pre vašich agentov AI: kontrola, ušetrený čas a dôkaz pre AI Act pri každom nákupe, v banke podľa vášho výberu."
+  },
+  "layout": {
+    "skip": "Preskočiť na obsah"
+  },
+  "nav": {
+    "aria": "Hlavná navigácia",
+    "home": "Artemis, domov",
+    "howItWorks": "Ako to funguje",
+    "agencies": "Agentúry",
+    "pricing": "Cenník",
+    "docs": "Dokumentácia",
+    "security": "Bezpečnosť",
+    "login": "Prihlásiť sa",
+    "cta": "Vyskúšať"
+  },
+  "lang": {
+    "choose": "Vyberte jazyk"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agentúry",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT a n8n sú ochranné známky ich príslušných vlastníkov. Artemis nie je prepojený so žiadnym z nich.",
+    "product": "Produkt",
+    "policyTemplate": "Vzor politiky",
+    "waitlist": "Čakací zoznam",
+    "restApi": "REST API",
+    "legal": "Právne informácie",
+    "legalNotice": "Právne upozornenie",
+    "terms": "Obchodné podmienky",
+    "privacy": "Ochrana súkromia"
+  },
+  "legal": {
+    "eyebrow": "Právne informácie",
+    "updated": "Posledná aktualizácia: 1. novembra 2026.",
+    "frenchPrevails": "Táto stránka je preklad poskytnutý pre vaše pohodlie. Právne záväzná je iba <a href=\"{href}\">francúzska verzia</a>.",
+    "vat": "DPH sa neuplatňuje, čl. 293 B francúzskeho všeobecného daňového zákonníka (CGI)",
+    "status": "Fyzická osoba – podnikateľ (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (stránky a API); Supabase, Inc. — dáta hostované v Európskej únii (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentácia",
+    "start": "Začíname",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI a skill pre Claude",
+    "api": "REST API",
+    "rules": "Pravidlá a schvaľovanie"
+  },
+  "notFound": {
+    "title": "Stránka sa nenašla",
+    "eyebrow": "Chyba 404",
+    "headline": "Táto stránka neexistuje.",
+    "lead": "Odkaz je možno zastaraný. Vráťte sa na domovskú stránku alebo si prezrite dokumentáciu.",
+    "home": "Domov"
+  }
+}

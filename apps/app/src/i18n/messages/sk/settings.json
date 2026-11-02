@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Nastavenia",
+    "signOut": "Odhlásiť sa",
+    "language": {
+      "title": "Jazyk",
+      "lead": "Jazyk rozhrania v tomto zariadení."
+    },
+    "notifications": {
+      "title": "Upozornenia v tomto zariadení",
+      "lead": "Dostávajte upozornenie pri každej žiadosti. Na iPhone najprv pridajte Artemis na plochu (Zdieľať → Pridať na plochu).",
+      "notConfigured": "Push upozornenia nie sú na tomto serveri nakonfigurované (kľúče VAPID). E-maily zostávajú aktívne.",
+      "unsupported": "Tento prehliadač nepodporuje push upozornenia.",
+      "denied": "Upozornenia sú zablokované v nastaveniach prehliadača.",
+      "enable": "Zapnúť upozornenia",
+      "on": "Upozornenia sú zapnuté.",
+      "disable": "Vypnúť"
+    },
+    "slack": {
+      "lead": "Každá čakajúca žiadosť sa zverejní v kanáli Slack s tlačidlom, ktoré otvorí schválenie prístupovým kľúčom. V Slacku vytvorte „Incoming Webhook“ a vložte jeho URL.",
+      "connected": "Slack je pripojený.",
+      "disconnect": "Odpojiť",
+      "urlLabel": "URL webhooku Slack",
+      "connect": "Pripojiť",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Odovzdanie karty agentom",
+      "confirmDirect": "Priame odovzdanie: číslo karty raz prejde cez Artemis na ceste k agentovi. Tým sa dostávate do rozsahu PCI DSS a pri Revolute je potrebný písomný súhlas. Pokračovať?",
+      "linkTitle": "Dočasný odkaz (odporúčané)",
+      "linkText": "Agent dostane jednorazový odkaz platný 10 minút; kartu zobrazí vydávajúca banka (Stripe Issuing). Číslo nikdy neprechádza cez Artemis.",
+      "directTitle": "Priame odovzdanie (pokročilá možnosť)",
+      "directText": "Číslo sa agentovi prepošle iba raz a neukladá sa. Vyžaduje sa pre Revolut. Dostávate sa do rozsahu PCI DSS."
+    },
+    "org": {
+      "title": "Organizácia",
+      "name": "Názov",
+      "rename": "Premenovať"
+    },
+    "emergency": {
+      "title": "Núdzový režim",
+      "lead": "„Zmraziť všetko“ pozastaví všetkých agentov a zruší aktívne karty a čakajúce žiadosti. Použite to, ak sa agent správa neobvykle alebo ak unikol token.",
+      "confirmFreeze": "Zmraziť celú organizáciu? Všetci agenti budú zmrazení a aktívne karty zrušené.",
+      "unfreeze": "Rozmraziť organizáciu",
+      "freeze": "Zmraziť všetko teraz",
+      "afterUnfreeze": "Po rozmrazení znova aktivujte každého agenta na jeho stránke."
+    },
+    "passkeys": {
+      "title": "Prístupové kľúče",
+      "devicePrompt": "Názov zariadenia (napr. iPhone Ley)",
+      "confirmDelete": "Odstrániť tento prístupový kľúč?",
+      "add": "Pridať",
+      "lead": "Na schválenie výdavku je potrebný prístupový kľúč. Pridajte si ho do každého zariadenia, ktoré používate.",
+      "addedOn": "pridaný {date}",
+      "delete": "Odstrániť",
+      "none": "Žiadny prístupový kľúč: zatiaľ nemôžete schvaľovať výdavky."
+    }
+  }
+}

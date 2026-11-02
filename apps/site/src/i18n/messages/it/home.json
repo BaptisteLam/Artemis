@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "La soluzione europea · Agenti IA",
+      "lead": "Il firewall finanziario europeo per i suoi agenti IA. Claude, ChatGPT o n8n chiedono, lei firma con un solo tocco e ogni spesa è controllata, riconciliata e documentata, con la banca che preferisce.",
+      "tryFree": "Provi gratis →",
+      "seeDemo": "Guardi la demo",
+      "visualAria": "Esempio: la richiesta di un agente e la sua carta monouso",
+      "expired": "Scaduta",
+      "pending": "Richiesta in attesa",
+      "toApprove": "In attesa di approvazione",
+      "purpose": "abbonamento del team",
+      "approve": "Approva con la mia passkey",
+      "decline": "Rifiuta"
+    },
+    "trust": {
+      "aria": "Garanzie",
+      "europe": "Europeo",
+      "europeText": "Euro, banche europee, dati a Francoforte, GDPR.",
+      "funds": "I suoi fondi restano suoi",
+      "fundsText": "Artemis non detiene mai denaro.",
+      "number": "Numero della carta fuori da Artemis",
+      "numberText": "La carta viene mostrata dalla sua banca, non da noi.",
+      "aiAct": "Pronto per l'AI Act",
+      "aiActText": "Ogni spesa firmata, un registro concatenato, un report trimestrale."
+    },
+    "demo": {
+      "eyebrow": "Demo",
+      "title": "Dalla richiesta al pagamento in 20 secondi.",
+      "explain": "Senza mai condividere la carta aziendale.",
+      "step1": "L'agente chiede",
+      "window": "claude · conversazione",
+      "userMessage": "Abbona il team a Notion Plus, 5 postazioni.",
+      "agentMessage": "Ho richiesto una carta da {amount}. Attendo la tua approvazione.",
+      "step2": "Lei approva",
+      "notification": "{agent} vuole spendere {amount}",
+      "sheetTitle": "Approvare il mandato",
+      "validity": "{minutes} min",
+      "faceId": "Firma con Face ID",
+      "step3": "L'agente paga",
+      "reconciled": "Riconciliato"
+    },
+    "benefits": {
+      "eyebrow": "Che cosa acquista",
+      "title": "Non una carta.",
+      "explain": "Le banche cominciano a regalarle. Lei acquista controllo, tempo e prove.",
+      "control": {
+        "eyebrow": "Controllo",
+        "title": "Nulla viene speso senza la sua approvazione.",
+        "text": "Budget, limiti, esercenti consentiti, barriere di sicurezza contro la prompt injection. Oltre le sue soglie, ogni spesa attende la firma con passkey di uno o più approvatori."
+      },
+      "time": {
+        "eyebrow": "Tempo risparmiato",
+        "title": "Basta carte create a mano.",
+        "text": "L'agente chiede, lei firma con un solo tocco, la carta viene creata nella sua banca, la transazione viene riconciliata e la fattura archiviata. Niente più estratti conto da spuntare né giustificativi da rincorrere."
+      },
+      "proof": {
+        "eyebrow": "Prova",
+        "title": "Una persona ha approvato ogni spesa.",
+        "text": "Mandati firmati, un registro di audit concatenato e inalterabile e un report trimestrale di supervisione: ciò che chiedono l'AI Act, il suo CFO e il suo revisore, pronto da consegnare."
+      },
+      "agencies": {
+        "eyebrow": "Per le agenzie",
+        "title": "Un budget e una fattura per cliente.",
+        "text": "Spazi di lavoro per cliente, un budget mensile per cliente, un ricarico per la rifatturazione e un report mensile pronto da inviare. I suoi clienti vedono finalmente quanto spendono i loro agenti."
+      }
+    },
+    "how": {
+      "eyebrow": "Come funziona",
+      "title": "Quattro passaggi, nessuna carta condivisa.",
+      "s1": "L'agente chiede",
+      "s1Text": "Tramite MCP o API: «{amount} da Notion, abbonamento del team».",
+      "s2": "Le regole filtrano",
+      "s2Text": "Budget, limite, esercente: fuori dalle regole, la richiesta viene rifiutata all'istante.",
+      "s3": "Lei approva",
+      "s3Text": "Una notifica sul telefono, una firma con passkey.",
+      "s4": "L'agente paga",
+      "s4Text": "Una carta monouso, l'importo esatto, una scadenza breve, poi la riconciliazione automatica."
+    },
+    "useCases": {
+      "eyebrow": "Casi d'uso",
+      "title": "Ciò che i suoi agenti acquistano già.",
+      "explain": "Ora con una carta tutta loro.",
+      "api": {
+        "title": "API e token",
+        "text": "Ricaricare crediti quando la quota si esaurisce, senza lasciare la carta aziendale in un file .env."
+      },
+      "saas": {
+        "title": "Abbonamenti SaaS",
+        "text": "Sottoscrivere o estendere un piano per il team, per l'importo esatto approvato."
+      },
+      "cloud": {
+        "title": "Cloud e domini",
+        "text": "Acquistare un nome di dominio o pagare un'eccedenza di hosting nel bel mezzo di un deployment."
+      },
+      "data": {
+        "title": "Dati e acquisti B2B",
+        "text": "Pagare un dataset, un job di scraping o forniture, con il giustificativo allegato automaticamente.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Siamo onesti",
+      "title": "Usa solo Stripe, Ramp o Mercury?",
+      "explain": "Svolgono già una parte del lavoro.",
+      "lead": "Artemis offre ciò che una banca non farà per i suoi concorrenti.",
+      "banks": "Più banche contemporaneamente",
+      "banksText": "Stripe Issuing, Revolut, Qonto e la Sandbox, gestite da un unico punto con un'unica policy.",
+      "accounting": "Contabilità francese",
+      "accountingText": "Export FEC e Pennylane, un giustificativo allegato a ogni mandato, riconciliazione automatica.",
+      "proof": "Prove per l'AI Act, pronte da consegnare",
+      "proofText": "La firma di una persona per ogni spesa, un registro concatenato, un registro degli agenti, un report trimestrale.",
+      "agency": "Una modalità agenzia",
+      "agencyText": "Agenti per più clienti, ciascuno con il proprio budget, margine e report."
+    },
+    "europe": {
+      "eyebrow": "La soluzione europea",
+      "title": "Costruito in Europa, per l'Europa.",
+      "lead": "Le carte per agenti americane parlano di dollari, banche americane e diritto americano. Artemis parla di euro, banche europee, GDPR, AI Act e contabilità francese.",
+      "banks": "Euro e banche europee: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "UE",
+      "data": "Dati ospitati a Francoforte, GDPR, credenziali cifrate",
+      "article": "Art. 14",
+      "oversight": "Supervisione umana dell'AI Act, dimostrata spesa per spesa",
+      "accounting": "Contabilità francese: FEC, Pennylane, giustificativi allegati"
+    },
+    "compare": {
+      "eyebrow": "Confronto",
+      "title": "La sua banca emette la carta.",
+      "explain": "Artemis le governa tutte dall'alto.",
+      "criterion": "Criterio",
+      "bankOnly": "Solo la sua banca (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Solo la sua banca",
+      "usCards": "Carte per agenti americane",
+      "usCardsShort": "Carte per agenti USA",
+      "rows": {
+        "card": "Carta virtuale per l'agente",
+        "banks": "Più banche, un'unica policy",
+        "signature": "Firma di una persona per ogni spesa (passkey)",
+        "aiAct": "Prova AI Act esportabile",
+        "accounting": "Contabilità francese (FEC, Pennylane)",
+        "agency": "Modalità agenzia (budget e rifatturazione per cliente)",
+        "europe": "Euro, hosting e dati in Europa"
+      },
+      "values": {
+        "yes": "Sì",
+        "no": "No",
+        "yesBank": "Sì, emessa dalla sua banca",
+        "yesQuorum": "Sì, con quorum",
+        "dependsPlan": "Dipende dal piano",
+        "dependsBank": "Dipende dalla banca",
+        "partial": "Parziale"
+      }
+    },
+    "builders": {
+      "eyebrow": "Per chi sviluppa",
+      "title": "Si collega con una riga.",
+      "explain": "Claude, ChatGPT, n8n, Make o il suo codice.",
+      "lead": "Un server MCP remoto e un'API REST. Una Sandbox gratuita con carte simulate per fare test senza banca.",
+      "connect": "Collegare Claude →",
+      "window": "terminale"
+    },
+    "faq": {
+      "eyebrow": "Domande frequenti",
+      "title": "Che cosa ci chiedono.",
+      "more": "Un'altra domanda? Consulti la pagina <a href=\"{security}\">Sicurezza</a> o la <a href=\"{docs}\">documentazione</a>."
+    },
+    "final": {
+      "title": "Mantenga il controllo dei suoi agenti.",
+      "lead": "Il firewall finanziario europeo, gratuito in Sandbox, senza carta di credito. L'ultima parola resta sua.",
+      "signup": "Crei un account →",
+      "pricing": "Vedi i prezzi",
+      "holder": "il.suo.agente"
+    }
+  }
+}

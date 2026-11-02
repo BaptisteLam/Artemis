@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Jūsu aģenti maksā. Pēdējais vārds paliek jums.",
+    "unknownAgent": "Aģents",
+    "unknownMerchant": "tirgotājs",
+    "requestPending": {
+      "title": "{agent} vēlas iztērēt {amount}",
+      "subject": "Jāapstiprina: {amount} pie tirgotāja {merchant}",
+      "merchant": "Tirgotājs: {merchant}",
+      "purpose": "Mērķis: {purpose}",
+      "expires": "Ja atbilde netiek sniegta, pieprasījuma derīgums beidzas automātiski.",
+      "cta": "Pārskatīt un apstiprināt →",
+      "slack": "*{title}* pie tirgotāja *{merchant}*",
+      "slackCta": "Pārskatīt un parakstīt ar savu piekļuves atslēgu"
+    },
+    "cardIssueFailed": {
+      "subject": "Neizdevās izveidot karti pie tirgotāja {merchant}",
+      "title": "Banka neizveidoja karti",
+      "fallback": "Bankas kļūda.",
+      "cta": "Skatīt pieprasījumu →"
+    },
+    "mismatch": {
+      "subject": "Konstatēta neatbilstība: {amount} pie tirgotāja {merchant}",
+      "title": "Darījums neatbilst pilnvarai",
+      "check": "Pārbaudiet darījumu un, ja nepieciešams, iesaldējiet aģentu.",
+      "cta": "Skatīt darījumus →",
+      "pushTitle": "Darījuma neatbilstība"
+    },
+    "invitation": {
+      "subject": "Uzaicinājums pievienoties {org} platformā Artemis",
+      "title": "Pievienojieties {org}",
+      "body": "Jūs esat uzaicināts apstiprināt un uzraudzīt savas komandas MI aģentu izdevumus.",
+      "cta": "Pieņemt uzaicinājumu →"
+    }
+  }
+}

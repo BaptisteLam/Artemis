@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · plāns {plan}",
+    "title": "Pārskats",
+    "stats": {
+      "spent": "Iztērēts šomēnes",
+      "pending": "Jāapstiprina",
+      "openQueue": "Atvērt rindu →",
+      "requests": "Pieprasījumi šomēnes"
+    },
+    "recent": {
+      "title": "Jaunākie pieprasījumi",
+      "viewAll": "Skatīt visus →",
+      "empty": "Šomēnes pieprasījumu nav. Pievienojiet aģentu lapā {agents}.",
+      "agentsLink": "Aģenti"
+    },
+    "byAgent": {
+      "title": "Pa aģentiem",
+      "manage": "Pārvaldīt →",
+      "empty": "Nav aģentu."
+    }
+  }
+}

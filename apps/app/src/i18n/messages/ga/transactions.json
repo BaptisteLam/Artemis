@@ -1,0 +1,18 @@
+{
+  "transactions": {
+    "title": "Idirbhearta",
+    "lead": "Oibríochtaí a thuairiscigh do bhainc agus a meaitseáladh le sainorduithe (na 90 lá deireanacha).",
+    "mismatches_one": "Ní mheaitseálann {count} idirbheart lena shainordú. Déan athbhreithniú air agus reoigh an gníomhaire más gá.",
+    "mismatches_two": "Ní mheaitseálann {count} idirbheart lena sainorduithe. Déan athbhreithniú orthu agus reoigh an gníomhaire más gá.",
+    "mismatches_few": "Ní mheaitseálann {count} idirbheart lena sainorduithe. Déan athbhreithniú orthu agus reoigh an gníomhaire más gá.",
+    "mismatches_many": "Ní mheaitseálann {count} n-idirbheart lena sainorduithe. Déan athbhreithniú orthu agus reoigh an gníomhaire más gá.",
+    "mismatches_other": "Ní mheaitseálann {count} idirbheart lena sainorduithe. Déan athbhreithniú orthu agus reoigh an gníomhaire más gá.",
+    "emptyTitle": "Gan idirbhearta",
+    "emptyText": "Taispeántar iad cúpla nóiméad tar éis gach íocaíochta.",
+    "colDate": "Dáta",
+    "colMerchant": "Ceannaí",
+    "colAmount": "Méid",
+    "colBankStatus": "Stádas bainc",
+    "colMatch": "Meaitseáil"
+  }
+}

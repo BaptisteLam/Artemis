@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Klientai",
+    "lead": "Kiekvienam klientui – atskira darbo erdvė: jo agentai, jo mėnesio biudžetas, jūsų antkainis ir pakartotinio sąskaitų išrašymo ataskaita, paruošta išsiųsti.",
+    "invalidBudget": "Netinkamas biudžetas (pvz., 500 arba 49.90).",
+    "upsell": "Klientų darbo erdvės įtrauktos į planą Agentūroms ({price} + {perClient} už kiekvieną aktyvų klientą).",
+    "seePlans": "Peržiūrėti planus →",
+    "empty": "Klientų nėra",
+    "emptyHint": "Sukurkite klientą, tada priskirkite jam agentus.",
+    "cols": {
+      "client": "Klientas",
+      "agents": "Agentai",
+      "spent": "Įsipareigota šį mėnesį",
+      "budget": "Biudžetas",
+      "markup": "Antkainis"
+    },
+    "archived": "archyvuotas",
+    "percent": "{value} %",
+    "report": "Ataskaita →",
+    "new": "Naujas klientas",
+    "fields": {
+      "name": "Pavadinimas",
+      "billingEmail": "El. paštas sąskaitoms",
+      "markup": "Pakartotinio sąskaitų išrašymo antkainis (%)",
+      "budget": "Mėnesio biudžetas (€)",
+      "budgetHint": "Tuščia = be kliento limito"
+    },
+    "create": "Sukurti klientą",
+    "exportFailed": "Eksportuoti nepavyko.",
+    "eyebrow": "Klientas",
+    "month": "Mėnuo",
+    "exportCsv": "Eksportuoti CSV",
+    "monthPurchases": "Pirkimai šį mėnesį",
+    "markupPct": "Antkainis {value}",
+    "toRebill": "Išrašyti klientui",
+    "noPurchases": "Šį mėnesį pirkimų nėra",
+    "lines": {
+      "date": "Data",
+      "agent": "Agentas",
+      "merchant": "Prekybininkas",
+      "purpose": "Tikslas",
+      "amount": "Suma",
+      "receipt": "Kvitas"
+    },
+    "yes": "Taip",
+    "missing": "Trūksta",
+    "archive": "Archyvuoti klientą",
+    "reactivate": "Aktyvinti iš naujo",
+    "all": "← Visi klientai"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "admin": {
+    "eyebrow": "Backoffice",
+    "title": "Artemis in Zahlen",
+    "mrr": "MRR",
+    "paying": "Zahlende Kunden",
+    "ofOrgs_one": "von {count} Organisation",
+    "ofOrgs_other": "von {count} Organisationen",
+    "signups7d": "Registrierungen (7 Tage)",
+    "requests30d": "Anfragen (30 Tage)",
+    "orgs": "Organisationen",
+    "cols": {
+      "name": "Name",
+      "plan": "Tarif",
+      "subscription": "Abonnement",
+      "created": "Erstellt"
+    },
+    "waitlist": "Warteliste ({total})"
+  }
+}

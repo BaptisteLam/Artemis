@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Vaši agenti plaćaju. Zadnja riječ ostaje vama.",
+    "description": "Europski financijski vatrozid za vaše AI agente: kontrola, ušteda vremena i dokaz za AI Act za svaku kupnju, u banci po vašem izboru."
+  },
+  "layout": {
+    "skip": "Prijeđi na sadržaj"
+  },
+  "nav": {
+    "aria": "Glavna navigacija",
+    "home": "Artemis, početna",
+    "howItWorks": "Kako radi",
+    "agencies": "Agencije",
+    "pricing": "Cijene",
+    "docs": "Dokumentacija",
+    "security": "Sigurnost",
+    "login": "Prijava",
+    "cta": "Isprobajte"
+  },
+  "lang": {
+    "choose": "Odaberite jezik"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agencije",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT i n8n žigovi su svojih vlasnika. Artemis nije povezan ni s jednim od njih.",
+    "product": "Proizvod",
+    "policyTemplate": "Predložak politike",
+    "waitlist": "Lista čekanja",
+    "restApi": "REST API",
+    "legal": "Pravne informacije",
+    "legalNotice": "Impresum",
+    "terms": "Uvjeti prodaje",
+    "privacy": "Privatnost"
+  },
+  "legal": {
+    "eyebrow": "Pravne informacije",
+    "updated": "Posljednje ažuriranje: 1. studenoga 2026.",
+    "frenchPrevails": "Ova je stranica prijevod koji se daje radi lakšeg snalaženja. Pravno je obvezujuća samo <a href=\"{href}\">francuska verzija</a>.",
+    "vat": "PDV se ne obračunava, čl. 293 B francuskog Općeg poreznog zakonika (CGI)",
+    "status": "Samostalni poduzetnik (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, SAD (stranice i API); Supabase, Inc. — podaci smješteni u Europskoj uniji (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentacija",
+    "start": "Prvi koraci",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI i Claude skill",
+    "api": "REST API",
+    "rules": "Pravila i odobravanje"
+  },
+  "notFound": {
+    "title": "Stranica nije pronađena",
+    "eyebrow": "Pogreška 404",
+    "headline": "Ova stranica ne postoji.",
+    "lead": "Poveznica je možda zastarjela. Vratite se na početnu stranicu ili pregledajte dokumentaciju.",
+    "home": "Početna"
+  }
+}

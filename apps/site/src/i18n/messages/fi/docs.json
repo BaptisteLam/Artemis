@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Artemisin käytön aloitus",
+      "lead": "Rekisteröitymisestä agenttisi ensimmäiseen maksuun Sandboxissa viidessä minuutissa.",
+      "step1": {
+        "title": "1. Luo tili",
+        "body": "Rekisteröidy <a href=\"{href}\">sovelluksessa</a> sähköpostiosoitteellasi (taikalinkki), luo organisaatiosi ja rekisteröi pääsyavain: sillä hyväksyt kulut."
+      },
+      "step2": {
+        "title": "2. Luo agentti",
+        "body": "Luo kohdassa <strong>Agentit</strong> esimerkiksi <code>notion.agent</code>. Artemis näyttää sen tokenin (<code>art_test_…</code> Sandboxissa, <code>art_live_…</code> oikean pankin kanssa) <strong>vain kerran</strong>: kopioi se."
+      },
+      "step3": {
+        "title": "3. Yhdistä agentti",
+        "fastest": "Nopein tapa: <code>npx artemis-agents init</code> (katso <a href=\"{cli}\">CLI</a>).",
+        "server": "MCP-palvelimen osoite on <code>{url}</code>, ja otsake on <code>Authorization: Bearer &lt;token&gt;</code>. Seuraa työkalusi ohjetta: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> tai <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. Ostoprosessi",
+        "tool": "Työkalu",
+        "role": "Tarkoitus",
+        "requestCard": "Pyytää korttia: summa <strong>sentteinä</strong>, valuutta, kauppias, tarkoitus.",
+        "getRequestStatus": "Seuraa ihmisen antamaa hyväksyntää.",
+        "getCardForCheckout": "Palauttaa <strong>lyhytikäisen linkin</strong> (10 min, kertakäyttöinen): kortin näyttää pankki, eikä se kulje Artemisin kautta.",
+        "listBudgets": "Kuukausibudjetti, käytetty, jäljellä, raja.",
+        "getSpendSummary": "Kulut kauppiaittain (päivä, viikko, kuukausi).",
+        "attachReceipt": "Liittää kuitin ostoon.",
+        "cancelCard": "Peruuttaa kortin, jos ostoa ei tehdäkään."
+      },
+      "step5": {
+        "title": "5. Siirry tuotantoon",
+        "body": "Valitse paketti kohdassa <strong>Laskutus</strong> ja liitä sitten pankkisi kohdassa <strong>Pankit</strong>. Pankkiin liitetyt agentit saavat oikeita kertakäyttöisiä kortteja."
+      }
+    },
+    "mcpClaude": {
+      "title": "Yhdistä Claude",
+      "lead": "Claude Code, Claude Desktop ja Clauden liittimet käyttävät MCP:tä HTTP:n yli.",
+      "verify": "Tarkista komennolla <code>claude mcp list</code> ja pyydä sitten esimerkiksi: ”Tilaa meille Notion hintaan {price} Artemisin avulla”.",
+      "desktopBody": "Avaa <em>Settings → Developer → Edit Config</em> ja lisää:",
+      "instructionsTitle": "Hyödyllisiä ohjeita agentille",
+      "instructionsBody": "Lisää järjestelmäohjeisiisi:"
+    },
+    "mcpChatgpt": {
+      "title": "Yhdistä ChatGPT",
+      "lead": "ChatGPT hyväksyy etä-MCP-palvelimet mukautettuina liittiminä.",
+      "addTitle": "Lisää liitin",
+      "step1": "Avaa <em>Settings → Connectors → Advanced</em> ja ota kehittäjätila käyttöön, jos pakettisi sitä edellyttää.",
+      "step2": "Luo liitin, URL: <code>{url}</code>.",
+      "step3": "Todennus: <code>Authorization</code>-otsake arvolla <code>Bearer art_…</code> (ChatGPT-työtilasi tarjoamien vaihtoehtojen mukaan).",
+      "note": "Tarkat nimikkeet vaihtelevat ChatGPT-pakettien välillä; osoite ja otsake pysyvät samoina.",
+      "openaiTitle": "OpenAI-agentit (API)",
+      "openaiBody": "Määritä Responses API:ssa tai Agents SDK:ssa etä-MCP-työkalu, joka osoittaa osoitteeseen <code>{url}</code>, samalla otsakkeella."
+    },
+    "cli": {
+      "title": "CLI, Claude-taito ja n8n",
+      "lead": "Nollasta ensimmäiseen valtuutukseen kolmessa minuutissa.",
+      "commandTitle": "Yksi komento",
+      "commandBody": "Komento kysyy API:n URL-osoitteen ja agentin tokenin (luodaan sovelluksen Agentit-sivulla), tarkistaa yhteyden, tallentaa määritykset tiedostoon <code>~/.config/artemis/config.json</code>, lisää MCP-palvelimen Claude Codeen, jos se on asennettu, ja tulostaa määritykset Claude Desktopia ja n8n:ää varten. Sandbox-tokenilla ja valitsimella <code>--demo</code> se luo ensimmäisen testivaltuutuksen, jonka hyväksyt sovelluksessa.",
+      "skillTitle": "Claude-taito",
+      "skillBody": "Taito <code>artemis-payments</code> opettaa Clauden maksamaan Artemisin kautta: summa sentteinä, hyväksynnän odottaminen, maksulinkin avaaminen oikealla hetkellä, kuitti oston jälkeen ja injektioiden torjuminen. Kopioi kansio <code>integrations/claude-skill/artemis</code> repositoriosta kansioon <code>~/.claude/skills/</code>.",
+      "n8nTitle": "n8n-solmu",
+      "n8nBody": "Asenna yhteisösolmu <code>n8n-nodes-artemis</code> (Settings → Community nodes). Toiminnot: kortin pyytäminen, tila, maksulinkki, peruutus, budjetti. Tunnistetiedot: API:n URL-osoite ja agentin token."
+    },
+    "n8n": {
+      "title": "Yhdistä n8n",
+      "lead": "Kaksi vaihtoehtoa: MCP Client -solmu n8n:n tekoälyagentille tai HTTP-pyynnöt perinteiseen työnkulkuun.",
+      "agentTitle": "n8n:n tekoälyagentti (MCP Client)",
+      "agentBody": "Lisää <em>AI Agent</em> -solmuun <em>MCP Client</em> -työkalu: siirtotapa <em>HTTP Streamable</em>, URL <code>{url}</code>, todennus <em>Header Auth</em> otsakkeella <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "HTTP-työnkulku",
+      "workflowBody": "Tuo repositoriosta esimerkkityönkulku <code>examples/n8n/artemis-request-card.json</code>. Se ketjuttaa:",
+      "step1With": "kanssa",
+      "step2": "kyselysilmukan kohteeseen <code>GET /v1/card-requests/:id</code>, kunnes tila on <code>issued</code>;",
+      "step3": "kutsun <code>POST /v1/card-requests/:id/reveal</code>, jolla saadaan kortin lyhytikäinen linkki (10 minuuttia, kertakäyttöinen)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Makelle, skripteillesi ja omille agenteillesi. Sama token kuin MCP-palvelimella.",
+      "authTitle": "Todennus",
+      "base": "Perus-URL: <code>{url}</code>. Raja: 60 pyyntöä minuutissa agenttia kohden.",
+      "endpointsTitle": "Päätepisteet",
+      "method": "Metodi",
+      "path": "Polku",
+      "role": "Tarkoitus",
+      "create": "Luo pyyntö",
+      "status": "Pyynnön tila",
+      "reveal": "Lyhytikäinen linkki korttiin (10 min, kertakäyttöinen)",
+      "cancel": "Peruuta",
+      "receipts": "Liitä kuitti",
+      "budgets": "Jäljellä oleva budjetti",
+      "spendSummary": "Kulut kauppiaittain",
+      "exampleTitle": "Esimerkki",
+      "errorsTitle": "Virheet",
+      "errorsBody": "Yleiset koodit: <code>invalid_amount</code> (summan on oltava kokonaisluku sentteinä), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Säännöt ja hyväksyntä",
+      "lead": "Näin Artemis päättää, hylätäänkö pyyntö, hyväksytäänkö se automaattisesti vai lähetetäänkö se sinulle allekirjoitettavaksi.",
+      "orderTitle": "Arviointijärjestys",
+      "orderBody": "Ensimmäinen sääntö, joka ei täyty, hylkää pyynnön:",
+      "o1": "Sallittu valuutta (<code>currency_not_allowed</code>).",
+      "o2": "Positiivinen summa, joka alittaa ostokohtaisen rajan (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Kuukausibudjetti: kuukauden odottavat, hyväksytyt ja maksetut pyynnöt + summa (<code>over_monthly_budget</code>). Kuukausi määräytyy Pariisin ajan mukaan.",
+      "o4": "Estetty kauppias tai kauppias, joka puuttuu sallittujen luettelosta, jos sellainen on (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Kauppiasluokka (MCC) estetty tai ei sallittu (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Automaattinen hyväksyntä",
+      "autoBody": "Pyyntö hyväksytään ilman sinua, jos sen summa on <strong>alle</strong> automaattisen hyväksynnän kynnyksen <strong>ja</strong> kauppias on agentin sallittujen luettelossa. Jos sallittujen luetteloa ei ole, jokainen pyyntö lähetetään sinulle.",
+      "matchTitle": "Kauppiaiden tunnistus",
+      "matchBody": "Nimiä verrataan välittämättä kirjainkoosta, aksenteista, yhtiömuodosta ja verkkotunnuksen päätteestä: ”Notion” kattaa sekä ”Notion Labs, Inc.” että ”notion.so”.",
+      "humanTitle": "Ihmisen hyväksyntä",
+      "humanBody": "Omistajat, ylläpitäjät ja hyväksyjät saavat ilmoituksen. Hyväksyntä edellyttää pääsyavainta. Jos pankkisi vaatii oman vahvan tunnistautumisensa (esimerkiksi Qonto), hyväksy myös sen sovelluksessa.",
+      "expiryTitle": "Vanheneminen",
+      "expiryBody": "Käsittelemätön pyyntö vanhenee 30 minuutin kuluttua (muokattavissa). Käyttämätön kortti peruutetaan, kun se vanhenee."
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "subscriptions": {
+    "title": "Abonnemang",
+    "lead": "Abonnemang som dina agenter har tecknat: kort låst till handlaren, månadsgräns, upptäckt av vilande abonnemang.",
+    "confirmCancel": "Säga upp det här abonnemanget? Kortet spärras hos banken.",
+    "planRequired": "Abonnemang som hanteras av agenter ingår från planen Team.",
+    "seePlans": "Se planerna →",
+    "dormantAlert_one": "{count} abonnemang utan betalning på mer än {days} dagar: överväg att säga upp det.",
+    "dormantAlert_other": "{count} abonnemang utan betalning på mer än {days} dagar: överväg att säga upp dem.",
+    "emptyTitle": "Inga abonnemang",
+    "emptyText": "En agent skapar ett abonnemang med request_card och alternativet för återkommande betalning.",
+    "colMerchant": "Handlare",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Månadsgräns",
+    "colPaid": "Betalt",
+    "colLastPayment": "Senaste betalning",
+    "colStatus": "Status",
+    "dormant": "Vilande",
+    "cancel": "Säg upp"
+  }
+}

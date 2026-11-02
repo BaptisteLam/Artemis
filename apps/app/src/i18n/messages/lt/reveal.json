@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Vienkartinė kortelė · imituotas bankas",
+    "eyebrowBank": "Vienkartinė kortelė · išdavė jūsų bankas",
+    "lead": "Ši nuoroda atsidaro tik vieną kartą. Kortelės limitas – aukščiau nurodyta suma, ji susieta su šiuo prekybininku.",
+    "fields": {
+      "number": "Numeris",
+      "expiry": "Galioja iki",
+      "cvc": "Saugos kodas",
+      "holder": "Kortelės turėtojas"
+    },
+    "opening": "Atidaroma…",
+    "show": "Rodyti kortelę •••• {last4}",
+    "footer": "Numerį tiesiogiai rodo kortelę išdavęs bankas: jis niekada nepatenka į Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js nepasiekiamas.",
+      "invalidLink": "Netinkama nuoroda: jau panaudota arba nebegalioja.",
+      "stripeRefused": "Stripe atmetė užklausą."
+    }
+  }
+}

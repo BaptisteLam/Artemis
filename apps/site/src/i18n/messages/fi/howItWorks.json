@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Näin se toimii",
+    "description": "Näin Artemis antaa tekoälyagenttiesi maksaa, kun hallinta pysyy sinulla.",
+    "headline": "Agentti pyytää, sinä päätät, pankki maksaa.",
+    "lead": "Artemis toimii agenttiesi ja pankkisi välissä. Se soveltaa sääntöjäsi, kerää hyväksyntäsi ja luo kertakäyttöisen kortin tarkalleen oikealle summalle.",
+    "step1": {
+      "title": "1. Liität pankkisi",
+      "body": "Stripe Issuing (suositeltu) tai Revolut Business: virtuaalikortit luodaan <strong>sinun</strong> tilillesi ja veloitetaan <strong>sinun</strong> varoistasi. Qonto liitetään lukuoikeuksin jäädyttämistä ja täsmäytystä varten. Artemis ei koskaan vastaanota, säilytä tai siirrä rahaa. Kokeilua varten Sandbox simuloi pankkia."
+    },
+    "step2": {
+      "title": "2. Luot agentin ja sen säännöt",
+      "body": "Jokainen agentti saa salaisen tokenin ja käytännön: kuukausibudjetti, ostokohtainen raja, valuutat, sallitut tai estetyt kauppiaat, kauppiasluokat, automaattisen hyväksynnän kynnys ja kortin voimassaoloaika."
+    },
+    "step3": {
+      "title": "3. Agentti pyytää korttia",
+      "body": "MCP-työkalulla <code>request_card</code> tai REST API:n kautta. Sääntöjen vastainen pyyntö hylätään heti, ja syy kerrotaan selkeästi. Kaikki muut pyynnöt odottavat hyväksyntääsi, paitsi pienet summat luotetulle kauppiaalle, jos olet sallinut sen."
+    },
+    "step4": {
+      "title": "4. Hyväksyt pääsyavaimella",
+      "body": "Saat ilmoituksen. Valtuutusnäkymässä näkyvät agentti, summa, kauppias ja tarkoitus. Allekirjoitat pääsyavaimellasi (Face ID, sormenjälki, suojausavain). Allekirjoitus kattaa valtuutuksen tarkan sisällön."
+    },
+    "step5": {
+      "title": "5. Agentti maksaa, Artemis täsmäyttää",
+      "body": "Kortti on kertakäyttöinen, rajattu summaan ja vanhenee nopeasti. Agentti saa lyhytikäisen linkin: kortin näyttää pankkisi, eikä numero koskaan kulje Artemisin kautta. Heti kun pankki ilmoittaa tapahtumasta, Artemis täsmäyttää sen, merkitsee mahdolliset poikkeamat ja arkistoi kuitin."
+    },
+    "demo": {
+      "mandate": "valtuutus · {id}",
+      "intent": "Tarkoitus: tiimin tilaus, 5 käyttäjäpaikkaa.",
+      "rules": "Säännöt: raja {cap} · budjettia jäljellä {remaining}",
+      "signed": "Allekirjoitettu pääsyavaimella · {minutes} min sitten",
+      "transactions": "tapahtumat",
+      "matched": "Täsmäytetty",
+      "mismatch": "Poikkeama"
+    }
+  }
+}

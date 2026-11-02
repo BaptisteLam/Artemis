@@ -1,0 +1,22 @@
+{
+  "subscriptions": {
+    "title": "Suscripciones",
+    "lead": "Suscripciones contratadas por sus agentes: tarjeta bloqueada en el comercio, límite mensual, detección de suscripciones inactivas.",
+    "confirmCancel": "¿Cancelar esta suscripción? La tarjeta se cancelará en el banco.",
+    "planRequired": "Las suscripciones gestionadas por agentes están incluidas a partir del plan Team.",
+    "seePlans": "Ver los planes →",
+    "dormantAlert_one": "{count} suscripción sin pagos desde hace más de {days} días: plantéese cancelarla.",
+    "dormantAlert_many": "{count} suscripciones sin pagos desde hace más de {days} días: plantéese cancelarlas.",
+    "dormantAlert_other": "{count} suscripciones sin pagos desde hace más de {days} días: plantéese cancelarlas.",
+    "emptyTitle": "Ninguna suscripción",
+    "emptyText": "Un agente crea una suscripción con request_card y la opción recurrente.",
+    "colMerchant": "Comercio",
+    "colAgent": "Agente",
+    "colMonthlyLimit": "Límite mensual",
+    "colPaid": "Pagado",
+    "colLastPayment": "Último pago",
+    "colStatus": "Estado",
+    "dormant": "Inactiva",
+    "cancel": "Cancelar"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Jednokratna kartica · simulirana banka",
+    "eyebrowBank": "Jednokratna kartica · izdala vaša banka",
+    "lead": "Ova se poveznica otvara samo jednom. Kartica je ograničena na gornji iznos i vezana uz ovog trgovca.",
+    "fields": {
+      "number": "Broj",
+      "expiry": "Vrijedi do",
+      "cvc": "Sigurnosni kod",
+      "holder": "Vlasnik kartice"
+    },
+    "opening": "Otvaranje…",
+    "show": "Prikaži karticu •••• {last4}",
+    "footer": "Broj izravno prikazuje banka izdavateljica: nikada ne prolazi kroz Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js nije dostupan.",
+      "invalidLink": "Nevažeća poveznica, već iskorištena ili istekla.",
+      "stripeRefused": "Stripe je odbio zahtjev."
+    }
+  }
+}

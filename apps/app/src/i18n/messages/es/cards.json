@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Tarjetas",
+    "lead": "Tarjetas de un solo uso emitidas en sus bancos. El número completo nunca se almacena.",
+    "linkAria": "Tarjeta •••• {last4}",
+    "cardAria": "Tarjeta virtual terminada en {last4}, titular {holder}, caduca {exp}",
+    "tagRevealed": "Entregada al agente",
+    "tagSingleUse": "Un solo uso",
+    "emptyTitle": "Ninguna tarjeta",
+    "emptyText": "Las tarjetas aparecen una vez aprobada una solicitud.",
+    "colCard": "Tarjeta",
+    "colIssued": "Emitida",
+    "colExpires": "Caduca",
+    "colRevealed": "Entregada al agente",
+    "colStatus": "Estado",
+    "notRevealed": "No",
+    "request": "Solicitud →"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Condiciones generales de venta y de uso",
+      "purposeTitle": "1. Objeto",
+      "purpose": "Las presentes condiciones regulan el acceso al software Artemis, editado por {editor} ({status}, SIRET {siret}), y su contratación por clientes profesionales. El servicio está reservado a profesionales.",
+      "serviceTitle": "2. Descripción del servicio",
+      "service": "Artemis permite a un cliente definir reglas de gasto para sus agentes de software, aprobar sus solicitudes de pago y controlar, a través de las interfaces de programación de su propio banco, la creación de tarjetas virtuales de un solo uso. Artemis no presta ningún servicio de pago, no custodia ningún fondo y no emite ninguna tarjeta. La relación bancaria, las comisiones bancarias y la autenticación reforzada se rigen exclusivamente por el contrato entre el cliente y su banco.",
+      "accountTitle": "3. Cuenta y seguridad",
+      "account": "El cliente es responsable de la confidencialidad de los tokens de agente, de los accesos a su cuenta y de las llaves de acceso de sus usuarios, así como de las reglas que configure. Todo gasto aprobado por un usuario autorizado o conforme a una regla de aprobación automática se considera autorizado por el cliente.",
+      "pricesTitle": "4. Planes y precios",
+      "prices": "Planes: Sandbox (gratuito), Builder ({builder} / mes), Team ({team} / mes), Agencias ({agency} / mes + {perClient} por cliente activo), Business (desde {business} / mes). Por encima de la cuota mensual de un plan de pago, cada mandato adicional se factura a {overage}. Precios netos. {vat}. Pago mensual por adelantado con tarjeta a través de Stripe. La renovación es automática; la resolución surte efecto al final del periodo en curso, sin reembolso prorrateado.",
+      "quotasTitle": "5. Cuotas",
+      "quotas": "Cada plan incluye cuotas (agentes, bancos conectados, solicitudes mensuales). Por encima de dichas cuotas, las nuevas solicitudes se rechazan hasta el periodo siguiente o hasta un cambio de plan.",
+      "availabilityTitle": "6. Disponibilidad",
+      "availability": "El editor emplea medios razonables para garantizar la disponibilidad del servicio, sin obligación de resultado. Pueden producirse interrupciones por mantenimiento o por causa de los proveedores técnicos y bancarios.",
+      "liabilityTitle": "7. Responsabilidad",
+      "liability": "El editor no será responsable de las compras realizadas por los agentes del cliente en el marco de las autorizaciones otorgadas, de la elección de los comercios, de la calidad de los bienes o servicios adquiridos ni de las decisiones del banco del cliente. La responsabilidad del editor, por todas las causas, se limita a las cantidades abonadas por el cliente durante los últimos doce meses.",
+      "dataTitle": "8. Datos",
+      "data": "El tratamiento de los datos personales se describe en la <a href=\"{href}\">política de privacidad</a>. El cliente puede exportar sus datos en cualquier momento.",
+      "lawTitle": "9. Legislación aplicable",
+      "law": "Legislación francesa. A falta de acuerdo amistoso, serán competentes los tribunales del lugar del domicilio del editor."
+    },
+    "privacy": {
+      "title": "Política de privacidad",
+      "controllerTitle": "Responsable del tratamiento",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Datos tratados",
+      "dataAccount": "Cuenta: correo electrónico, organización, rol, llaves de acceso (solo claves públicas).",
+      "dataActivity": "Actividad: solicitudes de tarjeta, mandatos firmados, transacciones comunicadas por el banco, justificantes, registro de auditoría.",
+      "dataBanks": "Conexiones bancarias: tokens de acceso cifrados (AES-256-GCM).",
+      "dataBilling": "Facturación: gestionada por Stripe; Artemis no ve los números de las tarjetas con las que paga su suscripción.",
+      "dataWaitlist": "Lista de espera: correo electrónico, empresa, caso de uso.",
+      "cardNumbers": "Artemis nunca conserva el número completo ni el código de seguridad de las tarjetas emitidas para sus agentes.",
+      "purposesTitle": "Finalidades y bases jurídicas",
+      "purposes": "Ejecución del contrato (prestación del servicio), obligaciones legales (contabilidad), interés legítimo (seguridad, prevención del fraude), consentimiento (lista de espera).",
+      "processorsTitle": "Encargados del tratamiento",
+      "processors": "Supabase (base de datos, Unión Europea), Cloudflare (alojamiento y red), Stripe (facturación), Resend (correos electrónicos transaccionales). Las cláusulas contractuales tipo regulan las eventuales transferencias fuera de la UE.",
+      "retentionTitle": "Plazos de conservación",
+      "retention": "Datos de la cuenta: duración del contrato y, después, 3 años. Registro de auditoría y datos contables: 10 años. Lista de espera: 3 años sin interacción.",
+      "rightsTitle": "Sus derechos",
+      "rights": "Acceso, rectificación, supresión, portabilidad, oposición y limitación: escriba a {email}. Puede presentar una reclamación ante la CNIL (cnil.fr).",
+      "cookiesTitle": "Cookies",
+      "cookies": "El sitio no utiliza cookies publicitarias ni herramientas de analítica de terceros. La aplicación solo utiliza el almacenamiento necesario para su sesión."
+    },
+    "notice": {
+      "title": "Aviso legal",
+      "editorTitle": "Editor",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Dirección: {address}",
+      "contact": "Contacto: {email}",
+      "directorTitle": "Director de la publicación",
+      "hostingTitle": "Alojamiento",
+      "natureTitle": "Naturaleza del servicio",
+      "nature": "Artemis es un software de gobernanza del gasto de agentes de inteligencia artificial. Artemis no es una entidad de pago ni una entidad de dinero electrónico: no recibe, no custodia ni transfiere fondos. Las tarjetas de pago las emite la entidad bancaria del cliente, bajo su responsabilidad.",
+      "ipTitle": "Propiedad intelectual",
+      "ip": "Los contenidos, marcas y logotipos de este sitio son propiedad del editor. Queda prohibida cualquier reproducción sin autorización."
+    }
+  }
+}

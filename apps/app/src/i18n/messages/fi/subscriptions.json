@@ -1,0 +1,21 @@
+{
+  "subscriptions": {
+    "title": "Tilaukset",
+    "lead": "Agenttiesi tekemät tilaukset: kortti lukittu kauppiaaseen, kuukausiraja, käyttämättömien tilausten tunnistus.",
+    "confirmCancel": "Perutaanko tämä tilaus? Kortti peruutetaan pankissa.",
+    "planRequired": "Agenttien hallitsemat tilaukset sisältyvät Team-pakettiin ja sitä ylempiin.",
+    "seePlans": "Katso paketit →",
+    "dormantAlert_one": "{count} tilaus ilman maksua yli {days} päivään: harkitse sen perumista.",
+    "dormantAlert_other": "{count} tilausta ilman maksua yli {days} päivään: harkitse niiden perumista.",
+    "emptyTitle": "Ei tilauksia",
+    "emptyText": "Agentti luo tilauksen request_card-kutsulla ja toistuvan maksun valinnalla.",
+    "colMerchant": "Kauppias",
+    "colAgent": "Agentti",
+    "colMonthlyLimit": "Kuukausiraja",
+    "colPaid": "Maksettu",
+    "colLastPayment": "Viimeisin maksu",
+    "colStatus": "Tila",
+    "dormant": "Käyttämätön",
+    "cancel": "Peru"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Do ghníomhaireachtaí",
+    "description": "Gníomhaireachtaí uathoibrithe: caiteachas ghníomhairí do chliant faoi smacht, le buiséad agus sonrasc do gach cliant.",
+    "eyebrow": "Gníomhaireachtaí uathoibrithe",
+    "headline": "Caitheann gníomhairí do chliant. Athshonrascann tusa gan stró.",
+    "lead": "An dtógann tú gníomhairí n8n, Make nó Claude do do chliaint? Scarann Artemis an caiteachas de réir cliaint, cuireann sé buiséad i bhfeidhm ar gach ceann acu agus ullmhaíonn sé an t-athshonrascadh le do chorrlach.",
+    "try": "Bain triail as saor in aisce →",
+    "plan": "Plean {plan}: {base} + {client} in aghaidh an chliaint ghníomhaigh",
+    "spaces": {
+      "title": "Spás oibre amháin in aghaidh an chliaint",
+      "body": "Sann gach gníomhaire do chliant. Coinnítear a chuid iarratas, cártaí, idirbheart agus admhálacha ar leith. Ní féidir le gníomhaire buiséad cliaint eile a chaitheamh choíche."
+    },
+    "budget": {
+      "title": "Buiséad míosúil in aghaidh an chliaint",
+      "body": "Socraigh uasteorainn mhíosúil do gach cliant, de bhreis ar rialacha gach gníomhaire. Os a cionn sin, diúltaítear don iarratas sula sroicheann sé duine daonna fiú."
+    },
+    "rebilling": {
+      "title": "Athshonrascadh le cliceáil amháin",
+      "body": "Gach mí, ullmhaíonn Artemis tuarascáil do gach cliant: ceannacháin a gearradh, gníomhaire, ceannaí, admháil, táille bhainistíochta bunaithe ar do chorrlach, iomlán le hathshonrascadh. Easpórtáil CSV réidh le seoladh nó le hiompórtáil isteach i d'uirlis sonrascaithe."
+    },
+    "proof": {
+      "title": "Cruthúnas do do chliaint",
+      "body": "Síníonn duine údaraithe gach íocaíocht, agus ní féidir an loga a athrú. Taispeáin do do chliaint go bhfuil a ngníomhairí faoi mhaoirseacht dhaonna, mar a éilíonn an AI Act."
+    },
+    "european": {
+      "title": "Eorpach, ó thús deireadh",
+      "body": "Euro, bainc Eorpacha, sonraí i Frankfurt, easpórtálacha FEC agus Pennylane don chuntasaíocht Fhrancach."
+    },
+    "demo": {
+      "window": "athshonrascadh · martin-bakery · Samhain",
+      "subtotal": "Fo-iomlán",
+      "fee": "Táille bhainistíochta 15%",
+      "total": "Iomlán le hathshonrascadh"
+    }
+  }
+}

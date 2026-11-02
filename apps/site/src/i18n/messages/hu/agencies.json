@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Ügynökségeknek",
+    "description": "Automatizálási ügynökségek: ügyfelei MI-ügynökeinek költései ellenőrzés alatt, ügyfelenkénti kerettel és számlával.",
+    "eyebrow": "Automatizálási ügynökségek",
+    "headline": "Ügyfelei ügynökei költenek. Ön gond nélkül továbbszámláz.",
+    "lead": "n8n-, Make- vagy Claude-ügynököket fejleszt ügyfelei számára? Az Artemis ügyfelenként elkülöníti a költéseket, mindegyikre keretet alkalmaz, és az Ön árrésével előkészíti a továbbszámlázást.",
+    "try": "Próbálja ki ingyen →",
+    "plan": "{plan} csomag: {base} + {client} aktív ügyfelenként",
+    "spaces": {
+      "title": "Ügyfelenként egy munkaterület",
+      "body": "Rendelje hozzá az egyes ügynököket egy-egy ügyfélhez. Igénylései, kártyái, tranzakciói és bizonylatai elkülönítve maradnak. Egy ügynök soha nem költheti egy másik ügyfél keretét."
+    },
+    "budget": {
+      "title": "Havi keret ügyfelenként",
+      "body": "Állítson be havi felső határt minden ügyfélnek, az egyes ügynökök szabályain felül. Ezen túl az igénylést a rendszer elutasítja, mielőtt az egy emberhez eljutna."
+    },
+    "rebilling": {
+      "title": "Továbbszámlázás egy kattintással",
+      "body": "Az Artemis minden hónapban kimutatást készít ügyfelenként: terhelt vásárlások, ügynök, kereskedő, bizonylat, az Ön árrésén alapuló kezelési díj, továbbszámlázandó végösszeg. CSV-export, amely azonnal elküldhető vagy importálható a számlázóprogramjába."
+    },
+    "proof": {
+      "title": "Bizonyíték ügyfelei számára",
+      "body": "Minden fizetést egy arra jogosult személy ír alá, a napló pedig nem módosítható. Mutassa meg ügyfeleinek, hogy ügynökeik emberi felügyelet alatt állnak, ahogy azt az AI Act előírja."
+    },
+    "european": {
+      "title": "Elejétől a végéig európai",
+      "body": "Euró, európai bankok, frankfurti adattárolás, FEC- és Pennylane-export a francia könyveléshez."
+    },
+    "demo": {
+      "window": "továbbszámlázás · martin-bakery · november",
+      "subtotal": "Részösszeg",
+      "fee": "Kezelési díj 15%",
+      "total": "Továbbszámlázandó összeg"
+    }
+  }
+}

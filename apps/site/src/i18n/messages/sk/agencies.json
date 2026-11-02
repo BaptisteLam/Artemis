@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Pre agentúry",
+    "description": "Automatizačné agentúry: výdavky agentov vašich klientov pod kontrolou, s rozpočtom a faktúrou pre každého klienta.",
+    "eyebrow": "Automatizačné agentúry",
+    "headline": "Agenti vašich klientov míňajú. Vy prefakturujete bez starostí.",
+    "lead": "Vytvárate pre svojich klientov agentov v n8n, Make alebo Claude? Artemis oddelí výdavky podľa klientov, každému nastaví rozpočet a pripraví prefakturáciu aj s vašou maržou.",
+    "try": "Vyskúšajte zadarmo →",
+    "plan": "Plán {plan}: {base} + {client} za každého aktívneho klienta",
+    "spaces": {
+      "title": "Samostatný priestor pre každého klienta",
+      "body": "Priraďte každého agenta klientovi. Jeho žiadosti, karty, transakcie a doklady sa vedú oddelene. Agent nikdy nemôže minúť rozpočet iného klienta."
+    },
+    "budget": {
+      "title": "Mesačný rozpočet pre každého klienta",
+      "body": "Pre každého klienta nastavte mesačný strop, ktorý platí popri pravidlách jednotlivých agentov. Nad touto hranicou sa žiadosť zamietne skôr, než sa vôbec dostane k človeku."
+    },
+    "rebilling": {
+      "title": "Prefakturácia jedným kliknutím",
+      "body": "Artemis každý mesiac pripraví pre každého klienta prehľad: zaúčtované nákupy, agent, obchodník, doklad, poplatok za správu podľa vašej marže a suma na prefakturovanie. Export CSV je pripravený na odoslanie alebo na import do vášho fakturačného nástroja."
+    },
+    "proof": {
+      "title": "Dôkaz pre vašich klientov",
+      "body": "Každú platbu podpisuje oprávnená osoba a denník nemožno zmeniť. Ukážte svojim klientom, že ich agenti sú pod ľudským dohľadom, ako to vyžaduje AI Act."
+    },
+    "european": {
+      "title": "Európske od začiatku do konca",
+      "body": "Eurá, európske banky, dáta vo Frankfurte, exporty FEC a Pennylane pre francúzske účtovníctvo."
+    },
+    "demo": {
+      "window": "prefakturácia · martin-bakery · november",
+      "subtotal": "Medzisúčet",
+      "fee": "Poplatok za správu 15 %",
+      "total": "Spolu na prefakturovanie"
+    }
+  }
+}

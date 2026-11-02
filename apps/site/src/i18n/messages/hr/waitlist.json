@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Lista čekanja",
+    "description": "Saznajte kada se otvore konektori za stvarne banke.",
+    "headline": "Budite među prvima.",
+    "lead": "Konektori za Qonto i Revolut otvaraju se postupno. Ostavite nam svoju e-adresu i javit ćemo vam čim vaša banka bude dostupna.",
+    "email": "Poslovna e-adresa",
+    "company": "Društvo",
+    "useCase": "Što vaši agenti trebaju plaćati?",
+    "useCasePlaceholder": "API-ji, SaaS, cloud, podaci…",
+    "submit": "Pridružite se listi čekanja",
+    "sending": "Slanje…",
+    "ok": "Hvala, na listi ste. Javit ćemo vam e-poštom čim se otvori.",
+    "error": "Prijava nije uspjela. Pokušajte ponovno za trenutak."
+  }
+}

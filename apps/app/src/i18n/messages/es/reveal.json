@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Tarjeta de un solo uso · banco simulado",
+    "eyebrowBank": "Tarjeta de un solo uso · emitida por su banco",
+    "lead": "Este enlace solo se abre una vez. La tarjeta está limitada al importe indicado arriba y bloqueada en este comercio.",
+    "fields": {
+      "number": "Número",
+      "expiry": "Caducidad",
+      "cvc": "Código de seguridad",
+      "holder": "Titular"
+    },
+    "opening": "Abriendo…",
+    "show": "Mostrar la tarjeta •••• {last4}",
+    "footer": "El número lo muestra directamente el banco emisor: nunca pasa por Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js no está disponible.",
+      "invalidLink": "Enlace no válido, ya utilizado o caducado.",
+      "stripeRefused": "Stripe ha rechazado la solicitud."
+    }
+  }
+}

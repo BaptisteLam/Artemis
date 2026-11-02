@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Apskaitos eksportas",
+    "lead": "Jūsų bankų nurašytos išlaidos, paruoštos Pennylane, jūsų buhalteriui ar skaičiuoklei.",
+    "failed": "Eksportuoti nepavyko.",
+    "from": "Nuo",
+    "to": "Iki (neįskaitant)",
+    "downloadCsv": "Atsisiųsti CSV",
+    "downloadFec": "Atsisiųsti FEC",
+    "formats": "CSV: atskirta kabliataškiais, suderinama su Excel. FEC: 18 privalomų stulpelių, debetas 604000 / kreditas 512000, galima importuoti į Pennylane.",
+    "fecUpsell": "FEC įtrauktas nuo plano Team.",
+    "seePlans": "Peržiūrėti planus"
+  }
+}

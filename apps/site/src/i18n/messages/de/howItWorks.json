@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "So funktioniert’s",
+    "description": "Wie Artemis Ihre KI-Agenten bezahlen lässt, während Sie die Kontrolle behalten.",
+    "headline": "Der Agent fragt an, Sie entscheiden, die Bank zahlt.",
+    "lead": "Artemis steht zwischen Ihren Agenten und Ihrer Bank. Es wendet Ihre Regeln an, holt Ihre Freigabe ein und erstellt eine Einmalkarte über den genauen Betrag.",
+    "step1": {
+      "title": "1. Sie verbinden Ihre Bank",
+      "body": "Stripe Issuing (empfohlen) oder Revolut Business: Die virtuellen Karten werden in <strong>Ihrem</strong> Konto erstellt und <strong>Ihrem</strong> Guthaben belastet. Qonto wird für Lesezugriff, Sperren und Abgleich angebunden. Artemis nimmt niemals Geld entgegen, verwahrt oder überweist es. Zum Ausprobieren simuliert die Sandbox eine Bank."
+    },
+    "step2": {
+      "title": "2. Sie erstellen einen Agenten und seine Regeln",
+      "body": "Jeder Agent erhält ein geheimes Token und eine Richtlinie: Monatsbudget, Limit pro Kauf, Währungen, zugelassene oder gesperrte Händler, Händlerkategorien, Schwellenwert für die automatische Freigabe und Gültigkeitsdauer der Karte."
+    },
+    "step3": {
+      "title": "3. Der Agent fragt eine Karte an",
+      "body": "Über das MCP-Tool <code>request_card</code> oder die REST-API. Eine Anfrage, die gegen die Regeln verstößt, wird sofort mit einer klaren Begründung abgelehnt. Alle anderen warten auf Ihre Freigabe, außer kleinen Beträgen bei einem vertrauenswürdigen Händler, sofern Sie dies erlaubt haben."
+    },
+    "step4": {
+      "title": "4. Sie geben per Passkey frei",
+      "body": "Sie erhalten eine Benachrichtigung. Die Mandatsansicht zeigt Agent, Betrag, Händler und Zweck. Sie signieren mit Ihrem Passkey (Face ID, Fingerabdruck, Sicherheitsschlüssel). Die Signatur umfasst den genauen Inhalt des Mandats."
+    },
+    "step5": {
+      "title": "5. Der Agent bezahlt, Artemis gleicht ab",
+      "body": "Die Karte ist eine Einmalkarte, auf den Betrag begrenzt und läuft schnell ab. Der Agent erhält einen kurzlebigen Link: Die Karte wird von Ihrer Bank angezeigt, und die Nummer läuft nie über Artemis. Sobald die Bank die Transaktion meldet, gleicht Artemis sie ab, meldet jede Abweichung und legt den Beleg ab."
+    },
+    "demo": {
+      "mandate": "Mandat · {id}",
+      "intent": "Zweck: Team-Abonnement, 5 Plätze.",
+      "rules": "Regeln: Limit {cap} · verbleibendes Budget {remaining}",
+      "signed": "Per Passkey signiert · vor {minutes} Min.",
+      "transactions": "Transaktionen",
+      "matched": "Abgeglichen",
+      "mismatch": "Abweichung"
+    }
+  }
+}

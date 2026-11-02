@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Uw agents betalen. U hebt het laatste woord.",
+    "description": "De Europese financiële firewall voor uw AI-agents: controle, tijdwinst en AI Act-bewijs voor elke aankoop, bij de bank van uw keuze."
+  },
+  "layout": {
+    "skip": "Naar de inhoud"
+  },
+  "nav": {
+    "aria": "Hoofdnavigatie",
+    "home": "Artemis, startpagina",
+    "howItWorks": "Hoe het werkt",
+    "agencies": "Bureaus",
+    "pricing": "Prijzen",
+    "docs": "Documentatie",
+    "security": "Beveiliging",
+    "login": "Inloggen",
+    "cta": "Proberen"
+  },
+  "lang": {
+    "choose": "Kies een taal"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Bureaus",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT en n8n zijn handelsmerken van hun respectieve eigenaars. Artemis is met geen van hen verbonden.",
+    "product": "Product",
+    "policyTemplate": "Beleidssjabloon",
+    "waitlist": "Wachtlijst",
+    "restApi": "REST API",
+    "legal": "Juridisch",
+    "legalNotice": "Wettelijke vermeldingen",
+    "terms": "Verkoopvoorwaarden",
+    "privacy": "Privacy"
+  },
+  "legal": {
+    "eyebrow": "Juridisch",
+    "updated": "Laatst bijgewerkt: 1 november 2026.",
+    "frenchPrevails": "Deze pagina is een vertaling die ter informatie wordt aangeboden. Alleen de <a href=\"{href}\">Franse versie</a> is juridisch bindend.",
+    "vat": "Btw niet van toepassing, art. 293 B van het Franse belastingwetboek (CGI)",
+    "status": "Eenmanszaak (Franse micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, VS (pagina’s en API); Supabase, Inc. — data gehost in de Europese Unie (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Documentatie",
+    "start": "Aan de slag",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI en Claude-skill",
+    "api": "REST API",
+    "rules": "Regels en goedkeuring"
+  },
+  "notFound": {
+    "title": "Pagina niet gevonden",
+    "eyebrow": "Fout 404",
+    "headline": "Deze pagina bestaat niet.",
+    "lead": "De link is mogelijk verouderd. Ga terug naar de startpagina of bekijk de documentatie.",
+    "home": "Startpagina"
+  }
+}

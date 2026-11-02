@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Twoi agenci płacą. Ostatnie słowo należy do Ciebie.",
+    "description": "Europejska zapora finansowa dla Twoich agentów AI: kontrola, oszczędność czasu i dowód zgodności z AI Act przy każdym zakupie, w wybranym przez Ciebie banku."
+  },
+  "layout": {
+    "skip": "Przejdź do treści"
+  },
+  "nav": {
+    "aria": "Nawigacja główna",
+    "home": "Artemis, strona główna",
+    "howItWorks": "Jak to działa",
+    "agencies": "Agencje",
+    "pricing": "Cennik",
+    "docs": "Dokumentacja",
+    "security": "Bezpieczeństwo",
+    "login": "Zaloguj się",
+    "cta": "Wypróbuj"
+  },
+  "lang": {
+    "choose": "Wybierz język"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agencje",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT i n8n są znakami towarowymi ich właścicieli. Artemis nie jest powiązany z żadnym z nich.",
+    "product": "Produkt",
+    "policyTemplate": "Wzór polityki",
+    "waitlist": "Lista oczekujących",
+    "restApi": "REST API",
+    "legal": "Informacje prawne",
+    "legalNotice": "Nota prawna",
+    "terms": "Warunki sprzedaży",
+    "privacy": "Prywatność"
+  },
+  "legal": {
+    "eyebrow": "Informacje prawne",
+    "updated": "Ostatnia aktualizacja: 1 listopada 2026 r.",
+    "frenchPrevails": "Niniejsza strona jest tłumaczeniem udostępnionym wyłącznie dla wygody. Moc prawną ma jedynie <a href=\"{href}\">wersja francuska</a>.",
+    "vat": "VAT nie ma zastosowania, art. 293 B francuskiego kodeksu podatkowego (CGI)",
+    "status": "Jednoosobowa działalność gospodarcza (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (strony i API); Supabase, Inc. — dane przechowywane w Unii Europejskiej (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentacja",
+    "start": "Pierwsze kroki",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI i umiejętność Claude",
+    "api": "REST API",
+    "rules": "Reguły i zatwierdzanie"
+  },
+  "notFound": {
+    "title": "Nie znaleziono strony",
+    "eyebrow": "Błąd 404",
+    "headline": "Ta strona nie istnieje.",
+    "lead": "Link może być nieaktualny. Wróć na stronę główną lub przejrzyj dokumentację.",
+    "home": "Strona główna"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "audit": {
+    "title": "Revizijski zapisnik",
+    "lead": "Svaki je događaj ulančan SHA-256 sažetkom i ne može se ni izmijeniti ni izbrisati: to je vaš dokaz ljudskog nadzora (AI Act).",
+    "verify": "Provjeri cjelovitost",
+    "export": "Izvezi",
+    "report": "Izvješće za AI Act {quarter}",
+    "exportFailed": "Izvoz nije uspio.",
+    "reportUnavailable": "Izvješće nije dostupno.",
+    "chainOk_one": "Lanac je netaknut: provjeren je {count} unos.",
+    "chainOk_few": "Lanac je netaknut: provjerena su {count} unosa.",
+    "chainOk_other": "Lanac je netaknut: provjereno je {count} unosa.",
+    "chainBroken": "Lanac je prekinut kod unosa br. {id}.",
+    "exportUpsell": "Potpisani izvoz revizijskog zapisnika uključen je u paket Business.",
+    "seePlans": "Pogledajte pakete",
+    "cols": {
+      "date": "Datum",
+      "event": "Događaj",
+      "actor": "Izvršitelj",
+      "hash": "Otisak"
+    },
+    "view": "prikaz",
+    "older": "Stariji →",
+    "actors": {
+      "user": "Korisnik",
+      "agent": "Agent",
+      "system": "Sustav"
+    },
+    "actions": {
+      "org": {
+        "created": "Organizacija izrađena",
+        "frozen": "Organizacija zamrznuta",
+        "unfrozen": "Organizacija odmrznuta",
+        "card_delivery_changed": "Promijenjen način predaje kartice",
+        "slack_connected": "Slack povezan",
+        "slack_disconnected": "Slack odspojen"
+      },
+      "agent": {
+        "created": "Agent izrađen",
+        "updated": "Agent ažuriran",
+        "deleted": "Agent izbrisan",
+        "token_rotated": "Token ponovno generiran",
+        "frozen": "Agent zamrznut"
+      },
+      "policy": {
+        "updated": "Pravila ažurirana"
+      },
+      "request": {
+        "created": "Zahtjev izrađen",
+        "rejected": "Zahtjev odbijen",
+        "approved": "Nalog potpisan",
+        "auto_approved": "Automatsko odobrenje",
+        "approval_recorded": "Odobrenje zabilježeno",
+        "expired": "Zahtjev istekao"
+      },
+      "card": {
+        "issued": "Kartica izdana",
+        "issue_failed": "Izdavanje kartice nije uspjelo",
+        "revealed": "Kartica predana agentu",
+        "link_created": "Poveznica na karticu izrađena",
+        "viewed": "Kartica pregledana",
+        "canceled": "Kartica poništena",
+        "expired": "Kartica istekla"
+      },
+      "transaction": {
+        "matched": "Transakcija povezana",
+        "mismatch": "Otkriveno odstupanje"
+      },
+      "receipt": {
+        "attached": "Potvrda priložena"
+      },
+      "bank": {
+        "connected": "Banka povezana",
+        "disconnected": "Banka odspojena"
+      },
+      "member": {
+        "invited": "Član pozvan",
+        "joined": "Član se pridružio",
+        "removed": "Član uklonjen",
+        "role_changed": "Uloga promijenjena"
+      },
+      "client": {
+        "created": "Klijent izrađen",
+        "updated": "Klijent ažuriran"
+      },
+      "billing": {
+        "subscribed": "Pretplata započeta",
+        "updated": "Pretplata ažurirana"
+      },
+      "subscription": {
+        "charged": "Pretplata naplaćena"
+      }
+    }
+  }
+}

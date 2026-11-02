@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Európske riešenie · agenti AI",
+      "lead": "Európsky finančný firewall pre vašich agentov AI. Claude, ChatGPT alebo n8n žiadajú, vy podpíšete jedným ťuknutím a každý výdavok je kontrolovaný, spárovaný a preukázateľný, v banke podľa vášho výberu.",
+      "tryFree": "Vyskúšajte zadarmo →",
+      "seeDemo": "Pozrieť ukážku",
+      "visualAria": "Príklad: žiadosť agenta a jeho jednorazová karta",
+      "expired": "Platnosť vypršala",
+      "pending": "Čakajúca žiadosť",
+      "toApprove": "Čaká na schválenie",
+      "purpose": "predplatné pre tím",
+      "approve": "Schváliť prístupovým kľúčom",
+      "decline": "Odmietnuť"
+    },
+    "trust": {
+      "aria": "Záruky",
+      "europe": "Európske",
+      "europeText": "Eurá, európske banky, dáta vo Frankfurte, GDPR.",
+      "funds": "Vaše prostriedky zostávajú u vás",
+      "fundsText": "Artemis nikdy nedrží peniaze.",
+      "number": "Číslo karty mimo Artemis",
+      "numberText": "Kartu zobrazuje vaša banka, nie my.",
+      "aiAct": "Pripravené na AI Act",
+      "aiActText": "Každý výdavok podpísaný, reťazený denník, štvrťročná správa."
+    },
+    "demo": {
+      "eyebrow": "Ukážka",
+      "title": "Od žiadosti k platbe za 20 sekúnd.",
+      "explain": "Bez toho, aby ste kedykoľvek zdieľali firemnú kartu.",
+      "step1": "Agent žiada",
+      "window": "claude · konverzácia",
+      "userMessage": "Predplať tímu Notion Plus, 5 miest.",
+      "agentMessage": "Vyžiadal som kartu na {amount}. Čakám na vaše schválenie.",
+      "step2": "Vy schválite",
+      "notification": "{agent} chce minúť {amount}",
+      "sheetTitle": "Schválenie mandátu",
+      "validity": "{minutes} min",
+      "faceId": "Podpísať cez Face ID",
+      "step3": "Agent zaplatí",
+      "reconciled": "Spárované"
+    },
+    "benefits": {
+      "eyebrow": "Čo kupujete",
+      "title": "Nie kartu.",
+      "explain": "Tie už banky začínajú rozdávať. Kupujete kontrolu, čas a dôkaz.",
+      "control": {
+        "eyebrow": "Kontrola",
+        "title": "Bez vášho súhlasu neodíde nič.",
+        "text": "Rozpočty, limity, povolení obchodníci, ochranné mechanizmy proti prompt injection. Nad vašimi limitmi každý výdavok čaká na podpis prístupovým kľúčom od jedného alebo viacerých schvaľovateľov."
+      },
+      "time": {
+        "eyebrow": "Ušetrený čas",
+        "title": "Žiadne ručne vytvárané karty.",
+        "text": "Agent žiada, vy podpíšete jedným ťuknutím, karta sa vytvorí vo vašej banke, transakcia sa spáruje a faktúra založí. Žiadne odškrtávanie výpisov ani naháňanie dokladov."
+      },
+      "proof": {
+        "eyebrow": "Dôkaz",
+        "title": "Každý výdavok schválil človek.",
+        "text": "Podpísané mandáty, reťazený auditný denník, ktorý nemožno zmeniť, a štvrťročná správa o dohľade: to, čo vyžaduje AI Act, váš finančný riaditeľ aj audítor, pripravené na odovzdanie."
+      },
+      "agencies": {
+        "eyebrow": "Pre agentúry",
+        "title": "Jeden rozpočet a jedna faktúra na klienta.",
+        "text": "Priestory pre klientov, mesačný rozpočet na klienta, prirážka pri prefakturácii a mesačný prehľad pripravený na odoslanie. Vaši klienti konečne vidia, koľko ich agenti míňajú."
+      }
+    },
+    "how": {
+      "eyebrow": "Ako to funguje",
+      "title": "Štyri kroky, žiadna zdieľaná karta.",
+      "s1": "Agent žiada",
+      "s1Text": "Cez MCP alebo API: „{amount} u Notion, predplatné pre tím“.",
+      "s2": "Pravidlá filtrujú",
+      "s2Text": "Rozpočet, limit, obchodník: mimo pravidiel sa žiadosť okamžite zamietne.",
+      "s3": "Vy schválite",
+      "s3Text": "Upozornenie v telefóne, podpis prístupovým kľúčom.",
+      "s4": "Agent zaplatí",
+      "s4Text": "Jednorazová karta, presná suma, krátka platnosť a potom automatické spárovanie."
+    },
+    "useCases": {
+      "eyebrow": "Príklady použitia",
+      "title": "Čo vaši agenti už nakupujú.",
+      "explain": "Teraz s vlastnou kartou.",
+      "api": {
+        "title": "API a tokeny",
+        "text": "Dobiť kredity, keď sa minie kvóta, bez toho, aby firemná karta ležala v súbore .env."
+      },
+      "saas": {
+        "title": "Predplatné SaaS",
+        "text": "Predplatiť alebo predĺžiť plán pre tím, presne na schválenú sumu."
+      },
+      "cloud": {
+        "title": "Cloud a domény",
+        "text": "Kúpiť doménu alebo zaplatiť prekročenie hostingu uprostred nasadzovania."
+      },
+      "data": {
+        "title": "Dáta a nákupy B2B",
+        "text": "Zaplatiť za dataset, scraping alebo kancelárske potreby, s automaticky priloženým dokladom.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Úprimne",
+      "title": "Používate len Stripe, Ramp alebo Mercury?",
+      "explain": "Časť práce už robia.",
+      "lead": "Artemis prináša to, čo banka pre svojich konkurentov neurobí.",
+      "banks": "Viacero bánk naraz",
+      "banksText": "Stripe Issuing, Revolut, Qonto a Sandbox, riadené z jedného miesta podľa jednej politiky.",
+      "accounting": "Francúzske účtovníctvo",
+      "accountingText": "Exporty FEC a Pennylane, doklad pri každom mandáte, automatické párovanie.",
+      "proof": "Dôkaz pre AI Act pripravený na odovzdanie",
+      "proofText": "Podpis človeka pri každom výdavku, reťazený denník, register agentov, štvrťročná správa.",
+      "agency": "Režim pre agentúry",
+      "agencyText": "Agenti pre viacerých klientov, každý s vlastným rozpočtom, maržou a prehľadom."
+    },
+    "europe": {
+      "eyebrow": "Európske riešenie",
+      "title": "Vytvorené v Európe, pre Európu.",
+      "lead": "Americké karty pre agentov hovoria jazykom dolárov, amerických bánk a amerického práva. Artemis hovorí jazykom eur, európskych bánk, GDPR, aktu AI Act a francúzskeho účtovníctva.",
+      "banks": "Eurá a európske banky: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "EÚ",
+      "data": "Dáta hostované vo Frankfurte, GDPR, šifrované prístupové údaje",
+      "article": "Čl. 14",
+      "oversight": "Ľudský dohľad podľa AI Act, preukázaný pri každom výdavku",
+      "accounting": "Francúzske účtovníctvo: FEC, Pennylane, priložené doklady"
+    },
+    "compare": {
+      "eyebrow": "Porovnanie",
+      "title": "Kartu vydáva vaša banka.",
+      "explain": "Artemis ich všetky riadi zhora.",
+      "criterion": "Kritérium",
+      "bankOnly": "Samotná vaša banka (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Samotná banka",
+      "usCards": "Americké karty pre agentov",
+      "usCardsShort": "Karty z USA",
+      "rows": {
+        "card": "Virtuálna karta pre agenta",
+        "banks": "Viacero bánk, jedna politika",
+        "signature": "Podpis človeka pri každom výdavku (prístupový kľúč)",
+        "aiAct": "Exportovateľný dôkaz pre AI Act",
+        "accounting": "Francúzske účtovníctvo (FEC, Pennylane)",
+        "agency": "Režim pre agentúry (rozpočty a prefakturácia podľa klienta)",
+        "europe": "Eurá, hosting a dáta v Európe"
+      },
+      "values": {
+        "yes": "Áno",
+        "no": "Nie",
+        "yesBank": "Áno, vydaná vašou bankou",
+        "yesQuorum": "Áno, s kvórom",
+        "dependsPlan": "Závisí od plánu",
+        "dependsBank": "Závisí od banky",
+        "partial": "Čiastočne"
+      }
+    },
+    "builders": {
+      "eyebrow": "Pre vývojárov",
+      "title": "Zapojené jedným riadkom.",
+      "explain": "Claude, ChatGPT, n8n, Make alebo váš vlastný kód.",
+      "lead": "Vzdialený server MCP a REST API. Bezplatný Sandbox so simulovanými kartami na testovanie bez banky.",
+      "connect": "Pripojiť Claude →",
+      "window": "terminál"
+    },
+    "faq": {
+      "eyebrow": "Časté otázky",
+      "title": "Na čo sa nás pýtate.",
+      "more": "Máte ďalšiu otázku? Prečítajte si stránku <a href=\"{security}\">Bezpečnosť</a> alebo <a href=\"{docs}\">dokumentáciu</a>."
+    },
+    "final": {
+      "title": "Majte svojich agentov pod kontrolou.",
+      "lead": "Európsky finančný firewall, v režime Sandbox zadarmo, bez platobnej karty. Posledné slovo máte vy.",
+      "signup": "Vytvoriť účet →",
+      "pricing": "Pozrieť cenník",
+      "holder": "vas.agent"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Come funziona",
+    "description": "Come Artemis permette ai suoi agenti IA di pagare mentre lei mantiene il controllo.",
+    "headline": "L'agente chiede, lei decide, la banca paga.",
+    "lead": "Artemis si colloca tra i suoi agenti e la sua banca. Applica le sue regole, raccoglie la sua approvazione e crea una carta monouso per l'importo esatto.",
+    "step1": {
+      "title": "1. Collega la sua banca",
+      "body": "Stripe Issuing (consigliata) o Revolut Business: le carte virtuali vengono create sul <strong>suo</strong> conto e addebitate sui <strong>suoi</strong> fondi. Qonto si collega in lettura, per il congelamento e la riconciliazione. Artemis non riceve, non detiene e non trasferisce mai denaro. Per provare, la Sandbox simula una banca."
+    },
+    "step2": {
+      "title": "2. Crea un agente e le sue regole",
+      "body": "Ogni agente riceve un token segreto e una policy: budget mensile, limite per acquisto, valute, esercenti consentiti o bloccati, categorie di esercenti, soglia di approvazione automatica e durata di validità della carta."
+    },
+    "step3": {
+      "title": "3. L'agente richiede una carta",
+      "body": "Tramite lo strumento MCP <code>request_card</code> o l'API REST. Una richiesta che viola le regole viene rifiutata immediatamente, con un motivo chiaro. Tutte le altre attendono la sua approvazione, tranne i piccoli importi presso un esercente di fiducia, se lo ha consentito."
+    },
+    "step4": {
+      "title": "4. Approva con una passkey",
+      "body": "Riceve una notifica. La schermata del mandato mostra l'agente, l'importo, l'esercente e la finalità. Firma con la sua passkey (Face ID, impronta digitale, chiave di sicurezza). La firma copre il contenuto esatto del mandato."
+    },
+    "step5": {
+      "title": "5. L'agente paga, Artemis riconcilia",
+      "body": "La carta è monouso, limitata all'importo e scade rapidamente. L'agente riceve un link di breve durata: la carta viene mostrata dalla sua banca e il numero non passa mai da Artemis. Non appena la banca segnala la transazione, Artemis la riconcilia, segnala eventuali discrepanze e archivia il giustificativo."
+    },
+    "demo": {
+      "mandate": "mandato · {id}",
+      "intent": "Finalità: abbonamento del team, 5 postazioni.",
+      "rules": "Regole: limite {cap} · budget residuo {remaining}",
+      "signed": "Firmato con passkey · {minutes} min fa",
+      "transactions": "transazioni",
+      "matched": "Riconciliata",
+      "mismatch": "Discrepanza"
+    }
+  }
+}

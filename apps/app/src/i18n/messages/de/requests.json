@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Nach Status filtern",
+      "all": "Alle",
+      "pending": "Freizugeben",
+      "issued": "Karte ausgegeben",
+      "completed": "Bezahlt",
+      "rejected": "Abgelehnt",
+      "failed": "Fehlgeschlagen"
+    },
+    "list": {
+      "title": "Anfragen",
+      "lead": "Jede Anfrage Ihrer Agenten, mit Entscheidung und Karte.",
+      "emptyTitle": "Keine Anfragen",
+      "emptyBody": "Die Anfragen Ihrer Agenten erscheinen hier."
+    },
+    "decision": {
+      "notAllowed": "Nur Inhaber, Administratoren und Freigeber können entscheiden.",
+      "cancelledOnDevice": "Freigabe auf dem Gerät abgebrochen.",
+      "reasonLabel": "Ablehnungsgrund",
+      "reasonHint": "Für den Agenten sichtbar.",
+      "confirmReject": "Ablehnung bestätigen",
+      "cancel": "Abbrechen",
+      "signing": "Wird signiert …",
+      "approve": "Mit meinem Passkey freigeben",
+      "reject": "Ablehnen"
+    },
+    "detail": {
+      "confirmCancel": "Diese Anfrage und ihre Karte stornieren?",
+      "receiptUnavailable": "Beleg nicht verfügbar.",
+      "eyebrow": "Anfrage · {id}",
+      "amount": "Angefragter Betrag",
+      "agent": "Agent",
+      "mandateWindow": "Mandat · {id}",
+      "purpose": "Zweck",
+      "category": "Kategorie",
+      "expires": "Läuft ab",
+      "rules": "Regeln",
+      "perTxLimit": "Limit",
+      "budget": "Budget",
+      "decision": "Entscheidung",
+      "hash": "sha256 {hash}",
+      "quorum": "Quorum: {signed} von {required} erforderlichen Signaturen oberhalb des Schwellenwerts.",
+      "unusualAmount": "Schutzmechanismus: ungewöhnlicher Betrag für diesen Agenten, menschliche Freigabe erforderlich.",
+      "autoApproved": "Automatisch durch die Regeln freigegeben",
+      "signedByPasskey": "Mandat per Passkey signiert",
+      "card": "Karte",
+      "cardHolderFallback": "Agent",
+      "cardAria": "Virtuelle Karte mit Endziffern {last4}, Inhaber {holder}, gültig bis {exp}",
+      "bankSca": "Geben Sie die Kartenerstellung zusätzlich in Ihrer Banking-App frei.",
+      "cardExpires": "Gültig bis {date}",
+      "handedOver": "an den Agenten übergeben {time}",
+      "notHandedOver": "noch nicht an den Agenten übergeben",
+      "qontoNotice": "Qonto übergibt keine Karten an Agenten: Zeigen Sie die Karte hier an und schließen Sie die Zahlung selbst ab.",
+      "showQontoCard": "Karte anzeigen (Qonto)",
+      "simulatePayment": "Zahlung simulieren",
+      "cancelCard": "Karte stornieren",
+      "noCard": "Keine Karte ausgegeben.",
+      "transactions": "Transaktionen",
+      "noTransactions": "Keine von der Bank gemeldeten Transaktionen.",
+      "receipts": "Belege",
+      "addReceipt": "Hinzufügen",
+      "noReceipts": "Keine Belege.",
+      "back": "← Alle Anfragen"
+    }
+  }
+}

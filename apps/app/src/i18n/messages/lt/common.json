@@ -1,0 +1,92 @@
+{
+  "common": {
+    "loading": "Įkeliama…",
+    "copy": "Kopijuoti",
+    "copied": "Nukopijuota"
+  },
+  "lang": {
+    "choose": "Kalba"
+  },
+  "nav": {
+    "dashboard": "Suvestinė",
+    "requests": "Užklausos",
+    "agents": "Agentai",
+    "clients": "Klientai",
+    "cards": "Kortelės",
+    "subscriptions": "Prenumeratos",
+    "transactions": "Operacijos",
+    "exports": "Eksportas",
+    "banks": "Bankai",
+    "team": "Komanda",
+    "audit": "Auditas",
+    "billing": "Atsiskaitymai",
+    "settings": "Nustatymai"
+  },
+  "shell": {
+    "home": "Artemis, suvestinė",
+    "organization": "Organizacija",
+    "admin": "Administravimas",
+    "freezeAllHint": "Įšaldyti visus agentus ir atšaukti aktyvias korteles",
+    "frozen": "Įšaldyta",
+    "freezeAll": "Įšaldyti viską",
+    "signOut": "Atsijungti",
+    "navAria": "Programos navigacija",
+    "pendingCount_one": "{count} laukia",
+    "pendingCount_few": "{count} laukia",
+    "pendingCount_many": "{count} laukia",
+    "pendingCount_other": "{count} laukia",
+    "frozenBanner": "Organizacija įšaldyta: naujų kortelių išduoti negalima. Atšildykite ją skiltyje Nustatymai."
+  },
+  "status": {
+    "pending": "Laukia patvirtinimo",
+    "approved": "Patvirtinta",
+    "issued": "Kortelė išduota",
+    "completed": "Apmokėta",
+    "rejected": "Atmesta",
+    "expired": "Nebegalioja",
+    "failed": "Banko klaida",
+    "canceled": "Atšaukta",
+    "active": "Aktyvi",
+    "pending_bank_sca": "Banko patvirtinimas",
+    "used": "Panaudota",
+    "frozen": "Įšaldyta",
+    "matched": "Suderinta",
+    "mismatch": "Neatitikimas",
+    "unmatched": "Nesuderinta"
+  },
+  "roles": {
+    "owner": "Savininkas",
+    "admin": "Administratorius",
+    "approver": "Tvirtintojas",
+    "viewer": "Stebėtojas"
+  },
+  "errors": {
+    "network": "Tinklas nepasiekiamas. Patikrinkite ryšį.",
+    "unauthorized": "Jūsų sesija baigėsi. Prisijunkite iš naujo.",
+    "forbidden": "Neturite teisės to daryti.",
+    "not_found": "Nerasta arba nebepasiekiama.",
+    "invalid_input": "Kai kurie duomenys netinkami. Patikrinkite formą.",
+    "rate_limited": "Per daug bandymų. Palaukite ir bandykite dar kartą.",
+    "quota_exceeded": "Pasiekta jūsų mėnesio įgaliojimų kvota.",
+    "subscription_inactive": "Jūsų prenumerata neaktyvi. Atnaujinkite ją skiltyje Atsiskaitymai.",
+    "org_frozen": "Organizacija įšaldyta.",
+    "agent_frozen": "Šis agentas įšaldytas.",
+    "request_not_pending": "Ši užklausa nebelaukia sprendimo.",
+    "request_expired": "Šios užklausos galiojimas baigėsi.",
+    "already_revealed": "Ši kortelė jau perduota.",
+    "card_not_ready": "Kortelė dar nepasiekiama.",
+    "bank_error": "Bankas atmetė operaciją.",
+    "plan_limit": "Pasiektas jūsų plano limitas. Norėdami tęsti, pasirinkite aukštesnį planą.",
+    "over_client_budget": "Viršytas šio kliento mėnesio biudžetas.",
+    "internal": "Įvyko klaida. Bandykite dar kartą.",
+    "currency_not_allowed": "Politika šios valiutos neleidžia.",
+    "invalid_amount": "Netinkama suma.",
+    "over_transaction_limit": "Suma viršija vienos operacijos limitą.",
+    "over_monthly_budget": "Viršytas agento mėnesio biudžetas.",
+    "merchant_blocked": "Šis prekybininkas užblokuotas pagal politiką.",
+    "merchant_not_allowed": "Šio prekybininko nėra leidžiamųjų sąraše.",
+    "mcc_blocked": "Ši prekybininkų kategorija užblokuota.",
+    "mcc_not_allowed": "Ši prekybininkų kategorija neleidžiama.",
+    "too_many_requests": "Per paskutinę valandą šis agentas pateikė per daug užklausų."
+  }
+}

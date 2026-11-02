@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Predložak: politika potrošnje AI agenata",
+    "intro": "Besplatan predložak koji možete prilagoditi, za uređivanje potrošnje agenata umjetne inteligencije i dokumentiranje ljudskog nadzora koji zahtijeva članak 14. europskog Akta o umjetnoj inteligenciji (AI Act). Ispišite ovu stranicu ili je kopirajte u svoj wiki.",
+    "scope": {
+      "title": "1. Svrha i područje primjene",
+      "body": "Ova politika primjenjuje se na svakog softverskog agenta (konverzacijski asistent, automatizacija, skripta) ovlaštenog za kupnju u ime društva [DRUŠTVO]. Nijedan agent ne koristi platnu karticu društva ni zaposlenika: svaka kupnja ide putem jednokratne virtualne kartice zatražene preko Artemisa."
+    },
+    "register": {
+      "title": "2. Registar agenata",
+      "body": "Svaki agent upisuje se u registar s ovim podacima: naziv, platforma, odgovorna osoba, svrha, mjesečni budžet, limit po kupnji, dopušteni trgovci i, ako je primjenjivo, klijent za kojeg radi."
+    },
+    "rules": {
+      "title": "3. Pravila potrošnje",
+      "i1": "Mjesečni budžet po agentu: [IZNOS] €; limit po kupnji: [IZNOS] €.",
+      "i2": "Dopušteni trgovci: [POPIS]; zabranjene kategorije: igre na sreću, prijenosi novca, kvazigotovina, vrijednosni papiri.",
+      "i3": "Automatsko odobrenje samo ispod [IZNOS] € i kod dopuštenog trgovca; iznad toga obvezan je potpis čovjeka.",
+      "i4": "Iznad [IZNOS] € potrebna su dva različita potpisnika."
+    },
+    "oversight": {
+      "title": "4. Ljudski nadzor",
+      "body": "Osobe ovlaštene za odobravanje su: [IMENA / ULOGE]. Odobrenje se daje pristupnim ključem na točan sadržaj naloga (agent, iznos, trgovac, svrha). Svaki zahtjev koji nije odobren automatski istječe."
+    },
+    "records": {
+      "title": "5. Potvrde i računovodstvo",
+      "body": "Svaka kupnja povezuje se sa svojim računom u roku od [N] sati; u protivnom se agent suspendira. Potrošnja se mjesečno izvozi (FEC ili Pennylane) i usklađuje s bankovnim izvodima."
+    },
+    "incidents": {
+      "title": "6. Incidenti",
+      "body": "U slučaju neuobičajenog ponašanja, odstupanja u iznosu ili trgovcu ili sumnje na prompt injection, odgovorna osoba odmah zamrzava agenta (ili cijelu organizaciju) i evidentira incident."
+    },
+    "retention": {
+      "title": "7. Čuvanje i revizija",
+      "body": "Ulančani revizijski zapisnik čuva se [10] godina. Izvješće o nadzoru izrađuje se svakog tromjesečja, a pregledava ga [ULOGA]. Ova se politika revidira svake godine."
+    },
+    "note": "Artemis u paketu {plan} generira registar agenata i tromjesečno izvješće o nadzoru."
+  }
+}

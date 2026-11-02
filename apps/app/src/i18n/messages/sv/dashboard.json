@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · planen {plan}",
+    "title": "Översikt",
+    "stats": {
+      "spent": "Förbrukat denna månad",
+      "pending": "Att godkänna",
+      "openQueue": "Öppna kön →",
+      "requests": "Begäranden denna månad"
+    },
+    "recent": {
+      "title": "Senaste begäranden",
+      "viewAll": "Visa alla →",
+      "empty": "Inga begäranden denna månad. Anslut en agent från sidan {agents}.",
+      "agentsLink": "Agenter"
+    },
+    "byAgent": {
+      "title": "Per agent",
+      "manage": "Hantera →",
+      "empty": "Inga agenter."
+    }
+  }
+}

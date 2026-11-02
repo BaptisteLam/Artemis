@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Dina agenter betalar. Du har sista ordet.",
+    "description": "Den europeiska finansiella brandväggen för dina AI-agenter: kontroll, sparad tid och bevis enligt AI Act för varje köp, i den bank du väljer."
+  },
+  "layout": {
+    "skip": "Hoppa till innehållet"
+  },
+  "nav": {
+    "aria": "Huvudnavigering",
+    "home": "Artemis, startsida",
+    "howItWorks": "Så fungerar det",
+    "agencies": "Byråer",
+    "pricing": "Priser",
+    "docs": "Dokumentation",
+    "security": "Säkerhet",
+    "login": "Logga in",
+    "cta": "Prova"
+  },
+  "lang": {
+    "choose": "Välj språk"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Byråer",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT och n8n är varumärken som tillhör respektive ägare. Artemis är inte knutet till någon av dem.",
+    "product": "Produkt",
+    "policyTemplate": "Policymall",
+    "waitlist": "Väntelista",
+    "restApi": "REST API",
+    "legal": "Juridiskt",
+    "legalNotice": "Rättslig information",
+    "terms": "Försäljningsvillkor",
+    "privacy": "Integritet"
+  },
+  "legal": {
+    "eyebrow": "Juridiskt",
+    "updated": "Senast uppdaterad: 1 november 2026.",
+    "frenchPrevails": "Denna sida är en översättning som tillhandahålls i informationssyfte. Endast den <a href=\"{href}\">franska versionen</a> är juridiskt bindande.",
+    "vat": "Mervärdesskatt tillämpas inte, art. 293 B i franska skattelagen (CGI)",
+    "status": "Enskild näringsidkare (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (sidor och API); Supabase, Inc. — data lagras inom Europeiska unionen (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentation",
+    "start": "Kom igång",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI och Claude-skill",
+    "api": "REST API",
+    "rules": "Regler och godkännande"
+  },
+  "notFound": {
+    "title": "Sidan hittades inte",
+    "eyebrow": "Fel 404",
+    "headline": "Den här sidan finns inte.",
+    "lead": "Länken kan vara inaktuell. Gå tillbaka till startsidan eller bläddra i dokumentationen.",
+    "home": "Startsida"
+  }
+}

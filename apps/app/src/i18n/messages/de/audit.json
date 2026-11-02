@@ -1,0 +1,94 @@
+{
+  "audit": {
+    "title": "Audit-Log",
+    "lead": "Jedes Ereignis ist per SHA-256-Hash verkettet und kann weder geändert noch gelöscht werden: Es ist Ihr Nachweis der menschlichen Aufsicht (AI Act).",
+    "verify": "Integrität prüfen",
+    "export": "Exportieren",
+    "report": "AI-Act-Bericht {quarter}",
+    "exportFailed": "Export fehlgeschlagen.",
+    "reportUnavailable": "Bericht nicht verfügbar.",
+    "chainOk_one": "Kette intakt: {count} Eintrag geprüft.",
+    "chainOk_other": "Kette intakt: {count} Einträge geprüft.",
+    "chainBroken": "Kette unterbrochen bei Eintrag Nr. {id}.",
+    "exportUpsell": "Der signierte Export des Audit-Logs ist im Tarif Business enthalten.",
+    "seePlans": "Tarife ansehen",
+    "cols": {
+      "date": "Datum",
+      "event": "Ereignis",
+      "actor": "Akteur",
+      "hash": "Fingerabdruck"
+    },
+    "view": "ansehen",
+    "older": "Ältere →",
+    "actors": {
+      "user": "Nutzer",
+      "agent": "Agent",
+      "system": "System"
+    },
+    "actions": {
+      "org": {
+        "created": "Organisation erstellt",
+        "frozen": "Organisation gesperrt",
+        "unfrozen": "Organisation entsperrt",
+        "card_delivery_changed": "Modus der Kartenübergabe geändert",
+        "slack_connected": "Slack verbunden",
+        "slack_disconnected": "Slack getrennt"
+      },
+      "agent": {
+        "created": "Agent erstellt",
+        "updated": "Agent aktualisiert",
+        "deleted": "Agent gelöscht",
+        "token_rotated": "Token neu generiert",
+        "frozen": "Agent gesperrt"
+      },
+      "policy": {
+        "updated": "Regeln aktualisiert"
+      },
+      "request": {
+        "created": "Anfrage erstellt",
+        "rejected": "Anfrage abgelehnt",
+        "approved": "Mandat signiert",
+        "auto_approved": "Automatische Freigabe",
+        "approval_recorded": "Freigabe erfasst",
+        "expired": "Anfrage abgelaufen"
+      },
+      "card": {
+        "issued": "Karte ausgegeben",
+        "issue_failed": "Kartenausgabe fehlgeschlagen",
+        "revealed": "Karte an den Agenten übergeben",
+        "link_created": "Kartenlink erstellt",
+        "viewed": "Karte angezeigt",
+        "canceled": "Karte storniert",
+        "expired": "Karte abgelaufen"
+      },
+      "transaction": {
+        "matched": "Transaktion abgeglichen",
+        "mismatch": "Abweichung erkannt"
+      },
+      "receipt": {
+        "attached": "Beleg angehängt"
+      },
+      "bank": {
+        "connected": "Bank verbunden",
+        "disconnected": "Bank getrennt"
+      },
+      "member": {
+        "invited": "Mitglied eingeladen",
+        "joined": "Mitglied beigetreten",
+        "removed": "Mitglied entfernt",
+        "role_changed": "Rolle geändert"
+      },
+      "client": {
+        "created": "Kunde erstellt",
+        "updated": "Kunde aktualisiert"
+      },
+      "billing": {
+        "subscribed": "Abonnement abgeschlossen",
+        "updated": "Abonnement geändert"
+      },
+      "subscription": {
+        "charged": "Abonnement belastet"
+      }
+    }
+  }
+}

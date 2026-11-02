@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Dla agencji",
+    "description": "Agencje automatyzacji: wydatki agentów Twoich klientów pod kontrolą, z budżetem i fakturą dla każdego klienta.",
+    "eyebrow": "Agencje automatyzacji",
+    "headline": "Agenci Twoich klientów wydają. Ty refakturujesz bez kłopotu.",
+    "lead": "Tworzysz agentów n8n, Make lub Claude dla swoich klientów? Artemis rozdziela wydatki według klientów, nakłada budżet na każdego z nich i przygotowuje refakturowanie z Twoją marżą.",
+    "try": "Wypróbuj za darmo →",
+    "plan": "Plan {plan}: {base} + {client} za aktywnego klienta",
+    "spaces": {
+      "title": "Osobna przestrzeń dla każdego klienta",
+      "body": "Przypisz każdego agenta do klienta. Jego wnioski, karty, transakcje i dowody zakupu są przechowywane oddzielnie. Agent nigdy nie wyda budżetu innego klienta."
+    },
+    "budget": {
+      "title": "Miesięczny budżet na klienta",
+      "body": "Ustal miesięczny limit dla każdego klienta, niezależnie od reguł poszczególnych agentów. Po jego przekroczeniu wniosek zostaje odrzucony, zanim w ogóle trafi do człowieka."
+    },
+    "rebilling": {
+      "title": "Refakturowanie jednym kliknięciem",
+      "body": "Co miesiąc Artemis przygotowuje raport dla każdego klienta: obciążone zakupy, agent, sprzedawca, dowód zakupu, opłata za obsługę wyliczona z Twojej marży, kwota do refakturowania. Eksport CSV gotowy do wysłania lub zaimportowania do Twojego narzędzia do fakturowania."
+    },
+    "proof": {
+      "title": "Dowód dla Twoich klientów",
+      "body": "Każdą płatność podpisuje upoważniona osoba, a dziennika nie można zmienić. Pokaż klientom, że ich agenci działają pod nadzorem człowieka, zgodnie z wymogami AI Act."
+    },
+    "european": {
+      "title": "W pełni europejski",
+      "body": "Euro, europejskie banki, dane we Frankfurcie, eksporty FEC i Pennylane dla francuskiej księgowości."
+    },
+    "demo": {
+      "window": "refakturowanie · martin-bakery · listopad",
+      "subtotal": "Suma częściowa",
+      "fee": "Opłata za obsługę 15%",
+      "total": "Do refakturowania"
+    }
+  }
+}

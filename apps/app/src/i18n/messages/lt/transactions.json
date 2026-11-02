@@ -1,0 +1,17 @@
+{
+  "transactions": {
+    "title": "Operacijos",
+    "lead": "Jūsų bankų praneštos operacijos, suderintos su įgaliojimais (paskutinės 90 dienų).",
+    "mismatches_one": "{count} operacija neatitinka savo įgaliojimo. Peržiūrėkite ją ir, jei reikia, įšaldykite agentą.",
+    "mismatches_few": "{count} operacijos neatitinka savo įgaliojimų. Peržiūrėkite jas ir, jei reikia, įšaldykite agentą.",
+    "mismatches_many": "{count} operacijos neatitinka savo įgaliojimų. Peržiūrėkite jas ir, jei reikia, įšaldykite agentą.",
+    "mismatches_other": "{count} operacijų neatitinka savo įgaliojimų. Peržiūrėkite jas ir, jei reikia, įšaldykite agentą.",
+    "emptyTitle": "Operacijų nėra",
+    "emptyText": "Jos atsiranda praėjus kelioms minutėms po kiekvieno mokėjimo.",
+    "colDate": "Data",
+    "colMerchant": "Prekybininkas",
+    "colAmount": "Suma",
+    "colBankStatus": "Banko būsena",
+    "colMatch": "Suderinimas"
+  }
+}

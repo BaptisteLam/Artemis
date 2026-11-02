@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Cártaí",
+    "lead": "Cártaí aonúsáide arna n-eisiúint i do bhainc. Ní stóráiltear uimhir iomlán an chárta choíche.",
+    "linkAria": "Cárta •••• {last4}",
+    "cardAria": "Cárta fíorúil dar críoch {last4}, sealbhóir {holder}, dul in éag {exp}",
+    "tagRevealed": "Tugtha don ghníomhaire",
+    "tagSingleUse": "Aonúsáide",
+    "emptyTitle": "Gan chártaí",
+    "emptyText": "Taispeántar na cártaí nuair a bhíonn iarratas formheasta.",
+    "colCard": "Cárta",
+    "colIssued": "Eisithe",
+    "colExpires": "Dul in éag",
+    "colRevealed": "Tugtha don ghníomhaire",
+    "colStatus": "Stádas",
+    "notRevealed": "Níl",
+    "request": "Iarratas →"
+  }
+}

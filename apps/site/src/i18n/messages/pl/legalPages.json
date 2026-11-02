@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Ogólne warunki sprzedaży i korzystania",
+      "purposeTitle": "1. Przedmiot",
+      "purpose": "Niniejsze warunki regulują dostęp do oprogramowania Artemis, wydawanego przez {editor} ({status}, SIRET {siret}), oraz jego subskrypcję przez klientów biznesowych. Usługa jest przeznaczona wyłącznie dla przedsiębiorców.",
+      "serviceTitle": "2. Opis usługi",
+      "service": "Artemis umożliwia klientowi określanie reguł wydatków dla jego agentów programowych, zatwierdzanie ich wniosków o płatność oraz sterowanie, za pośrednictwem interfejsów programowania aplikacji jego własnego banku, tworzeniem jednorazowych kart wirtualnych. Artemis nie świadczy żadnych usług płatniczych, nie przechowuje żadnych środków i nie wydaje żadnych kart. Relacja bankowa, opłaty bankowe i silne uwierzytelnianie podlegają wyłącznie umowie zawartej między klientem a jego bankiem.",
+      "accountTitle": "3. Konto i bezpieczeństwo",
+      "account": "Klient odpowiada za poufność tokenów agentów, dostępu do swojego konta i kluczy dostępu swoich użytkowników, a także za skonfigurowane przez siebie reguły. Każdy wydatek zatwierdzony przez upoważnionego użytkownika lub zgodny z regułą automatycznego zatwierdzania uważa się za autoryzowany przez klienta.",
+      "pricesTitle": "4. Plany i ceny",
+      "prices": "Plany: Sandbox (bezpłatny), Builder ({builder} / miesiąc), Team ({team} / miesiąc), Agencje ({agency} / miesiąc + {perClient} za aktywnego klienta), Business (od {business} / miesiąc). Po przekroczeniu miesięcznego limitu planu płatnego każde dodatkowe upoważnienie jest rozliczane w wysokości {overage}. Ceny netto. {vat}. Płatność miesięczna z góry kartą za pośrednictwem Stripe. Odnowienie następuje automatycznie; wypowiedzenie staje się skuteczne z końcem bieżącego okresu, bez proporcjonalnego zwrotu.",
+      "quotasTitle": "5. Limity",
+      "quotas": "Każdy plan obejmuje limity (agenci, podłączone banki, wnioski miesięcznie). Po przekroczeniu tych limitów nowe wnioski są odrzucane do następnego okresu lub do zmiany planu.",
+      "availabilityTitle": "6. Dostępność",
+      "availability": "Wydawca dokłada rozsądnych starań, aby zapewnić dostępność usługi, bez zobowiązania do osiągnięcia rezultatu. Mogą wystąpić przerwy związane z pracami konserwacyjnymi lub spowodowane przez dostawców usług technicznych i bankowych.",
+      "liabilityTitle": "7. Odpowiedzialność",
+      "liability": "Wydawca nie ponosi odpowiedzialności za zakupy dokonane przez agentów klienta w granicach udzielonych autoryzacji, za wybór sprzedawców, za jakość zakupionych towarów lub usług ani za decyzje banku klienta. Odpowiedzialność wydawcy, z wszystkich tytułów łącznie, jest ograniczona do kwot zapłaconych przez klienta w ciągu ostatnich dwunastu miesięcy.",
+      "dataTitle": "8. Dane",
+      "data": "Przetwarzanie danych osobowych opisano w <a href=\"{href}\">polityce prywatności</a>. Klient może w każdej chwili wyeksportować swoje dane.",
+      "lawTitle": "9. Prawo właściwe",
+      "law": "Prawo francuskie. W braku polubownego rozwiązania spory rozstrzygają sądy właściwe dla miejsca zamieszkania wydawcy."
+    },
+    "privacy": {
+      "title": "Polityka prywatności",
+      "controllerTitle": "Administrator danych",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Przetwarzane dane",
+      "dataAccount": "Konto: adres e-mail, organizacja, rola, klucze dostępu (wyłącznie klucze publiczne).",
+      "dataActivity": "Aktywność: wnioski o kartę, podpisane upoważnienia, transakcje zgłoszone przez bank, dowody zakupu, dziennik audytu.",
+      "dataBanks": "Połączenia bankowe: zaszyfrowane tokeny dostępu (AES-256-GCM).",
+      "dataBilling": "Rozliczenia: obsługiwane przez Stripe; Artemis nie widzi numerów kart, którymi opłacasz subskrypcję.",
+      "dataWaitlist": "Lista oczekujących: adres e-mail, firma, przypadek użycia.",
+      "cardNumbers": "Artemis nigdy nie przechowuje pełnego numeru ani kodu zabezpieczającego kart wydanych dla Twoich agentów.",
+      "purposesTitle": "Cele i podstawy prawne",
+      "purposes": "Wykonanie umowy (świadczenie usługi), obowiązki prawne (księgowość), prawnie uzasadniony interes (bezpieczeństwo, zapobieganie oszustwom), zgoda (lista oczekujących).",
+      "processorsTitle": "Podmioty przetwarzające",
+      "processors": "Supabase (baza danych, Unia Europejska), Cloudflare (hosting i sieć), Stripe (rozliczenia), Resend (e-maile transakcyjne). Wszelkie przekazania danych poza UE odbywają się na podstawie standardowych klauzul umownych.",
+      "retentionTitle": "Okresy przechowywania",
+      "retention": "Dane konta: okres obowiązywania umowy, a następnie 3 lata. Dziennik audytu i dane księgowe: 10 lat. Lista oczekujących: 3 lata od ostatniej interakcji.",
+      "rightsTitle": "Twoje prawa",
+      "rights": "Prawo dostępu, sprostowania, usunięcia, przenoszenia, sprzeciwu i ograniczenia przetwarzania: napisz na adres {email}. Możesz wnieść skargę do CNIL (cnil.fr).",
+      "cookiesTitle": "Pliki cookie",
+      "cookies": "Strona nie używa reklamowych plików cookie ani zewnętrznych narzędzi analitycznych. Aplikacja korzysta wyłącznie z pamięci niezbędnej do obsługi Twojej sesji."
+    },
+    "notice": {
+      "title": "Nota prawna",
+      "editorTitle": "Wydawca",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Adres: {address}",
+      "contact": "Kontakt: {email}",
+      "directorTitle": "Dyrektor publikacji",
+      "hostingTitle": "Hosting",
+      "natureTitle": "Charakter usługi",
+      "nature": "Artemis to oprogramowanie do zarządzania wydatkami agentów sztucznej inteligencji. Artemis nie jest ani instytucją płatniczą, ani instytucją pieniądza elektronicznego: nie przyjmuje, nie przechowuje ani nie przekazuje żadnych środków. Karty płatnicze wydaje instytucja bankowa klienta, na własną odpowiedzialność.",
+      "ipTitle": "Własność intelektualna",
+      "ip": "Treści, znaki towarowe i logotypy tej strony są własnością wydawcy. Wszelkie powielanie bez zgody jest zabronione."
+    }
+  }
+}

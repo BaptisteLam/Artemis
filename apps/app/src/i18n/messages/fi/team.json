@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Tiimi",
+    "lead": "Hyväksyjät saavat pyynnöt ja allekirjoittavat ne pääsyavaimellaan.",
+    "confirmRemove": "Poistetaanko tämä jäsen?",
+    "cols": {
+      "member": "Jäsen",
+      "role": "Rooli",
+      "since": "Alkaen"
+    },
+    "you": "sinä",
+    "remove": "Poista",
+    "invite": "Kutsu",
+    "email": "Sähköposti",
+    "role": "Rooli",
+    "send": "Lähetä kutsu",
+    "inviteLink": "Kutsulinkki (voimassa 7 päivää):",
+    "expiresOn": "vanhenee {date}",
+    "revoke": "Peru"
+  }
+}

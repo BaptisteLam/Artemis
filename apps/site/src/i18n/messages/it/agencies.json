@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Per le agenzie",
+    "description": "Agenzie di automazione: gli agenti dei suoi clienti spendono sotto controllo, con un budget e una fattura per ciascun cliente.",
+    "eyebrow": "Agenzie di automazione",
+    "headline": "Gli agenti dei suoi clienti spendono. Lei rifattura senza complicazioni.",
+    "lead": "Realizza agenti n8n, Make o Claude per i suoi clienti? Artemis separa le spese per cliente, applica un budget a ciascuno e prepara la rifatturazione con il suo margine.",
+    "try": "Provi gratuitamente →",
+    "plan": "Piano {plan}: {base} + {client} per cliente attivo",
+    "spaces": {
+      "title": "Uno spazio di lavoro per cliente",
+      "body": "Assegni ogni agente a un cliente. Richieste, carte, transazioni e giustificativi restano separati. Un agente non può mai spendere il budget di un altro cliente."
+    },
+    "budget": {
+      "title": "Un budget mensile per cliente",
+      "body": "Definisca un tetto mensile per ciascun cliente, in aggiunta alle regole di ogni agente. Oltre questa soglia, la richiesta viene rifiutata prima ancora di arrivare a una persona."
+    },
+    "rebilling": {
+      "title": "Rifatturazione in un clic",
+      "body": "Ogni mese Artemis prepara un report per ciascun cliente: acquisti addebitati, agente, esercente, giustificativo, commissione di gestione calcolata sul suo margine, totale da rifatturare. Export CSV pronto da inviare o da importare nel suo strumento di fatturazione."
+    },
+    "proof": {
+      "title": "Una prova per i suoi clienti",
+      "body": "Ogni pagamento è firmato da una persona autorizzata e il registro non può essere alterato. Dimostri ai suoi clienti che i loro agenti sono sotto supervisione umana, come richiede l'AI Act."
+    },
+    "european": {
+      "title": "Europeo dall'inizio alla fine",
+      "body": "Euro, banche europee, dati a Francoforte, export FEC e Pennylane per la contabilità francese."
+    },
+    "demo": {
+      "window": "rifatturazione · martin-bakery · novembre",
+      "subtotal": "Subtotale",
+      "fee": "Commissione di gestione 15%",
+      "total": "Totale da rifatturare"
+    }
+  }
+}

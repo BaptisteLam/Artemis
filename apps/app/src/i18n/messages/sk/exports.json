@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Účtovné exporty",
+    "lead": "Výdavky stiahnuté vašimi bankami, pripravené pre Pennylane, vášho účtovníka alebo tabuľkový procesor.",
+    "failed": "Export zlyhal.",
+    "from": "Od",
+    "to": "Do (bez tohto dňa)",
+    "downloadCsv": "Stiahnuť CSV",
+    "downloadFec": "Stiahnuť FEC",
+    "formats": "CSV: oddeľovač bodkočiarka, kompatibilné s Excelom. FEC: 18 predpísaných stĺpcov, MD 604000 / D 512000, importovateľné do Pennylane.",
+    "fecUpsell": "FEC je súčasťou plánov od Team.",
+    "seePlans": "Pozrieť plány"
+  }
+}

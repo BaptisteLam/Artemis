@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Biztonság és megfelelőség",
+    "description": "Hogyan védi az Artemis az Ön pénzét, kártyáit és adatait.",
+    "eyebrow": "Biztonság",
+    "headline": "Úgy terveztük, hogy egyetlen ügynök se cselekedhessen önállóan.",
+    "lead": "A legrosszabb esetet, a promptinjektálással manipulált ügynököt, maga a kártya korlátozza.",
+    "funds": {
+      "title": "A pénze soha nem hagyja el a bankját",
+      "body": "Az Artemis szoftver. A kártyákat az Ön saját szolgáltatója (Qonto, Revolut Business, Stripe) bocsátja ki az Ön számlájára. Semmilyen pénzeszközt nem kezelünk, nem fogadunk és nem utalunk."
+    },
+    "defense": {
+      "title": "Többrétegű védelem",
+      "i1": "Egyszer használatos kártya, pontosan a jóváhagyott összegre korlátozva.",
+      "i2": "Rövid lejárat (alapértelmezés szerint 30 perc).",
+      "i3": "Ügynökönkénti szabályok: keret, limit, kereskedők, kategóriák.",
+      "i4": "Automatikus egyeztetés, riasztással minden összeg- vagy kereskedőeltérés esetén.",
+      "i5": "„Minden befagyasztása” gomb: egy kattintással felfüggeszti az ügynököket és visszavonja az aktív kártyákat.",
+      "i6": "Az ügynökök csak kérni tudnak: egyetlen MCP-eszköz sem módosíthat szabályt és nem hagyhat jóvá fizetést."
+    },
+    "cardNumbers": {
+      "title": "Kártyaszámok",
+      "body": "Alapértelmezés szerint a teljes kártyaszám és a biztonsági kód soha nem halad át az Artemisen: az ügynök rövid élettartamú, egyszer használatos hivatkozást kap (10 perc), a kártyát pedig a kibocsátó bank jeleníti meg (Stripe Issuing Elements). A közvetlen átadás haladó beállításként elérhető, alapértelmezés szerint ki van kapcsolva; ekkor sem tárolunk semmit."
+    },
+    "mandates": {
+      "title": "Aláírt megbízások",
+      "body": "Minden jóváhagyás WebAuthn- (passkey-) aláírás a megbízás SHA-256 hash-értékén: ügynök, összeg, pénznem, kereskedő, cél, lejárat. Az auditnapló hash-lánccal védett és csak hozzáfűzhető: minden manipuláció kimutatható."
+    },
+    "aiAct": {
+      "title": "AI Act és emberi felügyelet",
+      "body": "Az uniós AI Act előírja az alkalmazók számára rendszereik naplózását és felügyeletét. Az exportálható Artemis-napló rögzíti, ki, mikor és milyen szabályok alapján engedélyezte az egyes ügynöki fizetéseket."
+    },
+    "data": {
+      "title": "Személyes adatok",
+      "body": "Az adatbázis az Európai Unióban található (Supabase, Frankfurt). A banki hozzáférési adatok titkosítva (AES-256-GCM). Lásd az <a href=\"{href}\">adatvédelmi tájékoztatót</a>."
+    },
+    "report": {
+      "title": "Sebezhetőség bejelentése",
+      "body": "Írjon az <a href=\"{href}\">impresszumban</a> megadott címre. 72 órán belül válaszolunk."
+    }
+  }
+}

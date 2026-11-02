@@ -1,0 +1,60 @@
+{
+  "billing": {
+    "title": "Naplata",
+    "lead": "Trenutačni paket: {plan}. Zahtjevi ovaj mjesec: {usage}. PDV se ne obračunava, čl. 293 B francuskog Općeg poreznog zakonika (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Upravljanje pretplatom i računima",
+    "returnOk": "Hvala! Vaša se pretplata aktivira (nekoliko sekundi).",
+    "returnCanceled": "Plaćanje je otkazano, ništa nije promijenjeno.",
+    "inactive": "Vaša pretplata više nije aktivna ({status}). Plaćene značajke su obustavljene: ažurirajte način plaćanja.",
+    "unknown": "nepoznato",
+    "overage": "Iznad kvote plaćenog paketa svaki dodatni nalog naplaćuje se {price}.",
+    "overageCount_one": "Ovaj mjesec: {count} nalog.",
+    "overageCount_few": "Ovaj mjesec: {count} naloga.",
+    "overageCount_other": "Ovaj mjesec: {count} naloga.",
+    "ownerOnly": "Samo vlasnik može promijeniti pretplatu.",
+    "current": "Trenutačni",
+    "from": "od {price}",
+    "perMonth": "/ mjesečno",
+    "choose": "Odaberite {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agencije",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agent",
+        "i2": "Simulirana banka",
+        "i3": "20 simuliranih naloga / mjesečno"
+      },
+      "builder": {
+        "i1": "3 agenta",
+        "i2": "1 stvarna banka",
+        "i3": "50 naloga / mjesečno",
+        "i4": "Odobravanje pristupnim ključem i obavijesti"
+      },
+      "team": {
+        "i1": "10 agenata",
+        "i2": "2 stvarne banke",
+        "i3": "300 naloga / mjesečno",
+        "i4": "Slack, kvorum odobravatelja, FEC izvoz",
+        "i5": "Pretplate kojima upravlja svaki agent"
+      },
+      "agency": {
+        "i1": "25 agenata, neograničen broj klijenata",
+        "i2": "1.000 naloga / mjesečno",
+        "i3": "Budžeti, marža i prefakturiranje po klijentu",
+        "i4": "+ {price} po aktivnom klijentu"
+      },
+      "business": {
+        "i1": "Neograničeno",
+        "i2": "Dokumentacija i izvješće za AI Act",
+        "i3": "Izvoz potpisanog revizijskog zapisnika",
+        "i4": "Prioritetna podrška"
+      }
+    }
+  }
+}

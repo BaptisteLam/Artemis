@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Bainc",
+    "lead": "Cruthaítear na cártaí i do bhanc féin. Ní choinníonn Artemis do chistí choíche.",
+    "bankAria": "Banc",
+    "help": {
+      "stripe": "Cuntas Stripe le Issuing cumasaithe (AE). Cruthaigh eochair shrianta le ceadanna scríofa Issuing. Cuir isteach sealbhóir cárta atá ann cheana (ich_…) nó seoladh do chuideachta ionas gur féidir le Artemis ceann a chruthú.",
+      "qonto": "Rochtain léite, reo agus réiteach: ní thugann Qonto an cárta do thríú páirtithe agus cuireann sé cosc ar é a thabhairt ar iasacht. Comhartha OAuth ó chlár comhpháirtíochta Qonto; is féidir leis an bhformheastóir cárta Qonto a fheiceáil go slán agus an íocaíocht a chur i gcrích é féin.",
+      "revolut": "Plean Grow nó níos airde, rochtain “Cards API” cumasaithe ag an bhfoireann tacaíochta, agus cead i scríbhinn ó Revolut (Valid Permission) roimh aon úsáid táirgeachta. Teastaíonn tabhairt dhíreach (Socruithe)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Eochair rúnda shrianta",
+      "publishableKey": "Eochair infhoilsithe",
+      "stripeCardholder": "Sealbhóir cárta Stripe",
+      "companyName": "Ainm na cuideachta",
+      "address": "Seoladh",
+      "postalCode": "Cód poist",
+      "city": "Cathair",
+      "country": "Tír",
+      "webhookSecret": "Rún an webhook",
+      "accessToken": "Comhartha rochtana",
+      "refreshToken": "Comhartha athnuachana",
+      "oauthClientId": "Aitheantas cliaint OAuth",
+      "oauthClientSecret": "Rún cliaint OAuth",
+      "holderMemberId": "Aitheantas ball an tsealbhóra",
+      "bankAccountId": "Aitheantas an chuntais bhainc",
+      "environment": "Timpeallacht",
+      "stagingToken": "Comhartha stáitse",
+      "clientAssertion": "Dearbhú cliaint (JWT)",
+      "holderId": "Aitheantas an tsealbhóra cárta"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… nó sk_test_…",
+      "stripePublishableKey": "pk_live_… (nasc gearrshaolach cárta)",
+      "stripeCardholder": "ich_… (roghnach)",
+      "ifNoCardholder": "Mura bhfuil sealbhóir cárta ann",
+      "country": "Cód ISO, m.sh. FR",
+      "webhookSecret": "whsec_… (nuair a bheidh an webhook cruthaithe, féach thíos)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Roghnach",
+      "toRefreshToken": "Chun an comhartha a athnuachan",
+      "qontoMembershipId": "membership id Qonto",
+      "qontoBankAccountId": "bank_account id Qonto",
+      "sandboxOnly": "Sandbox amháin",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Roghnach, le haghaidh athnuachana",
+      "teamMemberOptional": "Ball foirne (roghnach)"
+    },
+    "encrypted": "Déantar na dintiúir a thástáil, ansin a chriptiú (AES-256-GCM). Ní thaispeántar arís iad.",
+    "testing": "An nasc á thástáil…",
+    "connectProvider": "Ceangail {name}",
+    "testOk": "Nasc ceart",
+    "testFailed": "Theip air: {detail}",
+    "confirmDisconnect": "An banc seo a dhícheangal? Ní bheidh na gníomhairí a úsáideann é in ann cárta a fháil a thuilleadh.",
+    "lastSync": "Sioncrónú deireanach: {date}",
+    "stripeWebhook": "Webhook Stripe (teagmhais issuing_transaction.*):",
+    "test": "Tástáil",
+    "disconnect": "Dícheangail",
+    "connectRealBank": "Ceangail fíorbhanc",
+    "upgrade": "Tá ceangal fíorbhainc san áireamh ón bplean Builder ({price}/mí).",
+    "choosePlan": "Roghnaigh plean →"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Einmalkarte · simulierte Bank",
+    "eyebrowBank": "Einmalkarte · von Ihrer Bank ausgegeben",
+    "lead": "Dieser Link lässt sich nur einmal öffnen. Die Karte ist auf den obigen Betrag begrenzt und an diesen Händler gebunden.",
+    "fields": {
+      "number": "Nummer",
+      "expiry": "Gültig bis",
+      "cvc": "Sicherheitscode",
+      "holder": "Karteninhaber"
+    },
+    "opening": "Wird geöffnet …",
+    "show": "Karte •••• {last4} anzeigen",
+    "footer": "Die Nummer wird direkt von der ausgebenden Bank angezeigt: Sie läuft nie über Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js ist nicht verfügbar.",
+      "invalidLink": "Ungültiger, bereits verwendeter oder abgelaufener Link.",
+      "stripeRefused": "Stripe hat die Anfrage abgelehnt."
+    }
+  }
+}

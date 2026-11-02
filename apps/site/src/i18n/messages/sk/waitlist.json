@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Čakací zoznam",
+    "description": "Dostanete upozornenie, keď sa otvoria ostré bankové konektory.",
+    "headline": "Buďte medzi prvými.",
+    "lead": "Konektory Qonto a Revolut otvárame postupne. Nechajte nám svoj e-mail a dáme vám vedieť, hneď ako bude vaša banka dostupná.",
+    "email": "Pracovný e-mail",
+    "company": "Spoločnosť",
+    "useCase": "Za čo potrebujú vaši agenti platiť?",
+    "useCasePlaceholder": "API, SaaS, cloud, dáta…",
+    "submit": "Pridať sa na čakací zoznam",
+    "sending": "Odosiela sa…",
+    "ok": "Ďakujeme, ste na zozname. Hneď po otvorení vám pošleme e-mail.",
+    "error": "Registrácia zlyhala. Skúste to znova o chvíľu."
+  }
+}

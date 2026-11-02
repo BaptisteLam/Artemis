@@ -1,0 +1,22 @@
+{
+  "admin": {
+    "eyebrow": "Administravimas",
+    "title": "Artemis skaičiais",
+    "mrr": "MRR",
+    "paying": "Mokantys klientai",
+    "ofOrgs_one": "iš {count} organizacijos",
+    "ofOrgs_few": "iš {count} organizacijų",
+    "ofOrgs_many": "iš {count} organizacijos",
+    "ofOrgs_other": "iš {count} organizacijų",
+    "signups7d": "Registracijos (7 dienos)",
+    "requests30d": "Užklausos (30 dienų)",
+    "orgs": "Organizacijos",
+    "cols": {
+      "name": "Pavadinimas",
+      "plan": "Planas",
+      "subscription": "Prenumerata",
+      "created": "Sukurta"
+    },
+    "waitlist": "Laukiančiųjų sąrašas ({total})"
+  }
+}

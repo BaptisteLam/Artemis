@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Praghsanna",
+    "description": "Sandbox saor in aisce, ansin {a}, {b}, {c} nó {d} in aghaidh na míosa. Gan aon choimisiún ar do chaiteachas.",
+    "headline": "Síntiús simplí amháin. Gan choimisiún.",
+    "lead": "Ní íocann tú ach as na bogearraí. Eisíonn do bhanc na cártaí, faoi do ghnáthphlean baincéireachta.",
+    "popular": "Is mó éileamh",
+    "from": "ó {price}",
+    "perMonth": "/ mí",
+    "start": "Tosaigh",
+    "choose": "Roghnaigh {plan}",
+    "mandates": "{count} sainordú / mí",
+    "sandbox": {
+      "pitch": "Bain triail as le banc ionsamhlaithe.",
+      "i1": "1 ghníomhaire",
+      "i2": "Banc ionsamhlaithe",
+      "i3": "{count} sainordú ionsamhlaithe / mí",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Do shaoroibrí nó d'fhorbróir agus a ghníomhairí.",
+      "i1": "3 ghníomhaire",
+      "i2": "1 bhanc ceangailte",
+      "i4": "Formheas le passkey",
+      "i5": "Ráillí cosanta in aghaidh instealltaí"
+    },
+    "team": {
+      "pitch": "Do ghnólacht nuathionscanta le 5 go 50 duine.",
+      "i1": "10 ngníomhaire",
+      "i2": "2 bhanc",
+      "i4": "Slack agus córam formheastóirí",
+      "i5": "Síntiúis, easpórtáil FEC"
+    },
+    "agency": {
+      "pitch": "Do ghníomhaireachtaí uathoibrithe.",
+      "i1": "Cliaint gan teorainn, 25 gníomhaire",
+      "i3": "Buiséad agus corrlach in aghaidh an chliaint",
+      "i4": "Tuarascáil mhíosúil le haghaidh athshonrasctha",
+      "i5": "+ {price} in aghaidh an chliaint ghníomhaigh"
+    },
+    "business": {
+      "pitch": "Do ghnólachtaí rialáilte atá ag fás.",
+      "i1": "Gan teorainn",
+      "i2": "Comhad agus tuarascáil AI Act",
+      "i3": "Easpórtáil shínithe den loga iniúchta",
+      "i4": "Tacaíocht tosaíochta"
+    },
+    "faq": {
+      "title": "Ceisteanna coitianta",
+      "q1": "An bhfuil táillí in aghaidh an chárta ann?",
+      "a1": "Níl ó Artemis. Cuireann do bhanc a phlean féin i bhfeidhm (áirítear cártaí fíorúla i bhformhór na bpleananna Qonto agus Revolut Business; gearrann Stripe Issuing de réir a phraghsála féin).",
+      "q2": "Cad a tharlaíonn má théim thar mo chuóta?",
+      "a2": "Ar phlean íoctha, leanann do ghníomhairí ar aghaidh: gearrtar {price} ar gach sainordú thar an gcuóta ag deireadh na míosa. Sa Sandbox, diúltaítear d'iarratais leis an gcód <code>quota_exceeded</code>.",
+      "q3": "Conas a ghearrtar an plean {plan}?",
+      "a3": "{base} in aghaidh na míosa, móide {client} in aghaidh an chliaint ghníomhaigh, is é sin gach cliant ar cruthaíodh sainordú amháin ar a laghad dó i rith na míosa.",
+      "q4": "An féidir liom cealú tráth ar bith?",
+      "a4": "Is féidir, ón limistéar Billeáil. Maireann an síntiús go deireadh na tréimhse íoctha; is féidir do shonraí a easpórtáil i gcónaí.",
+      "q5": "CBL",
+      "a5": "Is praghsanna glana iad na praghsanna a thaispeántar."
+    }
+  }
+}

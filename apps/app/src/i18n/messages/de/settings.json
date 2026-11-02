@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Einstellungen",
+    "signOut": "Abmelden",
+    "language": {
+      "title": "Sprache",
+      "lead": "Sprache der Oberfläche auf diesem Gerät."
+    },
+    "notifications": {
+      "title": "Benachrichtigungen auf diesem Gerät",
+      "lead": "Erhalten Sie zu jeder Anfrage eine Benachrichtigung. Fügen Sie Artemis auf dem iPhone zuerst zum Home-Bildschirm hinzu (Teilen → Zum Home-Bildschirm).",
+      "notConfigured": "Push-Benachrichtigungen sind auf diesem Server nicht konfiguriert (VAPID-Schlüssel). E-Mails bleiben aktiv.",
+      "unsupported": "Dieser Browser unterstützt keine Push-Benachrichtigungen.",
+      "denied": "Benachrichtigungen sind in den Browsereinstellungen blockiert.",
+      "enable": "Benachrichtigungen aktivieren",
+      "on": "Benachrichtigungen sind aktiviert.",
+      "disable": "Deaktivieren"
+    },
+    "slack": {
+      "lead": "Jede offene Anfrage wird in einem Slack-Kanal gepostet, mit einer Schaltfläche, die die Passkey-Freigabe öffnet. Erstellen Sie in Slack einen „Incoming Webhook“ und fügen Sie dessen URL ein.",
+      "connected": "Slack ist verbunden.",
+      "disconnect": "Trennen",
+      "urlLabel": "Slack-Webhook-URL",
+      "connect": "Verbinden",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Kartenübergabe an die Agenten",
+      "confirmDirect": "Direkte Übergabe: Die Kartennummer läuft auf dem Weg zum Agenten einmal über Artemis. Damit fallen Sie in den Geltungsbereich von PCI DSS, und bei Revolut ist eine schriftliche Genehmigung erforderlich. Fortfahren?",
+      "linkTitle": "Kurzlebiger Link (empfohlen)",
+      "linkText": "Der Agent erhält einen 10 Minuten gültigen Einmal-Link; die Karte wird von der ausgebenden Bank angezeigt (Stripe Issuing). Die Nummer läuft nie über Artemis.",
+      "directTitle": "Direkte Übergabe (erweiterte Option)",
+      "directText": "Die Nummer wird nur einmal an den Agenten weitergeleitet, ohne gespeichert zu werden. Für Revolut erforderlich. Sie fallen in den Geltungsbereich von PCI DSS."
+    },
+    "org": {
+      "title": "Organisation",
+      "name": "Name",
+      "rename": "Umbenennen"
+    },
+    "emergency": {
+      "title": "Notfall",
+      "lead": "„Alles sperren“ sperrt alle Agenten und storniert aktive Karten sowie offene Anfragen. Nutzen Sie es, wenn sich ein Agent auffällig verhält oder ein Token kompromittiert wurde.",
+      "confirmFreeze": "Die gesamte Organisation sperren? Alle Agenten werden gesperrt und aktive Karten storniert.",
+      "unfreeze": "Organisation entsperren",
+      "freeze": "Jetzt alles sperren",
+      "afterUnfreeze": "Reaktivieren Sie nach dem Entsperren jeden Agenten auf seiner Seite."
+    },
+    "passkeys": {
+      "title": "Passkeys",
+      "devicePrompt": "Gerätename (z. B. iPhone von Lea)",
+      "confirmDelete": "Diesen Passkey löschen?",
+      "add": "Hinzufügen",
+      "lead": "Zum Freigeben einer Ausgabe ist ein Passkey erforderlich. Fügen Sie auf jedem Gerät, das Sie verwenden, einen hinzu.",
+      "addedOn": "hinzugefügt am {date}",
+      "delete": "Löschen",
+      "none": "Kein Passkey: Sie können noch keine Ausgaben freigeben."
+    }
+  }
+}

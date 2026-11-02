@@ -1,0 +1,21 @@
+{
+  "admin": {
+    "eyebrow": "Administrēšana",
+    "title": "Artemis skaitļos",
+    "mrr": "MRR",
+    "paying": "Maksājoši klienti",
+    "ofOrgs_zero": "no {count} organizācijām",
+    "ofOrgs_one": "no {count} organizācijas",
+    "ofOrgs_other": "no {count} organizācijām",
+    "signups7d": "Reģistrācijas (7 dienas)",
+    "requests30d": "Pieprasījumi (30 dienas)",
+    "orgs": "Organizācijas",
+    "cols": {
+      "name": "Nosaukums",
+      "plan": "Plāns",
+      "subscription": "Abonements",
+      "created": "Izveidots"
+    },
+    "waitlist": "Gaidīšanas saraksts ({total})"
+  }
+}

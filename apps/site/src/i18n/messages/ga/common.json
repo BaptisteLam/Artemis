@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Íocann do ghníomhairí. Is agatsa atá an focal deiridh.",
+    "description": "An balla dóiteáin airgeadais Eorpach do do ghníomhairí IS: smacht, am sábháilte agus cruthúnas don AI Act le gach ceannach, ar an mbanc is rogha leat."
+  },
+  "layout": {
+    "skip": "Léim go dtí an t-ábhar"
+  },
+  "nav": {
+    "aria": "Príomhnascleanúint",
+    "home": "Artemis, baile",
+    "howItWorks": "Conas a oibríonn sé",
+    "agencies": "Gníomhaireachtaí",
+    "pricing": "Praghsanna",
+    "docs": "Doiciméid",
+    "security": "Slándáil",
+    "login": "Logáil isteach",
+    "cta": "Bain triail as"
+  },
+  "lang": {
+    "choose": "Roghnaigh teanga"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Gníomhaireachtaí",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Is trádmharcanna dá n-úinéirí faoi seach iad Claude, ChatGPT agus n8n. Níl baint ag Artemis le haon cheann acu.",
+    "product": "Táirge",
+    "policyTemplate": "Teimpléad beartais",
+    "waitlist": "Liosta feithimh",
+    "restApi": "REST API",
+    "legal": "Dlíthiúil",
+    "legalNotice": "Fógra dlíthiúil",
+    "terms": "Téarmaí díolacháin",
+    "privacy": "Príobháideachas"
+  },
+  "legal": {
+    "eyebrow": "Dlíthiúil",
+    "updated": "Nuashonrú deireanach: 1 Samhain 2026.",
+    "frenchPrevails": "Aistriúchán é an leathanach seo a chuirtear ar fáil ar mhaithe le háisiúlacht. Is é an <a href=\"{href}\">leagan Fraincise</a> amháin atá ceangailteach go dlíthiúil.",
+    "vat": "CBL neamhbhainteach, airt. 293 B de Chód Ginearálta Cánach na Fraince (CGI)",
+    "status": "Trádálaí aonair (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, SAM (leathanaigh agus API); Supabase, Inc. — sonraí arna n-óstáil san Aontas Eorpach (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Doiciméadú",
+    "start": "Tosú",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI agus scil Claude",
+    "api": "REST API",
+    "rules": "Rialacha agus formheas"
+  },
+  "notFound": {
+    "title": "Níor aimsíodh an leathanach",
+    "eyebrow": "Earráid 404",
+    "headline": "Níl an leathanach seo ann.",
+    "lead": "D'fhéadfadh sé go bhfuil an nasc as dáta. Fill ar an leathanach baile nó brabhsáil an doiciméadú.",
+    "home": "Baile"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "billing": {
+    "title": "Fatturazione",
+    "lead": "Piano attuale: {plan}. Richieste di questo mese: {usage}. IVA non applicabile, art. 293 B del Codice generale delle imposte francese (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Gestisci abbonamento e fatture",
+    "returnOk": "Grazie! Il suo abbonamento è in fase di attivazione (qualche secondo).",
+    "returnCanceled": "Pagamento annullato, non è stato modificato nulla.",
+    "inactive": "Il suo abbonamento non è più attivo ({status}). Le funzionalità a pagamento sono sospese: aggiorni il suo metodo di pagamento.",
+    "unknown": "sconosciuto",
+    "overage": "Oltre la quota di un piano a pagamento, ogni mandato aggiuntivo è fatturato {price}.",
+    "overageCount_one": "Questo mese: {count} mandato.",
+    "overageCount_many": "Questo mese: {count} mandati.",
+    "overageCount_other": "Questo mese: {count} mandati.",
+    "ownerOnly": "Solo un proprietario può modificare l'abbonamento.",
+    "current": "Attuale",
+    "from": "da {price}",
+    "perMonth": "/ mese",
+    "choose": "Scegli {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agenzie",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agente",
+        "i2": "Banca simulata",
+        "i3": "20 mandati simulati / mese"
+      },
+      "builder": {
+        "i1": "3 agenti",
+        "i2": "1 banca reale",
+        "i3": "50 mandati / mese",
+        "i4": "Approvazione con passkey e notifiche"
+      },
+      "team": {
+        "i1": "10 agenti",
+        "i2": "2 banche reali",
+        "i3": "300 mandati / mese",
+        "i4": "Slack, quorum di approvatori, export FEC",
+        "i5": "Abbonamenti gestiti per agente"
+      },
+      "agency": {
+        "i1": "25 agenti, clienti illimitati",
+        "i2": "1.000 mandati / mese",
+        "i3": "Budget, ricarico e rifatturazione per cliente",
+        "i4": "+ {price} per cliente attivo"
+      },
+      "business": {
+        "i1": "Illimitato",
+        "i2": "Dossier e report AI Act",
+        "i3": "Export firmato del registro di audit",
+        "i4": "Assistenza prioritaria"
+      }
+    }
+  }
+}

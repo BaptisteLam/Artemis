@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Fungerar med",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Engångskort",
+      "aria": "Virtuellt kort som slutar på {last4}, kortinnehavare {holder}, giltigt till {exp}",
+      "holder": "Kortinnehavare",
+      "expires": "Giltigt till",
+      "debit": "Debit",
+      "virtual": "virtuellt",
+      "used": "Använt"
+    },
+    "faq": {
+      "q1": "Förvarar Artemis mina pengar?",
+      "a1": "Nej. Korten skapas i din egen bank (Qonto, Revolut Business eller Stripe Issuing) och debiteras ditt konto. Artemis är programvara: den tillämpar dina regler, hämtar in ditt godkännande och styr banken via dess API. Den tar aldrig emot, förvarar eller överför medel.",
+      "q2": "Vad händer om min agent manipuleras genom en promptinjektion?",
+      "a2": "Agenten kan bara be om ett kort. Varje kort är ett engångskort, begränsat till exakt belopp, låst till den avsedda handlaren och giltigt i 30 minuter. Utanför dina regler avvisas begäran; över din tröskel går ingenting igenom utan din lösennyckel. Varje avvikelse i belopp eller handlare utlöser en varning, och knappen ”Frys allt” stoppar allt med ett klick.",
+      "q3": "Passerar kortnumret genom Artemis?",
+      "a3": "Nej, inte som standard. Vid betalningen får agenten en engångslänk som gäller i 10 minuter: där visas kortet direkt av den utfärdande banken. Artemis ser, lagrar eller vidarebefordrar aldrig numret. När länken väl har öppnats slutar den att fungera.",
+      "q4": "Varför inte bara använda min bank?",
+      "a4": "Om du bara använder Stripe, Ramp eller Mercury gör de redan en del av jobbet. Artemis ger dig det som en bank inte gör för sina konkurrenter: flera banker under en och samma policy, fransk bokföring (FEC, Pennylane), bevis enligt AI Act som är redo att lämnas över och ett byråläge.",
+      "q5": "Vilka banker stöds?",
+      "a5": "Stripe Issuing (rekommenderas) skapar korten och visar dem för agenten utan att numret någonsin passerar genom Artemis. Revolut Business fungerar enligt ett skriftligt avtal med Revolut, där kortet överlämnas direkt. Qonto ansluts för läsning, frysning och avstämning. Sandbox simulerar en bank så att du kan testa utan att ansluta något.",
+      "q6": "Vad kostar det?",
+      "a6": "Sandbox är gratis. Därefter {builder} (Builder), {team} (Team), {agency} + {client} per aktiv kund ({agencyPlan}) eller från {business} (Business) per månad. Utöver din kvot {overage} per mandat. Ingen provision på dina utgifter: din bank tillämpar sitt vanliga prisupplägg. {vat}.",
+      "q7": "Lagras mina data i Europa?",
+      "a7": "Ja. Databasen lagras inom Europeiska unionen (Frankfurt), bankuppgifterna krypteras med AES-256-GCM och den kedjade granskningsloggen dokumenterar den mänskliga tillsyn som AI Act kräver."
+    }
+  }
+}

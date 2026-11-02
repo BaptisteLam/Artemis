@@ -1,0 +1,91 @@
+{
+  "common": {
+    "loading": "Učitavanje…",
+    "copy": "Kopiraj",
+    "copied": "Kopirano"
+  },
+  "lang": {
+    "choose": "Jezik"
+  },
+  "nav": {
+    "dashboard": "Nadzorna ploča",
+    "requests": "Zahtjevi",
+    "agents": "Agenti",
+    "clients": "Klijenti",
+    "cards": "Kartice",
+    "subscriptions": "Pretplate",
+    "transactions": "Transakcije",
+    "exports": "Izvozi",
+    "banks": "Banke",
+    "team": "Tim",
+    "audit": "Revizija",
+    "billing": "Naplata",
+    "settings": "Postavke"
+  },
+  "shell": {
+    "home": "Artemis, nadzorna ploča",
+    "organization": "Organizacija",
+    "admin": "Administracija",
+    "freezeAllHint": "Zamrzni sve agente i poništi aktivne kartice",
+    "frozen": "Zamrznuto",
+    "freezeAll": "Zamrzni sve",
+    "signOut": "Odjava",
+    "navAria": "Navigacija aplikacije",
+    "pendingCount_one": "{count} na čekanju",
+    "pendingCount_few": "{count} na čekanju",
+    "pendingCount_other": "{count} na čekanju",
+    "frozenBanner": "Organizacija je zamrznuta: ne može se izdati nijedna nova kartica. Odmrznite je u Postavkama."
+  },
+  "status": {
+    "pending": "Za odobrenje",
+    "approved": "Odobreno",
+    "issued": "Kartica izdana",
+    "completed": "Plaćeno",
+    "rejected": "Odbijeno",
+    "expired": "Isteklo",
+    "failed": "Pogreška banke",
+    "canceled": "Poništeno",
+    "active": "Aktivno",
+    "pending_bank_sca": "Odobrenje banke",
+    "used": "Iskorišteno",
+    "frozen": "Zamrznuto",
+    "matched": "Povezano",
+    "mismatch": "Odstupanje",
+    "unmatched": "Nepovezano"
+  },
+  "roles": {
+    "owner": "Vlasnik",
+    "admin": "Administrator",
+    "approver": "Odobravatelj",
+    "viewer": "Promatrač"
+  },
+  "errors": {
+    "network": "Mreža nije dostupna. Provjerite vezu.",
+    "unauthorized": "Vaša je sesija istekla. Prijavite se ponovno.",
+    "forbidden": "Nemate dopuštenje za ovu radnju.",
+    "not_found": "Nije pronađeno ili više nije dostupno.",
+    "invalid_input": "Neki su podaci nevažeći. Provjerite obrazac.",
+    "rate_limited": "Previše pokušaja. Pričekajte trenutak i pokušajte ponovno.",
+    "quota_exceeded": "Dosegnuta je vaša mjesečna kvota naloga.",
+    "subscription_inactive": "Vaša pretplata nije aktivna. Ažurirajte je u odjeljku Naplata.",
+    "org_frozen": "Organizacija je zamrznuta.",
+    "agent_frozen": "Ovaj je agent zamrznut.",
+    "request_not_pending": "Ovaj zahtjev više nije na čekanju.",
+    "request_expired": "Ovaj je zahtjev istekao.",
+    "already_revealed": "Ova je kartica već predana.",
+    "card_not_ready": "Kartica još nije dostupna.",
+    "bank_error": "Banka je odbila operaciju.",
+    "plan_limit": "Dosegnut je limit vašeg paketa. Prijeđite na viši paket za nastavak.",
+    "over_client_budget": "Mjesečni budžet ovog klijenta je prekoračen.",
+    "internal": "Došlo je do pogreške. Pokušajte ponovno.",
+    "currency_not_allowed": "Politika ne dopušta ovu valutu.",
+    "invalid_amount": "Nevažeći iznos.",
+    "over_transaction_limit": "Iznos je iznad limita po transakciji.",
+    "over_monthly_budget": "Mjesečni budžet agenta je prekoračen.",
+    "merchant_blocked": "Politika blokira ovog trgovca.",
+    "merchant_not_allowed": "Ovaj trgovac nije na popisu dopuštenih.",
+    "mcc_blocked": "Ova je kategorija trgovca blokirana.",
+    "mcc_not_allowed": "Ova kategorija trgovca nije dopuštena.",
+    "too_many_requests": "Previše zahtjeva ovog agenta u posljednjih sat vremena."
+  }
+}

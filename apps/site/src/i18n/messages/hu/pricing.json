@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Árak",
+    "description": "Ingyenes Sandbox, majd havi {a}, {b}, {c} vagy {d}. A költései után nincs jutalék.",
+    "headline": "Egyszerű előfizetés. Jutalék nélkül.",
+    "lead": "Csak a szoftverért fizet. A kártyákat az Ön bankja bocsátja ki, a szokásos banki díjcsomagja szerint.",
+    "popular": "Legnépszerűbb",
+    "from": "{price}-tól",
+    "perMonth": "/ hó",
+    "start": "Kezdés",
+    "choose": "{plan} kiválasztása",
+    "mandates": "{count} megbízás / hó",
+    "sandbox": {
+      "pitch": "Kipróbálás szimulált bankkal.",
+      "i1": "1 ügynök",
+      "i2": "Szimulált bank",
+      "i3": "{count} szimulált megbízás / hó",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Szabadúszóknak vagy fejlesztőknek és ügynökeiknek.",
+      "i1": "3 ügynök",
+      "i2": "1 csatlakoztatott bank",
+      "i4": "Jóváhagyás passkey-vel",
+      "i5": "Védőkorlátok a promptinjektálás ellen"
+    },
+    "team": {
+      "pitch": "5–50 fős startupoknak.",
+      "i1": "10 ügynök",
+      "i2": "2 bank",
+      "i4": "Slack és jóváhagyói kvórum",
+      "i5": "Előfizetések, FEC-export"
+    },
+    "agency": {
+      "pitch": "Automatizálási ügynökségeknek.",
+      "i1": "Korlátlan számú ügyfél, 25 ügynök",
+      "i3": "Keret és árrés ügyfelenként",
+      "i4": "Havi kimutatás a továbbszámlázáshoz",
+      "i5": "+ {price} aktív ügyfelenként"
+    },
+    "business": {
+      "pitch": "Szabályozott, növekvő vállalatoknak.",
+      "i1": "Korlátlan",
+      "i2": "AI Act-dokumentáció és -jelentés",
+      "i3": "Aláírt auditnapló exportálása",
+      "i4": "Kiemelt támogatás"
+    },
+    "faq": {
+      "title": "Gyakori kérdések",
+      "q1": "Van kártyánkénti díj?",
+      "a1": "Az Artemis részéről nincs. Bankja a saját díjcsomagját alkalmazza (a virtuális kártyák a legtöbb Qonto- és Revolut Business-csomagban benne vannak; a Stripe Issuing a saját díjszabása szerint számláz).",
+      "q2": "Mi történik, ha túllépem a kvótámat?",
+      "a2": "Fizetős csomagban az ügynökei tovább dolgoznak: minden kvótán felüli megbízásért a hónap végén {price} díjat számlázunk. Sandboxban az igényléseket a rendszer a <code>quota_exceeded</code> kóddal elutasítja.",
+      "q3": "Hogyan számlázzuk a(z) {plan} csomagot?",
+      "a3": "Havi {base}, plusz {client} aktív ügyfelenként, azaz minden olyan ügyfél után, akinek a hónap során legalább egy megbízás jött létre.",
+      "q4": "Bármikor lemondhatom?",
+      "a4": "Igen, a Számlázás menüpontban. Az előfizetés a kifizetett időszak végéig érvényes; adatai továbbra is exportálhatók maradnak.",
+      "q5": "Áfa",
+      "a5": "A feltüntetett árak nettó árak."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Für Agenturen",
+    "description": "Automatisierungsagenturen: Die Agenten Ihrer Kunden geben kontrolliert Geld aus, mit einem Budget und einer Rechnung pro Kunde.",
+    "eyebrow": "Automatisierungsagenturen",
+    "headline": "Die Agenten Ihrer Kunden kaufen ein. Sie berechnen ohne Aufwand weiter.",
+    "lead": "Sie entwickeln Agenten mit n8n, Make oder Claude für Ihre Kunden? Artemis trennt die Ausgaben nach Kunde, setzt jedem ein Budget und bereitet die Weiterberechnung mit Ihrer Marge vor.",
+    "try": "Kostenlos testen →",
+    "plan": "Tarif {plan}: {base} + {client} pro aktivem Kunden",
+    "spaces": {
+      "title": "Ein Bereich pro Kunde",
+      "body": "Ordnen Sie jeden Agenten einem Kunden zu. Seine Anfragen, Karten, Transaktionen und Belege bleiben getrennt. Ein Agent kann niemals das Budget eines anderen Kunden ausgeben."
+    },
+    "budget": {
+      "title": "Ein Monatsbudget pro Kunde",
+      "body": "Legen Sie für jeden Kunden eine monatliche Obergrenze fest, zusätzlich zu den Regeln jedes Agenten. Wird sie überschritten, wird die Anfrage abgelehnt, bevor sie überhaupt einen Menschen erreicht."
+    },
+    "rebilling": {
+      "title": "Weiterberechnung mit einem Klick",
+      "body": "Jeden Monat erstellt Artemis für jeden Kunden einen Bericht: belastete Käufe, Agent, Händler, Beleg, Verwaltungsgebühr auf Basis Ihrer Marge, weiterzuberechnender Gesamtbetrag. CSV-Export, bereit zum Versenden oder zum Import in Ihr Rechnungsprogramm."
+    },
+    "proof": {
+      "title": "Nachweise für Ihre Kunden",
+      "body": "Jede Zahlung wird von einer berechtigten Person signiert, und das Protokoll kann nicht verändert werden. Zeigen Sie Ihren Kunden, dass ihre Agenten unter menschlicher Aufsicht stehen, wie es der AI Act verlangt."
+    },
+    "european": {
+      "title": "Durchgehend europäisch",
+      "body": "Euro, europäische Banken, Daten in Frankfurt, FEC- und Pennylane-Exporte für die französische Buchhaltung."
+    },
+    "demo": {
+      "window": "Weiterberechnung · martin-bakery · November",
+      "subtotal": "Zwischensumme",
+      "fee": "Verwaltungsgebühr 15 %",
+      "total": "Weiterzuberechnender Gesamtbetrag"
+    }
+  }
+}

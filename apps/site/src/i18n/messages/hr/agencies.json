@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Za agencije",
+    "description": "Agencije za automatizaciju: potrošnja agenata vaših klijenata pod kontrolom, s budžetom i računom za svakog klijenta.",
+    "eyebrow": "Agencije za automatizaciju",
+    "headline": "Agenti vaših klijenata troše. Vi prefakturirate bez muke.",
+    "lead": "Gradite n8n, Make ili Claude agente za svoje klijente? Artemis razdvaja potrošnju po klijentu, svakome dodjeljuje budžet i priprema prefakturiranje s vašom maržom.",
+    "try": "Isprobajte besplatno →",
+    "plan": "Paket {plan}: {base} + {client} po aktivnom klijentu",
+    "spaces": {
+      "title": "Zaseban prostor za svakog klijenta",
+      "body": "Svakog agenta dodijelite klijentu. Njegovi zahtjevi, kartice, transakcije i potvrde o plaćanju vode se odvojeno. Agent nikada ne može trošiti budžet drugog klijenta."
+    },
+    "budget": {
+      "title": "Mjesečni budžet po klijentu",
+      "body": "Za svakog klijenta postavite mjesečni limit, uz pravila svakog agenta. Iznad njega zahtjev se odbija prije nego što uopće stigne do čovjeka."
+    },
+    "rebilling": {
+      "title": "Prefakturiranje jednim klikom",
+      "body": "Svakog mjeseca Artemis za svakog klijenta priprema izvješće: terećene kupnje, agent, trgovac, potvrda, naknada za upravljanje prema vašoj marži, ukupno za prefakturiranje. CSV izvoz spreman za slanje ili uvoz u vaš alat za fakturiranje."
+    },
+    "proof": {
+      "title": "Dokaz za vaše klijente",
+      "body": "Svako plaćanje potpisuje ovlaštena osoba, a zapisnik se ne može mijenjati. Pokažite klijentima da su njihovi agenti pod ljudskim nadzorom, kako to zahtijeva AI Act."
+    },
+    "european": {
+      "title": "Europski, od početka do kraja",
+      "body": "Euri, europske banke, podaci u Frankfurtu, FEC i Pennylane izvozi za francusko računovodstvo."
+    },
+    "demo": {
+      "window": "prefakturiranje · pekara-martin · studeni",
+      "subtotal": "Međuzbroj",
+      "fee": "Naknada za upravljanje 15 %",
+      "total": "Ukupno za prefakturiranje"
+    }
+  }
+}

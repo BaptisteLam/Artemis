@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Kortit",
+    "lead": "Pankeissasi myönnetyt kertakäyttöiset kortit. Kortin täydellistä numeroa ei koskaan tallenneta.",
+    "linkAria": "Kortti •••• {last4}",
+    "cardAria": "Virtuaalikortti, jonka numero päättyy {last4}, kortinhaltija {holder}, voimassa {exp}",
+    "tagRevealed": "Luovutettu agentille",
+    "tagSingleUse": "Kertakäyttöinen",
+    "emptyTitle": "Ei kortteja",
+    "emptyText": "Kortit näkyvät täällä, kun pyyntö on hyväksytty.",
+    "colCard": "Kortti",
+    "colIssued": "Myönnetty",
+    "colExpires": "Voimassa",
+    "colRevealed": "Luovutettu agentille",
+    "colStatus": "Tila",
+    "notRevealed": "Ei",
+    "request": "Pyyntö →"
+  }
+}

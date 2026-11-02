@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Tim",
+    "lead": "Odobravatelji primaju zahtjeve i potpisuju ih svojim pristupnim ključem.",
+    "confirmRemove": "Ukloniti ovog člana?",
+    "cols": {
+      "member": "Član",
+      "role": "Uloga",
+      "since": "Od"
+    },
+    "you": "vi",
+    "remove": "Ukloni",
+    "invite": "Pozovi",
+    "email": "E-adresa",
+    "role": "Uloga",
+    "send": "Pošalji pozivnicu",
+    "inviteLink": "Poveznica pozivnice (vrijedi 7 dana):",
+    "expiresOn": "istječe {date}",
+    "revoke": "Opozovi"
+  }
+}

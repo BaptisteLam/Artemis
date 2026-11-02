@@ -1,0 +1,96 @@
+{
+  "audit": {
+    "title": "Audito žurnalas",
+    "lead": "Kiekvienas įvykis sujungtas į grandinę SHA-256 maiša ir negali būti nei pakeistas, nei ištrintas: tai jūsų žmogaus priežiūros įrodymas (AI Act).",
+    "verify": "Tikrinti vientisumą",
+    "export": "Eksportuoti",
+    "report": "AI Act ataskaita {quarter}",
+    "exportFailed": "Eksportuoti nepavyko.",
+    "reportUnavailable": "Ataskaita nepasiekiama.",
+    "chainOk_one": "Grandinė nepažeista: patikrintas {count} įrašas.",
+    "chainOk_few": "Grandinė nepažeista: patikrinti {count} įrašai.",
+    "chainOk_many": "Grandinė nepažeista: patikrinta {count} įrašo.",
+    "chainOk_other": "Grandinė nepažeista: patikrinta {count} įrašų.",
+    "chainBroken": "Grandinė nutrūko ties įrašu Nr. {id}.",
+    "exportUpsell": "Pasirašytas audito žurnalo eksportas įtrauktas į planą Business.",
+    "seePlans": "Peržiūrėti planus",
+    "cols": {
+      "date": "Data",
+      "event": "Įvykis",
+      "actor": "Vykdytojas",
+      "hash": "Kontrolinis kodas"
+    },
+    "view": "žiūrėti",
+    "older": "Senesni →",
+    "actors": {
+      "user": "Naudotojas",
+      "agent": "Agentas",
+      "system": "Sistema"
+    },
+    "actions": {
+      "org": {
+        "created": "Organizacija sukurta",
+        "frozen": "Organizacija įšaldyta",
+        "unfrozen": "Organizacija atšildyta",
+        "card_delivery_changed": "Pakeistas kortelės perdavimo režimas",
+        "slack_connected": "Slack prijungtas",
+        "slack_disconnected": "Slack atjungtas"
+      },
+      "agent": {
+        "created": "Agentas sukurtas",
+        "updated": "Agentas atnaujintas",
+        "deleted": "Agentas ištrintas",
+        "token_rotated": "Žetonas sugeneruotas iš naujo",
+        "frozen": "Agentas įšaldytas"
+      },
+      "policy": {
+        "updated": "Taisyklės atnaujintos"
+      },
+      "request": {
+        "created": "Užklausa sukurta",
+        "rejected": "Užklausa atmesta",
+        "approved": "Įgaliojimas pasirašytas",
+        "auto_approved": "Automatinis patvirtinimas",
+        "approval_recorded": "Patvirtinimas užregistruotas",
+        "expired": "Užklausos galiojimas baigėsi"
+      },
+      "card": {
+        "issued": "Kortelė išduota",
+        "issue_failed": "Nepavyko išduoti kortelės",
+        "revealed": "Kortelė perduota agentui",
+        "link_created": "Sukurta kortelės nuoroda",
+        "viewed": "Kortelė peržiūrėta",
+        "canceled": "Kortelė atšaukta",
+        "expired": "Kortelės galiojimas baigėsi"
+      },
+      "transaction": {
+        "matched": "Operacija suderinta",
+        "mismatch": "Aptiktas neatitikimas"
+      },
+      "receipt": {
+        "attached": "Kvitas pridėtas"
+      },
+      "bank": {
+        "connected": "Bankas prijungtas",
+        "disconnected": "Bankas atjungtas"
+      },
+      "member": {
+        "invited": "Narys pakviestas",
+        "joined": "Narys prisijungė",
+        "removed": "Narys pašalintas",
+        "role_changed": "Vaidmuo pakeistas"
+      },
+      "client": {
+        "created": "Klientas sukurtas",
+        "updated": "Klientas atnaujintas"
+      },
+      "billing": {
+        "subscribed": "Prenumerata pradėta",
+        "updated": "Prenumerata atnaujinta"
+      },
+      "subscription": {
+        "charged": "Prenumerata apmokėta"
+      }
+    }
+  }
+}

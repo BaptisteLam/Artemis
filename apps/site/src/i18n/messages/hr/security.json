@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Sigurnost i usklađenost",
+    "description": "Kako Artemis štiti vaša sredstva, vaše kartice i vaše podatke.",
+    "eyebrow": "Sigurnost",
+    "headline": "Izgrađeno tako da nijedan agent ne može djelovati sam.",
+    "lead": "Najgori slučaj, agent kojim se manipulira putem prompt injectiona, ograničava sama kartica.",
+    "funds": {
+      "title": "Vaša sredstva nikada ne napuštaju vašu banku",
+      "body": "Artemis je softver. Kartice izdaje vaš pružatelj usluga (Qonto, Revolut Business, Stripe) na vašem računu. Ne držimo, ne primamo i ne prenosimo nikakva sredstva."
+    },
+    "defense": {
+      "title": "Višeslojna zaštita",
+      "i1": "Jednokratna kartica, ograničena na točan odobreni iznos.",
+      "i2": "Kratak rok valjanosti (zadano 30 minuta).",
+      "i3": "Pravila po agentu: budžet, limit, trgovci, kategorije.",
+      "i4": "Automatsko usklađivanje, uz upozorenje pri svakom odstupanju u iznosu ili trgovcu.",
+      "i5": "Gumb „Zamrzni sve”: agenti suspendirani i aktivne kartice poništene jednim klikom.",
+      "i6": "Agenti mogu samo tražiti: nijedan MCP alat ne može promijeniti pravilo ni odobriti plaćanje."
+    },
+    "cardNumbers": {
+      "title": "Brojevi kartica",
+      "body": "Prema zadanim postavkama puni broj kartice i sigurnosni kod nikada ne prolaze kroz Artemis: agent dobiva kratkotrajnu jednokratnu poveznicu (10 minuta), a karticu prikazuje banka izdavateljica (Stripe Issuing Elements). Izravna predaja dostupna je kao napredna opcija, isključena prema zadanim postavkama; čak ni tada ništa se ne pohranjuje."
+    },
+    "mandates": {
+      "title": "Potpisani nalozi",
+      "body": "Svako odobrenje je WebAuthn potpis (pristupni ključ) nad SHA-256 sažetkom naloga: agent, iznos, valuta, trgovac, svrha, rok valjanosti. Revizijski zapisnik ulančan je sažecima i u njega se može samo dodavati: svaka se izmjena može otkriti."
+    },
+    "aiAct": {
+      "title": "AI Act i ljudski nadzor",
+      "body": "Europski AI Act od subjekata koji uvode sustave zahtijeva da bilježe njihov rad i nadziru ih. Artemisov zapisnik, koji možete izvesti, bilježi tko je odobrio svako plaćanje agenta, kada i prema kojim pravilima."
+    },
+    "data": {
+      "title": "Osobni podaci",
+      "body": "Baza podataka smještena u Europskoj uniji (Supabase, Frankfurt). Bankovne vjerodajnice šifrirane (AES-256-GCM). Pogledajte <a href=\"{href}\">politiku privatnosti</a>."
+    },
+    "report": {
+      "title": "Prijavite ranjivost",
+      "body": "Pišite na adresu navedenu u <a href=\"{href}\">impresumu</a>. Odgovaramo u roku od 72 sata."
+    }
+  }
+}

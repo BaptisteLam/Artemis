@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Cennik",
+    "description": "Bezpłatny Sandbox, następnie {a}, {b}, {c} lub {d} miesięcznie. Bez prowizji od Twoich wydatków.",
+    "headline": "Jedna prosta subskrypcja. Bez prowizji.",
+    "lead": "Płacisz tylko za oprogramowanie. Karty wydaje Twój bank, w ramach Twojego zwykłego planu bankowego.",
+    "popular": "Najpopularniejszy",
+    "from": "od {price}",
+    "perMonth": "/ miesiąc",
+    "start": "Zacznij",
+    "choose": "Wybierz {plan}",
+    "mandates": "{count} upoważnień / miesiąc",
+    "sandbox": {
+      "pitch": "Wypróbuj z symulowanym bankiem.",
+      "i1": "1 agent",
+      "i2": "Symulowany bank",
+      "i3": "{count} symulowanych upoważnień / miesiąc",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Dla freelancera lub dewelopera i jego agentów.",
+      "i1": "3 agentów",
+      "i2": "1 podłączony bank",
+      "i4": "Zatwierdzanie kluczem dostępu",
+      "i5": "Zabezpieczenia przed prompt injection"
+    },
+    "team": {
+      "pitch": "Dla startupu zatrudniającego od 5 do 50 osób.",
+      "i1": "10 agentów",
+      "i2": "2 banki",
+      "i4": "Slack i kworum osób zatwierdzających",
+      "i5": "Subskrypcje, eksport FEC"
+    },
+    "agency": {
+      "pitch": "Dla agencji automatyzacji.",
+      "i1": "Nieograniczona liczba klientów, 25 agentów",
+      "i3": "Budżet i marża dla każdego klienta",
+      "i4": "Miesięczny raport do refakturowania",
+      "i5": "+ {price} za aktywnego klienta"
+    },
+    "business": {
+      "pitch": "Dla regulowanych scale-upów.",
+      "i1": "Bez limitów",
+      "i2": "Dokumentacja i raport AI Act",
+      "i3": "Eksport podpisanego dziennika audytu",
+      "i4": "Priorytetowe wsparcie"
+    },
+    "faq": {
+      "title": "Najczęściej zadawane pytania",
+      "q1": "Czy są opłaty za kartę?",
+      "a1": "Nie ze strony Artemis. Twój bank stosuje własny cennik (karty wirtualne są wliczone w większość planów Qonto i Revolut Business; Stripe Issuing nalicza opłaty zgodnie z własnym cennikiem).",
+      "q2": "Co się stanie, jeśli przekroczę limit?",
+      "a2": "W planie płatnym Twoi agenci działają dalej: każde upoważnienie ponad limit jest rozliczane w wysokości {price} na koniec miesiąca. W Sandbox wnioski są odrzucane z kodem <code>quota_exceeded</code>.",
+      "q3": "Jak rozliczany jest plan {plan}?",
+      "a3": "{base} miesięcznie plus {client} za aktywnego klienta, czyli każdego klienta, dla którego w danym miesiącu utworzono co najmniej jedno upoważnienie.",
+      "q4": "Czy mogę zrezygnować w dowolnym momencie?",
+      "a4": "Tak, w sekcji Rozliczenia. Subskrypcja obowiązuje do końca opłaconego okresu; Twoje dane można nadal eksportować.",
+      "q5": "VAT",
+      "a5": "Podane ceny są cenami netto."
+    }
+  }
+}

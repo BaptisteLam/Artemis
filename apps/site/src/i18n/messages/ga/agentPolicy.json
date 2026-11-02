@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Teimpléad: beartas caiteachais do ghníomhairí IS",
+    "intro": "Teimpléad saor in aisce le cur in oiriúint, chun an caiteachas a dhéanann gníomhairí intleachta saorga a rialú agus chun an mhaoirseacht dhaonna a éilíonn Airteagal 14 d'Acht an AE um Intleacht Shaorga (AI Act) a dhoiciméadú. Priontáil an leathanach seo nó cóipeáil isteach i do vicí é.",
+    "scope": {
+      "title": "1. Cuspóir agus raon feidhme",
+      "body": "Baineann an beartas seo le haon ghníomhaire bogearraí (cúntóir comhrá, uathoibriú, script) atá údaraithe ceannach a dhéanamh thar ceann [CUIDEACHTA]. Ní úsáideann aon ghníomhaire cárta íocaíochta na cuideachta ná cárta fostaí: téann gach ceannach trí chárta fíorúil aonúsáide a iarrtar trí Artemis."
+    },
+    "register": {
+      "title": "2. Clár na ngníomhairí",
+      "body": "Taifeadtar gach gníomhaire sa chlár mar seo a leanas: a ainm, a ardán, an duine atá freagrach as, a chuspóir, a bhuiséad míosúil, a theorainn in aghaidh an cheannaigh, na ceannaithe atá údaraithe dó agus, más infheidhme, an cliant a n-oibríonn sé dó."
+    },
+    "rules": {
+      "title": "3. Rialacha caiteachais",
+      "i1": "Buiséad míosúil in aghaidh an ghníomhaire: €[MÉID]; teorainn in aghaidh an cheannaigh: €[MÉID].",
+      "i2": "Ceannaithe údaraithe: [LIOSTA]; catagóirí toirmiscthe: cearrbhachas, aistrithe airgid, gar-airgead tirim, urrúis.",
+      "i3": "Formheas uathoibríoch faoi bhun €[MÉID] amháin agus le ceannaí údaraithe; os a chionn sin, tá síniú daonna éigeantach.",
+      "i4": "Os cionn €[MÉID], teastaíonn beirt sínitheoirí éagsúla."
+    },
+    "oversight": {
+      "title": "4. Maoirseacht dhaonna",
+      "body": "Is iad seo na daoine atá údaraithe formheas a thabhairt: [AINMNEACHA / RÓIL]. Tugtar an formheas le passkey ar ábhar beacht an tsainordaithe (gníomhaire, méid, ceannaí, cuspóir). Téann aon iarratas nach bhformheastar in éag go huathoibríoch."
+    },
+    "records": {
+      "title": "5. Admhálacha agus cuntasaíocht",
+      "body": "Meaitseáiltear gach ceannach lena shonrasc laistigh de [N] uair an chloig; mura ndéantar é sin, cuirtear an gníomhaire ar fionraí. Easpórtáiltear an caiteachas gach mí (FEC nó Pennylane) agus réitítear é le ráitis bhainc."
+    },
+    "incidents": {
+      "title": "6. Teagmhais",
+      "body": "I gcás iompair neamhghnácha, neamhréir sa mhéid nó sa cheannaí, nó amhras faoi instealladh leideanna (prompt injection), reonn an duine freagrach an gníomhaire láithreach (nó an eagraíocht ar fad) agus taifeadann sé an teagmhas."
+    },
+    "retention": {
+      "title": "7. Coinneáil agus athbhreithniú",
+      "body": "Coinnítear an loga iniúchta slabhraithe ar feadh [10] mbliana. Ullmhaítear tuarascáil mhaoirseachta gach ráithe agus déanann [RÓL] athbhreithniú uirthi. Déantar athbhreithniú ar an mbeartas seo gach bliain."
+    },
+    "note": "Gineann Artemis clár na ngníomhairí agus an tuarascáil mhaoirseachta ráithiúil ar an bplean {plan}."
+  }
+}

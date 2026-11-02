@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Allgemeine Verkaufs- und Nutzungsbedingungen",
+      "purposeTitle": "1. Gegenstand",
+      "purpose": "Diese Bedingungen regeln den Zugang zur Software Artemis, herausgegeben von {editor} ({status}, SIRET {siret}), und deren Abonnement durch gewerbliche Kunden. Der Dienst ist ausschließlich Unternehmern vorbehalten.",
+      "serviceTitle": "2. Beschreibung des Dienstes",
+      "service": "Artemis ermöglicht es einem Kunden, Ausgaberegeln für seine Software-Agenten festzulegen, deren Zahlungsanfragen freizugeben und über die Programmierschnittstellen seiner eigenen Bank die Erstellung virtueller Einmalkarten zu steuern. Artemis erbringt keine Zahlungsdienste, verwahrt keine Gelder und gibt keine Karten aus. Die Bankbeziehung, die Bankgebühren und die starke Authentifizierung unterliegen ausschließlich dem Vertrag zwischen dem Kunden und seiner Bank.",
+      "accountTitle": "3. Konto und Sicherheit",
+      "account": "Der Kunde ist für die Vertraulichkeit der Agenten-Tokens, der Zugänge zu seinem Konto und der Passkeys seiner Nutzer sowie für die von ihm konfigurierten Regeln verantwortlich. Jede Ausgabe, die von einem berechtigten Nutzer freigegeben wurde oder einer Regel zur automatischen Freigabe entspricht, gilt als vom Kunden autorisiert.",
+      "pricesTitle": "4. Tarife und Preise",
+      "prices": "Tarife: Sandbox (kostenlos), Builder ({builder} / Monat), Team ({team} / Monat), Agenturen ({agency} / Monat + {perClient} pro aktivem Kunden), Business (ab {business} / Monat). Über das monatliche Kontingent eines kostenpflichtigen Tarifs hinaus wird jedes zusätzliche Mandat mit {overage} berechnet. Nettopreise. {vat}. Monatliche Vorauszahlung per Karte über Stripe. Die Verlängerung erfolgt automatisch; die Kündigung wird zum Ende des laufenden Zeitraums wirksam, ohne anteilige Erstattung.",
+      "quotasTitle": "5. Kontingente",
+      "quotas": "Jeder Tarif umfasst Kontingente (Agenten, verbundene Banken, monatliche Anfragen). Darüber hinaus werden neue Anfragen bis zum nächsten Zeitraum oder bis zu einem Tarifwechsel abgelehnt.",
+      "availabilityTitle": "6. Verfügbarkeit",
+      "availability": "Der Herausgeber setzt angemessene Mittel ein, um die Verfügbarkeit des Dienstes sicherzustellen, ohne einen bestimmten Erfolg zu schulden. Unterbrechungen können wegen Wartungsarbeiten oder aufgrund technischer und bankseitiger Dienstleister auftreten.",
+      "liabilityTitle": "7. Haftung",
+      "liability": "Der Herausgeber haftet nicht für Käufe, die die Agenten des Kunden im Rahmen der erteilten Berechtigungen tätigen, für die Wahl der Händler, für die Qualität der gekauften Waren oder Dienstleistungen oder für die Entscheidungen der Bank des Kunden. Die Haftung des Herausgebers ist, gleich aus welchem Rechtsgrund, auf die vom Kunden in den letzten zwölf Monaten gezahlten Beträge begrenzt.",
+      "dataTitle": "8. Daten",
+      "data": "Die Verarbeitung personenbezogener Daten ist in der <a href=\"{href}\">Datenschutzerklärung</a> beschrieben. Der Kunde kann seine Daten jederzeit exportieren.",
+      "lawTitle": "9. Anwendbares Recht",
+      "law": "Es gilt französisches Recht. Kommt keine gütliche Einigung zustande, sind die Gerichte am Wohnsitz des Herausgebers zuständig."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "controllerTitle": "Verantwortlicher",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Verarbeitete Daten",
+      "dataAccount": "Konto: E-Mail-Adresse, Organisation, Rolle, Passkeys (nur öffentliche Schlüssel).",
+      "dataActivity": "Aktivität: Kartenanfragen, signierte Mandate, von der Bank gemeldete Transaktionen, Belege, Audit-Log.",
+      "dataBanks": "Bankverbindungen: verschlüsselte Zugriffstokens (AES-256-GCM).",
+      "dataBilling": "Abrechnung: wird von Stripe abgewickelt; Artemis sieht die Kartennummern nicht, mit denen Sie Ihr Abonnement bezahlen.",
+      "dataWaitlist": "Warteliste: E-Mail-Adresse, Unternehmen, Anwendungsfall.",
+      "cardNumbers": "Artemis speichert niemals die vollständige Nummer oder den Sicherheitscode der für Ihre Agenten ausgegebenen Karten.",
+      "purposesTitle": "Zwecke und Rechtsgrundlagen",
+      "purposes": "Vertragserfüllung (Bereitstellung des Dienstes), rechtliche Verpflichtungen (Buchhaltung), berechtigtes Interesse (Sicherheit, Betrugsprävention), Einwilligung (Warteliste).",
+      "processorsTitle": "Auftragsverarbeiter",
+      "processors": "Supabase (Datenbank, Europäische Union), Cloudflare (Hosting und Netzwerk), Stripe (Abrechnung), Resend (Transaktions-E-Mails). Etwaige Übermittlungen außerhalb der EU erfolgen auf Grundlage von Standardvertragsklauseln.",
+      "retentionTitle": "Speicherdauer",
+      "retention": "Kontodaten: Vertragslaufzeit, danach 3 Jahre. Audit-Log und Buchhaltungsdaten: 10 Jahre. Warteliste: 3 Jahre ohne Interaktion.",
+      "rightsTitle": "Ihre Rechte",
+      "rights": "Auskunft, Berichtigung, Löschung, Datenübertragbarkeit, Widerspruch und Einschränkung: Schreiben Sie an {email}. Sie können Beschwerde bei der CNIL (cnil.fr) einlegen.",
+      "cookiesTitle": "Cookies",
+      "cookies": "Die Website verwendet keine Werbe-Cookies und keine Analysetools Dritter. Die Anwendung nutzt ausschließlich den für Ihre Sitzung erforderlichen Speicher."
+    },
+    "notice": {
+      "title": "Impressum",
+      "editorTitle": "Herausgeber",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Anschrift: {address}",
+      "contact": "Kontakt: {email}",
+      "directorTitle": "Verantwortlich für den Inhalt",
+      "hostingTitle": "Hosting",
+      "natureTitle": "Art des Dienstes",
+      "nature": "Artemis ist eine Software zur Steuerung der Ausgaben von Agenten künstlicher Intelligenz. Artemis ist weder ein Zahlungsinstitut noch ein E-Geld-Institut: Es nimmt keine Gelder entgegen, verwahrt keine und überweist keine. Die Zahlungskarten werden vom Kreditinstitut des Kunden in dessen Verantwortung ausgegeben.",
+      "ipTitle": "Geistiges Eigentum",
+      "ip": "Die Inhalte, Marken und Logos dieser Website sind Eigentum des Herausgebers. Jede Vervielfältigung ohne Genehmigung ist untersagt."
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "common": {
+    "loading": "Ladataan…",
+    "copy": "Kopioi",
+    "copied": "Kopioitu"
+  },
+  "lang": {
+    "choose": "Kieli"
+  },
+  "nav": {
+    "dashboard": "Koontinäyttö",
+    "requests": "Pyynnöt",
+    "agents": "Agentit",
+    "clients": "Asiakkaat",
+    "cards": "Kortit",
+    "subscriptions": "Tilaukset",
+    "transactions": "Tapahtumat",
+    "exports": "Viennit",
+    "banks": "Pankit",
+    "team": "Tiimi",
+    "audit": "Tarkastus",
+    "billing": "Laskutus",
+    "settings": "Asetukset"
+  },
+  "shell": {
+    "home": "Artemis, koontinäyttö",
+    "organization": "Organisaatio",
+    "admin": "Hallinta",
+    "freezeAllHint": "Jäädytä kaikki agentit ja peruuta aktiiviset kortit",
+    "frozen": "Jäädytetty",
+    "freezeAll": "Jäädytä kaikki",
+    "signOut": "Kirjaudu ulos",
+    "navAria": "Sovelluksen navigointi",
+    "pendingCount_one": "{count} odottaa",
+    "pendingCount_other": "{count} odottaa",
+    "frozenBanner": "Organisaatio on jäädytetty: uusia kortteja ei voi myöntää. Pura jäädytys Asetuksissa."
+  },
+  "status": {
+    "pending": "Hyväksyttävänä",
+    "approved": "Hyväksytty",
+    "issued": "Kortti myönnetty",
+    "completed": "Maksettu",
+    "rejected": "Hylätty",
+    "expired": "Vanhentunut",
+    "failed": "Pankkivirhe",
+    "canceled": "Peruutettu",
+    "active": "Aktiivinen",
+    "pending_bank_sca": "Pankin hyväksyntä",
+    "used": "Käytetty",
+    "frozen": "Jäädytetty",
+    "matched": "Täsmäytetty",
+    "mismatch": "Poikkeama",
+    "unmatched": "Täsmäyttämätön"
+  },
+  "roles": {
+    "owner": "Omistaja",
+    "admin": "Ylläpitäjä",
+    "approver": "Hyväksyjä",
+    "viewer": "Katselija"
+  },
+  "errors": {
+    "network": "Verkko ei ole käytettävissä. Tarkista yhteytesi.",
+    "unauthorized": "Istuntosi on vanhentunut. Kirjaudu sisään uudelleen.",
+    "forbidden": "Sinulla ei ole oikeutta tähän toimintoon.",
+    "not_found": "Ei löytynyt tai ei ole enää saatavilla.",
+    "invalid_input": "Osa tiedoista on virheellisiä. Tarkista lomake.",
+    "rate_limited": "Liian monta yritystä. Odota hetki ja yritä uudelleen.",
+    "quota_exceeded": "Kuukausittainen valtuutuskiintiösi on täynnä.",
+    "subscription_inactive": "Tilauksesi ei ole aktiivinen. Päivitä se Laskutus-osiossa.",
+    "org_frozen": "Organisaatio on jäädytetty.",
+    "agent_frozen": "Tämä agentti on jäädytetty.",
+    "request_not_pending": "Tämä pyyntö ei ole enää odottamassa.",
+    "request_expired": "Tämä pyyntö on vanhentunut.",
+    "already_revealed": "Tämä kortti on jo luovutettu.",
+    "card_not_ready": "Kortti ei ole vielä saatavilla.",
+    "bank_error": "Pankki hylkäsi toiminnon.",
+    "plan_limit": "Pakettisi raja on täynnä. Vaihda ylempään pakettiin jatkaaksesi.",
+    "over_client_budget": "Tämän asiakkaan kuukausibudjetti on ylittynyt.",
+    "internal": "Jokin meni vikaan. Yritä uudelleen.",
+    "currency_not_allowed": "Käytäntö ei salli tätä valuuttaa.",
+    "invalid_amount": "Virheellinen summa.",
+    "over_transaction_limit": "Summa ylittää tapahtumakohtaisen rajan.",
+    "over_monthly_budget": "Agentin kuukausibudjetti on ylittynyt.",
+    "merchant_blocked": "Käytäntö estää tämän kauppiaan.",
+    "merchant_not_allowed": "Tämä kauppias ei ole sallittujen luettelossa.",
+    "mcc_blocked": "Tämä kauppiasluokka on estetty.",
+    "mcc_not_allowed": "Tämä kauppiasluokka ei ole sallittu.",
+    "too_many_requests": "Tällä agentilla on ollut liikaa pyyntöjä viimeisen tunnin aikana."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Opći uvjeti prodaje i korištenja",
+      "purposeTitle": "1. Predmet",
+      "purpose": "Ovi uvjeti uređuju pristup softveru Artemis, čiji je izdavatelj {editor} ({status}, SIRET {siret}), i njegovu pretplatu od strane poslovnih klijenata. Usluga je namijenjena isključivo profesionalcima.",
+      "serviceTitle": "2. Opis usluge",
+      "service": "Artemis omogućuje klijentu da definira pravila potrošnje za svoje softverske agente, da odobrava njihove zahtjeve za plaćanje te da, putem aplikacijskih programskih sučelja vlastite banke, upravlja izdavanjem jednokratnih virtualnih kartica. Artemis ne pruža nikakvu platnu uslugu, ne drži nikakva sredstva i ne izdaje kartice. Bankovni odnos, bankovne naknade i pouzdana autentifikacija uređeni su isključivo ugovorom između klijenta i njegove banke.",
+      "accountTitle": "3. Račun i sigurnost",
+      "account": "Klijent je odgovoran za povjerljivost tokena agenata, pristupa svojem računu i pristupnih ključeva svojih korisnika, kao i za pravila koja konfigurira. Svaki trošak koji je odobrio ovlašteni korisnik ili koji je u skladu s pravilom automatskog odobrenja smatra se da je odobrio klijent.",
+      "pricesTitle": "4. Paketi i cijene",
+      "prices": "Paketi: Sandbox (besplatno), Builder ({builder} / mjesečno), Team ({team} / mjesečno), Agencije ({agency} / mjesečno + {perClient} po aktivnom klijentu), Business (od {business} / mjesečno). Iznad mjesečne kvote plaćenog paketa svaki dodatni nalog naplaćuje se {overage}. Cijene su neto. {vat}. Mjesečno plaćanje unaprijed karticom putem Stripea. Obnova je automatska; raskid stupa na snagu na kraju tekućeg razdoblja, bez razmjernog povrata.",
+      "quotasTitle": "5. Kvote",
+      "quotas": "Svaki paket uključuje kvote (agenti, povezane banke, mjesečni zahtjevi). Iznad tih kvota novi se zahtjevi odbijaju do sljedećeg razdoblja ili promjene paketa.",
+      "availabilityTitle": "6. Dostupnost",
+      "availability": "Izdavatelj ulaže razumne napore kako bi osigurao dostupnost usluge, bez obveze rezultata. Prekidi su mogući zbog održavanja ili zbog tehničkih i bankovnih pružatelja usluga.",
+      "liabilityTitle": "7. Odgovornost",
+      "liability": "Izdavatelj ne odgovara za kupnje koje su agenti klijenta obavili u okviru danih ovlasti, za izbor trgovaca, za kvalitetu kupljene robe ili usluga ni za odluke banke klijenta. Odgovornost izdavatelja, po svim osnovama zajedno, ograničena je na iznose koje je klijent platio u posljednjih dvanaest mjeseci.",
+      "dataTitle": "8. Podaci",
+      "data": "Obrada osobnih podataka opisana je u <a href=\"{href}\">politici privatnosti</a>. Klijent može u bilo kojem trenutku izvesti svoje podatke.",
+      "lawTitle": "9. Mjerodavno pravo",
+      "law": "Francusko pravo. Ako se spor ne riješi mirnim putem, nadležni su sudovi prema mjestu prebivališta izdavatelja."
+    },
+    "privacy": {
+      "title": "Politika privatnosti",
+      "controllerTitle": "Voditelj obrade",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Podaci koji se obrađuju",
+      "dataAccount": "Račun: e-adresa, organizacija, uloga, pristupni ključevi (samo javni ključevi).",
+      "dataActivity": "Aktivnost: zahtjevi za kartice, potpisani nalozi, transakcije koje prijavljuje banka, potvrde, revizijski zapisnik.",
+      "dataBanks": "Bankovne veze: šifrirani pristupni tokeni (AES-256-GCM).",
+      "dataBilling": "Naplata: provodi je Stripe; Artemis ne vidi brojeve kartica kojima plaćate pretplatu.",
+      "dataWaitlist": "Lista čekanja: e-adresa, društvo, slučaj korištenja.",
+      "cardNumbers": "Artemis nikada ne pohranjuje puni broj ni sigurnosni kod kartica izdanih za vaše agente.",
+      "purposesTitle": "Svrhe i pravne osnove",
+      "purposes": "Izvršenje ugovora (pružanje usluge), pravne obveze (računovodstvo), legitimni interes (sigurnost, sprječavanje prijevara), privola (lista čekanja).",
+      "processorsTitle": "Izvršitelji obrade",
+      "processors": "Supabase (baza podataka, Europska unija), Cloudflare (hosting i mreža), Stripe (naplata), Resend (transakcijske e-poruke). Standardne ugovorne klauzule uređuju sve prijenose izvan EU-a.",
+      "retentionTitle": "Razdoblja čuvanja",
+      "retention": "Podaci o računu: trajanje ugovora, zatim 3 godine. Revizijski zapisnik i računovodstveni podaci: 10 godina. Lista čekanja: 3 godine bez interakcije.",
+      "rightsTitle": "Vaša prava",
+      "rights": "Pristup, ispravak, brisanje, prenosivost, prigovor i ograničenje obrade: pišite na {email}. Možete podnijeti pritužbu CNIL-u (cnil.fr).",
+      "cookiesTitle": "Kolačići",
+      "cookies": "Stranica ne koristi oglašivačke kolačiće ni analitičke alate trećih strana. Aplikacija koristi samo pohranu nužnu za vašu sesiju."
+    },
+    "notice": {
+      "title": "Impresum",
+      "editorTitle": "Izdavatelj",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Adresa: {address}",
+      "contact": "Kontakt: {email}",
+      "directorTitle": "Odgovorna osoba za objavu",
+      "hostingTitle": "Hosting",
+      "natureTitle": "Priroda usluge",
+      "nature": "Artemis je softver za upravljanje potrošnjom agenata umjetne inteligencije. Artemis nije ni platna institucija ni institucija za elektronički novac: ne prima, ne drži i ne prenosi nikakva sredstva. Platne kartice izdaje bankovna institucija klijenta, pod svojom odgovornošću.",
+      "ipTitle": "Intelektualno vlasništvo",
+      "ip": "Sadržaj, žigovi i logotipi ove stranice vlasništvo su izdavatelja. Svako umnožavanje bez odobrenja zabranjeno je."
+    }
+  }
+}

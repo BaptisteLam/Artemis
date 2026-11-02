@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Sicurezza e conformità",
+    "description": "Come Artemis protegge i suoi fondi, le sue carte e i suoi dati.",
+    "eyebrow": "Sicurezza",
+    "headline": "Progettato perché nessun agente possa agire da solo.",
+    "lead": "Lo scenario peggiore, un agente manipolato da una prompt injection, è contenuto dalla carta stessa.",
+    "funds": {
+      "title": "I suoi fondi non lasciano mai la sua banca",
+      "body": "Artemis è un software. Le carte sono emesse dal suo fornitore (Qonto, Revolut Business, Stripe) sul suo conto. Non deteniamo, non riceviamo e non trasferiamo alcun fondo."
+    },
+    "defense": {
+      "title": "Difesa in profondità",
+      "i1": "Carta monouso, limitata all'importo esatto approvato.",
+      "i2": "Scadenza breve (30 minuti per impostazione predefinita).",
+      "i3": "Regole per agente: budget, limite, esercenti, categorie.",
+      "i4": "Riconciliazione automatica, con avviso in caso di discrepanza di importo o di esercente.",
+      "i5": "Pulsante «Congela tutto»: agenti sospesi e carte attive annullate con un clic.",
+      "i6": "Gli agenti possono solo chiedere: nessuno strumento MCP può modificare una regola o approvare un pagamento."
+    },
+    "cardNumbers": {
+      "title": "Numeri di carta",
+      "body": "Per impostazione predefinita, il numero completo della carta e il codice di sicurezza non passano mai da Artemis: l'agente riceve un link monouso di breve durata (10 minuti) e la carta viene mostrata dalla banca emittente (Stripe Issuing Elements). La consegna diretta è disponibile come opzione avanzata, disattivata per impostazione predefinita; anche in quel caso, nulla viene memorizzato."
+    },
+    "mandates": {
+      "title": "Mandati firmati",
+      "body": "Ogni approvazione è una firma WebAuthn (passkey) sull'hash SHA-256 del mandato: agente, importo, valuta, esercente, finalità, scadenza. Il registro di audit è concatenato tramite hash e consente solo aggiunte: qualsiasi alterazione è rilevabile."
+    },
+    "aiAct": {
+      "title": "AI Act e supervisione umana",
+      "body": "L'AI Act europeo impone ai deployer di registrare e sorvegliare i propri sistemi. Il registro di Artemis, esportabile, indica chi ha autorizzato ogni pagamento di un agente, quando e secondo quali regole."
+    },
+    "data": {
+      "title": "Dati personali",
+      "body": "Database ospitato nell'Unione europea (Supabase, Francoforte). Credenziali bancarie cifrate (AES-256-GCM). Consulti l'<a href=\"{href}\">informativa sulla privacy</a>."
+    },
+    "report": {
+      "title": "Segnalare una vulnerabilità",
+      "body": "Scriva all'indirizzo indicato nelle <a href=\"{href}\">note legali</a>. Rispondiamo entro 72 ore."
+    }
+  }
+}

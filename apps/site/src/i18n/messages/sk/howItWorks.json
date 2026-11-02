@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Ako to funguje",
+    "description": "Ako Artemis umožňuje vašim agentom AI platiť, kým vy máte všetko pod kontrolou.",
+    "headline": "Agent žiada, vy rozhodnete, banka zaplatí.",
+    "lead": "Artemis stojí medzi vašimi agentmi a vašou bankou. Uplatňuje vaše pravidlá, zbiera vaše schválenie a vytvorí jednorazovú kartu na presnú sumu.",
+    "step1": {
+      "title": "1. Pripojíte svoju banku",
+      "body": "Stripe Issuing (odporúčané) alebo Revolut Business: virtuálne karty sa vytvárajú na <strong>vašom</strong> účte a strhávajú sa z <strong>vašich</strong> prostriedkov. Qonto sa pripája na čítanie, zmrazenie a párovanie. Artemis nikdy neprijíma, nedrží ani neprevádza peniaze. Na vyskúšanie Sandbox simuluje banku."
+    },
+    "step2": {
+      "title": "2. Vytvoríte agenta a jeho pravidlá",
+      "body": "Každý agent dostane tajný token a politiku: mesačný rozpočet, limit na nákup, meny, povolených alebo blokovaných obchodníkov, kategórie obchodníkov, hranicu automatického schválenia a platnosť karty."
+    },
+    "step3": {
+      "title": "3. Agent si vyžiada kartu",
+      "body": "Cez nástroj MCP <code>request_card</code> alebo cez REST API. Žiadosť, ktorá porušuje pravidlá, sa okamžite zamietne s jasným dôvodom. Všetky ostatné čakajú na vaše schválenie, okrem malých súm u dôveryhodného obchodníka, ak ste to povolili."
+    },
+    "step4": {
+      "title": "4. Schválite prístupovým kľúčom",
+      "body": "Dostanete upozornenie. Obrazovka mandátu zobrazí agenta, sumu, obchodníka a účel. Podpíšete svojím prístupovým kľúčom (Face ID, odtlačok prsta, bezpečnostný kľúč). Podpis sa vzťahuje na presný obsah mandátu."
+    },
+    "step5": {
+      "title": "5. Agent zaplatí, Artemis spáruje",
+      "body": "Karta je jednorazová, obmedzená na sumu a rýchlo vyprší. Agent dostane krátkodobý odkaz: kartu zobrazí vaša banka a číslo nikdy neprejde cez Artemis. Hneď ako banka transakciu nahlási, Artemis ju spáruje, označí prípadnú nezhodu a založí doklad."
+    },
+    "demo": {
+      "mandate": "mandát · {id}",
+      "intent": "Účel: predplatné pre tím, 5 miest.",
+      "rules": "Pravidlá: limit {cap} · zostávajúci rozpočet {remaining}",
+      "signed": "Podpísané prístupovým kľúčom · pred {minutes} min",
+      "transactions": "transakcie",
+      "matched": "Spárované",
+      "mismatch": "Nezhoda"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "billing": {
+    "title": "Facturación",
+    "lead": "Plan actual: {plan}. Solicitudes este mes: {usage}. IVA no aplicable, art. 293 B del Código General de Impuestos francés (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Gestionar la suscripción y las facturas",
+    "returnOk": "¡Gracias! Su suscripción se está activando (unos segundos).",
+    "returnCanceled": "Pago cancelado, no se ha modificado nada.",
+    "inactive": "Su suscripción ya no está activa ({status}). Las funciones de pago están suspendidas: actualice su método de pago.",
+    "unknown": "desconocido",
+    "overage": "Por encima de la cuota de un plan de pago, cada mandato adicional se factura a {price}.",
+    "overageCount_one": "Este mes: {count} mandato.",
+    "overageCount_many": "Este mes: {count} mandatos.",
+    "overageCount_other": "Este mes: {count} mandatos.",
+    "ownerOnly": "Solo un propietario puede modificar la suscripción.",
+    "current": "Actual",
+    "from": "desde {price}",
+    "perMonth": "/ mes",
+    "choose": "Elegir {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agencias",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agente",
+        "i2": "Banco simulado",
+        "i3": "20 mandatos simulados / mes"
+      },
+      "builder": {
+        "i1": "3 agentes",
+        "i2": "1 banco real",
+        "i3": "50 mandatos / mes",
+        "i4": "Aprobación con llave de acceso y notificaciones"
+      },
+      "team": {
+        "i1": "10 agentes",
+        "i2": "2 bancos reales",
+        "i3": "300 mandatos / mes",
+        "i4": "Slack, quórum de aprobadores, exportación FEC",
+        "i5": "Suscripciones gestionadas por agente"
+      },
+      "agency": {
+        "i1": "25 agentes, clientes ilimitados",
+        "i2": "1000 mandatos / mes",
+        "i3": "Presupuestos, margen y refacturación por cliente",
+        "i4": "+ {price} por cliente activo"
+      },
+      "business": {
+        "i1": "Ilimitado",
+        "i2": "Expediente e informe AI Act",
+        "i3": "Exportación firmada del registro de auditoría",
+        "i4": "Soporte prioritario"
+      }
+    }
+  }
+}

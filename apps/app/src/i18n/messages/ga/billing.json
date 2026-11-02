@@ -1,0 +1,62 @@
+{
+  "billing": {
+    "title": "Billeáil",
+    "lead": "Plean reatha: {plan}. Iarratais an mhí seo: {usage}. CBL neamhbhainteach, airt. 293 B de Chód Ginearálta Cánach na Fraince (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Bainistigh an síntiús agus na sonraisc",
+    "returnOk": "Go raibh maith agat! Tá do shíntiús á ghníomhachtú (cúpla soicind).",
+    "returnCanceled": "Íocaíocht cealaithe, níor athraíodh faic.",
+    "inactive": "Níl do shíntiús gníomhach a thuilleadh ({status}). Tá na gnéithe íoctha ar fionraí: nuashonraigh do mhodh íocaíochta.",
+    "unknown": "anaithnid",
+    "overage": "Thar chuóta plean íoctha, gearrtar {price} ar gach sainordú breise.",
+    "overageCount_one": "An mhí seo: {count} sainordú.",
+    "overageCount_two": "An mhí seo: {count} shainordú.",
+    "overageCount_few": "An mhí seo: {count} shainordú.",
+    "overageCount_many": "An mhí seo: {count} sainordú.",
+    "overageCount_other": "An mhí seo: {count} sainordú.",
+    "ownerOnly": "Ní féidir ach le húinéir an síntiús a athrú.",
+    "current": "Reatha",
+    "from": "ó {price}",
+    "perMonth": "/ mí",
+    "choose": "Roghnaigh {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Gníomhaireachtaí",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 ghníomhaire",
+        "i2": "Banc ionsamhlaithe",
+        "i3": "20 sainordú ionsamhlaithe / mí"
+      },
+      "builder": {
+        "i1": "3 ghníomhaire",
+        "i2": "1 fhíorbhanc",
+        "i3": "50 sainordú / mí",
+        "i4": "Formheas le passkey agus fógraí"
+      },
+      "team": {
+        "i1": "10 ngníomhaire",
+        "i2": "2 fhíorbhanc",
+        "i3": "300 sainordú / mí",
+        "i4": "Slack, córam formheastóirí, easpórtáil FEC",
+        "i5": "Síntiúis á mbainistiú in aghaidh an ghníomhaire"
+      },
+      "agency": {
+        "i1": "25 gníomhaire, cliaint gan teorainn",
+        "i2": "1,000 sainordú / mí",
+        "i3": "Buiséid, corrlach agus athshonrascadh in aghaidh an chliaint",
+        "i4": "+ {price} in aghaidh an chliaint ghníomhaigh"
+      },
+      "business": {
+        "i1": "Gan teorainn",
+        "i2": "Comhad agus tuarascáil AI Act",
+        "i3": "Easpórtáil shínithe den loga iniúchta",
+        "i4": "Tacaíocht tosaíochta"
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "common": {
+    "loading": "Läser in …",
+    "copy": "Kopiera",
+    "copied": "Kopierat"
+  },
+  "lang": {
+    "choose": "Språk"
+  },
+  "nav": {
+    "dashboard": "Översikt",
+    "requests": "Begäranden",
+    "agents": "Agenter",
+    "clients": "Kunder",
+    "cards": "Kort",
+    "subscriptions": "Abonnemang",
+    "transactions": "Transaktioner",
+    "exports": "Exporter",
+    "banks": "Banker",
+    "team": "Team",
+    "audit": "Granskning",
+    "billing": "Fakturering",
+    "settings": "Inställningar"
+  },
+  "shell": {
+    "home": "Artemis, översikt",
+    "organization": "Organisation",
+    "admin": "Admin",
+    "freezeAllHint": "Frys alla agenter och spärra aktiva kort",
+    "frozen": "Fryst",
+    "freezeAll": "Frys allt",
+    "signOut": "Logga ut",
+    "navAria": "Appnavigering",
+    "pendingCount_one": "{count} väntar",
+    "pendingCount_other": "{count} väntar",
+    "frozenBanner": "Organisationen är fryst: inga nya kort kan utfärdas. Häv frysningen under Inställningar."
+  },
+  "status": {
+    "pending": "Att godkänna",
+    "approved": "Godkänd",
+    "issued": "Kort utfärdat",
+    "completed": "Betald",
+    "rejected": "Avvisad",
+    "expired": "Utgången",
+    "failed": "Bankfel",
+    "canceled": "Avbruten",
+    "active": "Aktiv",
+    "pending_bank_sca": "Bankgodkännande",
+    "used": "Använd",
+    "frozen": "Fryst",
+    "matched": "Avstämd",
+    "mismatch": "Avvikelse",
+    "unmatched": "Ej avstämd"
+  },
+  "roles": {
+    "owner": "Ägare",
+    "admin": "Administratör",
+    "approver": "Godkännare",
+    "viewer": "Läsare"
+  },
+  "errors": {
+    "network": "Nätverket är inte tillgängligt. Kontrollera din anslutning.",
+    "unauthorized": "Din session har gått ut. Logga in igen.",
+    "forbidden": "Du har inte behörighet att göra detta.",
+    "not_found": "Hittades inte eller är inte längre tillgänglig.",
+    "invalid_input": "Vissa uppgifter är ogiltiga. Kontrollera formuläret.",
+    "rate_limited": "För många försök. Vänta en stund och försök igen.",
+    "quota_exceeded": "Din månatliga mandatkvot är förbrukad.",
+    "subscription_inactive": "Ditt abonnemang är inaktivt. Uppdatera det under Fakturering.",
+    "org_frozen": "Organisationen är fryst.",
+    "agent_frozen": "Den här agenten är fryst.",
+    "request_not_pending": "Den här begäran väntar inte längre.",
+    "request_expired": "Den här begäran har löpt ut.",
+    "already_revealed": "Det här kortet har redan överlämnats.",
+    "card_not_ready": "Kortet är inte tillgängligt än.",
+    "bank_error": "Banken nekade åtgärden.",
+    "plan_limit": "Din plans gräns är nådd. Uppgradera för att fortsätta.",
+    "over_client_budget": "Kundens månadsbudget är överskriden.",
+    "internal": "Något gick fel. Försök igen.",
+    "currency_not_allowed": "Valutan är inte tillåten enligt policyn.",
+    "invalid_amount": "Ogiltigt belopp.",
+    "over_transaction_limit": "Beloppet överstiger gränsen per transaktion.",
+    "over_monthly_budget": "Agentens månadsbudget är överskriden.",
+    "merchant_blocked": "Handlaren är blockerad enligt policyn.",
+    "merchant_not_allowed": "Handlaren finns inte på listan över tillåtna handlare.",
+    "mcc_blocked": "Handlarkategorin är blockerad.",
+    "mcc_not_allowed": "Handlarkategorin är inte tillåten.",
+    "too_many_requests": "För många begäranden den senaste timmen för den här agenten."
+  }
+}

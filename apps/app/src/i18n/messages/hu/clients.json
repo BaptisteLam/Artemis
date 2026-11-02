@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Ügyfelek",
+    "lead": "Ügyfelenként egy munkaterület: az ügyfél ügynökei, havi kerete, az Ön árrése és elküldésre kész továbbszámlázási kimutatás.",
+    "invalidBudget": "Érvénytelen keret (pl. 500 vagy 49.90).",
+    "upsell": "Az ügyfél-munkaterületek az Ügynökség csomag részei ({price} + {perClient} aktív ügyfelenként).",
+    "seePlans": "Csomagok megtekintése →",
+    "empty": "Nincsenek ügyfelek",
+    "emptyHint": "Hozzon létre egy ügyfelet, majd rendeljen hozzá ügynököket.",
+    "cols": {
+      "client": "Ügyfél",
+      "agents": "Ügynökök",
+      "spent": "Lekötve ebben a hónapban",
+      "budget": "Keret",
+      "markup": "Árrés"
+    },
+    "archived": "archivált",
+    "percent": "{value}%",
+    "report": "Kimutatás →",
+    "new": "Új ügyfél",
+    "fields": {
+      "name": "Név",
+      "billingEmail": "Számlázási e-mail-cím",
+      "markup": "Továbbszámlázási árrés (%)",
+      "budget": "Havi keret (€)",
+      "budgetHint": "Üres = nincs ügyfélszintű felső határ"
+    },
+    "create": "Ügyfél létrehozása",
+    "exportFailed": "Az exportálás nem sikerült.",
+    "eyebrow": "Ügyfél",
+    "month": "Hónap",
+    "exportCsv": "CSV exportálása",
+    "monthPurchases": "Vásárlások ebben a hónapban",
+    "markupPct": "Árrés: {value}",
+    "toRebill": "Továbbszámlázandó",
+    "noPurchases": "Ebben a hónapban nem volt vásárlás",
+    "lines": {
+      "date": "Dátum",
+      "agent": "Ügynök",
+      "merchant": "Kereskedő",
+      "purpose": "Cél",
+      "amount": "Összeg",
+      "receipt": "Bizonylat"
+    },
+    "yes": "Igen",
+    "missing": "Hiányzik",
+    "archive": "Ügyfél archiválása",
+    "reactivate": "Újraaktiválás",
+    "all": "← Minden ügyfél"
+  }
+}

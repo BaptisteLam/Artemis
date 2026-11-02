@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Működés",
+    "description": "Hogyan teszi lehetővé az Artemis, hogy MI-ügynökei fizessenek, miközben Ön tartja kézben az irányítást.",
+    "headline": "Az ügynök kér, Ön dönt, a bank fizet.",
+    "lead": "Az Artemis az ügynökei és a bankja között helyezkedik el. Alkalmazza az Ön szabályait, begyűjti a jóváhagyását, és a pontos összegre szóló, egyszer használatos kártyát hoz létre.",
+    "step1": {
+      "title": "1. Ön csatlakoztatja a bankját",
+      "body": "Stripe Issuing (ajánlott) vagy Revolut Business: a virtuális kártyák az <strong>Ön</strong> számláján jönnek létre, és az <strong>Ön</strong> pénzét terhelik. A Qonto olvasásra, befagyasztásra és egyeztetésre csatlakoztatható. Az Artemis soha nem fogad, nem őriz és nem utal pénzt. Kipróbáláshoz a Sandbox egy bankot szimulál."
+    },
+    "step2": {
+      "title": "2. Ön létrehoz egy ügynököt és a szabályait",
+      "body": "Minden ügynök titkos tokent és szabályzatot kap: havi keret, vásárlásonkénti limit, pénznemek, engedélyezett vagy letiltott kereskedők, kereskedői kategóriák, automatikus jóváhagyási küszöb és a kártya érvényességi ideje."
+    },
+    "step3": {
+      "title": "3. Az ügynök kártyát igényel",
+      "body": "A <code>request_card</code> MCP-eszközzel vagy a REST API-n keresztül. A szabályokat sértő igénylést a rendszer azonnal, egyértelmű indoklással elutasítja. Minden más az Ön jóváhagyására vár, kivéve a megbízható kereskedőnél felmerülő kis összegeket, ha ezt engedélyezte."
+    },
+    "step4": {
+      "title": "4. Ön passkey-vel jóváhagyja",
+      "body": "Értesítést kap. A megbízás képernyője megjeleníti az ügynököt, az összeget, a kereskedőt és a célt. Ön a passkey-jével ír alá (Face ID, ujjlenyomat, biztonsági kulcs). Az aláírás a megbízás pontos tartalmára vonatkozik."
+    },
+    "step5": {
+      "title": "5. Az ügynök fizet, az Artemis egyeztet",
+      "body": "A kártya egyszer használatos, az összegre korlátozott, és gyorsan lejár. Az ügynök rövid élettartamú hivatkozást kap: a kártyát az Ön bankja jeleníti meg, a kártyaszám soha nem halad át az Artemisen. Amint a bank jelenti a tranzakciót, az Artemis egyezteti, jelzi az esetleges eltérést, és a helyére teszi a bizonylatot."
+    },
+    "demo": {
+      "mandate": "megbízás · {id}",
+      "intent": "Cél: csapat-előfizetés, 5 felhasználó.",
+      "rules": "Szabályok: limit {cap} · fennmaradó keret {remaining}",
+      "signed": "Passkey-vel aláírva · {minutes} perce",
+      "transactions": "tranzakciók",
+      "matched": "Egyeztetve",
+      "mismatch": "Eltérés"
+    }
+  }
+}

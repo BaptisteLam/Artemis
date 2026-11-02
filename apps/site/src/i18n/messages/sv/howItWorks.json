@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Så fungerar det",
+    "description": "Så låter Artemis dina AI-agenter betala medan du behåller kontrollen.",
+    "headline": "Agenten frågar, du bestämmer, banken betalar.",
+    "lead": "Artemis står mellan dina agenter och din bank. Den tillämpar dina regler, hämtar in ditt godkännande och skapar ett engångskort på exakt belopp.",
+    "step1": {
+      "title": "1. Du ansluter din bank",
+      "body": "Stripe Issuing (rekommenderas) eller Revolut Business: virtuella kort skapas på <strong>ditt</strong> konto och debiteras <strong>dina</strong> medel. Qonto ansluts för läsåtkomst, frysning och avstämning. Artemis tar aldrig emot, förvarar eller överför pengar. För att prova simulerar Sandbox en bank."
+    },
+    "step2": {
+      "title": "2. Du skapar en agent och dess regler",
+      "body": "Varje agent får en hemlig token och en policy: månadsbudget, gräns per köp, valutor, tillåtna eller blockerade handlare, handlarkategorier, tröskel för automatiskt godkännande och kortets livslängd."
+    },
+    "step3": {
+      "title": "3. Agenten begär ett kort",
+      "body": "Via MCP-verktyget <code>request_card</code> eller REST API:t. En begäran som bryter mot reglerna avvisas direkt, med en tydlig anledning. Alla andra väntar på ditt godkännande, utom små belopp hos en betrodd handlare om du har tillåtit det."
+    },
+    "step4": {
+      "title": "4. Du godkänner med en lösennyckel",
+      "body": "Du får en avisering. Mandatskärmen visar agenten, beloppet, handlaren och syftet. Du signerar med din lösennyckel (Face ID, fingeravtryck, säkerhetsnyckel). Signaturen omfattar mandatets exakta innehåll."
+    },
+    "step5": {
+      "title": "5. Agenten betalar, Artemis stämmer av",
+      "body": "Kortet är ett engångskort, begränsat till beloppet, och löper ut snabbt. Agenten får en kortlivad länk: kortet visas av din bank och numret passerar aldrig genom Artemis. Så snart banken rapporterar transaktionen stämmer Artemis av den, flaggar eventuella avvikelser och arkiverar kvittot."
+    },
+    "demo": {
+      "mandate": "mandat · {id}",
+      "intent": "Syfte: teamabonnemang, 5 platser.",
+      "rules": "Regler: gräns {cap} · återstående budget {remaining}",
+      "signed": "Signerat med lösennyckel · för {minutes} min sedan",
+      "transactions": "transaktioner",
+      "matched": "Avstämd",
+      "mismatch": "Avvikelse"
+    }
+  }
+}

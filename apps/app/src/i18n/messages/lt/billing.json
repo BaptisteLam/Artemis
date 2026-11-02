@@ -1,0 +1,61 @@
+{
+  "billing": {
+    "title": "Atsiskaitymai",
+    "lead": "Dabartinis planas: {plan}. Užklausos šį mėnesį: {usage}. PVM netaikomas pagal Prancūzijos bendrojo mokesčių kodekso (CGI) 293 B straipsnį.",
+    "usageOf": "{used} / {limit}",
+    "manage": "Valdyti prenumeratą ir sąskaitas faktūras",
+    "returnOk": "Ačiū! Jūsų prenumerata aktyvinama (kelios sekundės).",
+    "returnCanceled": "Mokėjimas atšauktas, niekas nepakeista.",
+    "inactive": "Jūsų prenumerata nebeaktyvi ({status}). Mokamos funkcijos sustabdytos: atnaujinkite mokėjimo būdą.",
+    "unknown": "nežinoma",
+    "overage": "Viršijus mokamo plano kvotą, už kiekvieną papildomą įgaliojimą imama {price}.",
+    "overageCount_one": "Šį mėnesį: {count} įgaliojimas.",
+    "overageCount_few": "Šį mėnesį: {count} įgaliojimai.",
+    "overageCount_many": "Šį mėnesį: {count} įgaliojimo.",
+    "overageCount_other": "Šį mėnesį: {count} įgaliojimų.",
+    "ownerOnly": "Prenumeratą gali keisti tik savininkas.",
+    "current": "Dabartinis",
+    "from": "nuo {price}",
+    "perMonth": "/ mėn.",
+    "choose": "Pasirinkti {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agentūroms",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agentas",
+        "i2": "Imituotas bankas",
+        "i3": "20 imituotų įgaliojimų / mėn."
+      },
+      "builder": {
+        "i1": "3 agentai",
+        "i2": "1 tikras bankas",
+        "i3": "50 įgaliojimų / mėn.",
+        "i4": "Tvirtinimas prieigos raktu ir pranešimai"
+      },
+      "team": {
+        "i1": "10 agentų",
+        "i2": "2 tikri bankai",
+        "i3": "300 įgaliojimų / mėn.",
+        "i4": "Slack, tvirtintojų kvorumas, FEC eksportas",
+        "i5": "Prenumeratos valdomos kiekvienam agentui"
+      },
+      "agency": {
+        "i1": "25 agentai, neribotas klientų skaičius",
+        "i2": "1000 įgaliojimų / mėn.",
+        "i3": "Biudžetai, antkainis ir pakartotinis sąskaitų išrašymas kiekvienam klientui",
+        "i4": "+ {price} už kiekvieną aktyvų klientą"
+      },
+      "business": {
+        "i1": "Neribota",
+        "i2": "AI Act dokumentacija ir ataskaita",
+        "i3": "Pasirašyto audito žurnalo eksportas",
+        "i4": "Prioritetinė pagalba"
+      }
+    }
+  }
+}

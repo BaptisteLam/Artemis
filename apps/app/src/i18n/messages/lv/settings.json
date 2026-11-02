@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Iestatījumi",
+    "signOut": "Izrakstīties",
+    "language": {
+      "title": "Valoda",
+      "lead": "Saskarnes valoda šajā ierīcē."
+    },
+    "notifications": {
+      "title": "Paziņojumi šajā ierīcē",
+      "lead": "Saņemiet paziņojumu par katru pieprasījumu. iPhone tālrunī vispirms pievienojiet Artemis sākuma ekrānam (Kopīgot → Pievienot sākuma ekrānam).",
+      "notConfigured": "Šajā serverī nav konfigurēti push paziņojumi (VAPID atslēgas). E-pasta paziņojumi joprojām darbojas.",
+      "unsupported": "Šī pārlūkprogramma neatbalsta push paziņojumus.",
+      "denied": "Paziņojumi ir bloķēti pārlūkprogrammas iestatījumos.",
+      "enable": "Iespējot paziņojumus",
+      "on": "Paziņojumi ir ieslēgti.",
+      "disable": "Izslēgt"
+    },
+    "slack": {
+      "lead": "Katrs gaidošais pieprasījums tiek publicēts Slack kanālā ar pogu, kas atver apstiprināšanu ar piekļuves atslēgu. Izveidojiet Slack “Incoming Webhook” un ielīmējiet tā URL.",
+      "connected": "Slack ir pievienots.",
+      "disconnect": "Atvienot",
+      "urlLabel": "Slack webhook URL",
+      "connect": "Pievienot",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Kartes nodošana aģentiem",
+      "confirmDirect": "Tiešā nodošana: kartes numurs vienu reizi šķērsos Artemis ceļā pie aģenta. Tādējādi jūs nonākat PCI DSS darbības jomā, un Revolut gadījumā ir nepieciešams rakstisks apstiprinājums. Turpināt?",
+      "linkTitle": "Īslaicīga saite (ieteicams)",
+      "linkText": "Aģents saņem vienreizējas lietošanas saiti, kas derīga 10 minūtes; karti parāda izdevējbanka (Stripe Issuing). Numurs nekad nešķērso Artemis.",
+      "directTitle": "Tiešā nodošana (papildu iespēja)",
+      "directText": "Numurs tiek nodots aģentam tikai vienu reizi, netiekot glabāts. Nepieciešams Revolut. Jūs nonākat PCI DSS darbības jomā."
+    },
+    "org": {
+      "title": "Organizācija",
+      "name": "Nosaukums",
+      "rename": "Pārdēvēt"
+    },
+    "emergency": {
+      "title": "Ārkārtas situācija",
+      "lead": "“Iesaldēt visu” aptur visus aģentus un anulē aktīvās kartes un gaidošos pieprasījumus. Izmantojiet to, ja aģents uzvedas neparasti vai ja ir noplūdis marķieris.",
+      "confirmFreeze": "Iesaldēt visu organizāciju? Visi aģenti tiks iesaldēti un aktīvās kartes anulētas.",
+      "unfreeze": "Atcelt organizācijas iesaldēšanu",
+      "freeze": "Iesaldēt visu tūlīt",
+      "afterUnfreeze": "Pēc iesaldēšanas atcelšanas aktivizējiet katru aģentu no jauna tā lapā."
+    },
+    "passkeys": {
+      "title": "Piekļuves atslēgas",
+      "devicePrompt": "Ierīces nosaukums (piem., Lēas iPhone)",
+      "confirmDelete": "Dzēst šo piekļuves atslēgu?",
+      "add": "Pievienot",
+      "lead": "Lai apstiprinātu izdevumu, nepieciešama piekļuves atslēga. Pievienojiet to katrā ierīcē, ko izmantojat.",
+      "addedOn": "pievienota {date}",
+      "delete": "Dzēst",
+      "none": "Nav piekļuves atslēgas: jūs vēl nevarat apstiprināt izdevumus."
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "common": {
+    "loading": "Caricamento…",
+    "copy": "Copia",
+    "copied": "Copiato"
+  },
+  "lang": {
+    "choose": "Lingua"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "requests": "Richieste",
+    "agents": "Agenti",
+    "clients": "Clienti",
+    "cards": "Carte",
+    "subscriptions": "Abbonamenti",
+    "transactions": "Transazioni",
+    "exports": "Export",
+    "banks": "Banche",
+    "team": "Team",
+    "audit": "Audit",
+    "billing": "Fatturazione",
+    "settings": "Impostazioni"
+  },
+  "shell": {
+    "home": "Artemis, dashboard",
+    "organization": "Organizzazione",
+    "admin": "Amministrazione",
+    "freezeAllHint": "Congela tutti gli agenti e annulla le carte attive",
+    "frozen": "Congelata",
+    "freezeAll": "Congela tutto",
+    "signOut": "Esci",
+    "navAria": "Navigazione dell'app",
+    "pendingCount_one": "{count} in attesa",
+    "pendingCount_many": "{count} in attesa",
+    "pendingCount_other": "{count} in attesa",
+    "frozenBanner": "Organizzazione congelata: non è possibile emettere nuove carte. La scongeli in Impostazioni."
+  },
+  "status": {
+    "pending": "Da approvare",
+    "approved": "Approvata",
+    "issued": "Carta emessa",
+    "completed": "Pagata",
+    "rejected": "Rifiutata",
+    "expired": "Scaduta",
+    "failed": "Errore della banca",
+    "canceled": "Annullata",
+    "active": "Attivo",
+    "pending_bank_sca": "Approvazione bancaria",
+    "used": "Utilizzata",
+    "frozen": "Congelato",
+    "matched": "Abbinata",
+    "mismatch": "Discrepanza",
+    "unmatched": "Non abbinata"
+  },
+  "roles": {
+    "owner": "Proprietario",
+    "admin": "Amministratore",
+    "approver": "Approvatore",
+    "viewer": "Lettore"
+  },
+  "errors": {
+    "network": "Rete non disponibile. Verifichi la connessione.",
+    "unauthorized": "La sessione è scaduta. Effettui di nuovo l'accesso.",
+    "forbidden": "Non dispone dell'autorizzazione per questa operazione.",
+    "not_found": "Non trovato o non più disponibile.",
+    "invalid_input": "Alcune informazioni non sono valide. Verifichi il modulo.",
+    "rate_limited": "Troppi tentativi. Attenda un momento e riprovi.",
+    "quota_exceeded": "La sua quota mensile di mandati è stata raggiunta.",
+    "subscription_inactive": "Il suo abbonamento non è attivo. Lo aggiorni in Fatturazione.",
+    "org_frozen": "L'organizzazione è congelata.",
+    "agent_frozen": "Questo agente è congelato.",
+    "request_not_pending": "Questa richiesta non è più in attesa.",
+    "request_expired": "Questa richiesta è scaduta.",
+    "already_revealed": "Questa carta è già stata consegnata.",
+    "card_not_ready": "La carta non è ancora disponibile.",
+    "bank_error": "La banca ha rifiutato l'operazione.",
+    "plan_limit": "Il limite del suo piano è stato raggiunto. Passi a un piano superiore per continuare.",
+    "over_client_budget": "Il budget mensile di questo cliente è superato.",
+    "internal": "Si è verificato un errore. Riprovi.",
+    "currency_not_allowed": "Questa valuta non è consentita dalla policy.",
+    "invalid_amount": "Importo non valido.",
+    "over_transaction_limit": "Importo superiore al limite per transazione.",
+    "over_monthly_budget": "Il budget mensile dell'agente è superato.",
+    "merchant_blocked": "Questo esercente è bloccato dalla policy.",
+    "merchant_not_allowed": "Questo esercente non figura nell'elenco di quelli consentiti.",
+    "mcc_blocked": "Questa categoria di esercente è bloccata.",
+    "mcc_not_allowed": "Questa categoria di esercente non è consentita.",
+    "too_many_requests": "Troppe richieste nell'ultima ora per questo agente."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Tietoturva ja vaatimustenmukaisuus",
+    "description": "Näin Artemis suojaa varasi, korttisi ja tietosi.",
+    "eyebrow": "Tietoturva",
+    "headline": "Rakennettu niin, ettei yksikään agentti voi toimia omin päin.",
+    "lead": "Pahin tapaus, kehoteinjektiolla manipuloitu agentti, rajataan itse kortin avulla.",
+    "funds": {
+      "title": "Varasi eivät koskaan poistu pankistasi",
+      "body": "Artemis on ohjelmisto. Kortit myöntää oma palveluntarjoajasi (Qonto, Revolut Business, Stripe) tilillesi. Emme säilytä, vastaanota emmekä siirrä varoja."
+    },
+    "defense": {
+      "title": "Monikerroksinen suojaus",
+      "i1": "Kertakäyttöinen kortti, rajattu täsmälleen hyväksyttyyn summaan.",
+      "i2": "Lyhyt voimassaolo (oletuksena 30 minuuttia).",
+      "i3": "Agenttikohtaiset säännöt: budjetti, raja, kauppiaat, luokat.",
+      "i4": "Automaattinen täsmäytys ja hälytys kaikista summan tai kauppiaan poikkeamista.",
+      "i5": "”Jäädytä kaikki” -painike: agentit jäädytetään ja aktiiviset kortit peruutetaan yhdellä napsautuksella.",
+      "i6": "Agentit voivat vain pyytää: mikään MCP-työkalu ei voi muuttaa sääntöä tai hyväksyä maksua."
+    },
+    "cardNumbers": {
+      "title": "Korttinumerot",
+      "body": "Oletuksena kortin täydellinen numero ja turvakoodi eivät koskaan kulje Artemisin kautta: agentti saa lyhytikäisen kertakäyttöisen linkin (10 minuuttia), ja kortin näyttää sen myöntänyt pankki (Stripe Issuing Elements). Suora luovutus on saatavilla lisäasetuksena, joka on oletuksena pois päältä; silloinkaan mitään ei tallenneta."
+    },
+    "mandates": {
+      "title": "Allekirjoitetut valtuutukset",
+      "body": "Jokainen hyväksyntä on WebAuthn-allekirjoitus (pääsyavain) valtuutuksen SHA-256-tiivisteestä: agentti, summa, valuutta, kauppias, tarkoitus, voimassaolo. Tarkastusloki on tiivisteillä ketjutettu, ja siihen voi vain lisätä merkintöjä: kaikki peukalointi on havaittavissa."
+    },
+    "aiAct": {
+      "title": "AI Act ja ihmisen valvonta",
+      "body": "EU:n tekoälysäädös (AI Act) velvoittaa käyttöönottajat kirjaamaan ja valvomaan järjestelmiään. Artemisin loki, jonka voit viedä, kirjaa, kuka hyväksyi kunkin agentin maksun, milloin ja minkä sääntöjen mukaisesti."
+    },
+    "data": {
+      "title": "Henkilötiedot",
+      "body": "Tietokanta sijaitsee Euroopan unionissa (Supabase, Frankfurt). Pankkitunnukset salataan (AES-256-GCM). Katso <a href=\"{href}\">tietosuojaseloste</a>."
+    },
+    "report": {
+      "title": "Ilmoita haavoittuvuudesta",
+      "body": "Kirjoita <a href=\"{href}\">julkaisijan tiedoissa</a> mainittuun osoitteeseen. Vastaamme 72 tunnin kuluessa."
+    }
+  }
+}

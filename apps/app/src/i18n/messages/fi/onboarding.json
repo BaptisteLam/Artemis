@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Vaihe {step}/{total}",
+    "continue": "Jatka →",
+    "org": {
+      "title": "Organisaatiosi",
+      "lead": "Aloitat Sandboxissa: simuloitu pankki, ei kuluja.",
+      "nameLabel": "Yrityksen tai studion nimi"
+    },
+    "agent": {
+      "title": "Ensimmäinen agenttisi",
+      "lead": "Lyhyt nimi, joka kertoo, mitä agentti ostaa. Oletussäännöt: {monthly} kuukaudessa, {perPurchase} ostoa kohden.",
+      "nameLabel": "Agentin nimi",
+      "platformLabel": "Alusta",
+      "platformOther": "Muu",
+      "submit": "Luo agentti →"
+    },
+    "connect": {
+      "title": "Yhdistä agenttisi",
+      "done": "Kopioin tokenin →"
+    },
+    "passkey": {
+      "title": "Hyväksyntään käytettävä pääsyavain",
+      "lead": "Jokainen kulu allekirjoitetaan Face ID:llä, Touch ID:llä, Windows Hellolla tai suojausavaimella. Rekisteröi se mieluiten puhelimella, johon ilmoitukset tulevat.",
+      "deviceName": "Ensimmäinen laite",
+      "saved": "Pääsyavain rekisteröity.",
+      "unsupported": "Tämä selain ei tue pääsyavaimia.",
+      "register": "Rekisteröi pääsyavain",
+      "openDashboard": "Avaa koontinäyttö →",
+      "later": "Myöhemmin"
+    }
+  }
+}

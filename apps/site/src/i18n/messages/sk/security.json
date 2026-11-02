@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Bezpečnosť a súlad",
+    "description": "Ako Artemis chráni vaše prostriedky, karty a dáta.",
+    "eyebrow": "Bezpečnosť",
+    "headline": "Navrhnuté tak, aby žiadny agent nemohol konať sám.",
+    "lead": "Najhorší prípad, agenta zmanipulovaného cez prompt injection, zadrží samotná karta.",
+    "funds": {
+      "title": "Vaše prostriedky nikdy neopustia vašu banku",
+      "body": "Artemis je softvér. Karty vydáva váš vlastný poskytovateľ (Qonto, Revolut Business, Stripe) na váš účet. Nedržíme, neprijímame ani neprevádzame žiadne finančné prostriedky."
+    },
+    "defense": {
+      "title": "Viacvrstvová ochrana",
+      "i1": "Jednorazová karta obmedzená na presnú schválenú sumu.",
+      "i2": "Krátka platnosť (predvolene 30 minút).",
+      "i3": "Pravidlá pre každého agenta: rozpočet, limit, obchodníci, kategórie.",
+      "i4": "Automatické párovanie s upozornením pri akejkoľvek nezhode v sume alebo obchodníkovi.",
+      "i5": "Tlačidlo „Zmraziť všetko“: agenti pozastavení a aktívne karty zrušené jedným kliknutím.",
+      "i6": "Agenti môžu iba žiadať: žiadny nástroj MCP nedokáže zmeniť pravidlo ani schváliť platbu."
+    },
+    "cardNumbers": {
+      "title": "Čísla kariet",
+      "body": "Predvolene úplné číslo karty ani bezpečnostný kód nikdy neprechádzajú cez Artemis: agent dostane krátkodobý jednorazový odkaz (10 minút) a kartu zobrazí vydávajúca banka (Stripe Issuing Elements). Priame odovzdanie je dostupné ako pokročilá možnosť, predvolene vypnutá; ani vtedy sa nič neukladá."
+    },
+    "mandates": {
+      "title": "Podpísané mandáty",
+      "body": "Každé schválenie je podpis WebAuthn (prístupový kľúč) nad hašom SHA-256 mandátu: agent, suma, mena, obchodník, účel, platnosť. Auditný denník je reťazený hašmi a umožňuje iba pridávanie záznamov: akúkoľvek manipuláciu možno odhaliť."
+    },
+    "aiAct": {
+      "title": "AI Act a ľudský dohľad",
+      "body": "Európsky akt o umelej inteligencii (AI Act) ukladá nasadzujúcim subjektom povinnosť zaznamenávať a dohliadať na svoje systémy. Denník Artemis, ktorý môžete exportovať, zaznamenáva, kto autorizoval každú platbu agenta, kedy a podľa akých pravidiel."
+    },
+    "data": {
+      "title": "Osobné údaje",
+      "body": "Databáza hostovaná v Európskej únii (Supabase, Frankfurt). Bankové prístupové údaje šifrované (AES-256-GCM). Pozrite si <a href=\"{href}\">zásady ochrany súkromia</a>."
+    },
+    "report": {
+      "title": "Nahlásenie zraniteľnosti",
+      "body": "Napíšte na adresu uvedenú v <a href=\"{href}\">právnom upozornení</a>. Odpovieme do 72 hodín."
+    }
+  }
+}

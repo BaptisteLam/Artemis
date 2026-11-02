@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Csapat",
+    "lead": "A jóváhagyók megkapják az igényléseket, és passkey-jükkel aláírják azokat.",
+    "confirmRemove": "Eltávolítja ezt a tagot?",
+    "cols": {
+      "member": "Tag",
+      "role": "Szerepkör",
+      "since": "Mióta"
+    },
+    "you": "Ön",
+    "remove": "Eltávolítás",
+    "invite": "Meghívás",
+    "email": "E-mail-cím",
+    "role": "Szerepkör",
+    "send": "Meghívó küldése",
+    "inviteLink": "Meghívó hivatkozás (7 napig érvényes):",
+    "expiresOn": "lejár: {date}",
+    "revoke": "Visszavonás"
+  }
+}

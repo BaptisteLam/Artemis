@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Asiakkaat",
+    "lead": "Oma työtila jokaiselle asiakkaalle: hänen agenttinsa, kuukausibudjettinsa, katteesi ja lähetysvalmis jälleenlaskutusraportti.",
+    "invalidBudget": "Virheellinen budjetti (esim. 500 tai 49,90).",
+    "upsell": "Asiakastyötilat sisältyvät Toimistot-pakettiin ({price} + {perClient} jokaisesta aktiivisesta asiakkaasta).",
+    "seePlans": "Katso paketit →",
+    "empty": "Ei asiakkaita",
+    "emptyHint": "Luo asiakas ja liitä siihen sitten agentteja.",
+    "cols": {
+      "client": "Asiakas",
+      "agents": "Agentit",
+      "spent": "Sidottu tässä kuussa",
+      "budget": "Budjetti",
+      "markup": "Kate"
+    },
+    "archived": "arkistoitu",
+    "percent": "{value} %",
+    "report": "Raportti →",
+    "new": "Uusi asiakas",
+    "fields": {
+      "name": "Nimi",
+      "billingEmail": "Laskutussähköposti",
+      "markup": "Jälleenlaskutuskate (%)",
+      "budget": "Kuukausibudjetti (€)",
+      "budgetHint": "Tyhjä = ei asiakaskohtaista kattoa"
+    },
+    "create": "Luo asiakas",
+    "exportFailed": "Vienti epäonnistui.",
+    "eyebrow": "Asiakas",
+    "month": "Kuukausi",
+    "exportCsv": "Vie CSV",
+    "monthPurchases": "Tämän kuun ostot",
+    "markupPct": "Kate {value}",
+    "toRebill": "Jälleenlaskutettava",
+    "noPurchases": "Ei ostoja tässä kuussa",
+    "lines": {
+      "date": "Päivämäärä",
+      "agent": "Agentti",
+      "merchant": "Kauppias",
+      "purpose": "Tarkoitus",
+      "amount": "Summa",
+      "receipt": "Kuitti"
+    },
+    "yes": "Kyllä",
+    "missing": "Puuttuu",
+    "archive": "Arkistoi asiakas",
+    "reactivate": "Aktivoi uudelleen",
+    "all": "← Kaikki asiakkaat"
+  }
+}

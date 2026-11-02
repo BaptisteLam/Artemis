@@ -1,0 +1,15 @@
+{
+  "transactions": {
+    "title": "Transaktionen",
+    "lead": "Von Ihren Banken gemeldete Vorgänge, mit den Mandaten abgeglichen (letzte 90 Tage).",
+    "mismatches_one": "{count} Transaktion stimmt nicht mit ihrem Mandat überein. Prüfen Sie sie und sperren Sie den Agenten bei Bedarf.",
+    "mismatches_other": "{count} Transaktionen stimmen nicht mit ihrem Mandat überein. Prüfen Sie sie und sperren Sie den Agenten bei Bedarf.",
+    "emptyTitle": "Keine Transaktionen",
+    "emptyText": "Sie erscheinen einige Minuten nach jeder Zahlung.",
+    "colDate": "Datum",
+    "colMerchant": "Händler",
+    "colAmount": "Betrag",
+    "colBankStatus": "Bankstatus",
+    "colMatch": "Abgleich"
+  }
+}

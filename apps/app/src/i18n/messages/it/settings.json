@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Impostazioni",
+    "signOut": "Esci",
+    "language": {
+      "title": "Lingua",
+      "lead": "Lingua dell'interfaccia su questo dispositivo."
+    },
+    "notifications": {
+      "title": "Notifiche su questo dispositivo",
+      "lead": "Riceva una notifica per ogni richiesta. Su iPhone, aggiunga prima Artemis alla schermata Home (Condividi → Aggiungi alla schermata Home).",
+      "notConfigured": "Le notifiche push non sono configurate su questo server (chiavi VAPID). Le email restano attive.",
+      "unsupported": "Questo browser non supporta le notifiche push.",
+      "denied": "Le notifiche sono bloccate nelle impostazioni del browser.",
+      "enable": "Attiva le notifiche",
+      "on": "Le notifiche sono attive.",
+      "disable": "Disattiva"
+    },
+    "slack": {
+      "lead": "Ogni richiesta in attesa viene pubblicata in un canale Slack, con un pulsante che apre l'approvazione con passkey. Crei un «Incoming Webhook» in Slack e ne incolli l'URL.",
+      "connected": "Slack è collegato.",
+      "disconnect": "Scollega",
+      "urlLabel": "URL del webhook Slack",
+      "connect": "Collega",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Consegna delle carte agli agenti",
+      "confirmDirect": "Consegna diretta: il numero della carta passerà una volta da Artemis per arrivare all'agente. Questo la fa rientrare nel perimetro PCI DSS e, con Revolut, richiede un'approvazione scritta. Continuare?",
+      "linkTitle": "Link effimero (consigliato)",
+      "linkText": "L'agente riceve un link monouso valido 10 minuti; la carta viene mostrata dalla banca emittente (Stripe Issuing). Il numero non passa mai da Artemis.",
+      "directTitle": "Consegna diretta (opzione avanzata)",
+      "directText": "Il numero viene trasmesso all'agente una sola volta, senza essere memorizzato. Obbligatoria per Revolut. Si rientra nel perimetro PCI DSS."
+    },
+    "org": {
+      "title": "Organizzazione",
+      "name": "Nome",
+      "rename": "Rinomina"
+    },
+    "emergency": {
+      "title": "Emergenza",
+      "lead": "«Congela tutto» sospende tutti gli agenti e annulla le carte attive e le richieste in attesa. Lo usi se un agente si comporta in modo anomalo o se un token è stato divulgato.",
+      "confirmFreeze": "Congelare l'intera organizzazione? Tutti gli agenti verranno congelati e le carte attive annullate.",
+      "unfreeze": "Scongela l'organizzazione",
+      "freeze": "Congela tutto ora",
+      "afterUnfreeze": "Dopo lo scongelamento, riattivi ogni agente dalla sua pagina."
+    },
+    "passkeys": {
+      "title": "Passkey",
+      "devicePrompt": "Nome del dispositivo (es. iPhone di Lea)",
+      "confirmDelete": "Eliminare questa passkey?",
+      "add": "Aggiungi",
+      "lead": "Per approvare una spesa è necessaria una passkey. Ne aggiunga una su ogni dispositivo che utilizza.",
+      "addedOn": "aggiunta il {date}",
+      "delete": "Elimina",
+      "none": "Nessuna passkey: non può ancora approvare spese."
+    }
+  }
+}

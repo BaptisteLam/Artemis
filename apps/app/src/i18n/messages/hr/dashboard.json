@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · paket {plan}",
+    "title": "Nadzorna ploča",
+    "stats": {
+      "spent": "Potrošeno ovaj mjesec",
+      "pending": "Za odobrenje",
+      "openQueue": "Otvori red čekanja →",
+      "requests": "Zahtjevi ovaj mjesec"
+    },
+    "recent": {
+      "title": "Najnoviji zahtjevi",
+      "viewAll": "Prikaži sve →",
+      "empty": "Nema zahtjeva ovaj mjesec. Povežite agenta na stranici {agents}.",
+      "agentsLink": "Agenti"
+    },
+    "byAgent": {
+      "title": "Po agentu",
+      "manage": "Upravljaj →",
+      "empty": "Nema agenata."
+    }
+  }
+}

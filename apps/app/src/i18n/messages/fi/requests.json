@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Suodata tilan mukaan",
+      "all": "Kaikki",
+      "pending": "Hyväksyttävänä",
+      "issued": "Kortti myönnetty",
+      "completed": "Maksettu",
+      "rejected": "Hylätty",
+      "failed": "Epäonnistunut"
+    },
+    "list": {
+      "title": "Pyynnöt",
+      "lead": "Jokainen agentin pyyntö päätöksineen ja kortteineen.",
+      "emptyTitle": "Ei pyyntöjä",
+      "emptyBody": "Agenttiesi pyynnöt näkyvät täällä."
+    },
+    "decision": {
+      "notAllowed": "Vain omistajat, ylläpitäjät ja hyväksyjät voivat tehdä päätöksen.",
+      "cancelledOnDevice": "Hyväksyntä peruutettiin laitteella.",
+      "reasonLabel": "Hylkäyksen syy",
+      "reasonHint": "Näkyy agentille.",
+      "confirmReject": "Vahvista hylkäys",
+      "cancel": "Peruuta",
+      "signing": "Allekirjoitetaan…",
+      "approve": "Hyväksy pääsyavaimellani",
+      "reject": "Hylkää"
+    },
+    "detail": {
+      "confirmCancel": "Peruutetaanko tämä pyyntö ja sen kortti?",
+      "receiptUnavailable": "Kuitti ei ole saatavilla.",
+      "eyebrow": "Pyyntö · {id}",
+      "amount": "Pyydetty summa",
+      "agent": "Agentti",
+      "mandateWindow": "valtuutus · {id}",
+      "purpose": "Tarkoitus",
+      "category": "Luokka",
+      "expires": "Vanhenee",
+      "rules": "Säännöt",
+      "perTxLimit": "Raja",
+      "budget": "budjetti",
+      "decision": "Päätös",
+      "hash": "sha256 {hash}",
+      "quorum": "Päätösvaltaisuus: {signed}/{required} vaadittua allekirjoitusta kynnyksen ylittävälle summalle.",
+      "unusualAmount": "Suojaus: summa on tälle agentille epätavallinen, ihmisen hyväksyntä vaaditaan.",
+      "autoApproved": "Hyväksytty automaattisesti sääntöjen perusteella",
+      "signedByPasskey": "Valtuutus allekirjoitettu pääsyavaimella",
+      "card": "Kortti",
+      "cardHolderFallback": "agentti",
+      "cardAria": "Virtuaalikortti, jonka numero päättyy {last4}, kortinhaltija {holder}, voimassa {exp}",
+      "bankSca": "Hyväksy kortin luominen myös pankkisovelluksessasi.",
+      "cardExpires": "Voimassa {date}",
+      "handedOver": "luovutettu agentille {time}",
+      "notHandedOver": "ei vielä luovutettu agentille",
+      "qontoNotice": "Qonto ei luovuta kortteja agenteille: näytä kortti täällä ja suorita maksu itse.",
+      "showQontoCard": "Näytä kortti (Qonto)",
+      "simulatePayment": "Simuloi maksu",
+      "cancelCard": "Peruuta kortti",
+      "noCard": "Korttia ei ole myönnetty.",
+      "transactions": "Tapahtumat",
+      "noTransactions": "Pankki ei ole ilmoittanut tapahtumia.",
+      "receipts": "Kuitit",
+      "addReceipt": "Lisää",
+      "noReceipts": "Ei kuitteja.",
+      "back": "← Kaikki pyynnöt"
+    }
+  }
+}

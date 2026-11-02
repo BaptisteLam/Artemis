@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Team",
+    "lead": "Freigeber erhalten die Anfragen und signieren sie mit ihrem Passkey.",
+    "confirmRemove": "Dieses Mitglied entfernen?",
+    "cols": {
+      "member": "Mitglied",
+      "role": "Rolle",
+      "since": "Seit"
+    },
+    "you": "Sie",
+    "remove": "Entfernen",
+    "invite": "Einladen",
+    "email": "E-Mail-Adresse",
+    "role": "Rolle",
+    "send": "Einladung senden",
+    "inviteLink": "Einladungslink (7 Tage gültig):",
+    "expiresOn": "läuft am {date} ab",
+    "revoke": "Widerrufen"
+  }
+}

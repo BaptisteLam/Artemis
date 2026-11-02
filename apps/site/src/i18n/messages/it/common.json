@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "I suoi agenti pagano. L'ultima parola resta sua.",
+    "description": "Il firewall finanziario europeo per i suoi agenti IA: controllo, tempo risparmiato e prove per l'AI Act a ogni acquisto, con la banca che preferisce."
+  },
+  "layout": {
+    "skip": "Vai al contenuto"
+  },
+  "nav": {
+    "aria": "Navigazione principale",
+    "home": "Artemis, home page",
+    "howItWorks": "Come funziona",
+    "agencies": "Agenzie",
+    "pricing": "Prezzi",
+    "docs": "Documentazione",
+    "security": "Sicurezza",
+    "login": "Accedi",
+    "cta": "Prova"
+  },
+  "lang": {
+    "choose": "Scegli una lingua"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agenzie",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT e n8n sono marchi dei rispettivi titolari. Artemis non è affiliata a nessuno di essi.",
+    "product": "Prodotto",
+    "policyTemplate": "Modello di policy",
+    "waitlist": "Lista d'attesa",
+    "restApi": "API REST",
+    "legal": "Note legali",
+    "legalNotice": "Note legali",
+    "terms": "Condizioni di vendita",
+    "privacy": "Privacy"
+  },
+  "legal": {
+    "eyebrow": "Informazioni legali",
+    "updated": "Ultimo aggiornamento: 1° novembre 2026.",
+    "frenchPrevails": "Questa pagina è una traduzione fornita a titolo informativo. Fa fede solo la <a href=\"{href}\">versione francese</a>.",
+    "vat": "IVA non applicabile, art. 293 B del Codice generale delle imposte francese (CGI)",
+    "status": "Imprenditore individuale (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (pagine e API); Supabase, Inc. — dati ospitati nell'Unione europea (Francoforte)."
+  },
+  "docsNav": {
+    "eyebrow": "Documentazione",
+    "start": "Per iniziare",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI e skill Claude",
+    "api": "API REST",
+    "rules": "Regole e approvazione"
+  },
+  "notFound": {
+    "title": "Pagina non trovata",
+    "eyebrow": "Errore 404",
+    "headline": "Questa pagina non esiste.",
+    "lead": "Il link potrebbe essere obsoleto. Torni alla home page o consulti la documentazione.",
+    "home": "Home page"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Kunden",
+    "lead": "Ein Bereich pro Kunde: seine Agenten, sein Monatsbudget, Ihr Aufschlag und ein versandfertiger Bericht zur Weiterberechnung.",
+    "invalidBudget": "Ungültiges Budget (z. B. 500 oder 49,90).",
+    "upsell": "Kundenbereiche sind im Tarif Agenturen enthalten ({price} + {perClient} pro aktivem Kunden).",
+    "seePlans": "Tarife ansehen →",
+    "empty": "Keine Kunden",
+    "emptyHint": "Erstellen Sie einen Kunden und ordnen Sie ihm dann Agenten zu.",
+    "cols": {
+      "client": "Kunde",
+      "agents": "Agenten",
+      "spent": "Diesen Monat gebunden",
+      "budget": "Budget",
+      "markup": "Aufschlag"
+    },
+    "archived": "archiviert",
+    "percent": "{value} %",
+    "report": "Bericht →",
+    "new": "Neuer Kunde",
+    "fields": {
+      "name": "Name",
+      "billingEmail": "E-Mail-Adresse für Rechnungen",
+      "markup": "Aufschlag für Weiterberechnung (%)",
+      "budget": "Monatsbudget (€)",
+      "budgetHint": "Leer = keine Obergrenze pro Kunde"
+    },
+    "create": "Kunden erstellen",
+    "exportFailed": "Export fehlgeschlagen.",
+    "eyebrow": "Kunde",
+    "month": "Monat",
+    "exportCsv": "CSV exportieren",
+    "monthPurchases": "Käufe diesen Monat",
+    "markupPct": "Aufschlag {value}",
+    "toRebill": "Weiterzuberechnen",
+    "noPurchases": "Keine Käufe diesen Monat",
+    "lines": {
+      "date": "Datum",
+      "agent": "Agent",
+      "merchant": "Händler",
+      "purpose": "Zweck",
+      "amount": "Betrag",
+      "receipt": "Beleg"
+    },
+    "yes": "Ja",
+    "missing": "Fehlt",
+    "archive": "Kunden archivieren",
+    "reactivate": "Reaktivieren",
+    "all": "← Alle Kunden"
+  }
+}

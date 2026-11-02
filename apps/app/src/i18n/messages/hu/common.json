@@ -1,0 +1,90 @@
+{
+  "common": {
+    "loading": "Betöltés…",
+    "copy": "Másolás",
+    "copied": "Másolva"
+  },
+  "lang": {
+    "choose": "Nyelv"
+  },
+  "nav": {
+    "dashboard": "Irányítópult",
+    "requests": "Igénylések",
+    "agents": "Ügynökök",
+    "clients": "Ügyfelek",
+    "cards": "Kártyák",
+    "subscriptions": "Előfizetések",
+    "transactions": "Tranzakciók",
+    "exports": "Exportok",
+    "banks": "Bankok",
+    "team": "Csapat",
+    "audit": "Audit",
+    "billing": "Számlázás",
+    "settings": "Beállítások"
+  },
+  "shell": {
+    "home": "Artemis, irányítópult",
+    "organization": "Szervezet",
+    "admin": "Admin",
+    "freezeAllHint": "Minden ügynök befagyasztása és az aktív kártyák visszavonása",
+    "frozen": "Befagyasztva",
+    "freezeAll": "Minden befagyasztása",
+    "signOut": "Kijelentkezés",
+    "navAria": "Alkalmazásnavigáció",
+    "pendingCount_one": "{count} függőben",
+    "pendingCount_other": "{count} függőben",
+    "frozenBanner": "A szervezet befagyasztva: új kártya nem bocsátható ki. A befagyasztást a Beállításokban oldhatja fel."
+  },
+  "status": {
+    "pending": "Jóváhagyásra vár",
+    "approved": "Jóváhagyva",
+    "issued": "Kártya kibocsátva",
+    "completed": "Kifizetve",
+    "rejected": "Elutasítva",
+    "expired": "Lejárt",
+    "failed": "Banki hiba",
+    "canceled": "Visszavonva",
+    "active": "Aktív",
+    "pending_bank_sca": "Banki jóváhagyás",
+    "used": "Felhasználva",
+    "frozen": "Befagyasztva",
+    "matched": "Egyeztetve",
+    "mismatch": "Eltérés",
+    "unmatched": "Nincs egyeztetve"
+  },
+  "roles": {
+    "owner": "Tulajdonos",
+    "admin": "Adminisztrátor",
+    "approver": "Jóváhagyó",
+    "viewer": "Megtekintő"
+  },
+  "errors": {
+    "network": "A hálózat nem érhető el. Ellenőrizze a kapcsolatot.",
+    "unauthorized": "A munkamenete lejárt. Kérjük, jelentkezzen be újra.",
+    "forbidden": "Nincs jogosultsága ehhez a művelethez.",
+    "not_found": "Nem található, vagy már nem érhető el.",
+    "invalid_input": "Néhány adat érvénytelen. Kérjük, ellenőrizze az űrlapot.",
+    "rate_limited": "Túl sok próbálkozás. Kérjük, várjon egy kicsit, és próbálja újra.",
+    "quota_exceeded": "Elérte a havi megbízáskvótáját.",
+    "subscription_inactive": "Az előfizetése inaktív. Frissítse a Számlázás menüpontban.",
+    "org_frozen": "A szervezet befagyasztva.",
+    "agent_frozen": "Ez az ügynök befagyasztva.",
+    "request_not_pending": "Ez az igénylés már nem függőben lévő.",
+    "request_expired": "Ez az igénylés lejárt.",
+    "already_revealed": "Ezt a kártyát már átadták.",
+    "card_not_ready": "A kártya még nem érhető el.",
+    "bank_error": "A bank elutasította a műveletet.",
+    "plan_limit": "Elérte a csomagja korlátját. A folytatáshoz váltson magasabb csomagra.",
+    "over_client_budget": "Az ügyfél havi kerete túllépve.",
+    "internal": "Hiba történt. Kérjük, próbálja újra.",
+    "currency_not_allowed": "Ezt a pénznemet a szabályzat nem engedélyezi.",
+    "invalid_amount": "Érvénytelen összeg.",
+    "over_transaction_limit": "Az összeg meghaladja a tranzakciónkénti limitet.",
+    "over_monthly_budget": "Az ügynök havi kerete túllépve.",
+    "merchant_blocked": "Ezt a kereskedőt a szabályzat letiltja.",
+    "merchant_not_allowed": "Ez a kereskedő nem szerepel az engedélyezési listán.",
+    "mcc_blocked": "Ez a kereskedői kategória le van tiltva.",
+    "mcc_not_allowed": "Ez a kereskedői kategória nem engedélyezett.",
+    "too_many_requests": "Túl sok igénylés az elmúlt órában ennél az ügynöknél."
+  }
+}

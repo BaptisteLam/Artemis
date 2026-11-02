@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Kom igång med Artemis",
+      "lead": "Från registrering till agentens första betalning, i Sandbox, på fem minuter.",
+      "step1": {
+        "title": "1. Skapa ett konto",
+        "body": "Registrera dig i <a href=\"{href}\">appen</a> med din e-postadress (magisk länk), skapa din organisation och registrera en lösennyckel: du använder den för att godkänna utgifter."
+      },
+      "step2": {
+        "title": "2. Skapa en agent",
+        "body": "Under <strong>Agenter</strong> skapar du till exempel <code>notion.agent</code>. Artemis visar dess token (<code>art_test_…</code> i Sandbox, <code>art_live_…</code> med en riktig bank) <strong>en enda gång</strong>: kopiera den."
+      },
+      "step3": {
+        "title": "3. Anslut agenten",
+        "fastest": "Snabbast: <code>npx artemis-agents init</code> (se <a href=\"{cli}\">CLI</a>).",
+        "server": "MCP-servern finns på <code>{url}</code>, med headern <code>Authorization: Bearer &lt;token&gt;</code>. Följ guiden för ditt verktyg: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> eller <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. Köpflödet",
+        "tool": "Verktyg",
+        "role": "Funktion",
+        "requestCard": "Begär ett kort: belopp <strong>i cent</strong>, valuta, handlare, syfte.",
+        "getRequestStatus": "Följer det mänskliga godkännandet.",
+        "getCardForCheckout": "Returnerar en <strong>tillfällig länk</strong> (10 min, engångs): kortet visas av banken, utan att passera genom Artemis.",
+        "listBudgets": "Månadsbudget, förbrukat, återstående, gräns.",
+        "getSpendSummary": "Utgifter per handlare (dag, vecka, månad).",
+        "attachReceipt": "Bifogar ett kvitto till köpet.",
+        "cancelCard": "Spärrar kortet om köpet inte längre blir av."
+      },
+      "step5": {
+        "title": "5. Gå live",
+        "body": "Välj en plan under <strong>Fakturering</strong> och anslut sedan din bank under <strong>Banker</strong>. Agenter som är kopplade till den banken får riktiga engångskort."
+      }
+    },
+    "mcpClaude": {
+      "title": "Anslut Claude",
+      "lead": "Claude Code, Claude Desktop och Claude-anslutningar talar MCP över HTTP.",
+      "verify": "Kontrollera med <code>claude mcp list</code> och be sedan till exempel: ”Teckna ett Notion-abonnemang för {price} med Artemis”.",
+      "desktopBody": "Öppna <em>Settings → Developer → Edit Config</em> och lägg till:",
+      "instructionsTitle": "Användbara instruktioner för agenten",
+      "instructionsBody": "Lägg till i dina systeminstruktioner:"
+    },
+    "mcpChatgpt": {
+      "title": "Anslut ChatGPT",
+      "lead": "ChatGPT accepterar fjärranslutna MCP-servrar som anpassade anslutningar.",
+      "addTitle": "Lägg till anslutningen",
+      "step1": "Öppna <em>Settings → Connectors → Advanced</em> och aktivera utvecklarläget om din plan kräver det.",
+      "step2": "Skapa en anslutning, URL: <code>{url}</code>.",
+      "step3": "Autentisering: headern <code>Authorization</code> med värdet <code>Bearer art_…</code> (beroende på vilka alternativ din ChatGPT-arbetsyta erbjuder).",
+      "note": "De exakta etiketterna varierar mellan ChatGPT-planerna; adressen och headern är desamma.",
+      "openaiTitle": "OpenAI-agenter (API)",
+      "openaiBody": "Med Responses API eller Agents SDK deklarerar du ett fjärranslutet MCP-verktyg som pekar på <code>{url}</code> med samma header."
+    },
+    "cli": {
+      "title": "CLI, Claude-skill och n8n",
+      "lead": "Från noll till ditt första mandat på tre minuter.",
+      "commandTitle": "Ett kommando",
+      "commandBody": "Kommandot frågar efter API-URL:en och agentens token (skapad i appen, sidan Agenter), kontrollerar åtkomsten, sparar konfigurationen i <code>~/.config/artemis/config.json</code>, lägger till MCP-servern i Claude Code om det är installerat och skriver ut konfigurationen för Claude Desktop och n8n. Med en Sandbox-token och alternativet <code>--demo</code> skapas ett första testmandat som du godkänner i appen.",
+      "skillTitle": "Claude-skill",
+      "skillBody": "Skillen <code>artemis-payments</code> lär Claude att betala via Artemis: belopp i cent, vänta på godkännande, öppna betalningslänken vid rätt tillfälle, kvitto efter köpet och avvisa injektioner. Kopiera mappen <code>integrations/claude-skill/artemis</code> från repot till <code>~/.claude/skills/</code>.",
+      "n8nTitle": "n8n-nod",
+      "n8nBody": "Installera communitynoden <code>n8n-nodes-artemis</code> (Settings → Community nodes). Åtgärder: begär ett kort, status, betalningslänk, spärra, budget. Inloggningsuppgifter: API-URL och agentens token."
+    },
+    "n8n": {
+      "title": "Anslut n8n",
+      "lead": "Två alternativ: noden MCP Client för en AI-agent i n8n, eller HTTP-anrop för ett klassiskt arbetsflöde.",
+      "agentTitle": "AI-agent i n8n (MCP Client)",
+      "agentBody": "I en <em>AI Agent</em>-nod lägger du till verktyget <em>MCP Client</em>: transport <em>HTTP Streamable</em>, URL <code>{url}</code>, autentisering <em>Header Auth</em> med <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "HTTP-arbetsflöde",
+      "workflowBody": "Importera exempelarbetsflödet <code>examples/n8n/artemis-request-card.json</code> från repot. Det kedjar:",
+      "step1With": "med",
+      "step2": "en avfrågningsloop på <code>GET /v1/card-requests/:id</code> tills statusen är <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> för att hämta kortets tillfälliga länk (10 minuter, engångs)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "För Make, dina skript och dina egna agenter. Samma token som för MCP-servern.",
+      "authTitle": "Autentisering",
+      "base": "Bas-URL: <code>{url}</code>. Gräns: 60 anrop per minut och agent.",
+      "endpointsTitle": "Endpoints",
+      "method": "Metod",
+      "path": "Sökväg",
+      "role": "Funktion",
+      "create": "Skapa en begäran",
+      "status": "Status för en begäran",
+      "reveal": "Tillfällig länk till kortet (10 min, engångs)",
+      "cancel": "Avbryt",
+      "receipts": "Bifoga ett kvitto",
+      "budgets": "Återstående budget",
+      "spendSummary": "Utgifter per handlare",
+      "exampleTitle": "Exempel",
+      "errorsTitle": "Fel",
+      "errorsBody": "Vanliga koder: <code>invalid_amount</code> (beloppet måste vara ett heltal i cent), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Regler och godkännande",
+      "lead": "Så avgör Artemis om en begäran avvisas, godkänns automatiskt eller skickas till dig för signering.",
+      "orderTitle": "Utvärderingsordning",
+      "orderBody": "Den första regel som inte uppfylls avvisar begäran:",
+      "o1": "Tillåten valuta (<code>currency_not_allowed</code>).",
+      "o2": "Positivt belopp under gränsen per köp (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Månadsbudget: månadens väntande, godkända och betalda begäranden + beloppet (<code>over_monthly_budget</code>). Månaden följer Paris-tid.",
+      "o4": "Blockerad handlare, eller saknas på listan över tillåtna om en sådan finns (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Handlarkategori (MCC) blockerad eller inte tillåten (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Automatiskt godkännande",
+      "autoBody": "En begäran godkänns utan dig om beloppet är <strong>under</strong> tröskeln för automatiskt godkännande <strong>och</strong> handlaren finns på agentens lista över tillåtna handlare. Utan en sådan lista skickas varje begäran till dig.",
+      "matchTitle": "Matchning av handlare",
+      "matchBody": "Namnen jämförs utan hänsyn till skiftläge, accenter, bolagsform och domänändelse: ”Notion” omfattar ”Notion Labs, Inc.” och ”notion.so”.",
+      "humanTitle": "Mänskligt godkännande",
+      "humanBody": "Ägare, administratörer och godkännare får en avisering. Godkännandet kräver en lösennyckel. Om din bank tillämpar sin egen starka kundautentisering (till exempel Qonto) godkänner du även i bankens app.",
+      "expiryTitle": "Giltighetstid",
+      "expiryBody": "En obehandlad begäran upphör att gälla efter 30 minuter (konfigurerbart). Ett oanvänt kort spärras när det löper ut."
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Yleiset myynti- ja käyttöehdot",
+      "purposeTitle": "1. Tarkoitus",
+      "purpose": "Nämä ehdot koskevat Artemis-ohjelmiston käyttöä, jonka julkaisee {editor} ({status}, SIRET {siret}), sekä sen tilaamista yritysasiakkaiden toimesta. Palvelu on tarkoitettu vain elinkeinonharjoittajille.",
+      "serviceTitle": "2. Palvelun kuvaus",
+      "service": "Artemisin avulla asiakas voi määrittää kulusäännöt ohjelmistoagenteilleen, hyväksyä niiden maksupyynnöt sekä ohjata oman pankkinsa ohjelmointirajapintojen kautta kertakäyttöisten virtuaalikorttien luomista. Artemis ei tarjoa maksupalveluja, ei säilytä varoja eikä myönnä kortteja. Pankkisuhteeseen, pankkimaksuihin ja vahvaan tunnistautumiseen sovelletaan yksinomaan asiakkaan ja sen pankin välistä sopimusta.",
+      "accountTitle": "3. Tili ja tietoturva",
+      "account": "Asiakas vastaa agenttitokenien, tilinsä käyttöoikeuksien ja käyttäjiensä pääsyavainten luottamuksellisuudesta sekä määrittämistään säännöistä. Jokaisen kulun, jonka valtuutettu käyttäjä on hyväksynyt tai joka on automaattisen hyväksyntäsäännön mukainen, katsotaan olevan asiakkaan hyväksymä.",
+      "pricesTitle": "4. Paketit ja hinnat",
+      "prices": "Paketit: Sandbox (maksuton), Builder ({builder} / kk), Team ({team} / kk), Toimistot ({agency} / kk + {perClient} jokaisesta aktiivisesta asiakkaasta), Business (alkaen {business} / kk). Maksullisen paketin kuukausikiintiön ylittävistä valtuutuksista veloitetaan {overage} kappaleelta. Hinnat ovat nettohintoja. {vat}. Maksu kuukausittain etukäteen kortilla Stripen kautta. Tilaus uusiutuu automaattisesti; irtisanominen tulee voimaan kuluvan jakson lopussa, eikä maksuja palauteta suhteellisesti.",
+      "quotasTitle": "5. Kiintiöt",
+      "quotas": "Jokaiseen pakettiin sisältyy kiintiöitä (agentit, liitetyt pankit, kuukausittaiset pyynnöt). Kiintiöiden ylittyessä uudet pyynnöt hylätään seuraavaan jaksoon tai paketin vaihtoon asti.",
+      "availabilityTitle": "6. Saatavuus",
+      "availability": "Julkaisija pyrkii kohtuullisin keinoin varmistamaan palvelun saatavuuden, mutta ei takaa lopputulosta. Katkoksia voi esiintyä huollon vuoksi tai teknisten palveluntarjoajien ja pankkien vuoksi.",
+      "liabilityTitle": "7. Vastuu",
+      "liability": "Julkaisija ei vastaa asiakkaan agenttien annettujen valtuuksien puitteissa tekemistä ostoista, kauppiaiden valinnasta, ostettujen tavaroiden tai palvelujen laadusta eikä asiakkaan pankin päätöksistä. Julkaisijan vastuu kaikista syistä yhteensä rajoittuu asiakkaan viimeisten kahdentoista kuukauden aikana maksamiin summiin.",
+      "dataTitle": "8. Tiedot",
+      "data": "Henkilötietojen käsittely kuvataan <a href=\"{href}\">tietosuojaselosteessa</a>. Asiakas voi viedä tietonsa milloin tahansa.",
+      "lawTitle": "9. Sovellettava laki",
+      "law": "Sovelletaan Ranskan lakia. Jos sovintoon ei päästä, toimivaltaisia ovat julkaisijan kotipaikan tuomioistuimet."
+    },
+    "privacy": {
+      "title": "Tietosuojaseloste",
+      "controllerTitle": "Rekisterinpitäjä",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Käsiteltävät tiedot",
+      "dataAccount": "Tili: sähköposti, organisaatio, rooli, pääsyavaimet (vain julkiset avaimet).",
+      "dataActivity": "Toiminta: korttipyynnöt, allekirjoitetut valtuutukset, pankin ilmoittamat tapahtumat, kuitit, tarkastusloki.",
+      "dataBanks": "Pankkiyhteydet: salatut käyttöoikeustokenit (AES-256-GCM).",
+      "dataBilling": "Laskutus: hoitaa Stripe; Artemis ei näe korttinumeroita, joilla maksat tilauksesi.",
+      "dataWaitlist": "Odotuslista: sähköposti, yritys, käyttötapaus.",
+      "cardNumbers": "Artemis ei koskaan tallenna agenteillesi myönnettyjen korttien täydellistä numeroa eikä turvakoodia.",
+      "purposesTitle": "Käsittelyn tarkoitukset ja oikeusperusteet",
+      "purposes": "Sopimuksen täytäntöönpano (palvelun tarjoaminen), lakisääteiset velvoitteet (kirjanpito), oikeutettu etu (tietoturva, petosten estäminen), suostumus (odotuslista).",
+      "processorsTitle": "Henkilötietojen käsittelijät",
+      "processors": "Supabase (tietokanta, Euroopan unioni), Cloudflare (hosting ja verkko), Stripe (laskutus), Resend (tapahtumasähköpostit). Mahdollisia EU:n ulkopuolisia siirtoja koskevat vakiosopimuslausekkeet.",
+      "retentionTitle": "Säilytysajat",
+      "retention": "Tilitiedot: sopimuksen voimassaoloaika ja sen jälkeen 3 vuotta. Tarkastusloki ja kirjanpitotiedot: 10 vuotta. Odotuslista: 3 vuotta ilman vuorovaikutusta.",
+      "rightsTitle": "Oikeutesi",
+      "rights": "Pääsy tietoihin, oikaisu, poistaminen, siirrettävyys, vastustaminen ja käsittelyn rajoittaminen: kirjoita osoitteeseen {email}. Voit tehdä valituksen Ranskan tietosuojaviranomaiselle CNIL:lle (cnil.fr).",
+      "cookiesTitle": "Evästeet",
+      "cookies": "Sivusto ei käytä mainosevästeitä eikä kolmansien osapuolten analytiikkatyökaluja. Sovellus käyttää vain istuntosi edellyttämää tallennustilaa."
+    },
+    "notice": {
+      "title": "Julkaisijan tiedot",
+      "editorTitle": "Julkaisija",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Osoite: {address}",
+      "contact": "Yhteystiedot: {email}",
+      "directorTitle": "Julkaisusta vastaava",
+      "hostingTitle": "Hosting",
+      "natureTitle": "Palvelun luonne",
+      "nature": "Artemis on ohjelmisto tekoälyagenttien kulujen hallintaan. Artemis ei ole maksulaitos eikä sähköisen rahan liikkeeseenlaskija: se ei vastaanota, säilytä eikä siirrä varoja. Maksukortit myöntää asiakkaan pankki omalla vastuullaan.",
+      "ipTitle": "Immateriaalioikeudet",
+      "ip": "Tämän sivuston sisältö, tavaramerkit ja logot ovat julkaisijan omaisuutta. Kaikenlainen kopiointi ilman lupaa on kielletty."
+    }
+  }
+}

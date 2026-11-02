@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Bezpieczeństwo i zgodność",
+    "description": "Jak Artemis chroni Twoje środki, karty i dane.",
+    "eyebrow": "Bezpieczeństwo",
+    "headline": "Zaprojektowany tak, by żaden agent nie mógł działać sam.",
+    "lead": "Najgorszy scenariusz, czyli agent zmanipulowany przez prompt injection, ogranicza sama karta.",
+    "funds": {
+      "title": "Twoje środki nigdy nie opuszczają Twojego banku",
+      "body": "Artemis to oprogramowanie. Karty wydaje Twój własny dostawca (Qonto, Revolut Business, Stripe) na Twoim koncie. Nie przechowujemy, nie przyjmujemy ani nie przekazujemy żadnych środków."
+    },
+    "defense": {
+      "title": "Wielowarstwowa ochrona",
+      "i1": "Karta jednorazowa, ograniczona do dokładnie zatwierdzonej kwoty.",
+      "i2": "Krótki termin ważności (domyślnie 30 minut).",
+      "i3": "Reguły dla każdego agenta: budżet, limit, sprzedawcy, kategorie.",
+      "i4": "Automatyczne uzgadnianie z alertem przy każdej rozbieżności kwoty lub sprzedawcy.",
+      "i5": "Przycisk „Zamroź wszystko”: agenci zawieszeni, a aktywne karty anulowane jednym kliknięciem.",
+      "i6": "Agenci mogą tylko prosić: żadne narzędzie MCP nie może zmienić reguły ani zatwierdzić płatności."
+    },
+    "cardNumbers": {
+      "title": "Numery kart",
+      "body": "Domyślnie pełny numer karty i kod zabezpieczający nigdy nie przechodzą przez Artemis: agent otrzymuje krótkotrwały, jednorazowy link (10 minut), a kartę wyświetla bank wydający (Stripe Issuing Elements). Bezpośrednie przekazanie jest dostępne jako opcja zaawansowana, domyślnie wyłączona; nawet wtedy nic nie jest przechowywane."
+    },
+    "mandates": {
+      "title": "Podpisane upoważnienia",
+      "body": "Każde zatwierdzenie to podpis WebAuthn (klucz dostępu) złożony na skrócie SHA-256 upoważnienia: agent, kwota, waluta, sprzedawca, cel, termin ważności. Dziennik audytu jest powiązany łańcuchem skrótów i umożliwia wyłącznie dopisywanie: każdą manipulację można wykryć."
+    },
+    "aiAct": {
+      "title": "AI Act i nadzór człowieka",
+      "body": "Unijny AI Act wymaga od podmiotów stosujących systemy AI rejestrowania ich działania i sprawowania nad nimi nadzoru. Dziennik Artemis, który możesz wyeksportować, zapisuje, kto zatwierdził każdą płatność agenta, kiedy i na podstawie jakich reguł."
+    },
+    "data": {
+      "title": "Dane osobowe",
+      "body": "Baza danych hostowana w Unii Europejskiej (Supabase, Frankfurt). Dane uwierzytelniające do banków szyfrowane (AES-256-GCM). Zobacz <a href=\"{href}\">politykę prywatności</a>."
+    },
+    "report": {
+      "title": "Zgłoś podatność",
+      "body": "Napisz na adres podany w <a href=\"{href}\">nocie prawnej</a>. Odpowiadamy w ciągu 72 godzin."
+    }
+  }
+}

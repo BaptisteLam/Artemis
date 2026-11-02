@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Ihre Agenten zahlen. Das letzte Wort haben Sie.",
+    "description": "Die europäische Finanz-Firewall für Ihre KI-Agenten: Kontrolle, Zeitersparnis und AI-Act-Nachweis für jeden Kauf, bei der Bank Ihrer Wahl."
+  },
+  "layout": {
+    "skip": "Zum Inhalt springen"
+  },
+  "nav": {
+    "aria": "Hauptnavigation",
+    "home": "Artemis, Startseite",
+    "howItWorks": "So funktioniert’s",
+    "agencies": "Agenturen",
+    "pricing": "Preise",
+    "docs": "Doku",
+    "security": "Sicherheit",
+    "login": "Anmelden",
+    "cta": "Testen"
+  },
+  "lang": {
+    "choose": "Sprache wählen"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agenturen",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT und n8n sind Marken ihrer jeweiligen Inhaber. Artemis steht mit keinem von ihnen in Verbindung.",
+    "product": "Produkt",
+    "policyTemplate": "Richtlinienvorlage",
+    "waitlist": "Warteliste",
+    "restApi": "REST-API",
+    "legal": "Rechtliches",
+    "legalNotice": "Impressum",
+    "terms": "AGB",
+    "privacy": "Datenschutz"
+  },
+  "legal": {
+    "eyebrow": "Rechtliches",
+    "updated": "Zuletzt aktualisiert: 1. November 2026.",
+    "frenchPrevails": "Diese Seite ist eine zur Information bereitgestellte Übersetzung. Rechtsverbindlich ist allein die <a href=\"{href}\">französische Fassung</a>.",
+    "vat": "Keine Umsatzsteuer ausgewiesen gemäß Art. 293 B des französischen Steuergesetzbuchs (CGI)",
+    "status": "Einzelunternehmer (französische Micro-Entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (Seiten und API); Supabase, Inc. — Daten gehostet in der Europäischen Union (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentation",
+    "start": "Erste Schritte",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI und Claude-Skill",
+    "api": "REST-API",
+    "rules": "Regeln und Freigabe"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "eyebrow": "Fehler 404",
+    "headline": "Diese Seite existiert nicht.",
+    "lead": "Der Link ist möglicherweise veraltet. Kehren Sie zur Startseite zurück oder lesen Sie die Dokumentation.",
+    "home": "Startseite"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Céim {step} as {total}",
+    "continue": "Lean ar aghaidh →",
+    "org": {
+      "title": "D'eagraíocht",
+      "lead": "Tosaíonn tú sa Sandbox: banc ionsamhlaithe, gan táillí.",
+      "nameLabel": "Ainm na cuideachta nó an stiúideo"
+    },
+    "agent": {
+      "title": "Do chéad ghníomhaire",
+      "lead": "Ainm gearr a insíonn cad a cheannaíonn sé. Rialacha réamhshocraithe: {monthly} in aghaidh na míosa, {perPurchase} in aghaidh an cheannaigh.",
+      "nameLabel": "Ainm an ghníomhaire",
+      "platformLabel": "Ardán",
+      "platformOther": "Eile",
+      "submit": "Cruthaigh an gníomhaire →"
+    },
+    "connect": {
+      "title": "Ceangail do ghníomhaire",
+      "done": "Tá an comhartha cóipeáilte agam →"
+    },
+    "passkey": {
+      "title": "Do passkey formheasa",
+      "lead": "Síneofar gach caiteachas le Face ID, Touch ID, Windows Hello nó eochair slándála. Más féidir, cláraigh é ón nguthán a gheobhaidh na fógraí.",
+      "deviceName": "An chéad ghléas",
+      "saved": "Passkey cláraithe.",
+      "unsupported": "Ní thacaíonn an brabhsálaí seo le passkeys.",
+      "register": "Cláraigh passkey",
+      "openDashboard": "Oscail an painéal →",
+      "later": "Ar ball"
+    }
+  }
+}

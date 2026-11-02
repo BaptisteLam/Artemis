@@ -1,0 +1,95 @@
+{
+  "audit": {
+    "title": "Registro de auditoría",
+    "lead": "Cada evento se encadena con un hash SHA-256 y no puede modificarse ni eliminarse: es su prueba de supervisión humana (AI Act).",
+    "verify": "Verificar la integridad",
+    "export": "Exportar",
+    "report": "Informe AI Act {quarter}",
+    "exportFailed": "La exportación ha fallado.",
+    "reportUnavailable": "Informe no disponible.",
+    "chainOk_one": "Cadena íntegra: {count} entrada verificada.",
+    "chainOk_many": "Cadena íntegra: {count} entradas verificadas.",
+    "chainOk_other": "Cadena íntegra: {count} entradas verificadas.",
+    "chainBroken": "Cadena rota en la entrada n.º {id}.",
+    "exportUpsell": "La exportación firmada del registro de auditoría está incluida en el plan Business.",
+    "seePlans": "Ver los planes",
+    "cols": {
+      "date": "Fecha",
+      "event": "Evento",
+      "actor": "Actor",
+      "hash": "Huella"
+    },
+    "view": "ver",
+    "older": "Anteriores →",
+    "actors": {
+      "user": "Usuario",
+      "agent": "Agente",
+      "system": "Sistema"
+    },
+    "actions": {
+      "org": {
+        "created": "Organización creada",
+        "frozen": "Organización congelada",
+        "unfrozen": "Organización descongelada",
+        "card_delivery_changed": "Modo de entrega de tarjetas modificado",
+        "slack_connected": "Slack conectado",
+        "slack_disconnected": "Slack desconectado"
+      },
+      "agent": {
+        "created": "Agente creado",
+        "updated": "Agente modificado",
+        "deleted": "Agente eliminado",
+        "token_rotated": "Token regenerado",
+        "frozen": "Agente congelado"
+      },
+      "policy": {
+        "updated": "Reglas modificadas"
+      },
+      "request": {
+        "created": "Solicitud creada",
+        "rejected": "Solicitud rechazada",
+        "approved": "Mandato firmado",
+        "auto_approved": "Aprobación automática",
+        "approval_recorded": "Aprobación registrada",
+        "expired": "Solicitud caducada"
+      },
+      "card": {
+        "issued": "Tarjeta emitida",
+        "issue_failed": "Fallo en la emisión de la tarjeta",
+        "revealed": "Tarjeta entregada al agente",
+        "link_created": "Enlace de tarjeta creado",
+        "viewed": "Tarjeta consultada",
+        "canceled": "Tarjeta cancelada",
+        "expired": "Tarjeta caducada"
+      },
+      "transaction": {
+        "matched": "Transacción conciliada",
+        "mismatch": "Discrepancia detectada"
+      },
+      "receipt": {
+        "attached": "Justificante adjuntado"
+      },
+      "bank": {
+        "connected": "Banco conectado",
+        "disconnected": "Banco desconectado"
+      },
+      "member": {
+        "invited": "Miembro invitado",
+        "joined": "Miembro incorporado",
+        "removed": "Miembro retirado",
+        "role_changed": "Rol modificado"
+      },
+      "client": {
+        "created": "Cliente creado",
+        "updated": "Cliente modificado"
+      },
+      "billing": {
+        "subscribed": "Suscripción iniciada",
+        "updated": "Suscripción modificada"
+      },
+      "subscription": {
+        "charged": "Suscripción cobrada"
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Az európai megoldás · MI-ügynökök",
+      "lead": "Európai pénzügyi tűzfal MI-ügynökei számára. A Claude, a ChatGPT vagy az n8n kér, Ön egyetlen érintéssel aláír, és minden kiadás ellenőrzött, egyeztetett és bizonyított, az Ön által választott banknál.",
+      "tryFree": "Próbálja ki ingyen →",
+      "seeDemo": "Bemutató megtekintése",
+      "visualAria": "Példa: egy ügynök igénylése és az egyszer használatos kártyája",
+      "expired": "Lejárt",
+      "pending": "Függő igénylés",
+      "toApprove": "Jóváhagyásra vár",
+      "purpose": "csapat-előfizetés",
+      "approve": "Jóváhagyás passkey-vel",
+      "decline": "Elutasítás"
+    },
+    "trust": {
+      "aria": "Garanciák",
+      "europe": "Európai",
+      "europeText": "Euró, európai bankok, frankfurti adattárolás, GDPR.",
+      "funds": "A pénze Önnél marad",
+      "fundsText": "Az Artemis soha nem kezel pénzt.",
+      "number": "A kártyaszám nem jut el az Artemishez",
+      "numberText": "A kártyát az Ön bankja jeleníti meg, nem mi.",
+      "aiAct": "AI Act-kompatibilis",
+      "aiActText": "Minden kiadás aláírva, láncolt napló, negyedéves jelentés."
+    },
+    "demo": {
+      "eyebrow": "Bemutató",
+      "title": "Az igényléstől a fizetésig 20 másodperc alatt.",
+      "explain": "Anélkül, hogy valaha is kiadná a céges kártyát.",
+      "step1": "Az ügynök kér",
+      "window": "claude · beszélgetés",
+      "userMessage": "Fizess elő a csapatnak a Notion Plusra, 5 felhasználóra.",
+      "agentMessage": "Igényeltem egy {amount} összegű kártyát. Várom a jóváhagyását.",
+      "step2": "Ön jóváhagyja",
+      "notification": "{agent} {amount} összeget szeretne költeni",
+      "sheetTitle": "A megbízás jóváhagyása",
+      "validity": "{minutes} perc",
+      "faceId": "Aláírás Face ID-val",
+      "step3": "Az ügynök fizet",
+      "reconciled": "Egyeztetve"
+    },
+    "benefits": {
+      "eyebrow": "Amit valójában kap",
+      "title": "Nem egy kártyát.",
+      "explain": "Azt a bankok már kezdik ingyen adni. Ön kontrollt, időt és bizonyítékot kap.",
+      "control": {
+        "eyebrow": "Kontroll",
+        "title": "Az Ön jóváhagyása nélkül semmi sem megy ki.",
+        "text": "Keretek, limitek, engedélyezett kereskedők, védőkorlátok a promptinjektálás ellen. Az Ön küszöbértékei fölött minden kiadás egy vagy több jóváhagyó passkey-aláírására vár."
+      },
+      "time": {
+        "eyebrow": "Időmegtakarítás",
+        "title": "Nincs több kézzel létrehozott kártya.",
+        "text": "Az ügynök kér, Ön egyetlen érintéssel aláír, a kártya létrejön a bankjában, a tranzakció egyeztetésre kerül, a számla pedig a helyére kerül. Nincs többé kivonat-pipálgatás és bizonylatvadászat."
+      },
+      "proof": {
+        "eyebrow": "Bizonyíték",
+        "title": "Minden kiadást ember hagyott jóvá.",
+        "text": "Aláírt megbízások, láncolt, manipulálhatatlan auditnapló és negyedéves felügyeleti jelentés: amit az AI Act, a pénzügyi igazgatója és a könyvvizsgálója kér, átadásra készen."
+      },
+      "agencies": {
+        "eyebrow": "Ügynökségeknek",
+        "title": "Ügyfelenként egy keret és egy számla.",
+        "text": "Ügyfél-munkaterületek, havi keret ügyfelenként, továbbszámlázási árrés és elküldésre kész havi kimutatás. Ügyfelei végre látják, mit költenek az ügynökeik."
+      }
+    },
+    "how": {
+      "eyebrow": "Működés",
+      "title": "Négy lépés, közös kártya nélkül.",
+      "s1": "Az ügynök kér",
+      "s1Text": "MCP-n vagy API-n keresztül: „{amount} a Notionnál, csapat-előfizetés”.",
+      "s2": "A szabályok szűrnek",
+      "s2Text": "Keret, limit, kereskedő: a szabályokon kívül eső igénylést a rendszer azonnal elutasítja.",
+      "s3": "Ön jóváhagyja",
+      "s3Text": "Egy értesítés a telefonján, egy passkey-aláírás.",
+      "s4": "Az ügynök fizet",
+      "s4Text": "Egyszer használatos kártya, pontos összeg, rövid lejárat, majd automatikus egyeztetés."
+    },
+    "useCases": {
+      "eyebrow": "Felhasználási esetek",
+      "title": "Amit az ügynökei már most is vásárolnak.",
+      "explain": "Mostantól saját kártyával.",
+      "api": {
+        "title": "API-k és tokenek",
+        "text": "Kredit feltöltése, amikor elfogy a kvóta, anélkül hogy a céges kártya egy .env fájlban maradna."
+      },
+      "saas": {
+        "title": "SaaS-előfizetések",
+        "text": "Előfizetés vagy csomagbővítés a csapat számára, pontosan a jóváhagyott összegben."
+      },
+      "cloud": {
+        "title": "Felhő és domainek",
+        "text": "Domainnév vásárlása vagy tárhely-túllépés kifizetése egy telepítés közepén."
+      },
+      "data": {
+        "title": "Adatok és B2B-beszerzések",
+        "text": "Fizetés adatkészletért, scraping feladatért vagy kellékekért, automatikusan csatolt bizonylattal.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Legyünk őszinték",
+      "title": "Csak Stripe-ot, Rampet vagy Mercuryt használ?",
+      "explain": "Ezek már elvégzik a munka egy részét.",
+      "lead": "Az Artemis azt nyújtja, amit egy bank nem tesz meg a versenytársai érdekében.",
+      "banks": "Egyszerre több bank",
+      "banksText": "Stripe Issuing, Revolut, Qonto és a Sandbox, egy helyről, egyetlen szabályzattal kezelve.",
+      "accounting": "Francia könyvelés",
+      "accountingText": "FEC- és Pennylane-export, minden megbízáshoz csatolt bizonylat, automatikus egyeztetés.",
+      "proof": "AI Act szerinti bizonyíték, átadásra készen",
+      "proofText": "Emberi aláírás minden kiadásnál, láncolt napló, ügynöknyilvántartás, negyedéves jelentés.",
+      "agency": "Ügynökségi mód",
+      "agencyText": "Több ügyfél ügynökei, mindegyik saját kerettel, árréssel és kimutatással."
+    },
+    "europe": {
+      "eyebrow": "Az európai megoldás",
+      "title": "Európában készült, Európának.",
+      "lead": "Az amerikai ügynökkártyák dollárban, amerikai bankokkal és amerikai jog szerint működnek. Az Artemis euróban, európai bankokkal, a GDPR, az AI Act és a francia könyvelési szabályok szerint.",
+      "banks": "Euró és európai bankok: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "EU",
+      "data": "Frankfurti adattárolás, GDPR, titkosított hozzáférési adatok",
+      "article": "14. cikk",
+      "oversight": "Az AI Act szerinti emberi felügyelet, kiadásról kiadásra bizonyítva",
+      "accounting": "Francia könyvelés: FEC, Pennylane, csatolt bizonylatok"
+    },
+    "compare": {
+      "eyebrow": "Összehasonlítás",
+      "title": "A kártyát az Ön bankja bocsátja ki.",
+      "explain": "Az Artemis mindegyik fölött irányít.",
+      "criterion": "Szempont",
+      "bankOnly": "Csak az Ön bankja (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Csak az Ön bankja",
+      "usCards": "Amerikai ügynökkártyák",
+      "usCardsShort": "Amerikai ügynökkártyák",
+      "rows": {
+        "card": "Virtuális kártya az ügynöknek",
+        "banks": "Több bank, egy szabályzat",
+        "signature": "Emberi aláírás minden kiadásnál (passkey)",
+        "aiAct": "Exportálható AI Act szerinti bizonyíték",
+        "accounting": "Francia könyvelés (FEC, Pennylane)",
+        "agency": "Ügynökségi mód (keretek és továbbszámlázás ügyfelenként)",
+        "europe": "Euró, tárhely és adatok Európában"
+      },
+      "values": {
+        "yes": "Igen",
+        "no": "Nem",
+        "yesBank": "Igen, az Ön bankja bocsátja ki",
+        "yesQuorum": "Igen, kvórummal",
+        "dependsPlan": "A csomagtól függ",
+        "dependsBank": "A banktól függ",
+        "partial": "Részben"
+      }
+    },
+    "builders": {
+      "eyebrow": "Fejlesztőknek",
+      "title": "Egyetlen sorral bekötve.",
+      "explain": "Claude, ChatGPT, n8n, Make vagy saját kód.",
+      "lead": "Távoli MCP-szerver és REST API. Ingyenes Sandbox szimulált kártyákkal, banki kapcsolat nélküli teszteléshez.",
+      "connect": "A Claude csatlakoztatása →",
+      "window": "terminál"
+    },
+    "faq": {
+      "eyebrow": "Gyakori kérdések",
+      "title": "Amit kérdezni szoktak tőlünk.",
+      "more": "Más kérdése van? Olvassa el a <a href=\"{security}\">Biztonság</a> oldalt vagy a <a href=\"{docs}\">dokumentációt</a>."
+    },
+    "final": {
+      "title": "Tartsa kézben az ügynökeit.",
+      "lead": "Az európai pénzügyi tűzfal, Sandboxban ingyenes, bankkártya nélkül. Az utolsó szó az Öné.",
+      "signup": "Fiók létrehozása →",
+      "pricing": "Árak megtekintése",
+      "holder": "az.ugynoke"
+    }
+  }
+}

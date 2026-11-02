@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Kompatibilis:",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Egyszer használatos",
+      "aria": "Virtuális kártya, végződés: {last4}, kártyabirtokos: {holder}, lejárat: {exp}",
+      "holder": "Kártyabirtokos",
+      "expires": "Lejárat",
+      "debit": "Debit",
+      "virtual": "virtuális",
+      "used": "Felhasználva"
+    },
+    "faq": {
+      "q1": "Az Artemis kezeli a pénzemet?",
+      "a1": "Nem. A kártyák az Ön saját bankjában (Qonto, Revolut Business vagy Stripe Issuing) jönnek létre, és az Ön számláját terhelik. Az Artemis szoftver: alkalmazza az Ön szabályait, begyűjti a jóváhagyását, és a bank API-ján keresztül vezérli a bankot. Soha nem fogad, nem őriz és nem utal pénzt.",
+      "q2": "Mi történik, ha az ügynökömet promptinjektálással manipulálják?",
+      "a2": "Az ügynök csak kérni tud. Minden kártya egyszer használatos, a pontos összegre korlátozott, a kijelölt kereskedőhöz kötött, és 30 perc alatt lejár. Ha az igénylés az Ön szabályain kívül esik, a rendszer elutasítja; az Ön által megadott küszöb fölött semmi sem mehet ki az Ön passkey-je nélkül. Bármilyen összeg- vagy kereskedőeltérés riasztást vált ki, a „Minden befagyasztása” gomb pedig egy kattintással mindent leállít.",
+      "q3": "A kártyaszám áthalad az Artemisen?",
+      "a3": "Alapértelmezés szerint nem. Fizetéskor az ügynök egy 10 percig érvényes, egyszer használatos hivatkozást kap: a kártyát ott közvetlenül a kibocsátó bank jeleníti meg. Az Artemis soha nem látja, nem tárolja és nem továbbítja a kártyaszámot. Megnyitás után a hivatkozás már nem működik.",
+      "q4": "Miért ne használjam egyszerűen a bankomat?",
+      "a4": "Ha kizárólag Stripe-ot, Rampet vagy Mercuryt használ, azok már elvégzik a munka egy részét. Az Artemis azt nyújtja, amit egy bank nem tesz meg a versenytársai érdekében: több bank egyetlen szabályzat alatt, francia könyvelés (FEC, Pennylane), átadásra kész AI Act szerinti bizonyíték és ügynökségi mód.",
+      "q5": "Mely bankok támogatottak?",
+      "a5": "A Stripe Issuing (ajánlott) létrehozza a kártyákat, és úgy jeleníti meg őket az ügynöknek, hogy a kártyaszám soha nem halad át az Artemisen. A Revolut Business a Revoluttal kötött írásos megállapodás alapján működik, közvetlen kártyaátadással. A Qonto olvasásra, befagyasztásra és egyeztetésre csatlakoztatható. A Sandbox egy bankot szimulál, így bármit csatlakoztatás nélkül kipróbálhat.",
+      "q6": "Mennyibe kerül?",
+      "a6": "A Sandbox ingyenes. Ezután havonta {builder} (Builder), {team} (Team), {agency} + {client} aktív ügyfelenként ({agencyPlan}) vagy {business}-tól (Business). A kvótán felül megbízásonként {overage}. A költései után nincs jutalék: bankja a szokásos díjcsomagját alkalmazza. {vat}.",
+      "q7": "Az adataim Európában maradnak?",
+      "a7": "Igen. Az adatbázis az Európai Unióban (Frankfurt) található, a banki hozzáférési adatok AES-256-GCM titkosítással védettek, a láncolt auditnapló pedig dokumentálja az AI Act által előírt emberi felügyeletet."
+    }
+  }
+}

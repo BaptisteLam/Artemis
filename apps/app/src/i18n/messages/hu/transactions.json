@@ -1,0 +1,15 @@
+{
+  "transactions": {
+    "title": "Tranzakciók",
+    "lead": "A bankjai által jelentett és a megbízásokkal egyeztetett műveletek (az elmúlt 90 nap).",
+    "mismatches_one": "{count} tranzakció nem egyezik a megbízásával. Vizsgálja meg, és szükség esetén fagyassza be az ügynököt.",
+    "mismatches_other": "{count} tranzakció nem egyezik a megbízásával. Vizsgálja meg őket, és szükség esetén fagyassza be az ügynököt.",
+    "emptyTitle": "Nincsenek tranzakciók",
+    "emptyText": "Néhány perccel az egyes fizetések után jelennek meg.",
+    "colDate": "Dátum",
+    "colMerchant": "Kereskedő",
+    "colAmount": "Összeg",
+    "colBankStatus": "Banki állapot",
+    "colMatch": "Egyeztetés"
+  }
+}

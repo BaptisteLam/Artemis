@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtrēt pēc statusa",
+      "all": "Visi",
+      "pending": "Jāapstiprina",
+      "issued": "Karte izsniegta",
+      "completed": "Apmaksāti",
+      "rejected": "Noraidīti",
+      "failed": "Neizdevušies"
+    },
+    "list": {
+      "title": "Pieprasījumi",
+      "lead": "Visi aģentu pieprasījumi ar pieņemto lēmumu un karti.",
+      "emptyTitle": "Nav pieprasījumu",
+      "emptyBody": "Šeit parādīsies jūsu aģentu pieprasījumi."
+    },
+    "decision": {
+      "notAllowed": "Lemt var tikai īpašnieki, administratori un apstiprinātāji.",
+      "cancelledOnDevice": "Apstiprināšana atcelta ierīcē.",
+      "reasonLabel": "Noraidīšanas iemesls",
+      "reasonHint": "Redzams aģentam.",
+      "confirmReject": "Apstiprināt noraidīšanu",
+      "cancel": "Atcelt",
+      "signing": "Paraksta…",
+      "approve": "Apstiprināt ar savu piekļuves atslēgu",
+      "reject": "Noraidīt"
+    },
+    "detail": {
+      "confirmCancel": "Atcelt šo pieprasījumu un tā karti?",
+      "receiptUnavailable": "Čeks nav pieejams.",
+      "eyebrow": "Pieprasījums · {id}",
+      "amount": "Pieprasītā summa",
+      "agent": "Aģents",
+      "mandateWindow": "pilnvara · {id}",
+      "purpose": "Mērķis",
+      "category": "Kategorija",
+      "expires": "Derīgs līdz",
+      "rules": "Noteikumi",
+      "perTxLimit": "Limits",
+      "budget": "budžets",
+      "decision": "Lēmums",
+      "hash": "sha256 {hash}",
+      "quorum": "Kvorums: {signed} no {required} nepieciešamajiem parakstiem virs sliekšņa.",
+      "unusualAmount": "Drošības ierobežojums: šim aģentam neparasta summa, nepieciešams cilvēka apstiprinājums.",
+      "autoApproved": "Automātiski apstiprināts saskaņā ar noteikumiem",
+      "signedByPasskey": "Pilnvara parakstīta ar piekļuves atslēgu",
+      "card": "Karte",
+      "cardHolderFallback": "aģents",
+      "cardAria": "Virtuālā karte, kas beidzas ar {last4}, turētājs {holder}, derīga līdz {exp}",
+      "bankSca": "Apstipriniet kartes izveidi arī savā bankas lietotnē.",
+      "cardExpires": "Derīga līdz {date}",
+      "handedOver": "nodota aģentam {time}",
+      "notHandedOver": "vēl nav nodota aģentam",
+      "qontoNotice": "Qonto nenodod kartes aģentiem: parādiet karti šeit un veiciet maksājumu paši.",
+      "showQontoCard": "Parādīt karti (Qonto)",
+      "simulatePayment": "Simulēt maksājumu",
+      "cancelCard": "Anulēt karti",
+      "noCard": "Karte nav izsniegta.",
+      "transactions": "Darījumi",
+      "noTransactions": "Banka nav ziņojusi par darījumiem.",
+      "receipts": "Čeki",
+      "addReceipt": "Pievienot",
+      "noReceipts": "Nav čeku.",
+      "back": "← Visi pieprasījumi"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Egyszer használatos kártya · szimulált bank",
+    "eyebrowBank": "Egyszer használatos kártya · az Ön bankja bocsátotta ki",
+    "lead": "Ez a hivatkozás csak egyszer nyitható meg. A kártya a fenti összegre korlátozott, és ehhez a kereskedőhöz kötött.",
+    "fields": {
+      "number": "Kártyaszám",
+      "expiry": "Lejárat",
+      "cvc": "Biztonsági kód",
+      "holder": "Kártyabirtokos"
+    },
+    "opening": "Megnyitás…",
+    "show": "Kártya megjelenítése •••• {last4}",
+    "footer": "A kártyaszámot közvetlenül a kibocsátó bank jeleníti meg: soha nem halad át az Artemisen.",
+    "errors": {
+      "stripeUnavailable": "A Stripe.js nem érhető el.",
+      "invalidLink": "Érvénytelen, már felhasznált vagy lejárt hivatkozás.",
+      "stripeRefused": "A Stripe elutasította a kérést."
+    }
+  }
+}

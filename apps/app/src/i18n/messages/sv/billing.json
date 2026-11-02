@@ -1,0 +1,59 @@
+{
+  "billing": {
+    "title": "Fakturering",
+    "lead": "Nuvarande plan: {plan}. Begäranden denna månad: {usage}. Mervärdesskatt tillämpas inte, art. 293 B i franska skattelagen (CGI).",
+    "usageOf": "{used}/{limit}",
+    "manage": "Hantera abonnemang och fakturor",
+    "returnOk": "Tack! Ditt abonnemang aktiveras (några sekunder).",
+    "returnCanceled": "Betalningen avbröts, ingenting har ändrats.",
+    "inactive": "Ditt abonnemang är inte längre aktivt ({status}). Betalfunktionerna är pausade: uppdatera ditt betalningssätt.",
+    "unknown": "okänd",
+    "overage": "Utöver kvoten i en betald plan debiteras varje ytterligare mandat med {price}.",
+    "overageCount_one": "Denna månad: {count} mandat.",
+    "overageCount_other": "Denna månad: {count} mandat.",
+    "ownerOnly": "Endast en ägare kan ändra abonnemanget.",
+    "current": "Nuvarande",
+    "from": "från {price}",
+    "perMonth": "/månad",
+    "choose": "Välj {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Byråer",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agent",
+        "i2": "Simulerad bank",
+        "i3": "20 simulerade mandat/månad"
+      },
+      "builder": {
+        "i1": "3 agenter",
+        "i2": "1 riktig bank",
+        "i3": "50 mandat/månad",
+        "i4": "Godkännande med lösennyckel och aviseringar"
+      },
+      "team": {
+        "i1": "10 agenter",
+        "i2": "2 riktiga banker",
+        "i3": "300 mandat/månad",
+        "i4": "Slack, kvorum av godkännare, FEC-export",
+        "i5": "Abonnemang som hanteras per agent"
+      },
+      "agency": {
+        "i1": "25 agenter, obegränsat antal kunder",
+        "i2": "1 000 mandat/månad",
+        "i3": "Budgetar, påslag och vidarefakturering per kund",
+        "i4": "+ {price} per aktiv kund"
+      },
+      "business": {
+        "i1": "Obegränsat",
+        "i2": "AI Act-dokumentation och rapport",
+        "i3": "Signerad export av granskningsloggen",
+        "i4": "Prioriterad support"
+      }
+    }
+  }
+}

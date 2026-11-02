@@ -1,0 +1,60 @@
+{
+  "billing": {
+    "title": "Norēķini",
+    "lead": "Pašreizējais plāns: {plan}. Pieprasījumi šomēnes: {usage}. PVN netiek piemērots saskaņā ar Francijas Vispārējā nodokļu kodeksa (CGI) 293 B pantu.",
+    "usageOf": "{used} / {limit}",
+    "manage": "Pārvaldīt abonementu un rēķinus",
+    "returnOk": "Paldies! Jūsu abonements tiek aktivizēts (dažas sekundes).",
+    "returnCanceled": "Maksājums atcelts, nekas netika mainīts.",
+    "inactive": "Jūsu abonements vairs nav aktīvs ({status}). Maksas funkcijas ir apturētas: lūdzu, atjauniniet maksājuma veidu.",
+    "unknown": "nezināms",
+    "overage": "Pārsniedzot maksas plāna kvotu, par katru papildu pilnvaru tiek iekasēts {price}.",
+    "overageCount_zero": "Šomēnes: {count} pilnvaras.",
+    "overageCount_one": "Šomēnes: {count} pilnvara.",
+    "overageCount_other": "Šomēnes: {count} pilnvaras.",
+    "ownerOnly": "Abonementu var mainīt tikai īpašnieks.",
+    "current": "Pašreizējais",
+    "from": "no {price}",
+    "perMonth": "/ mēnesī",
+    "choose": "Izvēlēties {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Aģentūrām",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 aģents",
+        "i2": "Simulēta banka",
+        "i3": "20 simulētas pilnvaras / mēnesī"
+      },
+      "builder": {
+        "i1": "3 aģenti",
+        "i2": "1 īsta banka",
+        "i3": "50 pilnvaras / mēnesī",
+        "i4": "Apstiprināšana ar piekļuves atslēgu un paziņojumi"
+      },
+      "team": {
+        "i1": "10 aģenti",
+        "i2": "2 īstas bankas",
+        "i3": "300 pilnvaras / mēnesī",
+        "i4": "Slack, apstiprinātāju kvorums, FEC eksports",
+        "i5": "Abonementi, pārvaldīti katram aģentam"
+      },
+      "agency": {
+        "i1": "25 aģenti, neierobežots klientu skaits",
+        "i2": "1000 pilnvaras / mēnesī",
+        "i3": "Budžeti, uzcenojums un pārrēķināšana katram klientam",
+        "i4": "+ {price} par katru aktīvo klientu"
+      },
+      "business": {
+        "i1": "Neierobežoti",
+        "i2": "AI Act dokumentācija un pārskats",
+        "i3": "Parakstīta audita žurnāla eksports",
+        "i4": "Prioritārs atbalsts"
+      }
+    }
+  }
+}

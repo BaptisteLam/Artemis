@@ -1,0 +1,59 @@
+{
+  "billing": {
+    "title": "Laskutus",
+    "lead": "Nykyinen paketti: {plan}. Pyynnöt tässä kuussa: {usage}. Arvonlisäveroa ei sovelleta, Ranskan verolain (CGI) 293 B artikla.",
+    "usageOf": "{used} / {limit}",
+    "manage": "Hallitse tilausta ja laskuja",
+    "returnOk": "Kiitos! Tilaustasi aktivoidaan (muutama sekunti).",
+    "returnCanceled": "Maksu peruutettu, mitään ei muutettu.",
+    "inactive": "Tilauksesi ei ole enää aktiivinen ({status}). Maksulliset ominaisuudet on keskeytetty: päivitä maksutapasi.",
+    "unknown": "tuntematon",
+    "overage": "Maksullisen paketin kiintiön ylittävistä valtuutuksista veloitetaan {price} kappaleelta.",
+    "overageCount_one": "Tässä kuussa: {count} valtuutus.",
+    "overageCount_other": "Tässä kuussa: {count} valtuutusta.",
+    "ownerOnly": "Vain omistaja voi muuttaa tilausta.",
+    "current": "Nykyinen",
+    "from": "alkaen {price}",
+    "perMonth": "/ kk",
+    "choose": "Valitse {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Toimistot",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agentti",
+        "i2": "Simuloitu pankki",
+        "i3": "20 simuloitua valtuutusta / kk"
+      },
+      "builder": {
+        "i1": "3 agenttia",
+        "i2": "1 oikea pankki",
+        "i3": "50 valtuutusta / kk",
+        "i4": "Hyväksyntä pääsyavaimella ja ilmoitukset"
+      },
+      "team": {
+        "i1": "10 agenttia",
+        "i2": "2 oikeaa pankkia",
+        "i3": "300 valtuutusta / kk",
+        "i4": "Slack, hyväksyjien päätösvaltaisuussääntö, FEC-vienti",
+        "i5": "Agenttikohtaisesti hallitut tilaukset"
+      },
+      "agency": {
+        "i1": "25 agenttia, rajattomasti asiakkaita",
+        "i2": "1 000 valtuutusta / kk",
+        "i3": "Asiakaskohtaiset budjetit, kate ja jälleenlaskutus",
+        "i4": "+ {price} jokaisesta aktiivisesta asiakkaasta"
+      },
+      "business": {
+        "i1": "Rajaton",
+        "i2": "AI Act -asiakirjat ja -raportti",
+        "i3": "Allekirjoitetun tarkastuslokin vienti",
+        "i4": "Ensisijainen tuki"
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "billing": {
+    "title": "Fakturácia",
+    "lead": "Aktuálny plán: {plan}. Žiadosti tento mesiac: {usage}. DPH sa neuplatňuje, čl. 293 B francúzskeho všeobecného daňového zákonníka (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Spravovať predplatné a faktúry",
+    "returnOk": "Ďakujeme! Vaše predplatné sa aktivuje (niekoľko sekúnd).",
+    "returnCanceled": "Platba bola zrušená, nič sa nezmenilo.",
+    "inactive": "Vaše predplatné už nie je aktívne ({status}). Platené funkcie sú pozastavené: aktualizujte si spôsob platby.",
+    "unknown": "neznámy",
+    "overage": "Po prekročení kvóty plateného plánu sa každý ďalší mandát účtuje sumou {price}.",
+    "overageCount_one": "Tento mesiac: {count} mandát.",
+    "overageCount_few": "Tento mesiac: {count} mandáty.",
+    "overageCount_many": "Tento mesiac: {count} mandátu.",
+    "overageCount_other": "Tento mesiac: {count} mandátov.",
+    "ownerOnly": "Predplatné môže zmeniť iba vlastník.",
+    "current": "Aktuálny",
+    "from": "od {price}",
+    "perMonth": "/ mesiac",
+    "choose": "Vybrať {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agentúry",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agent",
+        "i2": "Simulovaná banka",
+        "i3": "20 simulovaných mandátov mesačne"
+      },
+      "builder": {
+        "i1": "3 agenti",
+        "i2": "1 skutočná banka",
+        "i3": "50 mandátov mesačne",
+        "i4": "Schvaľovanie prístupovým kľúčom a upozornenia"
+      },
+      "team": {
+        "i1": "10 agentov",
+        "i2": "2 skutočné banky",
+        "i3": "300 mandátov mesačne",
+        "i4": "Slack, kvórum schvaľovateľov, export FEC",
+        "i5": "Predplatné spravované pre každého agenta"
+      },
+      "agency": {
+        "i1": "25 agentov, neobmedzený počet klientov",
+        "i2": "1 000 mandátov mesačne",
+        "i3": "Rozpočty, prirážka a prefakturácia podľa klienta",
+        "i4": "+ {price} za každého aktívneho klienta"
+      },
+      "business": {
+        "i1": "Bez obmedzení",
+        "i2": "Dokumentácia a správa pre AI Act",
+        "i3": "Export podpísaného auditného denníka",
+        "i4": "Prioritná podpora"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Tím",
+    "lead": "Schvaľovatelia dostávajú žiadosti a podpisujú ich svojím prístupovým kľúčom.",
+    "confirmRemove": "Odstrániť tohto člena?",
+    "cols": {
+      "member": "Člen",
+      "role": "Rola",
+      "since": "Od"
+    },
+    "you": "vy",
+    "remove": "Odstrániť",
+    "invite": "Pozvať",
+    "email": "E-mail",
+    "role": "Rola",
+    "send": "Odoslať pozvánku",
+    "inviteLink": "Odkaz na pozvánku (platí 7 dní):",
+    "expiresOn": "platí do {date}",
+    "revoke": "Zrušiť"
+  }
+}

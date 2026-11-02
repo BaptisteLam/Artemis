@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "{step}. lépés / {total}",
+    "continue": "Tovább →",
+    "org": {
+      "title": "Az Ön szervezete",
+      "lead": "Sandboxban kezd: szimulált bank, díjak nélkül.",
+      "nameLabel": "Cég vagy stúdió neve"
+    },
+    "agent": {
+      "title": "Az első ügynöke",
+      "lead": "Rövid név, amely elárulja, mit vásárol. Alapértelmezett szabályok: havonta {monthly}, vásárlásonként {perPurchase}.",
+      "nameLabel": "Ügynök neve",
+      "platformLabel": "Platform",
+      "platformOther": "Egyéb",
+      "submit": "Ügynök létrehozása →"
+    },
+    "connect": {
+      "title": "Ügynöke csatlakoztatása",
+      "done": "Kimásoltam a tokent →"
+    },
+    "passkey": {
+      "title": "Jóváhagyási passkey-je",
+      "lead": "Minden kiadást Face ID-val, Touch ID-val, Windows Hellóval vagy biztonsági kulccsal fog aláírni. Ha lehetséges, arról a telefonról regisztrálja, amely az értesítéseket kapja.",
+      "deviceName": "Első eszköz",
+      "saved": "Passkey regisztrálva.",
+      "unsupported": "Ez a böngésző nem támogatja a passkey-ket.",
+      "register": "Passkey regisztrálása",
+      "openDashboard": "Irányítópult megnyitása →",
+      "later": "Később"
+    }
+  }
+}

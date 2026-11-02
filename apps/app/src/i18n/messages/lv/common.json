@@ -1,0 +1,91 @@
+{
+  "common": {
+    "loading": "Ielādē…",
+    "copy": "Kopēt",
+    "copied": "Nokopēts"
+  },
+  "lang": {
+    "choose": "Valoda"
+  },
+  "nav": {
+    "dashboard": "Pārskats",
+    "requests": "Pieprasījumi",
+    "agents": "Aģenti",
+    "clients": "Klienti",
+    "cards": "Kartes",
+    "subscriptions": "Abonementi",
+    "transactions": "Darījumi",
+    "exports": "Eksports",
+    "banks": "Bankas",
+    "team": "Komanda",
+    "audit": "Audits",
+    "billing": "Norēķini",
+    "settings": "Iestatījumi"
+  },
+  "shell": {
+    "home": "Artemis, pārskats",
+    "organization": "Organizācija",
+    "admin": "Administrēšana",
+    "freezeAllHint": "Iesaldēt visus aģentus un anulēt aktīvās kartes",
+    "frozen": "Iesaldēts",
+    "freezeAll": "Iesaldēt visu",
+    "signOut": "Izrakstīties",
+    "navAria": "Lietotnes navigācija",
+    "pendingCount_zero": "{count} gaida",
+    "pendingCount_one": "{count} gaida",
+    "pendingCount_other": "{count} gaida",
+    "frozenBanner": "Organizācija ir iesaldēta: jaunas kartes nevar izsniegt. Atceliet iesaldēšanu sadaļā Iestatījumi."
+  },
+  "status": {
+    "pending": "Jāapstiprina",
+    "approved": "Apstiprināts",
+    "issued": "Karte izsniegta",
+    "completed": "Apmaksāts",
+    "rejected": "Noraidīts",
+    "expired": "Derīgums beidzies",
+    "failed": "Bankas kļūme",
+    "canceled": "Anulēts",
+    "active": "Aktīvs",
+    "pending_bank_sca": "Bankas apstiprinājums",
+    "used": "Izmantots",
+    "frozen": "Iesaldēts",
+    "matched": "Saskaņots",
+    "mismatch": "Neatbilstība",
+    "unmatched": "Nav saskaņots"
+  },
+  "roles": {
+    "owner": "Īpašnieks",
+    "admin": "Administrators",
+    "approver": "Apstiprinātājs",
+    "viewer": "Skatītājs"
+  },
+  "errors": {
+    "network": "Tīkls nav pieejams. Pārbaudiet savienojumu.",
+    "unauthorized": "Jūsu sesija ir beigusies. Lūdzu, piesakieties vēlreiz.",
+    "forbidden": "Jums nav atļaujas to darīt.",
+    "not_found": "Nav atrasts vai vairs nav pieejams.",
+    "invalid_input": "Daļa informācijas ir nederīga. Lūdzu, pārbaudiet veidlapu.",
+    "rate_limited": "Pārāk daudz mēģinājumu. Lūdzu, brīdi uzgaidiet un mēģiniet vēlreiz.",
+    "quota_exceeded": "Ir sasniegta jūsu mēneša pilnvaru kvota.",
+    "subscription_inactive": "Jūsu abonements nav aktīvs. Atjauniniet to sadaļā Norēķini.",
+    "org_frozen": "Organizācija ir iesaldēta.",
+    "agent_frozen": "Šis aģents ir iesaldēts.",
+    "request_not_pending": "Šis pieprasījums vairs negaida lēmumu.",
+    "request_expired": "Šī pieprasījuma derīgums ir beidzies.",
+    "already_revealed": "Šī karte jau ir nodota.",
+    "card_not_ready": "Karte vēl nav pieejama.",
+    "bank_error": "Banka noraidīja operāciju.",
+    "plan_limit": "Ir sasniegts jūsu plāna limits. Lai turpinātu, izvēlieties augstāku plānu.",
+    "over_client_budget": "Šī klienta mēneša budžets ir pārsniegts.",
+    "internal": "Radās kļūda. Lūdzu, mēģiniet vēlreiz.",
+    "currency_not_allowed": "Politika neatļauj šo valūtu.",
+    "invalid_amount": "Nederīga summa.",
+    "over_transaction_limit": "Summa pārsniedz viena darījuma limitu.",
+    "over_monthly_budget": "Aģenta mēneša budžets ir pārsniegts.",
+    "merchant_blocked": "Politika bloķē šo tirgotāju.",
+    "merchant_not_allowed": "Šis tirgotājs nav atļauto sarakstā.",
+    "mcc_blocked": "Šī tirgotāju kategorija ir bloķēta.",
+    "mcc_not_allowed": "Šī tirgotāju kategorija nav atļauta.",
+    "too_many_requests": "Šim aģentam pēdējās stundas laikā ir pārāk daudz pieprasījumu."
+  }
+}

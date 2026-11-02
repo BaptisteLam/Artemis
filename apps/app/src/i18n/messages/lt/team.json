@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Komanda",
+    "lead": "Tvirtintojai gauna užklausas ir pasirašo jas savo prieigos raktu.",
+    "confirmRemove": "Pašalinti šį narį?",
+    "cols": {
+      "member": "Narys",
+      "role": "Vaidmuo",
+      "since": "Nuo"
+    },
+    "you": "jūs",
+    "remove": "Pašalinti",
+    "invite": "Pakviesti",
+    "email": "El. paštas",
+    "role": "Vaidmuo",
+    "send": "Siųsti kvietimą",
+    "inviteLink": "Kvietimo nuoroda (galioja 7 dienas):",
+    "expiresOn": "galioja iki {date}",
+    "revoke": "Atšaukti"
+  }
+}

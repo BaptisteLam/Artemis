@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Jak to działa",
+    "description": "Jak Artemis pozwala Twoim agentom AI płacić, a Tobie zachować kontrolę.",
+    "headline": "Agent prosi, Ty decydujesz, bank płaci.",
+    "lead": "Artemis działa pomiędzy Twoimi agentami a Twoim bankiem. Stosuje Twoje reguły, zbiera Twoje zatwierdzenie i tworzy kartę jednorazową na dokładną kwotę.",
+    "step1": {
+      "title": "1. Podłączasz swój bank",
+      "body": "Stripe Issuing (zalecany) lub Revolut Business: karty wirtualne są tworzone na <strong>Twoim</strong> koncie i obciążają <strong>Twoje</strong> środki. Qonto łączy się w trybie odczytu, zamrażania i uzgadniania. Artemis nigdy nie przyjmuje, nie przechowuje ani nie przekazuje pieniędzy. Do testów Sandbox symuluje bank."
+    },
+    "step2": {
+      "title": "2. Tworzysz agenta i jego reguły",
+      "body": "Każdy agent otrzymuje tajny token i politykę: budżet miesięczny, limit na zakup, waluty, dozwolonych lub zablokowanych sprzedawców, kategorie sprzedawców, próg automatycznego zatwierdzania i czas ważności karty."
+    },
+    "step3": {
+      "title": "3. Agent wnioskuje o kartę",
+      "body": "Za pomocą narzędzia MCP <code>request_card</code> lub REST API. Wniosek naruszający reguły jest natychmiast odrzucany z jasnym uzasadnieniem. Wszystkie pozostałe czekają na Twoje zatwierdzenie, z wyjątkiem niewielkich kwot u zaufanego sprzedawcy, jeśli na to zezwolisz."
+    },
+    "step4": {
+      "title": "4. Zatwierdzasz kluczem dostępu",
+      "body": "Otrzymujesz powiadomienie. Ekran upoważnienia pokazuje agenta, kwotę, sprzedawcę i cel. Podpisujesz kluczem dostępu (Face ID, odcisk palca, klucz bezpieczeństwa). Podpis obejmuje dokładną treść upoważnienia."
+    },
+    "step5": {
+      "title": "5. Agent płaci, Artemis uzgadnia",
+      "body": "Karta jest jednorazowa, ograniczona do kwoty i szybko wygasa. Agent otrzymuje krótkotrwały link: kartę wyświetla Twój bank, a numer nigdy nie przechodzi przez Artemis. Gdy tylko bank zgłosi transakcję, Artemis ją uzgadnia, sygnalizuje ewentualne rozbieżności i archiwizuje dowód zakupu."
+    },
+    "demo": {
+      "mandate": "upoważnienie · {id}",
+      "intent": "Cel: subskrypcja zespołowa, 5 stanowisk.",
+      "rules": "Reguły: limit {cap} · pozostały budżet {remaining}",
+      "signed": "Podpisano kluczem dostępu · {minutes} min temu",
+      "transactions": "transakcje",
+      "matched": "Uzgodniono",
+      "mismatch": "Rozbieżność"
+    }
+  }
+}

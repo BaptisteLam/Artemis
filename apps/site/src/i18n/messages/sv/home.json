@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Den europeiska lösningen · AI-agenter",
+      "lead": "Den europeiska finansiella brandväggen för dina AI-agenter. Claude, ChatGPT eller n8n frågar, du signerar med ett tryck och varje utgift kontrolleras, stäms av och kan bevisas, i den bank du väljer.",
+      "tryFree": "Prova gratis →",
+      "seeDemo": "Se demon",
+      "visualAria": "Exempel: en agents begäran och dess engångskort",
+      "expired": "Utgånget",
+      "pending": "Väntande begäran",
+      "toApprove": "Väntar på godkännande",
+      "purpose": "teamabonnemang",
+      "approve": "Godkänn med min lösennyckel",
+      "decline": "Avvisa"
+    },
+    "trust": {
+      "aria": "Garantier",
+      "europe": "Europeiskt",
+      "europeText": "Euro, europeiska banker, data i Frankfurt, GDPR.",
+      "funds": "Dina pengar stannar hos dig",
+      "fundsText": "Artemis förvarar aldrig pengar.",
+      "number": "Kortnumret hålls utanför Artemis",
+      "numberText": "Kortet visas av din bank, inte av oss.",
+      "aiAct": "Redo för AI Act",
+      "aiActText": "Varje utgift signerad, en kedjad logg, en kvartalsrapport."
+    },
+    "demo": {
+      "eyebrow": "Demo",
+      "title": "Från begäran till betalning på 20 sekunder.",
+      "explain": "Utan att någonsin dela företagskortet.",
+      "step1": "Agenten frågar",
+      "window": "claude · konversation",
+      "userMessage": "Teckna Notion Plus för teamet, 5 platser.",
+      "agentMessage": "Jag har begärt ett kort på {amount}. Väntar på ditt godkännande.",
+      "step2": "Du godkänner",
+      "notification": "{agent} vill spendera {amount}",
+      "sheetTitle": "Godkänn mandatet",
+      "validity": "{minutes} min",
+      "faceId": "Signera med Face ID",
+      "step3": "Agenten betalar",
+      "reconciled": "Avstämd"
+    },
+    "benefits": {
+      "eyebrow": "Det du köper",
+      "title": "Inte ett kort.",
+      "explain": "Bankerna har börjat ge bort sådana. Du köper kontroll, tid och bevis.",
+      "control": {
+        "eyebrow": "Kontroll",
+        "title": "Ingenting går iväg utan ditt godkännande.",
+        "text": "Budgetar, gränser, tillåtna handlare, skyddsspärrar mot promptinjektion. Över dina trösklar väntar varje utgift på din signatur med lösennyckel, från en eller flera godkännare."
+      },
+      "time": {
+        "eyebrow": "Sparad tid",
+        "title": "Slut på kort som skapas för hand.",
+        "text": "Agenten frågar, du signerar med ett tryck, kortet skapas i din bank, transaktionen stäms av och fakturan arkiveras. Inga fler kontoutdrag att bocka av eller kvitton att jaga."
+      },
+      "proof": {
+        "eyebrow": "Bevis",
+        "title": "En människa har godkänt varje utgift.",
+        "text": "Signerade mandat, en kedjad och manipuleringssäker granskningslogg och en kvartalsvis tillsynsrapport: det som AI Act, din ekonomichef och din revisor efterfrågar, redo att lämnas över."
+      },
+      "agencies": {
+        "eyebrow": "För byråer",
+        "title": "En budget och en faktura per kund.",
+        "text": "Kundarbetsytor, en månadsbudget per kund, ett påslag för vidarefakturering och en månadsrapport redo att skicka. Dina kunder ser äntligen vad deras agenter spenderar."
+      }
+    },
+    "how": {
+      "eyebrow": "Så fungerar det",
+      "title": "Fyra steg, inget delat kort.",
+      "s1": "Agenten frågar",
+      "s1Text": "Via MCP eller API:t: ”{amount} hos Notion, teamabonnemang”.",
+      "s2": "Reglerna filtrerar",
+      "s2Text": "Budget, gräns, handlare: utanför reglerna avvisas begäran direkt.",
+      "s3": "Du godkänner",
+      "s3Text": "En avisering i telefonen, en signatur med lösennyckel.",
+      "s4": "Agenten betalar",
+      "s4Text": "Ett engångskort, exakt belopp, kort giltighetstid och sedan automatisk avstämning."
+    },
+    "useCases": {
+      "eyebrow": "Användningsfall",
+      "title": "Det dina agenter redan köper.",
+      "explain": "Nu med ett eget kort.",
+      "api": {
+        "title": "API:er och tokens",
+        "text": "Fyll på krediter när kvoten tar slut, utan att lämna företagskortet i en .env-fil."
+      },
+      "saas": {
+        "title": "SaaS-abonnemang",
+        "text": "Teckna eller förläng en plan för teamet, för exakt det godkända beloppet."
+      },
+      "cloud": {
+        "title": "Moln och domäner",
+        "text": "Köp ett domännamn eller betala en överskridande hostingkostnad mitt i en driftsättning."
+      },
+      "data": {
+        "title": "Data och B2B-inköp",
+        "text": "Betala för ett dataset, ett scrapingjobb eller förbrukningsmaterial, med kvittot automatiskt bifogat.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Låt oss vara ärliga",
+      "title": "Använder du bara Stripe, Ramp eller Mercury?",
+      "explain": "De gör redan en del av jobbet.",
+      "lead": "Artemis ger dig det som en bank inte gör för sina konkurrenter.",
+      "banks": "Flera banker samtidigt",
+      "banksText": "Stripe Issuing, Revolut, Qonto och Sandbox, styrda från ett ställe under en och samma policy.",
+      "accounting": "Fransk bokföring",
+      "accountingText": "FEC- och Pennylane-export, ett kvitto bifogat till varje mandat, automatisk avstämning.",
+      "proof": "Bevis enligt AI Act, redo att lämnas över",
+      "proofText": "En mänsklig signatur för varje utgift, en kedjad logg, ett agentregister, en kvartalsrapport.",
+      "agency": "Ett byråläge",
+      "agencyText": "Agenter för flera kunder, var och en med egen budget, eget påslag och egen rapport."
+    },
+    "europe": {
+      "eyebrow": "Den europeiska lösningen",
+      "title": "Byggt i Europa, för Europa.",
+      "lead": "Amerikanska agentkort talar dollar, amerikanska banker och amerikansk lag. Artemis talar euro, europeiska banker, GDPR, AI Act och fransk bokföring.",
+      "banks": "Euro och europeiska banker: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "EU",
+      "data": "Data lagras i Frankfurt, GDPR, krypterade inloggningsuppgifter",
+      "article": "Art. 14",
+      "oversight": "Mänsklig tillsyn enligt AI Act, bevisad utgift för utgift",
+      "accounting": "Fransk bokföring: FEC, Pennylane, bifogade kvitton"
+    },
+    "compare": {
+      "eyebrow": "Jämförelse",
+      "title": "Din bank utfärdar kortet.",
+      "explain": "Artemis styr ovanpå dem alla.",
+      "criterion": "Kriterium",
+      "bankOnly": "Enbart din bank (Stripe, Ramp, Mercury, Qonto …)",
+      "bankOnlyShort": "Enbart din bank",
+      "usCards": "Amerikanska agentkort",
+      "usCardsShort": "Amerikanska agentkort",
+      "rows": {
+        "card": "Virtuellt kort för agenten",
+        "banks": "Flera banker, en policy",
+        "signature": "Mänsklig signatur för varje utgift (lösennyckel)",
+        "aiAct": "Exporterbart bevis enligt AI Act",
+        "accounting": "Fransk bokföring (FEC, Pennylane)",
+        "agency": "Byråläge (budgetar och vidarefakturering per kund)",
+        "europe": "Euro, hosting och data i Europa"
+      },
+      "values": {
+        "yes": "Ja",
+        "no": "Nej",
+        "yesBank": "Ja, utfärdat av din bank",
+        "yesQuorum": "Ja, med kvorum",
+        "dependsPlan": "Beror på planen",
+        "dependsBank": "Beror på banken",
+        "partial": "Delvis"
+      }
+    },
+    "builders": {
+      "eyebrow": "För utvecklare",
+      "title": "Inkopplat med en rad.",
+      "explain": "Claude, ChatGPT, n8n, Make eller din egen kod.",
+      "lead": "En fjärransluten MCP-server och ett REST API. En gratis Sandbox med simulerade kort för att testa utan bank.",
+      "connect": "Anslut Claude →",
+      "window": "terminal"
+    },
+    "faq": {
+      "eyebrow": "Vanliga frågor",
+      "title": "Det här brukar vi få frågor om.",
+      "more": "Har du en annan fråga? Läs sidan <a href=\"{security}\">Säkerhet</a> eller <a href=\"{docs}\">dokumentationen</a>."
+    },
+    "final": {
+      "title": "Behåll kontrollen över dina agenter.",
+      "lead": "Den europeiska finansiella brandväggen, gratis i Sandbox, inget kreditkort krävs. Du har sista ordet.",
+      "signup": "Skapa ett konto →",
+      "pricing": "Se priser",
+      "holder": "din.agent"
+    }
+  }
+}

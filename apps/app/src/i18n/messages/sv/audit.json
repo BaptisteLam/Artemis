@@ -1,0 +1,94 @@
+{
+  "audit": {
+    "title": "Granskningslogg",
+    "lead": "Varje händelse kedjas med en SHA-256-hash och kan varken ändras eller raderas: det är ditt bevis på mänsklig tillsyn (AI Act).",
+    "verify": "Verifiera integriteten",
+    "export": "Exportera",
+    "report": "AI Act-rapport {quarter}",
+    "exportFailed": "Exporten misslyckades.",
+    "reportUnavailable": "Rapporten är inte tillgänglig.",
+    "chainOk_one": "Kedjan är intakt: {count} post verifierad.",
+    "chainOk_other": "Kedjan är intakt: {count} poster verifierade.",
+    "chainBroken": "Kedjan är bruten vid post nr {id}.",
+    "exportUpsell": "Signerad export av granskningsloggen ingår i planen Business.",
+    "seePlans": "Se planerna",
+    "cols": {
+      "date": "Datum",
+      "event": "Händelse",
+      "actor": "Aktör",
+      "hash": "Fingeravtryck"
+    },
+    "view": "visa",
+    "older": "Äldre →",
+    "actors": {
+      "user": "Användare",
+      "agent": "Agent",
+      "system": "System"
+    },
+    "actions": {
+      "org": {
+        "created": "Organisation skapad",
+        "frozen": "Organisation fryst",
+        "unfrozen": "Organisation upptinad",
+        "card_delivery_changed": "Sätt för kortöverlämning ändrat",
+        "slack_connected": "Slack anslutet",
+        "slack_disconnected": "Slack frånkopplat"
+      },
+      "agent": {
+        "created": "Agent skapad",
+        "updated": "Agent uppdaterad",
+        "deleted": "Agent borttagen",
+        "token_rotated": "Ny token genererad",
+        "frozen": "Agent fryst"
+      },
+      "policy": {
+        "updated": "Regler uppdaterade"
+      },
+      "request": {
+        "created": "Begäran skapad",
+        "rejected": "Begäran avvisad",
+        "approved": "Mandat signerat",
+        "auto_approved": "Automatiskt godkännande",
+        "approval_recorded": "Godkännande registrerat",
+        "expired": "Begäran har löpt ut"
+      },
+      "card": {
+        "issued": "Kort utfärdat",
+        "issue_failed": "Utfärdandet av kortet misslyckades",
+        "revealed": "Kort överlämnat till agenten",
+        "link_created": "Kortlänk skapad",
+        "viewed": "Kort visat",
+        "canceled": "Kort spärrat",
+        "expired": "Kort har löpt ut"
+      },
+      "transaction": {
+        "matched": "Transaktion avstämd",
+        "mismatch": "Avvikelse upptäckt"
+      },
+      "receipt": {
+        "attached": "Kvitto bifogat"
+      },
+      "bank": {
+        "connected": "Bank ansluten",
+        "disconnected": "Bank frånkopplad"
+      },
+      "member": {
+        "invited": "Medlem inbjuden",
+        "joined": "Medlem har gått med",
+        "removed": "Medlem borttagen",
+        "role_changed": "Roll ändrad"
+      },
+      "client": {
+        "created": "Kund skapad",
+        "updated": "Kund uppdaterad"
+      },
+      "billing": {
+        "subscribed": "Abonnemang tecknat",
+        "updated": "Abonnemang uppdaterat"
+      },
+      "subscription": {
+        "charged": "Abonnemang debiterat"
+      }
+    }
+  }
+}

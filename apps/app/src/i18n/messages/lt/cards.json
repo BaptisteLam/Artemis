@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Kortelės",
+    "lead": "Vienkartinės kortelės, išduotos jūsų bankuose. Visas kortelės numeris niekada nesaugomas.",
+    "linkAria": "Kortelė •••• {last4}",
+    "cardAria": "Virtuali kortelė, kurios numeris baigiasi {last4}, turėtojas {holder}, galioja iki {exp}",
+    "tagRevealed": "Perduota agentui",
+    "tagSingleUse": "Vienkartinė",
+    "emptyTitle": "Kortelių nėra",
+    "emptyText": "Kortelės atsiranda, kai užklausa patvirtinama.",
+    "colCard": "Kortelė",
+    "colIssued": "Išduota",
+    "colExpires": "Galioja iki",
+    "colRevealed": "Perduota agentui",
+    "colStatus": "Būsena",
+    "notRevealed": "Ne",
+    "request": "Užklausa →"
+  }
+}

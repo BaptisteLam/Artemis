@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Odotuslista",
+    "description": "Saat ilmoituksen, kun oikeiden pankkien liittimet avautuvat.",
+    "headline": "Ole ensimmäisten joukossa.",
+    "lead": "Qonton ja Revolutin liittimet avautuvat vähitellen. Jätä sähköpostiosoitteesi, niin kerromme heti, kun pankkisi on saatavilla.",
+    "email": "Työsähköposti",
+    "company": "Yritys",
+    "useCase": "Mistä agenttiesi täytyy maksaa?",
+    "useCasePlaceholder": "API:t, SaaS, pilvi, data…",
+    "submit": "Liity odotuslistalle",
+    "sending": "Lähetetään…",
+    "ok": "Kiitos, olet listalla. Lähetämme sinulle sähköpostia heti avautumisen jälkeen.",
+    "error": "Ilmoittautuminen epäonnistui. Yritä hetken kuluttua uudelleen."
+  }
+}

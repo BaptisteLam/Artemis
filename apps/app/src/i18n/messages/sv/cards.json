@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Kort",
+    "lead": "Engångskort utfärdade i dina banker. Det fullständiga kortnumret lagras aldrig.",
+    "linkAria": "Kort •••• {last4}",
+    "cardAria": "Virtuellt kort som slutar på {last4}, kortinnehavare {holder}, giltigt till {exp}",
+    "tagRevealed": "Överlämnat till agenten",
+    "tagSingleUse": "Engångskort",
+    "emptyTitle": "Inga kort",
+    "emptyText": "Korten visas när en begäran har godkänts.",
+    "colCard": "Kort",
+    "colIssued": "Utfärdat",
+    "colExpires": "Giltigt till",
+    "colRevealed": "Överlämnat till agenten",
+    "colStatus": "Status",
+    "notRevealed": "Nej",
+    "request": "Begäran →"
+  }
+}

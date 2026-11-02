@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · {plan} csomag",
+    "title": "Irányítópult",
+    "stats": {
+      "spent": "Elköltve ebben a hónapban",
+      "pending": "Jóváhagyásra vár",
+      "openQueue": "Várólista megnyitása →",
+      "requests": "Igénylések ebben a hónapban"
+    },
+    "recent": {
+      "title": "Legutóbbi igénylések",
+      "viewAll": "Összes megtekintése →",
+      "empty": "Ebben a hónapban nincs igénylés. Csatlakoztasson egy ügynököt a(z) {agents} oldalon.",
+      "agentsLink": "Ügynökök"
+    },
+    "byAgent": {
+      "title": "Ügynökönként",
+      "manage": "Kezelés →",
+      "empty": "Nincsenek ügynökök."
+    }
+  }
+}

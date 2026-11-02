@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Conas a oibríonn sé",
+    "description": "Conas a ligeann Artemis do do ghníomhairí IS íoc agus tusa i gceannas i gcónaí.",
+    "headline": "Iarrann an gníomhaire, cinneann tusa, íocann an banc.",
+    "lead": "Suíonn Artemis idir do ghníomhairí agus do bhanc. Cuireann sé do rialacha i bhfeidhm, bailíonn sé do fhormheas agus cruthaíonn sé cárta aonúsáide don mhéid beacht.",
+    "step1": {
+      "title": "1. Ceanglaíonn tú do bhanc",
+      "body": "Stripe Issuing (molta) nó Revolut Business: cruthaítear na cártaí fíorúla i <strong>do</strong> chuntas agus gearrtar iad ar <strong>do</strong> chistí. Ceanglaítear Qonto le haghaidh rochtain léite, reo agus réiteach. Ní fhaigheann, ní choinníonn agus ní aistríonn Artemis airgead choíche. Chun triail a bhaint as, déanann an Sandbox aithris ar bhanc."
+    },
+    "step2": {
+      "title": "2. Cruthaíonn tú gníomhaire agus a rialacha",
+      "body": "Faigheann gach gníomhaire comhartha rúnda agus beartas: buiséad míosúil, teorainn in aghaidh an cheannaigh, airgeadraí, ceannaithe ceadaithe nó blocáilte, catagóirí ceannaithe, tairseach uathfhormheasa agus saolré an chárta."
+    },
+    "step3": {
+      "title": "3. Iarrann an gníomhaire cárta",
+      "body": "Tríd an uirlis MCP <code>request_card</code> nó tríd an REST API. Diúltaítear láithreach d'iarratas a sháraíonn na rialacha, le cúis shoiléir. Fanann gach iarratas eile ar do fhormheas, seachas méideanna beaga ag ceannaí iontaofa má cheadaigh tú é sin."
+    },
+    "step4": {
+      "title": "4. Formheasann tú le passkey",
+      "body": "Faigheann tú fógra. Taispeánann scáileán an tsainordaithe an gníomhaire, an méid, an ceannaí agus an cuspóir. Síníonn tú le do passkey (Face ID, méarlorg, eochair slándála). Clúdaíonn an síniú ábhar beacht an tsainordaithe."
+    },
+    "step5": {
+      "title": "5. Íocann an gníomhaire, réitíonn Artemis",
+      "body": "Is cárta aonúsáide é an cárta, teoranta don mhéid, agus téann sé in éag go tapa. Faigheann an gníomhaire nasc gearrshaolach: taispeánann do bhanc an cárta, agus ní théann an uimhir trí Artemis choíche. Chomh luath agus a thuairiscíonn an banc an t-idirbheart, réitíonn Artemis é, tugann sé aon neamhréir chun suntais agus comhdaíonn sé an admháil."
+    },
+    "demo": {
+      "mandate": "sainordú · {id}",
+      "intent": "Cuspóir: síntiús foirne, 5 shuíochán.",
+      "rules": "Rialacha: teorainn {cap} · buiséad fágtha {remaining}",
+      "signed": "Sínithe le passkey · {minutes} nóim ó shin",
+      "transactions": "idirbhearta",
+      "matched": "Réitithe",
+      "mismatch": "Neamhréir"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · plán {plan}",
+    "title": "Prehľad",
+    "stats": {
+      "spent": "Minuté tento mesiac",
+      "pending": "Na schválenie",
+      "openQueue": "Otvoriť frontu →",
+      "requests": "Žiadosti tento mesiac"
+    },
+    "recent": {
+      "title": "Posledné žiadosti",
+      "viewAll": "Zobraziť všetko →",
+      "empty": "Tento mesiac žiadne žiadosti. Pripojte agenta na stránke {agents}.",
+      "agentsLink": "Agenti"
+    },
+    "byAgent": {
+      "title": "Podľa agenta",
+      "manage": "Spravovať →",
+      "empty": "Žiadni agenti."
+    }
+  }
+}

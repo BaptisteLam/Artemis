@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Sicherheit und Compliance",
+    "description": "Wie Artemis Ihr Geld, Ihre Karten und Ihre Daten schützt.",
+    "eyebrow": "Sicherheit",
+    "headline": "So gebaut, dass kein Agent allein handeln kann.",
+    "lead": "Der schlimmste Fall, ein durch Prompt-Injection manipulierter Agent, wird durch die Karte selbst eingedämmt.",
+    "funds": {
+      "title": "Ihr Geld verlässt nie Ihre Bank",
+      "body": "Artemis ist eine Software. Die Karten werden von Ihrem eigenen Anbieter (Qonto, Revolut Business, Stripe) auf Ihrem Konto ausgegeben. Wir verwahren, empfangen oder überweisen keinerlei Gelder."
+    },
+    "defense": {
+      "title": "Mehrstufige Absicherung",
+      "i1": "Einmalkarte, auf den genau freigegebenen Betrag begrenzt.",
+      "i2": "Kurze Gültigkeit (standardmäßig 30 Minuten).",
+      "i3": "Regeln pro Agent: Budget, Limit, Händler, Kategorien.",
+      "i4": "Automatischer Abgleich mit Warnung bei jeder Abweichung von Betrag oder Händler.",
+      "i5": "Schaltfläche „Alles sperren“: Agenten gesperrt und aktive Karten storniert, mit einem Klick.",
+      "i6": "Agenten können nur anfragen: Kein MCP-Tool kann eine Regel ändern oder eine Zahlung freigeben."
+    },
+    "cardNumbers": {
+      "title": "Kartennummern",
+      "body": "Standardmäßig laufen die vollständige Kartennummer und der Sicherheitscode nie über Artemis: Der Agent erhält einen kurzlebigen Einmal-Link (10 Minuten), und die Karte wird von der ausgebenden Bank angezeigt (Stripe Issuing Elements). Die direkte Übergabe ist als erweiterte Option verfügbar und standardmäßig deaktiviert; auch dann wird nichts gespeichert."
+    },
+    "mandates": {
+      "title": "Signierte Mandate",
+      "body": "Jede Freigabe ist eine WebAuthn-Signatur (Passkey) über den SHA-256-Hash des Mandats: Agent, Betrag, Währung, Händler, Zweck, Ablauf. Das Audit-Log ist per Hash verkettet und kann nur ergänzt werden: Jede Manipulation ist erkennbar."
+    },
+    "aiAct": {
+      "title": "AI Act und menschliche Aufsicht",
+      "body": "Der europäische AI Act verpflichtet Betreiber, ihre Systeme zu protokollieren und zu beaufsichtigen. Das exportierbare Artemis-Protokoll hält fest, wer jede Zahlung eines Agenten wann und nach welchen Regeln autorisiert hat."
+    },
+    "data": {
+      "title": "Personenbezogene Daten",
+      "body": "Datenbank in der Europäischen Union gehostet (Supabase, Frankfurt). Bankzugangsdaten verschlüsselt (AES-256-GCM). Siehe <a href=\"{href}\">Datenschutzerklärung</a>."
+    },
+    "report": {
+      "title": "Sicherheitslücke melden",
+      "body": "Schreiben Sie an die im <a href=\"{href}\">Impressum</a> angegebene Adresse. Wir antworten innerhalb von 72 Stunden."
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Kirjanpitoviennit",
+    "lead": "Pankkiesi veloittamat kulut valmiina Pennylaneen, kirjanpitäjällesi tai taulukkolaskentaan.",
+    "failed": "Vienti epäonnistui.",
+    "from": "Alkaen",
+    "to": "Asti (ei mukaan lukien)",
+    "downloadCsv": "Lataa CSV",
+    "downloadFec": "Lataa FEC",
+    "formats": "CSV: puolipisteillä erotettu, Excel-yhteensopiva. FEC: 18 säädösten mukaista saraketta, debet 604000 / kredit 512000, tuotavissa Pennylaneen.",
+    "fecUpsell": "FEC sisältyy Team-pakettiin ja sitä ylempiin.",
+    "seePlans": "Katso paketit"
+  }
+}

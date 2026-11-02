@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Cenník",
+    "description": "Sandbox zadarmo, potom {a}, {b}, {c} alebo {d} mesačne. Žiadna provízia z vašich výdavkov.",
+    "headline": "Jedno jednoduché predplatné. Žiadna provízia.",
+    "lead": "Platíte iba za softvér. Karty vydáva vaša banka podľa vášho bežného bankového sadzobníka.",
+    "popular": "Najobľúbenejší",
+    "from": "od {price}",
+    "perMonth": "/ mesiac",
+    "start": "Začať",
+    "choose": "Vybrať {plan}",
+    "mandates": "Mandáty mesačne: {count}",
+    "sandbox": {
+      "pitch": "Vyskúšajte so simulovanou bankou.",
+      "i1": "1 agent",
+      "i2": "Simulovaná banka",
+      "i3": "Simulované mandáty mesačne: {count}",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Pre freelancera alebo vývojára a jeho agentov.",
+      "i1": "3 agenti",
+      "i2": "1 pripojená banka",
+      "i4": "Schvaľovanie prístupovým kľúčom",
+      "i5": "Ochranné mechanizmy proti injekciám"
+    },
+    "team": {
+      "pitch": "Pre startup s 5 až 50 ľuďmi.",
+      "i1": "10 agentov",
+      "i2": "2 banky",
+      "i4": "Slack a kvórum schvaľovateľov",
+      "i5": "Predplatné, export FEC"
+    },
+    "agency": {
+      "pitch": "Pre automatizačné agentúry.",
+      "i1": "Neobmedzený počet klientov, 25 agentov",
+      "i3": "Rozpočet a marža pre každého klienta",
+      "i4": "Mesačný prehľad na prefakturáciu",
+      "i5": "+ {price} za každého aktívneho klienta"
+    },
+    "business": {
+      "pitch": "Pre regulované rastúce firmy.",
+      "i1": "Bez obmedzení",
+      "i2": "Dokumentácia a správa pre AI Act",
+      "i3": "Export podpísaného auditného denníka",
+      "i4": "Prioritná podpora"
+    },
+    "faq": {
+      "title": "Časté otázky",
+      "q1": "Účtujú sa poplatky za kartu?",
+      "a1": "Od Artemis nie. Vaša banka uplatňuje vlastný sadzobník (virtuálne karty sú súčasťou väčšiny plánov Qonto a Revolut Business; Stripe Issuing účtuje podľa vlastného cenníka).",
+      "q2": "Čo sa stane, ak prekročím kvótu?",
+      "a2": "V platenom pláne vaši agenti pokračujú: každý mandát nad kvótu sa na konci mesiaca účtuje sumou {price}. V režime Sandbox sa žiadosti zamietajú s kódom <code>quota_exceeded</code>.",
+      "q3": "Ako sa účtuje plán {plan}?",
+      "a3": "{base} mesačne plus {client} za každého aktívneho klienta, teda za každého klienta, pre ktorého bol počas mesiaca vytvorený aspoň jeden mandát.",
+      "q4": "Môžem kedykoľvek zrušiť predplatné?",
+      "a4": "Áno, v sekcii Fakturácia. Predplatné trvá do konca zaplateného obdobia; vaše dáta zostávajú exportovateľné.",
+      "q5": "DPH",
+      "a5": "Uvedené ceny sú netto."
+    }
+  }
+}

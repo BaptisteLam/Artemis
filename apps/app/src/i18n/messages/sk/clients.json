@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Klienti",
+    "lead": "Samostatný priestor pre každého klienta: jeho agenti, jeho mesačný rozpočet, vaša prirážka a prehľad na prefakturáciu pripravený na odoslanie.",
+    "invalidBudget": "Neplatný rozpočet (napr. 500 alebo 49,90).",
+    "upsell": "Priestory pre klientov sú súčasťou plánu Agentúry ({price} + {perClient} za každého aktívneho klienta).",
+    "seePlans": "Pozrieť plány →",
+    "empty": "Žiadni klienti",
+    "emptyHint": "Vytvorte klienta a potom mu priraďte agentov.",
+    "cols": {
+      "client": "Klient",
+      "agents": "Agenti",
+      "spent": "Viazané tento mesiac",
+      "budget": "Rozpočet",
+      "markup": "Prirážka"
+    },
+    "archived": "archivovaný",
+    "percent": "{value} %",
+    "report": "Prehľad →",
+    "new": "Nový klient",
+    "fields": {
+      "name": "Názov",
+      "billingEmail": "Fakturačný e-mail",
+      "markup": "Prirážka pri prefakturácii (%)",
+      "budget": "Mesačný rozpočet (€)",
+      "budgetHint": "Prázdne = bez stropu pre klienta"
+    },
+    "create": "Vytvoriť klienta",
+    "exportFailed": "Export zlyhal.",
+    "eyebrow": "Klient",
+    "month": "Mesiac",
+    "exportCsv": "Exportovať CSV",
+    "monthPurchases": "Nákupy tento mesiac",
+    "markupPct": "Prirážka {value}",
+    "toRebill": "Na prefakturovanie",
+    "noPurchases": "Tento mesiac žiadne nákupy",
+    "lines": {
+      "date": "Dátum",
+      "agent": "Agent",
+      "merchant": "Obchodník",
+      "purpose": "Účel",
+      "amount": "Suma",
+      "receipt": "Doklad"
+    },
+    "yes": "Áno",
+    "missing": "Chýba",
+    "archive": "Archivovať klienta",
+    "reactivate": "Znova aktivovať",
+    "all": "← Všetci klienti"
+  }
+}

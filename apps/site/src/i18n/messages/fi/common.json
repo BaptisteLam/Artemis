@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Agenttisi maksavat. Viimeinen sana on sinun.",
+    "description": "Eurooppalainen taloudellinen palomuuri tekoälyagenteillesi: hallinta, säästetty aika ja AI Act -todisteet jokaisesta ostosta, valitsemassasi pankissa."
+  },
+  "layout": {
+    "skip": "Siirry sisältöön"
+  },
+  "nav": {
+    "aria": "Päävalikko",
+    "home": "Artemis, etusivu",
+    "howItWorks": "Näin se toimii",
+    "agencies": "Toimistot",
+    "pricing": "Hinnat",
+    "docs": "Dokumentaatio",
+    "security": "Tietoturva",
+    "login": "Kirjaudu sisään",
+    "cta": "Kokeile"
+  },
+  "lang": {
+    "choose": "Valitse kieli"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Toimistot",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT ja n8n ovat omistajiensa tavaramerkkejä. Artemis ei ole sidoksissa yhteenkään niistä.",
+    "product": "Tuote",
+    "policyTemplate": "Käytäntömalli",
+    "waitlist": "Odotuslista",
+    "restApi": "REST API",
+    "legal": "Oikeudelliset tiedot",
+    "legalNotice": "Julkaisijan tiedot",
+    "terms": "Myyntiehdot",
+    "privacy": "Tietosuoja"
+  },
+  "legal": {
+    "eyebrow": "Oikeudelliset tiedot",
+    "updated": "Päivitetty viimeksi 1.11.2026.",
+    "frenchPrevails": "Tämä sivu on lukemisen helpottamiseksi laadittu käännös. Vain <a href=\"{href}\">ranskankielinen versio</a> on oikeudellisesti sitova.",
+    "vat": "Arvonlisäveroa ei sovelleta, Ranskan verolain (CGI) 293 B artikla",
+    "status": "Yksityinen elinkeinonharjoittaja (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (sivut ja API); Supabase, Inc. — data tallennetaan Euroopan unionissa (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentaatio",
+    "start": "Aloitus",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI ja Claude-taito",
+    "api": "REST API",
+    "rules": "Säännöt ja hyväksyntä"
+  },
+  "notFound": {
+    "title": "Sivua ei löytynyt",
+    "eyebrow": "Virhe 404",
+    "headline": "Tätä sivua ei ole olemassa.",
+    "lead": "Linkki voi olla vanhentunut. Palaa etusivulle tai selaa dokumentaatiota.",
+    "home": "Etusivu"
+  }
+}

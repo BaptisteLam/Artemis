@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Steg {step} av {total}",
+    "continue": "Fortsätt →",
+    "org": {
+      "title": "Din organisation",
+      "lead": "Du börjar i Sandbox: simulerad bank, inga avgifter.",
+      "nameLabel": "Företagets eller studions namn"
+    },
+    "agent": {
+      "title": "Din första agent",
+      "lead": "Ett kort namn som säger vad den köper. Standardregler: {monthly} per månad, {perPurchase} per köp.",
+      "nameLabel": "Agentens namn",
+      "platformLabel": "Plattform",
+      "platformOther": "Annan",
+      "submit": "Skapa agenten →"
+    },
+    "connect": {
+      "title": "Anslut din agent",
+      "done": "Jag har kopierat token →"
+    },
+    "passkey": {
+      "title": "Din lösennyckel för godkännande",
+      "lead": "Varje utgift signeras med Face ID, Touch ID, Windows Hello eller en säkerhetsnyckel. Registrera den om möjligt från den telefon som ska ta emot aviseringarna.",
+      "deviceName": "Första enheten",
+      "saved": "Lösennyckeln har registrerats.",
+      "unsupported": "Den här webbläsaren har inte stöd för lösennycklar.",
+      "register": "Registrera en lösennyckel",
+      "openDashboard": "Öppna översikten →",
+      "later": "Senare"
+    }
+  }
+}

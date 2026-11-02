@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Kártyák",
+    "lead": "A bankjaiban kibocsátott, egyszer használatos kártyák. A teljes kártyaszámot soha nem tároljuk.",
+    "linkAria": "Kártya •••• {last4}",
+    "cardAria": "Virtuális kártya, végződés: {last4}, kártyabirtokos: {holder}, lejárat: {exp}",
+    "tagRevealed": "Átadva az ügynöknek",
+    "tagSingleUse": "Egyszer használatos",
+    "emptyTitle": "Nincsenek kártyák",
+    "emptyText": "A kártyák egy igénylés jóváhagyása után jelennek meg.",
+    "colCard": "Kártya",
+    "colIssued": "Kibocsátva",
+    "colExpires": "Lejárat",
+    "colRevealed": "Átadva az ügynöknek",
+    "colStatus": "Állapot",
+    "notRevealed": "Nem",
+    "request": "Igénylés →"
+  }
+}

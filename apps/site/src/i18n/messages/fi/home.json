@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Eurooppalainen ratkaisu · tekoälyagentit",
+      "lead": "Eurooppalainen taloudellinen palomuuri tekoälyagenteillesi. Claude, ChatGPT tai n8n pyytää, sinä allekirjoitat yhdellä napautuksella, ja jokainen kulu on hallittu, täsmäytetty ja todennettu valitsemassasi pankissa.",
+      "tryFree": "Kokeile maksutta →",
+      "seeDemo": "Katso esittely",
+      "visualAria": "Esimerkki: agentin pyyntö ja sen kertakäyttöinen kortti",
+      "expired": "Vanhentunut",
+      "pending": "Odottava pyyntö",
+      "toApprove": "Odottaa hyväksyntää",
+      "purpose": "tiimin tilaus",
+      "approve": "Hyväksy pääsyavaimellani",
+      "decline": "Hylkää"
+    },
+    "trust": {
+      "aria": "Takuut",
+      "europe": "Eurooppalainen",
+      "europeText": "Eurot, eurooppalaiset pankit, data Frankfurtissa, GDPR.",
+      "funds": "Varasi pysyvät sinulla",
+      "fundsText": "Artemis ei koskaan säilytä rahaa.",
+      "number": "Kortin numero ei kulje Artemisin kautta",
+      "numberText": "Kortin näyttää pankkisi, ei me.",
+      "aiAct": "Valmis AI Actiin",
+      "aiActText": "Jokainen kulu allekirjoitettu, ketjutettu loki, neljännesvuosiraportti."
+    },
+    "demo": {
+      "eyebrow": "Esittely",
+      "title": "Pyynnöstä maksuun 20 sekunnissa.",
+      "explain": "Yrityksen korttia ei tarvitse koskaan jakaa.",
+      "step1": "Agentti pyytää",
+      "window": "claude · keskustelu",
+      "userMessage": "Tilaa tiimille Notion Plus, 5 käyttäjäpaikkaa.",
+      "agentMessage": "Pyysin kortin summalle {amount}. Odotan hyväksyntääsi.",
+      "step2": "Sinä hyväksyt",
+      "notification": "{agent} haluaa käyttää {amount}",
+      "sheetTitle": "Hyväksy valtuutus",
+      "validity": "{minutes} min",
+      "faceId": "Allekirjoita Face ID:llä",
+      "step3": "Agentti maksaa",
+      "reconciled": "Täsmäytetty"
+    },
+    "benefits": {
+      "eyebrow": "Mitä ostat",
+      "title": "Et osta korttia.",
+      "explain": "Pankit alkavat jo antaa niitä ilmaiseksi. Ostat hallintaa, aikaa ja todisteita.",
+      "control": {
+        "eyebrow": "Hallinta",
+        "title": "Mitään ei makseta ilman hyväksyntääsi.",
+        "text": "Budjetit, rajat, sallitut kauppiaat ja suojakaiteet kehoteinjektioita vastaan. Kynnysarvojesi ylittyessä jokainen kulu odottaa pääsyavaimella annettua allekirjoitusta yhdeltä tai useammalta hyväksyjältä."
+      },
+      "time": {
+        "eyebrow": "Säästetty aika",
+        "title": "Ei enää käsin luotuja kortteja.",
+        "text": "Agentti pyytää, sinä allekirjoitat yhdellä napautuksella, kortti luodaan pankissasi, tapahtuma täsmäytetään ja lasku arkistoidaan. Ei enää tiliotteiden läpikäyntiä eikä kuittien perään soittelua."
+      },
+      "proof": {
+        "eyebrow": "Todisteet",
+        "title": "Ihminen on hyväksynyt jokaisen kulun.",
+        "text": "Allekirjoitetut valtuutukset, ketjutettu ja muuttumaton tarkastusloki sekä neljännesvuosittainen valvontaraportti: juuri se, mitä AI Act, talousjohtajasi ja tilintarkastajasi pyytävät, valmiina luovutettavaksi."
+      },
+      "agencies": {
+        "eyebrow": "Toimistoille",
+        "title": "Yksi budjetti ja yksi lasku asiakasta kohden.",
+        "text": "Asiakastyötilat, asiakaskohtainen kuukausibudjetti, jälleenlaskutuskate ja lähetysvalmis kuukausiraportti. Asiakkaasi näkevät vihdoin, mihin heidän agenttinsa käyttävät rahaa."
+      }
+    },
+    "how": {
+      "eyebrow": "Näin se toimii",
+      "title": "Neljä vaihetta, ei jaettua korttia.",
+      "s1": "Agentti pyytää",
+      "s1Text": "MCP:n tai API:n kautta: ”{amount} Notionille, tiimin tilaus”.",
+      "s2": "Säännöt suodattavat",
+      "s2Text": "Budjetti, raja, kauppias: sääntöjen vastainen pyyntö hylätään saman tien.",
+      "s3": "Sinä hyväksyt",
+      "s3Text": "Ilmoitus puhelimeesi, allekirjoitus pääsyavaimella.",
+      "s4": "Agentti maksaa",
+      "s4Text": "Kertakäyttöinen kortti, tarkka summa, lyhyt voimassaolo ja sen jälkeen automaattinen täsmäytys."
+    },
+    "useCases": {
+      "eyebrow": "Käyttötapaukset",
+      "title": "Mitä agenttisi jo ostavat.",
+      "explain": "Nyt niillä on oma kortti.",
+      "api": {
+        "title": "API:t ja tokenit",
+        "text": "Lataa krediittejä, kun kiintiö loppuu, ilman että yrityksen kortti jää .env-tiedostoon."
+      },
+      "saas": {
+        "title": "SaaS-tilaukset",
+        "text": "Tilaa tiimille paketti tai jatka sitä täsmälleen hyväksytyllä summalla."
+      },
+      "cloud": {
+        "title": "Pilvi ja verkkotunnukset",
+        "text": "Osta verkkotunnus tai maksa ylittynyt hosting-käyttö kesken käyttöönoton."
+      },
+      "data": {
+        "title": "Data ja B2B-ostot",
+        "text": "Maksa aineisto, tiedonkeruutyö tai tarvikkeet, ja kuitti liitetään automaattisesti.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Rehellisesti sanottuna",
+      "title": "Käytätkö vain Stripeä, Rampia tai Mercurya?",
+      "explain": "Ne hoitavat jo osan työstä.",
+      "lead": "Artemis tuo sen, mitä pankki ei tee kilpailijoidensa hyväksi.",
+      "banks": "Useita pankkeja kerralla",
+      "banksText": "Stripe Issuing, Revolut, Qonto ja Sandbox hallittuina yhdestä paikasta yhden käytännön alla.",
+      "accounting": "Ranskalainen kirjanpito",
+      "accountingText": "FEC- ja Pennylane-viennit, kuitti jokaiseen valtuutukseen, automaattinen täsmäytys.",
+      "proof": "AI Act -todisteet valmiina luovutettavaksi",
+      "proofText": "Ihmisen allekirjoitus jokaiselle kululle, ketjutettu loki, agenttirekisteri, neljännesvuosiraportti.",
+      "agency": "Toimistotila",
+      "agencyText": "Agentteja useille asiakkaille, kullakin oma budjetti, kate ja raportti."
+    },
+    "europe": {
+      "eyebrow": "Eurooppalainen ratkaisu",
+      "title": "Rakennettu Euroopassa, Eurooppaa varten.",
+      "lead": "Amerikkalaiset agenttikortit puhuvat dollareita, amerikkalaisia pankkeja ja amerikkalaista lakia. Artemis puhuu euroja, eurooppalaisia pankkeja, GDPR:ää, AI Actia ja ranskalaista kirjanpitoa.",
+      "banks": "Eurot ja eurooppalaiset pankit: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "EU",
+      "data": "Data Frankfurtissa, GDPR, salatut tunnistetiedot",
+      "article": "14 art.",
+      "oversight": "AI Actin mukainen ihmisen valvonta, todennettuna kulu kululta",
+      "accounting": "Ranskalainen kirjanpito: FEC, Pennylane, liitetyt kuitit"
+    },
+    "compare": {
+      "eyebrow": "Vertailu",
+      "title": "Pankkisi myöntää kortin.",
+      "explain": "Artemis hallitsee niitä kaikkia.",
+      "criterion": "Kriteeri",
+      "bankOnly": "Pelkkä pankkisi (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Pelkkä pankkisi",
+      "usCards": "Amerikkalaiset agenttikortit",
+      "usCardsShort": "Yhdysvaltalaiset agenttikortit",
+      "rows": {
+        "card": "Virtuaalikortti agentille",
+        "banks": "Useita pankkeja, yksi käytäntö",
+        "signature": "Ihmisen allekirjoitus jokaiselle kululle (pääsyavain)",
+        "aiAct": "Vietävät AI Act -todisteet",
+        "accounting": "Ranskalainen kirjanpito (FEC, Pennylane)",
+        "agency": "Toimistotila (asiakaskohtaiset budjetit ja jälleenlaskutus)",
+        "europe": "Eurot, hosting ja data Euroopassa"
+      },
+      "values": {
+        "yes": "Kyllä",
+        "no": "Ei",
+        "yesBank": "Kyllä, pankkisi myöntämä",
+        "yesQuorum": "Kyllä, päätösvaltaisuussäännöllä",
+        "dependsPlan": "Riippuu paketista",
+        "dependsBank": "Riippuu pankista",
+        "partial": "Osittain"
+      }
+    },
+    "builders": {
+      "eyebrow": "Kehittäjille",
+      "title": "Käyttöön yhdellä rivillä.",
+      "explain": "Claude, ChatGPT, n8n, Make tai oma koodisi.",
+      "lead": "Etä-MCP-palvelin ja REST API. Maksuton Sandbox simuloiduilla korteilla, joten voit testata ilman pankkia.",
+      "connect": "Yhdistä Claude →",
+      "window": "pääte"
+    },
+    "faq": {
+      "eyebrow": "Usein kysytyt kysymykset",
+      "title": "Mitä meiltä kysytään.",
+      "more": "Onko sinulla muuta kysyttävää? Lue <a href=\"{security}\">Tietoturva</a>-sivu tai <a href=\"{docs}\">dokumentaatio</a>."
+    },
+    "final": {
+      "title": "Pidä agenttisi hallinnassa.",
+      "lead": "Eurooppalainen taloudellinen palomuuri, Sandboxissa maksuton, ei luottokorttia. Viimeinen sana on sinun.",
+      "signup": "Luo tili →",
+      "pricing": "Katso hinnat",
+      "holder": "sinun.agenttisi"
+    }
+  }
+}

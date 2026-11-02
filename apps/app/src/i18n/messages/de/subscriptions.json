@@ -1,0 +1,21 @@
+{
+  "subscriptions": {
+    "title": "Abonnements",
+    "lead": "Von Ihren Agenten abgeschlossene Abonnements: Karte an den Händler gebunden, monatliches Limit, Erkennung ruhender Abonnements.",
+    "confirmCancel": "Dieses Abonnement kündigen? Die Karte wird bei der Bank storniert.",
+    "planRequired": "Von Agenten verwaltete Abonnements sind ab dem Tarif Team enthalten.",
+    "seePlans": "Tarife ansehen →",
+    "dormantAlert_one": "{count} Abonnement seit mehr als {days} Tagen ohne Zahlung: Erwägen Sie, es zu kündigen.",
+    "dormantAlert_other": "{count} Abonnements seit mehr als {days} Tagen ohne Zahlung: Erwägen Sie, sie zu kündigen.",
+    "emptyTitle": "Keine Abonnements",
+    "emptyText": "Ein Agent schließt ein Abonnement mit request_card und der Option für wiederkehrende Zahlungen ab.",
+    "colMerchant": "Händler",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Monatliches Limit",
+    "colPaid": "Bezahlt",
+    "colLastPayment": "Letzte Zahlung",
+    "colStatus": "Status",
+    "dormant": "Ruhend",
+    "cancel": "Kündigen"
+  }
+}

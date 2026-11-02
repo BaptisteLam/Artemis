@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Foireann",
+    "lead": "Faigheann formheastóirí na hiarratais agus síníonn siad iad lena passkey.",
+    "confirmRemove": "An ball seo a bhaint?",
+    "cols": {
+      "member": "Ball",
+      "role": "Ról",
+      "since": "Ó"
+    },
+    "you": "tusa",
+    "remove": "Bain",
+    "invite": "Tabhair cuireadh",
+    "email": "Ríomhphost",
+    "role": "Ról",
+    "send": "Seol an cuireadh",
+    "inviteLink": "Nasc cuiridh (bailí ar feadh 7 lá):",
+    "expiresOn": "téann sé in éag ar {date}",
+    "revoke": "Cúlghair"
+  }
+}

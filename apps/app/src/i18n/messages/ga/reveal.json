@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Cárta aonúsáide · banc ionsamhlaithe",
+    "eyebrowBank": "Cárta aonúsáide · eisithe ag do bhanc",
+    "lead": "Ní osclaítear an nasc seo ach uair amháin. Tá an cárta teoranta don mhéid thuas agus faoi ghlas don cheannaí seo.",
+    "fields": {
+      "number": "Uimhir",
+      "expiry": "Dul in éag",
+      "cvc": "Cód slándála",
+      "holder": "Sealbhóir cárta"
+    },
+    "opening": "Á oscailt…",
+    "show": "Taispeáin an cárta •••• {last4}",
+    "footer": "Taispeánann an banc eisiúna an uimhir go díreach: ní théann sí trí Artemis choíche.",
+    "errors": {
+      "stripeUnavailable": "Níl Stripe.js ar fáil.",
+      "invalidLink": "Nasc neamhbhailí, úsáidte cheana nó imithe in éag.",
+      "stripeRefused": "Dhiúltaigh Stripe don iarratas."
+    }
+  }
+}

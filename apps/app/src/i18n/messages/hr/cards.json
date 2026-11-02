@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Kartice",
+    "lead": "Jednokratne kartice izdane u vašim bankama. Puni broj kartice nikada se ne pohranjuje.",
+    "linkAria": "Kartica •••• {last4}",
+    "cardAria": "Virtualna kartica koja završava na {last4}, vlasnik {holder}, vrijedi do {exp}",
+    "tagRevealed": "Predana agentu",
+    "tagSingleUse": "Jednokratna",
+    "emptyTitle": "Nema kartica",
+    "emptyText": "Kartice se pojavljuju nakon odobrenja zahtjeva.",
+    "colCard": "Kartica",
+    "colIssued": "Izdana",
+    "colExpires": "Vrijedi do",
+    "colRevealed": "Predana agentu",
+    "colStatus": "Status",
+    "notRevealed": "Ne",
+    "request": "Zahtjev →"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "subscriptions": {
+    "title": "Előfizetések",
+    "lead": "Az ügynökei által kötött előfizetések: a kereskedőhöz kötött kártya, havi limit, az alvó előfizetések felismerése.",
+    "confirmCancel": "Lemondja ezt az előfizetést? A kártya a banknál visszavonásra kerül.",
+    "planRequired": "Az ügynökök által kezelt előfizetések a Team csomagtól érhetők el.",
+    "seePlans": "Csomagok megtekintése →",
+    "dormantAlert_one": "{count} előfizetés több mint {days} napja fizetés nélkül: fontolja meg a lemondását.",
+    "dormantAlert_other": "{count} előfizetés több mint {days} napja fizetés nélkül: fontolja meg a lemondásukat.",
+    "emptyTitle": "Nincsenek előfizetések",
+    "emptyText": "Az ügynök a request_card eszközzel és az ismétlődő opcióval hoz létre előfizetést.",
+    "colMerchant": "Kereskedő",
+    "colAgent": "Ügynök",
+    "colMonthlyLimit": "Havi limit",
+    "colPaid": "Kifizetve",
+    "colLastPayment": "Utolsó fizetés",
+    "colStatus": "Állapot",
+    "dormant": "Alvó",
+    "cancel": "Lemondás"
+  }
+}

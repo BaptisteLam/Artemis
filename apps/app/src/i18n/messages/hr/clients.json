@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Klijenti",
+    "lead": "Zaseban prostor za svakog klijenta: njegovi agenti, mjesečni budžet, vaša marža i izvješće za prefakturiranje spremno za slanje.",
+    "invalidBudget": "Nevažeći budžet (npr. 500 ili 49,90).",
+    "upsell": "Prostori za klijente uključeni su u paket Agencije ({price} + {perClient} po aktivnom klijentu).",
+    "seePlans": "Pogledajte pakete →",
+    "empty": "Nema klijenata",
+    "emptyHint": "Izradite klijenta, a zatim mu dodijelite agente.",
+    "cols": {
+      "client": "Klijent",
+      "agents": "Agenti",
+      "spent": "Angažirano ovaj mjesec",
+      "budget": "Budžet",
+      "markup": "Marža"
+    },
+    "archived": "arhivirano",
+    "percent": "{value} %",
+    "report": "Izvješće →",
+    "new": "Novi klijent",
+    "fields": {
+      "name": "Naziv",
+      "billingEmail": "E-adresa za račune",
+      "markup": "Marža za prefakturiranje (%)",
+      "budget": "Mjesečni budžet (€)",
+      "budgetHint": "Prazno = bez limita za klijenta"
+    },
+    "create": "Izradi klijenta",
+    "exportFailed": "Izvoz nije uspio.",
+    "eyebrow": "Klijent",
+    "month": "Mjesec",
+    "exportCsv": "Izvezi CSV",
+    "monthPurchases": "Kupnje ovaj mjesec",
+    "markupPct": "Marža {value}",
+    "toRebill": "Za prefakturiranje",
+    "noPurchases": "Nema kupnji ovaj mjesec",
+    "lines": {
+      "date": "Datum",
+      "agent": "Agent",
+      "merchant": "Trgovac",
+      "purpose": "Svrha",
+      "amount": "Iznos",
+      "receipt": "Potvrda"
+    },
+    "yes": "Da",
+    "missing": "Nedostaje",
+    "archive": "Arhiviraj klijenta",
+    "reactivate": "Ponovno aktiviraj",
+    "all": "← Svi klijenti"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Slándáil agus comhlíonadh",
+    "description": "Conas a chosnaíonn Artemis do chistí, do chártaí agus do shonraí.",
+    "eyebrow": "Slándáil",
+    "headline": "Tógtha ionas nach féidir le haon ghníomhaire gníomhú as a stuaim féin.",
+    "lead": "Is é an cárta féin a choinníonn an cás is measa faoi smacht: gníomhaire a ionramháladh le instealladh leideanna.",
+    "funds": {
+      "title": "Ní fhágann do chistí do bhanc choíche",
+      "body": "Bogearraí is ea Artemis. Eisíonn do sholáthraí féin (Qonto, Revolut Business, Stripe) na cártaí ar do chuntas. Ní choinnímid, ní fhaighimid agus ní aistrímid aon chistí."
+    },
+    "defense": {
+      "title": "Cosaint ar a lán leibhéal",
+      "i1": "Cárta aonúsáide, teoranta don mhéid beacht a formheasadh.",
+      "i2": "Dul in éag gearr (30 nóiméad de réir réamhshocraithe).",
+      "i3": "Rialacha in aghaidh an ghníomhaire: buiséad, teorainn, ceannaithe, catagóirí.",
+      "i4": "Réiteach uathoibríoch, le foláireamh ar aon neamhréir sa mhéid nó sa cheannaí.",
+      "i5": "Cnaipe “Reoigh gach rud”: gníomhairí curtha ar fionraí agus cártaí gníomhacha cealaithe le cliceáil amháin.",
+      "i6": "Ní féidir le gníomhairí ach iarratas a dhéanamh: ní féidir le haon uirlis MCP riail a athrú ná íocaíocht a fhormheas."
+    },
+    "cardNumbers": {
+      "title": "Uimhreacha cártaí",
+      "body": "De réir réamhshocraithe, ní théann uimhir iomlán an chárta ná an cód slándála trí Artemis choíche: faigheann an gníomhaire nasc gearrshaolach aonúsáide (10 nóiméad) agus taispeánann an banc eisiúna an cárta (Stripe Issuing Elements). Tá tabhairt dhíreach ar fáil mar rogha ardleibhéil, múchta de réir réamhshocraithe; fiú ansin, ní stóráiltear faic."
+    },
+    "mandates": {
+      "title": "Sainorduithe sínithe",
+      "body": "Is síniú WebAuthn (passkey) gach formheas ar haisc SHA-256 an tsainordaithe: gníomhaire, méid, airgeadra, ceannaí, cuspóir, dul in éag. Tá an loga iniúchta slabhraithe le haiseanna agus ní féidir ach cur leis: is féidir aon chur isteach air a bhrath."
+    },
+    "aiAct": {
+      "title": "AI Act agus maoirseacht dhaonna",
+      "body": "Éilíonn AI Act an AE ar imscarthóirí a gcórais a logáil agus a mhaoirsiú. Taifeadann loga Artemis, ar féidir leat a easpórtáil, cé a d'údaraigh gach íocaíocht ghníomhaire, cathain, agus faoi na rialacha."
+    },
+    "data": {
+      "title": "Sonraí pearsanta",
+      "body": "Bunachar sonraí arna óstáil san Aontas Eorpach (Supabase, Frankfurt). Dintiúir bhainc criptithe (AES-256-GCM). Féach an <a href=\"{href}\">beartas príobháideachais</a>."
+    },
+    "report": {
+      "title": "Tuairiscigh leochaileacht",
+      "body": "Scríobh chuig an seoladh a thugtar san <a href=\"{href}\">fhógra dlíthiúil</a>. Freagraímid laistigh de 72 uair an chloig."
+    }
+  }
+}

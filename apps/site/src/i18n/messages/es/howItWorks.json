@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "description": "Cómo Artemis permite que sus agentes de IA paguen mientras usted mantiene el control.",
+    "headline": "El agente pide, usted decide, el banco paga.",
+    "lead": "Artemis se sitúa entre sus agentes y su banco. Aplica sus reglas, recoge su aprobación y crea una tarjeta de un solo uso por el importe exacto.",
+    "step1": {
+      "title": "1. Conecte su banco",
+      "body": "Stripe Issuing (recomendado) o Revolut Business: las tarjetas virtuales se crean en <strong>su</strong> cuenta y se cargan a <strong>sus</strong> fondos. Qonto se conecta en modo lectura, congelación y conciliación. Artemis nunca recibe, custodia ni transfiere dinero. Para probarlo, el Sandbox simula un banco."
+    },
+    "step2": {
+      "title": "2. Cree un agente y sus reglas",
+      "body": "Cada agente recibe un token secreto y una política: presupuesto mensual, límite por compra, divisas, comercios permitidos o bloqueados, categorías de comercio, umbral de aprobación automática y vigencia de la tarjeta."
+    },
+    "step3": {
+      "title": "3. El agente solicita una tarjeta",
+      "body": "Mediante la herramienta MCP <code>request_card</code> o la API REST. Una solicitud que infringe las reglas se rechaza de inmediato, con un motivo claro. Todas las demás esperan su aprobación, salvo los importes pequeños en un comercio de confianza si usted lo ha permitido."
+    },
+    "step4": {
+      "title": "4. Usted aprueba con su llave de acceso",
+      "body": "Recibe una notificación. La pantalla del mandato muestra el agente, el importe, el comercio y la finalidad. Usted firma con su llave de acceso (Face ID, huella dactilar, llave de seguridad). La firma cubre el contenido exacto del mandato."
+    },
+    "step5": {
+      "title": "5. El agente paga, Artemis concilia",
+      "body": "La tarjeta es de un solo uso, está limitada al importe y caduca rápidamente. El agente recibe un enlace de corta duración: la tarjeta la muestra su banco y el número nunca pasa por Artemis. En cuanto el banco comunica la transacción, Artemis la concilia, señala cualquier discrepancia y archiva el justificante."
+    },
+    "demo": {
+      "mandate": "mandato · {id}",
+      "intent": "Finalidad: suscripción del equipo, 5 licencias.",
+      "rules": "Reglas: límite {cap} · presupuesto restante {remaining}",
+      "signed": "Firmado con llave de acceso · hace {minutes} min",
+      "transactions": "transacciones",
+      "matched": "Conciliada",
+      "mismatch": "Discrepancia"
+    }
+  }
+}

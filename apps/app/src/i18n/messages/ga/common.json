@@ -1,0 +1,93 @@
+{
+  "common": {
+    "loading": "Á lódáil…",
+    "copy": "Cóipeáil",
+    "copied": "Cóipeáilte"
+  },
+  "lang": {
+    "choose": "Teanga"
+  },
+  "nav": {
+    "dashboard": "Painéal",
+    "requests": "Iarratais",
+    "agents": "Gníomhairí",
+    "clients": "Cliaint",
+    "cards": "Cártaí",
+    "subscriptions": "Síntiúis",
+    "transactions": "Idirbhearta",
+    "exports": "Easpórtálacha",
+    "banks": "Bainc",
+    "team": "Foireann",
+    "audit": "Iniúchadh",
+    "billing": "Billeáil",
+    "settings": "Socruithe"
+  },
+  "shell": {
+    "home": "Artemis, painéal",
+    "organization": "Eagraíocht",
+    "admin": "Riarachán",
+    "freezeAllHint": "Reoigh gach gníomhaire agus cealaigh na cártaí gníomhacha",
+    "frozen": "Reoite",
+    "freezeAll": "Reoigh gach rud",
+    "signOut": "Logáil amach",
+    "navAria": "Nascleanúint na haipe",
+    "pendingCount_one": "{count} ar feitheamh",
+    "pendingCount_two": "{count} ar feitheamh",
+    "pendingCount_few": "{count} ar feitheamh",
+    "pendingCount_many": "{count} ar feitheamh",
+    "pendingCount_other": "{count} ar feitheamh",
+    "frozenBanner": "Eagraíocht reoite: ní féidir aon chárta nua a eisiúint. Dí-reoigh í sna Socruithe."
+  },
+  "status": {
+    "pending": "Le formheas",
+    "approved": "Formheasta",
+    "issued": "Cárta eisithe",
+    "completed": "Íoctha",
+    "rejected": "Diúltaithe",
+    "expired": "Imithe in éag",
+    "failed": "Teip bhainc",
+    "canceled": "Cealaithe",
+    "active": "Gníomhach",
+    "pending_bank_sca": "Formheas bainc",
+    "used": "Úsáidte",
+    "frozen": "Reoite",
+    "matched": "Meaitseáilte",
+    "mismatch": "Neamhréir",
+    "unmatched": "Gan mheaitseáil"
+  },
+  "roles": {
+    "owner": "Úinéir",
+    "admin": "Riarthóir",
+    "approver": "Formheastóir",
+    "viewer": "Breathnóir"
+  },
+  "errors": {
+    "network": "Níl an líonra ar fáil. Seiceáil do nasc.",
+    "unauthorized": "Tá do sheisiún imithe in éag. Logáil isteach arís.",
+    "forbidden": "Níl cead agat é seo a dhéanamh.",
+    "not_found": "Níor aimsíodh é, nó níl sé ar fáil a thuilleadh.",
+    "invalid_input": "Tá roinnt faisnéise neamhbhailí. Seiceáil an fhoirm.",
+    "rate_limited": "An iomarca iarrachtaí. Fan nóiméad agus bain triail eile as.",
+    "quota_exceeded": "Tá do chuóta míosúil sainorduithe bainte amach.",
+    "subscription_inactive": "Tá do shíntiús neamhghníomhach. Nuashonraigh é in Billeáil.",
+    "org_frozen": "Tá an eagraíocht reoite.",
+    "agent_frozen": "Tá an gníomhaire seo reoite.",
+    "request_not_pending": "Níl an t-iarratas seo ar feitheamh a thuilleadh.",
+    "request_expired": "Tá an t-iarratas seo imithe in éag.",
+    "already_revealed": "Tugadh an cárta seo cheana.",
+    "card_not_ready": "Níl an cárta ar fáil fós.",
+    "bank_error": "Dhiúltaigh an banc don oibríocht.",
+    "plan_limit": "Tá teorainn do phlean bainte amach. Uasghrádaigh chun leanúint ar aghaidh.",
+    "over_client_budget": "Sáraíodh buiséad míosúil an chliaint seo.",
+    "internal": "Chuaigh rud éigin amú. Bain triail eile as.",
+    "currency_not_allowed": "Níl an t-airgeadra seo ceadaithe ag an mbeartas.",
+    "invalid_amount": "Méid neamhbhailí.",
+    "over_transaction_limit": "Méid os cionn na teorann in aghaidh an idirbhirt.",
+    "over_monthly_budget": "Sáraíodh buiséad míosúil an ghníomhaire.",
+    "merchant_blocked": "Tá an ceannaí seo blocáilte ag an mbeartas.",
+    "merchant_not_allowed": "Níl an ceannaí seo ar an liosta ceadaithe.",
+    "mcc_blocked": "Tá an chatagóir ceannaí seo blocáilte.",
+    "mcc_not_allowed": "Níl an chatagóir ceannaí seo ceadaithe.",
+    "too_many_requests": "An iomarca iarratas san uair dheireanach don ghníomhaire seo."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Toimistoille",
+    "description": "Automaatiotoimistot: asiakkaidesi agentit käyttävät rahaa hallitusti, ja jokaisella asiakkaalla on oma budjetti ja oma lasku.",
+    "eyebrow": "Automaatiotoimistot",
+    "headline": "Asiakkaidesi agentit maksavat. Sinä laskutat eteenpäin vaivatta.",
+    "lead": "Rakennatko n8n-, Make- tai Claude-agentteja asiakkaillesi? Artemis erottelee kulut asiakkaittain, asettaa jokaiselle oman budjetin ja valmistelee jälleenlaskutuksen katteesi kanssa.",
+    "try": "Kokeile maksutta →",
+    "plan": "Paketti {plan}: {base} + {client} jokaisesta aktiivisesta asiakkaasta",
+    "spaces": {
+      "title": "Oma työtila jokaiselle asiakkaalle",
+      "body": "Liitä jokainen agentti asiakkaaseen. Sen pyynnöt, kortit, tapahtumat ja kuitit pidetään erillään. Agentti ei voi koskaan käyttää toisen asiakkaan budjettia."
+    },
+    "budget": {
+      "title": "Kuukausibudjetti asiakasta kohden",
+      "body": "Aseta jokaiselle asiakkaalle kuukausikatto agenttikohtaisten sääntöjen lisäksi. Kun katto ylittyy, pyyntö hylätään jo ennen kuin se päätyy ihmisen käsiteltäväksi."
+    },
+    "rebilling": {
+      "title": "Jälleenlaskutus yhdellä napsautuksella",
+      "body": "Artemis koostaa joka kuukausi jokaisesta asiakkaasta raportin: veloitetut ostot, agentti, kauppias, kuitti, katteeseesi perustuva hallinnointipalkkio ja jälleenlaskutettava kokonaissumma. CSV-vienti on valmis lähetettäväksi tai tuotavaksi laskutusohjelmaasi."
+    },
+    "proof": {
+      "title": "Todisteet asiakkaillesi",
+      "body": "Jokaisen maksun allekirjoittaa valtuutettu henkilö, eikä lokia voi muuttaa. Näytä asiakkaillesi, että heidän agenttinsa ovat ihmisen valvonnassa, kuten AI Act edellyttää."
+    },
+    "european": {
+      "title": "Eurooppalainen alusta loppuun",
+      "body": "Eurot, eurooppalaiset pankit, data Frankfurtissa sekä FEC- ja Pennylane-viennit ranskalaista kirjanpitoa varten."
+    },
+    "demo": {
+      "window": "jälleenlaskutus · martin-bakery · marraskuu",
+      "subtotal": "Välisumma",
+      "fee": "Hallinnointipalkkio 15 %",
+      "total": "Jälleenlaskutettava yhteensä"
+    }
+  }
+}

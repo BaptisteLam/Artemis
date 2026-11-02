@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Carte",
+    "lead": "Carte monouso emesse nelle sue banche. Il numero completo della carta non viene mai memorizzato.",
+    "linkAria": "Carta •••• {last4}",
+    "cardAria": "Carta virtuale che termina con {last4}, titolare {holder}, scadenza {exp}",
+    "tagRevealed": "Consegnata all'agente",
+    "tagSingleUse": "Monouso",
+    "emptyTitle": "Nessuna carta",
+    "emptyText": "Le carte compaiono dopo l'approvazione di una richiesta.",
+    "colCard": "Carta",
+    "colIssued": "Emessa",
+    "colExpires": "Scadenza",
+    "colRevealed": "Consegnata all'agente",
+    "colStatus": "Stato",
+    "notRevealed": "No",
+    "request": "Richiesta →"
+  }
+}

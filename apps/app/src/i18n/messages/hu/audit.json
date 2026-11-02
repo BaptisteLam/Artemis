@@ -1,0 +1,94 @@
+{
+  "audit": {
+    "title": "Auditnapló",
+    "lead": "Minden eseményt SHA-256 hash láncol össze, így sem módosítani, sem törölni nem lehet: ez az emberi felügyelet bizonyítéka (AI Act).",
+    "verify": "Integritás ellenőrzése",
+    "export": "Exportálás",
+    "report": "AI Act-jelentés {quarter}",
+    "exportFailed": "Az exportálás nem sikerült.",
+    "reportUnavailable": "A jelentés nem érhető el.",
+    "chainOk_one": "A lánc ép: {count} bejegyzés ellenőrizve.",
+    "chainOk_other": "A lánc ép: {count} bejegyzés ellenőrizve.",
+    "chainBroken": "A lánc megszakadt a(z) {id}. számú bejegyzésnél.",
+    "exportUpsell": "Az auditnapló aláírt exportja a Business csomag része.",
+    "seePlans": "Csomagok megtekintése",
+    "cols": {
+      "date": "Dátum",
+      "event": "Esemény",
+      "actor": "Szereplő",
+      "hash": "Ujjlenyomat"
+    },
+    "view": "megtekintés",
+    "older": "Régebbiek →",
+    "actors": {
+      "user": "Felhasználó",
+      "agent": "Ügynök",
+      "system": "Rendszer"
+    },
+    "actions": {
+      "org": {
+        "created": "Szervezet létrehozva",
+        "frozen": "Szervezet befagyasztva",
+        "unfrozen": "Szervezet befagyasztása feloldva",
+        "card_delivery_changed": "Kártyaátadási mód módosítva",
+        "slack_connected": "Slack csatlakoztatva",
+        "slack_disconnected": "Slack leválasztva"
+      },
+      "agent": {
+        "created": "Ügynök létrehozva",
+        "updated": "Ügynök módosítva",
+        "deleted": "Ügynök törölve",
+        "token_rotated": "Token újragenerálva",
+        "frozen": "Ügynök befagyasztva"
+      },
+      "policy": {
+        "updated": "Szabályok módosítva"
+      },
+      "request": {
+        "created": "Igénylés létrehozva",
+        "rejected": "Igénylés elutasítva",
+        "approved": "Megbízás aláírva",
+        "auto_approved": "Automatikus jóváhagyás",
+        "approval_recorded": "Jóváhagyás rögzítve",
+        "expired": "Igénylés lejárt"
+      },
+      "card": {
+        "issued": "Kártya kibocsátva",
+        "issue_failed": "Sikertelen kártyakibocsátás",
+        "revealed": "Kártya átadva az ügynöknek",
+        "link_created": "Kártyahivatkozás létrehozva",
+        "viewed": "Kártya megtekintve",
+        "canceled": "Kártya visszavonva",
+        "expired": "Kártya lejárt"
+      },
+      "transaction": {
+        "matched": "Tranzakció egyeztetve",
+        "mismatch": "Eltérés észlelve"
+      },
+      "receipt": {
+        "attached": "Bizonylat csatolva"
+      },
+      "bank": {
+        "connected": "Bank csatlakoztatva",
+        "disconnected": "Bank leválasztva"
+      },
+      "member": {
+        "invited": "Tag meghívva",
+        "joined": "Tag csatlakozott",
+        "removed": "Tag eltávolítva",
+        "role_changed": "Szerepkör módosítva"
+      },
+      "client": {
+        "created": "Ügyfél létrehozva",
+        "updated": "Ügyfél módosítva"
+      },
+      "billing": {
+        "subscribed": "Előfizetés elindítva",
+        "updated": "Előfizetés módosítva"
+      },
+      "subscription": {
+        "charged": "Előfizetés terhelve"
+      }
+    }
+  }
+}

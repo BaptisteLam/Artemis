@@ -1,0 +1,90 @@
+{
+  "common": {
+    "loading": "Wird geladen …",
+    "copy": "Kopieren",
+    "copied": "Kopiert"
+  },
+  "lang": {
+    "choose": "Sprache"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "requests": "Anfragen",
+    "agents": "Agenten",
+    "clients": "Kunden",
+    "cards": "Karten",
+    "subscriptions": "Abonnements",
+    "transactions": "Transaktionen",
+    "exports": "Exporte",
+    "banks": "Banken",
+    "team": "Team",
+    "audit": "Audit",
+    "billing": "Abrechnung",
+    "settings": "Einstellungen"
+  },
+  "shell": {
+    "home": "Artemis, Dashboard",
+    "organization": "Organisation",
+    "admin": "Admin",
+    "freezeAllHint": "Alle Agenten sperren und aktive Karten stornieren",
+    "frozen": "Gesperrt",
+    "freezeAll": "Alles sperren",
+    "signOut": "Abmelden",
+    "navAria": "App-Navigation",
+    "pendingCount_one": "{count} offen",
+    "pendingCount_other": "{count} offen",
+    "frozenBanner": "Organisation gesperrt: Es kann keine neue Karte ausgegeben werden. Entsperren Sie sie in den Einstellungen."
+  },
+  "status": {
+    "pending": "Freizugeben",
+    "approved": "Freigegeben",
+    "issued": "Karte ausgegeben",
+    "completed": "Bezahlt",
+    "rejected": "Abgelehnt",
+    "expired": "Abgelaufen",
+    "failed": "Bankfehler",
+    "canceled": "Storniert",
+    "active": "Aktiv",
+    "pending_bank_sca": "Freigabe durch Bank",
+    "used": "Verwendet",
+    "frozen": "Gesperrt",
+    "matched": "Abgeglichen",
+    "mismatch": "Abweichung",
+    "unmatched": "Nicht abgeglichen"
+  },
+  "roles": {
+    "owner": "Inhaber",
+    "admin": "Administrator",
+    "approver": "Freigeber",
+    "viewer": "Betrachter"
+  },
+  "errors": {
+    "network": "Netzwerk nicht verfügbar. Prüfen Sie Ihre Verbindung.",
+    "unauthorized": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
+    "forbidden": "Sie haben keine Berechtigung dafür.",
+    "not_found": "Nicht gefunden oder nicht mehr verfügbar.",
+    "invalid_input": "Einige Angaben sind ungültig. Bitte prüfen Sie das Formular.",
+    "rate_limited": "Zu viele Versuche. Bitte warten Sie einen Moment und versuchen Sie es erneut.",
+    "quota_exceeded": "Ihr monatliches Mandatskontingent ist erreicht.",
+    "subscription_inactive": "Ihr Abonnement ist inaktiv. Aktualisieren Sie es unter Abrechnung.",
+    "org_frozen": "Die Organisation ist gesperrt.",
+    "agent_frozen": "Dieser Agent ist gesperrt.",
+    "request_not_pending": "Diese Anfrage ist nicht mehr offen.",
+    "request_expired": "Diese Anfrage ist abgelaufen.",
+    "already_revealed": "Diese Karte wurde bereits übergeben.",
+    "card_not_ready": "Die Karte ist noch nicht verfügbar.",
+    "bank_error": "Die Bank hat den Vorgang abgelehnt.",
+    "plan_limit": "Das Limit Ihres Tarifs ist erreicht. Wechseln Sie den Tarif, um fortzufahren.",
+    "over_client_budget": "Das Monatsbudget dieses Kunden ist überschritten.",
+    "internal": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "currency_not_allowed": "Diese Währung ist laut Richtlinie nicht zulässig.",
+    "invalid_amount": "Ungültiger Betrag.",
+    "over_transaction_limit": "Betrag über dem Limit pro Transaktion.",
+    "over_monthly_budget": "Das Monatsbudget des Agenten ist überschritten.",
+    "merchant_blocked": "Dieser Händler ist laut Richtlinie gesperrt.",
+    "merchant_not_allowed": "Dieser Händler steht nicht auf der Liste der zugelassenen Händler.",
+    "mcc_blocked": "Diese Händlerkategorie ist gesperrt.",
+    "mcc_not_allowed": "Diese Händlerkategorie ist nicht zugelassen.",
+    "too_many_requests": "Zu viele Anfragen dieses Agenten in der letzten Stunde."
+  }
+}

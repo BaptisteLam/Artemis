@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Vienreizējas lietošanas karte · simulēta banka",
+    "eyebrowBank": "Vienreizējas lietošanas karte · izsniegusi jūsu banka",
+    "lead": "Šī saite atveras tikai vienu reizi. Kartes limits ir iepriekš norādītā summa, un tā ir piesaistīta šim tirgotājam.",
+    "fields": {
+      "number": "Numurs",
+      "expiry": "Derīga līdz",
+      "cvc": "Drošības kods",
+      "holder": "Kartes turētājs"
+    },
+    "opening": "Atver…",
+    "show": "Parādīt karti •••• {last4}",
+    "footer": "Numuru tieši parāda izdevējbanka: tas nekad nenonāk Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js nav pieejams.",
+      "invalidLink": "Nederīga saite: jau izmantota vai tās derīgums beidzies.",
+      "stripeRefused": "Stripe noraidīja pieprasījumu."
+    }
+  }
+}

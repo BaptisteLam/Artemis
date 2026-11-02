@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Az ügynökei fizetnek. Az utolsó szó az Öné.",
+    "unknownAgent": "Egy ügynök",
+    "unknownMerchant": "egy kereskedő",
+    "requestPending": {
+      "title": "{agent} {amount} összeget szeretne költeni",
+      "subject": "Jóváhagyásra vár: {amount} – {merchant}",
+      "merchant": "Kereskedő: {merchant}",
+      "purpose": "Cél: {purpose}",
+      "expires": "Válasz hiányában az igénylés automatikusan lejár.",
+      "cta": "Megtekintés és jóváhagyás →",
+      "slack": "*{title}* – kereskedő: *{merchant}*",
+      "slackCta": "Megtekintés és aláírás passkey-vel"
+    },
+    "cardIssueFailed": {
+      "subject": "Sikertelen kártyalétrehozás – {merchant}",
+      "title": "A bank nem hozta létre a kártyát",
+      "fallback": "Banki hiba.",
+      "cta": "Igénylés megtekintése →"
+    },
+    "mismatch": {
+      "subject": "Eltérés észlelve: {amount} – {merchant}",
+      "title": "Egy tranzakció nem egyezik a megbízással",
+      "check": "Ellenőrizze a tranzakciót, és szükség esetén fagyassza be az ügynököt.",
+      "cta": "Tranzakciók megtekintése →",
+      "pushTitle": "Tranzakcióeltérés"
+    },
+    "invitation": {
+      "subject": "Meghívó: csatlakozzon a(z) {org} szervezethez az Artemisben",
+      "title": "Csatlakozzon: {org}",
+      "body": "Meghívást kapott, hogy jóváhagyja és kövesse csapata MI-ügynökeinek költéseit.",
+      "cta": "Meghívó elfogadása →"
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "An réiteach Eorpach · Gníomhairí IS",
+      "lead": "An balla dóiteáin airgeadais Eorpach do do ghníomhairí IS. Iarrann Claude, ChatGPT nó n8n, síníonn tusa le tadhall amháin, agus bíonn gach caiteachas rialaithe, réitithe agus cruthaithe, ar an mbanc is rogha leat.",
+      "tryFree": "Bain triail as saor in aisce →",
+      "seeDemo": "Féach ar an taispeántas",
+      "visualAria": "Sampla: iarratas ó ghníomhaire agus a chárta aonúsáide",
+      "expired": "Imithe in éag",
+      "pending": "Iarratas ar feitheamh",
+      "toApprove": "Ag fanacht ar fhormheas",
+      "purpose": "síntiús foirne",
+      "approve": "Formheas le mo passkey",
+      "decline": "Diúltaigh"
+    },
+    "trust": {
+      "aria": "Ráthaíochtaí",
+      "europe": "Eorpach",
+      "europeText": "Euro, bainc Eorpacha, sonraí i Frankfurt, RGCS.",
+      "funds": "Fanann do chistí agatsa",
+      "fundsText": "Ní choinníonn Artemis airgead riamh.",
+      "number": "Uimhir an chárta coinnithe as Artemis",
+      "numberText": "Is é do bhanc a thaispeánann an cárta, ní sinne.",
+      "aiAct": "Réidh don AI Act",
+      "aiActText": "Gach caiteachas sínithe, loga slabhraithe, tuarascáil ráithiúil."
+    },
+    "demo": {
+      "eyebrow": "Taispeántas",
+      "title": "Ón iarratas go dtí an íocaíocht i gceann 20 soicind.",
+      "explain": "Gan cárta na cuideachta a roinnt choíche.",
+      "step1": "Iarrann an gníomhaire",
+      "window": "claude · comhrá",
+      "userMessage": "Liostáil an fhoireann le Notion Plus, 5 shuíochán.",
+      "agentMessage": "D'iarr mé cárta ar {amount}. Ag fanacht ar do fhormheas.",
+      "step2": "Formheasann tusa",
+      "notification": "Ba mhaith le {agent} {amount} a chaitheamh",
+      "sheetTitle": "Formheas an sainordú",
+      "validity": "{minutes} nóim",
+      "faceId": "Sínigh le Face ID",
+      "step3": "Íocann an gníomhaire",
+      "reconciled": "Réitithe"
+    },
+    "benefits": {
+      "eyebrow": "Cad atá á cheannach agat",
+      "title": "Ní cárta é.",
+      "explain": "Tá na bainc ag tosú á dtabhairt sin amach saor in aisce. Is é atá á cheannach agat ná smacht, am agus cruthúnas.",
+      "control": {
+        "eyebrow": "Smacht",
+        "title": "Ní imíonn faic gan do fhormheas.",
+        "text": "Buiséid, teorainneacha, ceannaithe ceadaithe, ráillí cosanta in aghaidh instealladh leideanna. Os cionn do thairseacha, fanann gach caiteachas ar do shíniú passkey, ó fhormheastóir amháin nó níos mó."
+      },
+      "time": {
+        "eyebrow": "Am sábháilte",
+        "title": "Deireadh le cártaí a chruthú de láimh.",
+        "text": "Iarrann an gníomhaire, síníonn tusa le tadhall amháin, cruthaítear an cárta i do bhanc, réitítear an t-idirbheart agus comhdaítear an sonrasc. Gan ráitis le seiceáil ná admhálacha le lorg a thuilleadh."
+      },
+      "proof": {
+        "eyebrow": "Cruthúnas",
+        "title": "D'fhormheas duine daonna gach caiteachas.",
+        "text": "Sainorduithe sínithe, loga iniúchta slabhraithe nach féidir cur isteach air agus tuarascáil mhaoirseachta ráithiúil: a bhfuil á éileamh ag an AI Act, ag do phríomhoifigeach airgeadais agus ag d'iniúchóir, réidh le tabhairt ar láimh."
+      },
+      "agencies": {
+        "eyebrow": "Do ghníomhaireachtaí",
+        "title": "Buiséad amháin agus sonrasc amháin in aghaidh an chliaint.",
+        "text": "Spásanna oibre cliant, buiséad míosúil in aghaidh an chliaint, corrlach athshonrasctha agus tuarascáil mhíosúil réidh le seoladh. Feiceann do chliaint faoi dheireadh cad a chaitheann a ngníomhairí."
+      }
+    },
+    "how": {
+      "eyebrow": "Conas a oibríonn sé",
+      "title": "Ceithre chéim, gan cárta roinnte.",
+      "s1": "Iarrann an gníomhaire",
+      "s1Text": "Trí MCP nó an API: “{amount} ag Notion, síntiús foirne”.",
+      "s2": "Scagann na rialacha",
+      "s2Text": "Buiséad, teorainn, ceannaí: lasmuigh de na rialacha, diúltaítear don iarratas láithreach.",
+      "s3": "Formheasann tusa",
+      "s3Text": "Fógra ar do ghuthán, síniú passkey.",
+      "s4": "Íocann an gníomhaire",
+      "s4Text": "Cárta aonúsáide, an méid beacht, tréimhse bhailíochta ghearr, ansin réiteach uathoibríoch."
+    },
+    "useCases": {
+      "eyebrow": "Cásanna úsáide",
+      "title": "Na rudaí a cheannaíonn do ghníomhairí cheana féin.",
+      "explain": "Anois le cárta dá gcuid féin.",
+      "api": {
+        "title": "APIanna agus comharthaí",
+        "text": "Creidmheasanna a athlánú nuair a ídítear an cuóta, gan cárta na cuideachta a fhágáil i gcomhad .env."
+      },
+      "saas": {
+        "title": "Síntiúis SaaS",
+        "text": "Liostáil le plean nó síneadh a chur le plean don fhoireann, ar an méid beacht a formheasadh."
+      },
+      "cloud": {
+        "title": "Néal agus fearainn",
+        "text": "Ainm fearainn a cheannach nó ró-úsáid óstála a íoc i lár imlonnaithe."
+      },
+      "data": {
+        "title": "Sonraí agus ceannacháin B2B",
+        "text": "Íoc as tacar sonraí, as jab scríobtha nó as soláthairtí, agus an admháil ceangailte go huathoibríoch.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Le bheith macánta",
+      "title": "Stripe, Ramp nó Mercury amháin agat?",
+      "explain": "Déanann siad cuid den obair cheana féin.",
+      "lead": "Tugann Artemis an méid nach ndéanfaidh banc dá iomaitheoirí.",
+      "banks": "Roinnt banc ag an am céanna",
+      "banksText": "Stripe Issuing, Revolut, Qonto agus an Sandbox, á stiúradh ó áit amháin faoi bheartas amháin.",
+      "accounting": "Cuntasaíocht Fhrancach",
+      "accountingText": "Easpórtálacha FEC agus Pennylane, admháil ceangailte le gach sainordú, réiteach uathoibríoch.",
+      "proof": "Cruthúnas don AI Act, réidh le tabhairt ar láimh",
+      "proofText": "Síniú daonna do gach caiteachas, loga slabhraithe, clár gníomhairí, tuarascáil ráithiúil.",
+      "agency": "Mód gníomhaireachta",
+      "agencyText": "Gníomhairí do roinnt cliant, agus a bhuiséad, a chorrlach agus a thuarascáil féin ag gach cliant."
+    },
+    "europe": {
+      "eyebrow": "An réiteach Eorpach",
+      "title": "Tógtha san Eoraip, don Eoraip.",
+      "lead": "Labhraíonn cártaí gníomhairí Meiriceánacha dollair, bainc Mheiriceánacha agus dlí Meiriceánach. Labhraíonn Artemis euro, bainc Eorpacha, RGCS, an AI Act agus cuntasaíocht Fhrancach.",
+      "banks": "Euro agus bainc Eorpacha: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "AE",
+      "data": "Sonraí arna n-óstáil i Frankfurt, RGCS, dintiúir chriptithe",
+      "article": "Airt. 14",
+      "oversight": "Maoirseacht dhaonna faoin AI Act, cruthaithe caiteachas ar chaiteachas",
+      "accounting": "Cuntasaíocht Fhrancach: FEC, Pennylane, admhálacha ceangailte"
+    },
+    "compare": {
+      "eyebrow": "Comparáid",
+      "title": "Eisíonn do bhanc an cárta.",
+      "explain": "Rialaíonn Artemis os cionn na mbanc go léir.",
+      "criterion": "Critéar",
+      "bankOnly": "Do bhanc amháin (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Do bhanc amháin",
+      "usCards": "Cártaí gníomhairí Meiriceánacha",
+      "usCardsShort": "Cártaí gníomhairí SAM",
+      "rows": {
+        "card": "Cárta fíorúil don ghníomhaire",
+        "banks": "Roinnt banc, beartas amháin",
+        "signature": "Síniú daonna do gach caiteachas (passkey)",
+        "aiAct": "Cruthúnas don AI Act is féidir a easpórtáil",
+        "accounting": "Cuntasaíocht Fhrancach (FEC, Pennylane)",
+        "agency": "Mód gníomhaireachta (buiséid agus athshonrascadh in aghaidh an chliaint)",
+        "europe": "Euro, óstáil agus sonraí san Eoraip"
+      },
+      "values": {
+        "yes": "Tá",
+        "no": "Níl",
+        "yesBank": "Tá, eisithe ag do bhanc",
+        "yesQuorum": "Tá, le córam",
+        "dependsPlan": "Ag brath ar an bplean",
+        "dependsBank": "Ag brath ar an mbanc",
+        "partial": "Páirteach"
+      }
+    },
+    "builders": {
+      "eyebrow": "D'fhorbróirí",
+      "title": "Ceangailte le líne amháin.",
+      "explain": "Claude, ChatGPT, n8n, Make nó do chód féin.",
+      "lead": "Freastalaí MCP cianda agus REST API. Sandbox saor in aisce le cártaí ionsamhlaithe chun tástáil a dhéanamh gan bhanc.",
+      "connect": "Ceangail Claude →",
+      "window": "teirminéal"
+    },
+    "faq": {
+      "eyebrow": "Ceisteanna coitianta",
+      "title": "An rud a fhiafraítear dínn.",
+      "more": "Ceist eile agat? Léigh an leathanach <a href=\"{security}\">Slándáil</a> nó an <a href=\"{docs}\">doiciméadú</a>."
+    },
+    "final": {
+      "title": "Coinnigh smacht ar do ghníomhairí.",
+      "lead": "An balla dóiteáin airgeadais Eorpach, saor in aisce sa Sandbox, gan cárta creidmheasa. Is agatsa atá an focal deiridh.",
+      "signup": "Cruthaigh cuntas →",
+      "pricing": "Féach na praghsanna",
+      "holder": "do.ghniomhaire"
+    }
+  }
+}

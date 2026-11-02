@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · planas {plan}",
+    "title": "Suvestinė",
+    "stats": {
+      "spent": "Išleista šį mėnesį",
+      "pending": "Laukia patvirtinimo",
+      "openQueue": "Atidaryti eilę →",
+      "requests": "Užklausos šį mėnesį"
+    },
+    "recent": {
+      "title": "Naujausios užklausos",
+      "viewAll": "Žiūrėti visas →",
+      "empty": "Šį mėnesį užklausų nėra. Prijunkite agentą puslapyje {agents}.",
+      "agentsLink": "Agentai"
+    },
+    "byAgent": {
+      "title": "Pagal agentą",
+      "manage": "Valdyti →",
+      "empty": "Agentų nėra."
+    }
+  }
+}

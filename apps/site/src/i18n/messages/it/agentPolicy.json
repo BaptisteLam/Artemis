@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Modello: policy di spesa per gli agenti IA",
+    "intro": "Un modello gratuito da adattare, per disciplinare le spese effettuate da agenti di intelligenza artificiale e documentare la supervisione umana richiesta dall'articolo 14 del regolamento europeo sull'intelligenza artificiale (AI Act). Stampi questa pagina o la copi nel suo wiki.",
+    "scope": {
+      "title": "1. Oggetto e ambito di applicazione",
+      "body": "La presente policy si applica a qualsiasi agente software (assistente conversazionale, automazione, script) autorizzato a effettuare un acquisto per conto di [AZIENDA]. Nessun agente utilizza la carta di pagamento dell'azienda o di un dipendente: ogni acquisto passa da una carta virtuale monouso richiesta tramite Artemis."
+    },
+    "register": {
+      "title": "2. Registro degli agenti",
+      "body": "Ogni agente è iscritto nel registro con: nome, piattaforma, persona responsabile, finalità, budget mensile, limite per acquisto, esercenti autorizzati e, se del caso, il cliente per cui lavora."
+    },
+    "rules": {
+      "title": "3. Regole di spesa",
+      "i1": "Budget mensile per agente: [IMPORTO] €; limite per acquisto: [IMPORTO] €.",
+      "i2": "Esercenti autorizzati: [ELENCO]; categorie vietate: giochi d'azzardo, trasferimenti di denaro, quasi-contante, titoli.",
+      "i3": "Approvazione automatica solo al di sotto di [IMPORTO] € e presso un esercente autorizzato; oltre questa soglia, la firma di una persona è obbligatoria.",
+      "i4": "Oltre [IMPORTO] € sono richiesti due firmatari distinti."
+    },
+    "oversight": {
+      "title": "4. Supervisione umana",
+      "body": "Le persone autorizzate ad approvare sono: [NOMI / RUOLI]. L'approvazione avviene tramite passkey sul contenuto esatto del mandato (agente, importo, esercente, finalità). Qualsiasi richiesta non approvata scade automaticamente."
+    },
+    "records": {
+      "title": "5. Giustificativi e contabilità",
+      "body": "Ogni acquisto viene abbinato alla relativa fattura entro [N] ore; in caso contrario, l'agente viene sospeso. Le spese sono esportate ogni mese (FEC o Pennylane) e riconciliate con gli estratti conto bancari."
+    },
+    "incidents": {
+      "title": "6. Incidenti",
+      "body": "In caso di comportamento anomalo, di discrepanza di importo o di esercente o di sospetta prompt injection, la persona responsabile congela immediatamente l'agente (o l'intera organizzazione) e registra l'incidente."
+    },
+    "retention": {
+      "title": "7. Conservazione e revisione",
+      "body": "Il registro di audit concatenato è conservato per [10] anni. Ogni trimestre viene redatto un report di supervisione, esaminato da [RUOLO]. La presente policy è rivista ogni anno."
+    },
+    "note": "Artemis genera il registro degli agenti e il report trimestrale di supervisione con il piano {plan}."
+  }
+}

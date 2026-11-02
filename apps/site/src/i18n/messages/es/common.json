@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "Sus agentes pagan. Usted tiene la última palabra.",
+    "description": "El cortafuegos financiero europeo para sus agentes de IA: control, ahorro de tiempo y prueba conforme al AI Act en cada compra, con el banco que usted elija."
+  },
+  "layout": {
+    "skip": "Ir al contenido"
+  },
+  "nav": {
+    "aria": "Navegación principal",
+    "home": "Artemis, inicio",
+    "howItWorks": "Cómo funciona",
+    "agencies": "Agencias",
+    "pricing": "Precios",
+    "docs": "Documentación",
+    "security": "Seguridad",
+    "login": "Iniciar sesión",
+    "cta": "Probar"
+  },
+  "lang": {
+    "choose": "Elegir idioma"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Agencias",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT y n8n son marcas de sus respectivos titulares. Artemis no está afiliado a ninguno de ellos.",
+    "product": "Producto",
+    "policyTemplate": "Plantilla de política",
+    "waitlist": "Lista de espera",
+    "restApi": "API REST",
+    "legal": "Legal",
+    "legalNotice": "Aviso legal",
+    "terms": "Condiciones de venta",
+    "privacy": "Privacidad"
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "updated": "Última actualización: 1 de noviembre de 2026.",
+    "frenchPrevails": "Esta página es una traducción facilitada a título informativo. Solo la <a href=\"{href}\">versión francesa</a> es jurídicamente vinculante.",
+    "vat": "IVA no aplicable, art. 293 B del Código General de Impuestos francés (CGI)",
+    "status": "Empresario individual (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, EE. UU. (páginas y API); Supabase, Inc. — datos alojados en la Unión Europea (Fráncfort)."
+  },
+  "docsNav": {
+    "eyebrow": "Documentación",
+    "start": "Primeros pasos",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI y skill de Claude",
+    "api": "API REST",
+    "rules": "Reglas y aprobación"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "eyebrow": "Error 404",
+    "headline": "Esta página no existe.",
+    "lead": "Puede que el enlace esté obsoleto. Vuelva a la página de inicio o consulte la documentación.",
+    "home": "Inicio"
+  }
+}

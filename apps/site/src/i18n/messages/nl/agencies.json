@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Voor bureaus",
+    "description": "Automatiseringsbureaus: de agents van uw klanten geven gecontroleerd uit, met een budget en een factuur per klant.",
+    "eyebrow": "Automatiseringsbureaus",
+    "headline": "De agents van uw klanten kopen in. U factureert moeiteloos door.",
+    "lead": "Bouwt u agents met n8n, Make of Claude voor uw klanten? Artemis scheidt de uitgaven per klant, geeft elke klant een budget en bereidt de doorfacturatie met uw marge voor.",
+    "try": "Gratis proberen →",
+    "plan": "Abonnement {plan}: {base} + {client} per actieve klant",
+    "spaces": {
+      "title": "Eén omgeving per klant",
+      "body": "Koppel elke agent aan een klant. Zijn aanvragen, kaarten, transacties en bonnen blijven gescheiden. Een agent kan nooit het budget van een andere klant uitgeven."
+    },
+    "budget": {
+      "title": "Een maandbudget per klant",
+      "body": "Stel voor elke klant een maandelijks plafond in, bovenop de regels van elke agent. Daarboven wordt de aanvraag afgewezen nog voordat die een mens bereikt."
+    },
+    "rebilling": {
+      "title": "Doorfactureren in één klik",
+      "body": "Elke maand stelt Artemis per klant een rapport op: afgeschreven aankopen, agent, verkoper, bon, beheerkosten op basis van uw marge, door te factureren totaal. CSV-export, klaar om te versturen of te importeren in uw facturatiesoftware."
+    },
+    "proof": {
+      "title": "Bewijs voor uw klanten",
+      "body": "Elke betaling wordt ondertekend door een bevoegde persoon en het logboek kan niet worden gewijzigd. Laat uw klanten zien dat hun agents onder menselijk toezicht staan, zoals de AI Act vereist."
+    },
+    "european": {
+      "title": "Van begin tot eind Europees",
+      "body": "Euro’s, Europese banken, data in Frankfurt, FEC- en Pennylane-exports voor de Franse boekhouding."
+    },
+    "demo": {
+      "window": "doorfacturatie · martin-bakery · november",
+      "subtotal": "Subtotaal",
+      "fee": "Beheerkosten 15%",
+      "total": "Door te factureren totaal"
+    }
+  }
+}

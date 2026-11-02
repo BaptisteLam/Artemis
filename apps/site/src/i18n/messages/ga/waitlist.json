@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Liosta feithimh",
+    "description": "Faigh fógra nuair a osclóidh na nascóirí bainc beo.",
+    "headline": "Bí i measc na chéad daoine.",
+    "lead": "Tá nascóirí Qonto agus Revolut á n-oscailt de réir a chéile. Fág do ríomhphost againn agus cuirfimid in iúl duit a luaithe a bheidh do bhanc ar fáil.",
+    "email": "Ríomhphost oibre",
+    "company": "Cuideachta",
+    "useCase": "Cad air a gcaithfidh do ghníomhairí íoc?",
+    "useCasePlaceholder": "APIanna, SaaS, néal, sonraí…",
+    "submit": "Cláraigh ar an liosta feithimh",
+    "sending": "Á sheoladh…",
+    "ok": "Go raibh maith agat, tá tú ar an liosta. Seolfaimid ríomhphost chugat a luaithe a osclóidh sé.",
+    "error": "Theip ar an gclárú. Bain triail eile as i gceann nóiméid."
+  }
+}

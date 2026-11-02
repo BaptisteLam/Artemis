@@ -1,0 +1,15 @@
+{
+  "transactions": {
+    "title": "Transaktioner",
+    "lead": "Transaktioner som rapporterats av dina banker och stämts av mot mandaten (senaste 90 dagarna).",
+    "mismatches_one": "{count} transaktion stämmer inte med sitt mandat. Granska den och frys agenten vid behov.",
+    "mismatches_other": "{count} transaktioner stämmer inte med sina mandat. Granska dem och frys agenten vid behov.",
+    "emptyTitle": "Inga transaktioner",
+    "emptyText": "De visas några minuter efter varje betalning.",
+    "colDate": "Datum",
+    "colMerchant": "Handlare",
+    "colAmount": "Belopp",
+    "colBankStatus": "Bankstatus",
+    "colMatch": "Avstämning"
+  }
+}

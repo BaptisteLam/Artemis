@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Szűrés állapot szerint",
+      "all": "Mind",
+      "pending": "Jóváhagyásra vár",
+      "issued": "Kártya kibocsátva",
+      "completed": "Kifizetve",
+      "rejected": "Elutasítva",
+      "failed": "Sikertelen"
+    },
+    "list": {
+      "title": "Igénylések",
+      "lead": "Az ügynökök összes igénylése, a döntéssel és a kártyával együtt.",
+      "emptyTitle": "Nincsenek igénylések",
+      "emptyBody": "Ügynökei igénylései itt jelennek meg."
+    },
+    "decision": {
+      "notAllowed": "Csak tulajdonosok, adminisztrátorok és jóváhagyók dönthetnek.",
+      "cancelledOnDevice": "A jóváhagyás megszakítva az eszközön.",
+      "reasonLabel": "Az elutasítás oka",
+      "reasonHint": "Az ügynök látja.",
+      "confirmReject": "Elutasítás megerősítése",
+      "cancel": "Mégse",
+      "signing": "Aláírás…",
+      "approve": "Jóváhagyás passkey-vel",
+      "reject": "Elutasítás"
+    },
+    "detail": {
+      "confirmCancel": "Visszavonja ezt az igénylést és a kártyáját?",
+      "receiptUnavailable": "A bizonylat nem érhető el.",
+      "eyebrow": "Igénylés · {id}",
+      "amount": "Igényelt összeg",
+      "agent": "Ügynök",
+      "mandateWindow": "megbízás · {id}",
+      "purpose": "Cél",
+      "category": "Kategória",
+      "expires": "Lejárat",
+      "rules": "Szabályok",
+      "perTxLimit": "Limit",
+      "budget": "keret",
+      "decision": "Döntés",
+      "hash": "sha256 {hash}",
+      "quorum": "Kvórum: {signed} / {required} szükséges aláírás a küszöb felett.",
+      "unusualAmount": "Biztosíték: szokatlan összeg ennél az ügynöknél, emberi jóváhagyás szükséges.",
+      "autoApproved": "A szabályok alapján automatikusan jóváhagyva",
+      "signedByPasskey": "Megbízás passkey-vel aláírva",
+      "card": "Kártya",
+      "cardHolderFallback": "ügynök",
+      "cardAria": "Virtuális kártya, végződés: {last4}, kártyabirtokos: {holder}, lejárat: {exp}",
+      "bankSca": "A kártya létrehozását a banki alkalmazásban is hagyja jóvá.",
+      "cardExpires": "Lejárat: {date}",
+      "handedOver": "{time} átadva az ügynöknek",
+      "notHandedOver": "még nincs átadva az ügynöknek",
+      "qontoNotice": "A Qonto nem ad át kártyát ügynököknek: jelenítse meg itt, és végezze el a fizetést saját maga.",
+      "showQontoCard": "Kártya megjelenítése (Qonto)",
+      "simulatePayment": "Fizetés szimulálása",
+      "cancelCard": "Kártya visszavonása",
+      "noCard": "Nincs kibocsátott kártya.",
+      "transactions": "Tranzakciók",
+      "noTransactions": "A bank nem jelentett tranzakciót.",
+      "receipts": "Bizonylatok",
+      "addReceipt": "Hozzáadás",
+      "noReceipts": "Nincsenek bizonylatok.",
+      "back": "← Minden igénylés"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "transactions": {
+    "title": "Darījumi",
+    "lead": "Jūsu banku paziņotās operācijas, saskaņotas ar pilnvarām (pēdējās 90 dienas).",
+    "mismatches_zero": "{count} darījumi neatbilst savām pilnvarām. Pārskatiet tos un, ja nepieciešams, iesaldējiet aģentu.",
+    "mismatches_one": "{count} darījums neatbilst savai pilnvarai. Pārskatiet to un, ja nepieciešams, iesaldējiet aģentu.",
+    "mismatches_other": "{count} darījumi neatbilst savām pilnvarām. Pārskatiet tos un, ja nepieciešams, iesaldējiet aģentu.",
+    "emptyTitle": "Nav darījumu",
+    "emptyText": "Tie parādās dažas minūtes pēc katra maksājuma.",
+    "colDate": "Datums",
+    "colMerchant": "Tirgotājs",
+    "colAmount": "Summa",
+    "colBankStatus": "Bankas statuss",
+    "colMatch": "Saskaņošana"
+  }
+}

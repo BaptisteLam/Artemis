@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtruoti pagal būseną",
+      "all": "Visos",
+      "pending": "Laukia patvirtinimo",
+      "issued": "Kortelė išduota",
+      "completed": "Apmokėtos",
+      "rejected": "Atmestos",
+      "failed": "Nepavykusios"
+    },
+    "list": {
+      "title": "Užklausos",
+      "lead": "Visos agentų užklausos su priimtu sprendimu ir kortele.",
+      "emptyTitle": "Užklausų nėra",
+      "emptyBody": "Čia bus rodomos jūsų agentų užklausos."
+    },
+    "decision": {
+      "notAllowed": "Spręsti gali tik savininkai, administratoriai ir tvirtintojai.",
+      "cancelledOnDevice": "Tvirtinimas atšauktas įrenginyje.",
+      "reasonLabel": "Atmetimo priežastis",
+      "reasonHint": "Matoma agentui.",
+      "confirmReject": "Patvirtinti atmetimą",
+      "cancel": "Atšaukti",
+      "signing": "Pasirašoma…",
+      "approve": "Patvirtinti prieigos raktu",
+      "reject": "Atmesti"
+    },
+    "detail": {
+      "confirmCancel": "Atšaukti šią užklausą ir jos kortelę?",
+      "receiptUnavailable": "Kvitas nepasiekiamas.",
+      "eyebrow": "Užklausa · {id}",
+      "amount": "Prašoma suma",
+      "agent": "Agentas",
+      "mandateWindow": "įgaliojimas · {id}",
+      "purpose": "Tikslas",
+      "category": "Kategorija",
+      "expires": "Galioja iki",
+      "rules": "Taisyklės",
+      "perTxLimit": "Limitas",
+      "budget": "biudžetas",
+      "decision": "Sprendimas",
+      "hash": "sha256 {hash}",
+      "quorum": "Kvorumas: {signed} iš {required} reikalingų parašų virš ribos.",
+      "unusualAmount": "Apsauginė riba: šiam agentui neįprasta suma, reikalingas žmogaus patvirtinimas.",
+      "autoApproved": "Automatiškai patvirtinta pagal taisykles",
+      "signedByPasskey": "Įgaliojimas pasirašytas prieigos raktu",
+      "card": "Kortelė",
+      "cardHolderFallback": "agentas",
+      "cardAria": "Virtuali kortelė, kurios numeris baigiasi {last4}, turėtojas {holder}, galioja iki {exp}",
+      "bankSca": "Kortelės sukūrimą patvirtinkite ir savo banko programėlėje.",
+      "cardExpires": "Galioja iki {date}",
+      "handedOver": "perduota agentui {time}",
+      "notHandedOver": "dar neperduota agentui",
+      "qontoNotice": "Qonto neperduoda kortelių agentams: parodykite kortelę čia ir patys atlikite mokėjimą.",
+      "showQontoCard": "Rodyti kortelę (Qonto)",
+      "simulatePayment": "Imituoti mokėjimą",
+      "cancelCard": "Atšaukti kortelę",
+      "noCard": "Kortelė neišduota.",
+      "transactions": "Operacijos",
+      "noTransactions": "Bankas nepranešė apie jokias operacijas.",
+      "receipts": "Kvitai",
+      "addReceipt": "Pridėti",
+      "noReceipts": "Kvitų nėra.",
+      "back": "← Visos užklausos"
+    }
+  }
+}

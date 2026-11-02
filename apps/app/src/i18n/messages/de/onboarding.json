@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Schritt {step} von {total}",
+    "continue": "Weiter →",
+    "org": {
+      "title": "Ihre Organisation",
+      "lead": "Sie starten in der Sandbox: simulierte Bank, keine Kosten.",
+      "nameLabel": "Name des Unternehmens oder Studios"
+    },
+    "agent": {
+      "title": "Ihr erster Agent",
+      "lead": "Ein kurzer Name, der sagt, was er kauft. Standardregeln: {monthly} pro Monat, {perPurchase} pro Kauf.",
+      "nameLabel": "Name des Agenten",
+      "platformLabel": "Plattform",
+      "platformOther": "Sonstige",
+      "submit": "Agenten erstellen →"
+    },
+    "connect": {
+      "title": "Verbinden Sie Ihren Agenten",
+      "done": "Ich habe das Token kopiert →"
+    },
+    "passkey": {
+      "title": "Ihr Passkey für Freigaben",
+      "lead": "Jede Ausgabe wird mit Face ID, Touch ID, Windows Hello oder einem Sicherheitsschlüssel signiert. Registrieren Sie ihn nach Möglichkeit auf dem Smartphone, das die Benachrichtigungen erhalten soll.",
+      "deviceName": "Erstes Gerät",
+      "saved": "Passkey registriert.",
+      "unsupported": "Dieser Browser unterstützt keine Passkeys.",
+      "register": "Passkey registrieren",
+      "openDashboard": "Dashboard öffnen →",
+      "later": "Später"
+    }
+  }
+}

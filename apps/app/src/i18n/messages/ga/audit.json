@@ -1,0 +1,97 @@
+{
+  "audit": {
+    "title": "Loga iniúchta",
+    "lead": "Tá gach teagmhas slabhraithe le haisc SHA-256 agus ní féidir é a athrú ná a scriosadh: is é do chruthúnas ar mhaoirseacht dhaonna (AI Act) é.",
+    "verify": "Fíoraigh an tsláine",
+    "export": "Easpórtáil",
+    "report": "Tuarascáil AI Act {quarter}",
+    "exportFailed": "Theip ar an easpórtáil.",
+    "reportUnavailable": "Níl an tuarascáil ar fáil.",
+    "chainOk_one": "Slabhra slán: fíoraíodh {count} iontráil.",
+    "chainOk_two": "Slabhra slán: fíoraíodh {count} iontráil.",
+    "chainOk_few": "Slabhra slán: fíoraíodh {count} iontráil.",
+    "chainOk_many": "Slabhra slán: fíoraíodh {count} n-iontráil.",
+    "chainOk_other": "Slabhra slán: fíoraíodh {count} iontráil.",
+    "chainBroken": "Slabhra briste ag iontráil uimh. {id}.",
+    "exportUpsell": "Tá easpórtáil shínithe an loga iniúchta san áireamh sa phlean Business.",
+    "seePlans": "Féach na pleananna",
+    "cols": {
+      "date": "Dáta",
+      "event": "Teagmhas",
+      "actor": "Gníomhaí",
+      "hash": "Méarlorg"
+    },
+    "view": "féach",
+    "older": "Níos sine →",
+    "actors": {
+      "user": "Úsáideoir",
+      "agent": "Gníomhaire",
+      "system": "Córas"
+    },
+    "actions": {
+      "org": {
+        "created": "Eagraíocht cruthaithe",
+        "frozen": "Eagraíocht reoite",
+        "unfrozen": "Eagraíocht dí-reoite",
+        "card_delivery_changed": "Modh tabhartha cártaí athraithe",
+        "slack_connected": "Slack ceangailte",
+        "slack_disconnected": "Slack dícheangailte"
+      },
+      "agent": {
+        "created": "Gníomhaire cruthaithe",
+        "updated": "Gníomhaire nuashonraithe",
+        "deleted": "Gníomhaire scriosta",
+        "token_rotated": "Comhartha athghinte",
+        "frozen": "Gníomhaire reoite"
+      },
+      "policy": {
+        "updated": "Rialacha nuashonraithe"
+      },
+      "request": {
+        "created": "Iarratas cruthaithe",
+        "rejected": "Iarratas diúltaithe",
+        "approved": "Sainordú sínithe",
+        "auto_approved": "Formheas uathoibríoch",
+        "approval_recorded": "Formheas taifeadta",
+        "expired": "Iarratas imithe in éag"
+      },
+      "card": {
+        "issued": "Cárta eisithe",
+        "issue_failed": "Theip ar eisiúint an chárta",
+        "revealed": "Cárta tugtha don ghníomhaire",
+        "link_created": "Nasc cárta cruthaithe",
+        "viewed": "Cárta feicthe",
+        "canceled": "Cárta cealaithe",
+        "expired": "Cárta imithe in éag"
+      },
+      "transaction": {
+        "matched": "Idirbheart meaitseáilte",
+        "mismatch": "Neamhréir aimsithe"
+      },
+      "receipt": {
+        "attached": "Admháil ceangailte"
+      },
+      "bank": {
+        "connected": "Banc ceangailte",
+        "disconnected": "Banc dícheangailte"
+      },
+      "member": {
+        "invited": "Ball tugtha cuireadh",
+        "joined": "Ball tagtha isteach",
+        "removed": "Ball bainte",
+        "role_changed": "Ról athraithe"
+      },
+      "client": {
+        "created": "Cliant cruthaithe",
+        "updated": "Cliant nuashonraithe"
+      },
+      "billing": {
+        "subscribed": "Síntiús tosaithe",
+        "updated": "Síntiús nuashonraithe"
+      },
+      "subscription": {
+        "charged": "Síntiús gearrtha"
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "audit": {
+    "title": "Audita žurnāls",
+    "lead": "Katrs notikums ir saistīts ķēdē ar SHA-256 jaucējvērtību, un to nevar ne mainīt, ne dzēst: tas ir jūsu pierādījums cilvēka uzraudzībai (AI Act).",
+    "verify": "Pārbaudīt integritāti",
+    "export": "Eksportēt",
+    "report": "AI Act pārskats {quarter}",
+    "exportFailed": "Eksports neizdevās.",
+    "reportUnavailable": "Pārskats nav pieejams.",
+    "chainOk_zero": "Ķēde ir neskarta: pārbaudīti {count} ieraksti.",
+    "chainOk_one": "Ķēde ir neskarta: pārbaudīts {count} ieraksts.",
+    "chainOk_other": "Ķēde ir neskarta: pārbaudīti {count} ieraksti.",
+    "chainBroken": "Ķēde ir pārrauta pie ieraksta Nr. {id}.",
+    "exportUpsell": "Parakstīts audita žurnāla eksports ir iekļauts plānā Business.",
+    "seePlans": "Skatīt plānus",
+    "cols": {
+      "date": "Datums",
+      "event": "Notikums",
+      "actor": "Izpildītājs",
+      "hash": "Nospiedums"
+    },
+    "view": "skatīt",
+    "older": "Vecāki →",
+    "actors": {
+      "user": "Lietotājs",
+      "agent": "Aģents",
+      "system": "Sistēma"
+    },
+    "actions": {
+      "org": {
+        "created": "Organizācija izveidota",
+        "frozen": "Organizācija iesaldēta",
+        "unfrozen": "Organizācijas iesaldēšana atcelta",
+        "card_delivery_changed": "Mainīts kartes nodošanas režīms",
+        "slack_connected": "Slack pievienots",
+        "slack_disconnected": "Slack atvienots"
+      },
+      "agent": {
+        "created": "Aģents izveidots",
+        "updated": "Aģents atjaunināts",
+        "deleted": "Aģents dzēsts",
+        "token_rotated": "Marķieris ģenerēts no jauna",
+        "frozen": "Aģents iesaldēts"
+      },
+      "policy": {
+        "updated": "Noteikumi atjaunināti"
+      },
+      "request": {
+        "created": "Pieprasījums izveidots",
+        "rejected": "Pieprasījums noraidīts",
+        "approved": "Pilnvara parakstīta",
+        "auto_approved": "Automātisks apstiprinājums",
+        "approval_recorded": "Apstiprinājums reģistrēts",
+        "expired": "Pieprasījuma derīgums beidzies"
+      },
+      "card": {
+        "issued": "Karte izsniegta",
+        "issue_failed": "Kartes izsniegšana neizdevās",
+        "revealed": "Karte nodota aģentam",
+        "link_created": "Kartes saite izveidota",
+        "viewed": "Karte apskatīta",
+        "canceled": "Karte anulēta",
+        "expired": "Kartes derīgums beidzies"
+      },
+      "transaction": {
+        "matched": "Darījums saskaņots",
+        "mismatch": "Konstatēta neatbilstība"
+      },
+      "receipt": {
+        "attached": "Čeks pievienots"
+      },
+      "bank": {
+        "connected": "Banka pievienota",
+        "disconnected": "Banka atvienota"
+      },
+      "member": {
+        "invited": "Dalībnieks uzaicināts",
+        "joined": "Dalībnieks pievienojies",
+        "removed": "Dalībnieks noņemts",
+        "role_changed": "Loma mainīta"
+      },
+      "client": {
+        "created": "Klients izveidots",
+        "updated": "Klients atjaunināts"
+      },
+      "billing": {
+        "subscribed": "Abonements sākts",
+        "updated": "Abonements atjaunināts"
+      },
+      "subscription": {
+        "charged": "Abonements apmaksāts"
+      }
+    }
+  }
+}

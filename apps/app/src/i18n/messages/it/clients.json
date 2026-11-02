@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Clienti",
+    "lead": "Uno spazio di lavoro per cliente: i suoi agenti, il suo budget mensile, il suo ricarico e un report di rifatturazione pronto da inviare.",
+    "invalidBudget": "Budget non valido (es. 500 o 49,90).",
+    "upsell": "Gli spazi di lavoro per cliente sono inclusi nel piano Agenzie ({price} + {perClient} per cliente attivo).",
+    "seePlans": "Vedi i piani →",
+    "empty": "Nessun cliente",
+    "emptyHint": "Crei un cliente, poi gli assegni degli agenti.",
+    "cols": {
+      "client": "Cliente",
+      "agents": "Agenti",
+      "spent": "Impegnato questo mese",
+      "budget": "Budget",
+      "markup": "Ricarico"
+    },
+    "archived": "archiviato",
+    "percent": "{value}%",
+    "report": "Report →",
+    "new": "Nuovo cliente",
+    "fields": {
+      "name": "Nome",
+      "billingEmail": "Email di fatturazione",
+      "markup": "Ricarico di rifatturazione (%)",
+      "budget": "Budget mensile (€)",
+      "budgetHint": "Vuoto = nessun tetto per il cliente"
+    },
+    "create": "Crea cliente",
+    "exportFailed": "Esportazione non riuscita.",
+    "eyebrow": "Cliente",
+    "month": "Mese",
+    "exportCsv": "Esporta CSV",
+    "monthPurchases": "Acquisti del mese",
+    "markupPct": "Ricarico {value}",
+    "toRebill": "Da rifatturare",
+    "noPurchases": "Nessun acquisto questo mese",
+    "lines": {
+      "date": "Data",
+      "agent": "Agente",
+      "merchant": "Esercente",
+      "purpose": "Finalità",
+      "amount": "Importo",
+      "receipt": "Giustificativo"
+    },
+    "yes": "Sì",
+    "missing": "Mancante",
+    "archive": "Archivia cliente",
+    "reactivate": "Riattiva",
+    "all": "← Tutti i clienti"
+  }
+}

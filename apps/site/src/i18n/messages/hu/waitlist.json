@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Várólista",
+    "description": "Értesítést kap, amikor elindulnak az éles banki konnektorok.",
+    "headline": "Legyen az elsők között.",
+    "lead": "A Qonto- és Revolut-konnektorok fokozatosan nyílnak meg. Adja meg e-mail-címét, és értesítjük, amint az Ön bankja elérhetővé válik.",
+    "email": "Munkahelyi e-mail-cím",
+    "company": "Vállalat",
+    "useCase": "Mire van szüksége az ügynökeinek fizetni?",
+    "useCasePlaceholder": "API-k, SaaS, felhő, adatok…",
+    "submit": "Feliratkozás a várólistára",
+    "sending": "Küldés…",
+    "ok": "Köszönjük, felkerült a listára. E-mailben értesítjük, amint megnyílik.",
+    "error": "A feliratkozás nem sikerült. Kérjük, próbálja újra egy kis idő múlva."
+  }
+}

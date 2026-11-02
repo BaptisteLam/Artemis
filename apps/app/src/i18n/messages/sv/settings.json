@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Inställningar",
+    "signOut": "Logga ut",
+    "language": {
+      "title": "Språk",
+      "lead": "Gränssnittets språk på den här enheten."
+    },
+    "notifications": {
+      "title": "Aviseringar på den här enheten",
+      "lead": "Få en avisering för varje begäran. På iPhone lägger du först till Artemis på hemskärmen (Dela → Lägg till på hemskärmen).",
+      "notConfigured": "Push-aviseringar är inte konfigurerade på den här servern (VAPID-nycklar). E-postaviseringarna är fortfarande aktiva.",
+      "unsupported": "Den här webbläsaren har inte stöd för push-aviseringar.",
+      "denied": "Aviseringarna är blockerade i webbläsarens inställningar.",
+      "enable": "Aktivera aviseringar",
+      "on": "Aviseringarna är på.",
+      "disable": "Stäng av"
+    },
+    "slack": {
+      "lead": "Varje väntande begäran publiceras i en Slack-kanal, med en knapp som öppnar godkännandet med lösennyckel. Skapa en ”Incoming Webhook” i Slack och klistra in dess URL.",
+      "connected": "Slack är anslutet.",
+      "disconnect": "Koppla från",
+      "urlLabel": "URL för Slack-webhook",
+      "connect": "Anslut",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Överlämning av kort till agenter",
+      "confirmDirect": "Direkt överlämning: kortnumret passerar genom Artemis en gång på väg till agenten. Det innebär att du omfattas av PCI DSS och, med Revolut, kräver skriftligt godkännande. Fortsätta?",
+      "linkTitle": "Tillfällig länk (rekommenderas)",
+      "linkText": "Agenten får en engångslänk som gäller i 10 minuter; kortet visas av den utfärdande banken (Stripe Issuing). Numret passerar aldrig genom Artemis.",
+      "directTitle": "Direkt överlämning (avancerat alternativ)",
+      "directText": "Numret vidarebefordras till agenten en enda gång, utan att lagras. Krävs för Revolut. Du omfattas då av PCI DSS."
+    },
+    "org": {
+      "title": "Organisation",
+      "name": "Namn",
+      "rename": "Byt namn"
+    },
+    "emergency": {
+      "title": "Nödläge",
+      "lead": "”Frys allt” stänger av alla agenter och spärrar aktiva kort och väntande begäranden. Använd det om en agent beter sig avvikande eller om en token har läckt.",
+      "confirmFreeze": "Frysa hela organisationen? Alla agenter fryses och aktiva kort spärras.",
+      "unfreeze": "Häv frysningen av organisationen",
+      "freeze": "Frys allt nu",
+      "afterUnfreeze": "När frysningen har hävts återaktiverar du varje agent från dess sida."
+    },
+    "passkeys": {
+      "title": "Lösennycklar",
+      "devicePrompt": "Enhetens namn (t.ex. Leas iPhone)",
+      "confirmDelete": "Ta bort den här lösennyckeln?",
+      "add": "Lägg till",
+      "lead": "En lösennyckel krävs för att godkänna en utgift. Lägg till en på varje enhet du använder.",
+      "addedOn": "tillagd {date}",
+      "delete": "Ta bort",
+      "none": "Ingen lösennyckel: du kan inte godkänna utgifter än."
+    }
+  }
+}

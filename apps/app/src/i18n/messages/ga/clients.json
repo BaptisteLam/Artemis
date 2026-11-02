@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Cliaint",
+    "lead": "Spás oibre amháin in aghaidh an chliaint: a ghníomhairí, a bhuiséad míosúil, do chorrlach agus tuarascáil athshonrasctha réidh le seoladh.",
+    "invalidBudget": "Buiséad neamhbhailí (m.sh. 500 nó 49.90).",
+    "upsell": "Tá spásanna oibre cliant san áireamh sa phlean Gníomhaireachtaí ({price} + {perClient} in aghaidh an chliaint ghníomhaigh).",
+    "seePlans": "Féach na pleananna →",
+    "empty": "Gan chliaint",
+    "emptyHint": "Cruthaigh cliant, ansin sann gníomhairí dó.",
+    "cols": {
+      "client": "Cliant",
+      "agents": "Gníomhairí",
+      "spent": "Geallta an mhí seo",
+      "budget": "Buiséad",
+      "markup": "Corrlach"
+    },
+    "archived": "cartlannaithe",
+    "percent": "{value}%",
+    "report": "Tuarascáil →",
+    "new": "Cliant nua",
+    "fields": {
+      "name": "Ainm",
+      "billingEmail": "Ríomhphost billeála",
+      "markup": "Corrlach athshonrasctha (%)",
+      "budget": "Buiséad míosúil (€)",
+      "budgetHint": "Folamh = gan uasteorainn don chliant"
+    },
+    "create": "Cruthaigh an cliant",
+    "exportFailed": "Theip ar an easpórtáil.",
+    "eyebrow": "Cliant",
+    "month": "Mí",
+    "exportCsv": "Easpórtáil CSV",
+    "monthPurchases": "Ceannacháin an mhí seo",
+    "markupPct": "Corrlach {value}",
+    "toRebill": "Le hathshonrascadh",
+    "noPurchases": "Gan cheannacháin an mhí seo",
+    "lines": {
+      "date": "Dáta",
+      "agent": "Gníomhaire",
+      "merchant": "Ceannaí",
+      "purpose": "Cuspóir",
+      "amount": "Méid",
+      "receipt": "Admháil"
+    },
+    "yes": "Tá",
+    "missing": "In easnamh",
+    "archive": "Cartlannaigh an cliant",
+    "reactivate": "Athghníomhachtaigh",
+    "all": "← Gach cliant"
+  }
+}

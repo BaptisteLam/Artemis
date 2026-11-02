@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Vaši agenti plaćaju. Zadnja riječ ostaje vama.",
+    "unknownAgent": "Agent",
+    "unknownMerchant": "trgovac",
+    "requestPending": {
+      "title": "{agent} želi potrošiti {amount}",
+      "subject": "Za odobrenje: {amount} kod trgovca {merchant}",
+      "merchant": "Trgovac: {merchant}",
+      "purpose": "Svrha: {purpose}",
+      "expires": "Bez odgovora zahtjev automatski istječe.",
+      "cta": "Pregledajte i odobrite →",
+      "slack": "*{title}* kod trgovca *{merchant}*",
+      "slackCta": "Pregledaj i potpiši pristupnim ključem"
+    },
+    "cardIssueFailed": {
+      "subject": "Izdavanje kartice nije uspjelo kod trgovca {merchant}",
+      "title": "Banka nije izdala karticu",
+      "fallback": "Pogreška banke.",
+      "cta": "Prikaži zahtjev →"
+    },
+    "mismatch": {
+      "subject": "Otkriveno odstupanje: {amount} kod trgovca {merchant}",
+      "title": "Transakcija ne odgovara nalogu",
+      "check": "Provjerite transakciju i po potrebi zamrznite agenta.",
+      "cta": "Prikaži transakcije →",
+      "pushTitle": "Odstupanje u transakciji"
+    },
+    "invitation": {
+      "subject": "Pozivnica za pridruživanje organizaciji {org} na Artemisu",
+      "title": "Pridružite se organizaciji {org}",
+      "body": "Pozvani ste da odobravate i pratite potrošnju AI agenata svojeg tima.",
+      "cta": "Prihvatite pozivnicu →"
+    }
+  }
+}

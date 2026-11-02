@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Carta monouso · banca simulata",
+    "eyebrowBank": "Carta monouso · emessa dalla sua banca",
+    "lead": "Questo link si apre una sola volta. La carta è limitata all'importo indicato sopra e vincolata a questo esercente.",
+    "fields": {
+      "number": "Numero",
+      "expiry": "Scadenza",
+      "cvc": "Codice di sicurezza",
+      "holder": "Titolare"
+    },
+    "opening": "Apertura…",
+    "show": "Mostra la carta •••• {last4}",
+    "footer": "Il numero viene mostrato direttamente dalla banca emittente: non passa mai da Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js non è disponibile.",
+      "invalidLink": "Link non valido, già utilizzato o scaduto.",
+      "stripeRefused": "Stripe ha rifiutato la richiesta."
+    }
+  }
+}

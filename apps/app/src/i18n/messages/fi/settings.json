@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Asetukset",
+    "signOut": "Kirjaudu ulos",
+    "language": {
+      "title": "Kieli",
+      "lead": "Käyttöliittymän kieli tällä laitteella."
+    },
+    "notifications": {
+      "title": "Ilmoitukset tällä laitteella",
+      "lead": "Saat ilmoituksen jokaisesta pyynnöstä. iPhonessa lisää ensin Artemis Koti-valikkoon (Jaa → Lisää Koti-valikkoon).",
+      "notConfigured": "Push-ilmoituksia ei ole määritetty tällä palvelimella (VAPID-avaimet). Sähköposti-ilmoitukset ovat edelleen käytössä.",
+      "unsupported": "Tämä selain ei tue push-ilmoituksia.",
+      "denied": "Ilmoitukset on estetty selaimen asetuksissa.",
+      "enable": "Ota ilmoitukset käyttöön",
+      "on": "Ilmoitukset ovat käytössä.",
+      "disable": "Poista käytöstä"
+    },
+    "slack": {
+      "lead": "Jokainen odottava pyyntö julkaistaan Slack-kanavalla painikkeen kanssa, joka avaa pääsyavaimella tehtävän hyväksynnän. Luo Slackissa ”Incoming Webhook” ja liitä sen URL-osoite.",
+      "connected": "Slack on yhdistetty.",
+      "disconnect": "Katkaise yhteys",
+      "urlLabel": "Slack-webhookin URL",
+      "connect": "Yhdistä",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Kortin luovutus agenteille",
+      "confirmDirect": "Suora luovutus: kortin numero kulkee kerran Artemisin kautta matkalla agentille. Tämä tuo sinut PCI DSS -vaatimusten piiriin, ja Revolutin kanssa se edellyttää kirjallista hyväksyntää. Jatketaanko?",
+      "linkTitle": "Lyhytikäinen linkki (suositeltu)",
+      "linkText": "Agentti saa kertakäyttöisen linkin, joka on voimassa 10 minuuttia; kortin näyttää sen myöntänyt pankki (Stripe Issuing). Numero ei koskaan kulje Artemisin kautta.",
+      "directTitle": "Suora luovutus (lisäasetus)",
+      "directText": "Numero välitetään agentille vain kerran, eikä sitä tallenneta. Pakollinen Revolutille. Tulet PCI DSS -vaatimusten piiriin."
+    },
+    "org": {
+      "title": "Organisaatio",
+      "name": "Nimi",
+      "rename": "Nimeä uudelleen"
+    },
+    "emergency": {
+      "title": "Hätätilanne",
+      "lead": "”Jäädytä kaikki” jäädyttää kaikki agentit ja peruuttaa aktiiviset kortit ja odottavat pyynnöt. Käytä sitä, jos agentti toimii poikkeavasti tai token on vuotanut.",
+      "confirmFreeze": "Jäädytetäänkö koko organisaatio? Kaikki agentit jäädytetään ja aktiiviset kortit peruutetaan.",
+      "unfreeze": "Pura organisaation jäädytys",
+      "freeze": "Jäädytä kaikki nyt",
+      "afterUnfreeze": "Jäädytyksen purkamisen jälkeen aktivoi jokainen agentti uudelleen sen omalla sivulla."
+    },
+    "passkeys": {
+      "title": "Pääsyavaimet",
+      "devicePrompt": "Laitteen nimi (esim. Lean iPhone)",
+      "confirmDelete": "Poistetaanko tämä pääsyavain?",
+      "add": "Lisää",
+      "lead": "Kulun hyväksyminen edellyttää pääsyavainta. Lisää sellainen jokaiseen käyttämääsi laitteeseen.",
+      "addedOn": "lisätty {date}",
+      "delete": "Poista",
+      "none": "Ei pääsyavainta: et voi vielä hyväksyä kuluja."
+    }
+  }
+}

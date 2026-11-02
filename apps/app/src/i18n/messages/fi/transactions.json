@@ -1,0 +1,15 @@
+{
+  "transactions": {
+    "title": "Tapahtumat",
+    "lead": "Pankkiesi ilmoittamat tapahtumat täsmäytettyinä valtuutuksiin (viimeiset 90 päivää).",
+    "mismatches_one": "{count} tapahtuma ei vastaa valtuutustaan. Tarkista se ja jäädytä agentti tarvittaessa.",
+    "mismatches_other": "{count} tapahtumaa ei vastaa valtuutustaan. Tarkista ne ja jäädytä agentti tarvittaessa.",
+    "emptyTitle": "Ei tapahtumia",
+    "emptyText": "Ne näkyvät muutama minuutti kunkin maksun jälkeen.",
+    "colDate": "Päivämäärä",
+    "colMerchant": "Kauppias",
+    "colAmount": "Summa",
+    "colBankStatus": "Pankin tila",
+    "colMatch": "Täsmäytys"
+  }
+}

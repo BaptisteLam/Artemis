@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Beállítások",
+    "signOut": "Kijelentkezés",
+    "language": {
+      "title": "Nyelv",
+      "lead": "A felület nyelve ezen az eszközön."
+    },
+    "notifications": {
+      "title": "Értesítések ezen az eszközön",
+      "lead": "Kapjon értesítést minden igénylésről. iPhone-on először adja hozzá az Artemist a Főképernyőhöz (Megosztás → Főképernyőhöz adás).",
+      "notConfigured": "A push-értesítések nincsenek beállítva ezen a szerveren (VAPID-kulcsok). Az e-mailek továbbra is működnek.",
+      "unsupported": "Ez a böngésző nem támogatja a push-értesítéseket.",
+      "denied": "Az értesítések le vannak tiltva a böngésző beállításaiban.",
+      "enable": "Értesítések bekapcsolása",
+      "on": "Az értesítések be vannak kapcsolva.",
+      "disable": "Kikapcsolás"
+    },
+    "slack": {
+      "lead": "Minden függő igénylés megjelenik egy Slack-csatornán, egy gombbal, amely megnyitja a passkey-vel történő jóváhagyást. Hozzon létre egy „Incoming Webhook”-ot a Slackben, és illessze be az URL-jét.",
+      "connected": "A Slack csatlakoztatva.",
+      "disconnect": "Leválasztás",
+      "urlLabel": "Slack-webhook URL",
+      "connect": "Csatlakoztatás",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Kártyaátadás az ügynököknek",
+      "confirmDirect": "Közvetlen átadás: a kártyaszám egyszer áthalad az Artemisen az ügynökhöz vezető úton. Ez a PCI DSS hatálya alá vonja Önt, a Revolut esetében pedig írásos engedélyt igényel. Folytatja?",
+      "linkTitle": "Ideiglenes hivatkozás (ajánlott)",
+      "linkText": "Az ügynök egy 10 percig érvényes, egyszer használatos hivatkozást kap; a kártyát a kibocsátó bank jeleníti meg (Stripe Issuing). A kártyaszám soha nem halad át az Artemisen.",
+      "directTitle": "Közvetlen átadás (haladó beállítás)",
+      "directText": "A kártyaszámot a rendszer egyetlen alkalommal, tárolás nélkül továbbítja az ügynöknek. A Revoluthoz kötelező. Ön a PCI DSS hatálya alá kerül."
+    },
+    "org": {
+      "title": "Szervezet",
+      "name": "Név",
+      "rename": "Átnevezés"
+    },
+    "emergency": {
+      "title": "Vészhelyzet",
+      "lead": "A „Minden befagyasztása” felfüggeszti az összes ügynököt, és visszavonja az aktív kártyákat és a függő igényléseket. Használja, ha egy ügynök rendellenesen viselkedik, vagy ha egy token kiszivárgott.",
+      "confirmFreeze": "Befagyasztja a teljes szervezetet? Minden ügynök befagyasztásra kerül, az aktív kártyák pedig visszavonásra.",
+      "unfreeze": "A szervezet befagyasztásának feloldása",
+      "freeze": "Minden befagyasztása most",
+      "afterUnfreeze": "A feloldás után aktiválja újra az egyes ügynököket a saját oldalukon."
+    },
+    "passkeys": {
+      "title": "Passkey-k",
+      "devicePrompt": "Eszköz neve (pl. Lea iPhone-ja)",
+      "confirmDelete": "Törli ezt a passkey-t?",
+      "add": "Hozzáadás",
+      "lead": "Egy kiadás jóváhagyásához passkey szükséges. Adjon hozzá egyet minden használt eszközén.",
+      "addedOn": "hozzáadva: {date}",
+      "delete": "Törlés",
+      "none": "Nincs passkey: még nem hagyhat jóvá kiadásokat."
+    }
+  }
+}

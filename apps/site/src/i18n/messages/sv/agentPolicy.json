@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Mall: policy för AI-agenters utgifter",
+    "intro": "En kostnadsfri mall att anpassa, för att styra utgifter som görs av AI-agenter och dokumentera den mänskliga tillsyn som krävs enligt artikel 14 i EU:s förordning om artificiell intelligens (AI Act). Skriv ut sidan eller kopiera den till er wiki.",
+    "scope": {
+      "title": "1. Syfte och tillämpningsområde",
+      "body": "Denna policy gäller alla programvaruagenter (konversationsassistenter, automatiseringar, skript) som har behörighet att göra inköp för [FÖRETAG]:s räkning. Ingen agent använder företagets eller en anställds betalkort: varje inköp görs med ett virtuellt engångskort som begärs via Artemis."
+    },
+    "register": {
+      "title": "2. Agentregister",
+      "body": "Varje agent förs in i registret med: namn, plattform, ansvarig person, syfte, månadsbudget, gräns per köp, tillåtna handlare och i förekommande fall den kund agenten arbetar för."
+    },
+    "rules": {
+      "title": "3. Utgiftsregler",
+      "i1": "Månadsbudget per agent: [BELOPP] €; gräns per köp: [BELOPP] €.",
+      "i2": "Tillåtna handlare: [LISTA]; förbjudna kategorier: spel om pengar, penningöverföringar, kontantliknande tjänster, värdepapper.",
+      "i3": "Automatiskt godkännande endast under [BELOPP] € och hos en tillåten handlare; däröver krävs en mänsklig signatur.",
+      "i4": "Över [BELOPP] € krävs två olika signerare."
+    },
+    "oversight": {
+      "title": "4. Mänsklig tillsyn",
+      "body": "Personer med behörighet att godkänna: [NAMN/ROLLER]. Godkännandet ges med lösennyckel på mandatets exakta innehåll (agent, belopp, handlare, syfte). En begäran som inte godkänns upphör automatiskt att gälla."
+    },
+    "records": {
+      "title": "5. Kvitton och bokföring",
+      "body": "Varje köp matchas mot sin faktura inom [N] timmar; annars stängs agenten av. Utgifterna exporteras varje månad (FEC eller Pennylane) och stäms av mot kontoutdragen."
+    },
+    "incidents": {
+      "title": "6. Incidenter",
+      "body": "Vid avvikande beteende, avvikelse i belopp eller handlare eller misstänkt promptinjektion fryser den ansvariga personen omedelbart agenten (eller hela organisationen) och dokumenterar incidenten."
+    },
+    "retention": {
+      "title": "7. Lagring och översyn",
+      "body": "Den kedjade granskningsloggen sparas i [10] år. En tillsynsrapport tas fram varje kvartal och granskas av [ROLL]. Policyn ses över varje år."
+    },
+    "note": "Artemis tar fram agentregistret och den kvartalsvisa tillsynsrapporten i planen {plan}."
+  }
+}

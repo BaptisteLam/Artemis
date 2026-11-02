@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Para agencias",
+    "description": "Agencias de automatización: los agentes de sus clientes gastan bajo control, con un presupuesto y una factura por cliente.",
+    "eyebrow": "Agencias de automatización",
+    "headline": "Los agentes de sus clientes gastan. Usted refactura sin complicaciones.",
+    "lead": "¿Crea agentes con n8n, Make o Claude para sus clientes? Artemis separa el gasto por cliente, aplica un presupuesto a cada uno y prepara la refacturación con su margen.",
+    "try": "Pruébelo gratis →",
+    "plan": "Plan {plan}: {base} + {client} por cliente activo",
+    "spaces": {
+      "title": "Un espacio por cliente",
+      "body": "Asigne cada agente a un cliente. Sus solicitudes, tarjetas, transacciones y justificantes quedan separados. Un agente nunca puede gastar el presupuesto de otro cliente."
+    },
+    "budget": {
+      "title": "Un presupuesto mensual por cliente",
+      "body": "Fije un tope mensual para cada cliente, además de las reglas de cada agente. Si se supera, la solicitud se rechaza antes incluso de llegar a una persona."
+    },
+    "rebilling": {
+      "title": "Refacturación en un clic",
+      "body": "Cada mes, Artemis prepara un informe por cliente: compras cargadas, agente, comercio, justificante, gastos de gestión según su margen y total a refacturar. Exportación CSV lista para enviar o importar en su herramienta de facturación."
+    },
+    "proof": {
+      "title": "Pruebas para sus clientes",
+      "body": "Cada pago lo firma una persona autorizada y el registro no puede alterarse. Demuestre a sus clientes que sus agentes están bajo supervisión humana, como exige el AI Act."
+    },
+    "european": {
+      "title": "Europeo de principio a fin",
+      "body": "Euros, bancos europeos, datos en Fráncfort, exportaciones FEC y Pennylane para la contabilidad francesa."
+    },
+    "demo": {
+      "window": "refacturación · martin-bakery · noviembre",
+      "subtotal": "Subtotal",
+      "fee": "Gastos de gestión 15 %",
+      "total": "Total a refacturar"
+    }
+  }
+}

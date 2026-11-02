@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Komanda",
+    "lead": "Apstiprinātāji saņem pieprasījumus un paraksta tos ar savu piekļuves atslēgu.",
+    "confirmRemove": "Noņemt šo dalībnieku?",
+    "cols": {
+      "member": "Dalībnieks",
+      "role": "Loma",
+      "since": "Kopš"
+    },
+    "you": "jūs",
+    "remove": "Noņemt",
+    "invite": "Uzaicināt",
+    "email": "E-pasts",
+    "role": "Loma",
+    "send": "Nosūtīt uzaicinājumu",
+    "inviteLink": "Uzaicinājuma saite (derīga 7 dienas):",
+    "expiresOn": "derīga līdz {date}",
+    "revoke": "Atsaukt"
+  }
+}
