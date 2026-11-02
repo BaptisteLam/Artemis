@@ -1,0 +1,7 @@
+# Site marketing Artemis — Worker Cloudflare avec fichiers statiques (build Astro dans dist/).
+name = "artemis-site"
+compatibility_date = "2025-06-01"
+
+[assets]
+directory = "./dist"
+not_found_handling = "404-page"

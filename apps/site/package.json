@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "test": "astro build && vitest run",
     "typecheck": "astro check",
-    "lint": "echo ok"
+    "lint": "echo ok",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@artemis/shared": "workspace:*",
@@ -20,6 +21,7 @@
     "@astrojs/check": "^0.9.4",
     "@types/node": "^22.0.0",
     "typescript": "^5.6.3",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "wrangler": "^4.0.0"
   }
 }
