@@ -5,7 +5,7 @@ Durée : environ 45 minutes. Tout tient dans des offres gratuites. Seul un nom d
 ## 0. Ce qui est déjà fait
 
 - **Base de données Supabase** : projet `Artemis` (`jrlripockeiivegqbeng`, Francfort, offre gratuite) créé, migrations `0001` à `0005` appliquées, bucket privé `receipts` créé.
-- **À appliquer** : migrations `0006` à `0010` (remise de carte, mode agence, garde-fous, quorum/Slack, abonnements). Supabase demande une confirmation car `0007` remplace la fonction `create_card_request`. Dans le tableau de bord Supabase (SQL Editor), exécutez dans l'ordre le contenu de `packages/db/migrations/0006_card_delivery.sql` à `0010_subscriptions.sql`, ou demandez à Claude de le faire en étant présent pour valider.
+- **Appliquées** (2 nov. 2026) : migrations `0006` à `0010` regroupées sous `0006_0010_v2_features` (remise de carte, mode agence, garde-fous, quorum/Slack, abonnements). Sur le projet hébergé, l'ancienne version à 3 arguments de `create_card_request` reste en place mais n'est plus appelée ; l'API utilise toujours la version à 4 arguments.
   - URL : `https://jrlripockeiivegqbeng.supabase.co`
   - Clé publique (publishable) : dans `apps/app/.env.production`
 
