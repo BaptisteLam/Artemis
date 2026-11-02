@@ -20,6 +20,7 @@ import { Invitation } from './pages/Invitation';
 import { Billing } from './pages/billing/Billing';
 import { Admin } from './pages/admin/Admin';
 import { RevealCard } from './pages/reveal/RevealCard';
+import { ClientDetail, Clients } from './pages/clients/Clients';
 import { Loading } from './components';
 
 function RequireAuth() {
@@ -58,6 +59,8 @@ export const router = createBrowserRouter([
           { path: '/reglages', element: <Settings /> },
           { path: '/facturation', element: <Billing /> },
           { path: '/admin', element: <Admin /> },
+          { path: '/clients', element: <Clients /> },
+          { path: '/clients/:id', element: <ClientDetail /> },
         ],
       },
     ],

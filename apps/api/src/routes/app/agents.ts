@@ -17,7 +17,15 @@ const AgentInput = z.object({
   name: z.string().trim().min(1).max(80),
   platform: Platform.default('other'),
   bank_connection_id: z.string().uuid().nullable().optional(),
+  client_id: z.string().uuid().nullable().optional(),
 });
+
+async function resolveClient(c: { var: AppEnv['Variables'] }, id: string | null | undefined) {
+  if (!id) return null;
+  const client = await c.var.ctx.store.getClient(id);
+  if (!client || client.org_id !== c.var.org.id) throw new ArtemisError('invalid_input', 'Client inconnu pour cette organisation.');
+  return client.id;
+}
 
 async function loadAgent(c: { var: AppEnv['Variables'] }, id: string): Promise<AgentRow> {
   const a = await c.var.ctx.store.getAgent(id);
@@ -62,6 +70,7 @@ agentRoutes.post('/agents', requireRole(...MANAGERS), async (c) => {
     token_hash: t.hash,
     token_prefix: t.prefix,
     bank_connection_id: connectionId,
+    client_id: await resolveClient(c, input.client_id),
   });
   await store.upsertPolicy(defaultPolicyRow(agent.id));
   await audit(c.var.ctx, c.var.org.id, { type: 'user', id: c.var.user.id }, 'agent.created', agent.id, { name: agent.name, platform: agent.platform });
@@ -80,6 +89,7 @@ agentRoutes.patch('/agents/:id', requireRole(...MANAGERS), async (c) => {
     await c.req.json().catch(() => ({})),
   );
   if (patch.bank_connection_id !== undefined) patch.bank_connection_id = await resolveConnection(c, patch.bank_connection_id);
+  if (patch.client_id !== undefined) patch.client_id = await resolveClient(c, patch.client_id);
   if (patch.status === 'active' && c.var.org.frozen_at) throw new ArtemisError('org_frozen', "Dégelez d'abord l'organisation.");
   const updated = await c.var.ctx.store.updateAgent(a.id, patch);
   await audit(c.var.ctx, c.var.org.id, { type: 'user', id: c.var.user.id }, 'agent.updated', a.id, patch);

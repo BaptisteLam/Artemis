@@ -4,6 +4,7 @@ import type {
   AuditRow,
   BankConnectionRow,
   CardRequestRow,
+  ClientRow,
   CardRow,
   InvitationRow,
   MandateRow,
@@ -39,6 +40,7 @@ export class MemoryStore implements Store {
   connections = new Map<string, BankConnectionRow>();
   agents = new Map<string, AgentRow>();
   policies = new Map<string, PolicyRow>();
+  clients = new Map<string, ClientRow>();
   requests = new Map<string, CardRequestRow>();
   mandates = new Map<string, MandateRow>();
   cards = new Map<string, CardRow>();
@@ -156,7 +158,7 @@ export class MemoryStore implements Store {
 
   // Agents
   async createAgent(row: Omit<AgentRow, 'id' | 'created_at' | 'last_used_at' | 'status'>) {
-    const a: AgentRow = { ...row, id: uuid(), status: 'active', last_used_at: null, created_at: now() };
+    const a: AgentRow = { client_id: null, ...row, id: uuid(), status: 'active', last_used_at: null, created_at: now() };
     this.agents.set(a.id, a);
     return clone(a);
   }
@@ -191,19 +193,26 @@ export class MemoryStore implements Store {
   }
 
   // Demandes
-  async createCardRequestAtomic(input: NewCardRequest, budgetCents: number, monthStart: Date) {
+  async createCardRequestAtomic(input: NewCardRequest, budgetCents: number, monthStart: Date, clientBudgetCents?: number | null) {
     const from = monthStart.toISOString();
     let spent = 0;
+    let clientSpent = 0;
     for (const r of this.requests.values()) {
-      if (r.agent_id === input.agent_id && r.created_at >= from && COMMITTED.has(r.status)) spent += r.amount_cents;
+      if (r.created_at < from || !COMMITTED.has(r.status)) continue;
+      if (r.agent_id === input.agent_id) spent += r.amount_cents;
+      if (input.client_id && r.client_id === input.client_id) clientSpent += r.amount_cents;
     }
     if (spent + input.amount_cents > budgetCents) {
       throw new ArtemisError('over_monthly_budget', 'Budget mensuel dépassé.');
+    }
+    if (input.client_id && clientBudgetCents != null && clientSpent + input.amount_cents > clientBudgetCents) {
+      throw new ArtemisError('over_client_budget', 'Budget mensuel du client dépassé.');
     }
     const row: CardRequestRow = {
       id: uuid(),
       org_id: input.org_id,
       agent_id: input.agent_id,
+      client_id: input.client_id ?? null,
       amount_cents: input.amount_cents,
       currency: input.currency,
       merchant: input.merchant,
@@ -255,6 +264,32 @@ export class MemoryStore implements Store {
   }
   async countRequestsSince(from: Date) {
     return [...this.requests.values()].filter((r) => r.created_at >= from.toISOString()).length;
+  }
+
+  // Clients
+  async createClient(row: Omit<ClientRow, 'id' | 'created_at' | 'status'>) {
+    const c: ClientRow = { ...row, id: uuid(), status: 'active', created_at: now() };
+    this.clients.set(c.id, c);
+    return clone(c);
+  }
+  async getClient(id: string) {
+    const c = this.clients.get(id);
+    return c ? clone(c) : null;
+  }
+  async listClients(orgId: string) {
+    return clone([...this.clients.values()].filter((c) => c.org_id === orgId).sort((a, b) => a.name.localeCompare(b.name)));
+  }
+  async updateClient(id: string, patch: Partial<ClientRow>) {
+    const c = this.clients.get(id) ?? notFound('Client');
+    Object.assign(c, patch, { id });
+    return clone(c);
+  }
+  async sumCommittedForClient(clientId: string, from: Date) {
+    let s = 0;
+    for (const r of this.requests.values()) {
+      if (r.client_id === clientId && r.created_at >= from.toISOString() && COMMITTED.has(r.status)) s += r.amount_cents;
+    }
+    return s;
   }
 
   // Mandats

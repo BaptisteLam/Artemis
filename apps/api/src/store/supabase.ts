@@ -4,6 +4,7 @@ import type {
   AuditRow,
   BankConnectionRow,
   CardRequestRow,
+  ClientRow,
   CardRow,
   InvitationRow,
   MandateRow,
@@ -50,6 +51,7 @@ export class SupabaseStore implements Store {
     if (!res.ok) {
       const text = await res.text();
       if (text.includes('over_monthly_budget')) throw new ArtemisError('over_monthly_budget', 'Budget mensuel dépassé.');
+      if (text.includes('over_client_budget')) throw new ArtemisError('over_client_budget', 'Budget mensuel du client dépassé.');
       throw new Error(`supabase ${method} ${path} ${res.status}: ${text.slice(0, 200)}`);
     }
     if (res.status === 204) return undefined as T;
@@ -200,12 +202,35 @@ export class SupabaseStore implements Store {
   }
 
   // Demandes
-  createCardRequestAtomic(input: NewCardRequest, budgetCents: number, monthStart: Date) {
+  createCardRequestAtomic(input: NewCardRequest, budgetCents: number, monthStart: Date, clientBudgetCents?: number | null) {
     return this.rpc<CardRequestRow>('create_card_request', {
       p: input,
       p_budget_cents: budgetCents,
       p_month_start: monthStart.toISOString(),
+      p_client_budget_cents: clientBudgetCents ?? null,
     });
+  }
+
+  // Clients
+  createClient(row: Omit<ClientRow, 'id' | 'created_at' | 'status'>) {
+    return this.insert<ClientRow>('clients', row);
+  }
+  getClient(id: string) {
+    return this.first<ClientRow>('clients', { id: `eq.${id}` });
+  }
+  listClients(orgId: string) {
+    return this.select<ClientRow>('clients', { org_id: `eq.${orgId}`, order: 'name.asc' });
+  }
+  async updateClient(id: string, patch: Partial<ClientRow>) {
+    const rows = await this.patch<ClientRow>('clients', { id: `eq.${id}` }, patch);
+    if (!rows[0]) throw new ArtemisError('not_found', 'Client introuvable');
+    return rows[0];
+  }
+  async sumCommittedForClient(clientId: string, from: Date) {
+    const rows = await this.req<{ amount_cents: number }[]>('GET', 'card_requests', {
+      query: { select: 'amount_cents', client_id: `eq.${clientId}`, created_at: `gte.${from.toISOString()}`, status: `in.${COMMITTED}` },
+    });
+    return rows.reduce((s, r) => s + Number(r.amount_cents), 0);
   }
   getCardRequest(id: string) {
     return this.first<CardRequestRow>('card_requests', { id: `eq.${id}` });

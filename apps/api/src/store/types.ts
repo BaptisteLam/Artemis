@@ -3,6 +3,7 @@ import type {
   AuditRow,
   BankConnectionRow,
   CardRequestRow,
+  ClientRow,
   CardRow,
   InvitationRow,
   MandateRow,
@@ -20,7 +21,7 @@ import type {
 export type NewCardRequest = Pick<
   CardRequestRow,
   'org_id' | 'agent_id' | 'amount_cents' | 'currency' | 'merchant' | 'mcc' | 'purpose' | 'card_ttl_minutes' | 'expires_at'
-> & { status?: RequestStatus; decision_reason?: string | null };
+> & { status?: RequestStatus; decision_reason?: string | null; client_id?: string | null };
 
 export interface AuditInput {
   org_id: string;
@@ -80,7 +81,8 @@ export interface Store {
 
   // Demandes
   /** Insère la demande si le cumul du mois (pending/approved/issued/completed) + montant ≤ budget ; sinon lève ArtemisError('over_monthly_budget'). */
-  createCardRequestAtomic(input: NewCardRequest, budgetCents: number, monthStart: Date): Promise<CardRequestRow>;
+  /** Vérifie aussi le budget du client (si fourni) ; lève ArtemisError('over_client_budget'). */
+  createCardRequestAtomic(input: NewCardRequest, budgetCents: number, monthStart: Date, clientBudgetCents?: number | null): Promise<CardRequestRow>;
   getCardRequest(id: string): Promise<CardRequestRow | null>;
   /** Met à jour ; si `expectedStatus` est fourni et différent du statut courant, ne fait rien et renvoie null. */
   updateCardRequest(id: string, patch: Partial<CardRequestRow>, expectedStatus?: RequestStatus): Promise<CardRequestRow | null>;
@@ -89,6 +91,13 @@ export interface Store {
   /** Somme des demandes pending/approved/issued/completed de l'agent depuis `from`. */
   sumCommitted(agentId: string, from: Date): Promise<number>;
   countRequestsSince(from: Date): Promise<number>;
+
+  // Clients (mode agence)
+  createClient(row: Omit<ClientRow, 'id' | 'created_at' | 'status'>): Promise<ClientRow>;
+  getClient(id: string): Promise<ClientRow | null>;
+  listClients(orgId: string): Promise<ClientRow[]>;
+  updateClient(id: string, patch: Partial<ClientRow>): Promise<ClientRow>;
+  sumCommittedForClient(clientId: string, from: Date): Promise<number>;
 
   // Mandats
   createMandate(row: MandateRow): Promise<MandateRow>;

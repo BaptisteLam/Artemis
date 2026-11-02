@@ -91,7 +91,7 @@ describe('schema', () => {
   it('RPC functions are not executable by anon or authenticated', async () => {
     const fns = [
       'append_audit(uuid,text,text,text,text,jsonb)',
-      'create_card_request(jsonb,bigint,timestamptz)',
+      'create_card_request(jsonb,bigint,timestamptz,bigint)',
       'mark_card_revealed(uuid)',
       'increment_usage(uuid,text)',
       'hit_rate_limit(text,integer,integer)',
@@ -107,5 +107,15 @@ describe('schema', () => {
     expect(svc.rows[0]!.ok).toBe(true);
     const anonMember = await db.query<{ ok: boolean }>(`select has_function_privilege('anon', 'is_member(uuid,member_role[])', 'execute') as ok`);
     expect(anonMember.rows[0]!.ok).toBe(false);
+  });
+
+  it('create_card_request enforces the client budget', async () => {
+    const client = (await one<{ id: string }>(`insert into clients(org_id, name, monthly_budget_cents) values ($1, 'Client A', 5000) returning id`, [org1])).id;
+    const start = new Date(Date.now() - 86400_000).toISOString();
+    const withClient = (amount: number) => JSON.stringify({ ...JSON.parse(req(amount)), client_id: client });
+    await db.query(`select * from create_card_request($1::jsonb, 100000, $2, 5000)`, [withClient(3000), start]);
+    await expect(db.query(`select * from create_card_request($1::jsonb, 100000, $2, 5000)`, [withClient(3000), start])).rejects.toThrow(/over_client_budget/);
+    const ok = await one<{ client_id: string }>(`select client_id from create_card_request($1::jsonb, 100000, $2, 5000)`, [withClient(2000), start]);
+    expect(ok.client_id).toBe(client);
   });
 });

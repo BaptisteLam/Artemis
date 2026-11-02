@@ -9,6 +9,7 @@ const LINKS = [
   { to: '/', label: 'Tableau de bord', end: true },
   { to: '/demandes', label: 'Demandes', badge: true },
   { to: '/agents', label: 'Agents' },
+  { to: '/clients', label: 'Clients', hideSm: true },
   { to: '/cartes', label: 'Cartes', hideSm: true },
   { to: '/transactions', label: 'Transactions' },
   { to: '/exports', label: 'Exports', hideSm: true },

@@ -17,6 +17,7 @@ export function AgentDetail() {
   const { data, error, loading, reload } = useData<{ agent: PublicAgent; policy: PolicyRow; budget: Budget }>(`/app/agents/${id}`);
   const conns = useData<{ connections: PublicConnection[] }>('/app/connections');
   const reqs = useData<{ requests: RequestWithAgent[] }>(`/app/requests?agent_id=${id}&limit=20`);
+  const clients = useData<{ clients: { id: string; name: string; status: string }[] }>('/app/clients');
   const [token, setToken] = useState<string | null>(null);
 
   const patch = useAction(async (body: Record<string, unknown>) => {
@@ -73,6 +74,14 @@ export function AgentDetail() {
                   {conns.data?.connections.map((c) => <option key={c.id} value={c.id}>{c.label}</option>)}
                 </select>
               </Field>
+              {clients.data && clients.data.clients.length > 0 ? (
+                <Field label="Client (mode agence)">
+                  <select className="ar-select" disabled={!manage} value={agent.client_id ?? ''} onChange={(e) => void patch.run({ client_id: e.target.value || null })}>
+                    <option value="">Aucun</option>
+                    {clients.data.clients.filter((c) => c.status === 'active').map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+                  </select>
+                </Field>
+              ) : null}
               {manage ? (
                 <div className="ar-row">
                   <Button variant="ghost" onClick={() => void patch.run({ status: agent.status === 'frozen' ? 'active' : 'frozen' })}>

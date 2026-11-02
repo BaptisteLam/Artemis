@@ -20,7 +20,7 @@ export interface OrganizationRow {
 export interface MembershipRow { org_id: string; user_id: string; email: string | null; role: MemberRole; created_at: string }
 export interface InvitationRow { id: string; org_id: string; email: string; role: MemberRole; token_hash: string; invited_by: string | null; expires_at: string; accepted_at: string | null; created_at: string }
 export interface BankConnectionRow { id: string; org_id: string; provider: BankProvider; label: string; credentials_ciphertext: string; status: string; last_sync_at: string | null; created_at: string }
-export interface AgentRow { id: string; org_id: string; name: string; platform: string; token_hash: string; token_prefix: string; bank_connection_id: string | null; status: 'active' | 'frozen'; last_used_at: string | null; created_at: string }
+export interface AgentRow { id: string; org_id: string; name: string; platform: string; token_hash: string; token_prefix: string; bank_connection_id: string | null; client_id?: string | null; status: 'active' | 'frozen'; last_used_at: string | null; created_at: string }
 export interface PolicyRow {
   agent_id: string;
   monthly_budget_cents: number;
@@ -40,6 +40,7 @@ export interface CardRequestRow {
   id: string;
   org_id: string;
   agent_id: string;
+  client_id?: string | null;
   amount_cents: number;
   currency: string;
   merchant: string;
@@ -100,3 +101,13 @@ export interface AuditRow { id: number; org_id: string; actor_type: 'user' | 'ag
 export interface PasskeyRow { id: string; user_id: string; credential_id: string; public_key: string; counter: number; transports: string[]; name: string | null; created_at: string }
 export interface PushSubscriptionRow { id: string; user_id: string; endpoint: string; p256dh: string; auth: string; created_at: string }
 export interface WaitlistRow { id: string; email: string; company: string | null; use_case: string | null; created_at: string }
+export interface ClientRow {
+  id: string;
+  org_id: string;
+  name: string;
+  billing_email: string | null;
+  markup_pct: number;
+  monthly_budget_cents: number | null;
+  status: 'active' | 'archived';
+  created_at: string;
+}

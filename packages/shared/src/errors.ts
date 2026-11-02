@@ -24,6 +24,7 @@ export type ErrorCode =
   | 'card_not_ready'
   | 'bank_error'
   | 'plan_limit'
+  | 'over_client_budget'
   | 'internal'
   | PolicyRejectCode;
 

@@ -46,6 +46,14 @@ export async function mandateHash(request: CardRequestRow, agent: Pick<AgentRow,
   return sha256Hex(canonicalJson(mandatePayload(request, agent)));
 }
 
+/** Client d'agence actif ce mois-ci : facturé 15 € une seule fois par mois (compteur Stripe). */
+async function markClientActive(ctx: Ctx, org: { stripe_customer_id: string | null }, clientId: string, period: string) {
+  const flag = `active-client:${clientId}:${period}`;
+  if (await ctx.store.kvGet(flag)) return;
+  await ctx.store.kvSet(flag, true, 40 * 86400);
+  await reportMeterEvent(ctx, ctx.env.STRIPE_METER_ACTIVE_CLIENT, org.stripe_customer_id, 1, `client-${clientId}-${period}`);
+}
+
 /** Point d'entrée des agents : valide, applique les règles, crée la demande et, si besoin, l'émet. */
 export async function createCardRequest(ctx: Ctx, agent: AgentRow, raw: unknown): Promise<RequestOutcome> {
   const input = parseRequestCardInput(raw);
@@ -70,6 +78,8 @@ export async function createCardRequest(ctx: Ctx, agent: AgentRow, raw: unknown)
     throw new ArtemisError('quota_exceeded', `Quota mensuel atteint (${limits.requestsPerMonth} demandes). Passez à un plan supérieur.`);
   }
 
+  const client = agent.client_id ? await store.getClient(agent.client_id) : null;
+  if (client?.status === 'archived') throw new ArtemisError('invalid_input', `Le client ${client.name} est archivé.`);
   const policy = policyFromRow(await store.getPolicy(agent.id));
   const monthStart = monthBounds(period).start;
   const spent = await store.sumCommitted(agent.id, monthStart);
@@ -78,6 +88,7 @@ export async function createCardRequest(ctx: Ctx, agent: AgentRow, raw: unknown)
   const base = {
     org_id: org.id,
     agent_id: agent.id,
+    client_id: client?.id ?? null,
     amount_cents: input.amount,
     currency: input.currency,
     merchant: input.merchant,
@@ -103,13 +114,17 @@ export async function createCardRequest(ctx: Ctx, agent: AgentRow, raw: unknown)
 
   let row: CardRequestRow;
   try {
-    row = await store.createCardRequestAtomic({ ...base, status: 'pending' }, policy.monthlyBudgetCents, monthStart);
+    row = await store.createCardRequestAtomic({ ...base, status: 'pending' }, policy.monthlyBudgetCents, monthStart, client?.monthly_budget_cents ?? null);
   } catch (e) {
     if (e instanceof ArtemisError && e.code === 'over_monthly_budget') {
       return storeRejected('over_monthly_budget', 'Budget mensuel dépassé.');
     }
+    if (e instanceof ArtemisError && e.code === 'over_client_budget') {
+      return storeRejected('over_client_budget', `Budget mensuel du client ${client?.name ?? ''} dépassé.`.trim());
+    }
     throw e;
   }
+  if (client) ctx.defer(markClientActive(ctx, org, client.id, period));
   await store.incrementUsage(org.id, period);
   if (overQuota) {
     await store.incrementOverage(org.id, period);

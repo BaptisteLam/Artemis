@@ -6,6 +6,7 @@ import { agentRoutes } from './agents';
 import { bankingRoutes } from './banking';
 import { activityRoutes } from './activity';
 import { complianceRoutes } from './compliance';
+import { clientRoutes } from './clients';
 
 export const appRoutes = new Hono<AppEnv>();
 appRoutes.use('*', userAuth);
@@ -14,3 +15,4 @@ appRoutes.route('/', agentRoutes);
 appRoutes.route('/', bankingRoutes);
 appRoutes.route('/', activityRoutes);
 appRoutes.route('/', complianceRoutes);
+appRoutes.route('/', clientRoutes);
