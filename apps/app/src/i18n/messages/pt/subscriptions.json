@@ -1,0 +1,22 @@
+{
+  "subscriptions": {
+    "title": "Subscrições",
+    "lead": "Subscrições feitas pelos seus agentes: cartão bloqueado no comerciante, limite mensal, deteção de subscrições inativas.",
+    "confirmCancel": "Cancelar esta subscrição? O cartão será cancelado no banco.",
+    "planRequired": "As subscrições geridas por agentes estão incluídas a partir do plano Team.",
+    "seePlans": "Ver os planos →",
+    "dormantAlert_one": "{count} subscrição sem pagamentos há mais de {days} dias: pondere cancelá-la.",
+    "dormantAlert_many": "{count} subscrições sem pagamentos há mais de {days} dias: pondere cancelá-las.",
+    "dormantAlert_other": "{count} subscrições sem pagamentos há mais de {days} dias: pondere cancelá-las.",
+    "emptyTitle": "Nenhuma subscrição",
+    "emptyText": "Um agente cria uma subscrição com request_card e a opção recorrente.",
+    "colMerchant": "Comerciante",
+    "colAgent": "Agente",
+    "colMonthlyLimit": "Limite mensal",
+    "colPaid": "Pago",
+    "colLastPayment": "Último pagamento",
+    "colStatus": "Estado",
+    "dormant": "Inativa",
+    "cancel": "Cancelar"
+  }
+}

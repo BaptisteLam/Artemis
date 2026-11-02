@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Clientes",
+    "lead": "Um espaço por cliente: os respetivos agentes, o orçamento mensal, a sua margem e um relatório de refaturação pronto a enviar.",
+    "invalidBudget": "Orçamento inválido (ex.: 500 ou 49,90).",
+    "upsell": "Os espaços por cliente estão incluídos no plano Agências ({price} + {perClient} por cliente ativo).",
+    "seePlans": "Ver os planos →",
+    "empty": "Nenhum cliente",
+    "emptyHint": "Crie um cliente e, depois, associe-lhe agentes.",
+    "cols": {
+      "client": "Cliente",
+      "agents": "Agentes",
+      "spent": "Comprometido este mês",
+      "budget": "Orçamento",
+      "markup": "Margem"
+    },
+    "archived": "arquivado",
+    "percent": "{value} %",
+    "report": "Relatório →",
+    "new": "Novo cliente",
+    "fields": {
+      "name": "Nome",
+      "billingEmail": "E-mail de faturação",
+      "markup": "Margem de refaturação (%)",
+      "budget": "Orçamento mensal (€)",
+      "budgetHint": "Vazio = sem teto por cliente"
+    },
+    "create": "Criar cliente",
+    "exportFailed": "A exportação falhou.",
+    "eyebrow": "Cliente",
+    "month": "Mês",
+    "exportCsv": "Exportar CSV",
+    "monthPurchases": "Compras do mês",
+    "markupPct": "Margem {value}",
+    "toRebill": "A refaturar",
+    "noPurchases": "Nenhuma compra este mês",
+    "lines": {
+      "date": "Data",
+      "agent": "Agente",
+      "merchant": "Comerciante",
+      "purpose": "Finalidade",
+      "amount": "Montante",
+      "receipt": "Comprovativo"
+    },
+    "yes": "Sim",
+    "missing": "Em falta",
+    "archive": "Arquivar cliente",
+    "reactivate": "Reativar",
+    "all": "← Todos os clientes"
+  }
+}

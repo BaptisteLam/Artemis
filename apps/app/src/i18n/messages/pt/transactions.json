@@ -1,0 +1,16 @@
+{
+  "transactions": {
+    "title": "Transações",
+    "lead": "Operações comunicadas pelos seus bancos e reconciliadas com os mandatos (últimos 90 dias).",
+    "mismatches_one": "{count} transação não corresponde ao respetivo mandato. Verifique-a e congele o agente, se necessário.",
+    "mismatches_many": "{count} transações não correspondem ao respetivo mandato. Verifique-as e congele o agente, se necessário.",
+    "mismatches_other": "{count} transações não correspondem ao respetivo mandato. Verifique-as e congele o agente, se necessário.",
+    "emptyTitle": "Nenhuma transação",
+    "emptyText": "Aparecem alguns minutos após cada pagamento.",
+    "colDate": "Data",
+    "colMerchant": "Comerciante",
+    "colAmount": "Montante",
+    "colBankStatus": "Estado bancário",
+    "colMatch": "Reconciliação"
+  }
+}

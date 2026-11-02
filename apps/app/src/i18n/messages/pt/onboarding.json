@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Passo {step} de {total}",
+    "continue": "Continuar →",
+    "org": {
+      "title": "A sua organização",
+      "lead": "Começa em Sandbox: banco simulado, sem custos.",
+      "nameLabel": "Nome da empresa ou do estúdio"
+    },
+    "agent": {
+      "title": "O seu primeiro agente",
+      "lead": "Um nome curto que diga o que compra. Regras predefinidas: {monthly} por mês, {perPurchase} por compra.",
+      "nameLabel": "Nome do agente",
+      "platformLabel": "Plataforma",
+      "platformOther": "Outra",
+      "submit": "Criar o agente →"
+    },
+    "connect": {
+      "title": "Ligue o seu agente",
+      "done": "Já copiei o token →"
+    },
+    "passkey": {
+      "title": "A sua chave de acesso de aprovação",
+      "lead": "Cada despesa será assinada com Face ID, Touch ID, Windows Hello ou uma chave de segurança. Se possível, registe-a a partir do telemóvel que vai receber as notificações.",
+      "deviceName": "Primeiro dispositivo",
+      "saved": "Chave de acesso registada.",
+      "unsupported": "Este navegador não suporta chaves de acesso.",
+      "register": "Registar uma chave de acesso",
+      "openDashboard": "Abrir o painel →",
+      "later": "Mais tarde"
+    }
+  }
+}

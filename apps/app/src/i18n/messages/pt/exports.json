@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Exportações contabilísticas",
+    "lead": "Despesas debitadas pelos seus bancos, prontas para o Pennylane, o seu contabilista ou uma folha de cálculo.",
+    "failed": "A exportação falhou.",
+    "from": "De",
+    "to": "Até (exclusive)",
+    "downloadCsv": "Transferir CSV",
+    "downloadFec": "Transferir FEC",
+    "formats": "CSV: separado por ponto e vírgula, compatível com o Excel. FEC: 18 colunas regulamentares, débito 604000 / crédito 512000, importável para o Pennylane.",
+    "fecUpsell": "O FEC está incluído a partir do plano Team.",
+    "seePlans": "Ver os planos"
+  }
+}

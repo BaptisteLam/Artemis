@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtrar por estado",
+      "all": "Todos",
+      "pending": "Por aprovar",
+      "issued": "Cartão emitido",
+      "completed": "Pagos",
+      "rejected": "Recusados",
+      "failed": "Falhados"
+    },
+    "list": {
+      "title": "Pedidos",
+      "lead": "Cada pedido de um agente, com a respetiva decisão e cartão.",
+      "emptyTitle": "Nenhum pedido",
+      "emptyBody": "Os pedidos dos seus agentes aparecerão aqui."
+    },
+    "decision": {
+      "notAllowed": "Só os proprietários, administradores e aprovadores podem decidir.",
+      "cancelledOnDevice": "Aprovação cancelada no dispositivo.",
+      "reasonLabel": "Motivo da recusa",
+      "reasonHint": "Visível para o agente.",
+      "confirmReject": "Confirmar a recusa",
+      "cancel": "Cancelar",
+      "signing": "A assinar…",
+      "approve": "Aprovar com a minha chave de acesso",
+      "reject": "Recusar"
+    },
+    "detail": {
+      "confirmCancel": "Cancelar este pedido e o respetivo cartão?",
+      "receiptUnavailable": "Comprovativo indisponível.",
+      "eyebrow": "Pedido · {id}",
+      "amount": "Montante pedido",
+      "agent": "Agente",
+      "mandateWindow": "mandato · {id}",
+      "purpose": "Finalidade",
+      "category": "Categoria",
+      "expires": "Expira",
+      "rules": "Regras",
+      "perTxLimit": "Limite",
+      "budget": "orçamento",
+      "decision": "Decisão",
+      "hash": "sha256 {hash}",
+      "quorum": "Quórum: {signed} de {required} assinaturas necessárias acima do limiar.",
+      "unusualAmount": "Salvaguarda: montante invulgar para este agente, aprovação humana obrigatória.",
+      "autoApproved": "Aprovado automaticamente pelas regras",
+      "signedByPasskey": "Mandato assinado com chave de acesso",
+      "card": "Cartão",
+      "cardHolderFallback": "agente",
+      "cardAria": "Cartão virtual terminado em {last4}, titular {holder}, expira {exp}",
+      "bankSca": "Aprove também a criação do cartão na aplicação do seu banco.",
+      "cardExpires": "Expira a {date}",
+      "handedOver": "entregue ao agente {time}",
+      "notHandedOver": "ainda não entregue ao agente",
+      "qontoNotice": "O Qonto não entrega cartões a agentes: apresente-o aqui e conclua o pagamento pessoalmente.",
+      "showQontoCard": "Mostrar o cartão (Qonto)",
+      "simulatePayment": "Simular um pagamento",
+      "cancelCard": "Cancelar o cartão",
+      "noCard": "Nenhum cartão emitido.",
+      "transactions": "Transações",
+      "noTransactions": "O banco não comunicou nenhuma transação.",
+      "receipts": "Comprovativos",
+      "addReceipt": "Adicionar",
+      "noReceipts": "Nenhum comprovativo.",
+      "back": "← Todos os pedidos"
+    }
+  }
+}

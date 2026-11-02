@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Equipa",
+    "lead": "Os aprovadores recebem os pedidos e assinam-nos com a sua chave de acesso.",
+    "confirmRemove": "Remover este membro?",
+    "cols": {
+      "member": "Membro",
+      "role": "Função",
+      "since": "Desde"
+    },
+    "you": "você",
+    "remove": "Remover",
+    "invite": "Convidar",
+    "email": "E-mail",
+    "role": "Função",
+    "send": "Enviar convite",
+    "inviteLink": "Ligação de convite (válida durante 7 dias):",
+    "expiresOn": "expira a {date}",
+    "revoke": "Revogar"
+  }
+}

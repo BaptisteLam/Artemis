@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Cartão de utilização única · banco simulado",
+    "eyebrowBank": "Cartão de utilização única · emitido pelo seu banco",
+    "lead": "Esta ligação só abre uma vez. O cartão está limitado ao montante indicado acima e bloqueado neste comerciante.",
+    "fields": {
+      "number": "Número",
+      "expiry": "Validade",
+      "cvc": "Código de segurança",
+      "holder": "Titular"
+    },
+    "opening": "A abrir…",
+    "show": "Mostrar o cartão •••• {last4}",
+    "footer": "O número é apresentado diretamente pelo banco emissor: nunca passa pelo Artemis.",
+    "errors": {
+      "stripeUnavailable": "O Stripe.js não está disponível.",
+      "invalidLink": "Ligação inválida, já utilizada ou expirada.",
+      "stripeRefused": "A Stripe recusou o pedido."
+    }
+  }
+}

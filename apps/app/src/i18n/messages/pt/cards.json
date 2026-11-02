@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Cartões",
+    "lead": "Cartões de utilização única emitidos nos seus bancos. O número completo nunca é armazenado.",
+    "linkAria": "Cartão •••• {last4}",
+    "cardAria": "Cartão virtual terminado em {last4}, titular {holder}, expira {exp}",
+    "tagRevealed": "Entregue ao agente",
+    "tagSingleUse": "Utilização única",
+    "emptyTitle": "Nenhum cartão",
+    "emptyText": "Os cartões aparecem depois de um pedido ser aprovado.",
+    "colCard": "Cartão",
+    "colIssued": "Emitido",
+    "colExpires": "Expira",
+    "colRevealed": "Entregue ao agente",
+    "colStatus": "Estado",
+    "notRevealed": "Não",
+    "request": "Pedido →"
+  }
+}

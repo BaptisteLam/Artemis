@@ -1,0 +1,60 @@
+{
+  "billing": {
+    "title": "Faturação",
+    "lead": "Plano atual: {plan}. Pedidos este mês: {usage}. IVA não aplicável, art. 293.º B do Código Geral dos Impostos francês (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Gerir a subscrição e as faturas",
+    "returnOk": "Obrigado! A sua subscrição está a ser ativada (alguns segundos).",
+    "returnCanceled": "Pagamento cancelado, nada foi alterado.",
+    "inactive": "A sua subscrição já não está ativa ({status}). As funcionalidades pagas estão suspensas: atualize o seu método de pagamento.",
+    "unknown": "desconhecido",
+    "overage": "Acima da quota de um plano pago, cada mandato adicional é faturado a {price}.",
+    "overageCount_one": "Este mês: {count} mandato.",
+    "overageCount_many": "Este mês: {count} mandatos.",
+    "overageCount_other": "Este mês: {count} mandatos.",
+    "ownerOnly": "Só um proprietário pode alterar a subscrição.",
+    "current": "Atual",
+    "from": "a partir de {price}",
+    "perMonth": "/ mês",
+    "choose": "Escolher {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Agências",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "1 agente",
+        "i2": "Banco simulado",
+        "i3": "20 mandatos simulados / mês"
+      },
+      "builder": {
+        "i1": "3 agentes",
+        "i2": "1 banco real",
+        "i3": "50 mandatos / mês",
+        "i4": "Aprovação com chave de acesso e notificações"
+      },
+      "team": {
+        "i1": "10 agentes",
+        "i2": "2 bancos reais",
+        "i3": "300 mandatos / mês",
+        "i4": "Slack, quórum de aprovadores, exportação FEC",
+        "i5": "Subscrições geridas por agente"
+      },
+      "agency": {
+        "i1": "25 agentes, clientes ilimitados",
+        "i2": "1000 mandatos / mês",
+        "i3": "Orçamentos, margem e refaturação por cliente",
+        "i4": "+ {price} por cliente ativo"
+      },
+      "business": {
+        "i1": "Ilimitado",
+        "i2": "Dossiê e relatório AI Act",
+        "i3": "Exportação assinada do registo de auditoria",
+        "i4": "Suporte prioritário"
+      }
+    }
+  }
+}

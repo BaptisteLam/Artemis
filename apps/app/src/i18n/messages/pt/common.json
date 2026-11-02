@@ -1,0 +1,91 @@
+{
+  "common": {
+    "loading": "A carregar…",
+    "copy": "Copiar",
+    "copied": "Copiado"
+  },
+  "lang": {
+    "choose": "Idioma"
+  },
+  "nav": {
+    "dashboard": "Painel",
+    "requests": "Pedidos",
+    "agents": "Agentes",
+    "clients": "Clientes",
+    "cards": "Cartões",
+    "subscriptions": "Subscrições",
+    "transactions": "Transações",
+    "exports": "Exportações",
+    "banks": "Bancos",
+    "team": "Equipa",
+    "audit": "Auditoria",
+    "billing": "Faturação",
+    "settings": "Definições"
+  },
+  "shell": {
+    "home": "Artemis, painel",
+    "organization": "Organização",
+    "admin": "Administração",
+    "freezeAllHint": "Congelar todos os agentes e cancelar os cartões ativos",
+    "frozen": "Congelada",
+    "freezeAll": "Congelar tudo",
+    "signOut": "Terminar sessão",
+    "navAria": "Navegação da aplicação",
+    "pendingCount_one": "{count} pendente",
+    "pendingCount_many": "{count} pendentes",
+    "pendingCount_other": "{count} pendentes",
+    "frozenBanner": "Organização congelada: não é possível emitir nenhum cartão novo. Descongele-a em Definições."
+  },
+  "status": {
+    "pending": "Por aprovar",
+    "approved": "Aprovado",
+    "issued": "Cartão emitido",
+    "completed": "Pago",
+    "rejected": "Recusado",
+    "expired": "Expirado",
+    "failed": "Falha do banco",
+    "canceled": "Cancelado",
+    "active": "Ativo",
+    "pending_bank_sca": "Aprovação bancária",
+    "used": "Utilizado",
+    "frozen": "Congelado",
+    "matched": "Reconciliado",
+    "mismatch": "Discrepância",
+    "unmatched": "Não reconciliado"
+  },
+  "roles": {
+    "owner": "Proprietário",
+    "admin": "Administrador",
+    "approver": "Aprovador",
+    "viewer": "Leitor"
+  },
+  "errors": {
+    "network": "Rede indisponível. Verifique a sua ligação.",
+    "unauthorized": "A sua sessão expirou. Inicie sessão novamente.",
+    "forbidden": "Não tem permissão para efetuar esta ação.",
+    "not_found": "Não encontrado ou já não disponível.",
+    "invalid_input": "Alguns dados são inválidos. Verifique o formulário.",
+    "rate_limited": "Demasiadas tentativas. Aguarde um momento e tente novamente.",
+    "quota_exceeded": "Atingiu a sua quota mensal de mandatos.",
+    "subscription_inactive": "A sua subscrição está inativa. Atualize-a em Faturação.",
+    "org_frozen": "A organização está congelada.",
+    "agent_frozen": "Este agente está congelado.",
+    "request_not_pending": "Este pedido já não está pendente.",
+    "request_expired": "Este pedido expirou.",
+    "already_revealed": "Este cartão já foi entregue.",
+    "card_not_ready": "O cartão ainda não está disponível.",
+    "bank_error": "O banco recusou a operação.",
+    "plan_limit": "Atingiu o limite do seu plano. Mude de plano para continuar.",
+    "over_client_budget": "O orçamento mensal deste cliente foi ultrapassado.",
+    "internal": "Ocorreu um erro. Tente novamente.",
+    "currency_not_allowed": "Esta moeda não é autorizada pela política.",
+    "invalid_amount": "Montante inválido.",
+    "over_transaction_limit": "Montante superior ao limite por transação.",
+    "over_monthly_budget": "O orçamento mensal do agente foi ultrapassado.",
+    "merchant_blocked": "Este comerciante está bloqueado pela política.",
+    "merchant_not_allowed": "Este comerciante não consta da lista de autorizados.",
+    "mcc_blocked": "Esta categoria de comerciante está bloqueada.",
+    "mcc_not_allowed": "Esta categoria de comerciante não está autorizada.",
+    "too_many_requests": "Demasiados pedidos deste agente na última hora."
+  }
+}

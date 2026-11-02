@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Definições",
+    "signOut": "Terminar sessão",
+    "language": {
+      "title": "Idioma",
+      "lead": "Idioma da interface neste dispositivo."
+    },
+    "notifications": {
+      "title": "Notificações neste dispositivo",
+      "lead": "Receba uma notificação por cada pedido. No iPhone, adicione primeiro o Artemis ao ecrã principal (Partilhar → Adicionar ao ecrã principal).",
+      "notConfigured": "As notificações push não estão configuradas neste servidor (chaves VAPID). Os e-mails continuam ativos.",
+      "unsupported": "Este navegador não suporta notificações push.",
+      "denied": "As notificações estão bloqueadas nas definições do navegador.",
+      "enable": "Ativar as notificações",
+      "on": "Notificações ativadas.",
+      "disable": "Desativar"
+    },
+    "slack": {
+      "lead": "Cada pedido pendente é publicado num canal Slack, com um botão que abre a aprovação com chave de acesso. Crie um «Incoming Webhook» no Slack e cole o respetivo URL.",
+      "connected": "O Slack está ligado.",
+      "disconnect": "Desligar",
+      "urlLabel": "URL do webhook Slack",
+      "connect": "Ligar",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Entrega de cartões aos agentes",
+      "confirmDirect": "Entrega direta: o número do cartão passará uma vez pelo Artemis a caminho do agente. Isto coloca-o no âmbito da PCI DSS e, com a Revolut, exige uma autorização escrita. Continuar?",
+      "linkTitle": "Ligação efémera (recomendado)",
+      "linkText": "O agente recebe uma ligação de utilização única válida durante 10 minutos; o cartão é apresentado pelo banco emissor (Stripe Issuing). O número nunca passa pelo Artemis.",
+      "directTitle": "Entrega direta (opção avançada)",
+      "directText": "O número é transmitido ao agente uma única vez, sem ser armazenado. Obrigatória para a Revolut. Entra no âmbito da PCI DSS."
+    },
+    "org": {
+      "title": "Organização",
+      "name": "Nome",
+      "rename": "Mudar o nome"
+    },
+    "emergency": {
+      "title": "Emergência",
+      "lead": "«Congelar tudo» suspende todos os agentes e cancela os cartões ativos e os pedidos pendentes. Utilize-o se um agente tiver um comportamento anómalo ou se um token tiver sido divulgado.",
+      "confirmFreeze": "Congelar toda a organização? Todos os agentes serão congelados e os cartões ativos cancelados.",
+      "unfreeze": "Descongelar a organização",
+      "freeze": "Congelar tudo agora",
+      "afterUnfreeze": "Depois de descongelar, reative cada agente a partir da respetiva página."
+    },
+    "passkeys": {
+      "title": "Chaves de acesso",
+      "devicePrompt": "Nome do dispositivo (ex.: iPhone da Lea)",
+      "confirmDelete": "Eliminar esta chave de acesso?",
+      "add": "Adicionar",
+      "lead": "É necessária uma chave de acesso para aprovar uma despesa. Adicione uma em cada dispositivo que utiliza.",
+      "addedOn": "adicionada a {date}",
+      "delete": "Eliminar",
+      "none": "Nenhuma chave de acesso: ainda não pode aprovar despesas."
+    }
+  }
+}

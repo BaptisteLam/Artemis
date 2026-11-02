@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Os seus agentes pagam. A última palavra é sua.",
+    "unknownAgent": "Um agente",
+    "unknownMerchant": "um comerciante",
+    "requestPending": {
+      "title": "{agent} quer gastar {amount}",
+      "subject": "Por aprovar: {amount} em {merchant}",
+      "merchant": "Comerciante: {merchant}",
+      "purpose": "Finalidade: {purpose}",
+      "expires": "Sem resposta, o pedido expira automaticamente.",
+      "cta": "Ver e aprovar →",
+      "slack": "*{title}* em *{merchant}*",
+      "slackCta": "Ver e assinar com a minha chave de acesso"
+    },
+    "cardIssueFailed": {
+      "subject": "Falha na criação do cartão em {merchant}",
+      "title": "O banco não criou o cartão",
+      "fallback": "Erro do banco.",
+      "cta": "Ver o pedido →"
+    },
+    "mismatch": {
+      "subject": "Discrepância detetada: {amount} em {merchant}",
+      "title": "Uma transação não corresponde ao mandato",
+      "check": "Verifique a transação e congele o agente, se necessário.",
+      "cta": "Ver as transações →",
+      "pushTitle": "Discrepância numa transação"
+    },
+    "invitation": {
+      "subject": "Convite para se juntar a {org} no Artemis",
+      "title": "Junte-se a {org}",
+      "body": "Foi convidado para aprovar e acompanhar as despesas dos agentes de IA da sua equipa.",
+      "cta": "Aceitar o convite →"
+    }
+  }
+}
