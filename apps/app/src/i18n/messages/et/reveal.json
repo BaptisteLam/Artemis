@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Ühekordne kaart · simuleeritud pank",
+    "eyebrowBank": "Ühekordne kaart · väljastanud teie pank",
+    "lead": "See link avaneb ainult üks kord. Kaart on piiratud ülaltoodud summaga ja lukustatud sellele kaupmehele.",
+    "fields": {
+      "number": "Number",
+      "expiry": "Kehtivus",
+      "cvc": "Turvakood",
+      "holder": "Kaardiomanik"
+    },
+    "opening": "Avamine…",
+    "show": "Näita kaarti •••• {last4}",
+    "footer": "Numbrit kuvab otse väljastav pank: see ei läbi kunagi Artemist.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js pole saadaval.",
+      "invalidLink": "Link on vigane, juba kasutatud või aegunud.",
+      "stripeRefused": "Stripe lükkas taotluse tagasi."
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Meeskond",
+    "lead": "Kinnitajad saavad taotlused ja allkirjastavad need oma pääsuvõtmega.",
+    "confirmRemove": "Kas eemaldada see liige?",
+    "cols": {
+      "member": "Liige",
+      "role": "Roll",
+      "since": "Alates"
+    },
+    "you": "teie",
+    "remove": "Eemalda",
+    "invite": "Kutsu",
+    "email": "E-post",
+    "role": "Roll",
+    "send": "Saada kutse",
+    "inviteLink": "Kutse link (kehtib 7 päeva):",
+    "expiresOn": "aegub {date}",
+    "revoke": "Tühista"
+  }
+}

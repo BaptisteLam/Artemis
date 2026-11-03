@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Pradėkite naudotis Artemis",
+      "lead": "Nuo registracijos iki pirmojo jūsų agento mokėjimo Sandbox aplinkoje per penkias minutes.",
+      "step1": {
+        "title": "1. Susikurkite paskyrą",
+        "body": "Užsiregistruokite <a href=\"{href}\">programoje</a> savo el. pašto adresu (stebuklinga nuoroda), sukurkite organizaciją ir užregistruokite prieigos raktą: juo tvirtinsite išlaidas."
+      },
+      "step2": {
+        "title": "2. Sukurkite agentą",
+        "body": "Skiltyje <strong>Agentai</strong> sukurkite, pavyzdžiui, <code>notion.agent</code>. Artemis parodo jo žetoną (<code>art_test_…</code> Sandbox aplinkoje, <code>art_live_…</code> su tikru banku) <strong>tik vieną kartą</strong>: nukopijuokite jį."
+      },
+      "step3": {
+        "title": "3. Prijunkite agentą",
+        "fastest": "Greičiausias būdas: <code>npx artemis-agents init</code> (žr. <a href=\"{cli}\">CLI</a>).",
+        "server": "MCP serveris pasiekiamas adresu <code>{url}</code> su antrašte <code>Authorization: Bearer &lt;token&gt;</code>. Vadovaukitės savo įrankio instrukcija: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> arba <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. Pirkimo ciklas",
+        "tool": "Įrankis",
+        "role": "Paskirtis",
+        "requestCard": "Užklausia kortelės: suma <strong>centais</strong>, valiuta, prekybininkas, tikslas.",
+        "getRequestStatus": "Stebi žmogaus patvirtinimą.",
+        "getCardForCheckout": "Grąžina <strong>laikiną nuorodą</strong> (10 min., vienkartinė): kortelę rodo bankas, ji nepereina per Artemis.",
+        "listBudgets": "Mėnesio biudžetas, išleista, likutis, limitas.",
+        "getSpendSummary": "Išlaidos pagal prekybininką (diena, savaitė, mėnuo).",
+        "attachReceipt": "Prideda prie pirkimo kvitą.",
+        "cancelCard": "Atšaukia kortelę, jei pirkimas nebevyks."
+      },
+      "step5": {
+        "title": "5. Pradėkite tikrą veiklą",
+        "body": "Pasirinkite planą skiltyje <strong>Atsiskaitymai</strong>, tada prijunkite savo banką skiltyje <strong>Bankai</strong>. Su šiuo banku susieti agentai gauna tikras vienkartines korteles."
+      }
+    },
+    "mcpClaude": {
+      "title": "Prijungti Claude",
+      "lead": "Claude Code, Claude Desktop ir Claude jungtys naudoja MCP per HTTP.",
+      "verify": "Patikrinkite komanda <code>claude mcp list</code>, tada paprašykite, pavyzdžiui: „Užsakyk mums Notion prenumeratą už {price} per Artemis“.",
+      "desktopBody": "Atidarykite <em>Settings → Developer → Edit Config</em> ir pridėkite:",
+      "instructionsTitle": "Naudingos instrukcijos agentui",
+      "instructionsBody": "Pridėkite prie savo sistemos instrukcijų:"
+    },
+    "mcpChatgpt": {
+      "title": "Prijungti ChatGPT",
+      "lead": "ChatGPT priima nuotolinius MCP serverius kaip pasirinktines jungtis.",
+      "addTitle": "Pridėkite jungtį",
+      "step1": "Atidarykite <em>Settings → Connectors → Advanced</em> ir, jei to reikalauja jūsų planas, įjunkite kūrėjo režimą.",
+      "step2": "Sukurkite jungtį, URL: <code>{url}</code>.",
+      "step3": "Autentifikavimas: antraštė <code>Authorization</code> su reikšme <code>Bearer art_…</code> (priklausomai nuo jūsų ChatGPT darbo erdvės siūlomų parinkčių).",
+      "note": "Tikslūs pavadinimai skirtinguose ChatGPT planuose skiriasi; adresas ir antraštė lieka tie patys.",
+      "openaiTitle": "OpenAI agentai (API)",
+      "openaiBody": "Naudodami Responses API arba Agents SDK, deklaruokite nuotolinį MCP įrankį, nukreiptą į <code>{url}</code>, su ta pačia antrašte."
+    },
+    "cli": {
+      "title": "CLI, Claude įgūdis ir n8n",
+      "lead": "Nuo nulio iki pirmojo įgaliojimo per tris minutes.",
+      "commandTitle": "Viena komanda",
+      "commandBody": "Komanda paprašo API URL ir agento žetono (sukurto programoje, puslapyje Agentai), patikrina prieigą, išsaugo konfigūraciją faile <code>~/.config/artemis/config.json</code>, prideda MCP serverį prie Claude Code, jei jis įdiegtas, ir išveda konfigūraciją Claude Desktop ir n8n. Su Sandbox žetonu ir parinktimi <code>--demo</code> ji sukuria pirmąjį bandomąjį įgaliojimą, kurį galėsite patvirtinti programoje.",
+      "skillTitle": "Claude įgūdis",
+      "skillBody": "Įgūdis <code>artemis-payments</code> išmoko Claude mokėti per Artemis: suma centais, patvirtinimo laukimas, mokėjimo nuorodos atidarymas tinkamu metu, kvitas po pirkimo ir injekcijų atmetimas. Nukopijuokite saugyklos aplanką <code>integrations/claude-skill/artemis</code> į <code>~/.claude/skills/</code>.",
+      "n8nTitle": "n8n mazgas",
+      "n8nBody": "Įdiekite bendruomenės mazgą <code>n8n-nodes-artemis</code> (Settings → Community nodes). Operacijos: kortelės užklausa, būsena, mokėjimo nuoroda, atšaukimas, biudžetas. Prisijungimo duomenys: API URL ir agento žetonas."
+    },
+    "n8n": {
+      "title": "Prijungti n8n",
+      "lead": "Dvi galimybės: mazgas MCP Client n8n DI agentui arba HTTP užklausos klasikiniam darbo srautui.",
+      "agentTitle": "n8n DI agentas (MCP Client)",
+      "agentBody": "Mazge <em>AI Agent</em> pridėkite įrankį <em>MCP Client</em>: transportas <em>HTTP Streamable</em>, URL <code>{url}</code>, autentifikavimas <em>Header Auth</em> su <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "HTTP darbo srautas",
+      "workflowBody": "Importuokite darbo srauto pavyzdį <code>examples/n8n/artemis-request-card.json</code> iš saugyklos. Jis nuosekliai vykdo:",
+      "step1With": "su",
+      "step2": "apklausos ciklą <code>GET /v1/card-requests/:id</code>, kol būsena taps <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code>, kad gautų laikiną kortelės nuorodą (10 minučių, vienkartinė)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Make, jūsų scenarijams ir jūsų pačių agentams. Tas pats žetonas kaip ir MCP serveriui.",
+      "authTitle": "Autentifikavimas",
+      "base": "Bazinis URL: <code>{url}</code>. Limitas: 60 užklausų per minutę vienam agentui.",
+      "endpointsTitle": "Galiniai taškai",
+      "method": "Metodas",
+      "path": "Kelias",
+      "role": "Paskirtis",
+      "create": "Sukurti užklausą",
+      "status": "Užklausos būsena",
+      "reveal": "Laikina nuoroda į kortelę (10 min., vienkartinė)",
+      "cancel": "Atšaukti",
+      "receipts": "Pridėti kvitą",
+      "budgets": "Likęs biudžetas",
+      "spendSummary": "Išlaidos pagal prekybininką",
+      "exampleTitle": "Pavyzdys",
+      "errorsTitle": "Klaidos",
+      "errorsBody": "Dažniausi kodai: <code>invalid_amount</code> (suma turi būti sveikasis skaičius centais), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Taisyklės ir tvirtinimas",
+      "lead": "Kaip Artemis nusprendžia, ar užklausa atmetama, patvirtinama automatiškai, ar pateikiama jums pasirašyti.",
+      "orderTitle": "Vertinimo tvarka",
+      "orderBody": "Pirmoji neįvykdyta taisyklė atmeta užklausą:",
+      "o1": "Leidžiama valiuta (<code>currency_not_allowed</code>).",
+      "o2": "Teigiama suma, neviršijanti vieno pirkimo limito (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Mėnesio biudžetas: mėnesio laukiančios, patvirtintos ir apmokėtos užklausos + suma (<code>over_monthly_budget</code>). Mėnuo skaičiuojamas Paryžiaus laiku.",
+      "o4": "Prekybininkas užblokuotas arba jo nėra leidžiamųjų sąraše, jei toks yra (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Prekybininko kategorija (MCC) užblokuota arba neleidžiama (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Automatinis patvirtinimas",
+      "autoBody": "Užklausa patvirtinama be jūsų, jei jos suma yra <strong>mažesnė</strong> už automatinio patvirtinimo ribą <strong>ir</strong> prekybininkas yra agento leidžiamųjų sąraše. Jei leidžiamųjų sąrašo nėra, kiekviena užklausa pateikiama jums.",
+      "matchTitle": "Prekybininkų atitikimas",
+      "matchBody": "Pavadinimai lyginami neatsižvelgiant į didžiąsias ir mažąsias raides, diakritinius ženklus, teisinę formą ir domeno galūnę: „Notion“ atitinka ir „Notion Labs, Inc.“, ir „notion.so“.",
+      "humanTitle": "Žmogaus patvirtinimas",
+      "humanBody": "Savininkai, administratoriai ir tvirtintojai gauna pranešimą. Patvirtinimui reikalingas prieigos raktas. Jei jūsų bankas taiko savo griežtą kliento autentifikavimą (pavyzdžiui, Qonto), patvirtinkite ir jo programėlėje.",
+      "expiryTitle": "Galiojimo pabaiga",
+      "expiryBody": "Neapdorotos užklausos galiojimas baigiasi po 30 minučių (galima konfigūruoti). Nepanaudota kortelė atšaukiama, kai baigiasi jos galiojimas."
+    }
+  }
+}

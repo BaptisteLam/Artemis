@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Seaded",
+    "signOut": "Logi välja",
+    "language": {
+      "title": "Keel",
+      "lead": "Liidese keel selles seadmes."
+    },
+    "notifications": {
+      "title": "Teavitused selles seadmes",
+      "lead": "Saate teavituse iga taotluse kohta. iPhone'is lisage esmalt Artemis avakuvale (Jaga → Lisa avakuvale).",
+      "notConfigured": "Tõuketeavitused pole selles serveris seadistatud (VAPID-võtmed). E-posti teavitused jäävad aktiivseks.",
+      "unsupported": "See brauser ei toeta tõuketeavitusi.",
+      "denied": "Teavitused on brauseri seadetes blokeeritud.",
+      "enable": "Luba teavitused",
+      "on": "Teavitused on sisse lülitatud.",
+      "disable": "Lülita välja"
+    },
+    "slack": {
+      "lead": "Iga ootel taotlus postitatakse Slacki kanalisse koos nupuga, mis avab pääsuvõtmega kinnitamise. Looge Slackis „Incoming Webhook“ ja kleepige selle URL.",
+      "connected": "Slack on ühendatud.",
+      "disconnect": "Katkesta ühendus",
+      "urlLabel": "Slacki veebihaagi URL",
+      "connect": "Ühenda",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Kaardi üleandmine agentidele",
+      "confirmDirect": "Otse üleandmine: kaardinumber läbib agendini jõudmisel ühe korra Artemise. See toob teid PCI DSS-i kohaldamisalasse ja Revoluti puhul nõuab kirjalikku nõusolekut. Kas jätkata?",
+      "linkTitle": "Lühiajaline link (soovitatav)",
+      "linkText": "Agent saab ühekordse lingi, mis kehtib 10 minutit; kaarti kuvab väljastav pank (Stripe Issuing). Number ei läbi kunagi Artemist.",
+      "directTitle": "Otse üleandmine (täiendav valik)",
+      "directText": "Number edastatakse agendile ainult üks kord ja seda ei salvestata. Revoluti puhul kohustuslik. Te satute PCI DSS-i kohaldamisalasse."
+    },
+    "org": {
+      "title": "Organisatsioon",
+      "name": "Nimi",
+      "rename": "Nimeta ümber"
+    },
+    "emergency": {
+      "title": "Hädaolukord",
+      "lead": "„Külmuta kõik“ peatab kõik agendid ning tühistab aktiivsed kaardid ja ootel taotlused. Kasutage seda, kui agent käitub ebatavaliselt või token on lekkinud.",
+      "confirmFreeze": "Kas külmutada kogu organisatsioon? Kõik agendid külmutatakse ja aktiivsed kaardid tühistatakse.",
+      "unfreeze": "Lõpeta organisatsiooni külmutamine",
+      "freeze": "Külmuta kõik kohe",
+      "afterUnfreeze": "Pärast külmutamise lõpetamist aktiveerige iga agent uuesti selle lehel."
+    },
+    "passkeys": {
+      "title": "Pääsuvõtmed",
+      "devicePrompt": "Seadme nimi (nt Lea iPhone)",
+      "confirmDelete": "Kas kustutada see pääsuvõti?",
+      "add": "Lisa",
+      "lead": "Kulu kinnitamiseks on vaja pääsuvõtit. Lisage see igasse seadmesse, mida kasutate.",
+      "addedOn": "lisatud {date}",
+      "delete": "Kustuta",
+      "none": "Pääsuvõti puudub: te ei saa veel kulusid kinnitada."
+    }
+  }
+}

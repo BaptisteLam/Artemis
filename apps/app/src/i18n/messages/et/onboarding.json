@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Samm {step}/{total}",
+    "continue": "Jätka →",
+    "org": {
+      "title": "Teie organisatsioon",
+      "lead": "Alustate Sandboxis: simuleeritud pank, tasusid pole.",
+      "nameLabel": "Ettevõtte või stuudio nimi"
+    },
+    "agent": {
+      "title": "Teie esimene agent",
+      "lead": "Lühike nimi, mis ütleb, mida agent ostab. Vaikereeglid: {monthly} kuus, {perPurchase} ostu kohta.",
+      "nameLabel": "Agendi nimi",
+      "platformLabel": "Platvorm",
+      "platformOther": "Muu",
+      "submit": "Loo agent →"
+    },
+    "connect": {
+      "title": "Ühendage oma agent",
+      "done": "Kopeerisin tokeni →"
+    },
+    "passkey": {
+      "title": "Teie kinnitamise pääsuvõti",
+      "lead": "Iga kulu allkirjastatakse Face ID, Touch ID, Windows Hello või turvavõtmega. Võimaluse korral registreerige see telefonis, mis teavitusi saab.",
+      "deviceName": "Esimene seade",
+      "saved": "Pääsuvõti registreeritud.",
+      "unsupported": "See brauser ei toeta pääsuvõtmeid.",
+      "register": "Registreeri pääsuvõti",
+      "openDashboard": "Ava töölaud →",
+      "later": "Hiljem"
+    }
+  }
+}

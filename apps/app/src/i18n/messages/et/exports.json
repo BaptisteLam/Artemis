@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Raamatupidamise ekspordid",
+    "lead": "Teie pankade debiteeritud kulud, valmis Pennylane'i, raamatupidaja või arvutustabeli jaoks.",
+    "failed": "Eksport ebaõnnestus.",
+    "from": "Alates",
+    "to": "Kuni (välja arvatud)",
+    "downloadCsv": "Laadi alla CSV",
+    "downloadFec": "Laadi alla FEC",
+    "formats": "CSV: semikooloniga eraldatud, Exceliga ühilduv. FEC: 18 regulatiivset veergu, deebet 604000 / kreedit 512000, imporditav Pennylane'i.",
+    "fecUpsell": "FEC sisaldub alates paketist Team.",
+    "seePlans": "Vaata pakette"
+  }
+}

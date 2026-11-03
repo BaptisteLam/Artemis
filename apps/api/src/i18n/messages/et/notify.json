@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Teie agendid maksavad. Viimane sõna jääb teile.",
+    "unknownAgent": "Agent",
+    "unknownMerchant": "kaupmees",
+    "requestPending": {
+      "title": "{agent} soovib kulutada {amount}",
+      "subject": "Kinnitamiseks: {amount}, kaupmees {merchant}",
+      "merchant": "Kaupmees: {merchant}",
+      "purpose": "Eesmärk: {purpose}",
+      "expires": "Vastuse puudumisel taotlus aegub automaatselt.",
+      "cta": "Vaata üle ja kinnita →",
+      "slack": "*{title}* – kaupmees *{merchant}*",
+      "slackCta": "Vaata üle ja allkirjasta mu pääsuvõtmega"
+    },
+    "cardIssueFailed": {
+      "subject": "Kaardi loomine ebaõnnestus, kaupmees {merchant}",
+      "title": "Pank ei loonud kaarti",
+      "fallback": "Panga viga.",
+      "cta": "Vaata taotlust →"
+    },
+    "mismatch": {
+      "subject": "Lahknevus tuvastatud: {amount}, kaupmees {merchant}",
+      "title": "Tehing ei vasta volitusele",
+      "check": "Kontrollige tehingut ja vajaduse korral külmutage agent.",
+      "cta": "Vaata tehinguid →",
+      "pushTitle": "Tehingu lahknevus"
+    },
+    "invitation": {
+      "subject": "Kutse liituda organisatsiooniga {org} Artemises",
+      "title": "Liituge organisatsiooniga {org}",
+      "body": "Teid on kutsutud kinnitama ja jälgima oma meeskonna tehisintellekti agentide kulusid.",
+      "cta": "Võta kutse vastu →"
+    }
+  }
+}

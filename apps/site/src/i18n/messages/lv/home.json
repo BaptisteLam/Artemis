@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Eiropas risinājums · MI aģenti",
+      "lead": "Eiropas finanšu ugunsmūris jūsu MI aģentiem. Claude, ChatGPT vai n8n lūdz, jūs parakstāt ar vienu pieskārienu, un katrs izdevums tiek kontrolēts, saskaņots un pierādīts jūsu izvēlētajā bankā.",
+      "tryFree": "Izmēģināt bez maksas →",
+      "seeDemo": "Skatīt demonstrāciju",
+      "visualAria": "Piemērs: aģenta pieprasījums un tā vienreizējas lietošanas karte",
+      "expired": "Derīgums beidzies",
+      "pending": "Gaidošs pieprasījums",
+      "toApprove": "Gaida apstiprinājumu",
+      "purpose": "komandas abonements",
+      "approve": "Apstiprināt ar savu piekļuves atslēgu",
+      "decline": "Noraidīt"
+    },
+    "trust": {
+      "aria": "Garantijas",
+      "europe": "Eiropas",
+      "europeText": "Eiro, Eiropas bankas, dati Frankfurtē, VDAR.",
+      "funds": "Jūsu līdzekļi paliek pie jums",
+      "fundsText": "Artemis nekad neglabā naudu.",
+      "number": "Kartes numurs nenonāk Artemis",
+      "numberText": "Karti parāda jūsu banka, nevis mēs.",
+      "aiAct": "Gatavs AI Act prasībām",
+      "aiActText": "Katrs izdevums parakstīts, ķēdē saistīts žurnāls, ceturkšņa pārskats."
+    },
+    "demo": {
+      "eyebrow": "Demonstrācija",
+      "title": "No pieprasījuma līdz maksājumam 20 sekundēs.",
+      "explain": "Nekad nedalot uzņēmuma karti.",
+      "step1": "Aģents lūdz",
+      "window": "claude · saruna",
+      "userMessage": "Noformē komandai Notion Plus abonementu, 5 vietas.",
+      "agentMessage": "Esmu pieprasījis karti par {amount}. Gaidu jūsu apstiprinājumu.",
+      "step2": "Jūs apstiprināt",
+      "notification": "{agent} vēlas iztērēt {amount}",
+      "sheetTitle": "Apstiprināt pilnvaru",
+      "validity": "{minutes} min",
+      "faceId": "Parakstīt ar Face ID",
+      "step3": "Aģents maksā",
+      "reconciled": "Saskaņots"
+    },
+    "benefits": {
+      "eyebrow": "Ko jūs iegādājaties",
+      "title": "Ne karti.",
+      "explain": "Bankas tās jau sāk dāvināt. Jūs iegādājaties kontroli, laiku un pierādījumus.",
+      "control": {
+        "eyebrow": "Kontrole",
+        "title": "Nekas netiek izmaksāts bez jūsu apstiprinājuma.",
+        "text": "Budžeti, limiti, atļautie tirgotāji, drošības ierobežojumi pret uzvednes injekcijām. Virs jūsu sliekšņiem katrs izdevums gaida paraksta ar piekļuves atslēgu no viena vai vairākiem apstiprinātājiem."
+      },
+      "time": {
+        "eyebrow": "Ietaupīts laiks",
+        "title": "Vairs nekādu manuāli veidotu karšu.",
+        "text": "Aģents lūdz, jūs parakstāt ar vienu pieskārienu, karte tiek izveidota jūsu bankā, darījums tiek saskaņots un rēķins saglabāts. Vairs nav jāpārbauda izraksti un jāmeklē čeki."
+      },
+      "proof": {
+        "eyebrow": "Pierādījumi",
+        "title": "Katru izdevumu apstiprināja cilvēks.",
+        "text": "Parakstītas pilnvaras, ķēdē saistīts, pret viltošanu aizsargāts audita žurnāls un ceturkšņa uzraudzības pārskats: tas, ko prasa AI Act, jūsu finanšu direktors un auditors, gatavs nodošanai."
+      },
+      "agencies": {
+        "eyebrow": "Aģentūrām",
+        "title": "Viens budžets un viens rēķins katram klientam.",
+        "text": "Klientu darbvietas, mēneša budžets katram klientam, pārfakturēšanas uzcenojums un nosūtīšanai gatavs ikmēneša pārskats. Jūsu klienti beidzot redz, ko tērē viņu aģenti."
+      }
+    },
+    "how": {
+      "eyebrow": "Kā tas darbojas",
+      "title": "Četri soļi, bez kopīgas kartes.",
+      "s1": "Aģents lūdz",
+      "s1Text": "Ar MCP vai API: “{amount} pie Notion, komandas abonements”.",
+      "s2": "Noteikumi filtrē",
+      "s2Text": "Budžets, limits, tirgotājs: ārpus noteikumiem pieprasījums tiek uzreiz noraidīts.",
+      "s3": "Jūs apstiprināt",
+      "s3Text": "Paziņojums jūsu tālrunī, paraksts ar piekļuves atslēgu.",
+      "s4": "Aģents maksā",
+      "s4Text": "Vienreizējas lietošanas karte, precīza summa, īss derīguma termiņš, pēc tam automātiska saskaņošana."
+    },
+    "useCases": {
+      "eyebrow": "Lietošanas gadījumi",
+      "title": "Ko jūsu aģenti jau pērk.",
+      "explain": "Tagad ar savu karti.",
+      "api": {
+        "title": "API un marķieri",
+        "text": "Papildiniet kredītus, kad beidzas kvota, neatstājot uzņēmuma karti .env failā."
+      },
+      "saas": {
+        "title": "SaaS abonementi",
+        "text": "Noformējiet vai pagariniet komandas plānu par precīzu apstiprināto summu."
+      },
+      "cloud": {
+        "title": "Mākonis un domēni",
+        "text": "Iegādājieties domēna vārdu vai samaksājiet par mitināšanas pārsniegumu izvēršanas vidū."
+      },
+      "data": {
+        "title": "Dati un B2B pirkumi",
+        "text": "Samaksājiet par datu kopu, datu ieguves uzdevumu vai piederumiem, čeku pievienojot automātiski.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Godīgi sakot",
+      "title": "Izmantojat tikai Stripe, Ramp vai Mercury?",
+      "explain": "Tie jau dara daļu darba.",
+      "lead": "Artemis piedāvā to, ko banka nedarīs saviem konkurentiem.",
+      "banks": "Vairākas bankas vienlaikus",
+      "banksText": "Stripe Issuing, Revolut, Qonto un Sandbox, pārvaldīti no vienas vietas ar vienotu politiku.",
+      "accounting": "Francijas grāmatvedība",
+      "accountingText": "FEC un Pennylane eksports, čeks pie katras pilnvaras, automātiska saskaņošana.",
+      "proof": "AI Act pierādījumi, gatavi nodošanai",
+      "proofText": "Cilvēka paraksts katram izdevumam, ķēdē saistīts žurnāls, aģentu reģistrs, ceturkšņa pārskats.",
+      "agency": "Aģentūras režīms",
+      "agencyText": "Aģenti vairākiem klientiem, katram savs budžets, uzcenojums un pārskats."
+    },
+    "europe": {
+      "eyebrow": "Eiropas risinājums",
+      "title": "Radīts Eiropā, Eiropai.",
+      "lead": "Amerikāņu aģentu kartes runā dolāros, amerikāņu banku un amerikāņu tiesību valodā. Artemis runā eiro, Eiropas banku, VDAR, AI Act un Francijas grāmatvedības valodā.",
+      "banks": "Eiro un Eiropas bankas: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "ES",
+      "data": "Dati tiek mitināti Frankfurtē, VDAR, šifrēti piekļuves dati",
+      "article": "14. pants",
+      "oversight": "AI Act cilvēka uzraudzība, pierādīta par katru izdevumu",
+      "accounting": "Francijas grāmatvedība: FEC, Pennylane, pievienoti čeki"
+    },
+    "compare": {
+      "eyebrow": "Salīdzinājums",
+      "title": "Karti izsniedz jūsu banka.",
+      "explain": "Artemis pārvalda tās visas.",
+      "criterion": "Kritērijs",
+      "bankOnly": "Tikai jūsu banka (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Tikai jūsu banka",
+      "usCards": "Amerikāņu aģentu kartes",
+      "usCardsShort": "ASV aģentu kartes",
+      "rows": {
+        "card": "Virtuālā karte aģentam",
+        "banks": "Vairākas bankas, viena politika",
+        "signature": "Cilvēka paraksts katram izdevumam (piekļuves atslēga)",
+        "aiAct": "Eksportējami AI Act pierādījumi",
+        "accounting": "Francijas grāmatvedība (FEC, Pennylane)",
+        "agency": "Aģentūras režīms (budžeti un pārfakturēšana katram klientam)",
+        "europe": "Eiro, mitināšana un dati Eiropā"
+      },
+      "values": {
+        "yes": "Jā",
+        "no": "Nē",
+        "yesBank": "Jā, izsniedz jūsu banka",
+        "yesQuorum": "Jā, ar kvorumu",
+        "dependsPlan": "Atkarīgs no plāna",
+        "dependsBank": "Atkarīgs no bankas",
+        "partial": "Daļēji"
+      }
+    },
+    "builders": {
+      "eyebrow": "Izstrādātājiem",
+      "title": "Pievienots ar vienu rindiņu.",
+      "explain": "Claude, ChatGPT, n8n, Make vai jūsu pašu kods.",
+      "lead": "Attālais MCP serveris un REST API. Bezmaksas Sandbox ar simulētām kartēm testēšanai bez bankas.",
+      "connect": "Pievienot Claude →",
+      "window": "terminālis"
+    },
+    "faq": {
+      "eyebrow": "Biežāk uzdotie jautājumi",
+      "title": "Ko mums jautā.",
+      "more": "Vēl kāds jautājums? Izlasiet lapu <a href=\"{security}\">Drošība</a> vai <a href=\"{docs}\">dokumentāciju</a>."
+    },
+    "final": {
+      "title": "Saglabājiet kontroli pār saviem aģentiem.",
+      "lead": "Eiropas finanšu ugunsmūris, bez maksas plānā Sandbox, kredītkarte nav nepieciešama. Pēdējais vārds paliek jums.",
+      "signup": "Izveidot kontu →",
+      "pricing": "Skatīt cenas",
+      "holder": "your.agent"
+    }
+  }
+}

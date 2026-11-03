@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Darba sākšana ar Artemis",
+      "lead": "No reģistrācijas līdz jūsu aģenta pirmajam maksājumam vidē Sandbox piecās minūtēs.",
+      "step1": {
+        "title": "1. Izveidojiet kontu",
+        "body": "Reģistrējieties <a href=\"{href}\">lietotnē</a> ar savu e-pastu (maģiskā saite), izveidojiet organizāciju un reģistrējiet piekļuves atslēgu: ar to jūs apstiprināsiet izdevumus."
+      },
+      "step2": {
+        "title": "2. Izveidojiet aģentu",
+        "body": "Sadaļā <strong>Aģenti</strong> izveidojiet, piemēram, <code>notion.agent</code>. Artemis parāda tā marķieri (<code>art_test_…</code> vidē Sandbox, <code>art_live_…</code> ar īstu banku) <strong>tikai vienu reizi</strong>: nokopējiet to."
+      },
+      "step3": {
+        "title": "3. Pievienojiet aģentu",
+        "fastest": "Ātrākais veids: <code>npx artemis-agents init</code> (skatīt <a href=\"{cli}\">CLI</a>).",
+        "server": "MCP serveris atrodas adresē <code>{url}</code>, ar galveni <code>Authorization: Bearer &lt;token&gt;</code>. Sekojiet sava rīka norādījumiem: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> vai <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. Pirkuma cikls",
+        "tool": "Rīks",
+        "role": "Nozīme",
+        "requestCard": "Pieprasa karti: summa <strong>centos</strong>, valūta, tirgotājs, mērķis.",
+        "getRequestStatus": "Seko cilvēka apstiprinājumam.",
+        "getCardForCheckout": "Atgriež <strong>īslaicīgu saiti</strong> (10 min, vienreizējai lietošanai): karti parāda banka, tai nešķērsojot Artemis.",
+        "listBudgets": "Mēneša budžets, iztērētais, atlikums, limits.",
+        "getSpendSummary": "Izdevumi pa tirgotājiem (diena, nedēļa, mēnesis).",
+        "attachReceipt": "Pievieno pirkumam čeku.",
+        "cancelCard": "Anulē karti, ja pirkums vairs nenotiks."
+      },
+      "step5": {
+        "title": "5. Pāreja uz reālo darbību",
+        "body": "Izvēlieties plānu sadaļā <strong>Norēķini</strong>, pēc tam pievienojiet savu banku sadaļā <strong>Bankas</strong>. Ar šo banku saistītie aģenti saņem īstas vienreizējas lietošanas kartes."
+      }
+    },
+    "mcpClaude": {
+      "title": "Pievienot Claude",
+      "lead": "Claude Code, Claude Desktop un Claude savienotāji izmanto MCP pār HTTP.",
+      "verify": "Pārbaudiet ar <code>claude mcp list</code>, pēc tam palūdziet, piemēram: “Noformē mums Notion abonementu par {price}, izmantojot Artemis”.",
+      "desktopBody": "Atveriet <em>Settings → Developer → Edit Config</em> un pievienojiet:",
+      "instructionsTitle": "Noderīgas instrukcijas aģentam",
+      "instructionsBody": "Pievienojiet savām sistēmas instrukcijām:"
+    },
+    "mcpChatgpt": {
+      "title": "Pievienot ChatGPT",
+      "lead": "ChatGPT pieņem attālos MCP serverus kā pielāgotus savienotājus.",
+      "addTitle": "Pievienojiet savienotāju",
+      "step1": "Atveriet <em>Settings → Connectors → Advanced</em> un, ja jūsu plāns to prasa, iespējojiet izstrādātāja režīmu.",
+      "step2": "Izveidojiet savienotāju, URL: <code>{url}</code>.",
+      "step3": "Autentifikācija: galvene <code>Authorization</code> ar vērtību <code>Bearer art_…</code> (atkarībā no jūsu ChatGPT darbvietas piedāvātajām iespējām).",
+      "note": "Precīzi nosaukumi dažādos ChatGPT plānos atšķiras; adrese un galvene paliek nemainīgas.",
+      "openaiTitle": "OpenAI aģenti (API)",
+      "openaiBody": "Izmantojot Responses API vai Agents SDK, deklarējiet attālo MCP rīku, kas norāda uz <code>{url}</code>, ar to pašu galveni."
+    },
+    "cli": {
+      "title": "CLI, Claude prasme un n8n",
+      "lead": "No nulles līdz pirmajai pilnvarai trīs minūtēs.",
+      "commandTitle": "Viena komanda",
+      "commandBody": "Komanda pieprasa API URL un aģenta marķieri (izveidots lietotnē, lapā Aģenti), pārbauda piekļuvi, saglabā konfigurāciju failā <code>~/.config/artemis/config.json</code>, pievieno MCP serveri Claude Code, ja tas ir instalēts, un izdrukā konfigurāciju Claude Desktop un n8n. Ar Sandbox marķieri un opciju <code>--demo</code> tā izveido pirmo testa pilnvaru, ko varat apstiprināt lietotnē.",
+      "skillTitle": "Claude prasme",
+      "skillBody": "Prasme <code>artemis-payments</code> iemāca Claude maksāt ar Artemis starpniecību: summa centos, apstiprinājuma gaidīšana, maksājuma saites atvēršana īstajā brīdī, čeks pēc pirkuma un injekciju noraidīšana. Nokopējiet repozitorija mapi <code>integrations/claude-skill/artemis</code> uz <code>~/.claude/skills/</code>.",
+      "n8nTitle": "n8n mezgls",
+      "n8nBody": "Instalējiet kopienas mezglu <code>n8n-nodes-artemis</code> (Settings → Community nodes). Darbības: kartes pieprasīšana, statuss, maksājuma saite, atcelšana, budžets. Piekļuves dati: API URL un aģenta marķieris."
+    },
+    "n8n": {
+      "title": "Pievienot n8n",
+      "lead": "Divas iespējas: mezgls MCP Client n8n MI aģentam vai HTTP pieprasījumi klasiskai darbplūsmai.",
+      "agentTitle": "n8n MI aģents (MCP Client)",
+      "agentBody": "Mezglā <em>AI Agent</em> pievienojiet rīku <em>MCP Client</em>: transports <em>HTTP Streamable</em>, URL <code>{url}</code>, autentifikācija <em>Header Auth</em> ar <code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "HTTP darbplūsma",
+      "workflowBody": "Importējiet repozitorija darbplūsmas piemēru <code>examples/n8n/artemis-request-card.json</code>. Tajā secīgi tiek izpildīts:",
+      "step1With": "ar",
+      "step2": "aptaujas cikls ar <code>GET /v1/card-requests/:id</code>, līdz statuss ir <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code>, lai saņemtu kartes īslaicīgo saiti (10 minūtes, vienreizējai lietošanai)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Make, jūsu skriptiem un jūsu pašu aģentiem. Tas pats marķieris, kas MCP serverim.",
+      "authTitle": "Autentifikācija",
+      "base": "Bāzes URL: <code>{url}</code>. Limits: 60 pieprasījumi minūtē vienam aģentam.",
+      "endpointsTitle": "Galapunkti",
+      "method": "Metode",
+      "path": "Ceļš",
+      "role": "Nozīme",
+      "create": "Izveidot pieprasījumu",
+      "status": "Pieprasījuma statuss",
+      "reveal": "Īslaicīga saite uz karti (10 min, vienreizējai lietošanai)",
+      "cancel": "Atcelt",
+      "receipts": "Pievienot čeku",
+      "budgets": "Atlikušais budžets",
+      "spendSummary": "Izdevumi pa tirgotājiem",
+      "exampleTitle": "Piemērs",
+      "errorsTitle": "Kļūdas",
+      "errorsBody": "Biežākie kodi: <code>invalid_amount</code> (summai jābūt veselam skaitlim centos), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Noteikumi un apstiprināšana",
+      "lead": "Kā Artemis izlemj, vai pieprasījums tiek noraidīts, apstiprināts automātiski vai iesniegts jūsu parakstam.",
+      "orderTitle": "Pārbaudes secība",
+      "orderBody": "Pirmais neizpildītais noteikums noraida pieprasījumu:",
+      "o1": "Atļauta valūta (<code>currency_not_allowed</code>).",
+      "o2": "Pozitīva summa, kas nepārsniedz viena pirkuma limitu (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Mēneša budžets: mēneša gaidošie, apstiprinātie un apmaksātie pieprasījumi + summa (<code>over_monthly_budget</code>). Mēnesis tiek skaitīts pēc Parīzes laika.",
+      "o4": "Bloķēts tirgotājs vai tirgotājs, kura nav atļauto sarakstā, ja tāds ir (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Tirgotāja kategorija (MCC) ir bloķēta vai nav atļauta (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Automātiska apstiprināšana",
+      "autoBody": "Pieprasījums tiek apstiprināts bez jums, ja tā summa ir <strong>zem</strong> automātiskās apstiprināšanas sliekšņa <strong>un</strong> tirgotājs ir aģenta atļauto sarakstā. Ja atļauto saraksta nav, katrs pieprasījums tiek iesniegts jums.",
+      "matchTitle": "Tirgotāju salīdzināšana",
+      "matchBody": "Nosaukumi tiek salīdzināti, neņemot vērā lielos un mazos burtus, diakritiskās zīmes, juridisko formu un domēna paplašinājumu: “Notion” atbilst gan “Notion Labs, Inc.”, gan “notion.so”.",
+      "humanTitle": "Cilvēka apstiprinājums",
+      "humanBody": "Īpašnieki, administratori un apstiprinātāji saņem paziņojumu. Apstiprināšanai nepieciešama piekļuves atslēga. Ja jūsu banka piemēro savu stingro klienta autentifikāciju (piemēram, Qonto), apstipriniet arī tās lietotnē.",
+      "expiryTitle": "Derīguma beigas",
+      "expiryBody": "Neapstrādāta pieprasījuma derīgums beidzas pēc 30 minūtēm (konfigurējams). Neizmantota karte tiek anulēta, kad beidzas tās derīgums."
+    }
+  }
+}

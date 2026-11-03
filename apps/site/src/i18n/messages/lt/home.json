@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Europinis sprendimas · DI agentai",
+      "lead": "Europinė finansinė užkarda jūsų DI agentams. Claude, ChatGPT ar n8n prašo, jūs pasirašote vienu prisilietimu, o kiekviena išlaida kontroliuojama, suderinama ir įrodoma jūsų pasirinktame banke.",
+      "tryFree": "Išbandyti nemokamai →",
+      "seeDemo": "Žiūrėti demonstraciją",
+      "visualAria": "Pavyzdys: agento užklausa ir jo vienkartinė kortelė",
+      "expired": "Nebegalioja",
+      "pending": "Laukianti užklausa",
+      "toApprove": "Laukia patvirtinimo",
+      "purpose": "komandos prenumerata",
+      "approve": "Patvirtinti prieigos raktu",
+      "decline": "Atmesti"
+    },
+    "trust": {
+      "aria": "Garantijos",
+      "europe": "Europietiška",
+      "europeText": "Eurai, Europos bankai, duomenys Frankfurte, BDAR.",
+      "funds": "Jūsų lėšos lieka pas jus",
+      "fundsText": "Artemis niekada nelaiko pinigų.",
+      "number": "Kortelės numeris nepatenka į Artemis",
+      "numberText": "Kortelę rodo jūsų bankas, o ne mes.",
+      "aiAct": "Pasirengę AI Act",
+      "aiActText": "Kiekviena išlaida pasirašyta, į grandinę sujungtas žurnalas, ketvirtinė ataskaita."
+    },
+    "demo": {
+      "eyebrow": "Demonstracija",
+      "title": "Nuo užklausos iki mokėjimo per 20 sekundžių.",
+      "explain": "Niekada nesidalijant įmonės kortele.",
+      "step1": "Agentas prašo",
+      "window": "claude · pokalbis",
+      "userMessage": "Užsakyk komandai Notion Plus prenumeratą, 5 vietos.",
+      "agentMessage": "Užklausiau kortelės {amount} sumai. Laukiu jūsų patvirtinimo.",
+      "step2": "Jūs patvirtinate",
+      "notification": "{agent} nori išleisti {amount}",
+      "sheetTitle": "Patvirtinti įgaliojimą",
+      "validity": "{minutes} min.",
+      "faceId": "Pasirašyti su Face ID",
+      "step3": "Agentas moka",
+      "reconciled": "Suderinta"
+    },
+    "benefits": {
+      "eyebrow": "Ką perkate",
+      "title": "Ne kortelę.",
+      "explain": "Bankai jas jau pradeda dalyti nemokamai. Jūs perkate kontrolę, laiką ir įrodymus.",
+      "control": {
+        "eyebrow": "Kontrolė",
+        "title": "Niekas neišmokama be jūsų patvirtinimo.",
+        "text": "Biudžetai, limitai, leidžiami prekybininkai, apsauginės ribos nuo raginimo injekcijų. Viršijus jūsų ribas, kiekviena išlaida laukia vieno ar kelių tvirtintojų parašo prieigos raktu."
+      },
+      "time": {
+        "eyebrow": "Sutaupytas laikas",
+        "title": "Jokių rankomis kuriamų kortelių.",
+        "text": "Agentas prašo, jūs pasirašote vienu prisilietimu, kortelė sukuriama jūsų banke, operacija suderinama, o sąskaita faktūra išsaugoma. Nebereikia tikrinti išrašų ir ieškoti kvitų."
+      },
+      "proof": {
+        "eyebrow": "Įrodymai",
+        "title": "Kiekvieną išlaidą patvirtino žmogus.",
+        "text": "Pasirašyti įgaliojimai, į grandinę sujungtas, nuo klastojimo apsaugotas audito žurnalas ir ketvirtinė priežiūros ataskaita: tai, ko reikalauja AI Act, jūsų finansų direktorius ir auditorius, paruošta perduoti."
+      },
+      "agencies": {
+        "eyebrow": "Agentūroms",
+        "title": "Vienas biudžetas ir viena sąskaita kiekvienam klientui.",
+        "text": "Klientų darbo erdvės, mėnesio biudžetas kiekvienam klientui, pakartotinio sąskaitų išrašymo antkainis ir mėnesio ataskaita, paruošta išsiųsti. Jūsų klientai pagaliau mato, ką išleidžia jų agentai."
+      }
+    },
+    "how": {
+      "eyebrow": "Kaip tai veikia",
+      "title": "Keturi žingsniai, jokios bendros kortelės.",
+      "s1": "Agentas prašo",
+      "s1Text": "Per MCP arba API: „{amount} Notion, komandos prenumerata“.",
+      "s2": "Taisyklės filtruoja",
+      "s2Text": "Biudžetas, limitas, prekybininkas: už taisyklių ribų užklausa iškart atmetama.",
+      "s3": "Jūs patvirtinate",
+      "s3Text": "Pranešimas jūsų telefone, parašas prieigos raktu.",
+      "s4": "Agentas moka",
+      "s4Text": "Vienkartinė kortelė, tiksli suma, trumpas galiojimas, tada automatinis suderinimas."
+    },
+    "useCases": {
+      "eyebrow": "Naudojimo atvejai",
+      "title": "Ką jūsų agentai jau perka.",
+      "explain": "Dabar – su savo kortele.",
+      "api": {
+        "title": "API ir žetonai",
+        "text": "Papildykite kreditus, kai baigiasi kvota, nepalikdami įmonės kortelės .env faile."
+      },
+      "saas": {
+        "title": "SaaS prenumeratos",
+        "text": "Užsisakykite arba pratęskite komandos planą tiksliai patvirtinta suma."
+      },
+      "cloud": {
+        "title": "Debesija ir domenai",
+        "text": "Įsigykite domeno vardą arba apmokėkite talpinimo viršijimą diegimo metu."
+      },
+      "data": {
+        "title": "Duomenys ir B2B pirkimai",
+        "text": "Apmokėkite duomenų rinkinį, duomenų rinkimo užduotį ar reikmenis, o kvitas pridedamas automatiškai.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Būkime atviri",
+      "title": "Naudojate tik Stripe, Ramp ar Mercury?",
+      "explain": "Jie jau atlieka dalį darbo.",
+      "lead": "Artemis suteikia tai, ko bankas nedarys savo konkurentams.",
+      "banks": "Keli bankai vienu metu",
+      "banksText": "Stripe Issuing, Revolut, Qonto ir Sandbox, valdomi iš vienos vietos pagal vieną politiką.",
+      "accounting": "Prancūzijos apskaita",
+      "accountingText": "FEC ir Pennylane eksportas, kvitas prie kiekvieno įgaliojimo, automatinis suderinimas.",
+      "proof": "AI Act įrodymai, paruošti perduoti",
+      "proofText": "Žmogaus parašas kiekvienai išlaidai, į grandinę sujungtas žurnalas, agentų registras, ketvirtinė ataskaita.",
+      "agency": "Agentūros režimas",
+      "agencyText": "Agentai keliems klientams, kiekvienam – savas biudžetas, antkainis ir ataskaita."
+    },
+    "europe": {
+      "eyebrow": "Europinis sprendimas",
+      "title": "Sukurta Europoje, Europai.",
+      "lead": "Amerikietiškos agentų kortelės kalba doleriais, Amerikos bankų ir Amerikos teisės kalba. Artemis kalba eurais, Europos bankų, BDAR, AI Act ir Prancūzijos apskaitos kalba.",
+      "banks": "Eurai ir Europos bankai: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "ES",
+      "data": "Duomenys talpinami Frankfurte, BDAR, užšifruoti prisijungimo duomenys",
+      "article": "14 str.",
+      "oversight": "AI Act žmogaus priežiūra, įrodyta kiekvienai išlaidai",
+      "accounting": "Prancūzijos apskaita: FEC, Pennylane, pridėti kvitai"
+    },
+    "compare": {
+      "eyebrow": "Palyginimas",
+      "title": "Kortelę išduoda jūsų bankas.",
+      "explain": "Artemis valdo juos visus.",
+      "criterion": "Kriterijus",
+      "bankOnly": "Tik jūsų bankas (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Tik jūsų bankas",
+      "usCards": "Amerikietiškos agentų kortelės",
+      "usCardsShort": "JAV agentų kortelės",
+      "rows": {
+        "card": "Virtuali kortelė agentui",
+        "banks": "Keli bankai, viena politika",
+        "signature": "Žmogaus parašas kiekvienai išlaidai (prieigos raktas)",
+        "aiAct": "Eksportuojami AI Act įrodymai",
+        "accounting": "Prancūzijos apskaita (FEC, Pennylane)",
+        "agency": "Agentūros režimas (biudžetai ir sąskaitos kiekvienam klientui)",
+        "europe": "Eurai, talpinimas ir duomenys Europoje"
+      },
+      "values": {
+        "yes": "Taip",
+        "no": "Ne",
+        "yesBank": "Taip, išduoda jūsų bankas",
+        "yesQuorum": "Taip, su kvorumu",
+        "dependsPlan": "Priklauso nuo plano",
+        "dependsBank": "Priklauso nuo banko",
+        "partial": "Iš dalies"
+      }
+    },
+    "builders": {
+      "eyebrow": "Kūrėjams",
+      "title": "Prijungiama viena eilute.",
+      "explain": "Claude, ChatGPT, n8n, Make arba jūsų pačių kodas.",
+      "lead": "Nuotolinis MCP serveris ir REST API. Nemokamas Sandbox su imituotomis kortelėmis bandymams be banko.",
+      "connect": "Prijungti Claude →",
+      "window": "terminalas"
+    },
+    "faq": {
+      "eyebrow": "Dažniausiai užduodami klausimai",
+      "title": "Ko mūsų klausia.",
+      "more": "Turite kitą klausimą? Perskaitykite puslapį <a href=\"{security}\">Saugumas</a> arba <a href=\"{docs}\">dokumentaciją</a>."
+    },
+    "final": {
+      "title": "Išlaikykite savo agentų kontrolę.",
+      "lead": "Europinė finansinė užkarda, nemokamai su planu Sandbox, kredito kortelės nereikia. Paskutinis žodis lieka jums.",
+      "signup": "Susikurti paskyrą →",
+      "pricing": "Peržiūrėti kainas",
+      "holder": "your.agent"
+    }
+  }
+}

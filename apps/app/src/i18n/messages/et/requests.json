@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtreeri oleku järgi",
+      "all": "Kõik",
+      "pending": "Kinnitamiseks",
+      "issued": "Kaart väljastatud",
+      "completed": "Makstud",
+      "rejected": "Tagasi lükatud",
+      "failed": "Ebaõnnestunud"
+    },
+    "list": {
+      "title": "Taotlused",
+      "lead": "Iga agendi taotlus koos otsuse ja kaardiga.",
+      "emptyTitle": "Taotlusi pole",
+      "emptyBody": "Teie agentide taotlused ilmuvad siia."
+    },
+    "decision": {
+      "notAllowed": "Otsustada saavad ainult omanikud, administraatorid ja kinnitajad.",
+      "cancelledOnDevice": "Kinnitamine tühistati seadmes.",
+      "reasonLabel": "Tagasilükkamise põhjus",
+      "reasonHint": "Nähtav agendile.",
+      "confirmReject": "Kinnita tagasilükkamine",
+      "cancel": "Tühista",
+      "signing": "Allkirjastamine…",
+      "approve": "Kinnita mu pääsuvõtmega",
+      "reject": "Lükka tagasi"
+    },
+    "detail": {
+      "confirmCancel": "Kas tühistada see taotlus ja selle kaart?",
+      "receiptUnavailable": "Kviitung pole saadaval.",
+      "eyebrow": "Taotlus · {id}",
+      "amount": "Taotletud summa",
+      "agent": "Agent",
+      "mandateWindow": "volitus · {id}",
+      "purpose": "Eesmärk",
+      "category": "Kategooria",
+      "expires": "Aegub",
+      "rules": "Reeglid",
+      "perTxLimit": "Limiit",
+      "budget": "eelarve",
+      "decision": "Otsus",
+      "hash": "sha256 {hash}",
+      "quorum": "Kvoorum: {signed}/{required} nõutavat allkirja üle piirmäära.",
+      "unusualAmount": "Kaitsemeede: selle agendi jaoks ebatavaline summa, inimese kinnitus on nõutav.",
+      "autoApproved": "Kinnitatud automaatselt reeglite alusel",
+      "signedByPasskey": "Volitus allkirjastatud pääsuvõtmega",
+      "card": "Kaart",
+      "cardHolderFallback": "agent",
+      "cardAria": "Virtuaalkaart, mille number lõpeb {last4}, kaardiomanik {holder}, kehtib kuni {exp}",
+      "bankSca": "Kinnitage kaardi loomine ka oma panga rakenduses.",
+      "cardExpires": "Kehtib kuni {date}",
+      "handedOver": "agendile üle antud {time}",
+      "notHandedOver": "agendile veel üle andmata",
+      "qontoNotice": "Qonto ei anna kaarte agentidele üle: kuvage kaart siin ja sooritage makse ise.",
+      "showQontoCard": "Näita kaarti (Qonto)",
+      "simulatePayment": "Simuleeri makset",
+      "cancelCard": "Tühista kaart",
+      "noCard": "Kaarti pole väljastatud.",
+      "transactions": "Tehingud",
+      "noTransactions": "Pank pole tehingutest teatanud.",
+      "receipts": "Kviitungid",
+      "addReceipt": "Lisa",
+      "noReceipts": "Kviitungeid pole.",
+      "back": "← Kõik taotlused"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "transactions": {
+    "title": "Tehingud",
+    "lead": "Teie pankade edastatud tehingud, sobitatud volitustega (viimased 90 päeva).",
+    "mismatches_one": "{count} tehing ei vasta oma volitusele. Kontrollige seda ja vajaduse korral külmutage agent.",
+    "mismatches_other": "{count} tehingut ei vasta oma volitusele. Kontrollige neid ja vajaduse korral külmutage agent.",
+    "emptyTitle": "Tehinguid pole",
+    "emptyText": "Need ilmuvad mõni minut pärast iga makset.",
+    "colDate": "Kuupäev",
+    "colMerchant": "Kaupmees",
+    "colAmount": "Summa",
+    "colBankStatus": "Panga olek",
+    "colMatch": "Sobitamine"
+  }
+}

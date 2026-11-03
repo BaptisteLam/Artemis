@@ -1,0 +1,21 @@
+{
+  "subscriptions": {
+    "title": "Tellimused",
+    "lead": "Teie agentide tehtud tellimused: kaart lukustatud kaupmehele, kuulimiit, kasutamata tellimuste tuvastamine.",
+    "confirmCancel": "Kas lõpetada see tellimus? Kaart tühistatakse pangas.",
+    "planRequired": "Agentide hallatavad tellimused sisalduvad alates paketist Team.",
+    "seePlans": "Vaata pakette →",
+    "dormantAlert_one": "{count} tellimus ilma makseta üle {days} päeva: kaaluge selle lõpetamist.",
+    "dormantAlert_other": "{count} tellimust ilma makseta üle {days} päeva: kaaluge nende lõpetamist.",
+    "emptyTitle": "Tellimusi pole",
+    "emptyText": "Agent loob tellimuse päringuga request_card ja korduvmakse valikuga.",
+    "colMerchant": "Kaupmees",
+    "colAgent": "Agent",
+    "colMonthlyLimit": "Kuulimiit",
+    "colPaid": "Makstud",
+    "colLastPayment": "Viimane makse",
+    "colStatus": "Olek",
+    "dormant": "Kasutamata",
+    "cancel": "Lõpeta"
+  }
+}
