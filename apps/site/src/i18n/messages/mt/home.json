@@ -1,0 +1,176 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Is-soluzzjoni Ewropea · Aġenti tal-IA",
+      "lead": "Il-firewall finanzjarju Ewropew għall-aġenti tal-IA tiegħek. Claude, ChatGPT jew n8n jitolbu, int tiffirma b'mess wieħed, u kull spiża tiġi kkontrollata, irrikonċiljata u ppruvata, fuq il-bank tal-għażla tiegħek.",
+      "tryFree": "Ipprova b'xejn →",
+      "seeDemo": "Ara d-demo",
+      "visualAria": "Eżempju: talba ta' aġent u l-karta tiegħu għal użu wieħed",
+      "expired": "Skaduta",
+      "pending": "Talba pendenti",
+      "toApprove": "Qed tistenna l-approvazzjoni",
+      "purpose": "abbonament tat-tim",
+      "approve": "Approva bil-passkey tiegħi",
+      "decline": "Iċħad"
+    },
+    "trust": {
+      "aria": "Garanziji",
+      "europe": "Ewropew",
+      "europeText": "Ewro, banek Ewropej, data fi Frankfurt, GDPR.",
+      "funds": "Il-fondi tiegħek jibqgħu għandek",
+      "fundsText": "Artemis qatt ma jżomm flus.",
+      "number": "In-numru tal-karta jinżamm barra minn Artemis",
+      "numberText": "Il-karta tintwera mill-bank tiegħek, mhux minna.",
+      "aiAct": "Lest għall-AI Act",
+      "aiActText": "Kull spiża ffirmata, reġistru f'katina, rapport trimestrali."
+    },
+    "demo": {
+      "eyebrow": "Demo",
+      "title": "Mit-talba sal-pagament f'20 sekonda.",
+      "explain": "Mingħajr qatt ma taqsam il-karta tal-kumpanija.",
+      "step1": "L-aġent jitlob",
+      "window": "claude · konversazzjoni",
+      "userMessage": "Abbona t-tim f'Notion Plus, 5 postijiet.",
+      "agentMessage": "Tlabt karta ta' {amount}. Qed nistenna l-approvazzjoni tiegħek.",
+      "step2": "Int tapprova",
+      "notification": "{agent} irid jonfoq {amount}",
+      "sheetTitle": "Approva l-mandat",
+      "validity": "{minutes} min",
+      "faceId": "Iffirma b'Face ID",
+      "step3": "L-aġent iħallas",
+      "reconciled": "Irrikonċiljat"
+    },
+    "benefits": {
+      "eyebrow": "X'qed tixtri",
+      "title": "Mhux karta.",
+      "explain": "Il-banek qed jibdew jagħtuhom b'xejn. Qed tixtri kontroll, ħin u prova.",
+      "control": {
+        "eyebrow": "Kontroll",
+        "title": "Xejn ma joħroġ mingħajr l-approvazzjoni tiegħek.",
+        "text": "Baġits, limiti, negozjanti permessi, salvagwardji kontra l-prompt injection. 'Il fuq mil-limiti tiegħek, kull spiża tistenna l-firma tiegħek bil-passkey, minn approvatur wieħed jew aktar."
+      },
+      "time": {
+        "eyebrow": "Ħin iffrankat",
+        "title": "M'għadx hemm karti maħluqa bl-idejn.",
+        "text": "L-aġent jitlob, int tiffirma b'mess wieħed, il-karta tinħoloq fil-bank tiegħek, it-tranżazzjoni tiġi rrikonċiljata u l-fattura tiġi ppreżentata. M'għadx hemm dikjarazzjonijiet x'tiċċekkja jew irċevuti x'tiġri warajhom."
+      },
+      "proof": {
+        "eyebrow": "Prova",
+        "title": "Bniedem approva kull spiża.",
+        "text": "Mandati ffirmati, reġistru tal-awditjar f'katina li ma jistax jitbagħbas u rapport ta' sorveljanza trimestrali: dak li jitolbu l-AI Act, id-direttur finanzjarju tiegħek u l-awditur tiegħek, lest biex jingħata."
+      },
+      "agencies": {
+        "eyebrow": "Għall-aġenziji",
+        "title": "Baġit wieħed u fattura waħda għal kull klijent.",
+        "text": "Spazji tax-xogħol għall-klijenti, baġit ta' kull xahar għal kull klijent, marġni ta' rifatturazzjoni u rapport ta' kull xahar lest biex jintbagħat. Il-klijenti tiegħek finalment jaraw x'jonfqu l-aġenti tagħhom."
+      }
+    },
+    "how": {
+      "eyebrow": "Kif jaħdem",
+      "title": "Erba' passi, l-ebda karta maqsuma.",
+      "s1": "L-aġent jitlob",
+      "s1Text": "Permezz tal-MCP jew tal-API: “{amount} għand Notion, abbonament tat-tim”.",
+      "s2": "Ir-regoli jiffiltraw",
+      "s2Text": "Baġit, limitu, negozjant: barra r-regoli, it-talba tiġi miċħuda minnufih.",
+      "s3": "Int tapprova",
+      "s3Text": "Notifika fuq it-telefon tiegħek, firma bil-passkey.",
+      "s4": "L-aġent iħallas",
+      "s4Text": "Karta għal użu wieħed, l-ammont eżatt, skadenza qasira, imbagħad rikonċiljazzjoni awtomatika."
+    },
+    "useCases": {
+      "eyebrow": "Każijiet ta' użu",
+      "title": "Dak li l-aġenti tiegħek diġà jixtru.",
+      "explain": "Issa b'karta tagħhom.",
+      "api": {
+        "title": "APIs u tokens",
+        "text": "Iċċarġja l-krediti meta tispiċċa l-kwota, mingħajr ma tħalli l-karta tal-kumpanija f'fajl .env."
+      },
+      "saas": {
+        "title": "Abbonamenti SaaS",
+        "text": "Abbona jew estendi pjan għat-tim, għall-ammont eżatt approvat."
+      },
+      "cloud": {
+        "title": "Cloud u dominji",
+        "text": "Ixtri isem ta' dominju jew ħallas eċċess tal-hosting f'nofs deployment."
+      },
+      "data": {
+        "title": "Data u xiri B2B",
+        "text": "Ħallas għal sett ta' data, xogħol ta' scraping jew provvisti, bl-irċevuta mehmuża awtomatikament.",
+        "supplier": "Bureau Vallée"
+      }
+    },
+    "honest": {
+      "eyebrow": "Ejja nkunu onesti",
+      "title": "Tuża biss Stripe, Ramp jew Mercury?",
+      "explain": "Diġà jagħmlu parti mix-xogħol.",
+      "lead": "Artemis iġib dak li bank ma jagħmilx għall-kompetituri tiegħu.",
+      "banks": "Diversi banek f'daqqa",
+      "banksText": "Stripe Issuing, Revolut, Qonto u s-Sandbox, immexxija minn post wieħed taħt politika waħda.",
+      "accounting": "Kontabbiltà Franċiża",
+      "accountingText": "Esportazzjonijiet FEC u Pennylane, irċevuta mehmuża ma' kull mandat, rikonċiljazzjoni awtomatika.",
+      "proof": "Prova għall-AI Act, lesta biex tingħata",
+      "proofText": "Firma umana għal kull spiża, reġistru f'katina, reġistru tal-aġenti, rapport trimestrali.",
+      "agency": "Modalità għall-aġenziji",
+      "agencyText": "Aġenti għal diversi klijenti, kull wieħed bil-baġit, il-marġni u r-rapport tiegħu."
+    },
+    "europe": {
+      "eyebrow": "Is-soluzzjoni Ewropea",
+      "title": "Mibni fl-Ewropa, għall-Ewropa.",
+      "lead": "Il-karti Amerikani għall-aġenti jitkellmu bid-dollari, banek Amerikani u liġi Amerikana. Artemis jitkellem bl-ewro, banek Ewropej, il-GDPR, l-AI Act u l-kontabbiltà Franċiża.",
+      "banks": "Ewro u banek Ewropej: Stripe Issuing Europe, Revolut, Qonto",
+      "eu": "UE",
+      "data": "Data ospitata fi Frankfurt, GDPR, kredenzjali kriptati",
+      "article": "Art. 14",
+      "oversight": "Sorveljanza umana skont l-AI Act, ippruvata spiża b'spiża",
+      "accounting": "Kontabbiltà Franċiża: FEC, Pennylane, irċevuti mehmuża"
+    },
+    "compare": {
+      "eyebrow": "Paragun",
+      "title": "Il-bank tiegħek joħroġ il-karta.",
+      "explain": "Artemis jirregola fuqhom kollha.",
+      "criterion": "Kriterju",
+      "bankOnly": "Il-bank tiegħek waħdu (Stripe, Ramp, Mercury, Qonto…)",
+      "bankOnlyShort": "Il-bank tiegħek waħdu",
+      "usCards": "Karti Amerikani għall-aġenti",
+      "usCardsShort": "Karti tal-aġenti tal-US",
+      "rows": {
+        "card": "Karta virtwali għall-aġent",
+        "banks": "Diversi banek, politika waħda",
+        "signature": "Firma umana għal kull spiża (passkey)",
+        "aiAct": "Prova għall-AI Act li tista' tiġi esportata",
+        "accounting": "Kontabbiltà Franċiża (FEC, Pennylane)",
+        "agency": "Modalità għall-aġenziji (baġits u rifatturazzjoni għal kull klijent)",
+        "europe": "Ewro, hosting u data fl-Ewropa"
+      },
+      "values": {
+        "yes": "Iva",
+        "no": "Le",
+        "yesBank": "Iva, maħruġa mill-bank tiegħek",
+        "yesQuorum": "Iva, bi kworum",
+        "dependsPlan": "Jiddependi mill-pjan",
+        "dependsBank": "Jiddependi mill-bank",
+        "partial": "Parzjali"
+      }
+    },
+    "builders": {
+      "eyebrow": "Għall-iżviluppaturi",
+      "title": "Ikkonnettjat b'linja waħda.",
+      "explain": "Claude, ChatGPT, n8n, Make jew il-kodiċi tiegħek stess.",
+      "lead": "Server MCP remot u REST API. Sandbox b'xejn b'karti simulati biex tittestja mingħajr bank.",
+      "connect": "Ikkonnettja Claude →",
+      "window": "terminal"
+    },
+    "faq": {
+      "eyebrow": "Mistoqsijiet frekwenti",
+      "title": "Dak li jistaqsuna.",
+      "more": "Għandek mistoqsija oħra? Aqra l-paġna <a href=\"{security}\">Sigurtà</a> jew id-<a href=\"{docs}\">dokumentazzjoni</a>."
+    },
+    "final": {
+      "title": "Żomm il-kontroll fuq l-aġenti tiegħek.",
+      "lead": "Il-firewall finanzjarju Ewropew, b'xejn fis-Sandbox, mingħajr karta ta' kreditu. Il-kelma finali tibqa' tiegħek.",
+      "signup": "Oħloq kont →",
+      "pricing": "Ara l-prezzijiet",
+      "holder": "l.agent.tieghek"
+    }
+  }
+}

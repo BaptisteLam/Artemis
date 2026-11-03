@@ -1,0 +1,96 @@
+{
+  "audit": {
+    "title": "Auditní protokol",
+    "lead": "Každá událost je zřetězena hashem SHA-256 a nelze ji změnit ani smazat: je to váš důkaz lidského dohledu (AI Act).",
+    "verify": "Ověřit integritu",
+    "export": "Exportovat",
+    "report": "Zpráva pro AI Act {quarter}",
+    "exportFailed": "Export se nezdařil.",
+    "reportUnavailable": "Zpráva není k dispozici.",
+    "chainOk_one": "Řetězec neporušen: ověřen {count} záznam.",
+    "chainOk_few": "Řetězec neporušen: ověřeny {count} záznamy.",
+    "chainOk_many": "Řetězec neporušen: ověřeno {count} záznamu.",
+    "chainOk_other": "Řetězec neporušen: ověřeno {count} záznamů.",
+    "chainBroken": "Řetězec přerušen u záznamu č. {id}.",
+    "exportUpsell": "Podepsaný export auditního protokolu je součástí tarifu Business.",
+    "seePlans": "Zobrazit tarify",
+    "cols": {
+      "date": "Datum",
+      "event": "Událost",
+      "actor": "Původce",
+      "hash": "Otisk"
+    },
+    "view": "zobrazit",
+    "older": "Starší →",
+    "actors": {
+      "user": "Uživatel",
+      "agent": "Agent",
+      "system": "Systém"
+    },
+    "actions": {
+      "org": {
+        "created": "Organizace vytvořena",
+        "frozen": "Organizace zmrazena",
+        "unfrozen": "Organizace rozmrazena",
+        "card_delivery_changed": "Změněn způsob předávání karet",
+        "slack_connected": "Slack připojen",
+        "slack_disconnected": "Slack odpojen"
+      },
+      "agent": {
+        "created": "Agent vytvořen",
+        "updated": "Agent aktualizován",
+        "deleted": "Agent smazán",
+        "token_rotated": "Token vygenerován znovu",
+        "frozen": "Agent zmrazen"
+      },
+      "policy": {
+        "updated": "Pravidla aktualizována"
+      },
+      "request": {
+        "created": "Žádost vytvořena",
+        "rejected": "Žádost zamítnuta",
+        "approved": "Mandát podepsán",
+        "auto_approved": "Automatické schválení",
+        "approval_recorded": "Schválení zaznamenáno",
+        "expired": "Žádost vypršela"
+      },
+      "card": {
+        "issued": "Karta vydána",
+        "issue_failed": "Vydání karty se nezdařilo",
+        "revealed": "Karta předána agentovi",
+        "link_created": "Odkaz na kartu vytvořen",
+        "viewed": "Karta zobrazena",
+        "canceled": "Karta zrušena",
+        "expired": "Platnost karty vypršela"
+      },
+      "transaction": {
+        "matched": "Transakce spárována",
+        "mismatch": "Zjištěn nesoulad"
+      },
+      "receipt": {
+        "attached": "Doklad připojen"
+      },
+      "bank": {
+        "connected": "Banka připojena",
+        "disconnected": "Banka odpojena"
+      },
+      "member": {
+        "invited": "Člen pozván",
+        "joined": "Člen se připojil",
+        "removed": "Člen odebrán",
+        "role_changed": "Role změněna"
+      },
+      "client": {
+        "created": "Klient vytvořen",
+        "updated": "Klient aktualizován"
+      },
+      "billing": {
+        "subscribed": "Předplatné zahájeno",
+        "updated": "Předplatné aktualizováno"
+      },
+      "subscription": {
+        "charged": "Předplatné zaúčtováno"
+      }
+    }
+  }
+}

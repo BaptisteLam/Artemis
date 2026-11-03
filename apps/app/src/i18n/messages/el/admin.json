@@ -1,0 +1,20 @@
+{
+  "admin": {
+    "eyebrow": "Back office",
+    "title": "Το Artemis σε αριθμούς",
+    "mrr": "MRR",
+    "paying": "Πελάτες με συνδρομή",
+    "ofOrgs_one": "από {count} οργανισμό",
+    "ofOrgs_other": "από {count} οργανισμούς",
+    "signups7d": "Εγγραφές (7 ημέρες)",
+    "requests30d": "Αιτήματα (30 ημέρες)",
+    "orgs": "Οργανισμοί",
+    "cols": {
+      "name": "Όνομα",
+      "plan": "Πρόγραμμα",
+      "subscription": "Συνδρομή",
+      "created": "Δημιουργία"
+    },
+    "waitlist": "Λίστα αναμονής ({total})"
+  }
+}

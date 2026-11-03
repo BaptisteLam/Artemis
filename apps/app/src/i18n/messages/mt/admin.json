@@ -1,0 +1,23 @@
+{
+  "admin": {
+    "eyebrow": "Back office",
+    "title": "Artemis f'ċifri",
+    "mrr": "MRR",
+    "paying": "Klijenti li jħallsu",
+    "ofOrgs_one": "minn {count} organizzazzjoni",
+    "ofOrgs_two": "minn {count} organizzazzjonijiet",
+    "ofOrgs_few": "minn {count} organizzazzjonijiet",
+    "ofOrgs_many": "minn {count} organizzazzjoni",
+    "ofOrgs_other": "minn {count} organizzazzjoni",
+    "signups7d": "Reġistrazzjonijiet (7 ijiem)",
+    "requests30d": "Talbiet (30 jum)",
+    "orgs": "Organizzazzjonijiet",
+    "cols": {
+      "name": "Isem",
+      "plan": "Pjan",
+      "subscription": "Abbonament",
+      "created": "Maħluq"
+    },
+    "waitlist": "Lista ta' stennija ({total})"
+  }
+}

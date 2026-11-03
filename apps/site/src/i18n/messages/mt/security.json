@@ -1,0 +1,42 @@
+{
+  "security": {
+    "title": "Sigurtà u konformità",
+    "description": "Kif Artemis jipproteġi l-fondi, il-karti u d-data tiegħek.",
+    "eyebrow": "Sigurtà",
+    "headline": "Mibni b'tali mod li l-ebda aġent ma jista' jaġixxi waħdu.",
+    "lead": "L-agħar każ, aġent manipulat minn prompt injection, jitrażżan mill-karta nfisha.",
+    "funds": {
+      "title": "Il-fondi tiegħek qatt ma jitilqu mill-bank tiegħek",
+      "body": "Artemis huwa softwer. Il-karti jinħarġu mill-fornitur tiegħek stess (Qonto, Revolut Business, Stripe) fuq il-kont tiegħek. Aħna ma nżommux, ma nirċievux u ma nittrasferixxux fondi."
+    },
+    "defense": {
+      "title": "Difiża f'diversi livelli",
+      "i1": "Karta għal użu wieħed, limitata għall-ammont eżatt approvat.",
+      "i2": "Skadenza qasira (30 minuta b'mod awtomatiku).",
+      "i3": "Regoli għal kull aġent: baġit, limitu, negozjanti, kategoriji.",
+      "i4": "Rikonċiljazzjoni awtomatika, b'twissija fuq kull diskrepanza fl-ammont jew fin-negozjant.",
+      "i5": "Buttuna “Iffriża kollox”: aġenti sospiżi u karti attivi kkanċellati bi klikk waħda.",
+      "i6": "L-aġenti jistgħu biss jitolbu: l-ebda għodda MCP ma tista' tbiddel regola jew tapprova pagament."
+    },
+    "cardNumbers": {
+      "title": "Numri tal-karti",
+      "body": "B'mod awtomatiku, in-numru sħiħ tal-karta u l-kodiċi tas-sigurtà qatt ma jgħaddu minn Artemis: l-aġent jirċievi link ta' ħajja qasira għal użu wieħed (10 minuti) u l-karta tintwera mill-bank emittenti (Stripe Issuing Elements). L-għoti dirett huwa disponibbli bħala għażla avvanzata, mitfija b'mod awtomatiku; anke f'dak il-każ, xejn ma jinħażen."
+    },
+    "mandates": {
+      "title": "Mandati ffirmati",
+      "body": "Kull approvazzjoni hija firma WebAuthn (passkey) fuq il-hash SHA-256 tal-mandat: aġent, ammont, munita, negozjant, għan, skadenza. Ir-reġistru tal-awditjar huwa f'katina ta' hashes u jista' jiżdied biss: kull tbagħbis jista' jiġi identifikat."
+    },
+    "aiAct": {
+      "title": "AI Act u sorveljanza umana",
+      "body": "L-AI Act tal-UE jirrikjedi li l-implimentaturi jirreġistraw u jissorveljaw is-sistemi tagħhom. Ir-reġistru ta' Artemis, li tista' tesporta, jirreġistra min awtorizza kull pagament ta' aġent, meta, u taħt liema regoli."
+    },
+    "data": {
+      "title": "Data personali",
+      "body": "Database ospitata fl-Unjoni Ewropea (Supabase, Frankfurt). Kredenzjali tal-bank kriptati (AES-256-GCM). Ara l-<a href=\"{href}\">politika tal-privatezza</a>."
+    },
+    "report": {
+      "title": "Irrapporta vulnerabbiltà",
+      "body": "Ikteb lill-indirizz mogħti fl-<a href=\"{href}\">avviż legali</a>. Inwieġbu fi żmien 72 siegħa."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "howItWorks": {
+    "title": "Kif jaħdem",
+    "description": "Kif Artemis iħalli lill-aġenti tal-IA tiegħek iħallsu waqt li int iżżomm il-kontroll.",
+    "headline": "L-aġent jitlob, int tiddeċiedi, il-bank iħallas.",
+    "lead": "Artemis jinsab bejn l-aġenti tiegħek u l-bank tiegħek. Japplika r-regoli tiegħek, jiġbor l-approvazzjoni tiegħek u joħloq karta għal użu wieħed għall-ammont eżatt.",
+    "step1": {
+      "title": "1. Tikkonnettja l-bank tiegħek",
+      "body": "Stripe Issuing (rakkomandat) jew Revolut Business: il-karti virtwali jinħolqu fil-kont <strong>tiegħek</strong> u jiġu ddebitati mill-fondi <strong>tiegħek</strong>. Qonto jiġi konness għall-aċċess għall-qari, l-iffriżar u r-rikonċiljazzjoni. Artemis qatt ma jirċievi, iżomm jew jittrasferixxi flus. Biex tipprova, is-Sandbox jissimula bank."
+    },
+    "step2": {
+      "title": "2. Toħloq aġent u r-regoli tiegħu",
+      "body": "Kull aġent jirċievi token sigriet u politika: baġit ta' kull xahar, limitu għal kull xiri, muniti, negozjanti permessi jew imblukkati, kategoriji tan-negozjanti, limitu tal-approvazzjoni awtomatika u ħajja tal-karta."
+    },
+    "step3": {
+      "title": "3. L-aġent jitlob karta",
+      "body": "Permezz tal-għodda MCP <code>request_card</code> jew tar-REST API. Talba li tikser ir-regoli tiġi miċħuda immedjatament, b'raġuni ċara. Il-bqija kollha jistennew l-approvazzjoni tiegħek, ħlief ammonti żgħar għand negozjant fdat jekk tkun ippermettejt dan."
+    },
+    "step4": {
+      "title": "4. Tapprova b'passkey",
+      "body": "Tirċievi notifika. L-iskrin tal-mandat juri l-aġent, l-ammont, in-negozjant u l-għan. Tiffirma bil-passkey tiegħek (Face ID, marka tas-saba', ċavetta tas-sigurtà). Il-firma tkopri l-kontenut eżatt tal-mandat."
+    },
+    "step5": {
+      "title": "5. L-aġent iħallas, Artemis jirrikonċilja",
+      "body": "Il-karta hija għal użu wieħed, limitata għall-ammont, u tiskadi malajr. L-aġent jirċievi link ta' ħajja qasira: il-karta tintwera mill-bank tiegħek, u n-numru qatt ma jgħaddi minn Artemis. Hekk kif il-bank jirrapporta t-tranżazzjoni, Artemis jirrikonċiljaha, jindika kull diskrepanza u jippreżenta l-irċevuta."
+    },
+    "demo": {
+      "mandate": "mandat · {id}",
+      "intent": "Għan: abbonament tat-tim, 5 postijiet.",
+      "rules": "Regoli: limitu {cap} · baġit li fadal {remaining}",
+      "signed": "Iffirmat b'passkey · {minutes} min ilu",
+      "transactions": "tranżazzjonijiet",
+      "matched": "Irrikonċiljat",
+      "mismatch": "Diskrepanza"
+    }
+  }
+}

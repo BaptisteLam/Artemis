@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Banky",
+    "lead": "Karty se vytvářejí ve vaší vlastní bance. Artemis nikdy nedrží vaše prostředky.",
+    "bankAria": "Banka",
+    "help": {
+      "stripe": "Účet Stripe s aktivovaným Issuing (EU). Vytvořte omezený klíč s oprávněním k zápisu pro Issuing. Zadejte existujícího držitele karty (ich_…) nebo adresu své společnosti, aby ho Artemis mohl vytvořit.",
+      "qonto": "Čtení, zmrazení a párování: Qonto kartu třetím stranám nepředává a zakazuje její zapůjčení. Token OAuth z partnerského programu Qonto; schvalovatel si může kartu Qonto bezpečně zobrazit a platbu dokončit sám.",
+      "revolut": "Tarif Grow nebo vyšší, přístup ke „Cards API“ aktivovaný podporou a písemný souhlas společnosti Revolut (Valid Permission) před jakýmkoli ostrým použitím. Vyžaduje přímé předání (Nastavení)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Omezený tajný klíč",
+      "publishableKey": "Veřejný klíč",
+      "stripeCardholder": "Držitel karty Stripe",
+      "companyName": "Název společnosti",
+      "address": "Adresa",
+      "postalCode": "PSČ",
+      "city": "Město",
+      "country": "Země",
+      "webhookSecret": "Tajný klíč webhooku",
+      "accessToken": "Přístupový token",
+      "refreshToken": "Obnovovací token",
+      "oauthClientId": "ID klienta OAuth",
+      "oauthClientSecret": "Tajný klíč klienta OAuth",
+      "holderMemberId": "ID člena – držitele karty",
+      "bankAccountId": "ID bankovního účtu",
+      "environment": "Prostředí",
+      "stagingToken": "Token testovacího prostředí",
+      "clientAssertion": "Klientské tvrzení (JWT)",
+      "holderId": "ID držitele karty"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… nebo sk_test_…",
+      "stripePublishableKey": "pk_live_… (dočasný odkaz na kartu)",
+      "stripeCardholder": "ich_… (volitelné)",
+      "ifNoCardholder": "Pokud držitel karty neexistuje",
+      "country": "Kód ISO, např. CZ",
+      "webhookSecret": "whsec_… (po vytvoření webhooku, viz níže)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Volitelné",
+      "toRefreshToken": "Pro obnovení tokenu",
+      "qontoMembershipId": "ID membership v Qonto",
+      "qontoBankAccountId": "ID bank_account v Qonto",
+      "sandboxOnly": "Pouze Sandbox",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Volitelné, pro obnovení",
+      "teamMemberOptional": "Člen týmu (volitelné)"
+    },
+    "encrypted": "Přístupové údaje se otestují a poté zašifrují (AES-256-GCM). Už nikdy se nezobrazí.",
+    "testing": "Testování připojení…",
+    "connectProvider": "Připojit {name}",
+    "testOk": "Připojení funguje",
+    "testFailed": "Chyba: {detail}",
+    "confirmDisconnect": "Odpojit tuto banku? Agenti, kteří ji používají, už nebudou moci získat kartu.",
+    "lastSync": "Poslední synchronizace: {date}",
+    "stripeWebhook": "Webhook Stripe (události issuing_transaction.*):",
+    "test": "Otestovat",
+    "disconnect": "Odpojit",
+    "connectRealBank": "Připojit skutečnou banku",
+    "upgrade": "Připojení skutečné banky je k dispozici od tarifu Builder ({price}/měsíc).",
+    "choosePlan": "Zvolit tarif →"
+  }
+}

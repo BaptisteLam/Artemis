@@ -1,0 +1,116 @@
+{
+  "docs": {
+    "index": {
+      "title": "Ibda b'Artemis",
+      "lead": "Mir-reġistrazzjoni sal-ewwel pagament tal-aġent tiegħek, fis-Sandbox, f'ħames minuti.",
+      "step1": {
+        "title": "1. Oħloq kont",
+        "body": "Irreġistra fuq <a href=\"{href}\">l-app</a> bl-email tiegħek (magic link), oħloq l-organizzazzjoni tiegħek u rreġistra passkey: se tużaha biex tapprova l-infiq."
+      },
+      "step2": {
+        "title": "2. Oħloq aġent",
+        "body": "F'<strong>Aġenti</strong>, oħloq pereżempju <code>notion.agent</code>. Artemis juri t-token tiegħu (<code>art_test_…</code> fis-Sandbox, <code>art_live_…</code> ma' bank reali) <strong>darba biss</strong>: ikkopjah."
+      },
+      "step3": {
+        "title": "3. Ikkonnettja l-aġent",
+        "fastest": "L-aktar mod mgħaġġel: <code>npx artemis-agents init</code> (ara <a href=\"{cli}\">CLI</a>).",
+        "server": "Is-server MCP jinsab f'<code>{url}</code>, bl-header <code>Authorization: Bearer &lt;token&gt;</code>. Segwi l-gwida għall-għodda tiegħek: <a href=\"{claude}\">Claude</a>, <a href=\"{chatgpt}\">ChatGPT</a>, <a href=\"{n8n}\">n8n</a> jew <a href=\"{api}\">REST API</a>."
+      },
+      "step4": {
+        "title": "4. Iċ-ċiklu tax-xiri",
+        "tool": "Għodda",
+        "role": "Funzjoni",
+        "requestCard": "Jitlob karta: ammont <strong>f'ċenteżmi</strong>, munita, negozjant, għan.",
+        "getRequestStatus": "Isegwi l-approvazzjoni umana.",
+        "getCardForCheckout": "Jirritorna <strong>link effimeru</strong> (10 min, użu wieħed): il-karta tintwera mill-bank, mingħajr ma tgħaddi minn Artemis.",
+        "listBudgets": "Baġit ta' kull xahar, minfuq, fadal, limitu.",
+        "getSpendSummary": "Infiq skont in-negozjant (jum, ġimgħa, xahar).",
+        "attachReceipt": "Jehmeż irċevuta max-xiri.",
+        "cancelCard": "Jikkanċella l-karta jekk ix-xiri ma jsirx aktar."
+      },
+      "step5": {
+        "title": "5. Mur live",
+        "body": "Agħżel pjan f'<strong>Fatturazzjoni</strong>, imbagħad ikkonnettja l-bank tiegħek f'<strong>Banek</strong>. L-aġenti marbuta ma' dak il-bank jirċievu karti reali għal użu wieħed."
+      }
+    },
+    "mcpClaude": {
+      "title": "Ikkonnettja Claude",
+      "lead": "Claude Code, Claude Desktop u l-connectors ta' Claude jitkellmu MCP fuq HTTP.",
+      "verify": "Ivverifika b'<code>claude mcp list</code>, imbagħad itlob pereżempju: “Abbonana f'Notion għal {price} b'Artemis”.",
+      "desktopBody": "Iftaħ <em>Settings → Developer → Edit Config</em> u żid:",
+      "instructionsTitle": "Struzzjonijiet utli għall-aġent",
+      "instructionsBody": "Żid mal-istruzzjonijiet tas-sistema tiegħek:"
+    },
+    "mcpChatgpt": {
+      "title": "Ikkonnettja ChatGPT",
+      "lead": "ChatGPT jaċċetta servers MCP remoti bħala connectors personalizzati.",
+      "addTitle": "Żid il-connector",
+      "step1": "Iftaħ <em>Settings → Connectors → Advanced</em> u attiva l-modalità tal-iżviluppatur jekk il-pjan tiegħek jeħtieġha.",
+      "step2": "Oħloq connector, URL: <code>{url}</code>.",
+      "step3": "Awtentikazzjoni: header <code>Authorization</code> bil-valur <code>Bearer art_…</code> (skont l-għażliet offruti mill-workspace ChatGPT tiegħek).",
+      "note": "It-tikketti eżatti jvarjaw bejn il-pjanijiet ta' ChatGPT; l-indirizz u l-header jibqgħu l-istess.",
+      "openaiTitle": "Aġenti OpenAI (API)",
+      "openaiBody": "Bir-Responses API jew bl-Agents SDK, iddikjara għodda MCP remota li tipponta lejn <code>{url}</code> bl-istess header."
+    },
+    "cli": {
+      "title": "CLI, skill ta' Claude u n8n",
+      "lead": "Minn żero sal-ewwel mandat tiegħek fi tliet minuti.",
+      "commandTitle": "Kmand wieħed",
+      "commandBody": "Il-kmand jitlob l-URL tal-API u t-token tal-aġent (maħluq fl-app, paġna Aġenti), jivverifika l-aċċess, jissejvja l-konfigurazzjoni f'<code>~/.config/artemis/config.json</code>, iżid is-server MCP ma' Claude Code jekk ikun installat u juri l-konfigurazzjoni għal Claude Desktop u n8n. B'token tas-Sandbox u l-għażla <code>--demo</code>, joħloq l-ewwel mandat tat-test biex tapprovah fl-app.",
+      "skillTitle": "Skill ta' Claude",
+      "skillBody": "Is-skill <code>artemis-payments</code> tgħallem lil Claude jħallas permezz ta' Artemis: ammont f'ċenteżmi, stennija għall-approvazzjoni, ftuħ tal-link tal-pagament fil-mument it-tajjeb, irċevuta wara x-xiri, u ċaħda tal-injezzjonijiet. Ikkopja l-folder <code>integrations/claude-skill/artemis</code> mir-repożitorju f'<code>~/.claude/skills/</code>.",
+      "n8nTitle": "Node n8n",
+      "n8nBody": "Installa n-node tal-komunità <code>n8n-nodes-artemis</code> (Settings → Community nodes). Operazzjonijiet: itlob karta, status, link tal-pagament, ikkanċella, baġit. Kredenzjali: URL tal-API u token tal-aġent."
+    },
+    "n8n": {
+      "title": "Ikkonnettja n8n",
+      "lead": "Żewġ għażliet: in-node MCP Client għal aġent tal-IA n8n, jew talbiet HTTP għal workflow klassiku.",
+      "agentTitle": "Aġent tal-IA n8n (MCP Client)",
+      "agentBody": "F'node <em>AI Agent</em>, żid l-għodda <em>MCP Client</em>: trasport <em>HTTP Streamable</em>, URL <code>{url}</code>, awtentikazzjoni <em>Header Auth</em> b'<code>Authorization: Bearer art_…</code>.",
+      "workflowTitle": "Workflow HTTP",
+      "workflowBody": "Importa l-workflow ta' eżempju <code>examples/n8n/artemis-request-card.json</code> mir-repożitorju. Dan jgħaqqad wara xulxin:",
+      "step1With": "ma'",
+      "step2": "loop ta' polling fuq <code>GET /v1/card-requests/:id</code> sakemm l-istatus ikun <code>issued</code>;",
+      "step3": "<code>POST /v1/card-requests/:id/reveal</code> biex tikseb il-link effimeru tal-karta (10 minuti, użu wieħed)."
+    },
+    "api": {
+      "title": "REST API",
+      "lead": "Għal Make, l-iscripts tiegħek u l-aġenti tiegħek stess. L-istess token tas-server MCP.",
+      "authTitle": "Awtentikazzjoni",
+      "base": "URL bażi: <code>{url}</code>. Limitu: 60 talba kull minuta għal kull aġent.",
+      "endpointsTitle": "Endpoints",
+      "method": "Metodu",
+      "path": "Mogħdija",
+      "role": "Funzjoni",
+      "create": "Oħloq talba",
+      "status": "Status ta' talba",
+      "reveal": "Link effimeru għall-karta (10 min, użu wieħed)",
+      "cancel": "Ikkanċella",
+      "receipts": "Ehmeż irċevuta",
+      "budgets": "Baġit li fadal",
+      "spendSummary": "Infiq skont in-negozjant",
+      "exampleTitle": "Eżempju",
+      "errorsTitle": "Żbalji",
+      "errorsBody": "Kodiċijiet komuni: <code>invalid_amount</code> (l-ammont irid ikun numru sħiħ f'ċenteżmi), <code>over_transaction_limit</code>, <code>over_monthly_budget</code>, <code>merchant_not_allowed</code>, <code>quota_exceeded</code>, <code>card_not_ready</code>, <code>already_revealed</code>, <code>rate_limited</code>."
+    },
+    "rules": {
+      "title": "Regoli u approvazzjoni",
+      "lead": "Kif Artemis jiddeċiedi jekk talba tiġix miċħuda, approvata awtomatikament jew sottomessa għall-firma tiegħek.",
+      "orderTitle": "Ordni tal-evalwazzjoni",
+      "orderBody": "L-ewwel regola li ma tiġix sodisfatta tiċħad it-talba:",
+      "o1": "Munita permessa (<code>currency_not_allowed</code>).",
+      "o2": "Ammont pożittiv taħt il-limitu għal kull xiri (<code>invalid_amount</code>, <code>over_transaction_limit</code>).",
+      "o3": "Baġit ta' kull xahar: it-talbiet tax-xahar pendenti, approvati u mħallsa + l-ammont (<code>over_monthly_budget</code>). Ix-xahar isegwi l-ħin ta' Pariġi.",
+      "o4": "Negozjant imblukkat, jew nieqes mil-lista ta' dawk permessi jekk teżisti (<code>merchant_blocked</code>, <code>merchant_not_allowed</code>).",
+      "o5": "Kategorija tan-negozjant (MCC) imblukkata jew mhux permessa (<code>mcc_blocked</code>, <code>mcc_not_allowed</code>).",
+      "autoTitle": "Approvazzjoni awtomatika",
+      "autoBody": "Talba tiġi approvata mingħajrek jekk l-ammont tagħha jkun <strong>taħt</strong> il-limitu tal-approvazzjoni awtomatika <strong>u</strong> n-negozjant ikun fil-lista ta' dawk permessi tal-aġent. Mingħajr lista ta' dawk permessi, kull talba tiġi sottomessa lilek.",
+      "matchTitle": "Tqabbil tan-negozjanti",
+      "matchBody": "L-ismijiet jitqabblu mingħajr ma jitqiesu l-ittri kbar u żgħar, l-aċċenti, il-forma legali u l-estensjoni tad-dominju: “Notion” ikopri “Notion Labs, Inc.” u “notion.so”.",
+      "humanTitle": "Approvazzjoni umana",
+      "humanBody": "Is-sidien, l-amministraturi u l-approvaturi jirċievu notifika. L-approvazzjoni teħtieġ passkey. Jekk il-bank tiegħek jimponi l-awtentikazzjoni qawwija tal-klijent tiegħu stess (Qonto, pereżempju), approva wkoll fl-app tiegħu.",
+      "expiryTitle": "Skadenza",
+      "expiryBody": "Talba mhux ipproċessata tiskadi wara 30 minuta (konfigurabbli). Karta mhux użata tiġi kkanċellata meta tiskadi."
+    }
+  }
+}

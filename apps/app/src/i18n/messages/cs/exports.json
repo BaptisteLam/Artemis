@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Účetní exporty",
+    "lead": "Výdaje stržené vašimi bankami, připravené pro Pennylane, vašeho účetního nebo tabulku.",
+    "failed": "Export se nezdařil.",
+    "from": "Od",
+    "to": "Do (bez tohoto dne)",
+    "downloadCsv": "Stáhnout CSV",
+    "downloadFec": "Stáhnout FEC",
+    "formats": "CSV: oddělené středníky, kompatibilní s Excelem. FEC: 18 předepsaných sloupců, MD 604000 / D 512000, lze importovat do Pennylane.",
+    "fecUpsell": "FEC je k dispozici od tarifu Team.",
+    "seePlans": "Zobrazit tarify"
+  }
+}

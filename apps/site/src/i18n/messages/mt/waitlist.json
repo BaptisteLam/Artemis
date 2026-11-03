@@ -1,0 +1,16 @@
+{
+  "waitlist": {
+    "title": "Lista ta' stennija",
+    "description": "Irċievi notifika meta jinfetħu l-connectors tal-banek reali.",
+    "headline": "Kun fost l-ewwel.",
+    "lead": "Il-connectors ta' Qonto u Revolut qed jinfetħu gradwalment. Ħallilna l-email tiegħek u ninfurmawk hekk kif il-bank tiegħek ikun disponibbli.",
+    "email": "Email tax-xogħol",
+    "company": "Kumpanija",
+    "useCase": "Għal xiex jeħtieġ iħallsu l-aġenti tiegħek?",
+    "useCasePlaceholder": "APIs, SaaS, cloud, data…",
+    "submit": "Ingħaqad mal-lista ta' stennija",
+    "sending": "Qed jintbagħat…",
+    "ok": "Grazzi, issa int fil-lista. Nibagħtulek email hekk kif tinfetaħ.",
+    "error": "Ir-reġistrazzjoni ma rnexxietx. Erġa' pprova fi ftit mumenti."
+  }
+}

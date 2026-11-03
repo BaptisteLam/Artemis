@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "tagline": "L-aġenti tiegħek iħallsu. Il-kelma finali tibqa' tiegħek.",
+    "description": "Il-firewall finanzjarju Ewropew għall-aġenti tal-IA tiegħek: kontroll, ħin iffrankat u prova għall-AI Act għal kull xiri, fuq il-bank tal-għażla tiegħek."
+  },
+  "layout": {
+    "skip": "Aqbeż għall-kontenut"
+  },
+  "nav": {
+    "aria": "Navigazzjoni ewlenija",
+    "home": "Artemis, paġna ewlenija",
+    "howItWorks": "Kif jaħdem",
+    "agencies": "Aġenziji",
+    "pricing": "Prezzijiet",
+    "docs": "Dokumentazzjoni",
+    "security": "Sigurtà",
+    "login": "Idħol",
+    "cta": "Ipprova"
+  },
+  "lang": {
+    "choose": "Agħżel lingwa"
+  },
+  "plans": {
+    "sandbox": "Sandbox",
+    "builder": "Builder",
+    "team": "Team",
+    "agency": "Aġenziji",
+    "business": "Business"
+  },
+  "footer": {
+    "trademarks": "Claude, ChatGPT u n8n huma trademarks tas-sidien rispettivi tagħhom. Artemis mhuwiex affiljat ma' ħadd minnhom.",
+    "product": "Prodott",
+    "policyTemplate": "Mudell ta' politika",
+    "waitlist": "Lista ta' stennija",
+    "restApi": "REST API",
+    "legal": "Legali",
+    "legalNotice": "Avviż legali",
+    "terms": "Kundizzjonijiet tal-bejgħ",
+    "privacy": "Privatezza"
+  },
+  "legal": {
+    "eyebrow": "Legali",
+    "updated": "L-aħħar aġġornament: 1 ta' Novembru 2026.",
+    "frenchPrevails": "Din il-paġna hija traduzzjoni pprovduta għall-konvenjenza. Il-<a href=\"{href}\">verżjoni Franċiża</a> biss hija legalment vinkolanti.",
+    "vat": "VAT mhux applikabbli, art. 293 B tal-Kodiċi Ġenerali tat-Taxxa Franċiż (CGI)",
+    "status": "Negozjant waħdieni (micro-entreprise)",
+    "host": "Cloudflare, Inc. — 101 Townsend St, San Francisco, CA 94107, USA (paġni u API); Supabase, Inc. — data ospitata fl-Unjoni Ewropea (Frankfurt)."
+  },
+  "docsNav": {
+    "eyebrow": "Dokumentazzjoni",
+    "start": "Ibda",
+    "claude": "Claude (MCP)",
+    "chatgpt": "ChatGPT (MCP)",
+    "cli": "CLI u skill ta' Claude",
+    "api": "REST API",
+    "rules": "Regoli u approvazzjoni"
+  },
+  "notFound": {
+    "title": "Il-paġna ma nstabitx",
+    "eyebrow": "Żball 404",
+    "headline": "Din il-paġna ma teżistix.",
+    "lead": "Il-link jista' jkun skadut. Mur lura għall-paġna ewlenija jew ifli d-dokumentazzjoni.",
+    "home": "Paġna ewlenija"
+  }
+}

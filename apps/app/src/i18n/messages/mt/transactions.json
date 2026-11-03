@@ -1,0 +1,18 @@
+{
+  "transactions": {
+    "title": "Tranżazzjonijiet",
+    "lead": "Operazzjonijiet irrapportati mill-banek tiegħek u mqabbla mal-mandati (l-aħħar 90 jum).",
+    "mismatches_one": "{count} tranżazzjoni ma taqbilx mal-mandat tagħha. Iċċekkjaha u ffriża l-aġent jekk meħtieġ.",
+    "mismatches_two": "{count} tranżazzjonijiet ma jaqblux mal-mandat tagħhom. Iċċekkjahom u ffriża l-aġent jekk meħtieġ.",
+    "mismatches_few": "{count} tranżazzjonijiet ma jaqblux mal-mandat tagħhom. Iċċekkjahom u ffriża l-aġent jekk meħtieġ.",
+    "mismatches_many": "{count} tranżazzjoni ma jaqblux mal-mandat tagħhom. Iċċekkjahom u ffriża l-aġent jekk meħtieġ.",
+    "mismatches_other": "{count} tranżazzjoni ma jaqblux mal-mandat tagħhom. Iċċekkjahom u ffriża l-aġent jekk meħtieġ.",
+    "emptyTitle": "L-ebda tranżazzjoni",
+    "emptyText": "Jidhru ftit minuti wara kull pagament.",
+    "colDate": "Data",
+    "colMerchant": "Negozjant",
+    "colAmount": "Ammont",
+    "colBankStatus": "Status tal-bank",
+    "colMatch": "Tqabbil"
+  }
+}

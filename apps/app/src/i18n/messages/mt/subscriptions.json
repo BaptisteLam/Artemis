@@ -1,0 +1,24 @@
+{
+  "subscriptions": {
+    "title": "Abbonamenti",
+    "lead": "Abbonamenti meħuda mill-aġenti tiegħek: karta marbuta man-negozjant, limitu ta' kull xahar, identifikazzjoni ta' abbonamenti rieqda.",
+    "confirmCancel": "Tikkanċella dan l-abbonament? Il-karta se tiġi kkanċellata fil-bank.",
+    "planRequired": "L-abbonamenti mmaniġġjati mill-aġenti huma inklużi mill-pjan Team.",
+    "seePlans": "Ara l-pjanijiet →",
+    "dormantAlert_one": "{count} abbonament mingħajr pagament għal aktar minn {days} jum: ikkunsidra li tikkanċellah.",
+    "dormantAlert_two": "{count} abbonamenti mingħajr pagament għal aktar minn {days} jum: ikkunsidra li tikkanċellahom.",
+    "dormantAlert_few": "{count} abbonamenti mingħajr pagament għal aktar minn {days} jum: ikkunsidra li tikkanċellahom.",
+    "dormantAlert_many": "{count} abbonament mingħajr pagament għal aktar minn {days} jum: ikkunsidra li tikkanċellahom.",
+    "dormantAlert_other": "{count} abbonament mingħajr pagament għal aktar minn {days} jum: ikkunsidra li tikkanċellahom.",
+    "emptyTitle": "L-ebda abbonament",
+    "emptyText": "Aġent joħloq abbonament b'request_card u l-għażla rikorrenti.",
+    "colMerchant": "Negozjant",
+    "colAgent": "Aġent",
+    "colMonthlyLimit": "Limitu ta' kull xahar",
+    "colPaid": "Imħallas",
+    "colLastPayment": "L-aħħar pagament",
+    "colStatus": "Status",
+    "dormant": "Rieqed",
+    "cancel": "Ikkanċella"
+  }
+}

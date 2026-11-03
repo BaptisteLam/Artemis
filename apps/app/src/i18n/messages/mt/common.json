@@ -1,0 +1,93 @@
+{
+  "common": {
+    "loading": "Qed jillowdja…",
+    "copy": "Ikkopja",
+    "copied": "Ikkupjat"
+  },
+  "lang": {
+    "choose": "Lingwa"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "requests": "Talbiet",
+    "agents": "Aġenti",
+    "clients": "Klijenti",
+    "cards": "Karti",
+    "subscriptions": "Abbonamenti",
+    "transactions": "Tranżazzjonijiet",
+    "exports": "Esportazzjonijiet",
+    "banks": "Banek",
+    "team": "Tim",
+    "audit": "Awditjar",
+    "billing": "Fatturazzjoni",
+    "settings": "Settings"
+  },
+  "shell": {
+    "home": "Artemis, dashboard",
+    "organization": "Organizzazzjoni",
+    "admin": "Amministrazzjoni",
+    "freezeAllHint": "Iffriża l-aġenti kollha u kkanċella l-karti attivi",
+    "frozen": "Iffriżat",
+    "freezeAll": "Iffriża kollox",
+    "signOut": "Oħroġ",
+    "navAria": "Navigazzjoni tal-app",
+    "pendingCount_one": "{count} pendenti",
+    "pendingCount_two": "{count} pendenti",
+    "pendingCount_few": "{count} pendenti",
+    "pendingCount_many": "{count} pendenti",
+    "pendingCount_other": "{count} pendenti",
+    "frozenBanner": "Organizzazzjoni ffriżata: l-ebda karta ġdida ma tista' tinħareġ. Neħħi l-iffriżar f'Settings."
+  },
+  "status": {
+    "pending": "Biex tiġi approvata",
+    "approved": "Approvata",
+    "issued": "Karta maħruġa",
+    "completed": "Imħallsa",
+    "rejected": "Miċħuda",
+    "expired": "Skaduta",
+    "failed": "Falliment tal-bank",
+    "canceled": "Ikkanċellata",
+    "active": "Attiva",
+    "pending_bank_sca": "Approvazzjoni tal-bank",
+    "used": "Użata",
+    "frozen": "Iffriżata",
+    "matched": "Imqabbla",
+    "mismatch": "Diskrepanza",
+    "unmatched": "Mhux imqabbla"
+  },
+  "roles": {
+    "owner": "Sid",
+    "admin": "Amministratur",
+    "approver": "Approvatur",
+    "viewer": "Osservatur"
+  },
+  "errors": {
+    "network": "In-netwerk mhux disponibbli. Iċċekkja l-konnessjoni tiegħek.",
+    "unauthorized": "Is-sessjoni tiegħek skadiet. Jekk jogħġbok erġa' idħol.",
+    "forbidden": "M'għandekx permess tagħmel dan.",
+    "not_found": "Ma nstabx, jew m'għadux disponibbli.",
+    "invalid_input": "Xi informazzjoni mhix valida. Jekk jogħġbok iċċekkja l-formola.",
+    "rate_limited": "Wisq tentattivi. Stenna ftit u erġa' pprova.",
+    "quota_exceeded": "Laħaqt il-kwota ta' kull xahar tal-mandati tiegħek.",
+    "subscription_inactive": "L-abbonament tiegħek mhux attiv. Aġġornah f'Fatturazzjoni.",
+    "org_frozen": "L-organizzazzjoni hija ffriżata.",
+    "agent_frozen": "Dan l-aġent huwa ffriżat.",
+    "request_not_pending": "Din it-talba m'għadhiex pendenti.",
+    "request_expired": "Din it-talba skadiet.",
+    "already_revealed": "Din il-karta diġà ngħatat.",
+    "card_not_ready": "Il-karta għadha mhix disponibbli.",
+    "bank_error": "Il-bank ċaħad l-operazzjoni.",
+    "plan_limit": "Laħaqt il-limitu tal-pjan tiegħek. Aġġorna l-pjan biex tkompli.",
+    "over_client_budget": "Il-baġit ta' kull xahar ta' dan il-klijent inqabeż.",
+    "internal": "Xi ħaġa marret ħażin. Jekk jogħġbok erġa' pprova.",
+    "currency_not_allowed": "Din il-munita mhix permessa mill-politika.",
+    "invalid_amount": "Ammont mhux validu.",
+    "over_transaction_limit": "Ammont 'il fuq mil-limitu għal kull tranżazzjoni.",
+    "over_monthly_budget": "Il-baġit ta' kull xahar tal-aġent inqabeż.",
+    "merchant_blocked": "Dan in-negozjant huwa mblukkat mill-politika.",
+    "merchant_not_allowed": "Dan in-negozjant mhuwiex fil-lista ta' dawk permessi.",
+    "mcc_blocked": "Din il-kategorija ta' negozjant hija mblukkata.",
+    "mcc_not_allowed": "Din il-kategorija ta' negozjant mhix permessa.",
+    "too_many_requests": "Wisq talbiet fl-aħħar siegħa għal dan l-aġent."
+  }
+}

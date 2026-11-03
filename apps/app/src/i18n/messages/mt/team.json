@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Tim",
+    "lead": "L-approvaturi jirċievu t-talbiet u jiffirmawhom bil-passkey tagħhom.",
+    "confirmRemove": "Tneħħi dan il-membru?",
+    "cols": {
+      "member": "Membru",
+      "role": "Rwol",
+      "since": "Minn"
+    },
+    "you": "int",
+    "remove": "Neħħi",
+    "invite": "Stieden",
+    "email": "Email",
+    "role": "Rwol",
+    "send": "Ibgħat l-istedina",
+    "inviteLink": "Link tal-istedina (validu għal 7 ijiem):",
+    "expiresOn": "jiskadi fil-{date}",
+    "revoke": "Irrevoka"
+  }
+}

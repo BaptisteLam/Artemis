@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Banek",
+    "lead": "Il-karti jinħolqu fil-bank tiegħek stess. Artemis qatt ma jżomm il-fondi tiegħek.",
+    "bankAria": "Bank",
+    "help": {
+      "stripe": "Kont Stripe b'Issuing attivat (UE). Oħloq ċavetta ristretta b'permessi tal-kitba għal Issuing. Daħħal detentur tal-karta eżistenti (ich_…) jew l-indirizz tal-kumpanija tiegħek biex Artemis ikun jista' joħloq wieħed.",
+      "qonto": "Aċċess għall-qari, iffriżar u rikonċiljazzjoni: Qonto ma jgħaddix il-karta lil partijiet terzi u jipprojbixxi li tingħata b'self. Token OAuth mill-programm tas-sħab ta' Qonto; l-approvatur jista' jara karta Qonto b'mod sigur u jlesti l-pagament hu stess.",
+      "revolut": "Pjan Grow jew ogħla, aċċess għal “Cards API” attivat mill-appoġġ, u approvazzjoni bil-miktub minn Revolut (Valid Permission) qabel kull użu fil-produzzjoni. Jeħtieġ għoti dirett (Settings)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Ċavetta sigrieta ristretta",
+      "publishableKey": "Ċavetta pubblikabbli",
+      "stripeCardholder": "Detentur tal-karta Stripe",
+      "companyName": "Isem il-kumpanija",
+      "address": "Indirizz",
+      "postalCode": "Kodiċi postali",
+      "city": "Belt",
+      "country": "Pajjiż",
+      "webhookSecret": "Sigriet tal-webhook",
+      "accessToken": "Token tal-aċċess",
+      "refreshToken": "Token tal-aġġornament",
+      "oauthClientId": "ID tal-klijent OAuth",
+      "oauthClientSecret": "Sigriet tal-klijent OAuth",
+      "holderMemberId": "ID tal-membru detentur",
+      "bankAccountId": "ID tal-kont bankarju",
+      "environment": "Ambjent",
+      "stagingToken": "Token tal-istaging",
+      "clientAssertion": "Asserzjoni tal-klijent (JWT)",
+      "holderId": "ID tad-detentur tal-karta"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… jew sk_test_…",
+      "stripePublishableKey": "pk_live_… (link effimeru tal-karta)",
+      "stripeCardholder": "ich_… (fakultattiv)",
+      "ifNoCardholder": "Jekk ma hemmx detentur tal-karta",
+      "country": "Kodiċi ISO, eż. FR",
+      "webhookSecret": "whsec_… (ladarba jinħoloq il-webhook, ara hawn taħt)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Fakultattiv",
+      "toRefreshToken": "Biex jiġi aġġornat it-token",
+      "qontoMembershipId": "membership id ta' Qonto",
+      "qontoBankAccountId": "bank_account id ta' Qonto",
+      "sandboxOnly": "Sandbox biss",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Fakultattiv, għall-aġġornament",
+      "teamMemberOptional": "Membru tat-tim (fakultattiv)"
+    },
+    "encrypted": "Il-kredenzjali jiġu ttestjati, imbagħad kriptati (AES-256-GCM). Qatt ma jerġgħu jintwerew.",
+    "testing": "Qed tiġi ttestjata l-konnessjoni…",
+    "connectProvider": "Ikkonnettja {name}",
+    "testOk": "Konnessjoni OK",
+    "testFailed": "Ma rnexxiex: {detail}",
+    "confirmDisconnect": "Tiskonnettja dan il-bank? L-aġenti li jużawh ma jkunux jistgħu jiksbu karta aktar.",
+    "lastSync": "L-aħħar sinkronizzazzjoni: {date}",
+    "stripeWebhook": "Webhook Stripe (avvenimenti issuing_transaction.*):",
+    "test": "Ittestja",
+    "disconnect": "Skonnettja",
+    "connectRealBank": "Ikkonnettja bank reali",
+    "upgrade": "Il-konnessjoni ta' bank reali hija inkluża mill-pjan Builder ({price}/xahar).",
+    "choosePlan": "Agħżel pjan →"
+  }
+}

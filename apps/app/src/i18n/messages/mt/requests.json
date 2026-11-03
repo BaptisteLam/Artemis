@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Iffiltra skont l-istatus",
+      "all": "Kollha",
+      "pending": "Biex jiġu approvati",
+      "issued": "Karta maħruġa",
+      "completed": "Imħallsa",
+      "rejected": "Miċħuda",
+      "failed": "Fallew"
+    },
+    "list": {
+      "title": "Talbiet",
+      "lead": "Kull talba ta' aġent, bid-deċiżjoni u l-karta tagħha.",
+      "emptyTitle": "L-ebda talba",
+      "emptyBody": "It-talbiet tal-aġenti tiegħek se jidhru hawn."
+    },
+    "decision": {
+      "notAllowed": "Is-sidien, l-amministraturi u l-approvaturi biss jistgħu jiddeċiedu.",
+      "cancelledOnDevice": "L-approvazzjoni ġiet ikkanċellata fuq l-apparat.",
+      "reasonLabel": "Raġuni għaċ-ċaħda",
+      "reasonHint": "Viżibbli għall-aġent.",
+      "confirmReject": "Ikkonferma ċ-ċaħda",
+      "cancel": "Ikkanċella",
+      "signing": "Qed tiġi ffirmata…",
+      "approve": "Approva bil-passkey tiegħi",
+      "reject": "Iċħad"
+    },
+    "detail": {
+      "confirmCancel": "Tikkanċella din it-talba u l-karta tagħha?",
+      "receiptUnavailable": "L-irċevuta mhix disponibbli.",
+      "eyebrow": "Talba · {id}",
+      "amount": "Ammont mitlub",
+      "agent": "Aġent",
+      "mandateWindow": "mandat · {id}",
+      "purpose": "Għan",
+      "category": "Kategorija",
+      "expires": "Tiskadi",
+      "rules": "Regoli",
+      "perTxLimit": "Limitu",
+      "budget": "baġit",
+      "decision": "Deċiżjoni",
+      "hash": "sha256 {hash}",
+      "quorum": "Kworum: {signed} minn {required} firem meħtieġa 'il fuq mil-limitu.",
+      "unusualAmount": "Salvagwardja: ammont mhux tas-soltu għal dan l-aġent, approvazzjoni umana meħtieġa.",
+      "autoApproved": "Approvata awtomatikament mir-regoli",
+      "signedByPasskey": "Mandat iffirmat b'passkey",
+      "card": "Karta",
+      "cardHolderFallback": "aġent",
+      "cardAria": "Karta virtwali li tispiċċa b'{last4}, detentur {holder}, tiskadi {exp}",
+      "bankSca": "Approva wkoll il-ħolqien tal-karta fl-app tal-bank tiegħek.",
+      "cardExpires": "Tiskadi {date}",
+      "handedOver": "mogħtija lill-aġent {time}",
+      "notHandedOver": "għadha ma ngħatatx lill-aġent",
+      "qontoNotice": "Qonto ma jagħtix il-karti lill-aġenti: uriha hawn u lesti l-pagament int stess.",
+      "showQontoCard": "Uri l-karta (Qonto)",
+      "simulatePayment": "Issimula pagament",
+      "cancelCard": "Ikkanċella l-karta",
+      "noCard": "L-ebda karta maħruġa.",
+      "transactions": "Tranżazzjonijiet",
+      "noTransactions": "L-ebda tranżazzjoni rrapportata mill-bank.",
+      "receipts": "Irċevuti",
+      "addReceipt": "Żid",
+      "noReceipts": "L-ebda irċevuta.",
+      "back": "← It-talbiet kollha"
+    }
+  }
+}

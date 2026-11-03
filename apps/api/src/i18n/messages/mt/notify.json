@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "L-aġenti tiegħek iħallsu. Il-kelma finali tibqa' tiegħek.",
+    "unknownAgent": "Aġent",
+    "unknownMerchant": "negozjant",
+    "requestPending": {
+      "title": "{agent} irid jonfoq {amount}",
+      "subject": "Biex tiġi approvata: {amount} għand {merchant}",
+      "merchant": "Negozjant: {merchant}",
+      "purpose": "Għan: {purpose}",
+      "expires": "Mingħajr tweġiba, it-talba tiskadi awtomatikament.",
+      "cta": "Irrevedi u approva →",
+      "slack": "*{title}* għand *{merchant}*",
+      "slackCta": "Irrevedi u ffirma bil-passkey tiegħi"
+    },
+    "cardIssueFailed": {
+      "subject": "Il-ħolqien tal-karta ma rnexxiex għand {merchant}",
+      "title": "Il-bank ma ħoloqx il-karta",
+      "fallback": "Żball tal-bank.",
+      "cta": "Ara t-talba →"
+    },
+    "mismatch": {
+      "subject": "Diskrepanza misjuba: {amount} għand {merchant}",
+      "title": "Tranżazzjoni ma taqbilx mal-mandat",
+      "check": "Iċċekkja t-tranżazzjoni u ffriża l-aġent jekk meħtieġ.",
+      "cta": "Ara t-tranżazzjonijiet →",
+      "pushTitle": "Diskrepanza fit-tranżazzjoni"
+    },
+    "invitation": {
+      "subject": "Stedina biex tingħaqad ma' {org} fuq Artemis",
+      "title": "Ingħaqad ma' {org}",
+      "body": "Int mistieden tapprova u ssegwi l-infiq tal-aġenti tal-IA tat-tim tiegħek.",
+      "cta": "Aċċetta l-istedina →"
+    }
+  }
+}

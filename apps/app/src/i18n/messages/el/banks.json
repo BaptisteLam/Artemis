@@ -1,0 +1,63 @@
+{
+  "banks": {
+    "title": "Τράπεζες",
+    "lead": "Οι κάρτες δημιουργούνται στη δική σας τράπεζα. Το Artemis δεν κατέχει ποτέ τα κεφάλαιά σας.",
+    "bankAria": "Τράπεζα",
+    "help": {
+      "stripe": "Λογαριασμός Stripe με ενεργοποιημένο Issuing (ΕΕ). Δημιουργήστε ένα περιορισμένο κλειδί με δικαιώματα εγγραφής για το Issuing. Εισαγάγετε έναν υπάρχοντα κάτοχο κάρτας (ich_…) ή τη διεύθυνση της εταιρείας σας, ώστε το Artemis να δημιουργήσει έναν.",
+      "qonto": "Ανάγνωση, πάγωμα και συμφωνία: η Qonto δεν μεταβιβάζει την κάρτα σε τρίτους και απαγορεύει τον δανεισμό της. Token OAuth από το πρόγραμμα συνεργατών της Qonto· ο εγκρίνων μπορεί να δει μια κάρτα Qonto με ασφάλεια και να ολοκληρώσει ο ίδιος την πληρωμή.",
+      "revolut": "Πρόγραμμα Grow ή ανώτερο, πρόσβαση «Cards API» ενεργοποιημένη από την υποστήριξη και γραπτή έγκριση της Revolut (Valid Permission) πριν από κάθε χρήση σε παραγωγή. Απαιτεί απευθείας παράδοση (Ρυθμίσεις)."
+    },
+    "fields": {
+      "restrictedSecretKey": "Περιορισμένο μυστικό κλειδί",
+      "publishableKey": "Δημοσιεύσιμο κλειδί",
+      "stripeCardholder": "Κάτοχος κάρτας Stripe",
+      "companyName": "Επωνυμία εταιρείας",
+      "address": "Διεύθυνση",
+      "postalCode": "Ταχυδρομικός κώδικας",
+      "city": "Πόλη",
+      "country": "Χώρα",
+      "webhookSecret": "Μυστικό webhook",
+      "accessToken": "Token πρόσβασης",
+      "refreshToken": "Token ανανέωσης",
+      "oauthClientId": "Αναγνωριστικό πελάτη OAuth",
+      "oauthClientSecret": "Μυστικό πελάτη OAuth",
+      "holderMemberId": "Αναγνωριστικό μέλους κατόχου",
+      "bankAccountId": "Αναγνωριστικό τραπεζικού λογαριασμού",
+      "environment": "Περιβάλλον",
+      "stagingToken": "Token staging",
+      "clientAssertion": "Client assertion (JWT)",
+      "holderId": "Αναγνωριστικό κατόχου κάρτας"
+    },
+    "hints": {
+      "stripeSecretKey": "rk_live_… ή sk_test_…",
+      "stripePublishableKey": "pk_live_… (εφήμερος σύνδεσμος κάρτας)",
+      "stripeCardholder": "ich_… (προαιρετικό)",
+      "ifNoCardholder": "Αν δεν υπάρχει κάτοχος κάρτας",
+      "country": "Κωδικός ISO, π.χ. GR",
+      "webhookSecret": "whsec_… (αφού δημιουργηθεί το webhook, βλ. παρακάτω)",
+      "bearerOAuth": "OAuth Bearer",
+      "optional": "Προαιρετικό",
+      "toRefreshToken": "Για την ανανέωση του token",
+      "qontoMembershipId": "Qonto membership id",
+      "qontoBankAccountId": "Qonto bank_account id",
+      "sandboxOnly": "Μόνο Sandbox",
+      "businessApi": "Business API",
+      "optionalForRefresh": "Προαιρετικό, για ανανέωση",
+      "teamMemberOptional": "Μέλος ομάδας (προαιρετικό)"
+    },
+    "encrypted": "Τα διαπιστευτήρια ελέγχονται και στη συνέχεια κρυπτογραφούνται (AES-256-GCM). Δεν εμφανίζονται ποτέ ξανά.",
+    "testing": "Έλεγχος σύνδεσης…",
+    "connectProvider": "Σύνδεση {name}",
+    "testOk": "Η σύνδεση λειτουργεί",
+    "testFailed": "Αποτυχία: {detail}",
+    "confirmDisconnect": "Να αποσυνδεθεί αυτή η τράπεζα; Οι πράκτορες που τη χρησιμοποιούν δεν θα μπορούν πλέον να λάβουν κάρτα.",
+    "lastSync": "Τελευταίος συγχρονισμός: {date}",
+    "stripeWebhook": "Webhook Stripe (συμβάντα issuing_transaction.*):",
+    "test": "Έλεγχος",
+    "disconnect": "Αποσύνδεση",
+    "connectRealBank": "Σύνδεση πραγματικής τράπεζας",
+    "upgrade": "Η σύνδεση πραγματικής τράπεζας περιλαμβάνεται από το πρόγραμμα Builder ({price}/μήνα).",
+    "choosePlan": "Επιλογή προγράμματος →"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "agentPolicy": {
+    "title": "Mudell: politika tal-infiq għall-aġenti tal-IA",
+    "intro": "Mudell b'xejn li tista' tadatta, biex tirregola l-infiq li jagħmlu l-aġenti tal-intelliġenza artifiċjali u tiddokumenta s-sorveljanza umana meħtieġa mill-Artikolu 14 tal-Att tal-UE dwar l-Intelliġenza Artifiċjali (AI Act). Stampa din il-paġna jew ikkopjaha fil-wiki tiegħek.",
+    "scope": {
+      "title": "1. Għan u kamp ta' applikazzjoni",
+      "body": "Din il-politika tapplika għal kull aġent tas-softwer (assistent konversazzjonali, awtomazzjoni, script) awtorizzat jagħmel xiri f'isem [KUMPANIJA]. L-ebda aġent ma juża l-karta tal-pagament tal-kumpanija jew ta' impjegat: kull xiri jgħaddi minn karta virtwali għal użu wieħed mitluba permezz ta' Artemis."
+    },
+    "register": {
+      "title": "2. Reġistru tal-aġenti",
+      "body": "Kull aġent jiddaħħal fir-reġistru b'dawn id-dettalji: ismu, il-pjattaforma tiegħu, il-bniedem responsabbli minnu, l-għan tiegħu, il-baġit ta' kull xahar tiegħu, il-limitu tiegħu għal kull xiri, in-negozjanti awtorizzati tiegħu u, fejn applikabbli, il-klijent li għalih jaħdem."
+    },
+    "rules": {
+      "title": "3. Regoli tal-infiq",
+      "i1": "Baġit ta' kull xahar għal kull aġent: €[AMMONT]; limitu għal kull xiri: €[AMMONT].",
+      "i2": "Negozjanti awtorizzati: [LISTA]; kategoriji pprojbiti: logħob tal-azzard, trasferimenti ta' flus, kważi flus kontanti, titoli.",
+      "i3": "Approvazzjoni awtomatika biss taħt €[AMMONT] u ma' negozjant awtorizzat; 'il fuq minn hekk, firma umana hija obbligatorja.",
+      "i4": "'Il fuq minn €[AMMONT], huma meħtieġa żewġ firmatarji differenti."
+    },
+    "oversight": {
+      "title": "4. Sorveljanza umana",
+      "body": "Il-persuni awtorizzati japprovaw huma: [ISMIJIET / FUNZJONIJIET]. L-approvazzjoni tingħata b'passkey fuq il-kontenut eżatt tal-mandat (aġent, ammont, negozjant, għan). Kull talba li ma tiġix approvata tiskadi awtomatikament."
+    },
+    "records": {
+      "title": "5. Irċevuti u kontabbiltà",
+      "body": "Kull xiri jitqabbel mal-fattura tiegħu fi żmien [N] sigħat; inkella, l-aġent jiġi sospiż. L-infiq jiġi esportat kull xahar (FEC jew Pennylane) u rrikonċiljat mad-dikjarazzjonijiet tal-bank."
+    },
+    "incidents": {
+      "title": "6. Inċidenti",
+      "body": "F'każ ta' mġiba anormali, diskrepanza fl-ammont jew fin-negozjant, jew suspett ta' prompt injection, il-persuna responsabbli tiffriża immedjatament l-aġent (jew l-organizzazzjoni kollha) u tirreġistra l-inċident."
+    },
+    "retention": {
+      "title": "7. Żamma u reviżjoni",
+      "body": "Ir-reġistru tal-awditjar f'katina jinżamm għal [10] snin. Rapport ta' sorveljanza jitħejja kull tliet xhur u jiġi rivedut minn [FUNZJONI]. Din il-politika tiġi riveduta kull sena."
+    },
+    "note": "Artemis jiġġenera r-reġistru tal-aġenti u r-rapport ta' sorveljanza trimestrali fil-pjan {plan}."
+  }
+}

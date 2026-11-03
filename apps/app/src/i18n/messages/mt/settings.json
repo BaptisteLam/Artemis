@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "title": "Settings",
+    "signOut": "Oħroġ",
+    "language": {
+      "title": "Lingwa",
+      "lead": "Lingwa tal-interfaċċa fuq dan l-apparat."
+    },
+    "notifications": {
+      "title": "Notifiki fuq dan l-apparat",
+      "lead": "Irċievi notifika għal kull talba. Fuq iPhone, l-ewwel żid lil Artemis mal-Home Screen tiegħek (Share → Add to Home Screen).",
+      "notConfigured": "In-notifiki push mhumiex konfigurati fuq dan is-server (ċwievet VAPID). L-emails jibqgħu attivi.",
+      "unsupported": "Dan il-browser ma jappoġġjax notifiki push.",
+      "denied": "In-notifiki huma mblukkati fis-settings tal-browser.",
+      "enable": "Attiva n-notifiki",
+      "on": "In-notifiki huma attivi.",
+      "disable": "Itfi"
+    },
+    "slack": {
+      "lead": "Kull talba pendenti tiġi ppubblikata f'kanal Slack, b'buttuna li tiftaħ l-approvazzjoni bil-passkey. Oħloq “Incoming Webhook” f'Slack u waħħal il-URL tiegħu.",
+      "connected": "Slack huwa kkonnettjat.",
+      "disconnect": "Skonnettja",
+      "urlLabel": "URL tal-webhook Slack",
+      "connect": "Ikkonnettja",
+      "urlPlaceholder": "https://hooks.slack.com/services/…"
+    },
+    "delivery": {
+      "title": "Għoti tal-karti lill-aġenti",
+      "confirmDirect": "Għoti dirett: in-numru tal-karta se jgħaddi minn Artemis darba fi triqtu lejn l-aġent. Dan idaħħlek fil-kamp ta' applikazzjoni tal-PCI DSS u, ma' Revolut, jeħtieġ approvazzjoni bil-miktub. Tkompli?",
+      "linkTitle": "Link effimeru (rakkomandat)",
+      "linkText": "L-aġent jirċievi link għal użu wieħed validu għal 10 minuti; il-karta tintwera mill-bank emittenti (Stripe Issuing). In-numru qatt ma jgħaddi minn Artemis.",
+      "directTitle": "Għoti dirett (għażla avvanzata)",
+      "directText": "In-numru jintbagħat lill-aġent darba biss, mingħajr ma jinħażen. Meħtieġ għal Revolut. Tidħol fil-kamp ta' applikazzjoni tal-PCI DSS."
+    },
+    "org": {
+      "title": "Organizzazzjoni",
+      "name": "Isem",
+      "rename": "Ibdel l-isem"
+    },
+    "emergency": {
+      "title": "Emerġenza",
+      "lead": "“Iffriża kollox” jissospendi kull aġent u jikkanċella l-karti attivi u t-talbiet pendenti. Użah jekk aġent iġib ruħu b'mod anormali jew jekk token ikun inkixef.",
+      "confirmFreeze": "Tiffriża l-organizzazzjoni kollha? L-aġenti kollha se jiġu ffriżati u l-karti attivi kkanċellati.",
+      "unfreeze": "Neħħi l-iffriżar tal-organizzazzjoni",
+      "freeze": "Iffriża kollox issa",
+      "afterUnfreeze": "Wara li tneħħi l-iffriżar, erġa' attiva kull aġent mill-paġna tiegħu."
+    },
+    "passkeys": {
+      "title": "Passkeys",
+      "devicePrompt": "Isem l-apparat (eż. l-iPhone ta' Lea)",
+      "confirmDelete": "Tħassar din il-passkey?",
+      "add": "Żid",
+      "lead": "Passkey hija meħtieġa biex tapprova spiża. Żid waħda fuq kull apparat li tuża.",
+      "addedOn": "miżjuda fil-{date}",
+      "delete": "Ħassar",
+      "none": "L-ebda passkey: għadek ma tistax tapprova l-infiq."
+    }
+  }
+}

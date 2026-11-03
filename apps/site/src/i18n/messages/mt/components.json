@@ -1,0 +1,33 @@
+{
+  "components": {
+    "worksWith": {
+      "label": "Jaħdem ma'",
+      "more": "MCP · REST API · Make"
+    },
+    "payCard": {
+      "singleUse": "Għal użu wieħed",
+      "aria": "Karta virtwali li tispiċċa b'{last4}, detentur {holder}, tiskadi {exp}",
+      "holder": "Detentur tal-karta",
+      "expires": "Tiskadi",
+      "debit": "Debitu",
+      "virtual": "virtwali",
+      "used": "Użata"
+    },
+    "faq": {
+      "q1": "Artemis iżomm il-flus tiegħi?",
+      "a1": "Le. Il-karti jinħolqu fil-bank tiegħek stess (Qonto, Revolut Business jew Stripe Issuing) u jiġu ddebitati mill-kont tiegħek. Artemis huwa softwer: japplika r-regoli tiegħek, jiġbor l-approvazzjoni tiegħek u jmexxi l-bank permezz tal-API tiegħu. Qatt ma jirċievi, iżomm jew jittrasferixxi fondi.",
+      "q2": "U jekk l-aġent tiegħi jiġi manipulat minn prompt injection?",
+      "a2": "L-aġent jista' biss jitlob. Kull karta hija għal użu wieħed, limitata għall-ammont eżatt, marbuta man-negozjant previst u tiskadi f'30 minuta. Barra r-regoli tiegħek, it-talba tiġi miċħuda; 'il fuq mil-limitu tiegħek, xejn ma joħroġ mingħajr il-passkey tiegħek. Kull diskrepanza fl-ammont jew fin-negozjant tqajjem twissija, u l-buttuna “Iffriża kollox” twaqqaf kollox bi klikk waħda.",
+      "q3": "In-numru tal-karta jgħaddi minn Artemis?",
+      "a3": "Le, mhux b'mod awtomatiku. Waqt il-ħlas, l-aġent jirċievi link għal użu wieħed validu għal 10 minuti: il-karta tintwera hemmhekk direttament mill-bank emittenti. Artemis qatt ma jara, jaħżen jew jgħaddi n-numru. Ladarba jinfetaħ, il-link ma jibqax jaħdem.",
+      "q4": "Għaliex ma nużax sempliċement il-bank tiegħi?",
+      "a4": "Jekk tuża biss Stripe, Ramp jew Mercury, diġà jagħmlu parti mix-xogħol. Artemis iġib dak li bank ma jagħmilx għall-kompetituri tiegħu: diversi banek taħt politika waħda, kontabbiltà Franċiża (FEC, Pennylane), prova għall-AI Act lesta biex tingħata, u modalità għall-aġenziji.",
+      "q5": "Liema banek huma appoġġati?",
+      "a5": "Stripe Issuing (rakkomandat) joħloq il-karti u jurihom lill-aġent mingħajr ma n-numru qatt jgħaddi minn Artemis. Revolut Business jaħdem taħt ftehim bil-miktub ma' Revolut, bil-karta mogħtija direttament. Qonto jiġi konness għall-qari, l-iffriżar u r-rikonċiljazzjoni. Is-Sandbox jissimula bank biex tkun tista' tittestja mingħajr ma tikkonnettja xejn.",
+      "q6": "Kemm jiswa?",
+      "a6": "Is-Sandbox huwa b'xejn. Imbagħad {builder} (Builder), {team} (Team), {agency} + {client} għal kull klijent attiv ({agencyPlan}) jew minn {business} (Business) fix-xahar. Lil hinn mill-kwota tiegħek, {overage} għal kull mandat. L-ebda kummissjoni fuq l-infiq tiegħek: il-bank tiegħek japplika l-pjan tas-soltu tiegħu. {vat}.",
+      "q7": "Id-data tiegħi tinżamm fl-Ewropa?",
+      "a7": "Iva. Id-database hija ospitata fl-Unjoni Ewropea (Frankfurt), il-kredenzjali tal-bank huma kriptati b'AES-256-GCM, u r-reġistru tal-awditjar f'katina jiddokumenta s-sorveljanza umana meħtieġa mill-AI Act."
+    }
+  }
+}

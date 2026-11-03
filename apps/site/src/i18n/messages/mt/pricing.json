@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "title": "Prezzijiet",
+    "description": "Sandbox b'xejn, imbagħad {a}, {b}, {c} jew {d} fix-xahar. L-ebda kummissjoni fuq l-infiq tiegħek.",
+    "headline": "Abbonament wieħed sempliċi. L-ebda kummissjoni.",
+    "lead": "Tħallas biss għas-softwer. Il-karti jinħarġu mill-bank tiegħek, taħt il-pjan bankarju tas-soltu tiegħek.",
+    "popular": "L-aktar popolari",
+    "from": "minn {price}",
+    "perMonth": "/ xahar",
+    "start": "Ibda",
+    "choose": "Agħżel {plan}",
+    "mandates": "{count} mandat / xahar",
+    "sandbox": {
+      "pitch": "Ipprova b'bank simulat.",
+      "i1": "Aġent wieħed",
+      "i2": "Bank simulat",
+      "i3": "{count} mandat simulat / xahar",
+      "i4": "MCP, API, CLI"
+    },
+    "builder": {
+      "pitch": "Għal freelancer jew żviluppatur u l-aġenti tiegħu.",
+      "i1": "3 aġenti",
+      "i2": "Bank konness wieħed",
+      "i4": "Approvazzjoni b'passkey",
+      "i5": "Salvagwardji kontra l-injezzjonijiet"
+    },
+    "team": {
+      "pitch": "Għal startup ta' 5 sa 50 persuna.",
+      "i1": "10 aġenti",
+      "i2": "2 banek",
+      "i4": "Slack u kworum ta' approvaturi",
+      "i5": "Abbonamenti, esportazzjoni FEC"
+    },
+    "agency": {
+      "pitch": "Għall-aġenziji tal-awtomazzjoni.",
+      "i1": "Klijenti illimitati, 25 aġent",
+      "i3": "Baġit u marġni għal kull klijent",
+      "i4": "Rapport ta' kull xahar għar-rifatturazzjoni",
+      "i5": "+ {price} għal kull klijent attiv"
+    },
+    "business": {
+      "pitch": "Għal scale-ups regolati.",
+      "i1": "Illimitat",
+      "i2": "Fajl u rapport tal-AI Act",
+      "i3": "Esportazzjoni ffirmata tar-reġistru tal-awditjar",
+      "i4": "Appoġġ prijoritarju"
+    },
+    "faq": {
+      "title": "Mistoqsijiet frekwenti",
+      "q1": "Hemm miżati għal kull karta?",
+      "a1": "Mhux minn Artemis. Il-bank tiegħek japplika l-pjan tiegħu stess (il-karti virtwali huma inklużi fil-biċċa l-kbira tal-pjanijiet Qonto u Revolut Business; Stripe Issuing jiddebita skont il-prezzijiet tiegħu stess).",
+      "q2": "X'jiġri jekk naqbeż il-kwota tiegħi?",
+      "a2": "Fuq pjan imħallas, l-aġenti tiegħek ikomplu jaħdmu: kull mandat lil hinn mill-kwota jiġi fatturat {price} fi tmiem ix-xahar. Fis-Sandbox, it-talbiet jiġu miċħuda bil-kodiċi <code>quota_exceeded</code>.",
+      "q3": "Kif jiġi fatturat il-pjan {plan}?",
+      "a3": "{base} fix-xahar, flimkien ma' {client} għal kull klijent attiv, jiġifieri kull klijent li għalih inħoloq mill-inqas mandat wieħed matul ix-xahar.",
+      "q4": "Nista' nikkanċella fi kwalunkwe ħin?",
+      "a4": "Iva, mit-taqsima Fatturazzjoni. L-abbonament jibqa' sa tmiem il-perjodu mħallas; id-data tiegħek tibqa' tista' tiġi esportata.",
+      "q5": "VAT",
+      "a5": "Il-prezzijiet murija huma netti."
+    }
+  }
+}

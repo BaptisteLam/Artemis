@@ -1,0 +1,68 @@
+{
+  "requests": {
+    "filters": {
+      "aria": "Filtrovat podle stavu",
+      "all": "Vše",
+      "pending": "Ke schválení",
+      "issued": "Karta vydána",
+      "completed": "Zaplaceno",
+      "rejected": "Zamítnuto",
+      "failed": "Neúspěšné"
+    },
+    "list": {
+      "title": "Žádosti",
+      "lead": "Každá žádost agenta s rozhodnutím a kartou.",
+      "emptyTitle": "Žádné žádosti",
+      "emptyBody": "Zde se zobrazí žádosti vašich agentů."
+    },
+    "decision": {
+      "notAllowed": "Rozhodovat mohou pouze vlastníci, administrátoři a schvalovatelé.",
+      "cancelledOnDevice": "Schválení bylo na zařízení zrušeno.",
+      "reasonLabel": "Důvod zamítnutí",
+      "reasonHint": "Viditelné pro agenta.",
+      "confirmReject": "Potvrdit zamítnutí",
+      "cancel": "Zrušit",
+      "signing": "Podepisování…",
+      "approve": "Schválit mým přístupovým klíčem",
+      "reject": "Zamítnout"
+    },
+    "detail": {
+      "confirmCancel": "Zrušit tuto žádost a její kartu?",
+      "receiptUnavailable": "Doklad není k dispozici.",
+      "eyebrow": "Žádost · {id}",
+      "amount": "Požadovaná částka",
+      "agent": "Agent",
+      "mandateWindow": "mandát · {id}",
+      "purpose": "Účel",
+      "category": "Kategorie",
+      "expires": "Vyprší",
+      "rules": "Pravidla",
+      "perTxLimit": "Limit",
+      "budget": "rozpočet",
+      "decision": "Rozhodnutí",
+      "hash": "sha256 {hash}",
+      "quorum": "Kvórum: {signed} z {required} požadovaných podpisů nad prahem.",
+      "unusualAmount": "Pojistka: neobvyklá částka pro tohoto agenta, vyžaduje se lidské schválení.",
+      "autoApproved": "Schváleno automaticky podle pravidel",
+      "signedByPasskey": "Mandát podepsán přístupovým klíčem",
+      "card": "Karta",
+      "cardHolderFallback": "agent",
+      "cardAria": "Virtuální karta končící na {last4}, držitel {holder}, platnost do {exp}",
+      "bankSca": "Vytvoření karty schvalte také v aplikaci své banky.",
+      "cardExpires": "Platnost do {date}",
+      "handedOver": "předána agentovi {time}",
+      "notHandedOver": "dosud nepředána agentovi",
+      "qontoNotice": "Qonto karty agentům nepředává: zobrazte kartu zde a platbu dokončete sami.",
+      "showQontoCard": "Zobrazit kartu (Qonto)",
+      "simulatePayment": "Simulovat platbu",
+      "cancelCard": "Zrušit kartu",
+      "noCard": "Žádná karta nebyla vydána.",
+      "transactions": "Transakce",
+      "noTransactions": "Banka neohlásila žádné transakce.",
+      "receipts": "Doklady",
+      "addReceipt": "Přidat",
+      "noReceipts": "Žádné doklady.",
+      "back": "← Všechny žádosti"
+    }
+  }
+}

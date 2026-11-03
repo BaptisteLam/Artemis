@@ -1,0 +1,61 @@
+{
+  "legalPages": {
+    "terms": {
+      "title": "Termini u Kundizzjonijiet tal-Bejgħ u tal-Użu",
+      "purposeTitle": "1. Għan",
+      "purpose": "Dawn it-termini jirregolaw l-aċċess għas-softwer Artemis, ippubblikat minn {editor} ({status}, SIRET {siret}), u l-abbonament għalih minn klijenti kummerċjali. Is-servizz huwa riżervat għall-professjonisti.",
+      "serviceTitle": "2. Deskrizzjoni tas-servizz",
+      "service": "Artemis jippermetti lil klijent jiddefinixxi regoli tal-infiq għall-aġenti tas-softwer tiegħu, japprova t-talbiet ta' pagament tagħhom u jikkontrolla, permezz tal-interfaċċi ta' programmar tal-applikazzjonijiet tal-bank tiegħu stess, il-ħolqien ta' karti virtwali għal użu wieħed. Artemis ma jipprovdi l-ebda servizz ta' pagament, ma jżomm l-ebda fond u ma joħroġ l-ebda karta. Ir-relazzjoni bankarja, il-miżati bankarji u l-awtentikazzjoni qawwija huma regolati esklussivament mill-kuntratt bejn il-klijent u l-bank tiegħu.",
+      "accountTitle": "3. Kont u sigurtà",
+      "account": "Il-klijent huwa responsabbli għall-kunfidenzjalità tat-tokens tal-aġenti, tal-aċċess għall-kont tiegħu u tal-passkeys tal-utenti tiegħu, kif ukoll għar-regoli li jikkonfigura. Kull spiża approvata minn utent awtorizzat jew konformi ma' regola ta' approvazzjoni awtomatika titqies li ġiet awtorizzata mill-klijent.",
+      "pricesTitle": "4. Pjanijiet u prezzijiet",
+      "prices": "Pjanijiet: Sandbox (b'xejn), Builder ({builder} / xahar), Team ({team} / xahar), Aġenziji ({agency} / xahar + {perClient} għal kull klijent attiv), Business (minn {business} / xahar). Lil hinn mill-kwota ta' kull xahar ta' pjan imħallas, kull mandat addizzjonali jiġi fatturat {overage}. Il-prezzijiet huma netti. {vat}. Pagament ta' kull xahar bil-quddiem bil-karta permezz ta' Stripe. It-tiġdid huwa awtomatiku; it-terminazzjoni tidħol fis-seħħ fi tmiem il-perjodu kurrenti, mingħajr ebda rimborż pro rata.",
+      "quotasTitle": "5. Kwoti",
+      "quotas": "Kull pjan jinkludi kwoti (aġenti, banek konnessi, talbiet ta' kull xahar). Lil hinn minn dawn il-kwoti, talbiet ġodda jiġu miċħuda sal-perjodu ta' wara jew sa bidla fil-pjan.",
+      "availabilityTitle": "6. Disponibbiltà",
+      "availability": "Il-pubblikatur juża mezzi raġonevoli biex jiżgura d-disponibbiltà tas-servizz, mingħajr ebda obbligu ta' riżultat. Jistgħu jseħħu interruzzjonijiet għall-manutenzjoni jew minħabba fornituri ta' servizzi tekniċi u bankarji.",
+      "liabilityTitle": "7. Responsabbiltà",
+      "liability": "Il-pubblikatur ma għandux jinżamm responsabbli għax-xiri magħmul mill-aġenti tal-klijent fil-limiti tal-awtorizzazzjonijiet mogħtija, għall-għażla tan-negozjanti, għall-kwalità tal-oġġetti jew tas-servizzi mixtrija, jew għad-deċiżjonijiet tal-bank tal-klijent. Ir-responsabbiltà tal-pubblikatur, għall-kawżi kollha flimkien, hija limitata għas-somom imħallsa mill-klijent matul l-aħħar tnax-il xahar.",
+      "dataTitle": "8. Data",
+      "data": "L-ipproċessar tad-data personali huwa deskritt fil-<a href=\"{href}\">politika tal-privatezza</a>. Il-klijent jista' jesporta d-data tiegħu fi kwalunkwe ħin.",
+      "lawTitle": "9. Liġi applikabbli",
+      "law": "Il-liġi Franċiża. Fin-nuqqas ta' soluzzjoni amikevoli, il-qrati kompetenti għall-post tad-domiċilju tal-pubblikatur għandu jkollhom il-ġurisdizzjoni."
+    },
+    "privacy": {
+      "title": "Politika tal-privatezza",
+      "controllerTitle": "Kontrollur tad-data",
+      "controller": "{editor}, {email}.",
+      "dataTitle": "Data pproċessata",
+      "dataAccount": "Kont: email, organizzazzjoni, rwol, passkeys (ċwievet pubbliċi biss).",
+      "dataActivity": "Attività: talbiet għal karti, mandati ffirmati, tranżazzjonijiet irrapportati mill-bank, irċevuti, reġistru tal-awditjar.",
+      "dataBanks": "Konnessjonijiet bankarji: tokens tal-aċċess kriptati (AES-256-GCM).",
+      "dataBilling": "Fatturazzjoni: immaniġġjata minn Stripe; Artemis ma jarax in-numri tal-karti li tuża biex tħallas l-abbonament tiegħek.",
+      "dataWaitlist": "Lista ta' stennija: email, kumpanija, każ ta' użu.",
+      "cardNumbers": "Artemis qatt ma jaħżen in-numru sħiħ jew il-kodiċi tas-sigurtà tal-karti maħruġa għall-aġenti tiegħek.",
+      "purposesTitle": "Għanijiet u bażijiet legali",
+      "purposes": "Eżekuzzjoni tal-kuntratt (provvista tas-servizz), obbligi legali (kontabbiltà), interess leġittimu (sigurtà, prevenzjoni tal-frodi), kunsens (lista ta' stennija).",
+      "processorsTitle": "Proċessuri",
+      "processors": "Supabase (database, Unjoni Ewropea), Cloudflare (hosting u netwerk), Stripe (fatturazzjoni), Resend (emails transazzjonali). Klawżoli kuntrattwali standard jirregolaw kull trasferiment barra mill-UE.",
+      "retentionTitle": "Perjodi ta' żamma",
+      "retention": "Data tal-kont: it-tul tal-kuntratt, imbagħad 3 snin. Reġistru tal-awditjar u data tal-kontabbiltà: 10 snin. Lista ta' stennija: 3 snin mingħajr interazzjoni.",
+      "rightsTitle": "Id-drittijiet tiegħek",
+      "rights": "Aċċess, rettifika, tħassir, portabbiltà, oġġezzjoni u restrizzjoni: ikteb lil {email}. Tista' tressaq ilment quddiem is-CNIL (cnil.fr).",
+      "cookiesTitle": "Cookies",
+      "cookies": "Is-sit ma juża l-ebda cookie tar-reklamar u l-ebda għodda tal-analitika ta' partijiet terzi. L-applikazzjoni tuża biss il-ħażna meħtieġa għas-sessjoni tiegħek."
+    },
+    "notice": {
+      "title": "Avviż legali",
+      "editorTitle": "Pubblikatur",
+      "editor": "{editor}, {status}",
+      "siret": "SIRET: {siret}",
+      "address": "Indirizz: {address}",
+      "contact": "Kuntatt: {email}",
+      "directorTitle": "Direttur tal-pubblikazzjoni",
+      "hostingTitle": "Hosting",
+      "natureTitle": "Natura tas-servizz",
+      "nature": "Artemis huwa softwer għall-governanza tal-infiq tal-aġenti tal-intelliġenza artifiċjali. Artemis la huwa istituzzjoni tal-pagament u lanqas istituzzjoni tal-flus elettroniċi: ma jirċievi, ma jżomm u ma jittrasferixxi l-ebda fond. Il-karti tal-pagament jinħarġu mill-istituzzjoni bankarja tal-klijent, taħt ir-responsabbiltà tagħha.",
+      "ipTitle": "Proprjetà intellettwali",
+      "ip": "Il-kontenut, it-trademarks u l-logos ta' dan is-sit huma proprjetà tal-pubblikatur. Kull riproduzzjoni mingħajr awtorizzazzjoni hija pprojbita."
+    }
+  }
+}

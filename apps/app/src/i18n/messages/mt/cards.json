@@ -1,0 +1,19 @@
+{
+  "cards": {
+    "title": "Karti",
+    "lead": "Karti għal użu wieħed maħruġa fil-banek tiegħek. In-numru sħiħ tal-karta qatt ma jinħażen.",
+    "linkAria": "Karta •••• {last4}",
+    "cardAria": "Karta virtwali li tispiċċa b'{last4}, detentur {holder}, tiskadi {exp}",
+    "tagRevealed": "Mogħtija lill-aġent",
+    "tagSingleUse": "Għal użu wieħed",
+    "emptyTitle": "L-ebda karta",
+    "emptyText": "Il-karti jidhru ladarba talba tkun ġiet approvata.",
+    "colCard": "Karta",
+    "colIssued": "Maħruġa",
+    "colExpires": "Tiskadi",
+    "colRevealed": "Mogħtija lill-aġent",
+    "colStatus": "Status",
+    "notRevealed": "Le",
+    "request": "Talba →"
+  }
+}

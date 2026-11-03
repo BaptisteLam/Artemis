@@ -1,0 +1,36 @@
+{
+  "notify": {
+    "tagline": "Vaši agenti platí. Poslední slovo máte vy.",
+    "unknownAgent": "Agent",
+    "unknownMerchant": "obchodník",
+    "requestPending": {
+      "title": "{agent} chce utratit {amount}",
+      "subject": "Ke schválení: {amount} u obchodníka {merchant}",
+      "merchant": "Obchodník: {merchant}",
+      "purpose": "Účel: {purpose}",
+      "expires": "Bez odpovědi žádost automaticky vyprší.",
+      "cta": "Zkontrolovat a schválit →",
+      "slack": "*{title}* u obchodníka *{merchant}*",
+      "slackCta": "Zkontrolovat a podepsat mým přístupovým klíčem"
+    },
+    "cardIssueFailed": {
+      "subject": "Vytvoření karty pro obchodníka {merchant} se nezdařilo",
+      "title": "Banka kartu nevytvořila",
+      "fallback": "Chyba banky.",
+      "cta": "Zobrazit žádost →"
+    },
+    "mismatch": {
+      "subject": "Zjištěn nesoulad: {amount} u obchodníka {merchant}",
+      "title": "Transakce neodpovídá mandátu",
+      "check": "Zkontrolujte transakci a v případě potřeby agenta zmrazte.",
+      "cta": "Zobrazit transakce →",
+      "pushTitle": "Nesoulad transakce"
+    },
+    "invitation": {
+      "subject": "Pozvánka do organizace {org} v Artemis",
+      "title": "Připojte se k {org}",
+      "body": "Jste zváni ke schvalování a sledování výdajů AI agentů vašeho týmu.",
+      "cta": "Přijmout pozvánku →"
+    }
+  }
+}

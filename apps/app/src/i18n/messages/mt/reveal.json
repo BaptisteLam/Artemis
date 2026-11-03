@@ -1,0 +1,21 @@
+{
+  "reveal": {
+    "eyebrowSandbox": "Karta għal użu wieħed · bank simulat",
+    "eyebrowBank": "Karta għal użu wieħed · maħruġa mill-bank tiegħek",
+    "lead": "Dan il-link jinfetaħ darba biss. Il-karta hija limitata għall-ammont ta' hawn fuq u marbuta ma' dan in-negozjant.",
+    "fields": {
+      "number": "Numru",
+      "expiry": "Skadenza",
+      "cvc": "Kodiċi tas-sigurtà",
+      "holder": "Detentur tal-karta"
+    },
+    "opening": "Qed jinfetaħ…",
+    "show": "Uri l-karta •••• {last4}",
+    "footer": "In-numru jintwera direttament mill-bank emittenti: qatt ma jgħaddi minn Artemis.",
+    "errors": {
+      "stripeUnavailable": "Stripe.js mhux disponibbli.",
+      "invalidLink": "Link mhux validu, diġà użat jew skadut.",
+      "stripeRefused": "Stripe ċaħad it-talba."
+    }
+  }
+}

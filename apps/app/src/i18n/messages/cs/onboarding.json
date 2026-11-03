@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Krok {step} z {total}",
+    "continue": "Pokračovat →",
+    "org": {
+      "title": "Vaše organizace",
+      "lead": "Začínáte v Sandboxu: simulovaná banka, žádné poplatky.",
+      "nameLabel": "Název společnosti nebo studia"
+    },
+    "agent": {
+      "title": "Váš první agent",
+      "lead": "Krátký název, který říká, co agent nakupuje. Výchozí pravidla: {monthly} měsíčně, {perPurchase} na nákup.",
+      "nameLabel": "Název agenta",
+      "platformLabel": "Platforma",
+      "platformOther": "Jiná",
+      "submit": "Vytvořit agenta →"
+    },
+    "connect": {
+      "title": "Připojte svého agenta",
+      "done": "Token mám zkopírovaný →"
+    },
+    "passkey": {
+      "title": "Váš přístupový klíč pro schvalování",
+      "lead": "Každý výdaj budete podepisovat pomocí Face ID, Touch ID, Windows Hello nebo bezpečnostního klíče. Pokud je to možné, zaregistrujte ho v telefonu, do kterého budou chodit oznámení.",
+      "deviceName": "První zařízení",
+      "saved": "Přístupový klíč zaregistrován.",
+      "unsupported": "Tento prohlížeč nepodporuje přístupové klíče.",
+      "register": "Zaregistrovat přístupový klíč",
+      "openDashboard": "Otevřít přehled →",
+      "later": "Později"
+    }
+  }
+}

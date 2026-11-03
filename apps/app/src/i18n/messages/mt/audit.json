@@ -1,0 +1,97 @@
+{
+  "audit": {
+    "title": "Reġistru tal-awditjar",
+    "lead": "Kull avveniment huwa marbut f'katina b'hash SHA-256 u ma jistax jinbidel jew jitħassar: hija l-prova tiegħek tas-sorveljanza umana (AI Act).",
+    "verify": "Ivverifika l-integrità",
+    "export": "Esporta",
+    "report": "Rapport tal-AI Act {quarter}",
+    "exportFailed": "L-esportazzjoni ma rnexxietx.",
+    "reportUnavailable": "Ir-rapport mhux disponibbli.",
+    "chainOk_one": "Katina intatta: ġiet ivverifikata {count} entrata.",
+    "chainOk_two": "Katina intatta: ġew ivverifikati {count} entrati.",
+    "chainOk_few": "Katina intatta: ġew ivverifikati {count} entrati.",
+    "chainOk_many": "Katina intatta: ġew ivverifikati {count} entrata.",
+    "chainOk_other": "Katina intatta: ġew ivverifikati {count} entrata.",
+    "chainBroken": "Katina miksura fl-entrata nru {id}.",
+    "exportUpsell": "L-esportazzjoni ffirmata tar-reġistru tal-awditjar hija inkluża fil-pjan Business.",
+    "seePlans": "Ara l-pjanijiet",
+    "cols": {
+      "date": "Data",
+      "event": "Avveniment",
+      "actor": "Attur",
+      "hash": "Impronta"
+    },
+    "view": "ara",
+    "older": "Eqdem →",
+    "actors": {
+      "user": "Utent",
+      "agent": "Aġent",
+      "system": "Sistema"
+    },
+    "actions": {
+      "org": {
+        "created": "Organizzazzjoni maħluqa",
+        "frozen": "Organizzazzjoni ffriżata",
+        "unfrozen": "Organizzazzjoni mhux iffriżata aktar",
+        "card_delivery_changed": "Modalità tal-għoti tal-karti mibdula",
+        "slack_connected": "Slack ikkonnettjat",
+        "slack_disconnected": "Slack skonnettjat"
+      },
+      "agent": {
+        "created": "Aġent maħluq",
+        "updated": "Aġent aġġornat",
+        "deleted": "Aġent imħassar",
+        "token_rotated": "Token ġġenerat mill-ġdid",
+        "frozen": "Aġent iffriżat"
+      },
+      "policy": {
+        "updated": "Regoli aġġornati"
+      },
+      "request": {
+        "created": "Talba maħluqa",
+        "rejected": "Talba miċħuda",
+        "approved": "Mandat iffirmat",
+        "auto_approved": "Approvazzjoni awtomatika",
+        "approval_recorded": "Approvazzjoni rreġistrata",
+        "expired": "Talba skaduta"
+      },
+      "card": {
+        "issued": "Karta maħruġa",
+        "issue_failed": "Il-ħruġ tal-karta ma rnexxiex",
+        "revealed": "Karta mogħtija lill-aġent",
+        "link_created": "Link tal-karta maħluq",
+        "viewed": "Karta murija",
+        "canceled": "Karta kkanċellata",
+        "expired": "Karta skaduta"
+      },
+      "transaction": {
+        "matched": "Tranżazzjoni mqabbla",
+        "mismatch": "Diskrepanza misjuba"
+      },
+      "receipt": {
+        "attached": "Irċevuta mehmuża"
+      },
+      "bank": {
+        "connected": "Bank ikkonnettjat",
+        "disconnected": "Bank skonnettjat"
+      },
+      "member": {
+        "invited": "Membru mistieden",
+        "joined": "Membru ngħaqad",
+        "removed": "Membru mneħħi",
+        "role_changed": "Rwol mibdul"
+      },
+      "client": {
+        "created": "Klijent maħluq",
+        "updated": "Klijent aġġornat"
+      },
+      "billing": {
+        "subscribed": "Abbonament mibdi",
+        "updated": "Abbonament aġġornat"
+      },
+      "subscription": {
+        "charged": "Abbonament iddebitat"
+      }
+    }
+  }
+}

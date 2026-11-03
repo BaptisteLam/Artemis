@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Klienti",
+    "lead": "Samostatný prostor pro každého klienta: jeho agenti, měsíční rozpočet, vaše marže a přehled k přefakturaci připravený k odeslání.",
+    "invalidBudget": "Neplatný rozpočet (např. 500 nebo 49,90).",
+    "upsell": "Prostory pro klienty jsou součástí tarifu Agentury ({price} + {perClient} za aktivního klienta).",
+    "seePlans": "Zobrazit tarify →",
+    "empty": "Žádní klienti",
+    "emptyHint": "Vytvořte klienta a poté mu přiřaďte agenty.",
+    "cols": {
+      "client": "Klient",
+      "agents": "Agenti",
+      "spent": "Přislíbeno tento měsíc",
+      "budget": "Rozpočet",
+      "markup": "Marže"
+    },
+    "archived": "archivován",
+    "percent": "{value} %",
+    "report": "Přehled →",
+    "new": "Nový klient",
+    "fields": {
+      "name": "Název",
+      "billingEmail": "Fakturační e-mail",
+      "markup": "Marže při přefakturaci (%)",
+      "budget": "Měsíční rozpočet (€)",
+      "budgetHint": "Prázdné = bez stropu pro klienta"
+    },
+    "create": "Vytvořit klienta",
+    "exportFailed": "Export se nezdařil.",
+    "eyebrow": "Klient",
+    "month": "Měsíc",
+    "exportCsv": "Exportovat CSV",
+    "monthPurchases": "Nákupy tento měsíc",
+    "markupPct": "Marže {value}",
+    "toRebill": "K přefakturaci",
+    "noPurchases": "Tento měsíc žádné nákupy",
+    "lines": {
+      "date": "Datum",
+      "agent": "Agent",
+      "merchant": "Obchodník",
+      "purpose": "Účel",
+      "amount": "Částka",
+      "receipt": "Doklad"
+    },
+    "yes": "Ano",
+    "missing": "Chybí",
+    "archive": "Archivovat klienta",
+    "reactivate": "Znovu aktivovat",
+    "all": "← Všichni klienti"
+  }
+}

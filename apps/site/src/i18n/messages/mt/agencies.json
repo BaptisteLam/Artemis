@@ -1,0 +1,37 @@
+{
+  "agencies": {
+    "title": "Għall-aġenziji",
+    "description": "Aġenziji tal-awtomazzjoni: l-aġenti tal-klijenti tiegħek jonfqu taħt kontroll, b'baġit u fattura għal kull klijent.",
+    "eyebrow": "Aġenziji tal-awtomazzjoni",
+    "headline": "L-aġenti tal-klijenti tiegħek jonfqu. Int tirrifattura mingħajr inkwiet.",
+    "lead": "Tibni aġenti n8n, Make jew Claude għall-klijenti tiegħek? Artemis jifred l-infiq skont il-klijent, japplika baġit għal kull wieħed u jħejji r-rifatturazzjoni bil-marġni tiegħek.",
+    "try": "Ipprova b'xejn →",
+    "plan": "Pjan {plan}: {base} + {client} għal kull klijent attiv",
+    "spaces": {
+      "title": "Spazju tax-xogħol wieħed għal kull klijent",
+      "body": "Assenja kull aġent lil klijent. It-talbiet, il-karti, it-tranżazzjonijiet u l-irċevuti tiegħu jinżammu separati. Aġent qatt ma jista' jonfoq il-baġit ta' klijent ieħor."
+    },
+    "budget": {
+      "title": "Baġit ta' kull xahar għal kull klijent",
+      "body": "Issettja limitu ta' kull xahar għal kull klijent, minbarra r-regoli ta' kull aġent. Lil hinn minnu, it-talba tiġi miċħuda saħansitra qabel ma tasal għand bniedem."
+    },
+    "rebilling": {
+      "title": "Rifatturazzjoni bi klikk waħda",
+      "body": "Kull xahar, Artemis iħejji rapport għal kull klijent: xiri ddebitat, aġent, negozjant, irċevuta, miżata tal-ġestjoni bbażata fuq il-marġni tiegħek, total li għandu jiġi rrifatturat. Esportazzjoni CSV lesta biex tintbagħat jew tiġi importata fl-għodda tal-fatturazzjoni tiegħek."
+    },
+    "proof": {
+      "title": "Prova għall-klijenti tiegħek",
+      "body": "Kull pagament jiġi ffirmat minn persuna awtorizzata, u r-reġistru ma jistax jinbidel. Uri lill-klijenti tiegħek li l-aġenti tagħhom huma taħt sorveljanza umana, kif jitlob l-AI Act."
+    },
+    "european": {
+      "title": "Ewropew, minn tarf għal tarf",
+      "body": "Ewro, banek Ewropej, data fi Frankfurt, esportazzjonijiet FEC u Pennylane għall-kontabbiltà Franċiża."
+    },
+    "demo": {
+      "window": "rifatturazzjoni · martin-bakery · Novembru",
+      "subtotal": "Subtotal",
+      "fee": "Miżata tal-ġestjoni 15%",
+      "total": "Total li għandu jiġi rrifatturat"
+    }
+  }
+}

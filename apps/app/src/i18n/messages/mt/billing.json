@@ -1,0 +1,62 @@
+{
+  "billing": {
+    "title": "Fatturazzjoni",
+    "lead": "Pjan kurrenti: {plan}. Talbiet dan ix-xahar: {usage}. VAT mhux applikabbli, art. 293 B tal-Kodiċi Ġenerali tat-Taxxa Franċiż (CGI).",
+    "usageOf": "{used} / {limit}",
+    "manage": "Immaniġġja l-abbonament u l-fatturi",
+    "returnOk": "Grazzi! L-abbonament tiegħek qed jiġi attivat (ftit sekondi).",
+    "returnCanceled": "Pagament ikkanċellat, xejn ma nbidel.",
+    "inactive": "L-abbonament tiegħek m'għadux attiv ({status}). Il-funzjonalitajiet imħallsa huma sospiżi: jekk jogħġbok aġġorna l-metodu tal-pagament tiegħek.",
+    "unknown": "mhux magħruf",
+    "overage": "Lil hinn mill-kwota ta' pjan imħallas, kull mandat addizzjonali jiġi fatturat {price}.",
+    "overageCount_one": "Dan ix-xahar: {count} mandat.",
+    "overageCount_two": "Dan ix-xahar: {count} mandati.",
+    "overageCount_few": "Dan ix-xahar: {count} mandati.",
+    "overageCount_many": "Dan ix-xahar: {count} mandat.",
+    "overageCount_other": "Dan ix-xahar: {count} mandat.",
+    "ownerOnly": "Sid biss jista' jibdel l-abbonament.",
+    "current": "Kurrenti",
+    "from": "minn {price}",
+    "perMonth": "/ xahar",
+    "choose": "Agħżel {plan}",
+    "plans": {
+      "sandbox": "Sandbox",
+      "builder": "Builder",
+      "team": "Team",
+      "agency": "Aġenziji",
+      "business": "Business"
+    },
+    "pitch": {
+      "sandbox": {
+        "i1": "Aġent wieħed",
+        "i2": "Bank simulat",
+        "i3": "20 mandat simulat / xahar"
+      },
+      "builder": {
+        "i1": "3 aġenti",
+        "i2": "Bank reali wieħed",
+        "i3": "50 mandat / xahar",
+        "i4": "Approvazzjoni b'passkey u notifiki"
+      },
+      "team": {
+        "i1": "10 aġenti",
+        "i2": "2 banek reali",
+        "i3": "300 mandat / xahar",
+        "i4": "Slack, kworum ta' approvaturi, esportazzjoni FEC",
+        "i5": "Abbonamenti mmaniġġjati għal kull aġent"
+      },
+      "agency": {
+        "i1": "25 aġent, klijenti illimitati",
+        "i2": "1,000 mandat / xahar",
+        "i3": "Baġits, marġni u rifatturazzjoni għal kull klijent",
+        "i4": "+ {price} għal kull klijent attiv"
+      },
+      "business": {
+        "i1": "Illimitat",
+        "i2": "Fajl u rapport tal-AI Act",
+        "i3": "Esportazzjoni ffirmata tar-reġistru tal-awditjar",
+        "i4": "Appoġġ prijoritarju"
+      }
+    }
+  }
+}

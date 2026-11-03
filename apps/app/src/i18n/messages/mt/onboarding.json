@@ -1,0 +1,33 @@
+{
+  "onboarding": {
+    "step": "Pass {step} minn {total}",
+    "continue": "Kompli →",
+    "org": {
+      "title": "L-organizzazzjoni tiegħek",
+      "lead": "Tibda fis-Sandbox: bank simulat, l-ebda miżata.",
+      "nameLabel": "Isem il-kumpanija jew l-istudjo"
+    },
+    "agent": {
+      "title": "L-ewwel aġent tiegħek",
+      "lead": "Isem qasir li jgħid x'jixtri. Regoli awtomatiċi: {monthly} fix-xahar, {perPurchase} għal kull xiri.",
+      "nameLabel": "Isem l-aġent",
+      "platformLabel": "Pjattaforma",
+      "platformOther": "Oħrajn",
+      "submit": "Oħloq l-aġent →"
+    },
+    "connect": {
+      "title": "Ikkonnettja l-aġent tiegħek",
+      "done": "Ikkupjajt it-token →"
+    },
+    "passkey": {
+      "title": "Il-passkey tiegħek għall-approvazzjoni",
+      "lead": "Kull spiża se tiġi ffirmata b'Face ID, Touch ID, Windows Hello jew ċavetta tas-sigurtà. Jekk possibbli, irreġistraha mit-telefon li se jirċievi n-notifiki.",
+      "deviceName": "L-ewwel apparat",
+      "saved": "Passkey irreġistrata.",
+      "unsupported": "Dan il-browser ma jappoġġjax il-passkeys.",
+      "register": "Irreġistra passkey",
+      "openDashboard": "Iftaħ id-dashboard →",
+      "later": "Aktar tard"
+    }
+  }
+}

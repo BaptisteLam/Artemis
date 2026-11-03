@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · tarif {plan}",
+    "title": "Přehled",
+    "stats": {
+      "spent": "Utraceno tento měsíc",
+      "pending": "Ke schválení",
+      "openQueue": "Otevřít frontu →",
+      "requests": "Žádosti tento měsíc"
+    },
+    "recent": {
+      "title": "Poslední žádosti",
+      "viewAll": "Zobrazit vše →",
+      "empty": "Tento měsíc žádné žádosti. Připojte agenta na stránce {agents}.",
+      "agentsLink": "Agenti"
+    },
+    "byAgent": {
+      "title": "Podle agentů",
+      "manage": "Spravovat →",
+      "empty": "Žádní agenti."
+    }
+  }
+}

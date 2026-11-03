@@ -1,0 +1,51 @@
+{
+  "clients": {
+    "title": "Klijenti",
+    "lead": "Spazju tax-xogħol wieħed għal kull klijent: l-aġenti tiegħu, il-baġit ta' kull xahar tiegħu, il-marġni tiegħek u rapport ta' rifatturazzjoni lest biex jintbagħat.",
+    "invalidBudget": "Baġit mhux validu (eż. 500 jew 49.90).",
+    "upsell": "L-ispazji tax-xogħol għall-klijenti huma inklużi fil-pjan Aġenziji ({price} + {perClient} għal kull klijent attiv).",
+    "seePlans": "Ara l-pjanijiet →",
+    "empty": "L-ebda klijent",
+    "emptyHint": "Oħloq klijent, imbagħad assenjalu l-aġenti.",
+    "cols": {
+      "client": "Klijent",
+      "agents": "Aġenti",
+      "spent": "Impenjat dan ix-xahar",
+      "budget": "Baġit",
+      "markup": "Marġni"
+    },
+    "archived": "arkivjat",
+    "percent": "{value}%",
+    "report": "Rapport →",
+    "new": "Klijent ġdid",
+    "fields": {
+      "name": "Isem",
+      "billingEmail": "Email għall-fatturazzjoni",
+      "markup": "Marġni tar-rifatturazzjoni (%)",
+      "budget": "Baġit ta' kull xahar (€)",
+      "budgetHint": "Vojt = l-ebda limitu għall-klijent"
+    },
+    "create": "Oħloq il-klijent",
+    "exportFailed": "L-esportazzjoni ma rnexxietx.",
+    "eyebrow": "Klijent",
+    "month": "Xahar",
+    "exportCsv": "Esporta CSV",
+    "monthPurchases": "Xiri ta' dan ix-xahar",
+    "markupPct": "Marġni {value}",
+    "toRebill": "Biex jiġi rrifatturat",
+    "noPurchases": "L-ebda xiri dan ix-xahar",
+    "lines": {
+      "date": "Data",
+      "agent": "Aġent",
+      "merchant": "Negozjant",
+      "purpose": "Għan",
+      "amount": "Ammont",
+      "receipt": "Irċevuta"
+    },
+    "yes": "Iva",
+    "missing": "Nieqsa",
+    "archive": "Arkivja l-klijent",
+    "reactivate": "Erġa' attiva",
+    "all": "← Il-klijenti kollha"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "team": {
+    "title": "Tým",
+    "lead": "Schvalovatelé dostávají žádosti a podepisují je svým přístupovým klíčem.",
+    "confirmRemove": "Odebrat tohoto člena?",
+    "cols": {
+      "member": "Člen",
+      "role": "Role",
+      "since": "Od"
+    },
+    "you": "vy",
+    "remove": "Odebrat",
+    "invite": "Pozvat",
+    "email": "E-mail",
+    "role": "Role",
+    "send": "Odeslat pozvánku",
+    "inviteLink": "Odkaz s pozvánkou (platný 7 dní):",
+    "expiresOn": "vyprší {date}",
+    "revoke": "Odvolat"
+  }
+}

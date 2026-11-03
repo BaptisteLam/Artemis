@@ -1,0 +1,22 @@
+{
+  "admin": {
+    "eyebrow": "Administrace",
+    "title": "Artemis v číslech",
+    "mrr": "MRR",
+    "paying": "Platící zákazníci",
+    "ofOrgs_one": "z {count} organizace",
+    "ofOrgs_few": "ze {count} organizací",
+    "ofOrgs_many": "z {count} organizace",
+    "ofOrgs_other": "z {count} organizací",
+    "signups7d": "Registrace (7 dní)",
+    "requests30d": "Žádosti (30 dní)",
+    "orgs": "Organizace",
+    "cols": {
+      "name": "Název",
+      "plan": "Tarif",
+      "subscription": "Předplatné",
+      "created": "Vytvořeno"
+    },
+    "waitlist": "Čekací listina ({total})"
+  }
+}

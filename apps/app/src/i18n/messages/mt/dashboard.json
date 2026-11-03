@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "eyebrow": "{org} · pjan {plan}",
+    "title": "Dashboard",
+    "stats": {
+      "spent": "Minfuq dan ix-xahar",
+      "pending": "Biex jiġu approvati",
+      "openQueue": "Iftaħ il-kju →",
+      "requests": "Talbiet dan ix-xahar"
+    },
+    "recent": {
+      "title": "L-aħħar talbiet",
+      "viewAll": "Ara kollox →",
+      "empty": "L-ebda talba dan ix-xahar. Ikkonnettja aġent mill-paġna {agents}.",
+      "agentsLink": "Aġenti"
+    },
+    "byAgent": {
+      "title": "Skont l-aġent",
+      "manage": "Immaniġġja →",
+      "empty": "L-ebda aġent."
+    }
+  }
+}

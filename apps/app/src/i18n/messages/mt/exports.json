@@ -1,0 +1,14 @@
+{
+  "exports": {
+    "title": "Esportazzjonijiet tal-kontabbiltà",
+    "lead": "Spejjeż iddebitati mill-banek tiegħek, lesti għal Pennylane, għall-accountant tiegħek jew għal spreadsheet.",
+    "failed": "L-esportazzjoni ma rnexxietx.",
+    "from": "Minn",
+    "to": "Sa (esklużiv)",
+    "downloadCsv": "Niżżel CSV",
+    "downloadFec": "Niżżel FEC",
+    "formats": "CSV: separat b'semikolon, kompatibbli ma' Excel. FEC: 18-il kolonna regolatorja, debitu 604000 / kreditu 512000, jista' jiġi importat f'Pennylane.",
+    "fecUpsell": "FEC huwa inkluż mill-pjan Team.",
+    "seePlans": "Ara l-pjanijiet"
+  }
+}
